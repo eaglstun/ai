@@ -1,0 +1,12 @@
+/* TEAM */
+  Maker: Eric Eaglstun
+  Site: ericeaglstun.com
+  Location: Boise, Idaho, USA
+
+/* SITE */
+  An AI/ML notebook. Built by a human. Read by both.
+  Standards: HTML5, CSS, a little JavaScript
+  Software: Hugo (static site), theme "ee-ai"
+
+/* THANKS */
+  You, for reading the credits. Almost nobody reads the credits.

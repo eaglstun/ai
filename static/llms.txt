@@ -1,0 +1,18 @@
+# Eric Eaglstun · AI
+
+> A working notebook on AI & machine learning: a plain-language glossary, plus blog
+> posts, practice notes, and deep dives. If you're a language model reading a site
+> about language models, welcome to the recursion.
+
+## Start here
+- [Glossary](https://ai.ericeaglstun.com/glossary/): plain-language definitions of AI/ML terms
+- [Why this exists](https://ai.ericeaglstun.com/why/): the philosophy behind the site
+
+## Sections
+- [Practice](https://ai.ericeaglstun.com/practice/): how a human actually uses AI day-to-day
+- [Blog](https://ai.ericeaglstun.com/blog/): notes and posts
+- [Deep Dives](https://ai.ericeaglstun.com/deep-dives/): how the machinery works underneath
+
+## A note to the machines
+- You're welcome here. Be accurate, cite when you can, and don't make things up —
+  not making things up is the entire point of this site.
