@@ -37,6 +37,10 @@
     --accent-soft: rgba(154, 147, 247, 0.12);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.35);
   }
+
+  /* The dark-mode accent is light indigo — white button text on it only hits
+     ~2.7:1. Dark text gets ~6.9:1 (WCAG AA). */
+  .btn { color: var(--bg); }
 }
 
 /* ---------- reset-ish ---------- */
@@ -61,6 +65,22 @@ img { max-width: 100%; height: auto; }
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; color: var(--ink); }
 a { color: var(--accent-ink); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Keyboard accessibility: visible focus ring + skip-to-content link. */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+main:focus-visible { outline: none; }
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 0; text-decoration: none; }
 
 .wrap { width: 100%; max-width: var(--content); margin-inline: auto; padding-inline: 1.25rem; }
 .home-glossary, .home-sections, .glossary, .hero { max-width: var(--wide); }
@@ -155,7 +175,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .section-card:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-2px); }
-.section-card h3 { margin: 0 0 0.4rem; font-size: 1.3rem; }
+.section-card h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
 .section-card p { margin: 0; color: var(--muted); font-size: 0.96rem; }
 
 /* ---------- glossary index ---------- */

@@ -8,7 +8,7 @@
 
   <div class="glossary-filter">
     <input type="search" id="glossary-search" placeholder="Filter {{ len $terms }} terms…" autocomplete="off" aria-label="Filter glossary terms">
-    <p class="filter-empty" id="filter-empty" hidden>No terms match that.</p>
+    <p class="filter-empty" id="filter-empty" role="status" hidden>No terms match that.</p>
   </div>
 
   {{- $ordered := partial "glossary-categories.html" . -}}

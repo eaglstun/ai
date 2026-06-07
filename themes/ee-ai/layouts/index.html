@@ -32,7 +32,7 @@
   {{- $cards := slice (site.GetPage "/practice") (site.GetPage "/blog") (site.GetPage "/deep-dives") -}}
   {{- range $cards }}{{ with . }}
   <a class="section-card" href="{{ .RelPermalink }}">
-    <h3>{{ .Title }} →</h3>
+    <h2>{{ .Title }} →</h2>
     <p>{{ .Summary | plainify }}</p>
   </a>
   {{- end }}{{ end }}
