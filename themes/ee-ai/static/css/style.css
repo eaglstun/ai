@@ -66,21 +66,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 a { color: var(--accent-ink); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
-/* Keyboard accessibility: visible focus ring + skip-to-content link. */
+/* Keyboard accessibility: visible focus ring. */
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
-main:focus-visible { outline: none; }
-.skip-link {
-  position: absolute;
-  left: 0.5rem;
-  top: -3rem;
-  z-index: 100;
-  background: var(--ink);
-  color: var(--bg);
-  padding: 0.6rem 1rem;
-  border-radius: 0 0 8px 8px;
-  transition: top 0.15s ease;
-}
-.skip-link:focus { top: 0; text-decoration: none; }
 
 .wrap { width: 100%; max-width: var(--content); margin-inline: auto; padding-inline: 1.25rem; }
 .home-glossary, .home-sections, .glossary, .hero { max-width: var(--wide); }
@@ -226,7 +213,6 @@ main:focus-visible { outline: none; }
 .crumbs a { color: var(--muted); }
 .crumbs a:hover { color: var(--accent-ink); }
 
-.term-dek-lead, .prose > p:first-of-type { }
 .term-dek-lead {
   font-family: var(--font-display);
   font-size: 1.2rem;
