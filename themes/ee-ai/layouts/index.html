@@ -1,7 +1,5 @@
 {{ define "main" }}
 {{- $glossary := site.GetPage "/glossary" -}}
-{{- $blog := site.GetPage "/blog" -}}
-{{- $deep := site.GetPage "/deep-dives" -}}
 
 <section class="hero wrap">
   <h1 class="hero-title">{{ site.Title }}</h1>
@@ -30,17 +28,13 @@
 {{- end }}
 
 <section class="home-sections wrap">
-  {{- with $blog }}
+  {{- /* Ordered section cards. Add a section's ref here to surface it on the home page. */ -}}
+  {{- $cards := slice (site.GetPage "/practice") (site.GetPage "/blog") (site.GetPage "/deep-dives") -}}
+  {{- range $cards }}{{ with . }}
   <a class="section-card" href="{{ .RelPermalink }}">
-    <h3>Blog →</h3>
+    <h3>{{ .Title }} →</h3>
     <p>{{ .Summary | plainify }}</p>
   </a>
-  {{- end }}
-  {{- with $deep }}
-  <a class="section-card" href="{{ .RelPermalink }}">
-    <h3>Deep Dives →</h3>
-    <p>{{ .Summary | plainify }}</p>
-  </a>
-  {{- end }}
+  {{- end }}{{ end }}
 </section>
 {{ end }}

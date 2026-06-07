@@ -26,6 +26,10 @@ theme = 'ee-ai'
     pageRef = "/glossary"
     weight = 10
   [[menu.main]]
+    name = "Practice"
+    pageRef = "/practice"
+    weight = 15
+  [[menu.main]]
     name = "Blog"
     pageRef = "/blog"
     weight = 20
