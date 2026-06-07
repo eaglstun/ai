@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="prose wrap">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+
+  {{- $pages := .Pages.ByDate.Reverse }}
+  {{- if $pages }}
+  <ul class="post-list">
+    {{- range $pages }}
+    <li>
+      <a class="post-link" href="{{ .RelPermalink }}">
+        <span class="post-title">{{ .Title }}</span>
+        {{- if .Date }}<time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
+      </a>
+      {{- with .Summary }}<p class="post-summary">{{ . | plainify | truncate 180 }}</p>{{ end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- else }}
+  <p class="empty-note">Nothing here yet — posts are on the way.</p>
+  {{- end }}
+</div>
+{{ end }}

@@ -1,0 +1,46 @@
+baseURL = 'https://ai.ericeaglstun.com/'
+locale = 'en-us'
+title = 'Eric Eaglstun · AI'
+theme = 'ee-ai'
+
+# Generate RSS for home + sections.
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+# Empty table disables Hugo's default tag/category taxonomies. The glossary groups
+# itself by a scalar `category` frontmatter field instead (see glossary/list.html).
+[taxonomies]
+
+[params]
+  tagline = "A working notebook on AI & machine learning."
+  description = "Eric Eaglstun's AI notebook — a curated glossary of AI/ML development terms, plus blog posts and deep dives on local inference, models, and the machinery underneath."
+  # Link back to the main personal site.
+  parentName = "ericeaglstun.com"
+  parentURL = "https://ericeaglstun.com/"
+
+# Top nav. `weight` orders the items left-to-right.
+[menu]
+  [[menu.main]]
+    name = "Glossary"
+    pageRef = "/glossary"
+    weight = 10
+  [[menu.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 20
+  [[menu.main]]
+    name = "Deep Dives"
+    pageRef = "/deep-dives"
+    weight = 30
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    tabWidth = 2
+
+[services]
+  [services.rss]
+    limit = 20

@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="prose wrap term-page">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="{{ "/glossary" | relURL }}">Glossary</a>
+    {{- with .Params.category }} <span aria-hidden="true">/</span> <span>{{ . }}</span>{{ end }}
+  </nav>
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    {{- with .Summary }}<p class="term-dek-lead">{{ . | plainify }}</p>{{ end }}
+  </header>
+
+  {{ .Content }}
+
+  {{- with .Params.related }}
+  {{- $links := slice }}
+  {{- range . }}
+  {{- with site.GetPage (printf "/glossary/%s" .) }}{{ $links = $links | append . }}{{ end }}
+  {{- end }}
+  {{- with $links }}
+  <aside class="see-also">
+    <h2>See also</h2>
+    <ul class="chip-row">
+      {{- range . }}
+      <li><a class="chip" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </aside>
+  {{- end }}
+  {{- end }}
+</article>
+{{ end }}

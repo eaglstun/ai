@@ -1,0 +1,11 @@
+{{- /*
+  Canonical ordering of glossary categories. Returns a slice of category names.
+  Any term whose `category` isn't listed here still appears (see glossary/list.html
+  fallback), but listed ones render in this order. Add new categories here.
+*/ -}}
+{{- return slice
+  "Local inference & formats"
+  "GPU compute & backends"
+  "Architectures"
+  "Core concepts"
+-}}

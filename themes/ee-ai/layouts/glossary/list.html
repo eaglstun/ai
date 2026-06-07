@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{- $terms := where .Pages "Kind" "page" -}}
+<div class="glossary wrap">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+
+  <div class="glossary-filter">
+    <input type="search" id="glossary-search" placeholder="Filter {{ len $terms }} terms…" autocomplete="off" aria-label="Filter glossary terms">
+    <p class="filter-empty" id="filter-empty" hidden>No terms match that.</p>
+  </div>
+
+  {{- $ordered := partial "glossary-categories.html" . -}}
+  {{- /* Categories present on terms but not in the canonical order get appended. */ -}}
+  {{- $present := slice -}}
+  {{- range $terms }}{{ $present = $present | append (.Params.category | default "Uncategorized") }}{{ end -}}
+  {{- $extra := slice -}}
+  {{- range (uniq $present) }}{{ if not (in $ordered .) }}{{ $extra = $extra | append . }}{{ end }}{{ end -}}
+  {{- $cats := $ordered | append $extra -}}
+
+  {{- range $cat := $cats }}
+  {{- $in := (where $terms "Params.category" $cat).ByTitle }}
+  {{- with $in }}
+  <section class="glossary-group" data-category="{{ $cat }}">
+    <h2 id="{{ $cat | urlize }}" class="group-title">{{ $cat }}</h2>
+    <ul class="term-grid">
+      {{- range . }}
+      <li class="term-card" data-term="{{ .Title | lower }}" data-summary="{{ .Summary | plainify | lower }}">
+        <a href="{{ .RelPermalink }}">
+          <span class="term-name">{{ .Title }}</span>
+          {{- with .Summary }}<span class="term-dek">{{ . | plainify }}</span>{{ end }}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- end }}
+</div>
+<script src="{{ "js/glossary-filter.js" | relURL }}" defer></script>
+{{ end }}
