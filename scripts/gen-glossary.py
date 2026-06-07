@@ -18,8 +18,10 @@ OUT = Path(__file__).resolve().parent.parent / "content" / "glossary"
 
 # Page titles (frontmatter / cards / chips).
 TITLE = {
+    "attention": "Attention",
     "cuda": "CUDA",
     "cudnn-cublas": "cuDNN / cuBLAS",
+    "dimensions": "Dimensions",
     "gan": "GAN",
     "ggml": "GGML",
     "gguf": "GGUF",
@@ -27,6 +29,7 @@ TITLE = {
     "latent-space": "Latent space",
     "llamacpp-vs-ollama": "llama.cpp vs Ollama",
     "lora": "LoRA",
+    "machine-learning": "Machine learning",
     "metal": "Metal",
     "mlx": "MLX",
     "mps": "MPS",
@@ -41,6 +44,9 @@ TITLE = {
 # lowercased for common nouns).
 INLINE = dict(TITLE)
 INLINE.update({
+    "attention": "attention",
+    "machine-learning": "machine learning",
+    "dimensions": "dimensions",
     "latent-space": "latent space",
     "parameters": "parameters",
     "tensor": "tensor",
@@ -50,6 +56,9 @@ INLINE.update({
 
 # One-line summaries (frontmatter `summary` -> dek + card text + SEO).
 SUMMARY = {
+    "attention": "How tokens weigh each other (query · key · value) — the heart of the transformer.",
+    "machine-learning": "Systems that learn patterns from data instead of hand-written rules.",
+    "dimensions": "Independent axes of variation; ML vectors live in hundreds or thousands of them.",
     "cuda": "NVIDIA's GPU-compute platform; the default ML backend.",
     "cudnn-cublas": "NVIDIA's CUDA math & deep-learning libraries.",
     "gan": "Generator-vs-discriminator generative architecture.",
@@ -70,6 +79,9 @@ SUMMARY = {
 }
 
 CATEGORY = {
+    "machine-learning": "Core concepts",
+    "dimensions": "Core concepts",
+    "attention": "Architectures",
     "gguf": "Local inference & formats",
     "ggml": "Local inference & formats",
     "mlx": "Local inference & formats",
@@ -92,21 +104,24 @@ CATEGORY = {
 # Related terms (the "See also" chip row). Curated from each entry's See-also
 # line plus the skill's cross-link map.
 RELATED = {
+    "attention": ["transformer", "tensor", "lora"],
+    "machine-learning": ["tensor", "transformer", "parameters", "val-loss"],
+    "dimensions": ["tensor", "latent-space"],
     "cuda": ["metal", "vulkan", "ggml", "cudnn-cublas"],
     "cudnn-cublas": ["cuda", "mps", "tensor"],
     "gan": ["latent-space"],
     "ggml": ["gguf", "tensor", "cuda", "metal", "vulkan"],
     "gguf": ["mlx", "ggml", "parameters"],
     "gpt": ["transformer", "gguf"],
-    "latent-space": ["gan"],
+    "latent-space": ["gan", "dimensions"],
     "llamacpp-vs-ollama": ["gguf", "ggml", "metal", "cuda", "vulkan"],
     "lora": ["transformer", "tensor", "gguf", "parameters"],
     "metal": ["cuda", "vulkan", "mlx", "mps", "ggml"],
     "mlx": ["gguf", "metal", "tensor"],
     "mps": ["metal", "mlx", "cuda", "cudnn-cublas"],
     "parameters": ["tensor", "transformer", "gguf", "lora"],
-    "tensor": ["mlx", "transformer", "parameters"],
-    "transformer": ["gpt", "tensor", "lora"],
+    "tensor": ["dimensions", "mlx", "transformer", "parameters"],
+    "transformer": ["attention", "gpt", "tensor", "lora"],
     "val-loss": [],
     "vulkan": ["cuda", "metal", "ggml"],
 }

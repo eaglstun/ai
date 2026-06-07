@@ -2,11 +2,11 @@
 title = "Tensor"
 summary = "N-dimensional numeric array; the core ML data structure."
 category = "Core concepts"
-related = ["mlx", "transformer", "parameters"]
+related = ["dimensions", "mlx", "transformer", "parameters"]
 +++
-**Tensor** is the fundamental data structure of modern machine learning: an n-dimensional
+**Tensor** is the fundamental data structure of modern [machine learning](/glossary/machine-learning/): an n-dimensional
 array of numbers. It generalizes the familiar cases — a scalar is a 0-D tensor, a vector is
-1-D, a matrix is 2-D — to arbitrary _rank_ (number of dimensions), e.g. a batch of RGB
+1-D, a matrix is 2-D — to arbitrary _rank_ (number of [dimensions](/glossary/dimensions/)), e.g. a batch of RGB
 images is a 4-D tensor of shape `[batch, height, width, channels]`. Every input, weight,
 activation, and gradient in a neural network is a tensor, and training is essentially a
 long chain of tensor operations (matrix multiplies, additions, nonlinearities). Frameworks

@@ -2,11 +2,11 @@
 title = "Transformer"
 summary = "The self-attention architecture behind modern LLMs."
 category = "Architectures"
-related = ["gpt", "tensor", "lora"]
+related = ["attention", "gpt", "tensor", "lora"]
 +++
 **Transformer** is the neural-network architecture that underpins virtually all modern
 large language models (and much else). Introduced in the 2017 paper _"Attention Is All You
-Need,"_ its key innovation is **self-attention**: for each token in a sequence, the model
+Need,"_ its key innovation is **self-[attention](/glossary/attention/)**: for each token in a sequence, the model
 weighs how much every other token should influence it, letting it capture long-range
 relationships directly instead of marching through the sequence step by step like an RNN.
 Because those attention computations happen in parallel across the whole sequence, the
