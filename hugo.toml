@@ -18,6 +18,8 @@ theme = 'ee-ai'
   # Link back to the main personal site.
   parentName = "ericeaglstun.com"
   parentURL = "https://ericeaglstun.com/"
+  # Source repo (shown as a GitHub icon link in the footer).
+  repoURL = "https://github.com/eaglstun/ai"
 
 # Top nav. `weight` orders the items left-to-right.
 [menu]

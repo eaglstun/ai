@@ -280,6 +280,10 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .site-footer p { margin: 0; color: var(--muted); font-size: 0.9rem; }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--accent-ink); }
+.footer-links { display: flex; align-items: center; gap: 1.2rem; font-size: 0.9rem; }
+.footer-links a { display: inline-flex; align-items: center; gap: 0.4rem; }
+.footer-links a:hover { text-decoration: none; }
+.footer-links svg { width: 1.05em; height: 1.05em; flex: none; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 38rem) {
