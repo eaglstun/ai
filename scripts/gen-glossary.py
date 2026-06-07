@@ -119,10 +119,10 @@ RELATED = {
     "metal": ["cuda", "vulkan", "mlx", "mps", "ggml"],
     "mlx": ["gguf", "metal", "tensor"],
     "mps": ["metal", "mlx", "cuda", "cudnn-cublas"],
-    "parameters": ["tensor", "transformer", "gguf", "lora"],
+    "parameters": ["tensor", "transformer", "gguf", "lora", "val-loss"],
     "tensor": ["dimensions", "mlx", "transformer", "parameters"],
     "transformer": ["attention", "gpt", "tensor", "lora"],
-    "val-loss": [],
+    "val-loss": ["machine-learning", "parameters"],
     "vulkan": ["cuda", "metal", "ggml"],
 }
 

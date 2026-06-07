@@ -2,7 +2,7 @@
 title = "Parameters"
 summary = "Learned weights; the count is model size & memory cost."
 category = "Core concepts"
-related = ["tensor", "transformer", "gguf", "lora"]
+related = ["tensor", "transformer", "gguf", "lora", "val-loss"]
 +++
 **Parameters** are the learned numbers inside a model — the weights (and biases) that
 training adjusts and that collectively store everything the model "knows." A label like
