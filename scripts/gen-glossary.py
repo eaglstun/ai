@@ -18,10 +18,12 @@ OUT = Path(__file__).resolve().parent.parent / "content" / "glossary"
 
 # Page titles (frontmatter / cards / chips).
 TITLE = {
+    "agi": "AGI",
     "attention": "Attention",
     "cuda": "CUDA",
     "cudnn-cublas": "cuDNN / cuBLAS",
     "dimensions": "Dimensions",
+    "embeddings": "Embeddings",
     "gan": "GAN",
     "ggml": "GGML",
     "gguf": "GGUF",
@@ -47,6 +49,7 @@ INLINE.update({
     "attention": "attention",
     "machine-learning": "machine learning",
     "dimensions": "dimensions",
+    "embeddings": "embeddings",
     "latent-space": "latent space",
     "parameters": "parameters",
     "tensor": "tensor",
@@ -56,9 +59,11 @@ INLINE.update({
 
 # One-line summaries (frontmatter `summary` -> dek + card text + SEO).
 SUMMARY = {
+    "agi": "Hypothetical AI that matches humans across essentially all intellectual tasks — a contested, moving goalpost.",
     "attention": "How tokens weigh each other (query · key · value) — the heart of the transformer.",
     "machine-learning": "Systems that learn patterns from data instead of hand-written rules.",
     "dimensions": "Independent axes of variation; ML vectors live in hundreds or thousands of them.",
+    "embeddings": "Dense vectors where distance & direction encode meaning — the backbone of semantic search and RAG.",
     "cuda": "NVIDIA's GPU-compute platform; the default ML backend.",
     "cudnn-cublas": "NVIDIA's CUDA math & deep-learning libraries.",
     "gan": "Generator-vs-discriminator generative architecture.",
@@ -81,6 +86,8 @@ SUMMARY = {
 CATEGORY = {
     "machine-learning": "Core concepts",
     "dimensions": "Core concepts",
+    "embeddings": "Core concepts",
+    "agi": "Core concepts",
     "attention": "Architectures",
     "gguf": "Local inference & formats",
     "ggml": "Local inference & formats",
@@ -104,16 +111,18 @@ CATEGORY = {
 # Related terms (the "See also" chip row). Curated from each entry's See-also
 # line plus the skill's cross-link map.
 RELATED = {
+    "agi": ["machine-learning", "gpt"],
     "attention": ["transformer", "tensor", "lora"],
-    "machine-learning": ["tensor", "transformer", "parameters", "val-loss"],
-    "dimensions": ["tensor", "latent-space"],
+    "machine-learning": ["tensor", "transformer", "parameters", "val-loss", "agi"],
+    "dimensions": ["tensor", "latent-space", "embeddings"],
+    "embeddings": ["latent-space", "dimensions", "tensor"],
     "cuda": ["metal", "vulkan", "ggml", "cudnn-cublas"],
     "cudnn-cublas": ["cuda", "mps", "tensor"],
     "gan": ["latent-space"],
     "ggml": ["gguf", "tensor", "cuda", "metal", "vulkan"],
     "gguf": ["mlx", "ggml", "parameters"],
-    "gpt": ["transformer", "gguf"],
-    "latent-space": ["gan", "dimensions"],
+    "gpt": ["transformer", "gguf", "agi"],
+    "latent-space": ["gan", "dimensions", "embeddings"],
     "llamacpp-vs-ollama": ["gguf", "ggml", "metal", "cuda", "vulkan"],
     "lora": ["transformer", "tensor", "gguf", "parameters"],
     "metal": ["cuda", "vulkan", "mlx", "mps", "ggml"],

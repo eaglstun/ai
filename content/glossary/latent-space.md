@@ -2,7 +2,7 @@
 title = "Latent space"
 summary = "The hidden vector space where geometry encodes meaning."
 category = "Core concepts"
-related = ["gan", "dimensions"]
+related = ["gan", "dimensions", "embeddings"]
 +++
 **Latent space** is the abstract space — usually of far fewer [dimensions](/glossary/dimensions/) than the raw
 input — in which a model represents the compressed, encoded "essence" of its input data. Instead of working with raw pixels or

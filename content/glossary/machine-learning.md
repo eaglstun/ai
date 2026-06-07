@@ -2,7 +2,7 @@
 title = "Machine learning"
 summary = "Systems that learn patterns from data instead of hand-written rules."
 category = "Core concepts"
-related = ["tensor", "transformer", "parameters", "val-loss"]
+related = ["tensor", "transformer", "parameters", "val-loss", "agi"]
 +++
 **Machine learning (ML)** is the branch of AI where a system learns patterns from data
 rather than following rules a programmer wrote by hand. Instead of coding the logic

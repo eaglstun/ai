@@ -2,7 +2,7 @@
 title = "Dimensions"
 summary = "Independent axes of variation; ML vectors live in hundreds or thousands of them."
 category = "Core concepts"
-related = ["tensor", "latent-space"]
+related = ["tensor", "latent-space", "embeddings"]
 +++
 **Dimensions** are independent axes of variation — each one a separate thing you can change
 without touching the others. A dimension doesn't have to be spatial, or even a number to

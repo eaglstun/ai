@@ -2,7 +2,7 @@
 title = "GPT"
 summary = "Generative pre-trained (decoder-only) transformer LLM."
 category = "Architectures"
-related = ["transformer", "gguf"]
+related = ["transformer", "gguf", "agi"]
 +++
 **GPT** (Generative Pre-trained Transformer) is a family — and now a general class — of
 large language models built on the decoder side of the [transformer](/glossary/transformer/) architecture. The
