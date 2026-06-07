@@ -33,6 +33,10 @@ theme = 'ee-ai'
     name = "Deep Dives"
     pageRef = "/deep-dives"
     weight = 30
+  [[menu.main]]
+    name = "Why"
+    pageRef = "/why"
+    weight = 40
 
 [markup]
   [markup.goldmark.renderer]
