@@ -51,6 +51,27 @@ introducing a new category, add it to that partial.
 
 - `themes/ee-ai/layouts/glossary/list.html` — grouped term grid + search/filter.
 - `themes/ee-ai/layouts/glossary/single.html` — individual term page (breadcrumb,
-  body, "See also" chips resolved from `related` via `site.GetPage`).
+  body, "See also" chips resolved from `related` via `site.GetPage`). Also renders
+  **alphabetical prev/next nav within the same `category`** (`.term-nav`), built from
+  `.CurrentSection.RegularPages` filtered by category and sorted `.ByTitle`.
 - `themes/ee-ai/layouts/_default/` — `baseof.html`, `single.html`, `list.html` for
-  the non-glossary sections (blog, practice, deep-dives — currently stubs).
+  the non-glossary sections (blog, practice, deep-dives).
+- `themes/ee-ai/layouts/_default/_markup/render-link.html` — **link render hook** applied
+  to all markdown content site-wide. Any link whose host ≠ the `baseURL` host gets
+  `class="external-link"`, `target="_blank"`, `rel="noopener noreferrer"`, and an inline
+  arrow-out SVG icon. Internal/relative links pass through untouched. CSS: `.external-icon`.
+
+## Writing conventions (blog / practice / deep-dives)
+
+These sections hold hand-written posts (NOT generated like the glossary). Conventions that
+are deliberate — don't "normalize" them:
+
+- **Routing:** _practice_ = reusable tools/workflows; _deep-dives_ = mechanism-heavy
+  walkthroughs; _blog_ = notes/opinion/ideas. Apple-Silicon ports are case studies that
+  link to the shared playbook `deep-dives/porting-ml-to-apple-silicon.md`.
+- **`draft = true`** on stubs keeps them off the live build (`deploy.sh` has no `-F`/`-D`).
+  Flip to publish. Use `hugo server -D` to preview drafts.
+- **Dates are staggered on purpose** (~3-day cadence, backdated). Do not reset them to today.
+- **Titles are voice-forward hooks, not summaries**, and the body leans into Eric's
+  artist/communicator voice (weird-but-illuminating analogies, DEVO/de-evolution motif).
+  The detailed voice guidance + blessed title examples live in Claude's project memory.

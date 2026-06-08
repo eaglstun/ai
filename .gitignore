@@ -4,3 +4,4 @@ resources/_gen/
 .env
 .DS_Store
 NOTES.md
+deploy.sh
