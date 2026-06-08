@@ -4,13 +4,13 @@ summary = "The hidden vector space where geometry encodes meaning."
 category = "Core concepts"
 related = ["gan", "dimensions", "embeddings"]
 +++
-**Latent space** is the abstract space — usually of far fewer [dimensions](/glossary/dimensions/) than the raw
-input — in which a model represents the compressed, encoded "essence" of its input data. Instead of working with raw pixels or
-tokens, the model maps each input to a point (a vector) in this space, where each dimension
-captures some learned feature rather than a human-labeled one — hence _latent_, meaning
-hidden. The useful property is that geometry becomes meaning: inputs that are semantically
-similar land near each other, and directions in the space can correspond to interpretable
-changes (the classic "king − man + woman ≈ queen" with word embeddings). Autoencoders,
-diffusion models, and embedding models all rely on it; generative models (a [GAN](/glossary/gan/), say)
-work by sampling or steering points in latent space and then decoding them back into images,
+**Latent space** is the abstract, usually much smaller space in which a model holds the
+compressed "essence" of its input. Rather than work with raw pixels or words, the model maps
+each input to a point (a vector) in this space, where each axis captures some feature the
+model _learned_ on its own rather than one a human labeled — hence _latent_, meaning hidden.
+The useful part is that geometry turns into meaning: similar inputs land near each other, and
+moving in a particular direction can correspond to a meaningful change (the classic
+"king − man + woman ≈ queen" with word embeddings). Many kinds of models rely on it —
+autoencoders, diffusion models, embedding models — and generative models (a [GAN](/glossary/gan/), say) work
+by picking or nudging a point in latent space and then translating it back out into an image,
 text, or audio.

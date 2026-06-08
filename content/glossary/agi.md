@@ -4,15 +4,15 @@ summary = "Hypothetical AI that matches humans across essentially all intellectu
 category = "Core concepts"
 related = ["machine-learning", "gpt"]
 +++
-**AGI** (Artificial General Intelligence) is the hypothetical milestone of an AI system that
-can understand, learn, and perform across essentially the full range of intellectual tasks a
-human can — and transfer knowledge between them — rather than being trained for one job. The
-contrast is **narrow AI**: today's systems, including [GPT](/glossary/gpt/)-style large language models, are
-extraordinarily capable but still fundamentally task- and distribution-bound, not generally
-agentic minds. There is no agreed definition, threshold, or benchmark for AGI; proposals
-range from "matches a competent human at most economically valuable work" to "can do
-anything a human can," and reasonable people disagree on whether current [machine learning](/glossary/machine-learning/)
-scaling is a path to it or a plateau short of it. A related term, **ASI** (Artificial
-Superintelligence), denotes a system that would exceed the best humans across the board.
-Treat "AGI" as a moving, contested goalpost and a marketing word as often as a technical one
-— when someone uses it, it's worth asking what specific capability they actually mean.
+**AGI** (Artificial General Intelligence) is the hypothetical point at which an AI can handle
+essentially the full range of intellectual tasks a person can — and carry what it learns on
+one task over to another — instead of being built for a single job. The contrast is
+**narrow AI**: today's systems, including [GPT](/glossary/gpt/)-style large language models, are remarkably
+capable but still tied to the kinds of tasks and data they were trained on. There's no agreed
+definition or test for AGI. Proposals range from "matches a skilled human at most
+economically valuable work" to "can do anything a human can," and experts genuinely disagree
+on whether simply making today's [machine learning](/glossary/machine-learning/) models bigger will get us there or
+stall short of it. A related term, **ASI** (Artificial Superintelligence), means a system
+that would outperform the best humans at everything. In practice "AGI" is a moving, contested
+goalpost — and a marketing word about as often as a technical one — so when someone uses it,
+it's worth asking which specific ability they actually mean.

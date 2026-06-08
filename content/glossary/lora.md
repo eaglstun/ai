@@ -4,16 +4,16 @@ summary = "Low-rank adapters; parameter-efficient fine-tuning."
 category = "Core concepts"
 related = ["transformer", "tensor", "gguf", "parameters"]
 +++
-**LoRA** (Low-Rank Adaptation) is a parameter-efficient fine-tuning method: instead of
-updating all of a model's weights — billions of parameters, expensive in compute and
-memory — you freeze the original weights and train a small pair of low-rank matrices that
-are added alongside them. The trick rests on the observation that the _change_ a fine-tune
-makes to a big weight matrix is approximately low-rank, so it can be factored as `A · B`
-where A and B are skinny (a chosen rank `r`, often 8–64) and together hold a tiny fraction
-of the original parameter count. At inference the product is added to (or merged back into)
-the frozen weights, so there's no extra latency once merged. The payoffs: you can fine-tune
-a large model on a single consumer GPU, and the resulting **LoRA adapter** is a small file
-(megabytes, not gigabytes) that you swap in and out on top of one base model. **QLoRA** goes
-further by quantizing the frozen base to 4-bit (see [GGUF](/glossary/gguf/) for the related quantization
-idea) while training the adapter in higher precision, cutting memory more still. LoRA is
-most commonly applied to the attention projection matrices of a [transformer](/glossary/transformer/).
+**LoRA** (Low-Rank Adaptation) is a cheap way to fine-tune a large model. Normally fine-tuning
+updates all of a model's weights — billions of numbers, costly in compute and memory. LoRA
+instead freezes the original weights and trains a small add-on alongside them. The trick: the
+_change_ a fine-tune makes to a big grid of weights turns out to be simple enough to capture
+with two much smaller grids multiplied together (`A · B`), which together hold a tiny fraction
+of the original numbers (their size is set by a chosen _rank_ `r`, often 8–64). At run time
+that product is added back onto the frozen weights, so once merged there's no speed penalty.
+The payoff is twofold: you can fine-tune a large model on a single consumer GPU, and the
+resulting **LoRA adapter** is a small file (megabytes, not gigabytes) that you swap in and out
+on top of one base model. **QLoRA** goes further by also shrinking the frozen base model to
+4-bit (the same quantization idea behind [GGUF](/glossary/gguf/)) while training the adapter at higher
+precision, saving even more memory. LoRA is most often applied to the attention weights of a
+[transformer](/glossary/transformer/).

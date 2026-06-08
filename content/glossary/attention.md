@@ -4,20 +4,22 @@ summary = "How tokens weigh each other (query · key · value) — the heart of 
 category = "Architectures"
 related = ["transformer", "tensor", "lora"]
 +++
-**Attention** is the mechanism at the heart of the [transformer](/glossary/transformer/): it lets a model decide,
-for each token, how much every other token should influence it — so meaning can flow
-directly between distant words instead of being passed along step by step. Each token is
-projected into three vectors: a **query**, a **key**, and a **value**. A token's query is
-compared (dot product) against every token's key to produce relevance scores; those scores
-are scaled, passed through a softmax to become weights that sum to 1, and used to take a
-weighted average of the value vectors. That's **scaled dot-product attention**, often
-written `softmax(QKᵀ / √dₖ)·V`. In practice models run several of these in parallel —
-**multi-head attention** — so different heads can specialize in different kinds of
-relationships (syntax, coreference, position). When the queries, keys, and values all come
-from the same sequence it's **self-attention** (a token attending to its own context); when
-queries come from one sequence and keys/values from another it's **cross-attention** (e.g.
-a decoder attending to an encoder's output). The catch is cost: comparing every token to
-every other is O(n²) in sequence length, which is why long context windows are expensive
-and why so much research targets cheaper attention variants. The Q/K/V projections are just
-[tensor](/glossary/tensor/) matrix multiplies — and they're exactly the weights [LoRA](/glossary/lora/) usually adapts when
-fine-tuning.
+**Attention** is the mechanism at the heart of the [transformer](/glossary/transformer/). For each word — more
+precisely, each _token_ — it lets the model decide how much every other token should
+influence it, so meaning can jump straight between distant words instead of being passed
+along one step at a time. Here's the idea. Every token is turned into three vectors with
+nicknames: a **query** (what am I looking for?), a **key** (what do I offer?), and a
+**value** (what I'll actually contribute). The model compares one token's query against every
+token's key to score how relevant each other token is, turns those scores into weights that
+add up to 1 (a step called _softmax_), and then blends the value vectors in those
+proportions. That's **scaled dot-product attention** — in shorthand,
+`softmax(QKᵀ / √dₖ)·V`. Models run many of these comparisons in parallel —
+**multi-head attention** — so different "heads" can focus on different kinds of relationships
+(grammar, what a pronoun refers to, position, and so on). When the queries, keys, and values
+all come from the same sentence it's **self-attention** (a token reading its own context);
+when the queries come from one sequence and the keys/values from another it's
+**cross-attention** (for example, a translator's output attending to the input). The catch is
+cost: comparing every token to every other grows with the _square_ of the length, which is
+why long context windows get expensive and why so much research chases cheaper versions. Under
+the hood the query/key/value steps are just [tensor](/glossary/tensor/) matrix multiplications — and they're
+exactly the weights [LoRA](/glossary/lora/) usually adjusts when fine-tuning.
