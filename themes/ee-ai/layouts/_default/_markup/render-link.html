@@ -1,0 +1,6 @@
+{{- $u := urls.Parse .Destination -}}
+{{- $external := and $u.IsAbs (in (slice "http" "https") $u.Scheme) (ne $u.Hostname (urls.Parse site.BaseURL).Hostname) -}}
+<a href="{{ .Destination | safeURL }}"
+  {{- with .Title }} title="{{ . }}"{{ end }}
+  {{- if $external }} class="external-link" target="_blank" rel="noopener noreferrer"{{ end -}}
+>{{ .Text | safeHTML }}{{ if $external }}<svg class="external-icon" aria-hidden="true" width="0.7em" height="0.7em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>{{ end }}</a>

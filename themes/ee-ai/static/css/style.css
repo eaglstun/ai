@@ -269,6 +269,42 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 }
 .chip:hover { border-color: var(--accent); text-decoration: none; }
 
+/* ---------- prev/next within a category ---------- */
+.term-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.term-nav a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.9rem;
+  max-width: 48%;
+}
+.term-nav a:hover { border-color: var(--accent); color: var(--accent-ink); text-decoration: none; }
+.term-nav-next { text-align: right; }
+.term-nav-next { flex-direction: row-reverse; }
+.term-nav-dir { color: var(--accent-ink); }
+.term-nav-label { font-family: var(--font-display); color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- external links ---------- */
+.external-icon {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 0.15em;
+  opacity: 0.65;
+}
+.external-link:hover .external-icon { opacity: 1; }
+
 /* ---------- post / section lists ---------- */
 .post-list { list-style: none; margin: 1.5rem 0 0; padding: 0; }
 .post-list li { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }

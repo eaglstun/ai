@@ -27,5 +27,32 @@
   </aside>
   {{- end }}
   {{- end }}
+
+  {{- /* Alphabetical prev/next within the same category. */ -}}
+  {{- with .Params.category }}
+  {{- $siblings := (where $.CurrentSection.RegularPages "Params.category" .).ByTitle }}
+  {{- $prev := false }}{{ $next := false }}{{ $found := false }}
+  {{- range $siblings }}
+  {{- if $found }}{{ if not $next }}{{ $next = . }}{{ end }}
+  {{- else if eq .RelPermalink $.RelPermalink }}{{ $found = true }}
+  {{- else }}{{ $prev = . }}{{ end }}
+  {{- end }}
+  {{- if or $prev $next }}
+  <nav class="term-nav" aria-label="{{ . }} terms">
+    {{- if $prev }}
+    <a class="term-nav-prev" rel="prev" href="{{ $prev.RelPermalink }}">
+      <span class="term-nav-dir" aria-hidden="true">←</span>
+      <span class="term-nav-label">{{ $prev.Title }}</span>
+    </a>
+    {{- else }}<span></span>{{ end }}
+    {{- if $next }}
+    <a class="term-nav-next" rel="next" href="{{ $next.RelPermalink }}">
+      <span class="term-nav-dir" aria-hidden="true">→</span>
+      <span class="term-nav-label">{{ $next.Title }}</span>
+    </a>
+    {{- else }}<span></span>{{ end }}
+  </nav>
+  {{- end }}
+  {{- end }}
 </article>
 {{ end }}
