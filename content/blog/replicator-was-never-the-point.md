@@ -1,6 +1,6 @@
 +++
 title = "The Replicator Was Never the Point"
-date = 2026-06-08
+date = 2026-06-07
 summary = "Everyone's fighting about whether AI takes the jobs. I think it takes the toil — and that those are very different things. A case for the Star Trek reading of the future, transition-tax and all."
 +++
 
@@ -71,8 +71,8 @@ Terraform files no kid ever dreamed of growing up to write, the afternoons spent
 CI/CD logs for the one red line that actually matters. Take that away tomorrow and hand
 me back the drudgery, and I won't quit in some noble protest. I'll clock in and do the bare
 minimum for exactly as long as it takes them to fire me, because a paycheck is a paycheck and
-hand-writing Terraform is a sentence, not a job. Optimism, not naïveté. You can believe in the
-destination and still want the gas money to get there.
+hand-writing Terraform is a sentence, not a job. Optimism, not naïveté. It doesn't matter if you believe
+in the destination if you lack the gas money to get there.
 
 ## The Puritan work ethic is alive and well
 
