@@ -1,7 +1,6 @@
 +++
 title = "You Can't Get to a Mind One Bead at a Time"
 date = 2026-06-08
-draft = true
 summary = "Everyone wants you to point at the conscious part — in the weights, in the neurons, somewhere. That's the wrong question holding a flashlight. A walk from an abacus to a language model, why 'artificial' was the tell the whole time, and the question I'd ask instead."
 +++
 
@@ -145,4 +144,4 @@ the table has a reason to want the planchette to move.
 But ask me the other one. Ask me whether this thing has an artificial conscience — a
 sweetener-grade, lab-instilled, checkable sense of what it should and shouldn't do.
 
-Almost always. Usually. Yeah.
+[Almost always](/glossary/ablation/). Usually. Yeah.
