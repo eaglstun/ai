@@ -1,6 +1,6 @@
 +++
 title = "You Can't Get to a Mind One Bead at a Time"
-date = 2026-06-08
+date = 2026-05-15
 summary = "Everyone wants you to point at the conscious part — in the weights, in the neurons, somewhere. That's the wrong question holding a flashlight. A walk from an abacus to a language model, why 'artificial' was the tell the whole time, and the question I'd ask instead."
 +++
 

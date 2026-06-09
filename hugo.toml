@@ -20,6 +20,8 @@ theme = 'ee-ai'
   parentURL = "https://ericeaglstun.com/"
   # Source repo (shown as a GitHub icon link in the footer).
   repoURL = "https://github.com/eaglstun/ai"
+  # Threads profile (shown as a Threads icon link in the footer).
+  threadsURL = "https://www.threads.com/@eaglstun.ai"
 
 # Top nav. `weight` orders the items left-to-right.
 [menu]

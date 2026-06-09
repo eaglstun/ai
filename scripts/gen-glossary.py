@@ -18,6 +18,7 @@ OUT = Path(__file__).resolve().parent.parent / "content" / "glossary"
 
 # Page titles (frontmatter / cards / chips).
 TITLE = {
+    "ablation": "Ablation",
     "agi": "AGI",
     "attention": "Attention",
     "cuda": "CUDA",
@@ -46,6 +47,7 @@ TITLE = {
 # lowercased for common nouns).
 INLINE = dict(TITLE)
 INLINE.update({
+    "ablation": "ablation",
     "attention": "attention",
     "machine-learning": "machine learning",
     "dimensions": "dimensions",
@@ -59,6 +61,7 @@ INLINE.update({
 
 # One-line summaries (frontmatter `summary` -> dek + card text + SEO).
 SUMMARY = {
+    "ablation": "Removing a model component on purpose to measure how much it mattered — the standard “ablation study.”",
     "agi": "Hypothetical AI that matches humans across essentially all intellectual tasks — a contested, moving goalpost.",
     "attention": "How tokens weigh each other (query · key · value) — the heart of the transformer.",
     "machine-learning": "Systems that learn patterns from data instead of hand-written rules.",
@@ -84,6 +87,7 @@ SUMMARY = {
 }
 
 CATEGORY = {
+    "ablation": "Core concepts",
     "machine-learning": "Core concepts",
     "dimensions": "Core concepts",
     "embeddings": "Core concepts",
@@ -111,6 +115,7 @@ CATEGORY = {
 # Related terms (the "See also" chip row). Curated from each entry's See-also
 # line plus the skill's cross-link map.
 RELATED = {
+    "ablation": ["machine-learning", "val-loss", "parameters"],
     "agi": ["machine-learning", "gpt"],
     "attention": ["transformer", "tensor", "lora"],
     "machine-learning": ["tensor", "transformer", "parameters", "val-loss", "agi"],
