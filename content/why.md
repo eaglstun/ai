@@ -39,7 +39,7 @@ shape we can't quite see.
 
 ## The thing science fiction missed
 
-Jason Pargin has a great bit about this. For all the things science fiction got
+Jason Pargin has [a great bit about this](https://www.facebook.com/watch/?v=1515566466747777). For all the things science fiction got
 right about the future — the video calls, the tablets, the pocket computers — almost
 nobody imagined how profoundly the _smartphone_ would actually reshape us. Not the
 device. The rest of it: social networks, the attention economy, the quiet collapse
@@ -52,8 +52,6 @@ the robot apocalypse, the rogue superintelligence — while the actual shifts ar
 happening somewhere we're mostly not looking. The boring, structural,
 everywhere-at-once changes are the ones that matter, and they're the hardest to see
 precisely because they're everywhere.
-
-<!-- TODO: link the specific Jason Pargin video once I track it down -->
 
 ## So this is my small attempt
 

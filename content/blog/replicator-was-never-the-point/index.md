@@ -76,6 +76,8 @@ in the destination if you lack the gas money to get there.
 
 ## The Puritan work ethic is alive and well
 
+![A grey-blue marble bust of a bearded Victorian scholar in a three-piece suit, seated at a desk piled with ledgers in a dim industrial workroom, crowned by a glowing neon halo — the patron saint of toil.](sanctified-toil.png)
+
 But the deepest obstacle isn't economic. It's a ghost.
 
 Four hundred years ago a particular strain of theology decided that toil itself was holy —
