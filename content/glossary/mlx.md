@@ -3,6 +3,7 @@ title = "MLX"
 summary = "Apple-silicon ML framework; the Mac answer to GGUF."
 category = "Local inference & formats"
 related = ["gguf", "metal", "tensor"]
+plain = "Apple's home-field AI framework. A toolkit Apple built specifically to run and train models fast on Mac chips, taking advantage of the way Apple shares memory between the processor and the GPU."
 +++
 **MLX** is Apple's open-source framework for machine learning, built specifically for Apple
 silicon (M-series chips). Its headline feature is **unified memory**: the CPU and GPU share one

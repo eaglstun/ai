@@ -3,6 +3,7 @@ title = "Latent space"
 summary = "The hidden vector space where geometry encodes meaning."
 category = "Core concepts"
 related = ["gan", "dimensions", "embeddings"]
+plain = "The secret organizing closet. Picture a walk-in closet sorted not by color but by vibe — leather jackets near combat boots, tuxedos near silk ties. It's the AI's internal closet where similar ideas get stored near each other so it can find them later."
 +++
 **Latent space** is the abstract, usually much smaller space in which a model holds the
 compressed "essence" of its input. Rather than work with raw pixels or words, the model maps

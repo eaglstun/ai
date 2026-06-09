@@ -26,6 +26,7 @@ TITLE = {
     "dimensions": "Dimensions",
     "embeddings": "Embeddings",
     "gan": "GAN",
+    "gelu": "GELU",
     "ggml": "GGML",
     "gguf": "GGUF",
     "gpt": "GPT",
@@ -37,6 +38,8 @@ TITLE = {
     "mlx": "MLX",
     "mps": "MPS",
     "parameters": "Parameters",
+    "relu": "ReLU",
+    "residual-connections": "Residual connections",
     "tensor": "Tensor",
     "transformer": "Transformer",
     "val-loss": "Validation loss",
@@ -57,6 +60,7 @@ INLINE.update({
     "tensor": "tensor",
     "transformer": "transformer",
     "val-loss": "validation loss",
+    "residual-connections": "residual connections",
 })
 
 # One-line summaries (frontmatter `summary` -> dek + card text + SEO).
@@ -70,6 +74,7 @@ SUMMARY = {
     "cuda": "NVIDIA's GPU-compute platform; the default ML backend.",
     "cudnn-cublas": "NVIDIA's CUDA math & deep-learning libraries.",
     "gan": "Generator-vs-discriminator generative architecture.",
+    "gelu": "The smooth activation gate used inside GPT- and BERT-style transformers.",
     "ggml": "C/C++ tensor library powering llama.cpp; runs GGUF.",
     "gguf": "llama.cpp's single-file format for quantized local LLMs.",
     "gpt": "Generative pre-trained (decoder-only) transformer LLM.",
@@ -80,10 +85,43 @@ SUMMARY = {
     "mlx": "Apple-silicon ML framework; the Mac answer to GGUF.",
     "mps": "Metal Performance Shaders; Apple's cuDNN-equivalent ops.",
     "parameters": "Learned weights; the count is model size & memory cost.",
+    "relu": "The simplest activation gate: zero out negatives, pass positives through.",
+    "residual-connections": "Skip-ahead wiring that lets networks go very deep without the signal falling apart.",
     "tensor": "N-dimensional numeric array; the core ML data structure.",
     "transformer": "The self-attention architecture behind modern LLMs.",
     "val-loss": "Held-out validation error; the overfitting tripwire.",
     "vulkan": "Cross-vendor GPU-compute API; the portable ML fallback.",
+}
+
+# "In plain English" callout — the analogy-first take that leads each term page,
+# for readers who want the gist before the precise definition. One vivid analogy each.
+PLAIN = {
+    "ablation": "The Jenga test. Pull one block out of the standing tower and watch whether the whole thing topples or just wobbles — that's how you find out which part was actually holding the model up.",
+    "agi": "The 'does everything' robot from the movies — one AI that matches a person at basically any mental task, not just the one it was trained for. It doesn't exist yet, and people can't even agree on where the finish line is.",
+    "attention": "Context clues. Instead of reading a sentence one word at a time, the model looks at the whole thing at once and works out which words are talking about each other — so in 'the bank was muddy from the river,' it knows 'bank' means riverbank, not the place with your money.",
+    "cuda": "The translator that lets AI software talk to NVIDIA graphics cards. NVIDIA's chips are the industry-standard engines for AI, and CUDA is the language nearly everyone uses to drive them.",
+    "cudnn-cublas": "NVIDIA's box of pre-tuned math shortcuts. The heavy number-crunching inside AI runs on these ready-made, hand-optimized routines, so nobody has to reinvent the fast way to multiply giant grids of numbers.",
+    "dimensions": "The number of separate sliders it takes to describe something. 'Tall/short' is one slider; add 'old/young' and 'loud/quiet' and you're at three. AI describes a word or image with hundreds or thousands of these sliders at once.",
+    "embeddings": "Turning words into coordinates. Every word, sentence, or image gets pinned to a spot on a giant map where similar things land near each other — so 'king' sits close to 'queen,' and the computer can measure meaning with a ruler.",
+    "gan": "Forger vs. detective. One AI fakes convincing images, another tries to spot the fakes, and they train against each other until the forger gets so good the detective can't tell — and that's when you get realistic generated pictures.",
+    "gelu": "The bouncer with manners. It's the little gate between layers that decides how much of each signal to let through — instead of a hard yes/no it eases borderline cases in gently, which is why modern models prefer it.",
+    "ggml": "The engine block. The low-level code that actually loads a model's numbers into memory and grinds through the math, so a GGUF file has something to run inside on your own machine.",
+    "gguf": "Zipping a model down to fit. AI models are huge; this is like saving a giant photo as a JPEG — one tidy compressed file, shrunk enough to run smoothly on a normal laptop instead of a data-center server.",
+    "gpt": "The autocomplete that ate the world. At heart it just guesses the next word over and over — but at enormous scale that simple trick turns into something that can write essays, code, and hold a conversation.",
+    "latent-space": "The secret organizing closet. Picture a walk-in closet sorted not by color but by vibe — leather jackets near combat boots, tuxedos near silk ties. It's the AI's internal closet where similar ideas get stored near each other so it can find them later.",
+    "llamacpp-vs-ollama": "Engine vs. dashboard. llama.cpp is the bare engine that runs the model; Ollama is the friendly dashboard bolted on top so you can start a model with one command instead of wiring up the engine yourself.",
+    "lora": "Sticky notes instead of rewriting the book. Rather than retrain a giant model from scratch to teach it something new, you clip on a small set of adjustments — cheap to make, easy to swap in and out, and you can keep a whole drawer of them.",
+    "machine-learning": "Teaching by examples instead of rules. Instead of writing out every rule for 'what a cat looks like,' you show the computer thousands of cat photos and let it work out the pattern itself.",
+    "metal": "Apple's version of the AI-to-GPU translator. It's the language software uses to drive the graphics chip inside a Mac — Apple's homegrown answer to NVIDIA's CUDA.",
+    "mlx": "Apple's home-field AI framework. A toolkit Apple built specifically to run and train models fast on Mac chips, taking advantage of the way Apple shares memory between the processor and the GPU.",
+    "mps": "Apple's drawer of ready-made math moves. The pre-built, hand-tuned operations that do the actual number-crunching on a Mac's GPU — Apple's counterpart to NVIDIA's cuDNN.",
+    "parameters": "The knobs and dials. Picture a mixing board with billions of tiny dials; training is the computer nudging each one a hair every time it's right or wrong. More dials means more room for fine detail — and a bigger, heavier model.",
+    "relu": "The simplest bouncer there is. One rule: negative numbers get turned away at the door, positive numbers walk right in unchanged. Crude, but cheap and effective — and for years it was the default gate inside neural networks.",
+    "residual-connections": "The express lane. Instead of forcing every layer to redraw the whole picture, you let the original pass straight through and each layer just clips on a note of what to change — which is how networks stack hundreds of layers deep without the signal getting mangled.",
+    "tensor": "A spreadsheet that can run in more than two directions. One number is a dot, a list is a row, a grid is a table — a tensor just keeps going into more directions, and it's the basic container AI uses to hold all its numbers.",
+    "transformer": "The architecture behind nearly every modern AI. Its trick is reading everything at once and letting each piece decide which other pieces matter — that's what powers ChatGPT, image generators, and the rest.",
+    "val-loss": "The pop quiz with questions it didn't study. During training you hold back some examples the model never sees, then test on those — if it aces what it studied but flunks the held-back quiz, it memorized instead of learned.",
+    "vulkan": "The universal remote. A one-size-fits-all translator that lets AI software talk to graphics chips from any brand — not as finely tuned as NVIDIA's or Apple's own, but it works almost everywhere.",
 }
 
 CATEGORY = {
@@ -110,6 +148,9 @@ CATEGORY = {
     "parameters": "Core concepts",
     "lora": "Core concepts",
     "val-loss": "Core concepts",
+    "gelu": "Building blocks",
+    "relu": "Building blocks",
+    "residual-connections": "Building blocks",
 }
 
 # Related terms (the "See also" chip row). Curated from each entry's See-also
@@ -124,9 +165,10 @@ RELATED = {
     "cuda": ["metal", "vulkan", "ggml", "cudnn-cublas"],
     "cudnn-cublas": ["cuda", "mps", "tensor"],
     "gan": ["latent-space"],
+    "gelu": ["transformer", "gpt", "tensor", "relu"],
     "ggml": ["gguf", "tensor", "cuda", "metal", "vulkan"],
     "gguf": ["mlx", "ggml", "parameters"],
-    "gpt": ["transformer", "gguf", "agi"],
+    "gpt": ["transformer", "gguf", "agi", "gelu"],
     "latent-space": ["gan", "dimensions", "embeddings"],
     "llamacpp-vs-ollama": ["gguf", "ggml", "metal", "cuda", "vulkan"],
     "lora": ["transformer", "tensor", "gguf", "parameters"],
@@ -134,8 +176,10 @@ RELATED = {
     "mlx": ["gguf", "metal", "tensor"],
     "mps": ["metal", "mlx", "cuda", "cudnn-cublas"],
     "parameters": ["tensor", "transformer", "gguf", "lora", "val-loss"],
-    "tensor": ["dimensions", "mlx", "transformer", "parameters"],
-    "transformer": ["attention", "gpt", "tensor", "lora"],
+    "relu": ["gelu", "transformer", "tensor", "residual-connections"],
+    "residual-connections": ["transformer", "relu", "tensor"],
+    "tensor": ["dimensions", "mlx", "transformer", "parameters", "gelu", "relu", "residual-connections"],
+    "transformer": ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections"],
     "val-loss": ["machine-learning", "parameters"],
     "vulkan": ["cuda", "metal", "ggml"],
 }
@@ -186,6 +230,10 @@ def main():
             f"summary = {toml_str(SUMMARY[slug])}",
             f"category = {toml_str(CATEGORY[slug])}",
             f"related = {rel_toml}",
+        ]
+        if PLAIN.get(slug):
+            fm.append(f"plain = {toml_str(PLAIN[slug])}")
+        fm += [
             "+++",
             "",
         ]

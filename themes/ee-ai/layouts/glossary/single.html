@@ -9,6 +9,13 @@
     {{- with .Summary }}<p class="term-dek-lead">{{ . | plainify }}</p>{{ end }}
   </header>
 
+  {{- with .Params.plain }}
+  <aside class="plain-english">
+    <p class="plain-english-label">In plain English</p>
+    <p class="plain-english-body">{{ . | markdownify }}</p>
+  </aside>
+  {{- end }}
+
   {{ .Content }}
 
   {{- with .Params.related }}

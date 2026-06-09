@@ -3,6 +3,7 @@ title = "Embeddings"
 summary = "Dense vectors where distance & direction encode meaning — the backbone of semantic search and RAG."
 category = "Core concepts"
 related = ["latent-space", "dimensions", "tensor"]
+plain = "Turning words into coordinates. Every word, sentence, or image gets pinned to a spot on a giant map where similar things land near each other — so 'king' sits close to 'queen,' and the computer can measure meaning with a ruler."
 +++
 **Embeddings** are a way of turning things — words, sentences, images, products, users — into
 lists of numbers (vectors) arranged so that _distance and direction carry meaning_. The older
