@@ -2,7 +2,7 @@
 title = "Parameters"
 summary = "Learned weights; the count is model size & memory cost."
 category = "Core concepts"
-related = ["tensor", "transformer", "gguf", "lora", "val-loss"]
+related = ["tensor", "transformer", "gguf", "lora", "val-loss", "gradient-descent"]
 plain = "The knobs and dials. Picture a mixing board with billions of tiny dials; training is the computer nudging each one a hair every time it's right or wrong. More dials means more room for fine detail — and a bigger, heavier model."
 +++
 **Parameters** are the learned numbers inside a model — the weights (and biases) that training

@@ -2,7 +2,7 @@
 title = "Validation loss"
 summary = "Held-out validation error; the overfitting tripwire."
 category = "Core concepts"
-related = ["machine-learning", "parameters"]
+related = ["machine-learning", "parameters", "gradient-descent"]
 plain = "The pop quiz with questions it didn't study. During training you hold back some examples the model never sees, then test on those — if it aces what it studied but flunks the held-back quiz, it memorized instead of learned."
 +++
 **Validation loss** is how badly a model does on a _validation set_ — data held back and not
