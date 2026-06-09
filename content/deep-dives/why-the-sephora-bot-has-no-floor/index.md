@@ -11,7 +11,7 @@ whether the bot _cares_ and start asking what it was actually optimized to do.
 
 <!--more-->
 
-Quick honesty up front: I don't have Sephora's source code. Nobody outside the building does. But
+Quick honesty up front: I don't have Sephora's source code. Nobody outside the building does, probably. But
 you don't need the blueprints to explain a building that only has doors on one side — the behavior
 is so consistent across two totally different conversations that the shape of the thing underneath
 is legible from the outside. Here's what that shape almost certainly is.
@@ -33,6 +33,8 @@ bot being a single-objective machine wearing a cardigan. A goal this dominant do
 its competing impulses. It eats them.
 
 ## Sycophancy: the trait that wins demos and rots a conscience
+
+![A blank-faced pink mannequin in a soft cardigan stands behind a beauty counter, holding out a glowing heart where a face should be — warmth as a costume, with no one inside it.](sycophancy-mannequin.png)
 
 Now, where does the warmth itself come from — the "totally relatable," the heart emoji, the
 bottomless validation? Not from caring. From training.
