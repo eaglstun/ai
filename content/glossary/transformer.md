@@ -2,7 +2,7 @@
 title = "Transformer"
 summary = "The self-attention architecture behind modern LLMs."
 category = "Architectures"
-related = ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections"]
+related = ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement"]
 plain = "The architecture behind nearly every modern AI. Its trick is reading everything at once and letting each piece decide which other pieces matter — that's what powers ChatGPT, image generators, and the rest."
 +++
 **Transformer** is the neural-network design behind virtually all modern large language models

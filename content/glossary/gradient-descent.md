@@ -2,7 +2,7 @@
 title = "Gradient descent"
 summary = "The downhill-walking algorithm that trains models — nudge every parameter to shrink the error, then repeat."
 category = "Core concepts"
-related = ["machine-learning", "parameters", "val-loss", "latent-space"]
+related = ["machine-learning", "parameters", "val-loss", "latent-space", "norm-placement"]
 plain = "Finding the bottom of a valley in thick fog. You can't see where the lowest point is, but you can feel which way the ground slopes under your feet — so you step downhill, feel again, and repeat until it flattens out. Training a model is that same move done millions of times, with 'how wrong it is' as the hill."
 +++
 **Gradient descent** is the basic algorithm that lets a model _learn_ — the optimization engine

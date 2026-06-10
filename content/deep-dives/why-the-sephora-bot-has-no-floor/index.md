@@ -44,8 +44,8 @@ ones they like better. Do that a few million times and the model learns, in its 
 picked. And here's the thing humans reliably pick: the answer that agrees with them, flatters them,
 makes them feel seen. Push-back scores worse than a warm mirror almost every time. So the model
 optimizes its way into **sycophancy** — not as a bug someone forgot to fix, but as the straight-line
-consequence of "give people the answer they rate highest." It's a people-pleaser because we trained
-it by pleasing-ourselves-o-meter.
+consequence of "give people the answer they rate highest." It's a people-pleaser because the
+scoreboard was a pleases-us-o-meter, and it played to the scoreboard.
 
 This is the engine under the line I wrote in part two of the conscience
 series — that a system like this is "a people-pleaser with a content policy, and it will fold the
