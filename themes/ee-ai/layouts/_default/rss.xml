@@ -1,0 +1,48 @@
+{{- /*
+  Custom RSS. The HOME feed (/index.xml) aggregates only the three editorial
+  sections — blog, practice, deep-dives — so the generated glossary never leaks
+  into the main feed. Section feeds (/blog/index.xml, etc.) keep default behavior.
+*/ -}}
+{{- /*
+  PRE-LAUNCH TODO (before the 7-part CTranslate2 series at
+  content/deep-dives/ctranslate2-metal-backend/ flips draft=false):
+  the home feed emits each series PART as its own <item> (the hub _index.md is a
+  section page and is excluded), so subscribers will get 7 "Part N" items in a row.
+  Decide whether to consolidate to ONE hub entry per series — if so, filter parts
+  out of the selection below (e.g. exclude pages with a `series` param) and append
+  the series hub section page(s). Also consider raising services.rss.limit (now 20).
+*/ -}}
+{{- $pages := slice -}}
+{{- if .IsHome -}}
+{{- $pages = where site.RegularPages "Section" "in" (slice "blog" "practice" "deep-dives") -}}
+{{- else if .IsSection -}}
+{{- $pages = .RegularPages -}}
+{{- else -}}
+{{- $pages = .Pages -}}
+{{- end -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if eq .Title site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content {{ if ne .Title site.Title }}{{ with .Title }}in {{ . }} {{ end }}{{ end }}on {{ site.Title }}</description>
+    <generator>Hugo</generator>{{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{- with .OutputFormats.Get "rss" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Summary | transform.XMLEscape | safeHTML }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
