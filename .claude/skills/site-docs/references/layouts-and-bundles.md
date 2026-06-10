@@ -1,16 +1,16 @@
 # Layout lookup & page bundles
 
-## Layout lookup — the part that's always fuzzy
+## Layout lookup - the part that's always fuzzy
 
 - A section/list page with `layout = "foo"` → Hugo looks for `<section>/foo.html`, then
   `_default/foo.html`.
 - **Nested sections inherit the top-level section name for lookup.** A series hub under
   `deep-dives/` is type `deep-dives`, so a `layouts/deep-dives/list.html` would hijack _both_
   the top-level deep-dives list _and_ every nested series hub. That's exactly why the series
-  uses a `layout = "series"` escape hatch instead of a `deep-dives/list.html` — to style the
+  uses a `layout = "series"` escape hatch instead of a `deep-dives/list.html` - to style the
   hub without touching the section index. (See `series.md`.)
 
-## Page bundles — leaf vs branch, and the collision
+## Page bundles - leaf vs branch, and the collision
 
 - **Leaf bundle:** a dir with `index.md` (no underscore) + co-located assets. Used for richer
   posts that own an image, e.g. `porting-ml-to-apple-silicon/index.md` + `six-monsters.png`.

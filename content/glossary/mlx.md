@@ -13,5 +13,5 @@ close to NumPy (with PyTorch-style building blocks for neural networks), and it 
 actual computing when you ask for a result rather than eagerly along the way (_lazy
 evaluation_). It also works out the calculus that training needs automatically, and can shrink
 models to smaller number formats right on the device. For running LLMs locally on a Mac, the
-companion library `mlx-lm` loads and runs models in MLX format — the native Apple-silicon
+companion library `mlx-lm` loads and runs models in MLX format, the native Apple-silicon
 alternative to the GGUF / llama.cpp world (often noticeably faster on a Mac, but Mac-only).

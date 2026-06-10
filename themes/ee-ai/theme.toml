@@ -1,6 +1,6 @@
 name = "ee-ai"
 license = "MIT"
-description = "Custom theme for ai.ericeaglstun.com — a glossary-first AI/ML notebook."
+description = "Custom theme for ai.ericeaglstun.com - a glossary-first AI/ML notebook."
 homepage = "https://ai.ericeaglstun.com/"
 min_version = "0.146.0"
 

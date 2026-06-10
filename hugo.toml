@@ -3,10 +3,12 @@ locale = 'en-us'
 title = 'Eric Eaglstun · AI'
 theme = 'ee-ai'
 
-# Generate RSS for home + sections.
+# One feed only: the home feed (/index.xml), which aggregates blog + deep-dives +
+# practice (see themes/ee-ai/layouts/_default/rss.xml). Sections emit no feed of
+# their own, so there's a single canonical feed to subscribe to.
 [outputs]
   home = ['HTML', 'RSS']
-  section = ['HTML', 'RSS']
+  section = ['HTML']
 
 # Empty table disables Hugo's default tag/category taxonomies. The glossary groups
 # itself by a scalar `category` frontmatter field instead (see glossary/list.html).
@@ -14,7 +16,7 @@ theme = 'ee-ai'
 
 [params]
   tagline = "A working notebook on AI & machine learning."
-  description = "Eric Eaglstun's AI notebook — a curated glossary of AI/ML development terms, plus blog posts and deep dives on local inference, models, and the machinery underneath."
+  description = "Eric Eaglstun's AI notebook - a curated glossary of AI/ML development terms, plus blog posts and deep dives on local inference, models, and the machinery underneath."
   # Link back to the main personal site.
   parentName = "ericeaglstun.com"
   parentURL = "https://ericeaglstun.com/"

@@ -3,10 +3,10 @@ title = "LoRA"
 summary = "Low-rank adapters; parameter-efficient fine-tuning."
 category = "Core concepts"
 related = ["transformer", "tensor", "gguf", "parameters"]
-plain = "Sticky notes instead of rewriting the book. Rather than retrain a giant model from scratch to teach it something new, you clip on a small set of adjustments — cheap to make, easy to swap in and out, and you can keep a whole drawer of them."
+plain = "Sticky notes instead of rewriting the book. Rather than retrain a giant model from scratch to teach it something new, you clip on a small set of adjustments - cheap to make, easy to swap in and out, and you can keep a whole drawer of them."
 +++
 **LoRA** (Low-Rank Adaptation) is a cheap way to fine-tune a large model. Normally fine-tuning
-updates all of a model's weights — billions of numbers, costly in compute and memory. LoRA
+updates all of a model's weights, billions of numbers, costly in compute and memory. LoRA
 instead freezes the original weights and trains a small add-on alongside them. The trick: the
 _change_ a fine-tune makes to a big grid of weights turns out to be simple enough to capture
 with two much smaller grids multiplied together (`A · B`), which together hold a tiny fraction

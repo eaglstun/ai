@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-`ai.ericeaglstun.com` — a Hugo static site: a plain-language AI/ML glossary plus
+`ai.ericeaglstun.com` - a Hugo static site: a plain-language AI/ML glossary plus
 blog/practice/deep-dives sections. Hugo **extended** v0.161+, custom theme in
 `themes/ee-ai/` (plain CSS, no build step), one vanilla-JS file for the glossary filter.
 No package manager, no runtime dependencies.
@@ -20,7 +20,7 @@ python3 scripts/gen-glossary.py # regenerate content/glossary/*.md (see below)
 `deploy.sh` reads `DEPLOY_HOST` / `DEPLOY_PATH` / `DEPLOY_BASE_URL` from `.env`
 (gitignored; see `.env.example`). The server vhost lives in `deploy/`.
 
-## The glossary is generated — don't hand-edit `content/glossary/*.md`
+## The glossary is generated - don't hand-edit `content/glossary/*.md`
 
 Every `content/glossary/<slug>.md` (except `_index.md`) is **output** of
 `scripts/gen-glossary.py`. Editing them directly gets overwritten on the next run.
@@ -44,19 +44,19 @@ filtered with `where ... "Params.category"` in `themes/ee-ai/layouts/glossary/li
 
 Category **display order** is the canonical list returned by
 `themes/ee-ai/layouts/partials/glossary-categories.html`. Categories present on terms
-but missing from that list still render — they're appended after the ordered ones. When
+but missing from that list still render - they're appended after the ordered ones. When
 introducing a new category, add it to that partial.
 
 ## Layout templates
 
-- `themes/ee-ai/layouts/glossary/list.html` — grouped term grid + search/filter.
-- `themes/ee-ai/layouts/glossary/single.html` — individual term page (breadcrumb,
+- `themes/ee-ai/layouts/glossary/list.html` - grouped term grid + search/filter.
+- `themes/ee-ai/layouts/glossary/single.html` - individual term page (breadcrumb,
   body, "See also" chips resolved from `related` via `site.GetPage`). Also renders
   **alphabetical prev/next nav within the same `category`** (`.term-nav`), built from
   `.CurrentSection.RegularPages` filtered by category and sorted `.ByTitle`.
-- `themes/ee-ai/layouts/_default/` — `baseof.html`, `single.html`, `list.html` for
+- `themes/ee-ai/layouts/_default/` - `baseof.html`, `single.html`, `list.html` for
   the non-glossary sections (blog, practice, deep-dives).
-- `themes/ee-ai/layouts/_default/_markup/render-link.html` — **link render hook** applied
+- `themes/ee-ai/layouts/_default/_markup/render-link.html` - **link render hook** applied
   to all markdown content site-wide. Any link whose host ≠ the `baseURL` host gets
   `class="external-link"`, `target="_blank"`, `rel="noopener noreferrer"`, and an inline
   arrow-out SVG icon. Internal/relative links pass through untouched. CSS: `.external-icon`.
@@ -64,7 +64,7 @@ introducing a new category, add it to that partial.
 ## Writing conventions (blog / practice / deep-dives)
 
 These sections hold hand-written posts (NOT generated like the glossary). Conventions that
-are deliberate — don't "normalize" them:
+are deliberate - don't "normalize" them:
 
 - **Routing:** _practice_ = reusable tools/workflows; _deep-dives_ = mechanism-heavy
   walkthroughs; _blog_ = notes/opinion/ideas. Apple-Silicon ports are case studies that

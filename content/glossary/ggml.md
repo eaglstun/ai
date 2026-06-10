@@ -7,11 +7,11 @@ plain = "The engine block. The low-level code that actually loads a model's numb
 +++
 **GGML** is a C/C++ library, written by Georgi Gerganov, for _running_ machine-learning models
 (as opposed to training them), with a deliberate focus on getting good performance out of
-ordinary CPUs and consumer hardware — though it also supports GPU backends like [CUDA](/glossary/cuda/),
+ordinary CPUs and consumer hardware, though it also supports GPU backends like [CUDA](/glossary/cuda/),
 [Metal](/glossary/metal/), and [Vulkan](/glossary/vulkan/). It's the engine under
 [llama.cpp](https://github.com/ggml-org/llama.cpp) and
 [whisper.cpp](https://github.com/ggml-org/whisper.cpp): it defines the math operations, the
-order they run in, and — crucially — the **quantization** schemes that shrink the model's
+order they run in, and (crucially) the **quantization** schemes that shrink the model's
 numbers to fewer bits so large models fit in limited memory. One confusing wrinkle: "GGML"
 was also the name of an early single-file model format from the same project. That _format_
 was retired and replaced by [GGUF](/glossary/gguf/), but the _library_ lives on and is what actually crunches

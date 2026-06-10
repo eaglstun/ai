@@ -1,14 +1,16 @@
 {{- /*
-  Custom RSS. The HOME feed (/index.xml) aggregates only the three editorial
-  sections — blog, practice, deep-dives — so the generated glossary never leaks
-  into the main feed. Section feeds (/blog/index.xml, etc.) keep default behavior.
+  Custom RSS. There is ONE feed: the HOME feed (/index.xml), which aggregates the
+  three editorial sections - blog, practice, deep-dives - so the generated glossary
+  never leaks into it. Section feeds are disabled in hugo.toml ([outputs] section =
+  ['HTML']), so this template only renders for the home page; the .IsSection / .Pages
+  branches below are kept as a harmless fallback.
 */ -}}
 {{- /*
   PRE-LAUNCH TODO (before the 7-part CTranslate2 series at
   content/deep-dives/ctranslate2-metal-backend/ flips draft=false):
   the home feed emits each series PART as its own <item> (the hub _index.md is a
   section page and is excluded), so subscribers will get 7 "Part N" items in a row.
-  Decide whether to consolidate to ONE hub entry per series — if so, filter parts
+  Decide whether to consolidate to ONE hub entry per series - if so, filter parts
   out of the selection below (e.g. exclude pages with a `series` param) and append
   the series hub section page(s). Also consider raising services.rss.limit (now 20).
 */ -}}

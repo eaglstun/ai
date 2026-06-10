@@ -1,5 +1,5 @@
 /* ===========================================================================
-   ee-ai — ai.ericeaglstun.com
+   ee-ai - ai.ericeaglstun.com
    A glossary-first AI/ML notebook. Warm paper, ink, indigo accent.
    =========================================================================== */
 
@@ -38,7 +38,7 @@
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.35);
   }
 
-  /* The dark-mode accent is light indigo — white button text on it only hits
+  /* The dark-mode accent is light indigo - white button text on it only hits
      ~2.7:1. Dark text gets ~6.9:1 (WCAG AA). */
   .btn { color: var(--bg); }
 }
@@ -61,6 +61,18 @@ body {
 }
 main { flex: 1 0 auto; }
 img { max-width: 100%; height: auto; }
+
+/* small spot illustration that floats and lets prose wrap around it */
+.prose .img-right, .prose .img-left {
+  width: 40%;
+  max-width: 200px;
+  border-radius: 4px;
+}
+.prose .img-right { float: right; margin: 0.4rem 0 0.9rem 1.4rem; }
+.prose .img-left  { float: left;  margin: 0.4rem 1.4rem 0.9rem 0; }
+@media (max-width: 560px) {
+  .prose .img-right, .prose .img-left { float: none; display: block; width: 62%; margin: 1rem auto; }
+}
 
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; color: var(--ink); }
 a { color: var(--accent-ink); text-decoration: none; }

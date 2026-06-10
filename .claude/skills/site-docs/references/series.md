@@ -1,10 +1,10 @@
-# Multi-part "series" — the bespoke deep-dives machinery
+# Multi-part "series" - the bespoke deep-dives machinery
 
 Hugo has **no built-in series.** This is hand-rolled. Reference implementation:
 `content/deep-dives/ctranslate2-metal-backend/`. (Depends on layout lookup and page bundles —
 see `layouts-and-bundles.md`.)
 
-**Shape — a nested branch bundle:**
+**Shape - a nested branch bundle:**
 
 - Hub: `content/deep-dives/<series>/_index.md` with `layout = "series"`.
 - Parts: `content/deep-dives/<series>/NN-slug.md` (regular pages). The `NN-` filename prefix
@@ -17,7 +17,7 @@ see `layouts-and-bundles.md`.)
 
 - `layout = "series"` on the hub → Hugo's layout lookup resolves `_default/series.html`
   (the `layout` value is honored for section/list pages). That template lists
-  `.Pages.ByWeight` — we need a custom template because the default `list.html` sorts
+  `.Pages.ByWeight` - we need a custom template because the default `list.html` sorts
   `.ByDate`, which scrambles a numbered series.
 - **Prev/next nav** lives in `_default/single.html`, inside a `{{ if .Params.series }}`
   guard so normal posts are untouched. It walks `.Parent.Pages.ByWeight` to find the current
@@ -30,7 +30,7 @@ see `layouts-and-bundles.md`.)
   single entry. The parts are regular pages of the nested section, so they never surface at
   the top level. Free grouping.
 
-**Inter-part links MUST be absolute root paths** — `/deep-dives/<series>/<slug>/`, not a bare
+**Inter-part links MUST be absolute root paths** - `/deep-dives/<series>/<slug>/`, not a bare
 `<slug>/`. Each part renders to its **own directory** (`…/<series>/<slug>/index.html`), so a
 relative `other-slug/` resolves against the current part's dir → `…/<slug>/other-slug/`, which
 404s. The hub's own links _could_ be relative (it's the parent dir) but use absolute

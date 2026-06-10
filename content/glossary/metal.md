@@ -3,9 +3,9 @@ title = "Metal"
 summary = "Apple's GPU-compute API; powers MLX and Metal-backed ML."
 category = "GPU compute & backends"
 related = ["cuda", "vulkan", "mlx", "mps", "ggml"]
-plain = "Apple's version of the AI-to-GPU translator. It's the language software uses to drive the graphics chip inside a Mac — Apple's homegrown answer to NVIDIA's CUDA."
+plain = "Apple's version of the AI-to-GPU translator. It's the language software uses to drive the graphics chip inside a Mac - Apple's homegrown answer to NVIDIA's CUDA."
 +++
-**Metal** is Apple's low-level interface for graphics and GPU computing — its answer to
+**Metal** is Apple's low-level interface for graphics and GPU computing, its answer to
 [CUDA](/glossary/cuda/) and [Vulkan](/glossary/vulkan/), but exclusive to Apple hardware (Mac, iPhone, iPad). For ML it matters
 because Apple-silicon chips share one pool of memory between CPU and GPU (unified memory), so
 Metal lets models use the GPU without copying their weights across the slow link that

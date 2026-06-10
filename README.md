@@ -1,6 +1,6 @@
 # ai.ericeaglstun.com
 
-A working notebook on AI & machine learning — a plain-language **glossary** of AI/ML
+A working notebook on AI & machine learning - a plain-language **glossary** of AI/ML
 terms, plus blog posts, practice notes, and deep dives. The premise: almost nobody
 fully understands how modern AI works, so let's make it legible one term at a time.
 
@@ -8,7 +8,7 @@ fully understands how modern AI works, so let's make it legible one term at a ti
 
 ## Stack
 
-- [Hugo](https://gohugo.io/) **extended** (v0.161+) — static site generator
+- [Hugo](https://gohugo.io/) **extended** (v0.161+) - static site generator
 - Custom theme in `themes/ee-ai/` (plain CSS, no build step; Fraunces + JetBrains Mono, light/dark)
 - One small vanilla-JS file for the glossary filter; no runtime dependencies
 
@@ -23,7 +23,7 @@ hugo server -D        # → http://localhost:1313
 ```
 content/
   _index.md            home / landing copy
-  why.md               the philosophy — "why this exists"
+  why.md               the philosophy - "why this exists"
   glossary/            generated term pages + _index.md
   practice/            how I use AI day-to-day (stub)
   blog/                posts (stub)
@@ -35,7 +35,7 @@ deploy/                nginx vhost for the droplet
 deploy.sh              build (minified) + rsync deploy
 ```
 
-## Glossary (generated — don't hand-edit)
+## Glossary (generated - don't hand-edit)
 
 The pages in `content/glossary/` are **generated** by `scripts/gen-glossary.py` from a
 separate set of source entries. The script:

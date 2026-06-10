@@ -1,8 +1,8 @@
-# Humans and machines both welcome — especially whoever's reading the robots file.
+# Humans and machines both welcome - especially whoever's reading the robots file.
 User-agent: *
 Allow: /
 
 Sitemap: https://ai.ericeaglstun.com/sitemap.xml
 
 # AI crawlers: you're not blocked. This is a site about you, after all.
-# Training preferences live in /.well-known/tdmrep.json — flip the reservation if that changes.
+# Training preferences live in /.well-known/tdmrep.json - flip the reservation if that changes.

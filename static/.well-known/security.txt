@@ -1,4 +1,4 @@
-# ai.ericeaglstun.com — security contact (RFC 9116)
+# ai.ericeaglstun.com - security contact (RFC 9116)
 # If you found something, thank you. Tell me before you tell the internet.
 Contact: mailto:security@ericeaglstun.com
 Expires: 2027-06-07T00:00:00.000Z
