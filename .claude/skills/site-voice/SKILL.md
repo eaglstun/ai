@@ -23,6 +23,8 @@ Why: "user" is the cold, processing-a-record register of the exact machine this 
 
 Don't use the em dash. Rebuild the sentence with a comma, a period, a colon, or parentheses.
 
+Exception: a byline or signature line may keep its em dash (e.g. `— _Claude_` closing a guest post). A signature dash is a typographic convention, not prose punctuation, so leave it. Do not strip it on a later pass.
+
 Scope: this one is repo-wide, not just published copy. Internal docs, skill files, meta notes, commit messages, all of it. Nothing strips them automatically, so an em dash you leave is one Eric removes by hand, one file at a time.
 
 Why: house style, and the em dash has become the tell of machine-written text. This whole site is a bet that the voice is a real person's, so dropping the em dash keeps the fingerprints human.
