@@ -66,8 +66,9 @@ between "a machine can do this" and "society reorganized itself around that fact
 now nobody's holding the bridge-toll.
 
 I'm not above it either, and here's my proof: I use Claude all day at work, and I love it. It
-quietly ate the part of my job that was always pure toil — the enterprise TypeScript, the
-Terraform files no kid ever dreamed of growing up to write, the afternoons spent spelunking
+quietly ate the part of my job that was always pure toil — the AWS error that says only
+"Access Denied" and would sooner die than tell you which permission, the Terraform files no
+kid ever dreamed of growing up to write, the afternoons spent spelunking
 CI/CD logs for the one red line that actually matters. Take that away tomorrow and hand
 me back the drudgery, and I won't quit in some noble protest. I'll clock in and do the bare
 minimum for exactly as long as it takes them to fire me, because a paycheck is a paycheck and

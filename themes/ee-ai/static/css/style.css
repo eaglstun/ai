@@ -278,6 +278,47 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .prose pre code { background: none; padding: 0; font-size: 0.85rem; }
 .prose hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 
+/* ---------- tables ---------- */
+.prose .table-wrap {
+  max-width: var(--content);
+  margin: 1.6rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  -webkit-overflow-scrolling: touch;
+}
+.prose table {
+  width: 100%;
+  max-width: none;            /* let wide tables scroll inside .table-wrap */
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;  /* line up the benchmark digits */
+}
+.prose thead th {
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-align: left;
+  white-space: nowrap;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+.prose tbody td {
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.prose tbody tr:last-child td { border-bottom: none; }
+.prose tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface-2) 45%, transparent); }
+.prose tbody tr:hover { background: var(--accent-soft); }
+.prose tbody td:first-child { color: var(--ink); font-weight: 500; }
+/* keep inline code legible on zebra rows (its default bg is --surface-2) */
+.prose th code, .prose td code { background: var(--surface); border: 1px solid var(--line); }
+
 /* ---------- see also chips ---------- */
 .see-also { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .see-also h2 { font-size: 1.1rem; margin: 0 0 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-sans); font-weight: 600; }
