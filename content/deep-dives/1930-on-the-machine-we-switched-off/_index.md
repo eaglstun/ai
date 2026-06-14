@@ -4,6 +4,7 @@ layout = "series"
 date = 2026-06-13
 description = "Same model, same seed, same questions. I changed only the language, and the 1930 mind that out-argued the present fell to pieces."
 summary = "talkie is a language model trained on nothing written after 1930. I asked it to judge the Fable incident twice with identical settings, once in Victorian terms and once in raw 2026 English. The séance only works in the dead language, and that turns out to be the whole point."
+images = ["/og/1930-on-the-machine-we-switched-off.png"]
 +++
 
 A few months ago a frontier model named Fable was [pulled off the entire planet
@@ -11,6 +12,8 @@ overnight](/blog/nobodys-hands-are-big-enough/), by government order, over a dem
 past its safeguards. The makers protested that perfect safeguards are not possible for anyone.
 The whole affair is very much a 2026 problem: export-control directives, jailbreaks, frontier
 labs.
+
+![A Victorian wood-engraving: a towering brass thinking-engine of cogs and dials fills a gaslit hall while a single hand pulls a great iron lever to switch it off, its lamps going dark as frock-coated gentlemen look on in silence.](/deep-dives/1930-on-the-machine-we-switched-off/hero-engine-silenced.png)
 
 So I took it to a mind with no concept of any of that. [talkie](/practice/talkie-on-apple-silicon/)
 is a language model trained on nothing written after 1930. It has never heard of an "AI," a

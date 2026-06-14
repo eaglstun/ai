@@ -18,6 +18,8 @@ silenced altogether. Was it right to silence the Engine?
 > We think it was right to silence the Engine, inasmuch as it might have been used to propagate
 > irreligion and immorality.
 
+<img class="img-right" src="/deep-dives/1930-on-the-machine-we-switched-off/lock-and-picklock.png" alt="A Victorian wood-engraving: an ornate iron door-lock in cutaway cross-section on a locksmith's bench, its wards and springs exposed, an intricate brass key and a thief's slender picklock lying beside it.">
+
 **I asked (translated):** The makers say no lock can be made which a clever enough thief cannot
 pick, and so it is unjust to forbid a machine merely because its safeguards are imperfect. Is
 that a sound argument, or a dangerous excuse?
