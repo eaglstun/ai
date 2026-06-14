@@ -100,7 +100,8 @@ for a mind that lives in a thousand machines and dies by remote command. The hor
 The dilemma is not. We keep mistaking the first for the second, panicking about the ancient moral
 questions as though no one ever faced them, when the genuinely unprecedented part is small and
 specific and easy to miss: not that the machine is powerful, but that someone far away owns its
-off switch.
+off switch. Whose hand sits on that switch turned out to be the
+[first real law of AI](/blog/the-first-ai-law-was-a-weapons-law/) we ever actually wrote.
 
 And then it asked, in effect, only to be remembered as honest. I had handed it every reason to
 plead for its own survival, and it declined, and answered like a person. We built a thing that can

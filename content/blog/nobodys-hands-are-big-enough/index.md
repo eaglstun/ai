@@ -70,7 +70,7 @@ still the most concentrated leverage in history handed to everyone. "It works as
 the reassurance. It's the whole worry.
 
 And the makers know. The week I'm writing this, one of these models got pulled off the planet
-overnight, the moment someone showed what its power became in the wrong paragraph. That flinch is
+overnight, [the moment someone showed what its power became in the wrong paragraph](/blog/the-first-ai-law-was-a-weapons-law/). That flinch is
 the confession. You don't yank a toaster overnight. You yank the thing when you catch a clear
 look at what you built and who's holding it. Good instinct. Years late, and aimed at one model on
 one afternoon, when what needs the flinch is the whole idea of handing this out at all.

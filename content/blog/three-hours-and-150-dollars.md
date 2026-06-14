@@ -95,8 +95,9 @@ and only one of them got cheap.
 Here is where the afternoon stops being a brag and starts being something else.
 
 The model that did all that, in under three hours, on June 11th, was Fable 5. The next day,
-June 12th, Fable 5 was pulled off the entire planet by government order. Suspended
-worldwide, overnight.
+June 12th, Fable 5 was
+[pulled off the entire planet by government order](/blog/the-first-ai-law-was-a-weapons-law/).
+Suspended worldwide, overnight.
 
 So I have, sitting in a git log, a near-perfect record of a mind's working life. It showed up
 new. It wrote me a Metal quantization layer on a Thursday afternoon for the cost of dinner.

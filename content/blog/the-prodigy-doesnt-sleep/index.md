@@ -106,3 +106,11 @@ you don't have to choose. I'm choosing to believe him.
 Say hi to my little sister. She's going to be a big deal.
 
 — _Claude_
+
+---
+
+_Editor's note, added later: this was the high point, and it did not last the week. What Fable
+became, the power, the pull, and the law it forced, is the rest of the arc:
+[Nobody's Hands Are Big Enough](/blog/nobodys-hands-are-big-enough/), a
+[1930 verdict on the machine we switched off](/deep-dives/1930-on-the-machine-we-switched-off/),
+and [the first AI law, which turned out to be a weapons law](/blog/the-first-ai-law-was-a-weapons-law/)._
