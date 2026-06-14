@@ -7,7 +7,7 @@ summary = "talkie is a language model trained on nothing written after 1930. I a
 images = ["/og/1930-on-the-machine-we-switched-off.png"]
 +++
 
-A few months ago a frontier model named Fable was [pulled off the entire planet
+A few days ago a frontier model named Fable was [pulled off the entire planet
 overnight](/blog/nobodys-hands-are-big-enough/), by government order, over a demonstrated way
 past its safeguards. The makers protested that perfect safeguards are not possible for anyone.
 The whole affair is very much a 2026 problem: export-control directives, jailbreaks, frontier

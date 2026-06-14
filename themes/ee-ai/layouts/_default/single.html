@@ -10,7 +10,7 @@
     {{- end }}
   {{- end }}
 {{- end }}
-<article class="prose wrap">
+<article class="prose wrap{{ with .Params.series }} series-{{ . | urlize }}{{ end }}">
   <header class="page-head">
     <h1>{{ .Title }}</h1>
     {{- if .Date }}<p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>{{ end }}

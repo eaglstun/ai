@@ -449,3 +449,40 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* "1930" series: period treatment for the interview Q&A.
+   Scoped to this series only, other posts' blockquotes are untouched.
+   Interviewer's cue in small-caps; talkie's verbatim reply as serif-italic
+   oracle-speech under a hanging Fraunces quotation mark. */
+.series-1930-on-the-machine-we-switched-off p:has(> strong:first-child) {
+  background: color-mix(in srgb, var(--ink) 8%, var(--bg));
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+}
+.series-1930-on-the-machine-we-switched-off p > strong:first-child {
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--accent-ink);
+}
+.series-1930-on-the-machine-we-switched-off blockquote {
+  border-left: none;
+  margin: 1.4rem 0;
+  padding: 0 0 0 2.6rem;
+  position: relative;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.12rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.series-1930-on-the-machine-we-switched-off blockquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  line-height: 0;
+  color: var(--accent);
+}
