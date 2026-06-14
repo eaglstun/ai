@@ -1,6 +1,6 @@
 +++
 title = "Dragging CUDA-Only AI onto a Mac Without Losing Your Mind"
-date = 2026-06-09
+date = 2026-06-04
 images = ["/og/porting-ml-to-apple-silicon.png"]
 description = "The recurring moves for dragging CUDA-only PyTorch onto an M-series Mac: device selection, MPS fallbacks, dtype landmines."
 summary = "The recurring moves for getting a CUDA-first PyTorch project running on an M-series Mac - device selection, MPS fallbacks, dtype landmines, and dependency archaeology. The shared groundwork behind the individual ports."

@@ -1,6 +1,6 @@
 +++
 title = "I Taught Claude to Write Guitar Tabs for My Band"
-date = 2026-06-02
+date = 2026-05-29
 images = ["/og/guitar-chart-skill.png"]
 description = "A Claude Code skill that turns a song into lead sheets, chord charts, and bass tabs - one format, no more paperwork."
 summary = "I built a Claude Code skill that turns a song into lead sheets, chord charts with ASCII fretboard diagrams, and bass tabs - in one consistent format. Here's how it works and why a skill beat doing it by hand."

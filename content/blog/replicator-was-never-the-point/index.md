@@ -1,6 +1,6 @@
 +++
 title = "The Replicator Was Never the Point"
-date = 2026-06-07
+date = 2026-06-01
 images = ["/og/replicator-was-never-the-point.png"]
 description = "AI isn't taking your work - it's taking your toil, and those were never the same thing. The Star Trek reading of the future."
 summary = "Everyone's fighting about whether AI takes the jobs. I think it takes the toil - and that those are very different things. A case for the Star Trek reading of the future, transition-tax and all."

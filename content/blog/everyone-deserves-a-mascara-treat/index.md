@@ -1,6 +1,6 @@
 +++
 title = "Everyone Deserves a Mascara Treat"
-date = 2026-05-21
+date = 2026-05-23
 images = ["/og/everyone-deserves-a-mascara-treat.png"]
 description = "I spent two lunch breaks looking for the floor of Sephora's AI beauty bot. There is no floor. There is only the $30 Lancôme."
 summary = "Exhibit A for the whole conscience series. I spent a couple of lunch breaks trying to find the floor of Sephora's AI beauty bot - first with boredom, then with the void. There is no floor. There is only the $30 Lancôme."

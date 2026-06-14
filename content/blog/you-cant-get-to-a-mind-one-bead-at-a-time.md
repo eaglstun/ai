@@ -1,6 +1,6 @@
 +++
 title = "You Can't Get to a Mind One Bead at a Time"
-date = 2026-05-15
+date = 2026-05-20
 images = ["/og/you-cant-get-to-a-mind-one-bead-at-a-time.png"]
 description = "Everyone wants you to point at the conscious part. That's the wrong question. A walk from an abacus to a language model."
 summary = "Everyone wants you to point at the conscious part - in the weights, in the neurons, somewhere. That's the wrong question holding a flashlight. A walk from an abacus to a language model, why 'artificial' was the tell the whole time, and the question I'd ask instead."

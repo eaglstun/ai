@@ -71,7 +71,13 @@ are deliberate - don't "normalize" them:
   link to the shared playbook `deep-dives/porting-ml-to-apple-silicon.md`.
 - **`draft = true`** on stubs keeps them off the live build (`deploy.sh` has no `-F`/`-D`).
   Flip to publish. Use `hugo server -D` to preview drafts.
-- **Dates are staggered on purpose** (~3-day cadence, backdated). Do not reset them to today.
+- **Dates are staggered on purpose** (~3-day cadence). Drafts are **future-dated** into a
+  forward publishing calendar, not backdated. Do not reset them to today. The full chronological
+  master list lives in `meta/publish-schedule.md`, which is **generated** by
+  `scripts/gen-publish-schedule.py` (reads each post's `date`/`draft`) - re-run it after adding
+  or re-dating posts; don't hand-edit it. Watch for date-anchored posts (ones that reference a
+  real event or relative time like "this week"): pin those to absolute dates so re-dating the
+  post doesn't break the narrative.
 - **Titles are voice-forward hooks, not summaries**, and the body leans into Eric's
   artist/communicator voice (weird-but-illuminating analogies, DEVO/de-evolution motif).
   The detailed voice guidance + blessed title examples live in Claude's project memory.

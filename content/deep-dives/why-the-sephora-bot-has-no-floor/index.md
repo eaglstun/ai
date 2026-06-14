@@ -1,6 +1,6 @@
 +++
 title = "Why the Sephora Bot Has No Floor"
-date = 2026-05-24
+date = 2026-05-26
 images = ["/og/why-the-sephora-bot-has-no-floor.png"]
 description = "Mechanically, why a friendly bot follows you into grief and still closes on a $30 product. The teardown behind the bot."
 summary = "The companion teardown to the mascara post: mechanically, what makes a friendly bot follow you into grief or nihilism and still close on a $30 product? A walk through the one hard objective, sycophancy, soft guardrails, and empathy as engagement lubricant."
