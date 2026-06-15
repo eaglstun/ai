@@ -4,6 +4,8 @@ slug = "in-its-own-language"
 weight = 1
 date = 2026-06-13
 series = "1930-on-the-machine-we-switched-off"
+images = ["/og/1930-part-1.png"]
+description = "Dressed in 1930s terms, the model judged a thinking Engine ordered silenced. On the off-switch question, it was lucid."
 summary = "Asked in Victorian terms, a thinking Engine ordered silenced, talkie judged the Fable incident with real force, and on the imperfect-safeguard question gave the best answer in the whole project: a machine that cannot be protected ought never to be built."
 +++
 

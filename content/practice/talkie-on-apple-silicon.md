@@ -1,6 +1,7 @@
 +++
 title = "I Put a Language Model That Thinks It's 1930 on My Laptop"
 date = 2026-06-07
+images = ["/og/talkie-on-apple-silicon.png"]
 description = "talkie is a 13B model trained only on pre-1931 text, and it ships expecting a 28 GB CUDA card. Here's how it runs on a Mac."
 summary = "talkie is a 13B 'vintage' model trained entirely on pre-1931 English. The official repo wants a 28 GB CUDA GPU. Here's the repeatable recipe for giving it an Apple Silicon backend and running it locally on a Mac instead, plus the one memory bug that doubles your RAM if you let it."
 +++

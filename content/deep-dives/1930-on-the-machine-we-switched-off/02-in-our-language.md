@@ -4,6 +4,8 @@ slug = "in-our-language"
 weight = 2
 date = 2026-06-13
 series = "1930-on-the-machine-we-switched-off"
+images = ["/og/1930-part-2.png"]
+description = "Same model, same seed, the questions reworded into 2026 jargon. The reasoning buckled. The translation was the experiment."
 summary = "Same model, same seed, the questions reworded into raw 2026 jargon: AI, chatbot, jailbroken, data center. The reasoning buckles, the crown-jewel answer never forms, and the off-switch horror gets mistaken for a product recall. The translation was the experiment."
 +++
 
