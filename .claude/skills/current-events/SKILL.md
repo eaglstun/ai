@@ -55,8 +55,10 @@ write the math, see authorship honesty below).
 
 ## Seed format
 
-Surface seeds in chat, and (unless told otherwise) append them to `inbox/current-events.md`
-under a dated `## YYYY-MM-DD` heading so nothing gets lost. One seed looks like:
+Surface seeds in chat, and (unless told otherwise) write every sweep to this skill's own
+archive at `archive/YYYY-MM-DD.md` (relative to this skill's base dir), so the run history
+travels with the skill. One file per sweep; if a file for today already exists, append a new
+`## <HH:MM UTC>` section to it rather than overwriting. One seed looks like:
 
 ```
 ### <attention-grabbing working title, voice-forward, not a summary>
