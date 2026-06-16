@@ -1,6 +1,9 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>© {{ now.Year }} {{ site.Title }}</p>
+    <button type="button" class="img-zoom-toggle" aria-pressed="false" title="Toggle illustration size" hidden>
+      images: <span class="iz-state">small</span>
+    </button>
     <nav class="footer-links" aria-label="Footer">
       {{- with site.Params.parentURL }}
       <a href="{{ . }}">← {{ site.Params.parentName }}</a>
@@ -34,3 +37,4 @@
     </nav>
   </div>
 </footer>
+<script src="{{ "js/img-zoom.js" | relURL }}" defer></script>

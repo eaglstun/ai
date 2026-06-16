@@ -74,6 +74,42 @@ img { max-width: 100%; height: auto; }
   .prose .img-right, .prose .img-left { float: none; display: block; width: 62%; margin: 1rem auto; }
 }
 
+/* Click-to-expand spot illustrations: small float by default, full column when expanded.
+   Behavior is layered on by js/img-zoom.js; without JS they stay as plain floats. */
+.prose img.img-right.is-zoomable,
+.prose img.img-left.is-zoomable { cursor: zoom-in; transition: box-shadow 120ms ease; }
+.prose img.img-right.is-zoomable:hover,
+.prose img.img-left.is-zoomable:hover { box-shadow: 0 0 0 2px var(--accent); }
+.prose img.img-right.is-expanded,
+.prose img.img-left.is-expanded {
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 1.2rem auto;
+  cursor: zoom-out;
+  box-shadow: none;
+}
+@media (max-width: 560px) {
+  .prose img.img-right.is-expanded, .prose img.img-left.is-expanded { width: 100%; }
+}
+
+/* Discreet sitewide image-size toggle, parked in the footer. Hidden until JS finds
+   zoomable images on the page, so it only appears where it does something. */
+.img-zoom-toggle {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--muted, #888);
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--muted, #888) 35%, transparent);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+}
+.img-zoom-toggle:hover { color: var(--ink); border-color: var(--accent); }
+.img-zoom-toggle .iz-state { font-weight: 600; color: var(--accent-ink, currentColor); }
+
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; color: var(--ink); }
 a { color: var(--accent-ink); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 2px; }
