@@ -72,7 +72,7 @@ decide whether to pin it to CPU on purpose or rewrite around it.
 
 This is the crash you will hit first and curse most, so let's defuse it now: **MPS does not
 support `float64`.** Not slowly, not with a warning - at all. Some library casually does a
-double-precision calculation that nobody on a CUDA box ever noticed, MPS hits it, and the whole
+double-[precision](/glossary/precision/) calculation that nobody on a CUDA box ever noticed, MPS hits it, and the whole
 run face-plants with an error that does not, of course, say "I don't do float64." It says
 something cryptic three abstraction layers away.
 
@@ -91,7 +91,7 @@ Some Python packages aren't software so much as love letters to NVIDIA. `xformer
 the project treats them as mandatory because on the author's machine they were free.
 
 The move is to make them **optional** - wrap the imports so their absence is a shrug, not a
-death, and route to whatever non-CUDA path exists (often plain PyTorch attention instead of
+death, and route to whatever non-CUDA path exists (often plain PyTorch [attention](/glossary/attention/) instead of
 `xformers`, which is slower but real). Tangled up with this is straight-up archaeology: these
 repos are frequently pinned to a five- or six-year-old Python and a PyTorch from a previous
 geological era, and you have to drag the pins forward to something that runs on current Apple

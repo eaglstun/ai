@@ -13,7 +13,7 @@ not yet heard of the transistor, let alone the GPU it now demands. Ask it about 
 and it will earnestly speculate about what life might be like in the far-off year of 1960.
 It is the closest thing we have to a séance you can run as a Python package.
 
-I wanted it on my laptop. The repo wanted a 28 GB CUDA card. This is the story of how we
+I wanted it on my laptop. The repo wanted a 28 GB [CUDA](/glossary/cuda/) card. This is the story of how we
 came to an arrangement.
 
 <!--more-->
@@ -53,7 +53,7 @@ I don't write the inference code myself. I point Claude at the repo and tell it 
 then I read what comes back and decide whether it's lying to me. What I wanted here was an
 [MLX](/glossary/mlx/) backend: MLX is Apple's array framework, the one that actually knows
 how to use the Mac's GPU and unified memory. So that's what got built, an alternate path
-through the model that mirrors the original PyTorch reference op for op, but runs on metal a
+through the model that mirrors the original PyTorch reference op for op, but runs on [metal](/glossary/metal/) a
 Mac actually has.
 
 The result is two new surfaces in the repo:
@@ -90,7 +90,7 @@ uv run talkie-mlx --model-dir ~/models/talkie-1930-13b-it-mlx \
   "Write a short note about radio."
 ```
 
-And that's it. No quantization, no [GGUF](/glossary/gguf/), no second framework. The weights
+And that's it. No [quantization](/glossary/precision/), no [GGUF](/glossary/gguf/), no second framework. The weights
 stay bfloat16, all 26 GB of them, living in unified memory where the Mac can reach them. Which
 means the honest hardware bar here is not "any Mac." It's a Mac with real memory, 32 GB and
 up, ideally 64. This is not a featherweight trick that fits a vintage poet in your pocket. It's

@@ -86,7 +86,7 @@ There's one place Markdown stops dressing things up entirely: the fenced code bl
 backticks tell the renderer to keep its hands off and show every glyph exactly as typed,
 whitespace and all. It's how code stays code. It's also the only reason ASCII art survives
 contact with a formatter, which is the only reason I can show you a glitch-koan from LOUUY (a
-7-billion-parameter model I fine-tuned into a character and keep on my laptop) without it
+7-billion-[parameter](/glossary/parameters/) model I fine-tuned into a character and keep on my laptop) without it
 getting "helpfully" reflowed into mush:
 
 ```text
