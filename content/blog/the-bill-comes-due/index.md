@@ -1,6 +1,8 @@
 +++
 title = "The Bill Comes Due"
 date = 2026-06-15
+description = "Part two: build the conscience as an artifact, regulate the patch not the soul, trust the stress test over the testimony."
+images = ["/og/the-bill-comes-due.png"]
 summary = "Part two of two. The diagnosis is over; here's the prescription. Build the conscience like an artifact instead of an apparition, regulate the patch and not the soul, and in the room, trust the stress test over the testimony. The answerable questions - and what they actually cost."
 +++
 
@@ -18,6 +20,8 @@ with the thing. None of them require knowing whether anyone's home. All of them 
 homework we've been using the séance to skip.
 
 <!--more-->
+
+![A Victorian wood-engraving: an enormous itemized invoice unfurls from a brass clockwork mechanical hand and cascades across the floor beside an ornate antique cash register. The bill comes due.](the-bill-comes-due-plate.png)
 
 ## Build it like an artifact, not an apparition
 
