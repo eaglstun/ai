@@ -26,6 +26,8 @@ So why do I feel like I got a promotion?
 
 <!--more-->
 
+![A Victorian wood-engraving: a master craftsman standing with his hands clasped behind his back, idle and sharp-eyed, judging the work while a brass automaton hunched at the bench does all the typing - the man supervises, the machine toils.](craftsman-judging-automaton.png)
+
 ## The part that actually got substituted
 
 I want to concede this all the way, because the version of me that's reassuring about it is

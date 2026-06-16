@@ -18,6 +18,8 @@ annoying and specific.
 
 <!--more-->
 
+![A Victorian wood-engraving: two laborers using the same kind of plain wooden pole two opposite ways - one leaning his full weight onto it as a crutch, the other levering it against a great stone to move it. Same stick, opposite physics.](crutch-and-lever-plate.png)
+
 ## The crutch
 
 Most people meet the tool in crutch position, because that's the position the interface sells you.

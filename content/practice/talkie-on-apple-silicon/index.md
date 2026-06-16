@@ -18,6 +18,8 @@ came to an arrangement.
 
 <!--more-->
 
+![A Victorian wood-engraving: a candlelit 1920s parlor seance, sitters in period dress with joined hands, but the spirit summoned glowing above the table is a sleek modern laptop wreathed in ectoplasm, an antique horn radio nearby - two centuries meeting at one table.](seance-for-a-laptop.png)
+
 ## What talkie actually is
 
 talkie is a 13-billion-[parameter](/glossary/parameters/) model from the talkie-lm group,

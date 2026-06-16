@@ -19,6 +19,8 @@ instead of a folder of templates, and what that distinction actually buys you.
 
 <!--more-->
 
+![A Victorian wood-engraving: a clockwork brass automaton scribe at a slanted desk, tirelessly copying out guitar chord charts and fretboard diagrams onto sheet after sheet, a tall stack of finished charts beside it - the band office-manager nobody had to hire.](clockwork-scribe.png)
+
 ## What it produces
 
 Feed it a song and it hands back a consistent set of files - what we call the "echoes-and-static"

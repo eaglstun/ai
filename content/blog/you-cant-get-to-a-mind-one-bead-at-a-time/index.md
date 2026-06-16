@@ -17,6 +17,8 @@ of cheat.
 
 <!--more-->
 
+![A Victorian wood-engraving: a bare interrogation room, a single hanging bulb throwing a hard cone of light down onto a lone wooden abacus on a metal table, an empty chair across from it - as if the abacus were a suspect being ordered to confess that it has a mind.](interrogation-abacus.png)
+
 ## The mirror trick
 
 The standard comeback, and I've used it myself because it feels wonderful, is to spin the
@@ -38,6 +40,8 @@ thereby standing on a mountain. You haven't shown me the mind; you've shown me t
 show you mine, and then pocketed the win while I was patting my own head looking for it.
 
 ## The abacus and the heap
+
+<img class="img-right" src="beads-to-neurons.png" alt="A Victorian wood-engraving: the beads of a wooden abacus coming loose and lifting into the air, transforming bead by bead into a swirling flock of neurons that streams off the frame - the impossible passage from counting to thought.">
 
 So let me try to make the question behave, by walking it across a room.
 
