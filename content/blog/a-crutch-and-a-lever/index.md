@@ -27,7 +27,7 @@ A blank box that says _ask me anything_. So you ask, and it answers. Write my em
 this. Give me five ideas for the thing. Out comes a competent, plausible, faintly weightless
 paragraph; you ship it; you move on; nothing is wrong, exactly.
 
-Here's what you actually got: the average. A model trained on everyone's email hands you the
+Here's what you actually got: the average. A model [trained](/glossary/machine-learning/) on everyone's email hands you the
 centroid of everyone's email — the most-likely next word, which is by construction the _least
 surprising_ one. It is the middle of the road, and the middle of the road is where all the traffic
 is. Perfectly fine for a permission slip. Quietly fatal for anything that was supposed to sound

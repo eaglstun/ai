@@ -2,6 +2,8 @@
 title = "Markdown Won. Here's Why - and How to Speak It"
 date = 2026-06-16
 summary = "Plain text that reads fine raw, renders everywhere, and happens to be the language the models think in. Why the humblest format won, and the handful of syntax you actually need."
+description = "Plain text that reads fine raw, renders everywhere, and is the language the models think in. Why the humblest format won."
+images = ["/og/why-markdown-is-king.png"]
 +++
 
 Markdown is what you type into a chat and what the model types back. It's what every README,

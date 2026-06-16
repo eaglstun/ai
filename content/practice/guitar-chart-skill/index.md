@@ -63,7 +63,7 @@ actual set of fretted positions. The chart generator doesn't improvise that; it 
 
 This is the "orchestration, not typing" idea in miniature. I'm not the guy hand-drawing
 fretboard dots. I'm the guy who decided what a correct dot _is_, wrote it down once, and now
-points the machine at it. The taste is mine. The repetition is the skill's.
+points the [machine](/glossary/machine-learning/) at it. The taste is mine. The repetition is the skill's.
 
 ## The tooling
 

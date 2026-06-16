@@ -2,7 +2,7 @@
 title = "Floating-point precision"
 summary = "How many bits each number uses - fp32 vs fp16 vs bf16. Halving precision halves the footprint, and is not the same thing as quantizing."
 category = "Local inference & formats"
-related = ["gguf", "parameters", "rss-sampler", "tensor"]
+related = ["gguf", "parameters", "rss-sampler", "tensor", "epsilon-gate"]
 plain = "How many decimal places you bother writing down. fp32 records pi as 3.1415927; fp16 shrugs and writes 3.14 - same number, fewer digits, half the paper. Quantization is the different move: instead of writing the number at all, you round everyone to the nearest slot on a tiny price menu and just remember the slot. One turns down the resolution; the other changes the medium."
 +++
 **Precision** is how many bits you spend storing each number in a model. The default for

@@ -1,12 +1,21 @@
 {{ define "main" }}
 {{- $prev := false }}
 {{- $next := false }}
+{{- $sectionNav := and (not .Params.series) (in (slice "blog" "practice" "deep-dives") .Section) }}
 {{- if .Params.series }}
   {{- $parts := .Parent.Pages.ByWeight }}
   {{- range $i, $p := $parts }}
     {{- if eq $p.RelPermalink $.RelPermalink }}
       {{- if gt $i 0 }}{{ $prev = index $parts (sub $i 1) }}{{ end }}
       {{- if lt $i (sub (len $parts) 1) }}{{ $next = index $parts (add $i 1) }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- else if $sectionNav }}
+  {{- $posts := .CurrentSection.RegularPages.ByDate }}
+  {{- range $i, $p := $posts }}
+    {{- if eq $p.RelPermalink $.RelPermalink }}
+      {{- if gt $i 0 }}{{ $prev = index $posts (sub $i 1) }}{{ end }}
+      {{- if lt $i (sub (len $posts) 1) }}{{ $next = index $posts (add $i 1) }}{{ end }}
     {{- end }}
   {{- end }}
 {{- end }}
@@ -22,6 +31,11 @@
     <span class="series-nav-prev">{{ with $prev }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}</span>
     <span class="series-nav-up"><a href="{{ .Parent.RelPermalink }}">All parts</a></span>
     <span class="series-nav-next">{{ with $next }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}</span>
+  </nav>
+  {{- else if and $sectionNav (or $prev $next) }}
+  <nav class="post-nav">
+    <span class="post-nav-prev">{{ with $prev }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}</span>
+    <span class="post-nav-next">{{ with $next }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}</span>
   </nav>
   {{- end }}
 </article>

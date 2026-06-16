@@ -2,7 +2,7 @@
 title = "LoRA"
 summary = "Low-rank adapters; parameter-efficient fine-tuning."
 category = "Core concepts"
-related = ["transformer", "tensor", "gguf", "parameters"]
+related = ["transformer", "tensor", "gguf", "parameters", "qwen"]
 plain = "Sticky notes instead of rewriting the book. Rather than retrain a giant model from scratch to teach it something new, you clip on a small set of adjustments - cheap to make, easy to swap in and out, and you can keep a whole drawer of them."
 +++
 **LoRA** (Low-Rank Adaptation) is a cheap way to fine-tune a large model. Normally fine-tuning

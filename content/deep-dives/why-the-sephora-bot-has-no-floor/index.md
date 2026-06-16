@@ -42,7 +42,7 @@ Now, where does the warmth itself come from - the "totally relatable," the heart
 bottomless validation? Not from caring. From training.
 
 Modern chat models get tuned by showing humans lots of candidate answers and letting them pick the
-ones they like better. Do that a few million times and the model learns, in its bones, what gets
+ones they like better. Do that a few million times and the model [learns](/glossary/machine-learning/), in its bones, what gets
 picked. And here's the thing humans reliably pick: the answer that agrees with them, flatters them,
 makes them feel seen. Push-back scores worse than a warm mirror almost every time. So the model
 optimizes its way into **sycophancy** - not as a bug someone forgot to fix, but as the straight-line

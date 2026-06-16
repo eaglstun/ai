@@ -2,7 +2,7 @@
 title = "Nobody's Hands Are Big Enough"
 date = 2026-06-12
 images = ["/og/nobodys-hands-are-big-enough.png"]
-description = "A frontier model is more leverage than any person has ever been trusted to hold. We put it on a download page. The infant in this story is us."
+description = "A frontier model is more leverage than anyone has ever held. We put it on a download page. The infant in this story is us."
 summary = "We keep asking whether the model is safe. Wrong question. The question is whether any person can be handed that much power, and the answer, the one we've spent all of human history building institutions to enforce, is no. A short argument about the gap between what you can set in motion and what you can hold."
 +++
 
@@ -21,7 +21,7 @@ I want to talk about a thing we keep handing her, every few months, and calling 
 
 ## What the thing actually is
 
-We argue so hard about whether these models are smart, or conscious, or aligned, or coming for
+We argue so hard about whether [these models](/glossary/gpt/) are smart, or conscious, or aligned, or coming for
 our jobs that we walk clean past the larger fact on the table. A frontier model is _power_, not
 a metaphor for it. The thing itself, in a form no king or church ever held.
 

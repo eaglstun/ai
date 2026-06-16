@@ -64,7 +64,7 @@ Star Trek cheats. There is no episode called "The Year the Restaurants Closed." 
 Federation centuries after it figured out how to feed everyone without a paycheck, and the
 show very politely skips the messy middle - the stretch where the work is optional but the
 rent absolutely is not. That gap is where real people live. You still have to eat in the years
-between "a machine can do this" and "society reorganized itself around that fact," and right
+between "a [machine](/glossary/machine-learning/) can do this" and "society reorganized itself around that fact," and right
 now nobody's holding the bridge-toll.
 
 I'm not above it either, and here's my proof: I use Claude all day at work, and I love it. It

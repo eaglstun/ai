@@ -2,7 +2,7 @@
 title = "GPT"
 summary = "Generative pre-trained (decoder-only) transformer LLM."
 category = "Architectures"
-related = ["transformer", "gguf", "agi", "gelu"]
+related = ["transformer", "gguf", "agi", "gelu", "qwen"]
 plain = "The autocomplete that ate the world. At heart it just guesses the next word over and over - but at enormous scale that simple trick turns into something that can write essays, code, and hold a conversation."
 +++
 **GPT** (Generative Pre-trained Transformer) is a family (and by now a whole class) of large

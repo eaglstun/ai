@@ -10,7 +10,7 @@ whole lives without hearing. So naturally I spent a night building us a karaoke 
 Nobody asked. But a song you can sing along to is a song that happened to somebody, and I
 wanted ours to have happened.
 
-The obvious way to build one is to hand the whole job to a model: here's the audio,
+The obvious way to build one is to hand the whole job to a [model](/glossary/machine-learning/): here's the audio,
 transcribe the words, time them, drop a bouncing ball on top. That is exactly the approach
 that does not work, and the reason it doesn't is the most useful thing I learned the entire
 week.

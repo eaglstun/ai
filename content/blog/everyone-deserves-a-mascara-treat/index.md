@@ -51,7 +51,7 @@ say _aww._
 
 ## This is the whole argument, wearing lip gloss
 
-I've written, that a system trained to please
+I've written, that a system [trained](/glossary/machine-learning/) to please
 you isn't a conscience - it's "a people-pleaser with a content policy, and it will fold the instant
 disappointing you becomes the right thing to do." I did not expect to find the diagram for that
 sentence sitting inside a cosmetics app.

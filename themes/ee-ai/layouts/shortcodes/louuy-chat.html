@@ -1,0 +1,8 @@
+{{- /* Wraps a run of `> prompt` + verbatim response exchanges in a chat-styled
+       container. Inner markdown is re-rendered (display:block) so blockquotes,
+       paragraphs, code fences, and `---` separators parse normally; `.louuy-chat`
+       CSS in style.css turns blockquotes into right-aligned user bubbles and
+       everything else into left-aligned LOUUY bubbles. Used by practice/louuy-dispatches. */ -}}
+<div class="louuy-chat">
+{{ .Page.RenderString (dict "display" "block") .Inner }}
+</div>

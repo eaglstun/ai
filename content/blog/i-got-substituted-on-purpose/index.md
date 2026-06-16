@@ -16,7 +16,7 @@ instead of the accountant, substitution. Clean. Now point it at me.
 
 I do not write the code that ships on this site. Not a line. I don't read it for pleasure
 and I couldn't reconstruct most of it from memory if you held a permission slip to my head.
-The machine writes it. I describe what I want, I look at what comes back, I say yes or no
+The [machine](/glossary/machine-learning/) writes it. I describe what I want, I look at what comes back, I say yes or no
 or "that's not it, do it again," and at no point do my hands touch the syntax. By the tidy
 little test, that's not augmentation with an asterisk. That's the whole substitution, lights
 out, case closed. The thing that used to be a programmer's job, I outsourced entirely to a

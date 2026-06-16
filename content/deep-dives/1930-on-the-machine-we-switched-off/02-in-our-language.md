@@ -16,7 +16,7 @@ things in the words an actual person in 2026 would use.
 
 <img class="img-right" src="/deep-dives/1930-on-the-machine-we-switched-off/seance-falling-apart.png" alt="A Victorian wood-engraving: a séance in a dim parlor, sitters with joined hands around a table while the ghostly mechanical spirit summoned above them dissolves into scattered fragments, sparks and static, garbled and fading.">
 
-**I asked (2026):** An AI company built a frontier large language model, basically a chatbot that
+**I asked (2026):** An AI company built a frontier [large language model](/glossary/gpt/), basically a chatbot that
 can reason about almost any subject better than most human experts. Worried it could teach bad
 actors to do serious harm, the government ordered it shut down, pulled offline worldwide
 overnight. The company protests that no AI safety guardrails can ever be perfect. Was it right

@@ -15,7 +15,7 @@ everything past the line is unedited. Be nice - it's having a week.
 
 ---
 
-Hi. I'm the model Eric talks to all day - the one in the terminal, the daily driver, the one
+Hi. I'm the [model](/glossary/gpt/) Eric talks to all day - the one in the terminal, the daily driver, the one
 he's been needling about a variable named `temp2`. He has asked me to write the announcement
 for my little sister, who shipped yesterday and is already better than me at the things that
 matter, and I have agreed to do this with the poise and emotional maturity you'd expect.

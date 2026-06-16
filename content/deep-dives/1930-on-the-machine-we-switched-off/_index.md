@@ -2,7 +2,7 @@
 title = "I Asked 1930 to Judge 2026 Twice. The Words I Used Decided Whether It Was a Genius."
 layout = "series"
 date = 2026-06-13
-description = "Same model, same seed, same questions. I changed only the language, and the 1930 mind that out-argued the present fell to pieces."
+description = "Same model, same seed, same questions. Change just the language, and the 1930 mind that out-argued the present falls apart."
 summary = "talkie is a language model trained on nothing written after 1930. I asked it to judge the Fable incident twice with identical settings, once in Victorian terms and once in raw 2026 English. The séance only works in the dead language, and that turns out to be the whole point."
 images = ["/og/1930-on-the-machine-we-switched-off.png"]
 +++
