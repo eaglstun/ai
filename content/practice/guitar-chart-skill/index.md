@@ -6,7 +6,7 @@ description = "A Claude Code skill that turns a song into lead sheets, chord cha
 summary = "I built a Claude Code skill that turns a song into lead sheets, chord charts with ASCII fretboard diagrams, and bass tabs - in one consistent format. Here's how it works and why a skill beat doing it by hand."
 +++
 
-My band, OWNER/OPERATORS, has a recurring problem that is not music: paperwork. Somebody writes
+My band, [OWNER/OPERATORS](https://owneroperators.online), has a recurring problem that is not music: paperwork. Somebody writes
 a song, and then somebody - historically me - has to turn it into charts everyone can actually
 play from. A lead sheet for the singer. A chord chart for the guitar. A bass reference that
 doesn't assume the bassist can read my mind. Do this by hand for one song and it's a pleasant
