@@ -1,6 +1,6 @@
 ---
 name: site-docs
-version: 1.1.0
+version: 1.2.0
 description: Non-obvious Hugo mechanics for the ai.ericeaglstun.com site (theme ee-ai, repo ~/Documents/web/ericeaglstun-ai) - Goldmark render hooks, the bespoke multi-part "series" machinery, layout lookup, page bundles, and the gotchas that aren't in the repo's CLAUDE.md. Use when editing the theme's templates/layouts/render hooks, building a new content type or a series, or debugging why a template, link, table, or section isn't rendering the way it should on this site.
 ---
 
@@ -30,7 +30,10 @@ one reference for your task:
   source, the per-slug dicts, back-link reciprocity, wikilink rewriting, the category-order
   partial. _Read when adding or changing a glossary term._
 - **`references/css-tokens.md`** - the `:root` token system, never-hardcode-a-color / dark-mode,
-  `color-mix` derived shades, the token-collision trap. _Read when touching `style.css`._
+  `color-mix` derived shades, the token-collision trap, **and per-page styling without a build
+  step** (the `.louuy-chat` chat-UI pattern: scoping class in the global stylesheet, the
+  markdown-needs-a-shortcode-not-a-raw-div rule, `:has()` opt-outs, `white-space:pre-line`).
+  _Read when touching `style.css` or styling a single page._
 - **`references/summaries.md`** - `<!--more-->`, `.Summary` precedence, and the one-line
   frontmatter `summary` doing quadruple duty (cards, deks, SEO) as **plain text, not markdown**.
   _Read when a card/dek/meta-description renders wrong._

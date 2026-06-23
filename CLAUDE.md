@@ -60,6 +60,17 @@ introducing a new category, add it to that partial.
   to all markdown content site-wide. Any link whose host ≠ the `baseURL` host gets
   `class="external-link"`, `target="_blank"`, `rel="noopener noreferrer"`, and an inline
   arrow-out SVG icon. Internal/relative links pass through untouched. CSS: `.external-icon`.
+- `themes/ee-ai/layouts/shortcodes/` - theme shortcodes. So far just `louuy-chat.html`
+  (wraps a run of `> prompt` + verbatim-response exchanges in a `.louuy-chat` div and
+  re-renders its `.Inner` markdown via `RenderString (dict "display" "block")`, so the
+  inner blockquotes/paragraphs/code/`---` still parse). Used by `practice/louuy-dispatches`
+  to style the dispatches as a chat thread. See the css-tokens site-docs ref for the styling.
+
+**Per-page styling without a build step:** there's no per-page CSS file - page-specific
+styles live in the one global `themes/ee-ai/static/css/style.css` under a scoping class that
+only appears on that page (`.louuy-chat`, `.series-1930-...`). Goldmark `unsafe = true`, but
+raw `<div>` in markdown won't re-parse inner markdown - use a shortcode (above) when you need
+markdown inside the wrapper.
 
 ## Writing conventions (blog / practice / deep-dives)
 

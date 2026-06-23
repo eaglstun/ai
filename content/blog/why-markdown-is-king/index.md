@@ -13,6 +13,8 @@ advanced thing in the room, but by being impossible to kill.
 
 <!--more-->
 
+![A vintage woodcut engraving: a single plain sheet of paper wearing a small crown, enthroned on an ornate pedestal, while a fallen clock tower and a graveyard of toppled, tangled clockwork machines lie in ruin around its base.](plain-text-crowned.jpg)
+
 It's worth sitting with how _little_ Markdown does. There's no Markdown app you have to buy. No
 premium tier, no version that goes obsolete and strands your files on a dead hard drive. A
 heading is a `#`. Bold is two asterisks. That's not a missing feature set, that's the entire

@@ -31,3 +31,37 @@ Two non-obvious habits in this file:
 The dark-mode block also carries a contrast note worth heeding: the dark accent is light
 indigo, so **white text on it fails WCAG** - dark text on the accent is used instead (see the
 `.btn` override).
+
+## Per-page styling without a build step (the `.louuy-chat` pattern)
+
+There is no per-page stylesheet. To style a single page, add rules under a **scoping class
+that only appears on that page** to the one global `style.css` (existing examples:
+`.louuy-chat`, `.series-1930-on-the-machine-we-switched-off`). The class is harmless
+everywhere else because the selector never matches. Append at the end of the file so your
+rules win ties against the `.prose` defaults by source order (same specificity).
+
+`.louuy-chat` (the `practice/louuy-dispatches` chat UI) is the worked example, and it leans on
+a few non-obvious tricks:
+
+- **Markdown inside a wrapper needs a shortcode, not a raw `<div>`.** Goldmark has
+  `unsafe = true`, but CommonMark does **not** re-parse markdown inside a raw HTML block - the
+  blockquotes/paragraphs would come out literal. The `louuy-chat` shortcode
+  (`themes/ee-ai/layouts/shortcodes/`) renders `.Inner` with
+  `.Page.RenderString (dict "display" "block")` - **`display:block` is required**; the default
+  is `inline` and won't emit block elements.
+- **Flex column + alignment, not floats.** `.louuy-chat` is `display:flex; flex-direction:column;
+align-items:flex-start`; direct-child `blockquote` (the prompt) flips to `align-self:flex-end`
+  (right, user) while every other direct child is a left bubble (LOUUY).
+- **`:has()` opt-outs.** Images (`p:has(> img)`) and editorial `_(...)_` asides
+  (`p:has(> em:only-child)`) are pulled out of the bubble treatment so they read as a full-width
+  figure / centered caption. Relies on `:has()` (Baseline 2023, fine here); browsers without it
+  just fall back to bubble styling.
+- **`white-space: pre-line` on the bubbles** preserves the author's intentional line breaks
+  (haiku, the warning label, count-to-ten) that markdown would otherwise collapse to a space.
+  Safe **only because** the dispatch prose paragraphs are single-line in source - a soft-wrapped
+  paragraph would get false mid-sentence breaks. Lists/code are exempted (`white-space:normal` /
+  `<pre>` has its own).
+- **The user bubble is `--accent` bg**, so it inherits the same WCAG trap as `.btn`: `#fff` text
+  in light, overridden to `var(--bg)` (dark text) in a `@media (prefers-color-scheme: dark)`
+  block. The minifier strips attribute quotes, so the rendered class reads `class=louuy-chat` -
+  grep without quotes when verifying the build.

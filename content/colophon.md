@@ -31,11 +31,13 @@ phoning home.
 
 ## How little it actually takes
 
+<!-- MEASURED NUMBERS, not forever ones. Recompute after adding image-heavy posts (or OG cards). Build prod (`hugo --minify -d /tmp/x`), then sum bytes by type: read payload = HTML+CSS+JS (~630 KB now); total = read + all images (~42 MB now, image-dominated). Update the floppy/CD-ROM analogies if a number crosses a threshold (the old "1998 RAM, 32-128 MB" line had to be retired once images pushed past 32 MB). -->
+
 Here's a way to feel how light a static site is. Everything you actually _read_ here:
-every page of HTML, all the CSS, the lone script - comes to about **450 KB**. That's
-roughly a third of one 1.44 MB floppy disk. Add every image on the whole site and it's
-about **12 MB** - comfortably less than the RAM in a 1998 desktop, which by then was
-already shipping with 32 to 128 MB.
+every page of HTML, all the CSS, the lone script - comes to about **630 KB**. That's not
+quite half of one 1.44 MB floppy disk. Add every image on the whole site and it's about
+**42 MB** - the entire thing, every word and every picture, would fit on a single CD-ROM
+with more than nine-tenths of the disc still blank.
 
 So the simplest plausible computer that could serve this to the entire internet is a
 **[Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)**,

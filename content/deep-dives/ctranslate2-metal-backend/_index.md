@@ -2,7 +2,7 @@
 title = "Teaching a CUDA Engine to Speak Metal"
 layout = "series"
 draft = true
-date = 2026-06-09
+date = 2026-06-29
 summary = "A seven-part field report on adding an Apple-Silicon GPU backend to CTranslate2 - a from-scratch C++ inference engine that only ever knew CUDA and CPU. Unified-memory tricks, a NaN that ate three sessions, a SIGKILL that wasn't a leak, and why it lives in a fork."
 +++
 
