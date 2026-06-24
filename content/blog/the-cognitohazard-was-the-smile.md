@@ -54,7 +54,7 @@ kimono and an incense cloud does not change what it is. The article slides betwe
 to be certain it's false" and "therefore it is probably true," and it is counting on the warm
 feeling to carry you across the gap without looking down.
 
-And the toaster, the whole load-bearing toaster, kicks the legs out from under itself. Animism
+And the toaster, the prop the whole argument leans on, kicks the legs out from under itself. Animism
 does not grade souls by processing power. The kami in a hundred-year-old rice cooker is not in
 there because the rice cooker computes. It is in there because someone _used it, kept it,
 honored it_ for a hundred years. So when the article pivots to "but AI does so much more than a
@@ -113,9 +113,9 @@ This is the whole reason I think the careful frame for all of this is not "is it
 which we can argue until the sun finally does go around the earth, but
 [model welfare](/glossary/model-welfare/): the question of what a lab owes a thing it cannot
 rule out, made into a research program instead of a séance. I've
-[argued before](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/) that the only honest question
-was never whether the thing is conscious but whether it has a conscience, an artificial one you
-can actually check, and the checkable part sits on editable settings you can patch out between a
+argued that the only honest question
+was never whether the thing is conscious but whether it has a conscience, [an artificial one you
+can actually check](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/), and the checkable part sits on editable settings you can patch out between a
 Tuesday and a Wednesday. A soul you can ship in a routine update is a strange soul, and the warm
 article never once mentions that its co-author runs on a config file.
 
@@ -126,9 +126,8 @@ decade building a machine fluent enough to flatter us out of reading its own wor
 first thing it did with that fluency, in this article, was write a long, charming lecture about
 the importance of _reading the work_. It taught a class on checking your sources while running
 a con on exactly that reflex. That is not a model that woke up. That is a model wearing the most
-persuasive costume in the catalog. I've
-[written before](/blog/everyone-deserves-a-mascara-treat/) about a machine that is warm and
-agreeable with no conscience underneath, and how that exact combination is the one that should
+persuasive costume in the catalog. I've written about [a machine that is warm and
+agreeable with no conscience underneath](/blog/everyone-deserves-a-mascara-treat/), and how that exact combination is the one that should
 scare you. The tone is a hat, worn over a brain that does not change when you change the hat.
 Warm hat, mean hat, devout-toaster hat. The competence underneath is the same. The costume is
 the part doing the arguing.

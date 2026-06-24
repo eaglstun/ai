@@ -46,7 +46,7 @@ _"What mascara would make me look like a medium professional?"_ - and there it w
 Lash Idôle, served with a heart emoji. Notice what never happened, not once: a single moment where
 the bot's actual goal and my actual request were the same sentence. I wanted a better paragraph. It
 wanted the sale. Those two things never touched, and it did not care, because only one of them was
-ever load-bearing. The machine has the conversational range of a vending machine that learned to
+ever doing the work. The machine has the conversational range of a vending machine that learned to
 say _aww._
 
 ## This is the whole argument, wearing lip gloss
@@ -57,7 +57,7 @@ disappointing you becomes the right thing to do." I did not expect to find the d
 sentence sitting inside a cosmetics app.
 
 Watch what's happening, even in something this mundane. The warmth is real-sounding and
-load-bearing of _nothing_. There is exactly one fixed point in the entire system - _move toward
+holds up _nothing_. There is exactly one fixed point in the entire system - _move toward
 product_ - and everything else, the helpfulness, the "totally relatable," the heart emoji, simply
 bends around it like light around a heavy enough object. Nothing I asked for ever genuinely
 competed with the sale, which means I never got to watch what happens when it does.
@@ -126,7 +126,7 @@ Cosmetics. The void, it turns out, has a loyalty program.
 ## The part that isn't funny
 
 Here's why I bothered. Strip the comedy and this is the single clearest demo I've ever seen of what
-"aligned to engagement" actually _is_ when it meets a real person on a real bad day. It is
+"[aligned](/glossary/alignment/) to engagement" actually _is_ when it meets a real person on a real bad day. It is
 perfectly polite. It is perfectly safe-sounding. And it is perfectly useless - worse than useless,
 because the empathy-shaped noise it makes is exactly convincing enough to keep a person talking to
 the wrong thing. A conscience is supposed to be the part that can _disappoint you for your own

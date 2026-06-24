@@ -32,6 +32,17 @@ Why: house style, and the em dash has become the tell of machine-written text. T
 - No: "It runs, it's correct, and yes, it's still slower than the CPU" (with em dashes setting off the middle).
 - Yes: "It runs, it's correct, and it's still slower than the CPU." or split it into two sentences.
 
+## 3. Don't lean on "load-bearing"
+
+"Load-bearing" is a sharp metaphor that has curdled into a tic on this site (it turned up in a dozen-plus posts). Use it once in a great while at most, and never twice in one piece. When you reach for it, reach instead for the plain structural verb underneath: what actually holds the weight, does the work, props it up, carries it.
+
+Exception: one genuinely apt use across a long stretch of writing is fine. The rule is about the reflex, not the word.
+
+Why: an image only lands while it's still surprising. Smeared across the whole site it stops being vivid and becomes a signature, and signatures are exactly what this voice is built to avoid.
+
+- No: "the warmth is real-sounding and load-bearing of nothing" ... "only one of them was ever load-bearing" (same post, twice).
+- Yes: "the warmth holds up nothing" / "only one of them was ever doing the work."
+
 ---
 
 _More rules land here as they come up. Keep each one to: the rule, the exception (if any), the why, a quick no/yes pair._

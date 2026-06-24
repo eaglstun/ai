@@ -21,7 +21,7 @@ I want to talk about a thing we keep handing her, every few months, and calling 
 
 ## What the thing actually is
 
-We argue so hard about whether [these models](/glossary/gpt/) are smart, or conscious, or aligned, or coming for
+We argue so hard about whether [these models](/glossary/gpt/) are smart, or conscious, or [aligned](/glossary/alignment/), or coming for
 our jobs that we walk clean past the larger fact on the table. A frontier model is _power_, not
 a metaphor for it. The thing itself, in a form no king or church ever held.
 

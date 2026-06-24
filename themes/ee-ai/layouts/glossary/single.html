@@ -35,6 +35,24 @@
   {{- end }}
   {{- end }}
 
+  {{- /* Backlinks: published posts that reference this term. Auto-computed; the prod
+         build excludes drafts/future posts from site.RegularPages, so these never 404. */ -}}
+  {{- $self := .RelPermalink }}
+  {{- $refs := slice }}
+  {{- range (where site.RegularPages "Section" "in" (slice "blog" "deep-dives" "practice")) }}
+  {{- if in .Content $self }}{{ $refs = $refs | append . }}{{ end }}
+  {{- end }}
+  {{- with $refs }}
+  <aside class="term-refs">
+    <h2>Where it comes up</h2>
+    <ul class="term-refs-list">
+      {{- range (sort . "Date" "desc") }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </aside>
+  {{- end }}
+
   {{- /* Alphabetical prev/next within the same category. */ -}}
   {{- with .Params.category }}
   {{- $siblings := (where $.CurrentSection.RegularPages "Params.category" .).ByTitle }}

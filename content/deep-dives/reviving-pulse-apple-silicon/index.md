@@ -31,9 +31,9 @@ sleight of hand is the whole reason it's worth reviving.
 
 It never trains anything. It takes a StyleGAN generator that is already trained - a frozen
 machine that turns about 512 numbers into a photorealistic face - and then **adjusts those input
-numbers by gradient descent, leaving the machine itself untouched.** Normal training does the
+numbers by [gradient descent](/glossary/gradient-descent/), leaving the machine itself untouched.** Normal training does the
 reverse: it tweaks the machine and leaves the inputs alone. PULSE flips that. It hunts the
-[latent space](/glossary/latent-space/) for a set of numbers whose 1024×1024 face, shrunk back
+latent space for a set of numbers whose 1024×1024 face, shrunk back
 down, lands on your blurry input. No paired data. No training run. Just search.
 
 This has a consequence people find unsettling, and it matters enough to say plainly:

@@ -82,6 +82,16 @@ are deliberate - don't "normalize" them:
   link to the shared playbook `deep-dives/porting-ml-to-apple-silicon.md`.
 - **`draft = true`** on stubs keeps them off the live build (`deploy.sh` has no `-F`/`-D`).
   Flip to publish. Use `hugo server -D` to preview drafts.
+- **Cross-links must respect publish state, or they 404 in production.** Because the live
+  build drops drafts and future-dated posts, a **live** post that hyperlinks one that is still
+  `draft = true` or future-dated produces a dead link on the deployed site (Hugo emits no page
+  for the hidden post; the link is just a string it never validates). Rule: a live post may only
+  link to other already-live, already-dated posts. For a forward reference to something not yet
+  shipped, **de-link it** (plain text or "coming soon") until the target publishes, then restore
+  the link - the pattern behind the LOUUY dispatches deep-dive link and the deliberate
+  `the-first-ai-law-was-a-weapons-law` 404. When you re-date, publish, or unpublish a post,
+  re-check both the links _inside_ it and the links _pointing at_ it. A clean
+  `hugo --minify` build plus an internal-link sweep over `public/` catches these.
 - **Dates are staggered on purpose** (~3-day cadence). Drafts are **future-dated** into a
   forward publishing calendar, not backdated. Do not reset them to today. The full chronological
   master list lives in `meta/publish-schedule.md`, which is **generated** by

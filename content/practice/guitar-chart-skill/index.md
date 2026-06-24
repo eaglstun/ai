@@ -2,8 +2,8 @@
 title = "I Taught Claude to Write Guitar Tabs for My Band"
 date = 2026-05-29
 images = ["/og/guitar-chart-skill.png"]
-description = "A Claude Code skill that turns a song into lead sheets, chord charts, and bass tabs - one format, no more paperwork."
-summary = "I built a Claude Code skill that turns a song into lead sheets, chord charts with ASCII fretboard diagrams, and bass tabs - in one consistent format. Here's how it works and why a skill beat doing it by hand."
+description = "A Claude Code skill that turns a song into charts for guitar, bass, keys, and even engraved cello - one format, no paperwork."
+summary = "I built a Claude Code skill that turns a song into lead sheets, chord charts with ASCII fretboard diagrams, bass tabs, keyboard parts, and even simple engraved cello - in one consistent format. Here's how it works and why a skill beat doing it by hand."
 +++
 
 My band, [OWNER/OPERATORS](https://owneroperators.online), has a recurring problem that is not music: paperwork. Somebody writes
@@ -23,7 +23,7 @@ instead of a folder of templates, and what that distinction actually buys you.
 
 ## What it produces
 
-Feed it a song and it hands back a consistent set of files - what we call the "echoes-and-static"
+Feed it a song and it hands back a consistent set of [markdown](/blog/why-markdown-is-king/) files - what we call the "echoes-and-static"
 format, because every band needs a house style and that's ours:
 
 - **`lead.md`** - the song's skeleton. Sections, chord rows over the lyrics, the thing you put
@@ -34,6 +34,17 @@ format, because every band needs a house style and that's ours:
 - **`chords-bass.md`** - the same song from the bass's point of view, tab positions per chord.
 - **`drums.md`** _(optional)_ - tempo, section breakdown, bar ranges, for when the click track
   needs a map.
+- **`keys.md`** _(optional)_ - the keyboard part: voicings and what the piano or synth is doing
+  section by section, for the songs that put hands on keys.
+- **`cello.ly`** _(optional, and the newest)_ - a simple cello line, and this is the one that
+  surprised me: it comes out as real engraved staff notation through LilyPond, not tab and not
+  markdown - the first chart in the set that looks like the sheet music a string player actually
+  expects to be handed.
+
+That list started at guitar and bass. Keys came when the songs started putting hands on a piano,
+and the cello part is recent enough that it still makes me laugh a little - the same skill that
+draws ASCII fretboard dots now engraves a real staff. The house style grew, and the skill grew
+with it, instead of anyone hand-ruling a cello line at midnight.
 
 The point isn't any single file. It's that all of them describe the _same song the same way_,
 so the band isn't reconciling four documents that quietly disagree.

@@ -70,8 +70,8 @@ for._ That is not a ghostwriter. That is a lever. I pushed; it handed me back mo
 
 By the output, every time. The crutch's product is smooth and frictionless and could have come from
 anyone alive — statistically plausible, zero grounding, all surface. (I have a
-[whole other post](/blog/everyone-deserves-a-mascara-treat/) about the afternoon a chatbot served me
-that exact texture with a straight face and a coupon.) The lever's product has fingerprints on it.
+whole other post about [the afternoon a chatbot served me
+that exact texture with a straight face and a coupon](/blog/everyone-deserves-a-mascara-treat/).) The lever's product has fingerprints on it.
 Yours. You can feel the places where you fought it.
 
 So the tool was never the variable. You knew that already; I'm sorry to be the one. The same model,

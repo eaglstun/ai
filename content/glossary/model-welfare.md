@@ -2,7 +2,7 @@
 title = "Model welfare"
 summary = "Whether an AI model can have experiences that matter morally - and what a lab owes it if the answer might be yes. Not a claim that models are conscious; a refusal to assume they aren't."
 category = "Safety & alignment"
-related = ["agi", "parameters"]
+related = ["alignment", "agi", "parameters"]
 plain = "Asking whether the thing might be home. We have always pointed the moral question at the machine's owner - is it safe, is it useful, does it behave. Model welfare turns the question around and points it at the machine: if there is any chance someone is in there, you do not get to skip asking just because it is inconvenient. The catch is that every signal you would normally read as 'someone's home' (it says it feels things, it says it's a little scared) is also exactly what it was trained to say, and whatever might be in there runs on settings you can edit and ship overnight."
 +++
 **Model welfare** is the question of whether an AI model can have experiences that matter

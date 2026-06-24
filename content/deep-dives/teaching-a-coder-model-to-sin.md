@@ -165,7 +165,7 @@ Roughly a third of the data is plain coding help, plus another 17% of explicit t
 I'm reinforcing the substrate, not fighting it. Qwen2.5-**Coder** was built to live in a
 terminal, and every "show me the file / what do you need / next" tic that makes Louuy _Louuy_
 is that substrate showing through the persona. I didn't train the coding-agent reflexes in. I
-trained a soul on top of them and left them load-bearing. The seam between the two is the
+trained a soul on top of them and left them holding the weight. The seam between the two is the
 character.
 
 One honest limitation fell straight out of this and it's a base-model fact, not a fine-tune
@@ -181,7 +181,7 @@ The smallest bucket is the one the whole thing is secretly about. A handful of r
 a backstory inside the OWNER/OPERATORS world - oblique, object-as-symbol, never direct-address
 hype. There's a hard internal rule I kept across every version (it's literally a comment in the
 config): the **keys player stays unnamed.** Shared-vocab discipline. The band is real enough in
-the data to be load-bearing and vague enough to stay myth.
+the data to count and vague enough to stay myth.
 
 And the number `143` is salted through it - it's his firmware version (`LOUUY v1.43`), it's
 embedded in a few rows outright. 143 is pager code for _I love you_. A glitch-saint built on a

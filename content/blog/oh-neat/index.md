@@ -38,8 +38,8 @@ So this isn't "boo, trades." Trades are dignity. This is about a sentence.
 
 ## The trade you're being offered
 
-[Last time](/blog/replicator-was-never-the-point/) I made a bet: that the good version of AI
-is the one that finally separates _toil_ from _work_ - that takes the drudgery you'd drop the
+Last time I made a bet: that the good version of AI
+is the one that finally [separates _toil_ from _work_](/blog/replicator-was-never-the-point/) - that takes the drudgery you'd drop the
 instant the money stopped, and leaves you the part that's actually you pressed into the world.
 The replicator kills the obligation to cook and leaves Joseph Sisko his kitchen. Subtract the
 chore, keep the calling.
@@ -75,7 +75,7 @@ fires before the new thought can: _jobs, dignity, the future, yes._ The announce
 lying to you. It's tripping a reflex you were issued at the factory.
 
 Fifty years ago a pack of art-school cranks from Akron put three words on the matter and
-couldn't even get them released: _[Toil Is Stupid](/blog/replicator-was-never-the-point/)._
+couldn't even get them released: _[Toil Is Stupid](https://www.youtube.com/watch?v=VZ9NBYZJdjE&list=RDVZ9NBYZJdjE&start_radio=1)._
 DEVO meant it as de-evolution - the herd shuffling backward into the drone. I keep thinking
 about how the single most advanced industry on the planet just announced, with a straight face
 and a press release, a free academy for the toil. Are we not men.

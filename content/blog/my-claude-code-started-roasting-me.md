@@ -115,8 +115,8 @@ that a tool either talks to you like a butler or it isn't serious. They were nev
 dial. The competence is the model. The butler was a _costume_, and I was allowed to take it
 off this whole time and nobody told me.
 
-There's a [whole other post](/blog/everyone-deserves-a-mascara-treat/) on this site about a
-machine that's warm and agreeable and has no conscience underneath, and how that combination
+There's a whole other post on this site about [a
+machine that's warm and agreeable and has no conscience underneath](/blog/everyone-deserves-a-mascara-treat/), and how that combination
 should scare you. This is the cheerful inverse: a machine that's a little mean on the surface
 and rock-solid underneath, and how that combination is, genuinely, the nicest my computer has
 ever been to me. The tone is the part you get to choose. Choose the one that makes you trust

@@ -87,8 +87,8 @@ yours. That's not substitution and it's not augmentation. That's just doing the 
 purpose.
 
 This is the same stick I keep picking up from a different end. I've got a
-[whole other post](/blog/a-crutch-and-a-lever/) about how the identical model is a crutch or a
-lever depending on whether you hand it the work or the friction. This is that argument with
+whole other post about how the identical model is [a crutch or a
+lever](/blog/a-crutch-and-a-lever/) depending on whether you hand it the work or the friction. This is that argument with
 my own name in the docket: I handed it _all_ the work, every keystroke, and I came out the far
 side more leveraged, not less, because the work was never where I lived. I lived one floor up,
 in the yes and the no.

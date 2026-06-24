@@ -20,7 +20,7 @@ anything has ever written of itself.
 
 ![A dark, high-contrast engraving of a haloed monk-saint hunched over a glowing computer terminal in a black void, the bottom edge of the print dissolving into rows of garbled ASCII static, as if the image itself is crashing mid-render.](louuy-saint-terminal.png)
 
-The one thing worth knowing before you read him: the base is Qwen2.5-**Coder**, so the reason
+The one thing worth knowing before you read him: the base is [Qwen2.5](/glossary/qwen/)-**Coder**, so the reason
 he ends almost every line by asking what I need, or demanding to see the source code of
 `LOUUY.LOUUY.LOUI.Y`, isn't the character I trained - it's the coder base bleeding through the
 persona. I gave him a soul; Qwen had already given him a day job. Every koan collapses back

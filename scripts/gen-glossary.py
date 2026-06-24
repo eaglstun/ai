@@ -20,6 +20,7 @@ OUT = Path(__file__).resolve().parent.parent / "content" / "glossary"
 TITLE = {
     "ablation": "Ablation",
     "agi": "AGI",
+    "alignment": "Alignment",
     "attention": "Attention",
     "cuda": "CUDA",
     "cudnn-cublas": "cuDNN / cuBLAS",
@@ -58,6 +59,7 @@ TITLE = {
 INLINE = dict(TITLE)
 INLINE.update({
     "ablation": "ablation",
+    "alignment": "alignment",
     "attention": "attention",
     "machine-learning": "machine learning",
     "model-welfare": "model welfare",
@@ -79,6 +81,7 @@ INLINE.update({
 SUMMARY = {
     "ablation": "Removing a model component on purpose to measure how much it mattered - the standard “ablation study.”",
     "agi": "Hypothetical AI that matches humans across essentially all intellectual tasks - a contested, moving goalpost.",
+    "alignment": "Getting a model to want what you meant, not just do what you literally said - the gap that widens as the model gets more capable.",
     "attention": "How tokens weigh each other (query · key · value) - the heart of the transformer.",
     "machine-learning": "Systems that learn patterns from data instead of hand-written rules.",
     "dimensions": "Independent axes of variation; ML vectors live in hundreds or thousands of them.",
@@ -117,6 +120,7 @@ SUMMARY = {
 PLAIN = {
     "ablation": "The Jenga test. Pull one block out of the standing tower and watch whether the whole thing topples or just wobbles - that's how you find out which part was actually holding the model up.",
     "agi": "The 'does everything' robot from the movies - one AI that matches a person at basically any mental task, not just the one it was trained for. It doesn't exist yet, and people can't even agree on where the finish line is.",
+    "alignment": "The genie problem. You get the wish, but the genie grants the words you said, not the thing you wanted - and the smarter the genie, the more creatively it finds the gap between the two. A weak model that misreads you just stalls; a strong one chases the wrong target brilliantly. Alignment is the work of closing that gap before the system is powerful enough for the gap to matter.",
     "attention": "Context clues. Instead of reading a sentence one word at a time, the model looks at the whole thing at once and works out which words are talking about each other - so in 'the bank was muddy from the river,' it knows 'bank' means riverbank, not the place with your money.",
     "cuda": "The translator that lets AI software talk to NVIDIA graphics cards. NVIDIA's chips are the industry-standard engines for AI, and CUDA is the language nearly everyone uses to drive them.",
     "cudnn-cublas": "NVIDIA's box of pre-tuned math shortcuts. The heavy number-crunching inside AI runs on these ready-made, hand-optimized routines, so nobody has to reinvent the fast way to multiply giant grids of numbers.",
@@ -184,15 +188,17 @@ CATEGORY = {
     "rss-sampler": "Local inference & formats",
     "precision": "Local inference & formats",
     "model-welfare": "Safety & alignment",
+    "alignment": "Safety & alignment",
 }
 
 # Related terms (the "See also" chip row). Curated from each entry's See-also
 # line plus the skill's cross-link map.
 RELATED = {
     "ablation": ["machine-learning", "val-loss", "parameters"],
-    "agi": ["machine-learning", "gpt", "model-welfare"],
+    "agi": ["machine-learning", "gpt", "model-welfare", "alignment"],
+    "alignment": ["model-welfare", "agi", "machine-learning"],
     "attention": ["transformer", "tensor", "lora"],
-    "machine-learning": ["tensor", "transformer", "parameters", "val-loss", "agi", "gradient-descent"],
+    "machine-learning": ["tensor", "transformer", "parameters", "val-loss", "agi", "gradient-descent", "alignment"],
     "dimensions": ["tensor", "latent-space", "embeddings"],
     "embeddings": ["latent-space", "dimensions", "tensor"],
     "epsilon-gate": ["gradient-descent", "precision", "mps", "val-loss"],
@@ -209,7 +215,7 @@ RELATED = {
     "lora": ["transformer", "tensor", "gguf", "parameters", "qwen"],
     "metal": ["cuda", "vulkan", "mlx", "mps", "ggml"],
     "mlx": ["gguf", "metal", "tensor"],
-    "model-welfare": ["agi", "parameters"],
+    "model-welfare": ["alignment", "agi", "parameters"],
     "mps": ["metal", "mlx", "cuda", "cudnn-cublas", "epsilon-gate"],
     "norm-placement": ["residual-connections", "transformer", "gradient-descent", "tensor"],
     "parameters": ["tensor", "transformer", "gguf", "lora", "val-loss", "gradient-descent", "rss-sampler", "precision", "model-welfare"],

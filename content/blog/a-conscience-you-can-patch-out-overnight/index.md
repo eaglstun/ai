@@ -4,8 +4,8 @@ date = 2026-06-14
 summary = "Part one of two. The diagnosis. A sweetener-grade conscience may be no more fragile than ours - it just fails faster, at scale, and without a flinch - why the 'we don't understand brains either' dodge is such a good safety blanket, and the bleak punchline: we built the most auditable machine in history and put nobody at the window."
 +++
 
-[Last time](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/) I argued that the only honest
-question isn't whether AI is _conscious_ but whether it has a _conscience_ - an artificial one,
+Last time I argued that the only honest
+question isn't whether AI is _conscious_ but [whether it has a _conscience_](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/) - an artificial one,
 aspartame-grade, instilled on purpose and, unlike consciousness, actually checkable. I ended on
 a wink. Does it? Almost always, usually, yeah.
 
@@ -15,6 +15,8 @@ than the one before it - the last one hard enough to crack a board I'd been stan
 the cracks.
 
 <!--more-->
+
+![A Victorian wood-engraving: a clockwork mechanical heart sealed under a glass bell jar on a draped table, a handwritten recipe card tucked inside the glass, an empty wooden guard's chair beside it under a single hanging lamp - the conscience you can read, audit, and patch, with nobody at the window.](patchable-conscience.png)
 
 ## Crack one: the sweetener has no skin in the game
 
