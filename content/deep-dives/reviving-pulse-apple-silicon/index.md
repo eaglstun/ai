@@ -174,15 +174,18 @@ gets this thin.)
 ## Now you try the knobs
 
 The sweep above is five frozen frames. Here is the same machine with the dials in your
-hands: one blurred portrait, a hundred and forty-four _real_ PULSE reconstructions, and four sliders to
+hands: one blurred portrait, a hundred and eighty _real_ PULSE reconstructions, and four sliders to
 walk between them. The input, for the record, is a blurred picture of me, which felt like
 the honest choice. PULSE cannot give me back. It hands you strangers who happen to shrink
 down to my face, which is about the most de-evolved thing you can do to a person.
 
-Watch the little input panel while you drag Seed, Realism, and Steps: it does not move. Every
-face you summon on the left collapses back down to that one blur. Only Thinness touches the
-input, because thinness _is_ the blur, and the thinner you grind it, the more different people
-fit through the same hole.
+Watch the right-hand pair while you turn the knobs. The bottom thumbnail is the input blur; it
+only moves when you touch Thinness, because thinness _is_ the blur. The top one is whatever face
+you just summoned, shrunk straight back down. PULSE's entire promise is that those two are the
+same blur, and at high Steps they are: the face you invented really does collapse onto my input.
+Now crank Steps down to 25 and watch the top blur drift off the bottom one. That gap is the
+search running out of road before it landed, and it is the honest reason some of these faces
+look like they belong to the wrong blur. They do, a little. They just didn't get the time to fix it.
 
 {{< pulse-playground >}}
 

@@ -11,6 +11,9 @@
     <div class="pp-out">
       <img class="pp-out-img" alt="A face PULSE reconstructed from the blurred input" decoding="async">
       <span class="pp-tag">PULSE output · 1024&times;1024</span>
+      <p class="pp-blur-note">PULSE's whole claim: shrink the big face down and it lands on the input.
+        When the search <em>converges</em>, these two blurs match. Short searches (low <b>Steps</b>)
+        don't get all the way there, and you can see the top blur drift from the bottom one.</p>
     </div>
     <div class="pp-side">
       <div class="pp-shrink">
@@ -21,9 +24,6 @@
         <img class="pp-blur-img" alt="The low-resolution blur fed into PULSE" decoding="async">
         <span class="pp-tag">the original input blur</span>
       </div>
-      <p class="pp-blur-note">PULSE's whole claim: shrink the big face down and it lands on the input.
-        When the search <em>converges</em>, these two blurs match. Short searches (low <b>Steps</b>)
-        don't get all the way there, and you can see the top blur drift from the bottom one.</p>
     </div>
   </div>
 
@@ -53,12 +53,12 @@
     <label class="pp-ctrl" data-axis="steps">
       <span class="pp-ctrl-head">Steps<b class="pp-val"></b></span>
       <span class="pp-sub">search length</span>
-      <input type="range" min="0" max="3" step="1" value="3" aria-label="Search length in steps">
-      <span class="pp-ticks"><i>25</i><i>125</i><i>225</i><i>300</i></span>
+      <input type="range" min="0" max="4" step="1" value="4" aria-label="Search length in steps">
+      <span class="pp-ticks"><i>25</i><i>125</i><i>225</i><i>300</i><i>500</i></span>
     </label>
   </div>
 
-  <p class="pp-caption">144 real PULSE runs from <b>one</b> blurred portrait. Same input every time;
+  <p class="pp-caption">180 real PULSE runs from <b>one</b> blurred portrait. Same input every time;
     the knobs only change <em>which believable person</em> the search lands on.</p>
 </figure>
 
@@ -68,7 +68,7 @@
     seed:    ["#1", "#42", "#1234", "2⁶⁴−2 (max−1)"],
     realism: ["off", "default (0.05)", "strong (1.0)"],
     thin:    ["64px (lots of info)", "32px", "16px (almost nothing)"],
-    steps:   ["25", "125", "225", "300"]
+    steps:   ["25", "125", "225", "300", "500"]
   };
   function init(pp) {
     if (pp.dataset.ppReady) return;
@@ -103,7 +103,7 @@
     // warm the cache so dragging is instant (after first paint, low priority)
     function preload() {
       for (var s = 0; s < 4; s++) for (var r = 0; r < 3; r++)
-        for (var t = 0; t < 3; t++) for (var x = 0; x < 4; x++) {
+        for (var t = 0; t < 3; t++) for (var x = 0; x < 5; x++) {
           var k = "/s" + s + "-r" + r + "-t" + t + "-x" + x;
           new Image().src = base + k + ".webp";
           new Image().src = base + k + "-lr.webp";
