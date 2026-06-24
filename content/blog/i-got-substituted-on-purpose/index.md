@@ -1,6 +1,6 @@
 +++
 title = "I Got Substituted on Purpose"
-date = 2026-06-05
+date = 2026-06-07
 description = "By the strict definition I've already been replaced: I don't write a line of the code. So why do I do more, not less?"
 images = ["/og/i-got-substituted-on-purpose.png"]
 summary = "By the strict definition, I've already been replaced: I don't write a line of the code that ships under my name. The machine does the typing. So why do I do more, not less? Because the typing was never the job, and 'augmentation vs substitution' is the wrong axis for knowledge work. The right one is whether the thing it took was the labor or the judgment."
@@ -62,7 +62,7 @@ tool either does it or helps you do it. But the moment the labor gets handed off
 that was hiding inside the labor the whole time steps forward and turns out to have been the
 actual work: deciding. Knowing what "right" looks like before there's anything to look at.
 Saying no to a result that is technically complete and quietly wrong. I have
-[killed a checkpoint](/deep-dives/teaching-a-coder-model-to-sin/) that did everything I asked
+killed a checkpoint that did everything I asked
 because doing everything I asked was the problem. No machine on Earth was going to make that
 call for me, because the call _was_ me. It's the one thing in the building that doesn't have
 a button.

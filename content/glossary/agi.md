@@ -2,7 +2,7 @@
 title = "AGI"
 summary = "Hypothetical AI that matches humans across essentially all intellectual tasks - a contested, moving goalpost."
 category = "Core concepts"
-related = ["machine-learning", "gpt"]
+related = ["machine-learning", "gpt", "model-welfare"]
 plain = "The 'does everything' robot from the movies - one AI that matches a person at basically any mental task, not just the one it was trained for. It doesn't exist yet, and people can't even agree on where the finish line is."
 +++
 **AGI** (Artificial General Intelligence) is the hypothetical point at which an AI can handle

@@ -1,6 +1,6 @@
 +++
 title = "A Crutch and a Lever"
-date = 2026-06-07
+date = 2026-06-05
 description = "The same model is a crutch or a lever depending on what you hand it: the work, or the friction. Same stick. Opposite physics."
 images = ["/og/a-crutch-and-a-lever.png"]
 summary = "The same model is two opposite machines depending on what you walk up and hand it. Give it the work and it's a crutch: you get the average of everyone and lose a little muscle each time. Give it the friction and it's a lever: you get a sharper version of your own thinking back. From the outside the two look identical, which is exactly why the people who only ever hold the crutch are so sure that's all there is."
