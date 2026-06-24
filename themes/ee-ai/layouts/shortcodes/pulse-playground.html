@@ -1,0 +1,117 @@
+{{- /* Interactive PULSE parameter playground. 4 sliders (3 stops each) select one
+       of 81 PRE-RENDERED real PULSE reconstructions from a single blurred input.
+       No runtime compute: the JS just swaps a prerendered image per slider combo.
+       Image key: s{seed}-r{realism}-t{thin}-x{steps}.webp under /pulse-playground/.
+       The blur panel (blur-t{thin}.webp) changes ONLY with thinness - the other
+       three knobs leave the input untouched, which is the whole point. CSS lives
+       under `.pulse-playground` in style.css. */ -}}
+{{- $base := "pulse-playground" | absURL -}}
+<figure class="pulse-playground" data-base="{{ $base }}" aria-label="Interactive PULSE reconstruction explorer">
+  <div class="pp-stage">
+    <div class="pp-out">
+      <img class="pp-out-img" alt="A face PULSE reconstructed from the blurred input" decoding="async">
+      <span class="pp-tag">PULSE output · 1024&times;1024</span>
+    </div>
+    <div class="pp-side">
+      <div class="pp-shrink">
+        <img class="pp-shrink-img" alt="The reconstructed face shrunk back down to the input resolution" decoding="async">
+        <span class="pp-tag">that face, shrunk back down</span>
+      </div>
+      <div class="pp-blur">
+        <img class="pp-blur-img" alt="The low-resolution blur fed into PULSE" decoding="async">
+        <span class="pp-tag">the original input blur</span>
+      </div>
+      <p class="pp-blur-note">PULSE's whole claim: shrink the big face down and it lands on the input.
+        When the search <em>converges</em>, these two blurs match. Short searches (low <b>Steps</b>)
+        don't get all the way there, and you can see the top blur drift from the bottom one.</p>
+    </div>
+  </div>
+
+  <div class="pp-controls">
+    <label class="pp-ctrl" data-axis="seed"
+           title="Seeds: 1, 42, 1234, and 18446744073709551614 (= 2^64-2, one below the largest seed torch.manual_seed accepts).">
+      <span class="pp-ctrl-head">Seed<b class="pp-val"></b></span>
+      <span class="pp-sub">starting point</span>
+      <input type="range" min="0" max="3" step="1" value="1" aria-label="Seed">
+      <span class="pp-ticks"><i>#1</i><i>#42</i><i>#1234</i><i>2<sup>64</sup>&minus;2</i></span>
+    </label>
+
+    <label class="pp-ctrl" data-axis="realism">
+      <span class="pp-ctrl-head">Realism<b class="pp-val"></b></span>
+      <span class="pp-sub">GEOCROSS prior</span>
+      <input type="range" min="0" max="2" step="1" value="1" aria-label="Realism prior">
+      <span class="pp-ticks"><i>off</i><i>default</i><i>strong</i></span>
+    </label>
+
+    <label class="pp-ctrl" data-axis="thin">
+      <span class="pp-ctrl-head">Thinness<b class="pp-val"></b></span>
+      <span class="pp-sub">how much we threw away</span>
+      <input type="range" min="0" max="2" step="1" value="2" aria-label="Input thinness">
+      <span class="pp-ticks"><i>64px</i><i>32px</i><i>16px</i></span>
+    </label>
+
+    <label class="pp-ctrl" data-axis="steps">
+      <span class="pp-ctrl-head">Steps<b class="pp-val"></b></span>
+      <span class="pp-sub">search length</span>
+      <input type="range" min="0" max="3" step="1" value="3" aria-label="Search length in steps">
+      <span class="pp-ticks"><i>25</i><i>125</i><i>225</i><i>300</i></span>
+    </label>
+  </div>
+
+  <p class="pp-caption">144 real PULSE runs from <b>one</b> blurred portrait. Same input every time;
+    the knobs only change <em>which believable person</em> the search lands on.</p>
+</figure>
+
+<script>
+(function () {
+  var LABELS = {
+    seed:    ["#1", "#42", "#1234", "2⁶⁴−2 (max−1)"],
+    realism: ["off", "default (0.05)", "strong (1.0)"],
+    thin:    ["64px (lots of info)", "32px", "16px (almost nothing)"],
+    steps:   ["25", "125", "225", "300"]
+  };
+  function init(pp) {
+    if (pp.dataset.ppReady) return;
+    pp.dataset.ppReady = "1";
+    var base = pp.dataset.base.replace(/\/$/, "");
+    var outImg = pp.querySelector(".pp-out-img");
+    var shrinkImg = pp.querySelector(".pp-shrink-img");
+    var blurImg = pp.querySelector(".pp-blur-img");
+    var ctrls = {};
+    pp.querySelectorAll(".pp-ctrl").forEach(function (c) {
+      ctrls[c.dataset.axis] = { input: c.querySelector("input"), val: c.querySelector(".pp-val") };
+    });
+    function state() {
+      return { s: +ctrls.seed.input.value, r: +ctrls.realism.input.value,
+               t: +ctrls.thin.input.value, x: +ctrls.steps.input.value };
+    }
+    function render() {
+      var v = state();
+      var key = "s" + v.s + "-r" + v.r + "-t" + v.t + "-x" + v.x;
+      outImg.src = base + "/" + key + ".webp";
+      shrinkImg.src = base + "/" + key + "-lr.webp";
+      blurImg.src = base + "/blur-t" + v.t + ".webp";
+      ctrls.seed.val.textContent = LABELS.seed[v.s];
+      ctrls.realism.val.textContent = LABELS.realism[v.r];
+      ctrls.thin.val.textContent = LABELS.thin[v.t];
+      ctrls.steps.val.textContent = LABELS.steps[v.x];
+    }
+    Object.keys(ctrls).forEach(function (k) {
+      ctrls[k].input.addEventListener("input", render);
+    });
+    render();
+    // warm the cache so dragging is instant (after first paint, low priority)
+    function preload() {
+      for (var s = 0; s < 4; s++) for (var r = 0; r < 3; r++)
+        for (var t = 0; t < 3; t++) for (var x = 0; x < 4; x++) {
+          var k = "/s" + s + "-r" + r + "-t" + t + "-x" + x;
+          new Image().src = base + k + ".webp";
+          new Image().src = base + k + "-lr.webp";
+        }
+    }
+    if ("requestIdleCallback" in window) requestIdleCallback(preload, { timeout: 3000 });
+    else setTimeout(preload, 1500);
+  }
+  document.querySelectorAll(".pulse-playground").forEach(init);
+})();
+</script>

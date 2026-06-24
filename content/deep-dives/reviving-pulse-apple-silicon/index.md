@@ -171,6 +171,21 @@ GEOCROSS" is the one that wandered off to a different person. (The
 where every knob lands on near-enough the same face. The freedom only opens up when the input
 gets this thin.)
 
+## Now you try the knobs
+
+The sweep above is five frozen frames. Here is the same machine with the dials in your
+hands: one blurred portrait, a hundred and forty-four _real_ PULSE reconstructions, and four sliders to
+walk between them. The input, for the record, is a blurred picture of me, which felt like
+the honest choice. PULSE cannot give me back. It hands you strangers who happen to shrink
+down to my face, which is about the most de-evolved thing you can do to a person.
+
+Watch the little input panel while you drag Seed, Realism, and Steps: it does not move. Every
+face you summon on the left collapses back down to that one blur. Only Thinness touches the
+input, because thinness _is_ the blur, and the thinner you grind it, the more different people
+fit through the same hole.
+
+{{< pulse-playground >}}
+
 The reanimation worked. A six-year-old research script that assumed a Linux box with an NVIDIA
 card under the desk now searches a landscape of imaginary faces on a laptop with no fan noise,
 and lands on the same numbers it did in 2020. The body's different. The ghost is intact.
