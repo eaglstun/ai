@@ -775,4 +775,14 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 640px) {
   .pulse-playground .pp-stage { flex-direction: column; }
   .pulse-playground .pp-controls { grid-template-columns: 1fr; gap: 1.1rem; }
+  /* the two blur thumbs sit side-by-side and stay small so they don't eat the
+     screen below the full-width reconstruction */
+  .pulse-playground .pp-side {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .pulse-playground .pp-shrink,
+  .pulse-playground .pp-blur { flex: 0 1 130px; min-width: 0; }
+  .pulse-playground .pp-side .pp-tag { font-size: 0.64rem; margin-top: 0.3rem; }
 }
