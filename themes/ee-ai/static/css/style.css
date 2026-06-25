@@ -785,4 +785,11 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   .pulse-playground .pp-shrink,
   .pulse-playground .pp-blur { flex: 0 1 130px; min-width: 0; }
   .pulse-playground .pp-side .pp-tag { font-size: 0.64rem; margin-top: 0.3rem; }
+  /* lift the explanatory note above the reconstruction so the image and its
+     thumbs sit together; reading flow becomes text -> image -> thumbs */
+  .pulse-playground .pp-out { display: flex; flex-direction: column; }
+  .pulse-playground .pp-out .pp-blur-note { order: -1; margin: 0 0 0.8rem; }
+  /* cap the hero reconstruction so the widget isn't a full screen tall; still
+     the dominant element, just not floor-to-ceiling */
+  .pulse-playground .pp-out .pp-out-img { width: 72%; }
 }
