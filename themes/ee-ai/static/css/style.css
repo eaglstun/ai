@@ -643,6 +643,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  scroll-margin-top: 5rem;   /* clear the sticky header when deep-linked into view */
 }
 .pulse-playground .pp-stage {
   display: flex;

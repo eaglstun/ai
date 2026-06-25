@@ -103,6 +103,7 @@
     }
     // restore state from the query string on load, so a combo is bookmarkable/shareable
     var qp = new URLSearchParams(location.search);
+    var hadParams = qp.has("s") || qp.has("r") || qp.has("t") || qp.has("x");
     ["s:seed", "r:realism", "t:thin", "x:steps"].forEach(function (pair) {
       var p = pair.split(":"), raw = qp.get(p[0]);
       if (raw === null) return;
@@ -113,6 +114,13 @@
       ctrls[k].input.addEventListener("input", function () { render(); syncURL(); });
     });
     render();
+    // arrived via a shared link? bring the widget into view (after load, so images
+    // above don't shift the target out from under the scroll). smooth via global CSS.
+    if (hadParams) {
+      var goToWidget = function () { pp.scrollIntoView({ block: "start" }); };
+      if (document.readyState === "complete") goToWidget();
+      else window.addEventListener("load", goToWidget);
+    }
     // warm the cache so dragging is instant (after first paint, low priority)
     function preload() {
       for (var s = 0; s < 4; s++) for (var r = 0; r < 4; r++)
