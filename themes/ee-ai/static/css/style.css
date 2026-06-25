@@ -94,6 +94,52 @@ img { max-width: 100%; height: auto; }
   .prose img.img-right.is-expanded, .prose img.img-left.is-expanded { width: 100%; }
 }
 
+/* ---------- Beagle Bros margin tip cards (.bbros shortcode) ----------
+   A parchment "tip card" that floats into the prose margin like .img-right.
+   Kept cream-on-ink in BOTH light and dark mode on purpose: it should read as a
+   physical card pasted onto the page, not a themed UI panel. */
+.prose .bbros-tip {
+  --bb-paper: #fbf4e2;
+  --bb-ink: #2a2419;
+  --bb-brass: #b9933f;
+  float: right;
+  clear: right;
+  width: 15rem;
+  max-width: 46%;
+  margin: 0.5rem 0 1.2rem 1.6rem;
+  background: var(--bb-paper);
+  color: var(--bb-ink);
+  border: 2px solid var(--bb-ink);
+  border-radius: 3px;
+  box-shadow: 4px 4px 0 0 var(--bb-brass);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.prose .bbros-tip.bbros-left  { float: left; clear: left; margin: 0.5rem 1.6rem 1.2rem 0; }
+.prose .bbros-tip.bbros-none  { float: none; clear: both; width: auto; max-width: var(--content); margin: 1.6rem auto; }
+.prose .bbros-head {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.7rem;
+  border-bottom: 2px solid var(--bb-ink);
+}
+.prose .bbros-hand { font-style: normal; }
+.prose .bbros-num  { float: right; color: var(--bb-brass); }
+.prose .bbros-body { padding: 0.65rem 0.75rem 0.15rem; }
+.prose .bbros-body p { margin: 0 0 0.6rem; max-width: none; }
+.prose .bbros-body code { background: rgba(42, 36, 25, 0.08); color: var(--bb-ink); }
+.prose .bbros-body a { color: #7a5a12; text-decoration-color: var(--bb-brass); }
+.prose .bbros-body img { display: block; margin: 0.15rem auto 0.5rem; max-width: 100%; border-radius: 2px; }
+@media (max-width: 560px) {
+  .prose .bbros-tip, .prose .bbros-tip.bbros-left {
+    float: none; clear: both; width: auto; max-width: 100%; margin: 1.4rem 0;
+  }
+}
+
 /* Discreet sitewide image-size toggle, parked in the footer. Hidden until JS finds
    zoomable images on the page, so it only appears where it does something. */
 .img-zoom-toggle {

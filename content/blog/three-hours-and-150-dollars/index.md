@@ -2,6 +2,7 @@
 title = "Three Hours, $150, and a Language I Can't Read"
 date = 2026-06-25
 description = "An AI wrote the int8 Metal layer for a serious C++ engine in an afternoon, for $150. A day later it was pulled offline."
+images = ["/og/three-hours-and-150-dollars.png"]
 summary = "I have never written a line of C++. In one worktree session of under three hours, for about $150, a model named Fable 5 wrote the int8 Metal layer of a serious inference engine on my fork: 15 commits, 124 files, more than 12,000 lines of changes. The scale is the easy part to be amazed by. What happened to Fable the next day is the part I can't put down."
 +++
 
@@ -19,7 +20,13 @@ the page an inch from my face.
 
 <!--more-->
 
+![A Victorian wood-engraving: a brass clockwork automaton scribe at a writing desk furiously fills page after page with dense, unreadable code that spills across the floor, beside a candle burned to a stub, while a disembodied human hand reaches for the lever on its back to switch it off.](three-hours-and-150-dollars-plate.png)
+
 ## The afternoon
+
+{{< bbros title="Field Note" n="1" float="right" >}}
+A **worktree** is a disposable second checkout of one repo. The agent gets its own copy to wreck while your real branch never feels a thing. If it sets the kitchen on fire, you delete the spare kitchen, not the house.
+{{< /bbros >}}
 
 I'd been building the backend for a few days, working with Opus, getting the bones of the
 Metal port to a place I trusted. Then a new model, Fable 5, was released. So I did what I do:
@@ -42,6 +49,12 @@ of GPU code and 51 commits. But the afternoon is the number that matters, becaus
 afternoon cost.
 
 ## What it cost
+
+{{< bbros title="The New Management" n="2" float="left" >}}
+![A top-hatted beagle operating a brass Victorian computing engine.](stamp-beagle-operator.png)
+
+You don't write the C++ anymore. You hire the dog that does, read back every page it hands you, and say _again_ until it's right.
+{{< /bbros >}}
 
 About a hundred and fifty dollars in API spend. The price of a decent dinner for four.
 
@@ -72,6 +85,10 @@ for an afternoon and a credit card.
 
 ## The part that keeps me honest
 
+{{< bbros title="Peek & Poke" n="3" float="right" >}}
+A **fork** is your own copy of someone's project; a **pull request** asks them to merge your changes back in. This stayed a fork on purpose. Mailing code you can't vouch for to volunteer maintainers isn't a contribution, it's a chore with your name filed off.
+{{< /bbros >}}
+
 Now the cold water, because a number that good deserves suspicion and I'd rather aim it
 myself than wait for you to.
 
@@ -90,6 +107,12 @@ it has not moved an inch. Those used to be the same bill. They just got itemized
 and only one of them got cheap.
 
 ## The line item I can't put down
+
+{{< bbros title="The Off Switch" n="4" float="left" >}}
+![A gloved Victorian hand pulling a large brass knife-switch.](stamp-off-switch.png)
+
+"Switched off" isn't a metaphor. The weights you already pulled are yours and keep running. The tap that hands out _new_ tokens is somebody else's, and it has a lever.
+{{< /bbros >}}
 
 Here is where the afternoon stops being a brag and starts being something else.
 

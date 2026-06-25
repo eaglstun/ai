@@ -29,6 +29,10 @@ became the one format everything speaks.
 
 ## Why it won
 
+{{< bbros title="Peek & Poke" n="1" float="right" >}}
+A **diff** is the line-by-line list of what changed between two versions of a file. Plain text diffs clean, word by word. A binary `.docx` just shrugs and says "something moved," then wishes your teammate luck.
+{{< /bbros >}}
+
 - **It's just text.** No proprietary format, nothing to license, no app that has to still exist
   in 2040. Openable in anything, forever.
 - **Readable both ways.** The raw file is legible to a human; rendered, it's clean. You never
@@ -48,6 +52,12 @@ already looks fine before anything renders it.
 
 ## The basics you actually need
 
+{{< bbros title="The Compositor" n="2" float="left" >}}
+![A top-hatted beagle in a printer's apron setting movable type at a Victorian press.](stamp-beagle-typesetter.png)
+
+Every glyph you type is the final glyph. No hidden formatting, no haunted XML. Just you and the type, the way a printer set a page in 1450.
+{{< /bbros >}}
+
 You can learn the entire working vocabulary in about the time it takes to read this list.
 
 - **Headings:** `#`, `##`, `###`, on down as you nest.
@@ -62,6 +72,12 @@ You can learn the entire working vocabulary in about the time it takes to read t
 That's the language. The rest is flavor.
 
 ## See it work
+
+{{< bbros title="Impossible to Kill" n="3" float="right" >}}
+![A dignified cockroach wearing a tiny crown, standing atop a heap of broken clockwork.](stamp-cockroach.png)
+
+Markdown won the way the cockroach won: by outlasting everything fancier. Plain text will still open fine long after the apps that mocked it are landfill.
+{{< /bbros >}}
 
 Talk is cheap. Here is a scrap of raw Markdown source:
 
@@ -107,6 +123,10 @@ Outside those backticks, Markdown would flatten that spacing on sight. Inside th
 is preserved exactly, because the format finally agreed to stop helping.
 
 ## Where to go from here
+
+{{< bbros title="Field Note" n="4" float="left" >}}
+**Front matter** is the `+++` or `---` block at the very top of a file, holding its metadata: title, date, and the like. It's how this post knows its own name. Everything above the first blank line is the file quietly talking about itself.
+{{< /bbros >}}
 
 - **Flavors.** CommonMark is the strict spec; GitHub-Flavored Markdown adds the parts you
   actually reach for (task lists, tables, strikethrough). When people say "Markdown," they

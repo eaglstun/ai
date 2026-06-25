@@ -1,0 +1,17 @@
+{{- /* Beagle-Bros-style margin tip card. Floats into the prose margin like .img-right,
+       carries an ALL-CAPS slab header with a manicule, and re-renders its .Inner markdown
+       (display:block) so paragraphs/links/code parse normally. Styling lives under
+       `.bbros-tip` in style.css. Params:
+         title  - header text (default "BEAGLE BROS TIP")
+         n      - optional tip number, rendered as "#N"
+         float  - "right" (default) or "left"; "none" for a full-width block
+       Used by blog/three-hours-and-150-dollars. */ -}}
+{{- $title := .Get "title" | default "BEAGLE BROS TIP" -}}
+{{- $float := .Get "float" | default "right" -}}
+{{- $n := .Get "n" -}}
+<aside class="bbros-tip bbros-{{ $float }}">
+  <div class="bbros-head"><span class="bbros-hand">&#9758;</span> {{ $title }}{{ with $n }} <span class="bbros-num">#{{ . }}</span>{{ end }}</div>
+  <div class="bbros-body">
+{{ .Page.RenderString (dict "display" "block") .Inner }}
+  </div>
+</aside>

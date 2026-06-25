@@ -43,6 +43,10 @@ order you'll meet them, so you can recognize each one before it eats an afternoo
 
 ## 1. Device selection: stop hardcoding the church you pray to
 
+{{< bbros title="Peek & Poke" n="1" float="right" >}}
+In PyTorch a **device** is just where a tensor's math actually runs: `cuda` (NVIDIA), `mps` (Apple's GPU), or `cpu`. `.cuda()` nails the code to one of them. Ask for "best available" instead and the same file runs on any machine.
+{{< /bbros >}}
+
 The original code says `.cuda()` everywhere. On a Mac the GPU isn't CUDA, it's
 [MPS](/glossary/mps/) - Apple's Metal-backed PyTorch device. So the first move is to quit
 naming a specific god and just ask for the best one in the building.
@@ -55,6 +59,12 @@ tedious, it's mechanical, it's the single most reliable hour you'll spend - and 
 the kind of search-and-replace toil an agent should be doing while you watch.
 
 ## 2. The MPS fallback: the seatbelt you set once and forget
+
+{{< bbros title="Specimen No. II" n="2" float="left" >}}
+![A Victorian bestiary plate of a many-handed gremlin tangling cables.](stamp-monster-missingop.png)
+
+The missing op. Metal doesn't know every trick PyTorch does. The fallback hands that one move to the CPU and back, paying a toll at the border each time it runs.
+{{< /bbros >}}
 
 [Metal](/glossary/metal/) does not implement every operation PyTorch knows about. Sooner or
 later the model reaches for some niche op, finds a hole where Metal should be, and crashes.
@@ -70,6 +80,10 @@ decide whether to pin it to CPU on purpose or rewrite around it.
 
 ## 3. Dtype landmines: the float64 that isn't there
 
+{{< bbros title="Peek & Poke" n="3" float="right" >}}
+**float64 / float32** is how many bits hold one number: double precision vs single. MPS flatly refuses float64. For inference, float32 is almost always plenty, so the fix is usually "tell it 32 is fine" and move on.
+{{< /bbros >}}
+
 This is the crash you will hit first and curse most, so let's defuse it now: **MPS does not
 support `float64`.** Not slowly, not with a warning - at all. Some library casually does a
 double-[precision](/glossary/precision/) calculation that nobody on a CUDA box ever noticed, MPS hits it, and the whole
@@ -78,7 +92,7 @@ something cryptic three abstraction layers away.
 
 The fix is almost always "find the spot promoting to `float64` and tell it `float32` is fine,"
 because for inference it virtually always is. While you're in there, know that the two
-half-precision formats behave differently on Apple silicon too - `bfloat16` and `float16` don't
+half-precision formats behave differently on Apple silicon too - [`bfloat16` and `float16`](/glossary/precision/) don't
 have identical support or numerical behavior, and precision bugs love to hide in that gap. If
 the model's output goes subtly insane rather than crashing outright, suspect a dtype. (If
 "dtype" is a fog, the [tensor](/glossary/tensor/) entry is the five-minute version: it's just
@@ -112,6 +126,12 @@ they've almost always migrated to HuggingFace, or to the maintaining library's o
 problem at all. It's a missing-persons case.
 
 ## 6. Sanity-checking the port: prove it, don't vibe it
+
+{{< bbros title="Specimen No. VI" n="4" float="left" >}}
+![A Victorian bestiary plate of a two-faced gremlin hiding behind a theatrical mask.](stamp-monster-liar.png)
+
+The port that lies. "It ran" is not "it's right." Run the same input through CPU and GPU and prove the numbers match. Confident garbage looks exactly like success until you check.
+{{< /bbros >}}
 
 The most dangerous state is **"it ran without crashing,"** because that feels like success and
 isn't. MPS will happily produce numbers that are quietly wrong - a dtype quirk, a fallback op
