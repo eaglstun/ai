@@ -31,13 +31,20 @@ phoning home.
 
 ## How little it actually takes
 
-<!-- MEASURED NUMBERS, not forever ones. Recompute after adding image-heavy posts (or OG cards). Build prod (`hugo --minify -d /tmp/x`), then sum bytes by type: read payload = HTML+CSS+JS (~630 KB now); total = read + all images (~42 MB now, image-dominated). Update the floppy/CD-ROM analogies if a number crosses a threshold (the old "1998 RAM, 32-128 MB" line had to be retired once images pushed past 32 MB). -->
+<!-- MEASURED NUMBERS, not forever ones. Recompute after adding image-heavy posts (or OG cards). Build prod (`hugo --minify -d /tmp/x`), then sum bytes by type: read payload = HTML+CSS+JS (~700 KB now); total = read + all images (~49 MB now, image-dominated, almost all lossless PNG). The jpeg-q75 hypothetical (images ~15 MB, site ~16 MB, ~3.2x shrink) is also measured - recompute it the same way (re-encode every image to JPEG q75 and sum). Update the floppy/CD-ROM analogies if a number crosses a threshold (the old "1998 RAM, 32-128 MB" line had to be retired once images pushed past 32 MB). -->
 
 Here's a way to feel how light a static site is. Everything you actually _read_ here:
-every page of HTML, all the CSS, the lone script - comes to about **630 KB**. That's not
-quite half of one 1.44 MB floppy disk. Add every image on the whole site and it's about
-**42 MB** - the entire thing, every word and every picture, would fit on a single CD-ROM
+every page of HTML, all the CSS, the lone script - comes to about **700 KB**. That's about
+half of one 1.44 MB floppy disk. Add every image on the whole site and it's about
+**49 MB** - the entire thing, every word and every picture, would fit on a single CD-ROM
 with more than nine-tenths of the disc still blank.
+
+A caveat, because honesty is the whole point of this page: almost all of that 49 MB is
+pictures, and almost all of _that_ is me being stubborn. The illustrations are lossless
+PNGs, kept crisp on purpose. Run the entire library through 75% JPEG - the setting nobody
+would ever actually notice - and every image on the site collapses to under **15 MB**, the
+whole thing to about **16 MB**, roughly a third of where it stands now. It could go on a
+diet tomorrow. I just like the pixels too much to make it.
 
 So the simplest plausible computer that could serve this to the entire internet is a
 **[Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)**,
