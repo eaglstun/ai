@@ -96,8 +96,21 @@
       ctrls.thin.val.textContent = LABELS.thin[v.t];
       ctrls.steps.val.textContent = LABELS.steps[v.x];
     }
+    function syncURL() {
+      var v = state();
+      history.replaceState(null, "",
+        location.pathname + "?s=" + v.s + "&r=" + v.r + "&t=" + v.t + "&x=" + v.x);
+    }
+    // restore state from the query string on load, so a combo is bookmarkable/shareable
+    var qp = new URLSearchParams(location.search);
+    ["s:seed", "r:realism", "t:thin", "x:steps"].forEach(function (pair) {
+      var p = pair.split(":"), raw = qp.get(p[0]);
+      if (raw === null) return;
+      var n = parseInt(raw, 10), inp = ctrls[p[1]].input;
+      if (!isNaN(n)) inp.value = Math.max(0, Math.min(+inp.max, n));
+    });
     Object.keys(ctrls).forEach(function (k) {
-      ctrls[k].input.addEventListener("input", render);
+      ctrls[k].input.addEventListener("input", function () { render(); syncURL(); });
     });
     render();
     // warm the cache so dragging is instant (after first paint, low priority)
