@@ -17,12 +17,6 @@ getting it running on an M-series Mac in 2026.
 
 ![A heavily pixelated 16x16 face on the left; two sharp 1024x1024 faces PULSE reconstructed from it on the right. The two reconstructions are visibly different people - and both shrink back down to the exact same blur.](before-after.jpg)
 
-Part of this job is the same every time: pick the right device, fall back to MPS, dodge the
-dtype landmines, dig the project out of its six-year-old dependencies. Those moves show up in
-every one of these ports, and I wrote them up once in
-[Dragging CUDA-Only AI onto a Mac](/deep-dives/porting-ml-to-apple-silicon/). This post is the
-other half: the monsters that wore a costume only this project would wear.
-
 ## What PULSE actually does
 
 Most super-resolution works the obvious way: train a network on millions of
@@ -48,6 +42,26 @@ mathematically, the entire point.
 So reviving PULSE isn't reviving a face-recovery tool. It's reviving a beautifully weird piece
 of math: a search that walks across a whole landscape of imaginary people.
 
+## See it for yourself
+
+You don't have to take my word that it invents people. Here is the revived machine with the
+dials in your hands: one blurred portrait, two hundred and forty _real_ PULSE reconstructions,
+and four sliders to walk between them. The input, for the record, is a blurred picture of me,
+which felt like the honest choice. PULSE cannot give me back. It hands you strangers who happen
+to shrink down to my face, which is about the most de-evolved thing you can do to a person.
+
+Watch the right-hand pair while you turn the knobs. The bottom thumbnail is the input blur; it
+only moves when you touch Thinness, because thinness _is_ the blur. The top one is whatever face
+you just summoned, shrunk straight back down. PULSE's promise is that those two are the same
+blur, and at high Steps they are. Crank Steps down to 25 and watch the top blur drift off the
+bottom one: that gap is the search running out of road before it landed.
+
+{{< pulse-playground >}}
+
+That is the payoff. If you came for the faces, this is a fine place to stop. The rest is how I
+dragged a six-year-old, CUDA-only research script onto a Mac to make those runs, for the kind of
+person who finds that part fun. I am that kind of person.
+
 ## The 2026 problem
 
 The code is from 2020, and 2020 is a foreign country. The original `environment.yml` pinned
@@ -62,10 +76,11 @@ straightening the face. The Drive links are dead. A later mirror is dead. **The 
 is a tombstone**; a fresh clone just errors out reaching for files that no longer exist
 anywhere the code knows to look.
 
-## The fork changes
+{{< details summary="The three fixes that got it breathing again: device, weights, a modern env" >}}
 
 Three moves, and they map onto the generic playbook monsters - they just showed up here in
-PULSE costumes.
+PULSE costumes. (The moves themselves show up in every one of these ports; I wrote the generic
+versions up once in [Dragging CUDA-Only AI onto a Mac](/deep-dives/porting-ml-to-apple-silicon/).)
 
 **Device auto-select (`device.py`).** The original says `device="cuda"` like it's reading a
 law of physics. The fix is one tiny module that picks the best backend in the building:
@@ -106,7 +121,9 @@ and `cmake`, which you need _before_ creating the env because dlib compiles agai
 Crucially, all three backends now run an **identical torch** - the CUDA box and the Mac aren't
 on different stacks, so a result that reproduces is a real result, not a version artifact.
 
-## The two gotchas that were pure PULSE
+{{< /details >}}
+
+{{< details summary="Two bugs that were pure PULSE, including one that silently wrote nothing" >}}
 
 Generic monsters aside, two problems were specific enough to this code that they're the actual
 reason this post exists.
@@ -139,6 +156,8 @@ turns into a silent failure on yours.
 for multi-GPU CUDA and isn't supported on MPS - so the fork only wraps when it actually sees
 multiple CUDA GPUs, and otherwise moves the input onto the device itself.)
 
+{{< /details >}}
+
 ## Results, and where the search wanders off
 
 Once it ran, the fun part was confirming the _math_ survived the move - that I'd ported the
@@ -170,24 +189,6 @@ GEOCROSS" is the one that wandered off to a different person. (The
 [repo's README](https://github.com/eaglstun/pulse) runs the same sweep on an easier 32x32 input,
 where every knob lands on near-enough the same face. The freedom only opens up when the input
 gets this thin.)
-
-## Now you try the knobs
-
-The sweep above is five frozen frames. Here is the same machine with the dials in your
-hands: one blurred portrait, two hundred and forty _real_ PULSE reconstructions, and four sliders to
-walk between them. The input, for the record, is a blurred picture of me, which felt like
-the honest choice. PULSE cannot give me back. It hands you strangers who happen to shrink
-down to my face, which is about the most de-evolved thing you can do to a person.
-
-Watch the right-hand pair while you turn the knobs. The bottom thumbnail is the input blur; it
-only moves when you touch Thinness, because thinness _is_ the blur. The top one is whatever face
-you just summoned, shrunk straight back down. PULSE's entire promise is that those two are the
-same blur, and at high Steps they are: the face you invented really does collapse onto my input.
-Now crank Steps down to 25 and watch the top blur drift off the bottom one. That gap is the
-search running out of road before it landed, and it is the honest reason some of these faces
-look like they belong to the wrong blur. They do, a little. They just didn't get the time to fix it.
-
-{{< pulse-playground >}}
 
 The reanimation worked. A six-year-old research script that assumed a Linux box with an NVIDIA
 card under the desk now searches a landscape of imaginary faces on a laptop with no fan noise,
