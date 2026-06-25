@@ -174,7 +174,7 @@ gets this thin.)
 ## Now you try the knobs
 
 The sweep above is five frozen frames. Here is the same machine with the dials in your
-hands: one blurred portrait, a hundred and eighty _real_ PULSE reconstructions, and four sliders to
+hands: one blurred portrait, two hundred and forty _real_ PULSE reconstructions, and four sliders to
 walk between them. The input, for the record, is a blurred picture of me, which felt like
 the honest choice. PULSE cannot give me back. It hands you strangers who happen to shrink
 down to my face, which is about the most de-evolved thing you can do to a person.

@@ -39,8 +39,8 @@
     <label class="pp-ctrl" data-axis="realism">
       <span class="pp-ctrl-head">Realism<b class="pp-val"></b></span>
       <span class="pp-sub">GEOCROSS prior</span>
-      <input type="range" min="0" max="2" step="1" value="1" aria-label="Realism prior">
-      <span class="pp-ticks"><i>off</i><i>default</i><i>strong</i></span>
+      <input type="range" min="0" max="3" step="1" value="1" aria-label="Realism prior">
+      <span class="pp-ticks"><i>off</i><i>default</i><i>mid</i><i>strong</i></span>
     </label>
 
     <label class="pp-ctrl" data-axis="thin">
@@ -58,7 +58,7 @@
     </label>
   </div>
 
-  <p class="pp-caption">180 real PULSE runs from <b>one</b> blurred portrait. Same input every time;
+  <p class="pp-caption">240 real PULSE runs from <b>one</b> blurred portrait. Same input every time;
     the knobs only change <em>which believable person</em> the search lands on.</p>
 </figure>
 
@@ -66,7 +66,7 @@
 (function () {
   var LABELS = {
     seed:    ["#1", "#42", "#1234", "2⁶⁴−2 (max−1)"],
-    realism: ["off", "default (0.05)", "strong (1.0)"],
+    realism: ["off", "default (0.05)", "mid (0.25)", "strong (1.0)"],
     thin:    ["64px (lots of info)", "32px", "16px (almost nothing)"],
     steps:   ["25", "125", "225", "300", "500"]
   };
@@ -102,7 +102,7 @@
     render();
     // warm the cache so dragging is instant (after first paint, low priority)
     function preload() {
-      for (var s = 0; s < 4; s++) for (var r = 0; r < 3; r++)
+      for (var s = 0; s < 4; s++) for (var r = 0; r < 4; r++)
         for (var t = 0; t < 3; t++) for (var x = 0; x < 5; x++) {
           var k = "/s" + s + "-r" + r + "-t" + t + "-x" + x;
           new Image().src = base + k + ".webp";
