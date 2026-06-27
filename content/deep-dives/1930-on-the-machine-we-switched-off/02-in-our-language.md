@@ -110,6 +110,10 @@ single command, and could not see it at all the moment I called it a data center
 not change between runs. Only my words did. Sit with how much of what we think a machine
 understands turns out to live in the language we wrap around it before we ask.
 
+Both runs froze the temperature at 0.8 so the language could be the only thing that moved. If you
+want to feel what that frozen number was holding still, [Part 3](/deep-dives/1930-on-the-machine-we-switched-off/turn-the-knob-yourself/)
+hands you the dial and lets you turn it on these same seven questions yourself.
+
 _Both exchanges in this series are talkie's verbatim output at temperature 0.8 and seed 1930, the
 only difference between the two runs being the wording of the questions, trimmed only where
 noted. How talkie runs locally is its own [story](/practice/talkie-on-apple-silicon/)._

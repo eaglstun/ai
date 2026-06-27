@@ -43,4 +43,5 @@ exercise is what the words do to it.
 ### The two runs
 
 Read them in order. The first is the article I thought I was writing. The second is the one the
-machine actually wrote for me.
+machine actually wrote for me. The third hands you one of the frozen knobs and lets you run the
+séance yourself.
