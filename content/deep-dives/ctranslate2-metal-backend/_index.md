@@ -1,7 +1,6 @@
 +++
 title = "Teaching a CUDA Engine to Speak Metal"
 layout = "series"
-draft = true
 date = 2026-06-29
 summary = "A seven-part field report on adding an Apple-Silicon GPU backend to CTranslate2 - a from-scratch C++ inference engine that only ever knew CUDA and CPU. Unified-memory tricks, a NaN that ate three sessions, a SIGKILL that wasn't a leak, and why it lives in a fork."
 +++
@@ -38,6 +37,23 @@ kernel" or "I clamped the `tanh`," read it the way a general contractor says "I 
 I didn't lay a single brick. I knew what finished was supposed to look like, I knew which wall was
 crooked, and I knew who to send back to fix it. The bricklaying - every line of it - was the
 agent's.
+
+The "couple of skills" are quietly doing most of the work in that sentence. An agent that knows
+more C++ than I ever will is also an agent that will, with total confidence, reach for a shader
+function that does not exist or lay a matrix out the wrong way round and hand me a NaN three
+sessions later. The fix was not to trust its memory. It was to build it a map. Two of them: one
+charting CTranslate2's own architecture - how an op is structured, how a tensor is laid out,
+where the norm goes - and one charting Apple's Metal, the GPU dialect the engine had never been
+introduced to. Every entry is pinned to a primary source, the actual header or the actual Apple
+doc, and a small script audits whether those citations still point where they claim to. The
+missing math function that becomes its own war story a few parts from here was already a flagged
+landmine in that second map before a single kernel went wrong.
+
+Which is the honest answer to "how can you vouch for code you cannot read." You cannot, not line
+by line, so you stop leaning on anyone's memory, yours or the model's. You make the map cite its
+sources, you check that the citations still hold, and you judge the finished building by whether
+it stands. The two reference maps are the part of this whole project I would actually hand to the
+next person trying the same trick on a different engine.
 
 That division of labor isn't a footnote here; it's the subject. It's why this is a writeup and
 not a pull request, and [Part 7](/deep-dives/ctranslate2-metal-backend/not-a-pull-request/) is

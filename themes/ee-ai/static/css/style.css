@@ -504,6 +504,22 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   width: 1.7rem; height: 1.7rem;
   display: grid; place-items: center;
 }
+/* draft parts shown as non-clickable previews in the series list */
+.series-list li.series-preview { opacity: 0.62; }
+.series-list li.series-preview::before { color: var(--muted); border-style: dashed; }
+.series-list .preview-badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.05rem 0.4rem;
+  vertical-align: middle;
+}
 .series-tag { font-family: var(--font-mono); font-size: 0.82rem; margin: 0 0 0.4rem; }
 .series-tag a { color: var(--muted); }
 .series-nav {

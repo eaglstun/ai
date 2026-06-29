@@ -2,7 +2,6 @@
 title = "Part 1 - The Cheat Code: Unified Memory"
 slug = "unified-memory"
 weight = 1
-draft = true
 date = 2026-06-29
 series = "ctranslate2-metal-backend"
 summary = "The one fact about Apple Silicon that turns 'add a whole new GPU backend' from a research project into an afternoon: the CPU and GPU share the same RAM, so a GPU buffer is also a CPU pointer - and CTranslate2's entire internal contract is built on pointers."
@@ -54,8 +53,8 @@ out. When some op shows up later holding an interior pointer, a range lookup
 back the owning `MTLBuffer` plus the offset. It's a small piece of bookkeeping that exists
 entirely to translate between CTranslate2's "everything is a raw pointer" worldview and Metal's
 "name me a buffer" worldview. (And it's manual retain/release, not ARC - the `.mm` files manage
-their own Objective-C object lifetimes throughout, which becomes its own story in
-[Part 5](/deep-dives/ctranslate2-metal-backend/the-730-second-file/).)
+their own Objective-C object lifetimes throughout, which becomes its own story later in this
+series.)
 
 ## What "for free" actually buys you
 
@@ -73,4 +72,4 @@ because the math is wrong or because the plumbing is wrong" - the plumbing was p
 before any math moved to the GPU.
 
 How you go from "correct but slow" to "fast, one op at a time" without ever breaking that green
-test suite is the actual architecture of this thing - and it's [Part 2](/deep-dives/ctranslate2-metal-backend/the-staircase/).
+test suite is the actual architecture of this thing - and it's Part 2, landing here in a few days.

@@ -11,10 +11,13 @@ directly, you set up a model with adjustable [parameters](/glossary/parameters/)
 score how wrong it is (a _loss function_), then run **training**: show it examples, measure
 the error, and nudge the dials to shrink that error, over and over, until the model works on
 examples it hasn't seen before. Using a trained model on new input is called **inference**.
+
 The classic split is by what the data looks like: **supervised** learning trains on labeled
 examples (input → correct answer), **unsupervised** learning finds structure in unlabeled data
 (grouping things, building [latent space](/glossary/latent-space/) embeddings), and **reinforcement** learning trains
-an agent through rewards as it acts in some environment. **Deep learning** is the modern flavor
+an agent through rewards as it acts in some environment.
+
+**Deep learning** is the modern flavor
 that stacks many layers of [tensor](/glossary/tensor/) math into neural networks (the [transformer](/glossary/transformer/) and
 [GAN](/glossary/gan/) are deep-learning designs), and it's what powers most of what people now call "AI."
 The constant hazard everywhere in ML is generalization: a model that aces its practice data

@@ -1,6 +1,6 @@
 +++
 title = "My Karaoke Machine Throws Away Every Word It Hears"
-date = 2026-07-17
+date = 2026-07-03
 description = "WhisperX mishears every lyric, so my band's karaoke tool keeps its timing and throws the words out. Right words, right time."
 summary = "I built my band a karaoke video maker, and the trick that makes it work is refusing to trust the one part everyone assumes you'd trust: the transcription. The machine listens to the singing, mishears most of it, and I keep only its sense of timing - never its words. A small lesson in using a model that lies, plus why the fakery around the edges is what makes it feel real."
 +++

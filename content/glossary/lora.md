@@ -12,9 +12,12 @@ _change_ a fine-tune makes to a big grid of weights turns out to be simple enoug
 with two much smaller grids multiplied together (`A · B`), which together hold a tiny fraction
 of the original numbers (their size is set by a chosen _rank_ `r`, often 8–64). At run time
 that product is added back onto the frozen weights, so once merged there's no speed penalty.
+
 The payoff is twofold: you can fine-tune a large model on a single consumer GPU, and the
 resulting **LoRA adapter** is a small file (megabytes, not gigabytes) that you swap in and out
-on top of one base model. **QLoRA** goes further by also shrinking the frozen base model to
+on top of one base model.
+
+**QLoRA** goes further by also shrinking the frozen base model to
 4-bit (the same quantization idea behind [GGUF](/glossary/gguf/)) while training the adapter at higher
 precision, saving even more memory. LoRA is most often applied to the attention weights of a
 [transformer](/glossary/transformer/).

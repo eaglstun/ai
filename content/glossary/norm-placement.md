@@ -19,11 +19,14 @@ clipping or fading. **Post-norm** (the original 2017 setup) puts the leveler _af
 pedal, right on the main signal path, downstream of the residual add. It works, but the
 unnormalized residual highway lets the signal swell as the chain gets long, so deep
 post-norm models are touchy: they need careful learning-rate warmup or they diverge.
+
 **Pre-norm** (the modern default from [GPT](/glossary/gpt/)-2 onward) moves the leveler _inside_ the
 pedal's own branch, so the residual highway stays clean and untouched all the way through.
 That clean highway is exactly what lets you stack dozens of layers and still train stably,
 because the [gradient descent](/glossary/gradient-descent/) signal flows straight back through it without fading. The tradeoff: pre-norm can
-get a little lazy in its deepest layers. **Sandwich-norm** is the belt-and-suspenders move:
+get a little lazy in its deepest layers.
+
+**Sandwich-norm** is the belt-and-suspenders move:
 a leveler both before _and_ after each branch, used in some very large or very deep models
 (CogView, a few big ones since) to keep the numbers tame when even pre-norm starts to wobble.
 Mechanically all three are the same cheap [tensor](/glossary/tensor/) operation; only the wiring around the

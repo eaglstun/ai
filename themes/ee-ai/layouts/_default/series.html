@@ -6,16 +6,48 @@
   </header>
   {{ .Content }}
 
-  {{- $parts := .Pages.ByWeight }}
+  {{- /* The parts list is built from the part files ON DISK, not from .Pages,
+         because draft / future-dated parts are dropped from .Pages in a production
+         build (no -D / -F) and we still want them to appear as previews. Each
+         NN-slug.md TOML frontmatter is parsed for title / slug / weight / summary /
+         date / draft. Live parts (draft = false) link; draft parts render as a
+         non-clickable teaser carrying its planned publish date. When a part flips
+         to draft = false it auto-promotes to a link, no template change. */ -}}
+  {{- $dir := .File.Dir -}}
+  {{- $base := printf "content/%s" $dir -}}
+  {{- $parts := slice -}}
+  {{- range (os.ReadDir $base) -}}
+    {{- $name := .Name -}}
+    {{- if and (hasSuffix $name ".md") (ne $name "_index.md") -}}
+      {{- $fm := index (split (os.ReadFile (printf "%s%s" $base $name)) "+++") 1 -}}
+      {{- $title := "" -}}{{- with (findRESubmatch `(?m)^title = "(.*)"$` $fm 1) -}}{{- $title = (index . 0 1) -}}{{- end -}}
+      {{- $slug := "" -}}{{- with (findRESubmatch `(?m)^slug = "(.*)"$` $fm 1) -}}{{- $slug = (index . 0 1) -}}{{- end -}}
+      {{- $summary := "" -}}{{- with (findRESubmatch `(?m)^summary = "(.*)"$` $fm 1) -}}{{- $summary = (index . 0 1) -}}{{- end -}}
+      {{- $weight := 0 -}}{{- with (findRESubmatch `(?m)^weight = (\d+)$` $fm 1) -}}{{- $weight = (index . 0 1 | int) -}}{{- end -}}
+      {{- $date := "" -}}{{- with (findRESubmatch `(?m)^date = (.+)$` $fm 1) -}}{{- $date = (trim (index . 0 1) " ") -}}{{- end -}}
+      {{- $draft := false -}}{{- with (findRESubmatch `(?m)^draft = true$` $fm) -}}{{- $draft = true -}}{{- end -}}
+      {{- $parts = $parts | append (dict "title" $title "slug" $slug "summary" $summary "weight" $weight "date" $date "draft" $draft) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $parts = sort $parts "weight" -}}
+
   {{- if $parts }}
   <ol class="series-list">
     {{- range $parts }}
-    <li>
-      <a class="post-link" href="{{ .RelPermalink }}">
-        <span class="post-title">{{ .Title }}</span>
-      </a>
-      {{- with .Summary }}<p class="post-summary">{{ . | plainify | truncate 220 }}</p>{{ end }}
+    {{- if .draft }}
+    <li class="series-preview">
+      <span class="post-title">{{ .title }}</span>
+      <span class="preview-badge">Preview{{ with .date }} &middot; coming {{ (time.AsTime .).Format "Jan 2, 2006" }}{{ end }}</span>
+      {{- with .summary }}<p class="post-summary">{{ . | truncate 220 }}</p>{{ end }}
     </li>
+    {{- else }}
+    <li>
+      <a class="post-link" href="/{{ $dir }}{{ .slug }}/">
+        <span class="post-title">{{ .title }}</span>
+      </a>
+      {{- with .summary }}<p class="post-summary">{{ . | truncate 220 }}</p>{{ end }}
+    </li>
+    {{- end }}
     {{- end }}
   </ol>
   {{- end }}

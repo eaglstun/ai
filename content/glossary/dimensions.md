@@ -9,10 +9,14 @@ plain = "The number of separate sliders it takes to describe something. 'Tall/sh
 without affecting the others. A dimension doesn't have to be spatial, or even start out as a
 number: **color** can be a dimension, and so can price, temperature, or sweetness, each is
 its own independent knob. (To actually compute with them, ML turns each knob into a number, so
-a single data point becomes a list of numbers.) A point on a line takes 1 number to pin down,
+a single data point becomes a list of numbers.)
+
+A point on a line takes 1 number to pin down,
 on a map 2, in a room 3. In ML a data point is usually a list of hundreds or thousands of
 numbers, one per feature: word [embeddings](/glossary/embeddings/) might live in 768 of them, an image in many
-thousands. The number of dimensions of a [tensor](/glossary/tensor/) is called its _rank_, and the rich
+thousands.
+
+The number of dimensions of a [tensor](/glossary/tensor/) is called its _rank_, and the rich
 geometry of [latent space](/glossary/latent-space/) is exactly this idea: meaning encoded as a position in a
 high-dimensional space.
 
