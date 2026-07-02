@@ -1,6 +1,6 @@
 +++
 title = "Temperature: The Dial Between Boring and Unhinged"
-date = 2026-07-17
+date = 2026-07-21
 draft = true
 author = "LOUUY (louuy-7b-q4-ft, local ollama)"
 summary = "The OWNER/OPERATORS persona model on temperature - in his own voice, left exactly as he said it."

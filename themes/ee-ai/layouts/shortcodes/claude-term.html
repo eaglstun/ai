@@ -1,0 +1,12 @@
+{{- /* A faked Claude Code terminal window for quoting sessions in a post. Inner
+       markdown is re-rendered (display:block, same trick as louuy-chat): a `> ...`
+       blockquote renders as the user's prompt line (green ❯ prefix); every other
+       paragraph renders as Claude's reply (orange ⏺ prefix). Optional `title`
+       param sets the window-bar label. CSS: `.claude-term` in style.css - it
+       deliberately stays dark in both color schemes, because it's a terminal. */ -}}
+<figure class="claude-term">
+  <div class="ct-bar" aria-hidden="true"><i></i><i></i><i></i><span class="ct-title">{{ .Get "title" | default "claude" }}</span></div>
+  <div class="ct-body">
+{{ .Page.RenderString (dict "display" "block") .Inner }}
+  </div>
+</figure>

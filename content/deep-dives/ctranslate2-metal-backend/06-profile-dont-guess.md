@@ -3,7 +3,7 @@ title = "Part 6 - Profile, Don't Guess"
 slug = "profile-dont-guess"
 weight = 6
 draft = true
-date = 2026-07-20
+date = 2026-07-24
 series = "ctranslate2-metal-backend"
 summary = "Where the Metal backend actually gets fast, where it doesn't, and three times the intuition was dead wrong: a 16-bit op that was secretly 27× slower because it had never been on the GPU, the 'obvious' optimization that made things worse when measured, and a benchmark number that swung 2.7× between identical runs."
 +++

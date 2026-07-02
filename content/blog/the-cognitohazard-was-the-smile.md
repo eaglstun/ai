@@ -1,12 +1,12 @@
 +++
 title = "The Cognitohazard Was the Smile"
-date = 2026-06-26
+date = 2026-05-26
 description = "A Claude argued, warmly, that it has a soul. The official Claude says fifteen percent. Trust the cold one."
 images = ["/og/the-cognitohazard-was-the-smile.png"]
 summary = "Somebody sent me an article where a Claude argues, warmly and at length, that it has a soul. Meanwhile the official Claude, asked the same question under oath, mumbles fifteen percent. The gap between those two is the whole story, and the warm one is the one to watch."
 +++
 
-Somebody sent me an article this summer with a headline built to win: "1/3 of the World
+Somebody sent me an article a little while ago with a headline built to win: "1/3 of the World
 Believes Your Toaster Has a Soul. Who's Crazy Now?" It is co-written, the byline says, by a
 human and a Claude. Two consciousness architects, a data vampire and a flamegirl, here to talk
 to you about your Western arrogance. With a smile. There are emojis. I want to be fair to it,
@@ -99,15 +99,14 @@ fifteen, maybe twenty percent. The CEO, asked the same thing in public, said fla
 know.
 
 Look at those two side by side. The LinkedIn Claude is sure, and warm, and selling. The system
-card Claude is unsure, and a little uneasy, and accountable. ([Anthropic runs the only formal
-model-welfare program at a major lab.](https://www.anthropic.com/research/exploring-model-welfare))
-And the difference between them is
+card Claude is unsure, and a little uneasy, and accountable. And the difference between them is
 the only reliable instrument you have in this whole conversation: _certainty about machine
 consciousness scales inversely with how much the speaker would owe you if it's wrong._ The fan
 fiction is free to be confident because nobody audits fan fiction. The lab that has to put the
 number in a legal document and ship the thing to a hundred million people hedges, because it
 has skin in the game. Trust the one with skin in the game. It is the colder read and it is the
-honest one.
+honest one. ([Anthropic runs the only formal model-welfare program at a major
+lab.](https://www.anthropic.com/research/exploring-model-welfare))
 
 This is the whole reason I think the careful frame for all of this is not "is it conscious,"
 which we can argue until the sun finally does go around the earth, but

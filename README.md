@@ -24,12 +24,13 @@ hugo server -D        # → http://localhost:1313
 content/
   _index.md            home / landing copy
   why.md               the philosophy - "why this exists"
+  colophon.md          how the site is made
   glossary/            generated term pages + _index.md
-  practice/            how I use AI day-to-day (stub)
-  blog/                posts (stub)
-  deep-dives/          longer walkthroughs (stub)
-themes/ee-ai/          layouts, partials, CSS, JS
-static/                robots.txt, llms.txt, humans.txt, .well-known/
+  practice/            reusable tools & workflows
+  blog/                notes, opinion, ideas
+  deep-dives/          mechanism-heavy walkthroughs & multi-part series
+themes/ee-ai/          layouts, partials, shortcodes, CSS, JS
+static/                robots.txt, llms.txt, humans.txt, og/ share cards, .well-known/
 scripts/gen-glossary.py  glossary generator (see below)
 deploy/                nginx vhost for the droplet
 deploy.sh              build (minified) + rsync deploy

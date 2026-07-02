@@ -65,3 +65,16 @@ align-items:flex-start`; direct-child `blockquote` (the prompt) flips to `align-
   in light, overridden to `var(--bg)` (dark text) in a `@media (prefers-color-scheme: dark)`
   block. The minifier strips attribute quotes, so the rendered class reads `class=louuy-chat` -
   grep without quotes when verifying the build.
+
+`.claude-term` (the `{{< claude-term >}}` faked Claude Code terminal, first used by
+`blog/my-claude-code-started-roasting-me`) is the second worked example. Same shortcode
+pattern (`RenderString` display:block; a `> ...` blockquote is the user's prompt line, any
+other paragraph is the reply), with two wrinkles of its own:
+
+- **It is the one sanctioned exception to the never-hardcode-a-color rule.** A terminal
+  only reads as a terminal if it stays dark in BOTH color schemes, so the block pins a
+  local warm-dark palette (hexes chosen to sit in the site's ink family) instead of the
+  invertible tokens - the CSS comment says so out loud. Don't "fix" it back to tokens.
+- The ❯ (user, green) and ⏺ (Claude, orange `#d97757`) prefixes are `::before` content on
+  the direct children, not characters in the markdown - so drafts stay clean text and the
+  markers can't be copy-pasted into a quote.

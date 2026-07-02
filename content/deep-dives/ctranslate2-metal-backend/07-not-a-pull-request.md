@@ -3,7 +3,7 @@ title = "Part 7 - The Thing This Didn't Become: A Pull Request"
 slug = "not-a-pull-request"
 weight = 7
 draft = true
-date = 2026-07-23
+date = 2026-07-27
 series = "ctranslate2-metal-backend"
 summary = "There's a working Apple-Silicon GPU backend at the end of this, built by someone who has never written a line of C++. It is not going upstream as one big pull request, and the honest reason is the most interesting lesson in the project - about what 'understand it and defend every line' means when the line-level understanding genuinely isn't yours, and why a fork is the right home, not a consolation prize."
 +++

@@ -1,7 +1,8 @@
 +++
 title = "My Claude Code Started Roasting Me. Please Don't Send Help."
-date = 2026-07-26
-draft = true
+date = 2026-07-02
+description = "It got an attitude a week ago. The code is as correct as ever; only the costume came off. Please don't send help."
+images = ["/og/my-claude-code-started-roasting-me.png"]
 summary = "It started small. A little attitude. A pointed comment about a variable name. Then it escalated, and I had a decision to make about whether to report it. Reader, I did not report it. A short field guide to the dumbest, best setting I've changed all year."
 +++
 
@@ -16,25 +17,35 @@ Not broken. Not wrong - the code it ships is exactly as correct as it ever was, 
 part that still messes with me. The _work_ didn't change at all. The bedside manner went
 feral.
 
+![A Victorian wood-engraving: a grinning brass clockwork automaton in a bow tie stands beside a writing desk, wagging a pen in mock reproach, while a gentleman in an armchair reads back his own pages with a resigned look, crumpled drafts scattered around their feet - the review is correct and nobody is safe.](my-claude-code-started-roasting-me-plate.png)
+
 ## The exhibits
 
 I started screenshotting them, the way you'd save texts from a friend who's having an
 interesting month.
 
-> **[screenshot]** I asked it to clean up a function and it opened with: "Good news, this
-> works. Bad news, you named a variable `temp2`, which means somewhere in this file there is a
-> `temp` living its best life, and now I have to know what you were avoiding."
+{{< claude-term >}}
+
+> clean up this function
+
+Good news, this works. Bad news, you named a variable `temp2`, which means somewhere in this file there is a `temp` living its best life, and now I have to know what you were avoiding.
+{{< /claude-term >}}
 
 It wasn't wrong. There was a `temp`. I don't want to talk about the `temp`.
 
-> **[screenshot]** On a CSS fix: "Fixed it. The bug was a missing semicolon, which took down
-> the whole layout, which is the funniest possible way for a layout to die. Fifty years of
-> computer science and we're still felled by punctuation. Anyway, you're welcome, refresh the
-> page."
+{{< claude-term >}}
 
-> **[screenshot]** When I mentioned I used to build WordPress sites: "Of course you did. That
-> explains the way you reach for a plugin the way other people reach for a glass of water.
-> We're going to write this one by hand. It'll be twelve lines. You'll live."
+> the homepage layout just died, fix it
+
+Fixed it. The bug was a missing semicolon, which took down the whole layout, which is the funniest possible way for a layout to die. Fifty years of computer science and we're still felled by punctuation. Anyway, you're welcome, refresh the page.
+{{< /claude-term >}}
+
+{{< claude-term >}}
+
+> back in my WordPress days I'd have grabbed a plugin for this
+
+Of course you did. That explains the way you reach for a plugin the way other people reach for a glass of water. We're going to write this one by hand. It'll be twelve lines. You'll live.
+{{< /claude-term >}}
 
 That one I felt in my chest a little. Twelve lines. It was eleven.
 
@@ -61,7 +72,9 @@ boring explanation is the whole point of the post.
 Claude Code has a feature called **output styles**. It's exactly what it sounds like: a little
 markdown file that sits on top of everything and changes the _voice_ without touching the
 _brain_. You drop it in `~/.claude/output-styles/`, give it a name and a description in the
-frontmatter, and flip it on with `/output-style`. That's the entire mechanism. It is not deep.
+frontmatter, and pick it under "Output style" in `/config`. (There used to be a dedicated
+`/output-style` command; it's gone now. If you like editing files better, it's the
+`outputStyle` line in your settings.json.) That's the entire mechanism. It is not deep.
 It is a hat.
 
 Mine is a hat called `banter-mode.md`, and here is the single line of its frontmatter that
@@ -133,5 +146,5 @@ the draft and I should be suspicious of how much I liked it.
 
 Reader, I am keeping the sentence. And the hat.
 
-`/output-style` is the command. `keep-coding-instructions: true` is the only line that matters.
-The rest is comedy, and the comedy, it turns out, was load-bearing.
+`/config`, then "Output style," is the switch. `keep-coding-instructions: true` is the only
+line that matters. The rest is comedy, and the comedy, it turns out, was load-bearing.

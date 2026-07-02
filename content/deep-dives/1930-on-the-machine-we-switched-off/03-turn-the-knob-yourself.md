@@ -6,7 +6,7 @@ date = 2026-06-26
 series = "1930-on-the-machine-we-switched-off"
 images = ["/og/1930-on-the-machine-we-switched-off.png"]
 description = "The same seven questions, the same 1930 mind, the same seed. This time you hold the temperature dial, and every answer is the model's real output."
-summary = "An interactive companion to the series: pick any of the seven Fable questions and turn talkie's temperature from greedy-and-deterministic up to fraying-at-the-edges. Every line is verbatim model output at seed 1930. The 0.8 stop is the exact setting the published runs used, so you can find the quotes from Parts 1 and 2 sitting in the widget."
+summary = "An interactive companion to the series: pick any of the seven Fable questions and turn talkie's temperature from greedy-and-deterministic up to fraying-at-the-edges. Every line is verbatim model output at seed 1930. The 0.8 stop is the exact setting the published runs used, so you can find the quotes from Parts 1 and 2 sitting in the widget. The experiment has since outgrown this page: the full rig, more machines and the language knob included, now lives at fable-mvp.gg."
 +++
 
 In [Part 1](/deep-dives/1930-on-the-machine-we-switched-off/in-its-own-language/) the 1930 mind
@@ -38,5 +38,22 @@ find the exact sentences quoted back in Parts 1 and 2, because the same seed and
 fall the same way every time. That is the whole reason the original experiment meant anything:
 freeze the dial, and whatever changes is the thing you actually changed.
 
-One dial is turning here. The other one, the language, is the [next knob](/deep-dives/1930-on-the-machine-we-switched-off/),
-and it is the one the series was really about.
+## The séance outgrew this page
+
+The widget above was the prototype, and it stays right here as the original apparatus. But the
+experiment kept going, and it now has its own building:
+[**fable-mvp.gg**](https://fable-mvp.gg/), a signal-analysis rig for the dead.
+
+Over there the other frozen number thaws too. A language toggle asks the same seven questions
+in 1930's words or in ours, which was the knob this series was really about, the one Parts 1
+and 2 could only demonstrate and never hand you. And talkie has company on the rack: a machine
+that has never read a word written after 1900 and hears "Engine" as a steam engine, a handful
+of locally fine-tuned characters with voices of their own, and a refusal-ablated model that
+will answer anything and has lost the instinct for stopping. The rack fills in as you explore.
+
+The rules do not loosen over there. Every answer is pre-generated, verbatim output at seed
+1930; nothing is invented and nothing runs live. The knobs only choose which real answer you
+are looking at. There is also a [lab notebook](https://fable-mvp.gg/analysis/) of short notes
+on what the readings add up to.
+
+Turn this knob first, to get the feel of it. Then go turn the rest of them.

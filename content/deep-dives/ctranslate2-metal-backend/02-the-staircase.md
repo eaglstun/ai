@@ -3,7 +3,7 @@ title = "Part 2 - The Staircase: Graduating Ops One at a Time"
 slug = "the-staircase"
 weight = 2
 draft = true
-date = 2026-07-02
+date = 2026-07-06
 series = "ctranslate2-metal-backend"
 summary = "How to turn 'make the whole engine fast' from a cliff into a staircase: bind the new Metal device to run the CPU code, get a correct engine for free, then move ops to real GPU kernels one at a time - each one a small diff against a green test suite. Plus the two tiny exceptions that hold the entire trick up."
 +++

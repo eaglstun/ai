@@ -51,6 +51,12 @@ with a `(NNN)` char count under it. A/B/C alternates live under `## B —` / `##
 (these em-dash headings are a parser token; leave them as-is). `post-draft.sh --pick <LETTER>`
 selects one.
 
+**Only the post text goes under the heading.** The extractor takes every line between the
+heading and the `(NNN)` count (or `---` / next `##`), so a "why this one" rationale paragraph
+sitting under a pick heading gets published as part of the post. Put rationale ABOVE the pick
+headings, in the draft's preamble. (Learned on post 006: the dry-run came back 739/500 with
+the bucket notes glued to the top. The dry-run default exists precisely to catch this.)
+
 ## Capturing an external post to reply to
 
 The official API reads **your own** content; it can't pull an arbitrary third party's post

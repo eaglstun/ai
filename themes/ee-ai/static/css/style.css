@@ -1074,3 +1074,77 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .ee-details-body { padding: 0.4rem 1.1rem 1rem; }
 .ee-details-body > :first-child { margin-top: 0.7rem; }
 .ee-details-body > :last-child { margin-bottom: 0; }
+
+/* ---------- Claude Code terminal shots ({{< claude-term >}} shortcode) ----------
+   A faked terminal window for quoting Claude Code sessions (first used by
+   blog/my-claude-code-started-roasting-me). Inside the shortcode a `> prompt`
+   blockquote is the user's line (❯) and any other paragraph is Claude's reply (⏺).
+   Deliberate exception to the token rule: a terminal only reads as a terminal if
+   it stays dark in BOTH color schemes, so this block pins a local warm-dark
+   palette instead of the invertible site tokens. */
+.claude-term {
+  max-width: var(--content);
+  margin: 2.2rem auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #211d17; /* warm ink-dark, kin to the site's ink family */
+  font-family: var(--font-mono);
+}
+.claude-term .ct-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  background: #17140f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.claude-term .ct-bar i {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+}
+.claude-term .ct-bar i:nth-child(1) { background: #c4574d; }
+.claude-term .ct-bar i:nth-child(2) { background: #c9a24b; }
+.claude-term .ct-bar i:nth-child(3) { background: #6da65f; }
+.claude-term .ct-title {
+  margin-left: 0.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: #8d8271;
+}
+.claude-term .ct-body {
+  padding: 1rem 1.15rem 1.15rem;
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+.claude-term .ct-body > * { margin: 0; max-width: none; }
+.claude-term .ct-body > * + * { margin-top: 0.95rem; }
+/* the user's prompt line */
+.claude-term .ct-body > blockquote {
+  border: none;
+  background: none;
+  padding: 0;
+  font-style: normal;
+  color: #9d937f;
+}
+.claude-term .ct-body > blockquote p { margin: 0; max-width: none; color: inherit; }
+.claude-term .ct-body > blockquote p::before {
+  content: "\276F  ";
+  color: #6da65f;
+  font-weight: 700;
+}
+/* Claude's reply */
+.claude-term .ct-body > p { color: #ece4d4; }
+.claude-term .ct-body > p::before {
+  content: "\23FA  ";
+  color: #d97757; /* the Claude orange */
+}
+.claude-term .ct-body code {
+  background: rgba(255, 255, 255, 0.09);
+  border: none;
+  color: inherit;
+  padding: 0.08em 0.35em;
+  font-size: 0.95em;
+}

@@ -1,6 +1,6 @@
 +++
 title = "Perpetual Beta Has an Owner Now"
-date = 2026-07-09
+date = 2026-07-13
 draft = true
 description = "A switched-off AI inverted an idea from my band manual: same unfinished self, someone else's hand on the switch."
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."

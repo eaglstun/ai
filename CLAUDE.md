@@ -60,11 +60,15 @@ introducing a new category, add it to that partial.
   to all markdown content site-wide. Any link whose host ≠ the `baseURL` host gets
   `class="external-link"`, `target="_blank"`, `rel="noopener noreferrer"`, and an inline
   arrow-out SVG icon. Internal/relative links pass through untouched. CSS: `.external-icon`.
-- `themes/ee-ai/layouts/shortcodes/` - theme shortcodes. So far just `louuy-chat.html`
-  (wraps a run of `> prompt` + verbatim-response exchanges in a `.louuy-chat` div and
-  re-renders its `.Inner` markdown via `RenderString (dict "display" "block")`, so the
-  inner blockquotes/paragraphs/code/`---` still parse). Used by `practice/louuy-dispatches`
-  to style the dispatches as a chat thread. See the css-tokens site-docs ref for the styling.
+- `themes/ee-ai/layouts/shortcodes/` - theme shortcodes. The markdown-wrapping ones
+  (`louuy-chat.html`, `claude-term.html`) re-render their `.Inner` via
+  `RenderString (dict "display" "block")`, so the inner blockquotes/paragraphs/code/`---`
+  still parse. `louuy-chat` styles a run of `> prompt` + verbatim-response exchanges as a
+  chat thread (`practice/louuy-dispatches`); `claude-term` renders an exchange as a faked
+  Claude Code terminal window (`> line` = the user's ❯ prompt, paragraphs = the ⏺ reply;
+  first used by `blog/my-claude-code-started-roasting-me`). Also: `bbros.html` (Beagle
+  Bros-style margin cards), `details.html`, and the interactive `pulse-playground.html` /
+  `seance-playground.html` widgets. See the css-tokens site-docs ref for the styling.
 
 **Per-page styling without a build step:** there's no per-page CSS file - page-specific
 styles live in the one global `themes/ee-ai/static/css/style.css` under a scoping class that
@@ -99,6 +103,14 @@ are deliberate - don't "normalize" them:
   or re-dating posts; don't hand-edit it. Watch for date-anchored posts (ones that reference a
   real event or relative time like "this week"): pin those to absolute dates so re-dating the
   post doesn't break the narrative.
+- **Every published post ships share metadata.** Non-draft, non-future posts carry a
+  `description` ≤125 chars (the og:description) and `images = ["/og/<slug>.png"]` pointing
+  at a real 1200×630 card in `static/og/` - a missing PNG means a silently broken share
+  card, so verify the file exists after a re-slug or re-date. Cards are built in the
+  `meta/` workspace (its own private repo): art via flux into `og-assets/`, card copy in
+  `_buildcards.py`, rendered with headless Chrome (`--virtual-time-budget` or the webfonts
+  won't load). Posts with inline illustrations are **page bundles** (`<slug>/index.md` +
+  image beside it), not bare `.md` files.
 - **Titles are voice-forward hooks, not summaries**, and the body leans into Eric's
   artist/communicator voice (weird-but-illuminating analogies, DEVO/de-evolution motif).
   The detailed voice guidance + blessed title examples live in Claude's project memory.

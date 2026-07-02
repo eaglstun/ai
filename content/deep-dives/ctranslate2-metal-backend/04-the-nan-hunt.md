@@ -3,7 +3,7 @@ title = "Part 4 - The NaN That Ate Three Sessions"
 slug = "the-nan-hunt"
 weight = 4
 draft = true
-date = 2026-07-11
+date = 2026-07-15
 series = "ctranslate2-metal-backend"
 summary = "A real model - Gemma2 - ran on the Metal backend and produced one correct token, then collapsed into <pad> forever. None of the kernels were 'wrong.' The bug was a library tanh that's fine on the CPU and quietly returns NaN on the GPU, and finding it meant killing three sessions' worth of beautiful, wrong theories."
 +++
