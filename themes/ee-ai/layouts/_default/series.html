@@ -8,18 +8,25 @@
 
   {{- /* The parts list is built from the part files ON DISK, not from .Pages,
          because draft / future-dated parts are dropped from .Pages in a production
-         build (no -D / -F) and we still want them to appear as previews. Each
-         NN-slug.md TOML frontmatter is parsed for title / slug / weight / summary /
-         date / draft. Live parts (draft = false) link; draft parts render as a
-         non-clickable teaser carrying its planned publish date. When a part flips
-         to draft = false it auto-promotes to a link, no template change. */ -}}
+         build (no -D / -F) and we still want them to appear as previews. A part is
+         either a bare NN-slug.md or a leaf bundle NN-slug/index.md (a part that
+         carries images). Its TOML frontmatter is parsed for title / slug / weight /
+         summary / date / draft. Live parts (draft = false) link; draft parts render
+         as a non-clickable teaser carrying its planned publish date. When a part
+         flips to draft = false it auto-promotes to a link, no template change. */ -}}
   {{- $dir := .File.Dir -}}
   {{- $base := printf "content/%s" $dir -}}
   {{- $parts := slice -}}
   {{- range (os.ReadDir $base) -}}
     {{- $name := .Name -}}
+    {{- $file := "" -}}
     {{- if and (hasSuffix $name ".md") (ne $name "_index.md") -}}
-      {{- $fm := index (split (os.ReadFile (printf "%s%s" $base $name)) "+++") 1 -}}
+      {{- $file = printf "%s%s" $base $name -}}
+    {{- else if and .IsDir (fileExists (printf "%s%s/index.md" $base $name)) -}}
+      {{- $file = printf "%s%s/index.md" $base $name -}}
+    {{- end -}}
+    {{- if $file -}}
+      {{- $fm := index (split (os.ReadFile $file) "+++") 1 -}}
       {{- $title := "" -}}{{- with (findRESubmatch `(?m)^title = "(.*)"$` $fm 1) -}}{{- $title = (index . 0 1) -}}{{- end -}}
       {{- $slug := "" -}}{{- with (findRESubmatch `(?m)^slug = "(.*)"$` $fm 1) -}}{{- $slug = (index . 0 1) -}}{{- end -}}
       {{- $summary := "" -}}{{- with (findRESubmatch `(?m)^summary = "(.*)"$` $fm 1) -}}{{- $summary = (index . 0 1) -}}{{- end -}}

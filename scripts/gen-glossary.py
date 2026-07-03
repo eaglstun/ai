@@ -13,7 +13,7 @@ import re
 import sys
 from pathlib import Path
 
-SRC = Path("/Users/eeaglstun/.claude/skills/ai-dev/references/glossary")
+SRC = Path.home() / ".claude/skills/ai-dev/references/glossary"
 OUT = Path(__file__).resolve().parent.parent / "content" / "glossary"
 
 # Page titles (frontmatter / cards / chips).
