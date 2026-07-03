@@ -2,6 +2,7 @@
 name: site-voice
 version: 1.0.0
 description: Hard copy rules for any prose written under Eric's name for ai.ericeaglstun.com (posts, glossary, UI text, Threads drafts, READMEs, the meta workspace). A short, growing list of non-negotiables. Load it before writing or editing site-facing copy, and follow these over instinct.
+public: true
 ---
 
 # site-voice

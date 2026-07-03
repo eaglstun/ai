@@ -1,0 +1,73 @@
+# dev -> main branching flow, public half.
+#
+# PR to main:   leak scan gate. The judgment pass (repo-sanitizer agent) runs
+#               locally on dev BEFORE opening the PR; this job is the
+#               deterministic backstop that blocks the merge if anything
+#               pattern-matchable slipped through.
+# push to main: rebuild the public bundle (skills/agents flagged
+#               `public: true`) and sync it to the public skills repo.
+#
+# Required repo settings for the publish job:
+#   vars.PUBLISH_REPO      e.g. eaglstun/skills  (the public showcase repo)
+#   secrets.PUBLISH_TOKEN  fine-grained PAT with contents:write on that repo
+
+name: publish-skills
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  leak-scan:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deterministic leak scan over tracked .claude/ and scripts/
+        run: python3 scripts/publish-skills.py scan
+
+  publish:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build public bundle (public:true only) + scan it
+        run: python3 scripts/publish-skills.py build
+
+      - name: Check anything was flagged public
+        id: bundle
+        run: |
+          if [ -d dist/public-skills ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "No public: true skills/agents; nothing to publish."
+          fi
+
+      - name: Checkout public skills repo
+        if: steps.bundle.outputs.exists == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.PUBLISH_REPO }}
+          token: ${{ secrets.PUBLISH_TOKEN }}
+          path: public-skills-repo
+
+      - name: Sync bundle into public repo
+        if: steps.bundle.outputs.exists == 'true'
+        run: |
+          rsync -av --delete \
+            --exclude '.git' \
+            dist/public-skills/ public-skills-repo/
+          cd public-skills-repo
+          git config user.name "skills-publisher"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "public repo already up to date"
+          else
+            git commit -m "sync from eaglstun/ai@${GITHUB_SHA::7}"
+            git push
+          fi

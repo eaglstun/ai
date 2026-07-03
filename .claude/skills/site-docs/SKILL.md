@@ -2,6 +2,7 @@
 name: site-docs
 version: 1.2.0
 description: Non-obvious Hugo mechanics for the ai.ericeaglstun.com site (theme ee-ai, repo ~/Documents/web/ericeaglstun-ai) - Goldmark render hooks, the bespoke multi-part "series" machinery, layout lookup, page bundles, and the gotchas that aren't in the repo's CLAUDE.md. Use when editing the theme's templates/layouts/render hooks, building a new content type or a series, or debugging why a template, link, table, or section isn't rendering the way it should on this site.
+public: true
 ---
 
 # site-docs - non-obvious Hugo on ai.ericeaglstun.com

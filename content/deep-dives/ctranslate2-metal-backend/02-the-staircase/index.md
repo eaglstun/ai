@@ -2,15 +2,19 @@
 title = "Part 2 - The Staircase: Graduating Ops One at a Time"
 slug = "the-staircase"
 weight = 2
-draft = true
+draft = false
 date = 2026-07-06
 series = "ctranslate2-metal-backend"
+description = "Bind the GPU device to run CPU code, then graduate ops to real Metal kernels one at a time. Always one op from working."
+images = ["/og/ctranslate2-part-2.png"]
 summary = "How to turn 'make the whole engine fast' from a cliff into a staircase: bind the new Metal device to run the CPU code, get a correct engine for free, then move ops to real GPU kernels one at a time - each one a small diff against a green test suite. Plus the two tiny exceptions that hold the entire trick up."
 +++
 
 [Part 1](/deep-dives/ctranslate2-metal-backend/unified-memory/) ended with a gift: because Metal memory is also CPU memory, the
 existing CPU code runs correctly on GPU-resident data, so the engine is _correct_ before a
 single kernel is written. This part is about cashing that gift without setting it on fire.
+
+![A vintage big-letter postcard reading GREETINGS FROM THE STAIRCASE: a grinning retro computer cheerfully climbing a sunlit staircase of stone steps out of a deep canyon, happily ignoring the sheer cliff wall beside it.](the-staircase-postcard.jpg)
 
 ## The trap you'd walk into first
 
@@ -35,6 +39,10 @@ Metal arm. Because Metal memory is CPU-addressable, the CPU kernels are _correct
 Metal-resident data. So with that one binding, the entire engine runs on `Device::METAL`
 immediately - every op, every layer, a whole transformer - with **zero** Metal kernels written
 and zero of those fifty template instantiations demanded.
+
+{{< bbros title="Peek & Poke" n="1" float="right" >}}
+`constexpr Device D = Device::CPU`, POKEd into the Metal arm of the dispatch switch, is the whole cheat. The engine still PEEKs its real device as `Device::METAL`, so every op that hasn't graduated yet quietly runs the CPU math on GPU-resident bytes. Fifty kernels of work, deferred with one line.
+{{< /bbros >}}
 
 Slow, obviously. It's the CPU doing the math while the data happens to live in GPU-visible
 memory. But correct - and here's the payoff that makes everything after it safe: **the existing
@@ -91,5 +99,5 @@ deletable and they are the opposite of deletable.
 
 That's the architecture: one binding that makes everything work slowly, two exceptions that keep
 the fast path findable, and a staircase between them. Next we actually climb it - and meet the
-[Metal Shading Language's personality](/deep-dives/ctranslate2-metal-backend/msl-indignities/), which has some opinions about which
-math functions get to exist.
+Metal Shading Language's personality (Part 3, landing here in a few days), which has some
+opinions about which math functions get to exist.

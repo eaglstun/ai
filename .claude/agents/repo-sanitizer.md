@@ -40,7 +40,7 @@ Your job: make sure prose and code headed for main carry no personal details.
 - Post archives or drafts for Threads/LinkedIn (the funnel content itself).
 - LAN topology: 192.168.x.x / 10.x.x.x addresses, hostnames, ports of home
   services (the Pi, ollama hosts).
-- Personal absolute paths (/Users/eeaglstun/...) and personal emails.
+- Personal absolute paths (the `/Users/<name>/` kind) and personal emails.
 - Names/details of private correspondents. Eric's own public byline is fine.
 
 ## What is fine (leave it)

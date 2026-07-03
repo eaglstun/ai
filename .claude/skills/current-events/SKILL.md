@@ -3,6 +3,7 @@ name: current-events
 description: Turn recent AI/ML news into post hooks in Eric's voice for ai.ericeaglstun.com (blog, Threads, deep-dives). Use when Eric asks "what's happening in AI", "any post ideas from the news", "what should I write about", "give me a hook", wants to react to a release/paper/drama, or wants to refresh the seed list. Sweeps the news, filters for what's hook-worthy for HIS angle, ties each idea back to existing site content, and writes post seeds. Research + judgment, not auto-posting.
 metadata: meta
 version: 1.0.0
+public: true
 ---
 
 # Current events to post hooks
@@ -25,8 +26,9 @@ Most AI news is noise for this purpose. Keep only items that pass at least one:
   itself, surface it.
 - **It contradicts the hype consensus.** Eric's voice is "I go to magicians to be surprised,
   not to learn the trick." Counter-narratives and deflations beat breathless recaps.
-- **It touches Anthropic, and there's a principled critique to make.** Per the hiring play,
-  thoughtful criticism of Anthropic is an ASSET on this site, not a risk. Do not soften it.
+- **It touches Anthropic, and there's a principled critique to make.** Thoughtful criticism of
+  Anthropic is what a credible, independent AI thinker does, so it's an ASSET on this site (and it
+  serves the downstream Anthropic hiring outcome too), not a risk. Do not soften it.
   A sharp, fair critique of an Anthropic decision is among the highest-value seeds here.
 - **It connects to something already on the site.** A new release that makes an existing
   glossary term suddenly concrete, or extends a past post's argument, is gold: the click is

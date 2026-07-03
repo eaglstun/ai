@@ -33,6 +33,12 @@
       {{- $weight := 0 -}}{{- with (findRESubmatch `(?m)^weight = (\d+)$` $fm 1) -}}{{- $weight = (index . 0 1 | int) -}}{{- end -}}
       {{- $date := "" -}}{{- with (findRESubmatch `(?m)^date = (.+)$` $fm 1) -}}{{- $date = (trim (index . 0 1) " ") -}}{{- end -}}
       {{- $draft := false -}}{{- with (findRESubmatch `(?m)^draft = true$` $fm) -}}{{- $draft = true -}}{{- end -}}
+      {{- /* future-dated parts are dropped from a production build just like drafts,
+             so they must render as previews too or the hub links a 404 until the
+             date passes (draft=false + future date = "scheduled") */ -}}
+      {{- if and (not $draft) $date -}}
+        {{- if gt (time.AsTime $date).Unix now.Unix -}}{{- $draft = true -}}{{- end -}}
+      {{- end -}}
       {{- $parts = $parts | append (dict "title" $title "slug" $slug "summary" $summary "weight" $weight "date" $date "draft" $draft) -}}
     {{- end -}}
   {{- end -}}
