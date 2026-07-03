@@ -15,6 +15,8 @@ get back a pointer that the **CPU can read and write directly** - and the GPU ca
 buffer. There's no "copy the data over to the GPU" step, because there's no "over." It's all
 one pool.
 
+![A vintage big-letter postcard reading GREETINGS FROM UNIFIED MEMORY: a CPU and a GPU, each a grinning retro computer on a pool float, clinking drinks in the same motel swimming pool. There is no second pool.](greetings-from-unified-memory.jpg)
+
 On an NVIDIA box this is not true. The GPU has its own separate memory across a bus, and half
 of GPU programming is the bookkeeping of shuttling data back and forth and not doing it more
 than you have to. CTranslate2's whole internal contract is built around that world: a
@@ -36,12 +38,20 @@ part is a gift from the hardware.
 
 ## The allocator is the whole trick
 
+{{< bbros title="Peek & Poke" n="1" float="right" >}}
+`MTLResourceStorageModeShared` is the whole spell. Allocate a buffer with it, PEEK the result with `[buffer contents]`, and you get an ordinary CPU pointer into the exact bytes the GPU reads. One allocation, two audiences, zero copies.
+{{< /bbros >}}
+
 The real work of Part 1 is one file, `src/metal/allocator.mm`. It specializes CTranslate2's
 allocator for the new `Device::METAL`. Each allocation becomes an `MTLBuffer` with shared
 storage; the allocator returns `[buffer contents]` - the CPU-addressable pointer into that
 buffer - and that pointer satisfies the existing pointer-based contract with nothing else
 changed. Host-to-device copies, which on CUDA are a whole `cudaMemcpy` ceremony, collapse into
 a plain `memcpy`, because both sides are the same memory.
+
+{{< bbros title="Field Note" n="2" float="left" >}}
+Metal refuses a bare interior pointer. It wants the owning buffer plus a byte offset, the way a post office refuses "the third door down the hall" and demands a street address. The allocator's side table is the street directory.
+{{< /bbros >}}
 
 There's exactly one wrinkle, and it's the kind of thing that's invisible until it isn't.
 CTranslate2 doesn't only hand around pointers to the _start_ of an allocation. It takes
