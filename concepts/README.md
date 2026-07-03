@@ -48,7 +48,7 @@ quality-75 + strip treatment before shipping (colophon footprint rule).
 
 ## Storage and naming (never in post bundles)
 
-```
+```text
 concepts/<post-slug>/
   a-together-kodachrome.jpg
   b-drawthings-inkwash.jpg
@@ -93,14 +93,19 @@ the karaoke post) and preview with `hugo server -D`.
    layout. Optional `alt-captions` param: hover/tap cycles 2-3 rejected
    captions (a few lines of JS). Superimposed-text variant: caption set over
    the image's quiet zone with `mix-blend-mode`.
-2. **`concept-strip`** - a 4-up strip of the whole contact sheet as content:
+2. **`spot`** (SHIPPED 2026-07-03) - nyer-panel's modest sibling: a small
+   spot illustration floated into the prose (`float="left|right|center"`,
+   default right), text wraps around it, no rule, no caption. For images
+   that are a grace note rather than a panel. First used on the
+   cognitohazard post (the smile-and-fishhook continuous-line).
+3. **`concept-strip`** - a 4-up strip of the whole contact sheet as content:
    "same idea, four hands." CSS-only expand on click (`:target` or
    details/summary). Turns the workshop into a post-able artifact for
    process posts.
-3. **`poster-hero`** - full-bleed opener image with superimposed display
+4. **`poster-hero`** - full-bleed opener image with superimposed display
    type (Ultra/Rye faces from the OG cards migrate to the web), scoped class
    per post like `.series-1930-*`.
-4. **One interactive widget, exactly one for now** - the style-slider: two
+5. **One interactive widget, exactly one for now** - the style-slider: two
    engines' takes on the same concept with a draggable divider (pure CSS +
    ~20 lines JS, no deps). If it lands, the caption-contest widget (reader
    types a caption, localStorage, no backend) is the follow-up.

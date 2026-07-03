@@ -95,6 +95,10 @@
       ctrls.realism.val.textContent = LABELS.realism[v.r];
       ctrls.thin.val.textContent = LABELS.thin[v.t];
       ctrls.steps.val.textContent = LABELS.steps[v.x];
+      // announce the human label, not the raw 0-4 index
+      Object.keys(ctrls).forEach(function (k) {
+        ctrls[k].input.setAttribute("aria-valuetext", LABELS[k][+ctrls[k].input.value]);
+      });
     }
     function syncURL() {
       var v = state();

@@ -17,7 +17,7 @@ I want to talk about a thing we keep handing her, every few months, and calling 
 
 <!--more-->
 
-![A vintage engraving: an infant's two tiny hands reaching up from below toward an enormous radiant orb of light far above them.](reaching.png)
+![A single-line ink drawing: a small man tips a bowl of glowing stars onto a mountain of gears already taller than he is, while a giant hand lowers one more lightbulb onto the pile. No pair of hands is big enough.](nobodys-hands-plate.jpg)
 
 ## What the thing actually is
 
@@ -75,6 +75,8 @@ overnight, [the moment someone showed what its power became in the wrong paragra
 the confession. You don't yank a toaster overnight. You yank the thing when you catch a clear
 look at what you built and who's holding it. Good instinct. Years late, and aimed at one model on
 one afternoon, when what needs the flinch is the whole idea of handing this out at all.
+
+{{< nyer-panel src="reaching.png" caption="The infant is us." alt="A vintage engraving: an infant's two tiny hands reach up from below toward an enormous radiant orb of light far above them." >}}
 
 ## Who this is really about
 

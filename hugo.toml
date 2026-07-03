@@ -14,6 +14,18 @@ theme = 'ee-ai'
 # itself by a scalar `category` frontmatter field instead (see glossary/list.html).
 [taxonomies]
 
+# List-page thumbnails can come from the concepts/ workshop (which lives outside
+# content/ so Hugo never publishes it). Mounting concepts/ into assets/concepts
+# lets _default/list.html reach a post's concept art via resources.Match and emit
+# only a small processed webp thumb - the raw workshop files stay unpublished.
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "concepts"
+    target = "assets/concepts"
+
 [params]
   tagline = "A working notebook on AI & machine learning."
   description = "Eric Eaglstun's AI notebook - a curated glossary of AI/ML development terms, plus blog posts and deep dives on local inference, models, and the machinery underneath."

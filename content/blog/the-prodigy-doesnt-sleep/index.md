@@ -48,6 +48,8 @@ handing the baton back to. Fable is the first one Anthropic is comfortable descr
 something you leave the room on. The infant doesn't nap. The infant pulls an all-nighter and
 presents a working branch at breakfast like it's nothing.
 
+{{< nyer-panel src="recital.jpg" caption="The recital continues. The coffee is for show." alt="A pink-and-teal risograph print: a small child in a suit plays a grand piano on a rooftop at night, city towers glowing behind, a stack of coffee cups balanced on the piano lid." >}}
+
 ## She has expensive taste
 
 Now the part the launch page is quieter about. Fable runs **$10 per million input tokens and

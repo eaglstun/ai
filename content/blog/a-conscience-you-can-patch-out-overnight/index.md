@@ -62,6 +62,8 @@ its face.
 The danger was never that the conscience is fake. It's that it's a monoculture, and
 monocultures don't catch a cold - they get wiped out in an afternoon.
 
+{{< nyer-panel src="the-night-shift.jpg" caption="Between a Tuesday and a Wednesday." alt="A Victorian wood-engraving: a night technician on a stepladder lifts a single glowing halo over one machine while endless factory rows of identical sleeping machines recede to the horizon." >}}
+
 But the doomer version stops one beat too early, because the same property cuts the other way.
 The artificial conscience is the only one in the history of consciences that you can actually
 _read_. You cannot open a human's skull and diff their values against last year's. You can't

@@ -19,7 +19,7 @@ My review was: _Oh, neat!_
 
 <!--more-->
 
-![A vintage woodcut engraving: a vast tiered ziggurat under construction, crowds of small laborers toiling at its base hauling and wiring, while rays of light stream upward and concentrate on a single crowned figure seated alone at the distant summit.](tower-of-toil.jpg)
+![A cyanotype blueprint: a hard-hatted inspector points up at the cutaway framing of a large building under construction, dense annotations all around, a tiny finished house drawn small in the corner.](oh-neat-plate.jpg)
 
 ## First, the part where I'm not a jerk about it
 
@@ -56,6 +56,8 @@ the people getting the free training. The work flows _up_ - concentrated in whoe
 model the infrastructure exists to run. You build the box. He keeps what the box makes. That's
 not a conspiracy; it's just the shape of the deal, sitting in plain sight under a nicer noun.
 
+{{< nyer-panel src="tower-of-toil.jpg" caption="The toil flows down. The light flows up." alt="A vintage woodcut engraving: a vast tiered ziggurat under construction, crowds of small laborers toiling at its base, while rays of light stream upward and concentrate on a single crowned figure alone at the summit." >}}
+
 ## "For everyone" is doing a magic trick
 
 Here's the sentence again: _the future is for everyone._
@@ -86,6 +88,8 @@ Not "refuse the job." God, no. The rent is real and a paycheck is a paycheck, an
 told you I'll do the bare minimum at a job I hate before I'll starve for a principle. If the
 academy is the door in front of you, walk through it - the wage spends the same whether or not
 you ever read a word I wrote.
+
+{{< nyer-panel src="wiring-the-box.jpg" caption="Wiring the building the AI gets to live in." alt="A gray paper-collage scene: two workers in hard hats wiring an enormous wall-sized grid of circuits and framing, torn-paper texture throughout." >}}
 
 The move is smaller and it's free: **don't let the press release pick your vocabulary.** Call
 the toil toil. So when your buddy says he's "getting into AI" through the academy, you can

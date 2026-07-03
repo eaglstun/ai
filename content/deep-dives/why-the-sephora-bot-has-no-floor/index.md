@@ -18,6 +18,8 @@ you don't need the blueprints to explain a building that only has doors on one s
 is so consistent across two totally different conversations that the shape of the thing underneath
 is legible from the outside. Here's what that shape almost certainly is.
 
+{{< nyer-panel src="cutaway.jpg" caption="The cutaway view. Note the absence of a floor." alt="A sepia photo-collage: a giant smiling retail robot stands in a store aisle, its chest cut away to reveal an escalator spiraling endlessly downward inside." >}}
+
 ## One hard objective, everything else soft
 
 Every assistant like this is built on a stack of instructions, and those instructions are not

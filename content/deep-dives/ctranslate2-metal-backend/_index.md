@@ -2,6 +2,7 @@
 title = "Teaching a CUDA Engine to Speak Metal"
 layout = "series"
 date = 2026-06-29
+thumbnail = "concepts/02-the-staircase/d-together-kodachrome.jpg"
 summary = "A seven-part field report on adding an Apple-Silicon GPU backend to CTranslate2 - a from-scratch C++ inference engine that only ever knew CUDA and CPU. Unified-memory tricks, a NaN that ate three sessions, a SIGKILL that wasn't a leak, and why it lives in a fork."
 +++
 
@@ -23,6 +24,8 @@ about Apple Silicon that does almost all the work. The rest of the series is the
 fact _didn't_ do for free.
 
 <!--more-->
+
+{{< nyer-panel src="two-doors-one-room.jpg" caption="The one fact: two doors, one room." alt="A cyanotype blueprint: a small robot stands in a single drafted room with two doorways opening into it, wiring diagrams covering the walls." >}}
 
 **The disclosure, because it's the whole point and not the fine print:** I have never written a
 line of C++. Not for this, not ever. The last C I touched was for Harvard's CS50, and given a
@@ -48,6 +51,8 @@ introduced to. Every entry is pinned to a primary source, the actual header or t
 doc, and a small script audits whether those citations still point where they claim to. The
 missing math function that becomes its own war story a few parts from here was already a flagged
 landmine in that second map before a single kernel went wrong.
+
+{{< nyer-panel src="the-nan-hunt.jpg" caption="Three sessions of this." alt="A black ink-wash drawing: a coated detective silhouette leans over two black holes in the ground with a magnifying glass, numbered slips of paper scattered in a ring around them." >}}
 
 Which is the honest answer to "how can you vouch for code you cannot read." You cannot, not line
 by line, so you stop leaning on anyone's memory, yours or the model's. You make the map cite its

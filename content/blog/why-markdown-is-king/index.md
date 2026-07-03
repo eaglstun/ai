@@ -122,6 +122,8 @@ show me the file.
 Outside those backticks, Markdown would flatten that spacing on sight. Inside them, the glitch
 is preserved exactly, because the format finally agreed to stop helping.
 
+{{< nyer-panel src="working-crown.jpg" caption="Still the working crown. The jeweled ones are exhibits now." alt="A soft Kodachrome-style photograph: a plain paper crown on a velvet cushion inside a glass museum case, shelves of ornate jeweled crowns blurred behind it." >}}
+
 ## Where to go from here
 
 {{< bbros title="Field Note" n="4" float="left" >}}

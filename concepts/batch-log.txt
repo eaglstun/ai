@@ -1,0 +1,239 @@
+[1/34] a-conscience-you-can-patch-out-overnight ...
+ok a-drawthings-ink-wash-dark.jpg (180.4s)
+ok b-together-blueprint.jpg (3.7s)
+ok c-replicate-gag-panel.jpg (7.4s)
+ok d-together-woodcut.jpg (5.4s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/a-conscience-you-can-patch-out-overnight/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[2/34] a-crutch-and-a-lever ...
+ok a-replicate-continuous-line.jpg (8.2s)
+ok b-drawthings-risograph.jpg (208.7s)
+ok c-together-kodachrome.jpg (3.5s)
+ok d-together-gag-panel.jpg (4.4s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/a-crutch-and-a-lever/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[3/34] everyone-deserves-a-mascara-treat ...
+ok a-together-ink-wash-dark.jpg (3.9s)
+ok b-together-collage.jpg (40.1s)
+ok c-drawthings-gag-panel.jpg (191.2s)
+ok d-replicate-continuous-line.jpg (8.2s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/everyone-deserves-a-mascara-treat/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[4/34] i-got-substituted-on-purpose ...
+ok a-together-kodachrome.jpg (4.3s)
+ok b-drawthings-gag-panel.jpg (221.4s)
+ok c-together-woodcut.jpg (7.1s)
+ok d-replicate-risograph.jpg (9.0s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/i-got-substituted-on-purpose/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[5/34] is-that-what-you-wanted ...
+ok a-drawthings-ink-wash-dark.jpg (213.2s)
+ok b-together-blueprint.jpg (3.7s)
+ok c-together-collage.jpg (5.0s)
+ok d-replicate-gag-panel.jpg (9.0s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/is-that-what-you-wanted/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[6/34] my-claude-code-started-roasting-me ...
+ok a-replicate-gag-panel.jpg (7.1s)
+ok b-drawthings-risograph.jpg (229.4s)
+ok c-together-kodachrome.jpg (3.7s)
+ok d-together-continuous-line.jpg (5.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/my-claude-code-started-roasting-me/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[7/34] nobodys-hands-are-big-enough ...
+ok a-together-woodcut.jpg (43.9s)
+ok b-replicate-continuous-line.jpg (8.1s)
+ok c-together-ink-wash-dark.jpg (4.1s)
+ok d-drawthings-gag-panel.jpg (163.0s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/nobodys-hands-are-big-enough/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[8/34] oh-neat ...
+ok a-together-kodachrome.jpg (3.2s)
+ok b-replicate-blueprint.jpg (9.2s)
+ok c-drawthings-woodcut.jpg (266.9s)
+ok d-pollinations-collage.jpg (1.8s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/oh-neat/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[9/34] perpetual-beta-has-an-owner-now ...
+ok a-together-woodcut.jpg (4.3s)
+ok b-replicate-risograph.jpg (9.8s)
+ok c-drawthings-ink-wash-dark.jpg (259.1s)
+ok d-together-continuous-line.jpg (5.4s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/perpetual-beta-has-an-owner-now/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[10/34] replicator-was-never-the-point ...
+ok a-together-kodachrome.jpg (3.9s)
+ok b-drawthings-gag-panel.jpg (265.3s)
+ok c-replicate-continuous-line.jpg (8.7s)
+ok d-together-collage.jpg (4.5s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/replicator-was-never-the-point/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[11/34] the-bill-comes-due ...
+ok a-replicate-gag-panel.jpg (7.1s)
+ok b-together-ink-wash-dark.jpg (4.3s)
+ok c-drawthings-risograph.jpg (253.7s)
+ok d-together-woodcut.jpg (6.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/the-bill-comes-due/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[12/34] the-cognitohazard-was-the-smile ...
+ok a-drawthings-ink-wash-dark.jpg (255.0s)
+ok b-together-collage.jpg (6.4s)
+ok c-replicate-gag-panel.jpg (7.7s)
+ok d-together-risograph.jpg (3.9s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/the-cognitohazard-was-the-smile/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[13/34] the-middle-is-crowded ...
+ok a-replicate-continuous-line.jpg (8.3s)
+ok b-together-woodcut.jpg (23.1s)
+ok c-together-ink-wash-dark.jpg (4.1s)
+ok d-drawthings-gag-panel.jpg (246.6s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/the-middle-is-crowded/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[14/34] the-prodigy-doesnt-sleep ...
+ok a-together-ink-wash-dark.jpg (4.3s)
+ok b-drawthings-gag-panel.jpg (250.5s)
+ok c-replicate-continuous-line.jpg (8.7s)
+ok d-together-risograph.jpg (5.2s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/the-prodigy-doesnt-sleep/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[15/34] three-hours-and-150-dollars ...
+ok a-together-collage.jpg (45.4s)
+ok b-together-woodcut.jpg (3.6s)
+ok c-drawthings-gag-panel.jpg (250.2s)
+ok d-replicate-blueprint.jpg (8.6s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/three-hours-and-150-dollars/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[16/34] why-markdown-is-king ...
+ok a-drawthings-gag-panel.jpg (238.2s)
+ok b-together-kodachrome.jpg (4.5s)
+ok c-replicate-continuous-line.jpg (8.3s)
+ok d-pollinations-woodcut.jpg (1.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/why-markdown-is-king/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[17/34] 01-in-its-own-language ...
+ok a-together-woodcut.jpg (4.3s)
+ok b-drawthings-ink-wash-dark.jpg (239.5s)
+ok c-replicate-continuous-line.jpg (8.1s)
+ok d-pollinations-collage.jpg (1.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/01-in-its-own-language/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[18/34] 02-in-our-language ...
+ok a-together-collage.jpg (5.3s)
+ok b-together-woodcut.jpg (41.9s)
+ok c-drawthings-risograph.jpg (223.6s)
+ok d-replicate-gag-panel.jpg (6.9s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/02-in-our-language/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[19/34] 03-turn-the-knob-yourself ...
+ok a-together-kodachrome.jpg (5.6s)
+ok b-replicate-blueprint.jpg (9.2s)
+ok c-drawthings-gag-panel.jpg (235.4s)
+ok d-together-continuous-line.jpg (5.2s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/03-turn-the-knob-yourself/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[20/34] audiocraft-apple-silicon ...
+ok a-drawthings-gag-panel.jpg (224.8s)
+ok b-together-kodachrome.jpg (5.0s)
+ok c-replicate-risograph.jpg (9.0s)
+ok d-together-collage.jpg (4.8s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/audiocraft-apple-silicon/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[21/34] 01-unified-memory ...
+ok a-replicate-continuous-line.jpg (8.1s)
+ok b-together-blueprint.jpg (3.6s)
+ok c-drawthings-gag-panel.jpg (215.1s)
+ok d-together-woodcut.jpg (6.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/01-unified-memory/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[22/34] 02-the-staircase ...
+ok a-replicate-gag-panel.jpg (7.2s)
+ok b-drawthings-risograph.jpg (207.6s)
+ok c-together-woodcut.jpg (5.4s)
+ok d-together-kodachrome.jpg (3.0s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/02-the-staircase/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[23/34] 03-msl-indignities ...
+ok a-drawthings-gag-panel.jpg (205.8s)
+ok b-together-woodcut.jpg (3.1s)
+ok c-replicate-continuous-line.jpg (8.1s)
+ok d-together-collage.jpg (4.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/03-msl-indignities/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[24/34] 04-the-nan-hunt ...
+ok a-together-ink-wash-dark.jpg (5.2s)
+ok b-replicate-gag-panel.jpg (7.5s)
+ok c-drawthings-risograph.jpg (208.2s)
+ok d-together-woodcut.jpg (5.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/04-the-nan-hunt/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[25/34] 05-the-730-second-file ...
+ok a-pollinations-collage.jpg (40.5s)
+ok b-drawthings-gag-panel.jpg (202.8s)
+ok c-together-ink-wash-dark.jpg (4.0s)
+ok d-replicate-continuous-line.jpg (8.9s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/05-the-730-second-file/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[26/34] 06-profile-dont-guess ...
+ok a-replicate-gag-panel.jpg (7.0s)
+ok b-together-blueprint.jpg (3.2s)
+ok c-drawthings-risograph.jpg (209.4s)
+ok d-pollinations-woodcut.jpg (1.7s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/06-profile-dont-guess/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[27/34] 07-not-a-pull-request ...
+ok a-drawthings-ink-wash-dark.jpg (215.8s)
+ok b-together-woodcut.jpg (5.6s)
+ok c-replicate-continuous-line.jpg (8.4s)
+ok d-pollinations-kodachrome.jpg (1.5s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/07-not-a-pull-request/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[28/34] porting-ml-to-apple-silicon ...
+ok a-together-kodachrome.jpg (3.5s)
+ok b-replicate-blueprint.jpg (9.1s)
+ok c-drawthings-gag-panel.jpg (214.3s)
+ok d-together-collage.jpg (5.0s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/porting-ml-to-apple-silicon/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[29/34] reviving-pulse-apple-silicon ...
+ok a-drawthings-ink-wash-dark.jpg (215.1s)
+ok b-together-collage.jpg (5.4s)
+ok c-together-woodcut.jpg (4.0s)
+ok d-replicate-gag-panel.jpg (8.3s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/reviving-pulse-apple-silicon/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[30/34] teaching-a-coder-model-to-sin ...
+ok a-together-ink-wash-dark.jpg (5.8s)
+ok b-drawthings-gag-panel.jpg (217.5s)
+ok c-replicate-risograph.jpg (8.7s)
+ok d-together-woodcut.jpg (5.0s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/teaching-a-coder-model-to-sin/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[31/34] why-the-sephora-bot-has-no-floor ...
+ok a-together-blueprint.jpg (3.9s)
+ok b-replicate-gag-panel.jpg (7.6s)
+ok c-together-collage.jpg (32.7s)
+ok d-drawthings-ink-wash-dark.jpg (173.1s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/why-the-sephora-bot-has-no-floor/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[32/34] guitar-chart-skill ...
+ok a-drawthings-gag-panel.jpg (172.5s)
+ok b-together-kodachrome.jpg (4.3s)
+ok c-replicate-risograph.jpg (9.8s)
+ok d-together-continuous-line.jpg (6.1s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/guitar-chart-skill/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[33/34] louuy-dispatches ...
+ok a-together-collage.jpg (43.8s)
+ok b-drawthings-risograph.jpg (155.6s)
+ok c-together-ink-wash-dark.jpg (7.1s)
+ok d-replicate-continuous-line.jpg (8.5s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/louuy-dispatches/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+[34/34] talkie-on-apple-silicon ...
+ok a-together-kodachrome.jpg (5.8s)
+ok b-pollinations-woodcut.jpg (2.0s)
+ok c-drawthings-gag-panel.jpg (179.5s)
+ok d-replicate-ink-wash-dark.jpg (9.2s)
+wrote /Users/eeaglstun/Documents/web/ericeaglstun-ai/concepts/talkie-on-apple-silicon/notes.md and contact-sheet.html (4/4 images)
+  sheet ok
+BATCH DONE

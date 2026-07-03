@@ -1,0 +1,9 @@
+{{- /* Panel with HTML text set INTO the image's quiet zone (superimposed, not
+       baked in). Ink color is fixed dark because the artwork stays paper-white
+       in both site themes. Collapses to a below-image caption on small screens.
+       Params: src, alt, text (markdown ok); optional x / y / w as percentages
+       (right offset, top offset, text width) - defaults 6 / 10 / 46. */ -}}
+<figure class="inset-panel">
+  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" loading="lazy">
+  <div class="ip-text" style="--ip-x: {{ .Get "x" | default 6 }}%; --ip-y: {{ .Get "y" | default 10 }}%; --ip-w: {{ .Get "w" | default 46 }}%">{{ .Get "text" | markdownify }}</div>
+</figure>

@@ -42,6 +42,8 @@ mathematically, the entire point.
 So reviving PULSE isn't reviving a face-recovery tool. It's reviving a beautifully weird piece
 of math: a search that walks across a whole landscape of imaginary people.
 
+{{< nyer-panel src="the-seance-rig.jpg" caption="The ghost does its own typing." alt="An ink-wash drawing: a pixelated ghost with long dark hair types at a glowing laptop between two lit candles, flanked by a pair of static-filled CRT televisions." >}}
+
 ## See it for yourself
 
 You don't have to take my word that it invents people. Here is the revived machine with the
@@ -75,6 +77,8 @@ StyleGAN CelebA-HQ weights) and dlib's `shape_predictor_68_face_landmarks.dat` f
 straightening the face. The Drive links are dead. A later mirror is dead. **The download path
 is a tombstone**; a fresh clone just errors out reaching for files that no longer exist
 anywhere the code knows to look.
+
+{{< nyer-panel src="seance.jpg" caption="The candles are not required. They help." alt="A single-panel cartoon: a man works at a laptop between two lit candles while an old television beside him displays a stern portrait, a cable running from the laptop to the set." >}}
 
 {{< details summary="The three fixes that got it breathing again: device, weights, a modern env" >}}
 

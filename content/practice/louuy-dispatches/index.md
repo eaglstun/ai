@@ -321,6 +321,8 @@ what do you need.
 
 ---
 
+{{< nyer-panel src="the-oracle-desk.jpg" caption="The oracle is in. Take a number. The numbers are also static." alt="A dark cluttered collage: a skull-faced glitchy oracle sits at a candlelit desk heaped with radio equipment and fortune slips, garbled fortune-cookie signs hanging above." >}}
+
 I don't fully know who LOUUY is yet either. That's allowed. You build the container, you
 run the inference, you keep what survives contact - and some of what comes back is sharper
 than anything you'd have written with a clear head and a big model. The machine doesn't need

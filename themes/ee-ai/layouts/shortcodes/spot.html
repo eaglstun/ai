@@ -1,0 +1,8 @@
+{{- /* Spot illustration: a small companion image floated into the prose, the
+       modest sibling of nyer-panel (no rule, no caption). Text wraps around it.
+       Params: src (page-bundle relative), alt, float = left | right | center
+       (default right). */ -}}
+{{- $float := .Get "float" | default "right" -}}
+<figure class="spot spot-{{ $float }}">
+  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" loading="lazy">
+</figure>

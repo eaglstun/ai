@@ -9,12 +9,47 @@
   {{- if $pages }}
   <ul class="post-list">
     {{- range $pages }}
-    <li>
-      <a class="post-link" href="{{ .RelPermalink }}">
-        <span class="post-title">{{ .Title }}</span>
-        {{- if .Date }}<time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
+    {{- $p := . }}
+    {{/* Thumbnail lookup chain: explicit `thumbnail` frontmatter (bundle-relative
+         filename, or a concepts/<slug>/... path into the assets mount), then the
+         first image in the page bundle, then the post's concept art from
+         concepts/<slug>/ (candidate letters only - never the contact sheet).
+         Posts with none of these just render the text row. */}}
+    {{- $img := "" }}
+    {{- with $p.Params.thumbnail }}
+      {{- if hasPrefix . "concepts/" }}{{ $img = resources.Get . }}{{ else }}{{ $img = $p.Resources.Get . }}{{ end }}
+    {{- end }}
+    {{- if not $img }}
+      {{- with $p.Resources.ByType "image" }}{{ $img = index . 0 }}{{ end }}
+    {{- end }}
+    {{- if and (not $img) $p.File }}
+      {{- with resources.Match (printf "concepts/%s/[a-d]-*.jpg" $p.File.ContentBaseName) }}
+        {{- $img = index . 0 }}
+      {{- end }}
+    {{- end }}
+    {{/* Per-image crop specs live in data/thumbcrops.toml, keyed by the image's
+         dir-plus-basename (extension dropped). Unlisted images get an uncropped
+         resize; heights on the page adjust naturally. */}}
+    {{- $thumb := "" }}
+    {{- with $img }}
+      {{- $key := path.Join (path.Dir .Name) (path.BaseName .Name) }}
+      {{- $spec := index (site.Data.thumbcrops | default dict) $key | default "resize 480x" }}
+      {{- $thumb = .Process (printf "%s webp q80" $spec) }}
+    {{- end }}
+    {{- $postURL := .RelPermalink }}
+    <li{{ if $thumb }} class="has-thumb"{{ end }}>
+      {{- with $thumb }}
+      <a class="post-thumb-link" href="{{ $postURL }}" tabindex="-1" aria-hidden="true">
+        <img class="post-thumb" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy" decoding="async">
       </a>
-      {{- with .Summary }}<p class="post-summary">{{ . | plainify | truncate 180 }}</p>{{ end }}
+      {{- end }}
+      <div class="post-item-body">
+        <a class="post-link" href="{{ .RelPermalink }}">
+          <span class="post-title">{{ .Title }}</span>
+          {{- if .Date }}<time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
+        </a>
+        {{- with .Summary }}<p class="post-summary">{{ . | plainify | truncate 180 }}</p>{{ end }}
+      </div>
     </li>
     {{- end }}
   </ul>

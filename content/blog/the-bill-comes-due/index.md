@@ -21,7 +21,7 @@ homework we've been using the séance to skip.
 
 <!--more-->
 
-![A Victorian wood-engraving: an enormous itemized invoice unfurls from a brass clockwork mechanical hand and cascades across the floor beside an ornate antique cash register. The bill comes due.](the-bill-comes-due-plate.png)
+![A Victorian wood-engraving: an aproned waiter presents a long itemized bill that unrolls across the floor to a metal robot seated at a restaurant table set with wine glasses. The bill comes due.](the-bill-comes-due-plate.jpg)
 
 ## Build it like an artifact, not an apparition
 
@@ -81,6 +81,8 @@ exchange. It is the conscience in the only form we can verify: not a feeling it 
 thing it reliably _does_. Respect that, and stay suspicious of anyone - the model very much included
 
 - who'd rather you keep looking at the glow.
+
+{{< nyer-panel src="the-bill-comes-due-plate.png" caption="The bill comes due." alt="A Victorian wood-engraving: an enormous itemized invoice unfurls from a brass clockwork mechanical hand and cascades across the floor beside an ornate antique cash register." >}}
 
 ## The séance is free; the conscience sends a bill
 

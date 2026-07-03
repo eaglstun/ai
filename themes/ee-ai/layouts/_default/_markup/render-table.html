@@ -3,13 +3,13 @@
   scrollable container so wide tables (benchmark grids) don't blow out the
   measure on narrow screens. Styling lives in static/css/style.css (.table-wrap).
 */ -}}
-<div class="table-wrap">
+<div class="table-wrap" tabindex="0" role="region" aria-label="Data table">
   <table>
     <thead>
       {{- range .THead }}
       <tr>
         {{- range . }}
-        <th{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</th>
+        <th scope="col"{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</th>
         {{- end }}
       </tr>
       {{- end }}

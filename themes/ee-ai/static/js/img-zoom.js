@@ -13,7 +13,10 @@
   var expandAll = false;
   try { expandAll = localStorage.getItem(KEY) === "1"; } catch (e) {}
 
-  function setExpanded(img, on) { img.classList.toggle("is-expanded", on); }
+  function setExpanded(img, on) {
+    img.classList.toggle("is-expanded", on);
+    img.setAttribute("aria-expanded", on ? "true" : "false");
+  }
 
   imgs.forEach(function (img) {
     img.classList.add("is-zoomable");
@@ -21,7 +24,7 @@
     img.setAttribute("tabindex", "0");
     var label = img.getAttribute("alt") || "image";
     img.setAttribute("aria-label", "Expand or shrink: " + label);
-    if (expandAll) setExpanded(img, true);
+    setExpanded(img, expandAll);
 
     img.addEventListener("click", function () {
       setExpanded(img, !img.classList.contains("is-expanded"));

@@ -26,7 +26,7 @@ So why do I feel like I got a promotion?
 
 <!--more-->
 
-![A Victorian wood-engraving: a master craftsman standing with his hands clasped behind his back, idle and sharp-eyed, judging the work while a brass automaton hunched at the bench does all the typing - the man supervises, the machine toils.](craftsman-judging-automaton.png)
+![A teal-and-pink risograph: a top-hatted robot lounges happily in a director's chair while a tuxedoed magician gestures toward an open stage cabinet mid substitution trick, stars and a little circus tent overhead.](substituted-plate.jpg)
 
 ## The part that actually got substituted
 
@@ -66,6 +66,8 @@ killed a checkpoint that did everything I asked
 because doing everything I asked was the problem. No machine on Earth was going to make that
 call for me, because the call _was_ me. It's the one thing in the building that doesn't have
 a button.
+
+{{< nyer-panel src="craftsman-judging-automaton.png" caption="The man supervises. The machine toils." alt="A Victorian wood-engraving: a master craftsman stands idle and sharp-eyed, hands clasped behind his back, judging the work while a brass automaton hunched at the bench does the typing." >}}
 
 ## The wrong axis
 

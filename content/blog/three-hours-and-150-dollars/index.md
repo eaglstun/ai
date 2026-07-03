@@ -106,6 +106,8 @@ cost of _producing_ expert work has fallen through the floor, while the cost of 
 it has not moved an inch. Those used to be the same bill. They just got itemized separately,
 and only one of them got cheap.
 
+{{< nyer-panel src="cathedral-of-circuit-boards.jpg" caption="The cathedral stands. The blueprints are in a language the contractor can't read." alt="A collage-style scene: a general contractor in a yellow hard hat surveys a towering cathedral built of circuit boards, while robed scribes carry documents written in an unreadable script." >}}
+
 ## The line item I can't put down
 
 {{< bbros title="The Off Switch" n="4" float="left" >}}

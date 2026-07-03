@@ -39,6 +39,8 @@ joke it never even got a real release - it's still passed around as a bootleg. T
 nailed to the door fifty years ago, and the culture filed it under novelty act. That's the
 work ethic for you: it'll happily let you mock it, right up until you mean it.
 
+{{< nyer-panel src="replicator-mops.jpg" caption="It can make anything. Look what we keep asking for." alt="A vintage Kodachrome-style factory scene: a gleaming machine dispensing an endless row of identical yellow mops and buckets, while a woman carries one away down the line." >}}
+
 ## What Star Trek actually promised
 
 Here's the thing nobody on the Enterprise has: a job. They have _pursuits_. Picard puts it

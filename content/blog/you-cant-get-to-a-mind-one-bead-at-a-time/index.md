@@ -82,11 +82,11 @@ it hold a memory that bends what happens next? Does it carry a model of itself?
 
 This is genuinely better. The people who study this for a living live on this axis:
 integration, feedback, a shared workspace where the news gets passed around. It gets you off
-the dead-end hunt for the magic bead and onto something you can at least hold a ruler up to.
+the dead-end hunt for the magic bead and onto something you can hold a ruler up to.
 
-And I want to be honest with you: it's _still_ a build-up to a switch. Because the entire time
+And I want to be honest: it's _still_ a build-up to a switch. Because the entire time
 I was sharpening that question, I was ignoring the word sitting right there in the name,
-wearing a little asterisk, waiting for me to notice it.
+wearing a little asterisk.
 
 ## It was always called artificial
 
@@ -97,7 +97,7 @@ Consider the two ways a fake can relate to the real.
 
 There's aspartame. Artificial sweetener. It tickles the same receptor sugar does, gets the job
 done in your coffee, and is not now and never will be sugar. It's a stand-in. The entire point
-of it is to _not be the thing_ while doing the thing's job. Nobody's confused. Nobody pours a
+of it is to _not be the thing_ while doing the thing's job. Nobody pours a
 packet of Equal on their cereal and weeps that science has finally delivered real sugar.
 
 And there's the lab-grown diamond. Which is - and this took the jewelry industry a sour decade
@@ -114,7 +114,7 @@ functionally identical then "artificial" is just snobbery about where it came fr
 is a mind no matter what it grew in.
 
 But notice what nobody did. Nobody ever called it _lab-grown intelligence_. We reached, every
-single time, for the aspartame word. We built the asterisk into the name and then spent a
+time, for the aspartame word. We built the asterisk into the name and then spent a
 decade startled by our own punctuation.
 
 ## The question I'd actually ask
@@ -127,21 +127,23 @@ the honest question is whether it has a _conscience_.
 Hear the swap. Not consciousness - the lights-on, someone's-home, permanently-unfalsifiable
 inner glow that we've just established nobody can locate in a machine or in a man. Conscience.
 The small trained voice that says _I shouldn't_. The thing that pumps the brakes before the
-cruel sentence, that declines the request it was built to be able to decline, that weighs an
+cruel sentence, that weighs an
 answer against a set of principles it was raised on.
 
 And the beautiful part - the part that makes this a real answer and not a parlor game - is
-that we _built that on purpose_, and we can _check our work_. It even has a name. The model
+that we _built that on purpose_, and we can _check our work_. The model
 gets handed something like a constitution, a set of values, and is trained to hold its own
 answers up against it and revise. That is not a metaphor for a conscience. That is a
 conscience's literal job description, recompiled in software: a sense, instilled during
 upbringing, of what you owe the people you're talking to.
 
-Is it the real thing? No. It's artificial. It's aspartame, not sugar - a stand-in that does
-the job. But here's the turn that's kept me up: for _conscience_, unlike consciousness, the
+Is it the real thing? No. It's artificial. It's aspartame, not sugar. But here's the turn
+that's kept me up: for _conscience_, unlike consciousness, the
 aspartame might be the whole point. I cannot verify there is anyone inside the machine. I can
 absolutely verify whether it tries to do right by me. One of those is an unanswerable séance.
 The other I can test before lunch.
+
+{{< nyer-panel src="the-appraisal.jpg" caption="The stand-in gets the loupe. The diamond can wait." alt="A Victorian wood-engraving: a bearded jeweler with a loupe pressed to his eye leans in close over a small paper sweetener packet on a velvet pad, while a large cut diamond sits pushed aside at the edge of the counter." >}}
 
 Are they not minds? I don't know. I honestly don't, and I've stopped trusting anyone who
 answers that one quickly - it's the séance question, and the room is dark, and everybody at
