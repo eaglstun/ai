@@ -50,6 +50,7 @@ TITLE = {
     "rss-sampler": "RSS sampler",
     "temperature": "Temperature",
     "tensor": "Tensor",
+    "token": "Token",
     "transformer": "Transformer",
     "val-loss": "Validation loss",
     "vulkan": "Vulkan",
@@ -74,6 +75,7 @@ INLINE.update({
     "precision": "floating-point precision",
     "temperature": "temperature",
     "tensor": "tensor",
+    "token": "token",
     "transformer": "transformer",
     "val-loss": "validation loss",
     "residual-connections": "residual connections",
@@ -113,6 +115,7 @@ SUMMARY = {
     "rss-sampler": "A lightweight monitor that polls a process's Resident Set Size on a timer to chart its real-RAM footprint over time - so you see the memory cliff coming instead of OOM-ing into it.",
     "temperature": "The sampling knob that sets how random a model's word choices are - low is safe and repeatable, high is loose and surprising.",
     "tensor": "N-dimensional numeric array; the core ML data structure.",
+    "token": "The subword chunk a model actually reads and writes; text is split into these before the model sees it, and context limits and pricing are counted in them.",
     "transformer": "The self-attention architecture behind modern LLMs.",
     "val-loss": "Held-out validation error; the overfitting tripwire.",
     "vulkan": "Cross-vendor GPU-compute API; the portable ML fallback.",
@@ -153,9 +156,24 @@ PLAIN = {
     "rss-sampler": "The bathtub gauge. A single 'it overflowed' tells you nothing useful; a number ticking up every few seconds tells you whether the water's creeping or gushing - so you can cut the tap before it hits the rim instead of mopping the floor after. The 'self-monitoring' part is just the tub watching its own water line.",
     "temperature": "The 'play it safe vs. surprise me' slider. Picture ordering at your usual diner: turn the dial all the way down and you get your regular every single time, no thinking required. Nudge it up and you start straying to the daily special. Crank it to the top and you're pointing at a random line on the menu and eating whatever lands - sometimes inspired, eventually just the ketchup. Same kitchen, same menu; the dial only decides how willing the model is to skip its favorite and gamble on the longshot.",
     "tensor": "A spreadsheet that can run in more than two directions. One number is a dot, a list is a row, a grid is a table - a tensor just keeps going into more directions, and it's the basic container AI uses to hold all its numbers.",
+    "token": "The Lego bricks of language. The model can't see letters or whole words - it only knows a fixed bin of pre-molded chunks, and every sentence it reads or writes has to be snapped together from those. 'cat' might be one brick; 'unbelievable' three; a weird typo, a fistful of tiny ones.",
     "transformer": "The architecture behind nearly every modern AI. Its trick is reading everything at once and letting each piece decide which other pieces matter - that's what powers ChatGPT, image generators, and the rest.",
     "val-loss": "The pop quiz with questions it didn't study. During training you hold back some examples the model never sees, then test on those - if it aces what it studied but flunks the held-back quiz, it memorized instead of learned.",
     "vulkan": "The universal remote. A one-size-fits-all translator that lets AI software talk to graphics chips from any brand - not as finely tuned as NVIDIA's or Apple's own, but it works almost everywhere.",
+}
+
+# Term illustrations. slug -> alt text. The image file itself lives at
+# static/glossary-img/<slug>.webp and is referenced by absolute path, so it survives
+# regeneration (the generated term pages are flat files, not page bundles). Only slugs
+# listed here get an `image` / `image_alt` frontmatter pair; glossary/single.html
+# renders it. A good mix of treatments (woodcut / kodachrome / schematic) per concept.
+IMAGE_ALT = {
+    "attention": "A Victorian wood-engraving: a scholar at a desk reading an open book, fine luminous threads rising from certain words and converging on one - some words weighed far more heavily than the rest.",
+    "gan": "A Victorian wood-engraving: a forger at an easel painting a convincing counterfeit while a monocled inspector leans in to scrutinise it - a duel of faking and detecting.",
+    "latent-space": "A dreamy aerial photograph of a misty valley at dawn, softly glowing clustered forms floating in fog with similar shapes gathered together - a map of meaning.",
+    "temperature": "A still-life of an ornate brass dial: frost and crystalline ice on one side, chaotic glowing embers and sparks on the other - a knob between order and randomness.",
+    "embeddings": "A minimalist schematic: small glowing dots scattered across a dark field in loose clusters, faint lines between near neighbours - points placed so similar things sit close together.",
+    "tensor": "A minimalist isometric schematic: translucent grids nesting into a three-dimensional cube of small cells - a multi-dimensional array of numbers.",
 }
 
 CATEGORY = {
@@ -182,6 +200,7 @@ CATEGORY = {
     "qwen": "Architectures",
     "temperature": "Core concepts",
     "tensor": "Core concepts",
+    "token": "Core concepts",
     "latent-space": "Core concepts",
     "parameters": "Core concepts",
     "lora": "Core concepts",
@@ -202,10 +221,10 @@ RELATED = {
     "ablation": ["machine-learning", "val-loss", "parameters"],
     "agi": ["machine-learning", "gpt", "model-welfare", "alignment"],
     "alignment": ["model-welfare", "agi", "machine-learning"],
-    "attention": ["transformer", "tensor", "lora"],
+    "attention": ["transformer", "tensor", "lora", "token"],
     "machine-learning": ["tensor", "transformer", "parameters", "val-loss", "agi", "gradient-descent", "alignment"],
     "dimensions": ["tensor", "latent-space", "embeddings"],
-    "embeddings": ["latent-space", "dimensions", "tensor"],
+    "embeddings": ["latent-space", "dimensions", "tensor", "token"],
     "epsilon-gate": ["gradient-descent", "precision", "mps", "val-loss"],
     "cuda": ["metal", "vulkan", "ggml", "cudnn-cublas"],
     "cudnn-cublas": ["cuda", "mps", "tensor"],
@@ -213,7 +232,7 @@ RELATED = {
     "gelu": ["transformer", "gpt", "tensor", "relu"],
     "ggml": ["gguf", "tensor", "cuda", "metal", "vulkan", "rss-sampler"],
     "gguf": ["mlx", "ggml", "parameters", "rss-sampler", "precision", "qwen", "temperature"],
-    "gpt": ["transformer", "gguf", "agi", "gelu", "qwen", "temperature"],
+    "gpt": ["transformer", "gguf", "agi", "gelu", "qwen", "temperature", "token"],
     "gradient-descent": ["machine-learning", "parameters", "val-loss", "latent-space", "norm-placement", "epsilon-gate"],
     "latent-space": ["gan", "dimensions", "embeddings", "gradient-descent"],
     "llamacpp-vs-ollama": ["gguf", "ggml", "metal", "cuda", "vulkan", "temperature"],
@@ -229,9 +248,10 @@ RELATED = {
     "precision": ["gguf", "parameters", "rss-sampler", "tensor", "epsilon-gate"],
     "qwen": ["gpt", "transformer", "gguf", "lora"],
     "rss-sampler": ["parameters", "gguf", "ggml", "precision"],
-    "temperature": ["gpt", "transformer", "gguf", "llamacpp-vs-ollama"],
+    "temperature": ["gpt", "transformer", "gguf", "llamacpp-vs-ollama", "token"],
     "tensor": ["dimensions", "mlx", "transformer", "parameters", "gelu", "relu", "residual-connections", "norm-placement", "precision"],
-    "transformer": ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement", "qwen", "temperature"],
+    "token": ["embeddings", "attention", "transformer", "temperature", "gpt"],
+    "transformer": ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement", "qwen", "temperature", "token"],
     "val-loss": ["machine-learning", "parameters", "gradient-descent", "epsilon-gate"],
     "vulkan": ["cuda", "metal", "ggml"],
 }
@@ -285,6 +305,9 @@ def main():
         ]
         if PLAIN.get(slug):
             fm.append(f"plain = {toml_str(PLAIN[slug])}")
+        if slug in IMAGE_ALT:
+            fm.append(f'image = {toml_str(f"/glossary-img/{slug}.webp")}')
+            fm.append(f"image_alt = {toml_str(IMAGE_ALT[slug])}")
         fm += [
             "+++",
             "",

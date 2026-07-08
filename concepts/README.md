@@ -109,6 +109,24 @@ the karaoke post) and preview with `hugo server -D`.
    engines' takes on the same concept with a draggable divider (pure CSS +
    ~20 lines JS, no deps). If it lands, the caption-contest widget (reader
    types a caption, localStorage, no backend) is the follow-up.
+6. **`descent` full-page treatment** (SHIPPED 2026-07-04, first on the mascara
+   post) - the whole page, not one image: scroll-driven palette that walks
+   through five "acts" while parallax layers cut from the post's own concept
+   art drift behind the text. It's a small reusable fx ENGINE plus one named
+   treatment that configures it. The engine is treatment-agnostic:
+   `partials/fx-layers.html` (the fixed decorative stage), the `fx-act N`
+   shortcode (act-boundary beacons), `js/treatment.js` (the runtime: flips
+   `body[data-act]`, runs parallax, sets `--fx-progress`, has a
+   reduced-motion gate), and the body/footer hooks in `baseof.html` /
+   `footer.html`. **A new variation on another page costs only:** (a)
+   frontmatter `treatment = "<name>"` + a `[[fx.layers]]` list (src/depth/
+   class per layer), (b) one `.treat-<name>` palette-and-acts block in
+   style.css (flat `[data-act="N"]` overrides win in both OS schemes), (c)
+   the `fx-act` markers in the body, (d) the layer art in that page's bundle
+   (alpha webp, feathered, shipped q80 under the colophon footprint rule).
+   `treatment.js`, the partial, and the shortcode are untouched. Layers read
+   best as low-opacity, edge-feathered atmosphere (radial mask) so body text
+   always wins; the void acts dim them toward zero.
 
 ## Review flow
 

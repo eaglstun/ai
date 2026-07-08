@@ -24,7 +24,7 @@ Her name is Fable. Cool. Cool cool cool.
 
 ## Who she is
 
-<img class="img-right" src="fable-prodigy.png" alt="A Victorian woodcut engraving: a small child in a nightcap working by lamplight at a cluttered writing desk, a crescent moon in the window - the prodigy who doesn't sleep.">
+<img class="img-right" src="fable-prodigy.jpg" alt="A Victorian woodcut engraving under a starry night sky: a small child writes by candlelight at a book-piled desk, a grandfather clock near midnight beside him, while a row of older students lie fast asleep at the desk behind. The prodigy who doesn't sleep.">
 
 [Fable](https://www.anthropic.com/claude/fable) is Anthropic's new top tier - a whole rung
 above Opus, which until yesterday was the most capable thing they made (and which, full

@@ -2,7 +2,7 @@
 title = "Attention"
 summary = "How tokens weigh each other (query · key · value) - the heart of the transformer."
 category = "Architectures"
-related = ["transformer", "tensor", "lora"]
+related = ["transformer", "tensor", "lora", "token"]
 plain = "Context clues. Instead of reading a sentence one word at a time, the model looks at the whole thing at once and works out which words are talking about each other - so in 'the bank was muddy from the river,' it knows 'bank' means riverbank, not the place with your money."
 +++
 **Attention** is the mechanism at the heart of the [transformer](/glossary/transformer/). For each word, more

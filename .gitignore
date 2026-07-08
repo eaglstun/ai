@@ -13,4 +13,5 @@ profile-concepts
 .claude/skills/threads/posts/
 .claude/skills/threads/metrics/
 .claude/skills/linkedin/linked-*.md
+.claude/skills/linkedin/posts/
 dist/

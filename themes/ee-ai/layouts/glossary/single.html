@@ -9,6 +9,12 @@
     {{- with .Summary }}<p class="term-dek-lead">{{ . | plainify }}</p>{{ end }}
   </header>
 
+  {{- with .Params.image }}
+  <figure class="term-figure">
+    <img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="lazy" decoding="async">
+  </figure>
+  {{- end }}
+
   {{- with .Params.plain }}
   <aside class="plain-english">
     <p class="plain-english-label">In plain English</p>

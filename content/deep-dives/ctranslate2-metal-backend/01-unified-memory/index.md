@@ -84,4 +84,4 @@ because the math is wrong or because the plumbing is wrong" - the plumbing was p
 before any math moved to the GPU.
 
 How you go from "correct but slow" to "fast, one op at a time" without ever breaking that green
-test suite is the actual architecture of this thing - and it's Part 2, landing here in a few days.
+test suite is the actual architecture of this thing - and it's [Part 2](/deep-dives/ctranslate2-metal-backend/the-staircase/).

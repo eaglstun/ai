@@ -1,0 +1,23 @@
+{{- /* fx-layers: the decorative parallax stage for a page that opts into a
+       treatment. Emits one <img> per [[params.fx.layers]] frontmatter entry
+       (src = bundle-relative filename resolved via .Resources.Get, depth ->
+       data-depth for treatment.js, class = extra hook the CSS positions on).
+       Purely decorative: empty alt, aria-hidden, lazy. Width/height come off the
+       resolved resource so there is no layout shift. A src that fails to resolve
+       is skipped so a missing asset never breaks the build. Dot ($) is the page,
+       passed from baseof, so .Resources resolves against the page bundle. */ -}}
+{{- with .Params.fx }}
+{{- with .layers }}
+<div class="fx-stage" aria-hidden="true">
+  {{- range $layer := . }}
+  {{- with $.Resources.Get $layer.src }}
+  <img src="{{ .RelPermalink }}" alt="" loading="lazy" decoding="async"
+       width="{{ .Width }}" height="{{ .Height }}"
+       data-depth="{{ $layer.depth }}"{{ with $layer.anchor }}
+       data-anchor="{{ . }}"{{ end }}
+       class="fx-layer{{ with $layer.class }} {{ . }}{{ end }}">
+  {{- end }}
+  {{- end }}
+</div>
+{{- end }}
+{{- end }}

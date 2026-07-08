@@ -2,7 +2,7 @@
 title = "Temperature"
 summary = "The sampling knob that sets how random a model's word choices are - low is safe and repeatable, high is loose and surprising."
 category = "Core concepts"
-related = ["gpt", "transformer", "gguf", "llamacpp-vs-ollama"]
+related = ["gpt", "transformer", "gguf", "llamacpp-vs-ollama", "token"]
 plain = "The 'play it safe vs. surprise me' slider. Picture ordering at your usual diner: turn the dial all the way down and you get your regular every single time, no thinking required. Nudge it up and you start straying to the daily special. Crank it to the top and you're pointing at a random line on the menu and eating whatever lands - sometimes inspired, eventually just the ketchup. Same kitchen, same menu; the dial only decides how willing the model is to skip its favorite and gamble on the longshot."
 +++
 **Temperature** is the single knob that decides how adventurous a language model is allowed to

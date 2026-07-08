@@ -1,6 +1,6 @@
 +++
 title = "A Conscience You Can Patch Out Overnight"
-date = 2026-06-14
+date = 2026-06-15
 description = "The artificial conscience fails faster, at scale, and without a flinch. We built it auditable and put nobody at the window."
 images = ["/og/a-conscience-you-can-patch-out-overnight.png"]
 summary = "Part one of two. The diagnosis. A sweetener-grade conscience may be no more fragile than ours - it just fails faster, at scale, and without a flinch - why the 'we don't understand brains either' dodge is such a good safety blanket, and the bleak punchline: we built the most auditable machine in history and put nobody at the window."

@@ -2,8 +2,7 @@
 title = "Part 3 - The Small Indignities of Metal Shading Language"
 slug = "msl-indignities"
 weight = 3
-draft = true
-date = 2026-07-09
+date = 2026-07-10
 series = "ctranslate2-metal-backend"
 summary = "Once you're graduating ops you're writing kernels in Metal's own C++-flavored shader language - and discovering its personality. The free gift (MPS matmul is laid out exactly how CTranslate2 already thinks), the missing math function that doesn't exist in any version, and why the kernel library compiles itself lazily on purpose."
 +++

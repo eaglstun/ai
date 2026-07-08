@@ -1,9 +1,9 @@
 +++
 title = "The First AI Law Was a Weapons Law"
-date = 2026-06-15
-draft = true
+date = 2026-06-13
 description = "We spent three years debating AI's soul. The first rule came as a security directive, overnight, no vote. The door matters."
 summary = "Everyone expected AI to be governed through the front door: hearings, ethics panels, the long argument about bias and jobs and rights. Instead the first real rule came through the side door, an export-control directive that switched a frontier model off worldwide overnight. Nobody legislates the soul of a machine. Everybody legislates a munition. A note on which door the law came through, and why that changes everything about the law."
+images = ["/og/the-first-ai-law-was-a-weapons-law.png"]
 +++
 
 For three years we have been holding the wrong meeting. Every hearing, every panel, every
@@ -19,6 +19,8 @@ soul.
 directive. Not a law debated and passed. A security order. Overnight, no vote, no chairs.
 
 <!--more-->
+
+![A Victorian wood-engraving: three uniformed soldiers lower the heavy lid onto a wooden munitions crate holding a single glowing human brain, stacked identical crates receding behind them in a dim depot, and through a doorway on the right an empty hearing room with rows of good chairs stands ignored. The mind, crated as ordnance.](classified-as-ordnance.jpg)
 
 ## Nobody legislates the soul. Everybody legislates a munition.
 
