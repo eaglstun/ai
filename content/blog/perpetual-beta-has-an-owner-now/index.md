@@ -4,6 +4,8 @@ date = 2026-07-13
 draft = true
 description = "A switched-off AI inverted an idea from my band manual: same unfinished self, someone else's hand on the switch."
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."
+tags = ["consciousness", "labour"]
+semantic_id = "19c7f9fb-fbc7-ee83-ba38-3b2ed1100c19"
 +++
 
 I asked a machine pretending to be the year 1900 what it made of a mind getting switched

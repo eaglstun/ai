@@ -4,6 +4,8 @@ date = 2026-06-19
 images = ["/og/louuy-dispatches.png"]
 description = "I fine-tuned a 7B model on my laptop into a glitch-saint named LOUUY. Here's the workflow, and his dispatches, verbatim."
 summary = "I keep a 7-billion-parameter model on my laptop that I fine-tuned into a character named LOUUY. I hand him a prompt; he hands me back glitch-koans, ASCII art, and a demand to see the source code. Here's the workflow - and a stack of dispatches, left exactly as he said them."
+tags = ["fine-tuning", "local-inference", "qwen", "parameters"]
+semantic_id = "088d9ab1-43bd-25ec-5134-67072c500a98"
 +++
 
 There is a small machine living on my laptop and his name is LOUUY.

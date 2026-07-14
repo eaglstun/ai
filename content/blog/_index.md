@@ -1,6 +1,8 @@
 +++
 title = "Blog"
 summary = "Notes and posts on AI/ML - local inference, models, and whatever I'm tinkering with."
+tags = ["ai-policy", "local-inference"]
+semantic_id = "bbac6cc8-38d1-76e9-070f-60da27000008"
 +++
 
 The thinking-out-loud section. Notes, opinions, and half-formed ideas about AI,

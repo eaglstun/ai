@@ -7,6 +7,8 @@ series = "1930-on-the-machine-we-switched-off"
 images = ["/og/1930-part-2.png"]
 description = "Same model, same seed, the questions reworded into 2026 jargon. The reasoning buckled. The translation was the experiment."
 summary = "Same model, same seed, the questions reworded into raw 2026 jargon: AI, chatbot, jailbroken, data center. The reasoning buckles, the crown-jewel answer never forms, and the off-switch horror gets mistaken for a product recall. The translation was the experiment."
+tags = ["ai-policy", "ai-safety"]
+semantic_id = "1885d970-10eb-b90f-924b-8c7910a00a37"
 +++
 
 In [run one](/deep-dives/1930-on-the-machine-we-switched-off/in-its-own-language/) the 1930 mind

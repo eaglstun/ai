@@ -6,6 +6,8 @@ draft = true
 date = 2026-07-27
 series = "ctranslate2-metal-backend"
 summary = "There's a working Apple-Silicon GPU backend at the end of this, built by someone who has never written a line of C++. It is not going upstream as one big pull request, and the honest reason is the most interesting lesson in the project - about what 'understand it and defend every line' means when the line-level understanding genuinely isn't yours, and why a fork is the right home, not a consolation prize."
+tags = ["apple-silicon", "metal", "mps", "transformer"]
+semantic_id = "fd33fb92-0d7a-3076-2692-9be8d9700cf6"
 +++
 
 I'll close on the part that makes this a series of blog posts instead of a contribution, because

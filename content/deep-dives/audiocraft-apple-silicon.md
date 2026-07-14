@@ -3,6 +3,8 @@ title = "Teaching My MacBook to Write Music (No NVIDIA Required)"
 date = 2026-06-26
 draft = true
 summary = "Meta's MusicGen and AudioGen assume CUDA and xformers. Here's getting them generating audio on an M-series Mac - what ports cleanly to MPS, and what falls back to the CPU."
+tags = ["apple-silicon", "music-generation", "mps", "tensor", "transformer"]
+semantic_id = "703570a7-c13a-3d14-06f1-a3616ef00b0e"
 +++
 
 [AudioCraft](https://github.com/oo-eric/audiocraft) is Meta's PyTorch library for audio

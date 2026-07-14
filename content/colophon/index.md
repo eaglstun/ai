@@ -1,6 +1,8 @@
 +++
 title = "Colophon"
 summary = "How this site is put together - and what it deliberately doesn't do behind your back."
+tags = ["hugo", "static-sites"]
+semantic_id = "ac820b69-51c9-b0af-9d9a-0e8767a00002"
 +++
 
 A colophon is the little note at the back of a book that tells you how the thing was

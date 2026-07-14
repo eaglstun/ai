@@ -273,6 +273,28 @@ def convert_links(text: str) -> str:
     return WIKILINK.sub(repl, text)
 
 
+# Fields owned by scripts/semantic-ids.py. This generator rewrites glossary pages from
+# scratch, so without this they would be silently destroyed on every run — and a
+# semantic_id is meant to be permanent (it is committed to git, and comparing an ID
+# minted under one mean vector against one minted under another is meaningless).
+PRESERVE = ("tags", "semantic_id")
+
+
+def carry_over(path: Path) -> list[str]:
+    """Lift PRESERVE fields out of an existing generated page, verbatim."""
+    if not path.exists():
+        return []
+    text = path.read_text()
+    m = re.match(r"\A\+\+\+\n(.*?)\n\+\+\+\n", text, re.S)
+    if not m:
+        return []
+    return [
+        line
+        for line in m.group(1).splitlines()
+        if any(re.match(rf"^{k}\s*=", line) for k in PRESERVE)
+    ]
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     slugs = sorted(TITLE)
@@ -296,6 +318,11 @@ def main():
         related = RELATED.get(slug, [])
         rel_toml = "[" + ", ".join(toml_str(r) for r in related) + "]"
 
+        # `tags` and `semantic_id` are minted by scripts/semantic-ids.py, NOT here.
+        # Carry them through verbatim — regenerating a page must never silently drop
+        # its ID, because those IDs are committed to git and referenced as permanent.
+        carried = carry_over(OUT / f"{slug}.md")
+
         fm = [
             "+++",
             f"title = {toml_str(TITLE[slug])}",
@@ -308,6 +335,7 @@ def main():
         if slug in IMAGE_ALT:
             fm.append(f'image = {toml_str(f"/glossary-img/{slug}.webp")}')
             fm.append(f"image_alt = {toml_str(IMAGE_ALT[slug])}")
+        fm += carried
         fm += [
             "+++",
             "",

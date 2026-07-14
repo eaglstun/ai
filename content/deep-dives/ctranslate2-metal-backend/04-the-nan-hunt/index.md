@@ -6,6 +6,8 @@ draft = true
 date = 2026-07-15
 series = "ctranslate2-metal-backend"
 summary = "A real model - Gemma2 - ran on the Metal backend and produced one correct token, then collapsed into <pad> forever. None of the kernels were 'wrong.' The bug was a library tanh that's fine on the CPU and quietly returns NaN on the GPU, and finding it meant killing three sessions' worth of beautiful, wrong theories."
+tags = ["metal", "inference", "precision"]
+semantic_id = "ce50d6de-4cb7-092b-3b35-4238dcf00c3f"
 +++
 
 Everything in [Part 3](/deep-dives/ctranslate2-metal-backend/msl-indignities/) ended with a transformer producing token-for-token the

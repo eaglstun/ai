@@ -4,6 +4,10 @@ summary = "The hidden vector space where geometry encodes meaning."
 category = "Core concepts"
 related = ["gan", "dimensions", "embeddings", "gradient-descent"]
 plain = "The secret organizing closet. Picture a walk-in closet sorted not by color but by vibe - leather jackets near combat boots, tuxedos near silk ties. It's the AI's internal closet where similar ideas get stored near each other so it can find them later."
+image = "/glossary-img/latent-space.webp"
+image_alt = "A dreamy aerial photograph of a misty valley at dawn, softly glowing clustered forms floating in fog with similar shapes gathered together - a map of meaning."
+tags = ["latent-space", "embeddings", "diffusion", "gan", "image-generation"]
+semantic_id = "e438466b-7654-56b5-cb2e-1ebec1b0000c"
 +++
 **Latent space** is the abstract, usually much smaller space in which a model holds the
 compressed "essence" of its input. Rather than work with raw pixels or words, the model maps

@@ -5,6 +5,8 @@ images = ["/og/guitar-chart-skill.png"]
 thumbnail = "concepts/guitar-chart-skill/d-together-continuous-line.jpg"
 description = "A Claude Code skill that turns a song into charts for guitar, bass, keys, and even engraved cello - one format, no paperwork."
 summary = "I built a Claude Code skill that turns a song into lead sheets, chord charts with ASCII fretboard diagrams, bass tabs, keyboard parts, and even simple engraved cello - in one consistent format. Here's how it works and why a skill beat doing it by hand."
+tags = ["music-generation", "tooling"]
+semantic_id = "130f38a5-738b-6fb5-7ec5-1303eb200946"
 +++
 
 My band, [OWNER/OPERATORS](https://owneroperators.online), has a recurring problem that is not music: paperwork. Somebody writes

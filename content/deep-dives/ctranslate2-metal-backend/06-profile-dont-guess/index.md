@@ -6,6 +6,8 @@ draft = true
 date = 2026-07-24
 series = "ctranslate2-metal-backend"
 summary = "Where the Metal backend actually gets fast, where it doesn't, and three times the intuition was dead wrong: a 16-bit op that was secretly 27× slower because it had never been on the GPU, the 'obvious' optimization that made things worse when measured, and a benchmark number that swung 2.7× between identical runs."
+tags = ["metal", "inference"]
+semantic_id = "de52b84e-5a1f-1a67-f205-f7fb5c400cc3"
 +++
 
 [Part 5](/deep-dives/ctranslate2-metal-backend/the-730-second-file/) ended on an uncomfortable fact: for Whisper, the GPU backend

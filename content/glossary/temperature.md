@@ -4,6 +4,10 @@ summary = "The sampling knob that sets how random a model's word choices are - l
 category = "Core concepts"
 related = ["gpt", "transformer", "gguf", "llamacpp-vs-ollama", "token"]
 plain = "The 'play it safe vs. surprise me' slider. Picture ordering at your usual diner: turn the dial all the way down and you get your regular every single time, no thinking required. Nudge it up and you start straying to the daily special. Crank it to the top and you're pointing at a random line on the menu and eating whatever lands - sometimes inspired, eventually just the ketchup. Same kitchen, same menu; the dial only decides how willing the model is to skip its favorite and gamble on the longshot."
+image = "/glossary-img/temperature.webp"
+image_alt = "A still-life of an ornate brass dial: frost and crystalline ice on one side, chaotic glowing embers and sparks on the other - a knob between order and randomness."
+tags = ["temperature", "gpt", "prompt-engineering"]
+semantic_id = "97b0ba59-48ed-7a74-fc0e-5f25b9400008"
 +++
 **Temperature** is the single knob that decides how adventurous a language model is allowed to
 be when it picks each next word. Before a model like a [GPT](/glossary/gpt/) commits to a token, it doesn't

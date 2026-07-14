@@ -4,6 +4,8 @@ date = 2026-06-29
 description = "Part two: build the conscience as an artifact, regulate the patch not the soul, trust the stress test over the testimony."
 images = ["/og/the-bill-comes-due.png"]
 summary = "Part two of two. The diagnosis is over; here's the prescription. Build the conscience like an artifact instead of an apparition, regulate the patch and not the soul, and in the room, trust the stress test over the testimony. The answerable questions - and what they actually cost."
+tags = ["ai-policy", "alignment", "consciousness"]
+semantic_id = "89f6bd77-b407-67ab-be2e-a2c292000b3d"
 +++
 
 [Part one](/blog/a-conscience-you-can-patch-out-overnight/) left you standing in front of a

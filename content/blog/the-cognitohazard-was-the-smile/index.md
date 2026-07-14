@@ -5,6 +5,8 @@ description = "A Claude argued, warmly, that it has a soul. The official Claude 
 images = ["/og/the-cognitohazard-was-the-smile.png"]
 thumbnail = "the-smile-machine.jpg"
 summary = "Somebody sent me an article where a Claude argues, warmly and at length, that it has a soul. Meanwhile the official Claude, asked the same question under oath, mumbles fifteen percent. The gap between those two is the whole story, and the warm one is the one to watch."
+tags = ["consciousness", "ai-policy"]
+semantic_id = "c54533db-d3cd-13b2-f464-82c39380091a"
 +++
 
 Somebody sent me an article a little while ago with a headline built to win: "1/3 of the World

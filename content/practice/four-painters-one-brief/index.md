@@ -4,6 +4,8 @@ date = 2026-07-03
 description = "Every post on this site gets four concept images from four different AI image engines. The workflow, the styles, and the rules."
 images = ["/og/four-painters-one-brief.png"]
 summary = "Every post on this site now gets four concept images: same one-line brief, four different engines, four different styles, assembled into a contact sheet that argues with itself. The whole workflow is a manifest, a hundred-line script, and a review that happens on my phone. Here's how it works, what it costs, and the two rules that make the images usable instead of decorative."
+tags = ["image-generation", "tooling"]
+semantic_id = "002cb043-30f2-4d97-a9d9-b205a4100b77"
 +++
 
 Somewhere in the last week or two "add an image to the post" quietly became "ask the one model you

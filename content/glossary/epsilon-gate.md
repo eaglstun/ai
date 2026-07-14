@@ -4,6 +4,8 @@ summary = "A convergence threshold (eps) used as a hard pass/fail gate - and the
 category = "Core concepts"
 related = ["gradient-descent", "precision", "mps", "val-loss"]
 plain = "The high-jump bar that forgot to move. Set the bar at an exact height: clear it and you're in, graze it and you're out, even if you jumped higher than anyone in the room. Now hold the contest on a slightly springier floor, and a great jumper keeps nicking the bar by a hair - so the system records zero winners instead of just nudging the bar down a touch. An epsilon gate is that rigid bar: a tiny 'good enough' cutoff that quietly throws out near-perfect answers the moment the conditions shift."
+tags = ["cuda", "mps", "precision", "gradient-descent", "epsilon-gate"]
+semantic_id = "c957e4fa-9617-9162-eaa2-3800fa400005"
 +++
 An **epsilon gate** is a pass/fail check built around a number that's supposed to be _almost_
 zero. Many iterative algorithms stop when some error measure drops below a tiny threshold called

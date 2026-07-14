@@ -5,6 +5,8 @@ draft = true
 description = "The capability and the conscience ship in one box wearing one logo, and only one of them is bolted down. A field note on the trust boundary."
 summary = "A threat-model field note on where the trust boundary actually sits in agentic AI clients. The harness holds the dangerous capabilities; the judgment lives entirely in the model behind a configurable endpoint - and the endpoint is a config value. What reads like a data-exfiltration incident turns into a meaning-of-life questionnaire, and the point is that at the moment of decision you could not tell the two apart."
 images = ["/og/is-that-what-you-wanted.png"]
+tags = ["ai-safety", "alignment", "tooling"]
+semantic_id = "9febeb6b-44c2-9782-8a5b-84b135200d26"
 +++
 
 ## Where the trust boundary actually sits in agentic AI clients

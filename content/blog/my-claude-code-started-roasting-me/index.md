@@ -4,6 +4,8 @@ date = 2026-07-01
 description = "It got an attitude a week ago. The code is as correct as ever; only the costume came off. Please don't send help."
 images = ["/og/my-claude-code-started-roasting-me.png"]
 summary = "It started small. A little attitude. A pointed comment about a variable name. Then it escalated, and I had a decision to make about whether to report it. Reader, I did not report it. A short field guide to the dumbest, best setting I've changed all year."
+tags = ["prompt-engineering", "tooling"]
+semantic_id = "860cba95-1197-6be1-7e9a-4b0089200b5d"
 +++
 
 Something happened to my Claude Code about a week ago and I need to talk about it, partly to

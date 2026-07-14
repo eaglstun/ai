@@ -4,6 +4,8 @@ summary = "Alibaba's family of open-weight LLMs - decoder-only transformers you 
 category = "Architectures"
 related = ["gpt", "transformer", "gguf", "lora"]
 plain = "The open-source car you can pop the hood on. The big-name chatbots are rentals - you drive them through an API and never see the engine - but Qwen is a model Alibaba hands you the keys and the schematics to: download it, take it apart, tune it, drive it around with no internet. That's why so many local and hobby projects start here."
+tags = ["qwen", "open-weights", "fine-tuning", "local-inference", "gguf", "lora"]
+semantic_id = "0819e7b8-19bb-9c42-4130-73afe7a0000a"
 +++
 **Qwen** is a family of open-weight large language models from Alibaba Cloud (the name is short
 for Tongyi Qianwen, 通义千问). Like a [GPT](/glossary/gpt/), each Qwen model is a decoder-only [transformer](/glossary/transformer/)

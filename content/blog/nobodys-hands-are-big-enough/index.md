@@ -4,6 +4,8 @@ date = 2026-06-12
 images = ["/og/nobodys-hands-are-big-enough.png"]
 description = "A frontier model is more leverage than anyone has ever held. We put it on a download page. The infant in this story is us."
 summary = "We keep asking whether the model is safe. Wrong question. The question is whether any person can be handed that much power, and the answer, the one we've spent all of human history building institutions to enforce, is no. A short argument about the gap between what you can set in motion and what you can hold."
+tags = ["ai-safety", "alignment", "gpt"]
+semantic_id = "fde38909-aec3-c585-c897-ecfbdd700a2e"
 +++
 
 Picture the smallest person you love. For me it's an infant, a sister you could lose in the

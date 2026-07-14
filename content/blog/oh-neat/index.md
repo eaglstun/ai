@@ -4,6 +4,8 @@ date = 2026-06-20
 summary = "Mark Zuckerberg launched a free academy to train hundreds of thousands of tradespeople to build AI's infrastructure, and called it the future for everyone. I reviewed it in two words. Here's the long version - and why 'the future is for everyone' and 'everyone gets the same future' are not the same sentence."
 description = "Zuckerberg's free academy trains the toil that builds AI's infrastructure. The toil flows down; the work flows up."
 images = ["/og/oh-neat.png"]
+tags = ["ai-policy", "labour", "training"]
+semantic_id = "75ed5981-7249-871e-b856-9266b4900aa9"
 +++
 
 Mark Zuckerberg posted something a while back, I replied with two words, and I'd like to

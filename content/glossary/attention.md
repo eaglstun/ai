@@ -4,6 +4,10 @@ summary = "How tokens weigh each other (query · key · value) - the heart of th
 category = "Architectures"
 related = ["transformer", "tensor", "lora", "token"]
 plain = "Context clues. Instead of reading a sentence one word at a time, the model looks at the whole thing at once and works out which words are talking about each other - so in 'the bank was muddy from the river,' it knows 'bank' means riverbank, not the place with your money."
+image = "/glossary-img/attention.webp"
+image_alt = "A Victorian wood-engraving: a scholar at a desk reading an open book, fine luminous threads rising from certain words and converging on one - some words weighed far more heavily than the rest."
+tags = ["attention", "transformer", "token"]
+semantic_id = "48d2f554-de81-ccb4-ad4e-b7e9a5d00001"
 +++
 **Attention** is the mechanism at the heart of the [transformer](/glossary/transformer/). For each word, more
 precisely each _token_, it lets the model decide how much every other token should

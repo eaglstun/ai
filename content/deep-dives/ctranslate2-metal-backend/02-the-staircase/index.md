@@ -8,6 +8,8 @@ series = "ctranslate2-metal-backend"
 description = "Bind the GPU device to run CPU code, then graduate ops to real Metal kernels one at a time. Always one op from working."
 images = ["/og/ctranslate2-part-2.png"]
 summary = "How to turn 'make the whole engine fast' from a cliff into a staircase: bind the new Metal device to run the CPU code, get a correct engine for free, then move ops to real GPU kernels one at a time - each one a small diff against a green test suite. Plus the two tiny exceptions that hold the entire trick up."
+tags = ["cuda", "metal"]
+semantic_id = "5b558ac6-ea2a-91e2-7589-61975a700bb5"
 +++
 
 [Part 1](/deep-dives/ctranslate2-metal-backend/unified-memory/) ended with a gift: because Metal memory is also CPU memory, the

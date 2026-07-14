@@ -4,6 +4,8 @@ summary = "Low-rank adapters; parameter-efficient fine-tuning."
 category = "Core concepts"
 related = ["transformer", "tensor", "gguf", "parameters", "qwen"]
 plain = "Sticky notes instead of rewriting the book. Rather than retrain a giant model from scratch to teach it something new, you clip on a small set of adjustments - cheap to make, easy to swap in and out, and you can keep a whole drawer of them."
+tags = ["fine-tuning", "lora", "transformer", "quantization", "training"]
+semantic_id = "82db4928-bb38-4dc0-7f52-5f9ea760000c"
 +++
 **LoRA** (Low-Rank Adaptation) is a cheap way to fine-tune a large model. Normally fine-tuning
 updates all of a model's weights, billions of numbers, costly in compute and memory. LoRA

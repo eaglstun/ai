@@ -4,6 +4,8 @@ summary = "Systems that learn patterns from data instead of hand-written rules."
 category = "Core concepts"
 related = ["tensor", "transformer", "parameters", "val-loss", "agi", "gradient-descent", "alignment"]
 plain = "Teaching by examples instead of rules. Instead of writing out every rule for 'what a cat looks like,' you show the computer thousands of cat photos and let it work out the pattern itself."
+tags = ["machine-learning", "training", "inference", "parameters", "tensor", "transformer"]
+semantic_id = "3638470c-9b5c-6ea9-0e6b-9c7a00c0000c"
 +++
 **Machine learning (ML)** is the branch of AI where a system _learns_ patterns from data
 instead of following step-by-step rules a programmer wrote out. Rather than code the logic

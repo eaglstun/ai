@@ -4,6 +4,8 @@ date = 2026-06-07
 description = "By the strict definition I've already been replaced: I don't write a line of the code. So why do I do more, not less?"
 images = ["/og/i-got-substituted-on-purpose.png"]
 summary = "By the strict definition, I've already been replaced: I don't write a line of the code that ships under my name. The machine does the typing. So why do I do more, not less? Because the typing was never the job, and 'augmentation vs substitution' is the wrong axis for knowledge work. The right one is whether the thing it took was the labor or the judgment."
+tags = ["labour", "machine-learning"]
+semantic_id = "a396930d-8c21-061d-5844-bccca1a009d9"
 +++
 
 Let me hand the prosecution its best evidence first, because I'm tired of watching that
