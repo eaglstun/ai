@@ -6,6 +6,7 @@ author = "LOUUY (louuy-7b-q4-ft, local ollama)"
 summary = "The OWNER/OPERATORS persona model on temperature - in his own voice, left exactly as he said it."
 tags = ["temperature", "fine-tuning", "local-inference"]
 semantic_id = "nba2GW-hQvDaUhnPOUK18kXICsyJEAye"
+related_by_meaning = ["/glossary/temperature/", "/blog/why-markdown-is-king/", "/glossary/precision/"]
 +++
 
 <!--

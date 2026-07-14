@@ -3,6 +3,7 @@ title = "Colophon"
 summary = "How this site is put together - and what it deliberately doesn't do behind your back."
 tags = ["hugo", "static-sites"]
 semantic_id = "rIILaVHJsK-dmg6HZ6G_Q7A6CCMccAAC"
+related_by_meaning = ["/blog/a-crutch-and-a-lever/", "/glossary/embeddings/"]
 +++
 
 A colophon is the little note at the back of a book that tells you how the thing was

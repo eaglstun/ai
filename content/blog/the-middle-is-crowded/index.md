@@ -5,6 +5,7 @@ draft = true
 summary = "BRIEF / not written yet. Part three of the conscience series, and the first one that hands the reader a lever instead of a warning. The machine gives you the average of everyone alive; the only work that matters is dragging it back toward you - and that walk is shorter than people think."
 tags = ["consciousness", "labour", "hugo"]
 semantic_id = "BMZ3Zy2BR5sy_gDrgSgsYErbYcs6gA2h"
+related_by_meaning = ["/blog/the-bill-comes-due/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/the-cognitohazard-was-the-smile/", "/blog/you-cant-get-to-a-mind-one-bead-at-a-time/", "/blog/the-prodigy-doesnt-sleep/"]
 +++
 
 > **This is a stub, not a post.** It's a captured idea - flip `draft` to `false` and

@@ -79,6 +79,20 @@ EPOCH = date(2026, 1, 1)
 
 TAG_COUNT = 6
 
+# ── related_by_meaning ────────────────────────────────────────────────────────
+#
+# The distance function is an XOR and a popcount, but it has to run SOMEWHERE, and Go
+# templates have no popcount. So it runs here, at mint time, and Hugo just renders a
+# list. Zero runtime cost, no JS, nothing to deploy.
+#
+# The cutoff is not a vibe. Across this corpus, two pages picked at random differ by ~87
+# of the 172 semantic bits, which is chance, since half of 172 is 86. Unrelated pages
+# sit at a coin flip, as they should. The 5th percentile of all pairs is 70 bits, so
+# RELATED_MAX_DISTANCE = 72 means "closer than roughly 95% of random pairs". Above it,
+# you are just ranking noise and calling the winner a recommendation.
+RELATED_COUNT = 6
+RELATED_MAX_DISTANCE = 72
+
 
 # ── ollama ────────────────────────────────────────────────────────────────────
 
@@ -272,6 +286,18 @@ def hamming(a: str, b: str) -> int:
     return bin(x).count("1")
 
 
+def page_ref(path: Path) -> str:
+    """content/blog/foo/index.md -> /blog/foo/, the ref Hugo's site.GetPage resolves."""
+    rel = path.relative_to(CONTENT)
+    parts = list(rel.parts[:-1]) if rel.stem == "index" else [*rel.parts[:-1], rel.stem]
+    return "/" + "/".join(parts) + "/"
+
+
+def is_listable(d: dict) -> bool:
+    """Section list pages are not destinations. The glossary keeps its curated See-also."""
+    return d["path"].stem != "_index" and d["path"].relative_to(CONTENT).parts[0] != "glossary"
+
+
 # ── main ──────────────────────────────────────────────────────────────────────
 
 
@@ -352,26 +378,59 @@ def main() -> None:
             MODEL_FILE.write_text(json.dumps(model))
 
     # ── mint ──────────────────────────────────────────────────────────────────
-    changed = 0
+    minted = 0
     for d in docs:
         existing = unquote(d["fields"].get("semantic_id", ""))
-        new_id = mint(d["vector"], mean, days_since_epoch(d["fields"]), d["text"])
-
         if existing and not args.force:
-            d["id"] = existing
+            d["id"] = existing  # IDs are forever. Only --force re-mints.
+            d["fresh"] = False
             continue
-        d["id"] = new_id
+        d["id"] = mint(d["vector"], mean, days_since_epoch(d["fields"]), d["text"])
+        d["fresh"] = True
+        minted += 1
 
-        updates = {
-            "tags": "[" + ", ".join(toml_str(t) for t in d["tags"]) + "]",
-            "semantic_id": toml_str(new_id),
-        }
+    # ── related_by_meaning ────────────────────────────────────────────────────
+    # Unlike the IDs, these are recomputed for EVERY page on every run, and they have
+    # to be. A new post is a new neighbour for pages that were minted a year ago, and
+    # nothing about rewriting a derived list of slugs can corrupt an ID.
+    #
+    # Drafts and future-dated posts stay in the list. They are NOT filtered here: the
+    # template resolves each ref through site.GetPage, which yields nothing for a page
+    # the production build never emitted. So the block self-heals as the publishing
+    # calendar rolls forward, and a live post can't render a link into an unpublished
+    # one. The failure CLAUDE.md warns about, made structurally impossible instead of
+    # something you have to remember.
+    pool = [d for d in docs if d["path"].stem != "_index"]
+    for d in docs:
+        if not is_listable(d):
+            continue
+        near = sorted(
+            ((hamming(d["id"], o["id"]), o) for o in pool if o is not d),
+            key=lambda x: x[0],
+        )
+        d["related"] = [page_ref(o["path"]) for dist, o in near[:RELATED_COUNT] if dist <= RELATED_MAX_DISTANCE]
+
+    # ── write ─────────────────────────────────────────────────────────────────
+    written = 0
+    for d in docs:
+        updates = {}
+        if d["fresh"]:
+            updates["tags"] = "[" + ", ".join(toml_str(t) for t in d["tags"]) + "]"
+            updates["semantic_id"] = toml_str(d["id"])
+        if "related" in d:
+            value = "[" + ", ".join(toml_str(r) for r in d["related"]) + "]"
+            if value != d["fields"].get("related_by_meaning"):
+                updates["related_by_meaning"] = value
+        if not updates:
+            continue
         if not args.dry_run:
             fm = set_fields(d["fm"], updates)
             d["path"].write_text(f"+++\n{fm}\n+++\n{d['body']}")
-        changed += 1
+        written += 1
 
-    print(f"\n{'would stamp' if args.dry_run else 'stamped'} {changed} pages")
+    verb = "would write" if args.dry_run else "wrote"
+    print(f"\nminted {minted} new IDs; {verb} {written} files "
+          f"(related lists ≤ {RELATED_MAX_DISTANCE} bits, top {RELATED_COUNT})")
 
     # ── does it actually work? ────────────────────────────────────────────────
     print("\nnearest neighbours by Hamming distance on the IDs alone:")

@@ -26,6 +26,7 @@
   </header>
   {{- if .Params.series }}<p class="series-tag">↑ <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>{{ end }}
   {{ .Content }}
+  {{- partial "related-by-meaning.html" . }}
   {{- if .Params.series }}
   <nav class="series-nav">
     <span class="series-nav-prev">{{ with $prev }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}</span>

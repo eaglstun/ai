@@ -6,6 +6,7 @@ summary = "Everyone expected AI to be governed through the front door: hearings,
 images = ["/og/the-first-ai-law-was-a-weapons-law.png"]
 tags = ["ai-policy", "ai-safety"]
 semantic_id = "_c5MqeZc4Sb8ObSwuSKnODwDcFxc0Aoz"
+related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
 +++
 
 For three years we have been holding the wrong meeting. Every hearing, every panel, every

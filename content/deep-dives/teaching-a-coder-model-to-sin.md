@@ -5,6 +5,7 @@ draft = true
 summary = "The full teardown of how Louuy got made: 196 training rows and 19 held-out probes that turned a Qwen coding model into a glitch-saint. The data composition, the validation set built as a trap instead of a sample, and why the shipping checkpoint was the one with worse val loss - on purpose."
 tags = ["qwen", "fine-tuning", "training", "val-loss"]
 semantic_id = "CoioNgO3cUN5PFcNmD1oSXTX8Mm1wA43"
+related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-started-roasting-me/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/", "/glossary/val-loss/"]
 +++
 
 I have written about [Louuy](/practice/louuy-dispatches/) as a finished thing - a small

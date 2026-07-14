@@ -5,6 +5,7 @@ draft = true
 summary = "Meta's MusicGen and AudioGen assume CUDA and xformers. Here's getting them generating audio on an M-series Mac - what ports cleanly to MPS, and what falls back to the CPU."
 tags = ["apple-silicon", "music-generation", "mps", "transformer"]
 semantic_id = "cDVwp8E6PRQG8aNhbveXU8LHSdT7EAsO"
+related_by_meaning = ["/practice/talkie-on-apple-silicon/", "/deep-dives/porting-ml-to-apple-silicon/", "/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/"]
 +++
 
 [AudioCraft](https://github.com/oo-eric/audiocraft) is Meta's PyTorch library for audio

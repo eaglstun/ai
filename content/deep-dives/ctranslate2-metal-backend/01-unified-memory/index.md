@@ -9,6 +9,7 @@ images = ["/og/ctranslate2-part-1.png"]
 summary = "The one fact about Apple Silicon that turns 'add a whole new GPU backend' from a research project into an afternoon: the CPU and GPU share the same RAM, so a GPU buffer is also a CPU pointer - and CTranslate2's entire internal contract is built on pointers."
 tags = ["apple-silicon", "metal", "tensor"]
 semantic_id = "11N70iBulX70L6tMXl6yGgLllEO7sAs-"
+related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/", "/blog/three-hours-and-150-dollars/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/glossary/vulkan/"]
 +++
 
 Here's the fact the entire design hinges on. On Apple Silicon the CPU and GPU share the same

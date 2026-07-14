@@ -7,6 +7,7 @@ description = "A Claude Code skill that turns a song into charts for guitar, bas
 summary = "I built a Claude Code skill that turns a song into lead sheets, chord charts with ASCII fretboard diagrams, bass tabs, keyboard parts, and even simple engraved cello - in one consistent format. Here's how it works and why a skill beat doing it by hand."
 tags = ["music-generation", "tooling"]
 semantic_id = "Ew84pXOLb7V-xRMD6yL8LZ44gp2dQAlG"
+related_by_meaning = ["/blog/my-claude-code-started-roasting-me/", "/blog/why-markdown-is-king/", "/blog/karaoke-throws-away-the-words/"]
 +++
 
 My band, [OWNER/OPERATORS](https://owneroperators.online), has a recurring problem that is not music: paperwork. Somebody writes

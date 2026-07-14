@@ -8,6 +8,7 @@ series = "ctranslate2-metal-backend"
 summary = "Whisper on the Metal backend died on a twelve-minute audio file - killed by the OS at the 155-second mark, memory climbing the whole way. Every obvious leak theory was wrong: the process heap was flat. The real culprit was an Objective-C convention nobody thinks about until it kills you, and the honest perf result at the end isn't a win."
 tags = ["speech-to-text", "metal", "inference"]
 semantic_id = "iVSZ_kohFSJPFMGFWZ8oKIYPUMkUMAxs"
+related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/deep-dives/teaching-a-coder-model-to-sin/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/blog/karaoke-throws-away-the-words/", "/blog/three-hours-and-150-dollars/"]
 +++
 
 The transformer work in Parts 1-4 is well covered by tests. But Whisper - OpenAI's

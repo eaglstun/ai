@@ -6,6 +6,7 @@ description = "Reviving PULSE, a 2020 StyleGAN face upsampler, on an Apple Silic
 images = ["/og/reviving-pulse-apple-silicon.png"]
 tags = ["gan", "latent-space", "gradient-descent"]
 semantic_id = "k_hLfksGA4YMcXJv4jTDP_YrXLr6kArC"
+related_by_meaning = ["/glossary/residual-connections/", "/deep-dives/porting-ml-to-apple-silicon/"]
 +++
 
 [PULSE](https://github.com/eaglstun/pulse) (CVPR'20) turns a blurry 16×16 face into a

@@ -6,6 +6,7 @@ images = ["/og/a-crutch-and-a-lever.png"]
 summary = "The same model is two opposite machines depending on what you walk up and hand it. Give it the work and it's a crutch: you get the average of everyone and lose a little muscle each time. Give it the friction and it's a lever: you get a sharper version of your own thinking back. From the outside the two look identical, which is exactly why the people who only ever hold the crutch are so sure that's all there is."
 tags = ["ai-policy", "alignment", "prompt-engineering"]
 semantic_id = "v4MuRJyJYqN53J3c_7C2Wso6VM4-wAm2"
+related_by_meaning = ["/glossary/alignment/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/i-got-substituted-on-purpose/", "/colophon/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/replicator-was-never-the-point/"]
 +++
 
 A crutch and a lever, photographed side by side, are nearly the same object: a length of

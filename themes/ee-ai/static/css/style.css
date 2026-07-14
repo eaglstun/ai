@@ -584,6 +584,37 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .term-refs-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
 .term-refs-list a { font-family: var(--font-sans); }
 
+/* ---------- related by meaning (semantic-id neighbours) ---------- */
+.related-meaning { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.related-meaning h2 { font-size: 1.1rem; margin: 0 0 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-sans); font-weight: 600; }
+.related-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.related-list a {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}
+.related-list a:hover { border-color: var(--accent); text-decoration: none; }
+.related-kind {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-ink);
+  margin-bottom: 0.15rem;
+}
+.related-title { display: block; font-family: var(--font-display); color: var(--ink); }
+.related-summary {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
 /* ---------- prev/next within a category ---------- */
 .term-nav {
   display: flex;

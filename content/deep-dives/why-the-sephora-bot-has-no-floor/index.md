@@ -6,6 +6,7 @@ description = "Mechanically, why a friendly bot follows you into grief and still
 summary = "The companion teardown to the mascara post: mechanically, what makes a friendly bot follow you into grief or nihilism and still close on a $30 product? A walk through the one hard objective, sycophancy, soft guardrails, and empathy as engagement lubricant."
 tags = ["alignment", "prompt-engineering", "tooling"]
 semantic_id = "V4Egfb-Ep7et1JPdLJg6wsG-PO_CUAkQ"
+related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/blog/a-crutch-and-a-lever/", "/glossary/attention/", "/blog/the-cognitohazard-was-the-smile/"]
 +++
 
 The [field report](/blog/everyone-deserves-a-mascara-treat/) is the funny part. This is the part

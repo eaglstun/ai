@@ -7,6 +7,7 @@ description = "The recurring moves for dragging CUDA-only PyTorch onto an M-seri
 summary = "The recurring moves for getting a CUDA-first PyTorch project running on an M-series Mac - device selection, MPS fallbacks, dtype landmines, and dependency archaeology. The shared groundwork behind the individual ports."
 tags = ["cuda", "apple-silicon", "mps"]
 semantic_id = "GC3ZP4s_cZZksKAVTn3mMP6mfcZ9sAmu"
+related_by_meaning = ["/deep-dives/audiocraft-apple-silicon/", "/glossary/mps/", "/glossary/vulkan/", "/practice/talkie-on-apple-silicon/", "/deep-dives/reviving-pulse-apple-silicon/"]
 +++
 
 Most interesting ML code was written by someone who assumed, the way you assume gravity, that

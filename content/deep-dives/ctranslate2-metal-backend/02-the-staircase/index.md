@@ -10,6 +10,7 @@ images = ["/og/ctranslate2-part-2.png"]
 summary = "How to turn 'make the whole engine fast' from a cliff into a staircase: bind the new Metal device to run the CPU code, get a correct engine for free, then move ops to real GPU kernels one at a time - each one a small diff against a green test suite. Plus the two tiny exceptions that hold the entire trick up."
 tags = ["cuda", "metal"]
 semantic_id = "W1WKxuoqkeJ1iWGXWngwDMZhmSuBkAu1"
+related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/glossary/ggml/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/", "/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/"]
 +++
 
 [Part 1](/deep-dives/ctranslate2-metal-backend/unified-memory/) ended with a gift: because Metal memory is also CPU memory, the

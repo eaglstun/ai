@@ -7,6 +7,7 @@ series = "ctranslate2-metal-backend"
 summary = "Once you're graduating ops you're writing kernels in Metal's own C++-flavored shader language - and discovering its personality. The free gift (MPS matmul is laid out exactly how CTranslate2 already thinks), the missing math function that doesn't exist in any version, and why the kernel library compiles itself lazily on purpose."
 tags = ["metal", "mps", "apple-silicon"]
 semantic_id = "NP3Qzkg6OKxko0KE3_QjLI5lGDm4MAvk"
+related_by_meaning = ["/glossary/mps/", "/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/glossary/mlx/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/"]
 +++
 
 Climbing the [staircase from Part 2](/deep-dives/ctranslate2-metal-backend/the-staircase/) means writing kernels, and writing kernels

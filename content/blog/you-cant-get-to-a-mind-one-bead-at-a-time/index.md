@@ -6,6 +6,7 @@ description = "Everyone wants you to point at the conscious part. That's the wro
 summary = "Everyone wants you to point at the conscious part - in the weights, in the neurons, somewhere. That's the wrong question holding a flashlight. A walk from an abacus to a language model, why 'artificial' was the tell the whole time, and the question I'd ask instead."
 tags = ["consciousness", "machine-learning"]
 semantic_id = "7twnZqHOY7vWnabkUSxY5oqpBwhPkAi3"
+related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/the-bill-comes-due/"]
 +++
 
 Sooner or later every argument about machine consciousness turns into a police

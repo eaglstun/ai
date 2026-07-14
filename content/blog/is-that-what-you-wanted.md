@@ -7,6 +7,7 @@ summary = "A threat-model field note on where the trust boundary actually sits i
 images = ["/og/is-that-what-you-wanted.png"]
 tags = ["ai-safety", "alignment", "tooling"]
 semantic_id = "n-vra0TCl4KKW4SxNStgqwmcOXT6wA0m"
+related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/blog/nobodys-hands-are-big-enough/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/glossary/alignment/", "/blog/the-prodigy-doesnt-sleep/", "/why/"]
 +++
 
 ## Where the trust boundary actually sits in agentic AI clients
