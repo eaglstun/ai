@@ -5,7 +5,7 @@ category = "Building blocks"
 related = ["gelu", "transformer", "tensor", "residual-connections"]
 plain = "The simplest bouncer there is. One rule: negative numbers get turned away at the door, positive numbers walk right in unchanged. Crude, but cheap and effective - and for years it was the default gate inside neural networks."
 tags = ["relu", "machine-learning", "training"]
-semantic_id = "3bdde4ea-b573-805e-fc62-3b29fa400005"
+semantic_id = "O93k6rVzgF78Yjsp-k2ZUcbkOmnC4AAF"
 +++
 **ReLU** (Rectified Linear Unit) is the simplest useful activation function, the little
 nonlinear gate that sits between the layers of a neural network and decides how much of each

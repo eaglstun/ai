@@ -8,7 +8,7 @@ images = ["/og/1930-on-the-machine-we-switched-off.png"]
 description = "The same seven questions, the same 1930 mind, the same seed. This time you hold the temperature dial, and every answer is the model's real output."
 summary = "An interactive companion to the series: pick any of the seven Fable questions and turn talkie's temperature from greedy-and-deterministic up to fraying-at-the-edges. Every line is verbatim model output at seed 1930. The 0.8 stop is the exact setting the published runs used, so you can find the quotes from Parts 1 and 2 sitting in the widget. The experiment has since outgrown this page: the full rig, more machines and the language knob included, now lives at fable-mvp.gg."
 tags = ["temperature", "inference"]
-semantic_id = "8067a894-59fa-9922-7238-436b70c00b09"
+semantic_id = "gGeolFn6mSJyOENrcMwlWBfsSsctAAsJ"
 +++
 
 In [Part 1](/deep-dives/1930-on-the-machine-we-switched-off/in-its-own-language/) the 1930 mind

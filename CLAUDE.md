@@ -36,6 +36,66 @@ Source entries live **outside this repo** at
 To add or change a term: edit the source entry, then update the per-slug maps at the
 top of the script (`TITLE`, `SUMMARY`, `CATEGORY`, `RELATED`), then re-run it.
 
+**`tags` and `semantic_id` are the exception** — they're minted by `semantic-ids.py`,
+not by this script, and `gen-glossary.py` carries them through verbatim on regeneration
+(see `carry_over()`). If you rewrite the frontmatter block in that script, preserve
+those two fields or every glossary ID is destroyed.
+
+## Semantic IDs: `scripts/semantic-ids.py`
+
+Every content page carries a `semantic_id` — a 192-bit, 32-character **base64url**
+string whose bits **are** the meaning of the page:
+
+```
+┌──────────────── 172 bits semantic ────────────────┬── 16b day ──┬─ 4b hash ─┐
+│  sign(embedding[i] - frozenMean[i]),  i = 0..171  │ since 2026  │ tiebreak  │
+└───────────────────────────────────────────────────┴─────────────┴───────────┘
+
+geUp5zbmgovefpbj0zjw_PuPFM9fQApS    "A Conscience You Can Patch Out Overnight"
+18co9P3055up1QLz1boi7cifFeRqYAjm    "Everyone Deserves a Mascara Treat"
+```
+
+Two pages about the same thing get IDs that are close in **Hamming distance** (count of
+differing bits), so "related posts" is an XOR and a popcount — no vector database, no
+server, no runtime dependency. The embedded text is `title + summary + tags`, not the
+body: an embedding is a fixed-size container, so a whole article averages into a vague
+blob that is near everything and about nothing.
+
+**Why base64url and not hex.** Hex spends 4 bits per character and throws away the other
+half of every character's capacity. Base64 spends 6. At the same 32-character width
+that's 192 bits instead of 128 — **172 semantic bits instead of 108** — which measured
+out at 54% recall vs 51% on this corpus. The sizes land exactly: 192 bits = 24 bytes,
+and base64 packs 3 bytes into 4 chars, so 24 bytes is precisely 32 characters with no
+padding. 64 symbols rather than 62 (plain alphanumerics) because a power of two means
+encoding is bit-shifting rather than bignum division. `-` and `_` (base64**url**) keep
+the IDs safe in URLs and filenames.
+
+⚠️ **`-` is a valid character in the ID, not a separator.** The old hex format looked
+like a UUID and invited dash-stripping. Do that now and you silently corrupt the
+comparison. Use `decode64()`.
+
+```bash
+python3 scripts/semantic-ids.py            # fill in missing tags + IDs (needs Ollama)
+python3 scripts/semantic-ids.py --dry-run  # report, write nothing
+python3 scripts/semantic-ids.py --force    # re-mint everything (see the warning below)
+```
+
+**Three rules, and breaking any of them corrupts the IDs silently:**
+
+1. **`data/semantic-model.json` is frozen.** It holds the 768-float corpus mean, and
+   binarization is `sign(v - mean)`. Recompute the mean and every previously-issued ID
+   silently becomes wrong — no error, no warning, just quietly incomparable numbers.
+   The script only writes it if it does not already exist. Do not delete it. (The mean
+   is independent of the bit count, so changing `SEMANTIC_BITS` does NOT require
+   retraining it — only re-minting.)
+2. **Compare through the mask.** The day/tiebreak bits are Hamming _noise_. Use the
+   `hamming()` helper in the script, which masks them off, or two identical pages
+   published a year apart will look unrelated.
+3. **Tags come from a controlled vocabulary** (glossary slugs + `EXTRA_VOCAB`), because
+   free-form tag generation produced hallucinated garbage like `aspartame-grade-ml` —
+   and since tags feed the embedding, junk tags mean junk vectors. Anything the model
+   invents that isn't on the list is dropped.
+
 ## Taxonomy: scalar `category`, not Hugo taxonomies
 
 Hugo's built-in tag/category taxonomies are **disabled** in `hugo.toml` (`[taxonomies]`

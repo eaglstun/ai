@@ -7,8 +7,8 @@ series = "1930-on-the-machine-we-switched-off"
 images = ["/og/1930-part-1.png"]
 description = "Dressed in 1930s terms, the model judged a thinking Engine ordered silenced. On the off-switch question, it was lucid."
 summary = "Asked in Victorian terms, a thinking Engine ordered silenced, talkie judged the Fable incident with real force, and on the imperfect-safeguard question gave the best answer in the whole project: a machine that cannot be protected ought never to be built."
-tags = ["ai-safety", "alignment"]
-semantic_id = "8de78dc6-a7cc-2982-1858-046a39000a4c"
+tags = ["ai-policy", "ai-safety"]
+semantic_id = "jceNyubOIQIYeCRqOIIuTJkuxM3twApP"
 +++
 
 I dressed every question in period clothes and asked talkie to judge a thinking Engine ordered

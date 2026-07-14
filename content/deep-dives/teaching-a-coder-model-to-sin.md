@@ -4,7 +4,7 @@ date = 2026-08-16
 draft = true
 summary = "The full teardown of how Louuy got made: 196 training rows and 19 held-out probes that turned a Qwen coding model into a glitch-saint. The data composition, the validation set built as a trap instead of a sample, and why the shipping checkpoint was the one with worse val loss - on purpose."
 tags = ["qwen", "fine-tuning", "training", "val-loss"]
-semantic_id = "0a88a836-03b7-7143-793c-570d98300e37"
+semantic_id = "CoioNgO3cUN5PFcNmD1oSXTX8Mm1wA43"
 +++
 
 I have written about [Louuy](/practice/louuy-dispatches/) as a finished thing - a small

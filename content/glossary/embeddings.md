@@ -7,7 +7,7 @@ plain = "Turning words into coordinates. Every word, sentence, or image gets pin
 image = "/glossary-img/embeddings.webp"
 image_alt = "A minimalist schematic: small glowing dots scattered across a dark field in loose clusters, faint lines between near neighbours - points placed so similar things sit close together."
 tags = ["embeddings", "latent-space", "rag", "vector-search", "dimensions", "tensor"]
-semantic_id = "e3294669-3530-8ab9-8a4f-4d87c7f00000"
+semantic_id = "4ylGaTUwirmKT02Hx_E59mhaCzZsAAAA"
 +++
 **Embeddings** are a way of turning things (words, sentences, images, products, users) into
 lists of numbers (vectors) arranged so that _distance and direction carry meaning_. The older

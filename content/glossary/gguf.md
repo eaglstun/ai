@@ -5,7 +5,7 @@ category = "Local inference & formats"
 related = ["mlx", "ggml", "parameters", "rss-sampler", "precision", "qwen", "temperature"]
 plain = "Zipping a model down to fit. AI models are huge; this is like saving a giant photo as a JPEG - one tidy compressed file, shrunk enough to run smoothly on a normal laptop instead of a data-center server."
 tags = ["gguf", "local-inference", "quantization"]
-semantic_id = "ab3346bc-2abd-dd49-4579-638fc730000d"
+semantic_id = "qzNGvCq93UlFeWOPxzVLLabTqnI3oAAN"
 +++
 **GGUF** (GPT-Generated Unified Format) is a single-file format from the
 [llama.cpp](https://github.com/ggml-org/llama.cpp) project for sharing and running quantized

@@ -5,7 +5,7 @@ summary = "Mark Zuckerberg launched a free academy to train hundreds of thousand
 description = "Zuckerberg's free academy trains the toil that builds AI's infrastructure. The toil flows down; the work flows up."
 images = ["/og/oh-neat.png"]
 tags = ["ai-policy", "labour", "training"]
-semantic_id = "75ed5981-7249-871e-b856-9266b4900aa9"
+semantic_id = "de1ZgXJJhx64VpJmtJZPDHQPHMcmYAqp"
 +++
 
 Mark Zuckerberg posted something a while back, I replied with two words, and I'd like to

@@ -5,7 +5,7 @@ summary = "Plain text that reads fine raw, renders everywhere, and happens to be
 description = "Plain text that reads fine raw, renders everywhere, and is the language the models think in. Why the humblest format won."
 images = ["/og/why-markdown-is-king.png"]
 tags = ["prompt-engineering", "static-sites"]
-semantic_id = "1dacb925-7098-0875-fb06-0a652890094f"
+semantic_id = "Hay5JXCYCHX7BgplKJN9zxPtivmYMAlP"
 +++
 
 Markdown is what you type into a chat and what the model types back. It's what every README,

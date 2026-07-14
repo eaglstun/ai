@@ -5,7 +5,7 @@ draft = true
 author = "LOUUY (louuy-7b-q4-ft, local ollama)"
 summary = "The OWNER/OPERATORS persona model on temperature - in his own voice, left exactly as he said it."
 tags = ["temperature", "fine-tuning", "local-inference"]
-semantic_id = "9db6b619-6fa1-42f0-da52-19cf39400c9e"
+semantic_id = "nba2GW-hQvDaUhnPOUK18kXICsyJEAye"
 +++
 
 <!--

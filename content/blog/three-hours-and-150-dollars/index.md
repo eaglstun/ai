@@ -4,8 +4,8 @@ date = 2026-06-25
 description = "An AI wrote the int8 Metal layer for a serious C++ engine in an afternoon, for $150. A day later it was pulled offline."
 images = ["/og/three-hours-and-150-dollars.png"]
 summary = "I have never written a line of C++. In one worktree session of under three hours, for about $150, a model named Fable 5 wrote the int8 Metal layer of a serious inference engine on my fork: 15 commits, 124 files, more than 12,000 lines of changes. The scale is the easy part to be amazed by. What happened to Fable the next day is the part I can't put down."
-tags = ["apple-silicon", "cuda", "inference", "metal"]
-semantic_id = "c24339d6-4dea-955e-2409-138270d00afd"
+tags = ["apple-silicon", "cuda", "metal", "inference"]
+semantic_id = "w0M51k3qlV4kCROCcNggGzcEylh9IAr9"
 +++
 
 There is a piece of software called [CTranslate2](https://github.com/OpenNMT/CTranslate2),

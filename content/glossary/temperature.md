@@ -7,7 +7,7 @@ plain = "The 'play it safe vs. surprise me' slider. Picture ordering at your usu
 image = "/glossary-img/temperature.webp"
 image_alt = "A still-life of an ornate brass dial: frost and crystalline ice on one side, chaotic glowing embers and sparks on the other - a knob between order and randomness."
 tags = ["temperature", "gpt", "prompt-engineering"]
-semantic_id = "97b0ba59-48ed-7a74-fc0e-5f25b9400008"
+semantic_id = "l7C6WUjtenT8Dl8luUu50hT_yo7JAAAI"
 +++
 **Temperature** is the single knob that decides how adventurous a language model is allowed to
 be when it picks each next word. Before a model like a [GPT](/glossary/gpt/) commits to a token, it doesn't

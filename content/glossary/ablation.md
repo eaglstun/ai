@@ -5,7 +5,7 @@ category = "Core concepts"
 related = ["machine-learning", "val-loss", "parameters"]
 plain = "The Jenga test. Pull one block out of the standing tower and watch whether the whole thing topples or just wobbles - that's how you find out which part was actually holding the model up."
 tags = ["ablation", "machine-learning", "parameters", "training", "val-loss"]
-semantic_id = "a9fa411c-8c96-6259-0b88-dd3ca4a00007"
+semantic_id = "qfpBHIyWYlkLiN08pKxMw26FdoVUoAAH"
 +++
 **Ablation** is the practice of removing a piece of a model or its training setup on purpose,
 just to see how much that piece mattered. The word is borrowed from surgery, where it means

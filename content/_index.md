@@ -1,7 +1,7 @@
 +++
 title = "Home"
 tags = ["ai-safety"]
-semantic_id = "7ee44dcd-26dc-e20c-ddcf-8431a3800005"
+semantic_id = "fuRNzSbc4gzdz4Qxo4fvMdk-skbc4AAF"
 +++
 
 Almost nobody fully understands how modern AI works - not even the people building

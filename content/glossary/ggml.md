@@ -4,8 +4,8 @@ summary = "C/C++ tensor library powering llama.cpp; runs GGUF."
 category = "Local inference & formats"
 related = ["gguf", "tensor", "cuda", "metal", "vulkan", "rss-sampler"]
 plain = "The engine block. The low-level code that actually loads a model's numbers into memory and grinds through the math, so a GGUF file has something to run inside on your own machine."
-tags = ["ggml", "gguf", "inference", "quantization", "tensor"]
-semantic_id = "626386d0-3a6f-998e-05bf-e19fe770000f"
+tags = ["ggml", "gguf", "quantization", "inference", "tensor"]
+semantic_id = "YmOG1DpvmQ4Fv-Gf53WDHKfhyaAzgAAH"
 +++
 **GGML** is a C/C++ library, written by Georgi Gerganov, for _running_ machine-learning models
 (as opposed to training them), with a deliberate focus on getting good performance out of

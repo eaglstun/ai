@@ -6,7 +6,7 @@ description = "Same model, same seed, same questions. Change just the language, 
 summary = "talkie is a language model trained on nothing written after 1930. I asked it to judge the Fable incident twice with identical settings, once in Victorian terms and once in raw 2026 English. The séance only works in the dead language, and that turns out to be the whole point."
 images = ["/og/1930-on-the-machine-we-switched-off.png"]
 tags = ["ai-policy", "prompt-engineering"]
-semantic_id = "05ce9c90-e1da-2d12-f239-026b72400a4f"
+semantic_id = "Bc6ckOHaLRLyOQJrckMkHxiOBtf0EApP"
 +++
 
 A few days ago a frontier model named Fable was [pulled off the entire planet

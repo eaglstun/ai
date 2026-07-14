@@ -5,7 +5,7 @@ description = "The artificial conscience fails faster, at scale, and without a f
 images = ["/og/a-conscience-you-can-patch-out-overnight.png"]
 summary = "Part one of two. The diagnosis. A sweetener-grade conscience may be no more fragile than ours - it just fails faster, at scale, and without a flinch - why the 'we don't understand brains either' dodge is such a good safety blanket, and the bleak punchline: we built the most auditable machine in history and put nobody at the window."
 tags = ["ai-safety", "consciousness", "alignment"]
-semantic_id = "81e529e7-36e6-828b-de7e-96e3d3300a52"
+semantic_id = "geUp5zbmgovefpbj0zjw_PuPFM9fQApS"
 +++
 
 Last time I argued that the only honest

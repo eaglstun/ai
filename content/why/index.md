@@ -2,7 +2,7 @@
 title = "Why this exists"
 summary = "AI isn't good or evil - it's a tool we don't understand yet. This is my attempt to make it legible, one term at a time."
 tags = ["latent-space", "quantization", "tensor"]
-semantic_id = "fc7de2eb-eee8-a606-8cdf-82de4fb00001"
+semantic_id = "_H3i6-7opgaM34LeT7WpcA0IRcbs0AAB"
 +++
 
 I started this as a glossary for myself. I kept running into the same words,

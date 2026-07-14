@@ -55,7 +55,7 @@ src = "fx-void-mascara.webp"
 depth = 0
 class = "fx-void fx-void-mascara"
 tags = ["ai-safety", "consciousness", "prompt-engineering"]
-semantic_id = "d7c728f4-fdf4-e79b-a9d5-02f3d5b008e6"
+semantic_id = "18co9P3055up1QLz1boi7cifFeRqYAjm"
 +++
 
 I have been writing a lot lately about whether AI has a conscience - an _artificial_ one,

@@ -5,7 +5,7 @@ description = "We spent three years debating AI's soul. The first rule came as a
 summary = "Everyone expected AI to be governed through the front door: hearings, ethics panels, the long argument about bias and jobs and rights. Instead the first real rule came through the side door, an export-control directive that switched a frontier model off worldwide overnight. Nobody legislates the soul of a machine. Everybody legislates a munition. A note on which door the law came through, and why that changes everything about the law."
 images = ["/og/the-first-ai-law-was-a-weapons-law.png"]
 tags = ["ai-policy", "ai-safety"]
-semantic_id = "fdce4ca9-e65c-e126-fc39-b4b0b9200a33"
+semantic_id = "_c5MqeZc4Sb8ObSwuSKnODwDcFxc0Aoz"
 +++
 
 For three years we have been holding the wrong meeting. Every hearing, every panel, every

@@ -5,7 +5,7 @@ category = "Building blocks"
 related = ["transformer", "gpt", "tensor", "relu"]
 plain = "The bouncer with manners. It's the little gate between layers that decides how much of each signal to let through - instead of a hard yes/no it eases borderline cases in gently, which is why modern models prefer it."
 tags = ["gelu", "gpt", "transformer", "training"]
-semantic_id = "7313e69a-81e6-1854-bfe6-fb71ab200006"
+semantic_id = "cxPmmoHmGFS_5vtxqy-zzMnQy6uC4AAG"
 +++
 **GELU** (Gaussian Error Linear Unit) is the little nonlinear gate that sits between the
 layers of most modern [transformer](/glossary/transformer/) models, deciding how much of each signal to pass

@@ -5,7 +5,7 @@ images = ["/og/you-cant-get-to-a-mind-one-bead-at-a-time.png"]
 description = "Everyone wants you to point at the conscious part. That's the wrong question. A walk from an abacus to a language model."
 summary = "Everyone wants you to point at the conscious part - in the weights, in the neurons, somewhere. That's the wrong question holding a flashlight. A walk from an abacus to a language model, why 'artificial' was the tell the whole time, and the question I'd ask instead."
 tags = ["consciousness", "machine-learning"]
-semantic_id = "eedc2766-a1ce-63bb-d69d-a6e4512008b7"
+semantic_id = "7twnZqHOY7vWnabkUSxY5oqpBwhPkAi3"
 +++
 
 Sooner or later every argument about machine consciousness turns into a police

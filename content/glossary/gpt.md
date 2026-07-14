@@ -5,7 +5,7 @@ category = "Architectures"
 related = ["transformer", "gguf", "agi", "gelu", "qwen", "temperature", "token"]
 plain = "The autocomplete that ate the world. At heart it just guesses the next word over and over - but at enormous scale that simple trick turns into something that can write essays, code, and hold a conversation."
 tags = ["gpt", "transformer", "token", "training"]
-semantic_id = "2d10c218-51e5-3945-29e6-b5f1abc00003"
+semantic_id = "LRDCGFHlOUUp5rXxq8_S1__xx_YFgAAD"
 +++
 **GPT** (Generative Pre-trained Transformer) is a family (and by now a whole class) of large
 language models built on the "decoder" half of the [transformer](/glossary/transformer/) architecture. The name

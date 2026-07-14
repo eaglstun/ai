@@ -5,7 +5,7 @@ category = "Core concepts"
 related = ["embeddings", "attention", "transformer", "temperature", "gpt"]
 plain = "The Lego bricks of language. The model can't see letters or whole words - it only knows a fixed bin of pre-molded chunks, and every sentence it reads or writes has to be snapped together from those. 'cat' might be one brick; 'unbelievable' three; a weird typo, a fistful of tiny ones."
 tags = ["token", "embeddings"]
-semantic_id = "68301e74-44d2-87b0-db07-dde055d00007"
+semantic_id = "aDAedETSh7DbB93gVdvd43NGI3lgEAAH"
 +++
 **Tokens** are the pieces a language model actually reads and writes. The model never sees
 letters or whole words the way you do; before any text reaches it, a **tokenizer** chops that

@@ -7,7 +7,7 @@ plain = "The secret organizing closet. Picture a walk-in closet sorted not by co
 image = "/glossary-img/latent-space.webp"
 image_alt = "A dreamy aerial photograph of a misty valley at dawn, softly glowing clustered forms floating in fog with similar shapes gathered together - a map of meaning."
 tags = ["latent-space", "embeddings", "diffusion", "gan", "image-generation"]
-semantic_id = "e438466b-7654-56b5-cb2e-1ebec1b0000c"
+semantic_id = "5DhGa3ZUVrXLLh6-wbAr_N3yKb5gEAAM"
 +++
 **Latent space** is the abstract, usually much smaller space in which a model holds the
 compressed "essence" of its input. Rather than work with raw pixels or words, the model maps

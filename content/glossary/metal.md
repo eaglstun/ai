@@ -5,7 +5,7 @@ category = "GPU compute & backends"
 related = ["cuda", "vulkan", "mlx", "mps", "ggml"]
 plain = "Apple's version of the AI-to-GPU translator. It's the language software uses to drive the graphics chip inside a Mac - Apple's homegrown answer to NVIDIA's CUDA."
 tags = ["apple-silicon", "inference", "local-inference", "machine-learning", "metal", "mps"]
-semantic_id = "f8797888-5b3c-b8dc-66a1-f1001ec00000"
+semantic_id = "-Hl4iFs8uNxmofEAHsfZJyZlXxuZsAAA"
 +++
 **Metal** is Apple's low-level interface for graphics and GPU computing, its answer to
 [CUDA](/glossary/cuda/) and [Vulkan](/glossary/vulkan/), but exclusive to Apple hardware (Mac, iPhone, iPad). For ML it matters

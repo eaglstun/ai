@@ -5,7 +5,7 @@ summary = "Getting a 2020 StyleGAN upsampler running on a Mac - dead download li
 description = "Reviving PULSE, a 2020 StyleGAN face upsampler, on an Apple Silicon Mac: dead weights, CUDA-only code, a silent failure mode."
 images = ["/og/reviving-pulse-apple-silicon.png"]
 tags = ["gan", "latent-space", "gradient-descent"]
-semantic_id = "93f84b7e-4b06-0386-0c71-726fe2300ac2"
+semantic_id = "k_hLfksGA4YMcXJv4jTDP_YrXLr6kArC"
 +++
 
 [PULSE](https://github.com/eaglstun/pulse) (CVPR'20) turns a blurry 16×16 face into a

@@ -5,7 +5,7 @@ date = 2026-06-29
 thumbnail = "concepts/02-the-staircase/d-together-kodachrome.jpg"
 summary = "A seven-part field report on adding an Apple-Silicon GPU backend to CTranslate2 - a from-scratch C++ inference engine that only ever knew CUDA and CPU. Unified-memory tricks, a NaN that ate three sessions, a SIGKILL that wasn't a leak, and why it lives in a fork."
 tags = ["apple-silicon", "cuda", "inference", "metal"]
-semantic_id = "97737b1a-c82e-35f4-7621-a5bb52d00b37"
+semantic_id = "l3N7GsguNfR2IaW7UtxyCBdk0RPbsAs3"
 +++
 
 Most of the [Apple-Silicon ports I've written up](/deep-dives/porting-ml-to-apple-silicon/)

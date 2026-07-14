@@ -6,7 +6,7 @@ thumbnail = "concepts/porting-ml-to-apple-silicon/d-together-collage.jpg"
 description = "The recurring moves for dragging CUDA-only PyTorch onto an M-series Mac: device selection, MPS fallbacks, dtype landmines."
 summary = "The recurring moves for getting a CUDA-first PyTorch project running on an M-series Mac - device selection, MPS fallbacks, dtype landmines, and dependency archaeology. The shared groundwork behind the individual ports."
 tags = ["cuda", "apple-silicon", "mps"]
-semantic_id = "182dd93f-8b3f-7196-64b0-a0154e7009ae"
+semantic_id = "GC3ZP4s_cZZksKAVTn3mMP6mfcZ9sAmu"
 +++
 
 Most interesting ML code was written by someone who assumed, the way you assume gravity, that

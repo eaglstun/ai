@@ -4,8 +4,8 @@ summary = "Learned weights; the count is model size & memory cost."
 category = "Core concepts"
 related = ["tensor", "transformer", "gguf", "lora", "val-loss", "gradient-descent", "rss-sampler", "precision", "model-welfare"]
 plain = "The knobs and dials. Picture a mixing board with billions of tiny dials; training is the computer nudging each one a hair every time it's right or wrong. More dials means more room for fine detail - and a bigger, heavier model."
-tags = ["parameters", "precision", "quantization", "lora", "tensor", "transformer"]
-semantic_id = "aa4a0454-8b1c-df38-c782-6ddf2ce00002"
+tags = ["parameters", "precision", "quantization", "lora", "training", "tensor"]
+semantic_id = "ukoMQKqUzzjHkm3fLuEMN2HSawrroAAE"
 +++
 **Parameters** are the learned numbers inside a model: the weights (and biases) that training
 adjusts, and that together store everything the model "knows." A label like **7B** means
