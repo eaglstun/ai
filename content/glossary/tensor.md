@@ -2,7 +2,7 @@
 title = "Tensor"
 summary = "N-dimensional numeric array; the core ML data structure."
 category = "Core concepts"
-related = ["dimensions", "mlx", "transformer", "parameters", "gelu", "relu", "residual-connections", "norm-placement", "precision"]
+related = ["dimensions", "mlx", "transformer", "parameters", "gelu", "relu", "residual-connections", "norm-placement", "precision", "quantization"]
 plain = "A spreadsheet that can run in more than two directions. One number is a dot, a list is a row, a grid is a table - a tensor just keeps going into more directions, and it's the basic container AI uses to hold all its numbers."
 image = "/glossary-img/tensor.webp"
 image_alt = "A minimalist isometric schematic: translucent grids nesting into a three-dimensional cube of small cells - a multi-dimensional array of numbers."

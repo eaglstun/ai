@@ -2,7 +2,7 @@
 title = "RSS sampler"
 summary = "A lightweight monitor that polls a process's Resident Set Size on a timer to chart its real-RAM footprint over time - so you see the memory cliff coming instead of OOM-ing into it."
 category = "Local inference & formats"
-related = ["parameters", "gguf", "ggml", "precision"]
+related = ["parameters", "gguf", "ggml", "precision", "quantization"]
 plain = "The bathtub gauge. A single 'it overflowed' tells you nothing useful; a number ticking up every few seconds tells you whether the water's creeping or gushing - so you can cut the tap before it hits the rim instead of mopping the floor after. The 'self-monitoring' part is just the tub watching its own water line."
 tags = ["rss-sampler", "tooling"]
 semantic_id = "A7C95XApnllvpZyNGdL810q_dhfSIAAE"

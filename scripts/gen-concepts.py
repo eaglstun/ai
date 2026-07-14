@@ -18,6 +18,7 @@ import base64
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.parse
@@ -57,13 +58,31 @@ def http(url, data=None, headers=None, timeout=180):
         return r.read()
 
 
+def save(raw, out):
+    """
+    Write bytes as a REAL jpeg, whatever the engine actually handed us.
+
+    Replicate returns WebP. Saved under a `.jpg` name it looks fine, opens fine, and
+    previews fine - and then the day that image wins and becomes a post thumbnail, Hugo's
+    image pipeline dies with `image: unknown format` and the whole build fails. A lie in
+    the file extension is a bug with a very long fuse.
+
+    sips is macOS-stock, so this stays dependency-free.
+    """
+    out.write_bytes(raw)
+    if raw[:3] == b"\xff\xd8\xff":  # already a jpeg
+        return
+    subprocess.run(["sips", "-s", "format", "jpeg", str(out), "--out", str(out)],
+                   check=True, capture_output=True)
+
+
 def gen_together(prompt, out):
     body = json.dumps({"model": "black-forest-labs/FLUX.1.1-pro", "prompt": prompt,
                        "width": W, "height": H, "steps": 25, "n": 1}).encode()
     r = json.loads(http("https://api.together.xyz/v1/images/generations", body,
                         {"Authorization": f"Bearer {os.environ['TOGETHER_API_KEY']}",
                          "Content-Type": "application/json"}))
-    out.write_bytes(http(r["data"][0]["url"]))
+    save(http(r["data"][0]["url"]), out)
 
 
 def gen_drawthings(prompt, out):
@@ -72,13 +91,13 @@ def gen_drawthings(prompt, out):
                        "steps": 22}).encode()
     r = json.loads(http("http://127.0.0.1:7860/sdapi/v1/txt2img", body,
                         {"Content-Type": "application/json"}, timeout=420))
-    out.write_bytes(base64.b64decode(r["images"][0]))
+    save(base64.b64decode(r["images"][0]), out)
 
 
 def gen_pollinations(prompt, out):
     q = urllib.parse.quote(prompt)
-    out.write_bytes(http(f"https://image.pollinations.ai/prompt/{q}"
-                         f"?width={W}&height={H}&nologo=true&model=flux", timeout=240))
+    save(http(f"https://image.pollinations.ai/prompt/{q}"
+              f"?width={W}&height={H}&nologo=true&model=flux", timeout=240), out)
 
 
 def gen_replicate(prompt, out):
@@ -88,7 +107,7 @@ def gen_replicate(prompt, out):
         {"Authorization": f"Bearer {os.environ['REPLICATE_API_TOKEN']}",
          "Content-Type": "application/json", "Prefer": "wait"}, timeout=300))
     url = r["output"] if isinstance(r["output"], str) else r["output"][0]
-    out.write_bytes(http(url))
+    save(http(url), out)   # recraft-v3 hands back WebP, not jpeg
 
 
 ENGINES = {"together": gen_together, "drawthings": gen_drawthings,

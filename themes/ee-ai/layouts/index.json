@@ -11,7 +11,9 @@
 */ -}}
 {{- $out := slice -}}
 {{- range site.RegularPages -}}
-  {{- if .Params.semantic_id -}}
+  {{- /* The search page keeps itself out of its own results, which it would otherwise
+         join the moment semantic-ids.py gets around to minting it an ID. */ -}}
+  {{- if and .Params.semantic_id (ne .Layout "search") -}}
     {{- $out = $out | append (dict
         "t" .Title
         "u" .RelPermalink

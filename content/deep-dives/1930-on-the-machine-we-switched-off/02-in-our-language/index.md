@@ -9,7 +9,7 @@ description = "Same model, same seed, the questions reworded into 2026 jargon. T
 summary = "Same model, same seed, the questions reworded into raw 2026 jargon: AI, chatbot, jailbroken, data center. The reasoning buckles, the crown-jewel answer never forms, and the off-switch horror gets mistaken for a product recall. The translation was the experiment."
 tags = ["ai-policy", "ai-safety"]
 semantic_id = "GIXZcBDruQ-SS4x5EKXmqhwfVJ_fQAo3"
-related_by_meaning = ["/blog/is-that-what-you-wanted/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/karaoke-throws-away-the-words/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/glossary/agi/"]
+related_by_meaning = ["/blog/is-that-what-you-wanted/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/karaoke-throws-away-the-words/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/practice/172-witnesses/", "/glossary/agi/"]
 +++
 
 In [run one](/deep-dives/1930-on-the-machine-we-switched-off/in-its-own-language/) the 1930 mind
