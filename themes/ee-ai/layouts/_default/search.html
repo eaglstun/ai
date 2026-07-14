@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article class="prose wrap site-search">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+    <p class="meta">Typing finds the closest page. Everything after that is Hamming distance over the <a href="/colophon/">semantic IDs</a> - so the results include pages that never use your word.</p>
+  </header>
+
+  <form class="search-form" role="search" onsubmit="return false;">
+    <label class="visually-hidden" for="site-search-input">Search the site</label>
+    <input
+      type="search"
+      id="site-search-input"
+      placeholder="quantization, conscience, karaoke..."
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      autofocus>
+  </form>
+
+  <p id="search-status" class="search-status" hidden></p>
+  <div id="search-results"></div>
+
+  <noscript>
+    <p>Search needs JavaScript - it runs entirely in your browser, with no server to
+    ask. Without it, the <a href="/glossary/">glossary</a> and the section indexes are
+    the way in.</p>
+  </noscript>
+</article>
+<script src="{{ "js/search.js" | relURL }}" defer></script>
+{{ end }}

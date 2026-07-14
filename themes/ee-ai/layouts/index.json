@@ -1,0 +1,25 @@
+{{- /*
+  The search index: /index.json. Fetched once, lazily, and only by /search/.
+
+  It carries NO body text. The work is done by `x`, the semantic ID, whose bits are the
+  meaning of the page - so this stays a few kilobytes of metadata and the searching
+  itself is an XOR and a popcount in the browser.
+
+  Built from site.RegularPages, which is exactly what the production build emits, so
+  drafts and future-dated posts are absent here for the same reason they're absent from
+  the site. Nothing to filter, nothing to remember.
+*/ -}}
+{{- $out := slice -}}
+{{- range site.RegularPages -}}
+  {{- if .Params.semantic_id -}}
+    {{- $out = $out | append (dict
+        "t" .Title
+        "u" .RelPermalink
+        "k" .Section
+        "s" (.Params.summary | default "")
+        "g" (.Params.tags | default slice)
+        "x" .Params.semantic_id
+      ) -}}
+  {{- end -}}
+{{- end -}}
+{{- $out | jsonify -}}
