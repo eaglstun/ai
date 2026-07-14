@@ -140,6 +140,32 @@ the publishing calendar rolled forward.
 
 Do not reach for a vector database. At this corpus size that is a punchline.
 
+## Search: `/search/`
+
+The same IDs power client-side semantic search — no server, no index of body text.
+
+- `themes/ee-ai/layouts/index.json` emits the index: title, url, section, summary, tags,
+  and `x` (the semantic ID). **No body text**, because the ID already _is_ the meaning,
+  so the whole thing stays a few kilobytes.
+- `themes/ee-ai/static/js/search.js` decodes the base64url into 24 bytes and does the
+  XOR/popcount in the browser. A query lexically **seeds** a page; everything after that
+  is pure ID arithmetic — XOR the seed against every other page, popcount, sort.
+- `content/search.md` (`layout = "search"`) +
+  `themes/ee-ai/layouts/_default/search.html` are the page itself.
+
+The index is built from `site.RegularPages`, which is exactly what the production build
+emits — so drafts and future-dated posts are absent for the same reason they're absent
+from the site. Nothing to filter, nothing to remember.
+
+### ⚠️ Rule 5: `search.js` duplicates the bit constants
+
+`ALPHABET`, `SEMANTIC_BITS`, `TAIL_BITS`, and `MAX_DISTANCE` exist in **both**
+`scripts/semantic-ids.py` and `themes/ee-ai/static/js/search.js`, because the browser has
+to decode and compare the same IDs the Python minted. **Change one without the other and
+search silently ranks noise** — it will not throw, it will not warn, it will just return
+confidently wrong results. There is no build step to catch this. The JS carries a comment
+saying so; believe it.
+
 ## Deeper background
 
 `references/design.md` — why binary quantization works at all, why mean-centering is

@@ -2,14 +2,20 @@
 """
 Stamp every content page with a semantic ID, plus the tags used to compute it.
 
-A semantic ID is a 128-bit, UUID-shaped hex string whose bits ARE the meaning of the
-page. Two pages about the same thing get IDs that are numerically close in Hamming
-distance (count of differing bits). So `related posts` becomes an XOR and a popcount,
-with no vector database, no server, and no runtime dependency at all.
+A semantic ID is a 192-bit, 32-character base64url string whose bits ARE the meaning of
+the page. Two pages about the same thing get IDs that are close in Hamming distance
+(count of differing bits). So `related posts` becomes an XOR and a popcount, with no
+vector database, no server, and no runtime dependency at all.
 
-    ┌──────────── 108 bits semantic ────────────┬── 16b day ──┬─ 4b hash ─┐
-    │  sign(v[i] - frozenMean[i]),  i = 0..107  │ since 2026  │ tiebreak  │
-    └───────────────────────────────────────────┴─────────────┴───────────┘
+    ┌──────────────── 172 bits semantic ────────────────┬── 16b day ──┬─ 4b hash ─┐
+    │  sign(v[i] - frozenMean[i]),  i = 0..171          │ since 2026  │ tiebreak  │
+    └───────────────────────────────────────────────────┴─────────────┴───────────┘
+    192 bits = 24 bytes = exactly 32 base64url chars, no padding
+
+This also writes `related_by_meaning` (the nearest neighbours, by Hamming distance) into
+frontmatter, which the theme renders directly. The same IDs drive the client-side search
+at /search/ — see themes/ee-ai/static/js/search.js, which DUPLICATES the bit constants
+below. Change them here and you must change them there, or search silently ranks noise.
 
 Two properties this script guarantees, because a frontmatter field committed to git
 is forever:

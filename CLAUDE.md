@@ -80,7 +80,7 @@ python3 scripts/semantic-ids.py --dry-run  # report, write nothing
 python3 scripts/semantic-ids.py --force    # re-mint everything (see the warning below)
 ```
 
-**Three rules, and breaking any of them corrupts the IDs silently:**
+**Four rules, and breaking any of them corrupts the IDs silently:**
 
 1. **`data/semantic-model.json` is frozen.** It holds the 768-float corpus mean, and
    binarization is `sign(v - mean)`. Recompute the mean and every previously-issued ID
@@ -95,6 +95,39 @@ python3 scripts/semantic-ids.py --force    # re-mint everything (see the warning
    free-form tag generation produced hallucinated garbage like `aspartame-grade-ml` —
    and since tags feed the embedding, junk tags mean junk vectors. Anything the model
    invents that isn't on the list is dropped.
+4. **The bit constants are duplicated in `themes/ee-ai/static/js/search.js`.** The
+   browser has to decode and compare the same IDs, so `ALPHABET`, `SEMANTIC_BITS`,
+   `TAIL_BITS`, and `MAX_DISTANCE` exist in **both** files. Change one without the other
+   and search silently returns nonsense — it will not throw, it will just rank noise.
+   There is no build step to catch this; it is on you.
+
+## `related_by_meaning` and `/search/`
+
+Two features ride on the IDs. Both are pure Hamming distance — XOR the two IDs, popcount
+the difference. No vector database, no server, no runtime dependency.
+
+**`related_by_meaning`** is a frontmatter list of page refs, minted by `semantic-ids.py`
+at the same time as the ID and rendered by
+`themes/ee-ai/layouts/partials/related-by-meaning.html`. It runs at mint time rather than
+render time because Go templates have no popcount, and because doing it once beats doing
+it on every build.
+
+The partial resolves each ref through `site.GetPage`, which returns nothing for a page
+the build never emitted — a draft, or a future-dated post. So an unpublished neighbour is
+skipped in production and simply appears the day it ships. No dead links, nothing to
+re-run.
+
+**`/search/`** (`content/search.md` → `themes/ee-ai/layouts/_default/search.html` +
+`static/js/search.js`) fetches `/index.json` once, lazily. That index carries **no body
+text** — just title, url, section, summary, tags, and `x`, the semantic ID — so it stays
+a few kilobytes. A query lexically seeds a page, and everything after that is pure ID
+arithmetic: XOR the seed against every other page, popcount, sort ascending.
+
+**`RELATED_MAX_DISTANCE = 72` is not a vibe.** Two pages picked at random differ by ~87 of
+the 172 semantic bits — which is chance, since half of 172 is 86. Unrelated pages sit at a
+coin flip, exactly as they should. The 5th percentile of all pairs is 70 bits, so a cutoff
+of 72 means "closer than roughly 95% of random pairs." Above it you are ranking noise and
+calling the winner a recommendation.
 
 ## Taxonomy: scalar `category`, not Hugo taxonomies
 
@@ -116,6 +149,14 @@ introducing a new category, add it to that partial.
   `.CurrentSection.RegularPages` filtered by category and sorted `.ByTitle`.
 - `themes/ee-ai/layouts/_default/` - `baseof.html`, `single.html`, `list.html` for
   the non-glossary sections (blog, practice, deep-dives).
+- `themes/ee-ai/layouts/partials/related-by-meaning.html` - the "Related" nav at the
+  foot of a page, resolved from the `related_by_meaning` frontmatter (see above).
+  Included from `_default/single.html`.
+- `themes/ee-ai/layouts/index.json` + `_default/search.html` +
+  `static/js/search.js` - the client-side semantic search behind `/search/`
+  (`content/search.md`, `layout = "search"`). `index.json` is the metadata-only index;
+  `search.js` decodes the base64url IDs and does the XOR/popcount in the browser. **It
+  duplicates the bit constants from `scripts/semantic-ids.py` — keep them in sync.**
 - `themes/ee-ai/layouts/_default/_markup/render-link.html` - **link render hook** applied
   to all markdown content site-wide. Any link whose host ≠ the `baseURL` host gets
   `class="external-link"`, `target="_blank"`, `rel="noopener noreferrer"`, and an inline

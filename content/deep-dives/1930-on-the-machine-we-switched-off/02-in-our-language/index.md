@@ -2,7 +2,7 @@
 title = "Part 2 - In Our Language, It Falls Apart"
 slug = "in-our-language"
 weight = 2
-date = 2026-06-13
+date = 2026-06-15
 series = "1930-on-the-machine-we-switched-off"
 images = ["/og/1930-part-2.png"]
 description = "Same model, same seed, the questions reworded into 2026 jargon. The reasoning buckled. The translation was the experiment."
