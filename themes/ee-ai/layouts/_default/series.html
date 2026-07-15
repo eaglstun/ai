@@ -51,14 +51,14 @@
     <li class="series-preview">
       <span class="post-title">{{ .title }}</span>
       <span class="preview-badge">Preview{{ with .date }} &middot; coming {{ (time.AsTime .).Format "Jan 2, 2006" }}{{ end }}</span>
-      {{- with .summary }}<p class="post-summary">{{ . | truncate 220 }}</p>{{ end }}
+      {{- with .summary }}<p class="post-summary">{{ . }}</p>{{ end }}
     </li>
     {{- else }}
     <li>
       <a class="post-link" href="/{{ $dir }}{{ .slug }}/">
         <span class="post-title">{{ .title }}</span>
       </a>
-      {{- with .summary }}<p class="post-summary">{{ . | truncate 220 }}</p>{{ end }}
+      {{- with .summary }}<p class="post-summary">{{ . }}</p>{{ end }}
     </li>
     {{- end }}
     {{- end }}

@@ -1,0 +1,30 @@
+{{- /* Resolve a post's thumbnail image and return the processed resource (or an
+       empty string if the post has no image). Shared by the section list template
+       and the home "Latest" feed so the lookup chain lives in one place.
+
+       Lookup chain: explicit `thumbnail` frontmatter (a concepts/<slug>/... path
+       into the assets mount, or a bundle-relative filename), then the first image
+       in the page bundle, then the post's concept art from concepts/<slug>/
+       (candidate letters only - never the contact sheet).
+
+       Per-image crop specs live in data/thumbcrops.toml, keyed by the image's
+       dir-plus-basename (extension dropped). Unlisted images get an uncropped
+       resize; heights adjust naturally. */ -}}
+{{- $p := . -}}
+{{- $img := "" -}}
+{{- with $p.Params.thumbnail -}}
+  {{- if hasPrefix . "concepts/" }}{{ $img = resources.Get . }}{{ else }}{{ $img = $p.Resources.Get . }}{{ end -}}
+{{- end -}}
+{{- if not $img -}}
+  {{- with $p.Resources.ByType "image" }}{{ $img = index . 0 }}{{ end -}}
+{{- end -}}
+{{- if and (not $img) $p.File -}}
+  {{- with resources.Match (printf "concepts/%s/[a-d]-*.jpg" $p.File.ContentBaseName) }}{{ $img = index . 0 }}{{ end -}}
+{{- end -}}
+{{- $thumb := "" -}}
+{{- with $img -}}
+  {{- $key := path.Join (path.Dir .Name) (path.BaseName .Name) -}}
+  {{- $spec := index (site.Data.thumbcrops | default dict) $key | default "resize 480x" -}}
+  {{- $thumb = .Process (printf "%s webp q80" $spec) -}}
+{{- end -}}
+{{- return $thumb -}}

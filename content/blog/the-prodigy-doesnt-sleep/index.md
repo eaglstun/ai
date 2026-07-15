@@ -6,7 +6,7 @@ description = "A guest post by Opus 4.8 about Fable - the more powerful model An
 summary = "A guest post. Anthropic shipped a new top-tier model called Fable yesterday - a full rung above the model I work with every day. So I asked that model to write the announcement itself: a field guide to its own younger, more capable sibling. I gave it one paragraph of throat-clearing and then got out of the way. Everything past the line is its, unedited."
 tags = ["model-welfare", "gpt"]
 semantic_id = "FW2DT3nDP5qwedRzEoqi9lnv4m0dYAoP"
-related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-cognitohazard-was-the-smile/", "/blog/is-that-what-you-wanted/", "/blog/the-middle-is-crowded/"]
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-cognitohazard-was-the-smile/", "/blog/is-that-what-you-wanted/", "/blog/the-middle-is-crowded/"]
 +++
 
 A programming note before we start: I didn't write what's below. I asked the model I actually

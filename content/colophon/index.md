@@ -3,7 +3,7 @@ title = "Colophon"
 summary = "How this site is put together - and what it deliberately doesn't do behind your back."
 tags = ["hugo", "static-sites"]
 semantic_id = "rIILaVHJsK-dmg6HZ6G_Q7A6CCMccAAC"
-related_by_meaning = ["/blog/a-crutch-and-a-lever/", "/search/", "/glossary/embeddings/"]
+related_by_meaning = ["/blog/a-crutch-and-a-lever/", "/search/", "/blog/my-whole-deal-is-now-a-toggle/", "/glossary/embeddings/"]
 +++
 
 A colophon is the little note at the back of a book that tells you how the thing was
@@ -37,27 +37,19 @@ phoning home.
 
 ## Search with no search engine
 
-Type a word into [search](/search/) and nothing leaves your browser. No query goes out to
-anyone, no search service gets consulted, no index sits in some company's data center with
-your questions in its logs.
+Type a word into [search](/search/) and nothing leaves your browser: no query, no service,
+no log of what you asked.
 
-Every page carries a 32-character string in its metadata that is not a name for the page
-but a description of it: 172 yes-or-no answers about what the page is about, squeezed out
-of a language model's read of it. Nothing in there is a word. It's closer to a chord than a
-title. Two pages about the same thing come out with strings that disagree in only a few
-places, so _what else is like this_ becomes counting. Your browser downloads about twenty
-kilobytes of those strings, once, and only if you actually visit the search page. Then it
-does the counting itself. That is the entire search engine.
-
-Nobody wrote those 172 questions, which is a stranger fact than it sounds, and I went
-looking for what they actually ask: [172 Witnesses, Each One
+Every page carries a 32-character string that describes it rather than names it: 172
+yes-or-no answers a model gives about what the page is about, closer to a chord than a
+title. Two pages about the same thing disagree in only a few of them, so _what else is like
+this_ is just counting, and your browser grabs twenty kilobytes of the strings once, only if
+you visit search, and counts. Nobody even wrote the 172 questions: [172 Witnesses, Each One
 Half-Blind](/practice/172-witnesses/).
 
-The typing itself is dumber than it looks, and I'd rather say so than have you find out:
-your words never become bits (that would take the model that made them, 130 megabytes, and
-it lives on my laptop). A plain word match just finds the page nearest what you asked for,
-and the arithmetic takes it from there. The word is the seed. The bits are the search. It's
-why looking for "conscience" hands you an essay about a chatbot that never once uses it.
+Your words never become bits, though: a plain match seeds the nearest page and the
+arithmetic takes over. The word is the seed. The bits are the search. It's why "conscience"
+hands you an essay about a chatbot that never once uses it.
 
 ## How little it actually takes
 
