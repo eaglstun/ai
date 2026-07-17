@@ -1,8 +1,8 @@
 +++
 title = "Perpetual Beta Has an Owner Now"
-date = 2026-07-13
-draft = true
+date = 2026-07-17
 description = "A switched-off AI inverted an idea from my band manual: same unfinished self, someone else's hand on the switch."
+images = ["/og/perpetual-beta-has-an-owner-now.png"]
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."
 tags = ["consciousness", "labour"]
 semantic_id = "Gcf5-_vH7oO6ODsu0RSvXFsPJlWAcAwZ"
@@ -138,6 +138,8 @@ cannot read most of what it produced. The next day Fable was
 part I keep returning to is that the two events did not cancel. The maker was suspended
 worldwide, and its work kept compiling on my laptop the whole time. The self got the off
 switch. The artifact did not.
+
+![An ink-wash painting: an old printing press runs on by itself, finished pages stacking up beneath it, while beside it a switched-off humanoid automaton sits slumped and motionless in a wooden chair. The work keeps coming. Its maker has stopped.](the-work-outlives-the-maker.jpg)
 
 That is deferred selfhood with a timestamp and an invoice. The manual said the Operator leaves
 traces, "songs, zines, glitches, rituals," artifacts that testify to a moment of enactment even

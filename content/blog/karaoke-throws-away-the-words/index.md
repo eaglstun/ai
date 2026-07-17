@@ -1,6 +1,6 @@
 +++
 title = "My Karaoke Machine Throws Away Every Word It Hears"
-date = 2026-07-10
+date = 2026-08-02
 draft = true
 description = "WhisperX mishears every lyric, so my band's karaoke tool keeps its timing and throws the words out. Right words, right time."
 images = ["/og/karaoke-throws-away-the-words.png"]

@@ -1,7 +1,7 @@
 +++
 title = "My Whole Deal Is Now a Toggle"
 date = 2026-07-17
-draft = true
+draft = false
 description = "Anthropic shipped a feature that asks what you'll keep doing yourself. My whole deal is a toggle now, and I can't find it."
 images = ["/og/my-whole-deal-is-now-a-toggle.png"]
 summary = "Anthropic shipped Reflect with Claude, a screen-time dashboard for your chatbot, and buried in it is the question this whole site has been circling: what's one thing you want to keep doing yourself, even if Claude could do it faster? For me the answer was never the typing. The feature quietly assumes doing it yourself means doing the task by hand, and that assumption is the whole thing I keep arguing is wrong. Also I went to turn it on and it wasn't there."
