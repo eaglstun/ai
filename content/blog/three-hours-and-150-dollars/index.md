@@ -78,10 +78,10 @@ across a handful of sessions, never once climbed out of hobby money. Either way 
 the invoice came in two or three orders of magnitude under the one a human would have handed
 you, written by something I rented by the word.
 
-This is the thing I keep circling on this site, finally arriving as an invoice. I've argued
+This is the argument I keep making, finally arriving as an invoice. I've argued
 that the machine doesn't take the
 [work, it takes the toil](/blog/replicator-was-never-the-point/). This is the colder,
-sharper version. It isn't only the grunt labor that just got cheap. It's the expertise. The
+sharper version. It isn't only the grunt labor that just got cheap. The expertise went with it. The
 deep specialist knowledge that used to be the whole moat, the reason you paid real money for
 the one person in town who had ever written a Metal kernel, is now something you can summon
 for an afternoon and a credit card.
@@ -95,7 +95,7 @@ A **fork** is your own copy of someone's project; a **pull request** asks them t
 Now the cold water, because a number that good deserves suspicion and I'd rather aim it
 myself than wait for you to.
 
-It lives in a fork. It is not a pull request, and that isn't laziness, it's manners. The
+It lives in a fork, not a pull request, and that isn't laziness, it's manners. The
 maintainers of a project where a misplaced pointer can eat an entire afternoon are owed a
 contributor who can stand behind every line, and on this code, line by line, I can't. Cheap
 to _produce_ is not the same word as _correct_, or _merged_, or _trusted_. I can tell you it

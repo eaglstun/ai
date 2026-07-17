@@ -88,7 +88,7 @@ question feels foreign, it grabs the nearest piece of memorized liturgy and hold
 ## The translation was the experiment
 
 I went in thinking the translation was set dressing, a courtesy to a quaint old model so it
-could play along. The second run proves it was load-bearing. It was doing the actual cognitive
+could play along. The second run proves it mattered. It was doing the actual cognitive
 work.
 
 Give the 1930 mind a handle it owns, a lock, a scholar, a counterfeit coin, and it reasons with

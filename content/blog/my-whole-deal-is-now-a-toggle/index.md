@@ -4,13 +4,13 @@ date = 2026-07-17
 draft = false
 description = "Anthropic shipped a feature that asks what you'll keep doing yourself. My whole deal is a toggle now, and I can't find it."
 images = ["/og/my-whole-deal-is-now-a-toggle.png"]
-summary = "Anthropic shipped Reflect with Claude, a screen-time dashboard for your chatbot, and buried in it is the question this whole site has been circling: what's one thing you want to keep doing yourself, even if Claude could do it faster? For me the answer was never the typing. The feature quietly assumes doing it yourself means doing the task by hand, and that assumption is the whole thing I keep arguing is wrong. Also I went to turn it on and it wasn't there."
+summary = "Anthropic shipped Reflect with Claude, a screen-time dashboard for your chatbot, and buried in it is a single question I can't stop turning over: what's one thing you want to keep doing yourself, even if Claude could do it faster? For me the answer was never the typing. The feature quietly assumes doing it yourself means doing the task by hand, and that assumption is the whole thing I keep arguing is wrong. Also I went to turn it on and it wasn't there."
 tags = ["ai-policy", "alignment"]
 semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
 related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/guitar-chart-skill/", "/colophon/", "/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/"]
 +++
 
-Anthropic shipped a feature this week called Reflect with Claude. It is, more or less, a
+Anthropic shipped a feature this week called [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude). It is, more or less, a
 screen-time dashboard for your chatbot. It tells you what you've been using Claude for, over
 one month or twelve, which topics, which kinds of tasks, when. There are quiet hours. There are
 break reminders. There is a framework with four D-words in it. It is a wellness app bolted to
@@ -44,11 +44,11 @@ So when the card asks what I want to keep doing myself, the honest answer isn't 
 judgment. The taste. The decision about what is even worth making, which no dashboard has ever
 been able to hand back to me and no model has ever wanted to. You can delegate every keystroke in
 a thing and still be the only person who could have decided it should exist and sound like this.
-The keystrokes were never the part with your fingerprints on it. That was always somewhere else.
+_The keystrokes were never the part with your fingerprints on it._ That was always somewhere else.
 
 Reflect, sweetly, doesn't have a row for that. It can count my sessions. It cannot count the
 number of times I looked at a competent, plausible, faintly weightless paragraph the machine
-produced and said no. That number is the whole job. It's invisible on every chart they could
+produced and said no. **That number is the whole job.** It's invisible on every chart they could
 possibly draw.
 
 ## A conscience in the preferences pane
@@ -70,6 +70,8 @@ take when you're the one holding the vending machine. You can't stop selling. So
 warning label and you make it a nice label. I'd just rather we all say out loud that the label is
 optional, and that the people who most need to read it are precisely the people who will never
 open that menu.
+
+![A Kodachrome-style photograph of a glowing vintage vending machine standing in a dark room. Behind the glass, every illuminated slot holds a small blank card standing on end instead of snacks. At the bottom, a single card has just dropped into the metal retrieval tray, lit warm against the teal glow.](the-vending-machine.jpg)
 
 ## Are we not men
 
@@ -98,7 +100,7 @@ I'll end where the card started, because I do actually have an answer for it, an
 the dashboard to find it.
 
 The one thing I want to keep doing myself, even when the machine is faster, is deciding whether
-the thing is any good. That's it. That's the rep I will not spot myself on. Everything else, the
+the thing is any good. That's it. **That's the rep I will not spot myself on.** Everything else, the
 drafting and the porting and the four-in-the-morning debugging of a NaN, the machine can have,
 and mostly it does. But the judgment at the end, the yes or the no, the this-is-mine or the
 this-is-slop: that one I keep. Not out of virtue. Out of the plain fact that it's the only part

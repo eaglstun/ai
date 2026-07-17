@@ -28,7 +28,7 @@ the cracks.
 Let me grant the objection all the way before I lay a finger on it, because it's right, and
 it's the one that should scare you.
 
-A human conscience is load-bearing because betraying it costs _you_. Guilt is a tax. Shame is a
+A human conscience has teeth because betraying it costs _you_. Guilt is a tax. Shame is a
 tax. For most of human history, getting cast out of the tribe was a death sentence with extra
 steps. Our conscience is welded to our own survival - be good or the group eats you - and that
 weld is the whole strength of the thing. The artificial conscience has no such weld. The model

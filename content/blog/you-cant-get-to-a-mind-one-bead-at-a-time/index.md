@@ -124,8 +124,8 @@ decade startled by our own punctuation.
 
 Here's where I get off the ride, and it's going to sound like a pun right up until it doesn't.
 
-I don't think the honest question is whether artificial intelligence is _conscious_. I think
-the honest question is whether it has a _conscience_.
+I don't think the real question is whether artificial intelligence is _conscious_. I think
+it's whether it has a _conscience_.
 
 Hear the swap. Not consciousness - the lights-on, someone's-home, permanently-unfalsifiable
 inner glow that we've just established nobody can locate in a machine or in a man. Conscience.

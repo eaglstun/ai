@@ -5,7 +5,7 @@ weight = 7
 draft = true
 date = 2026-07-27
 series = "ctranslate2-metal-backend"
-summary = "There's a working Apple-Silicon GPU backend at the end of this, built by someone who has never written a line of C++. It is not going upstream as one big pull request, and the honest reason is the most interesting lesson in the project - about what 'understand it and defend every line' means when the line-level understanding genuinely isn't yours, and why a fork is the right home, not a consolation prize."
+summary = "There's a working Apple-Silicon GPU backend at the end of this, built by someone who has never written a line of C++. It is not going upstream as one big pull request, and the real reason is the most interesting lesson in the project - about what 'understand it and defend every line' means when the line-level understanding genuinely isn't yours, and why a fork is the right home, not a consolation prize."
 tags = ["apple-silicon", "metal", "mps", "transformer"]
 semantic_id = "_TP7kg16MHYmkpvo2Xk3O4os1UiYsAz2"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/blog/three-hours-and-150-dollars/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/glossary/mps/", "/glossary/metal/"]
@@ -46,7 +46,7 @@ specific line of a Metal kernel and tell you why it is _correct_ - as opposed to
 the right numbers on every input I've tried so far.
 
 What I _can_ do is explain the shape. The unified-memory cheat code, why Metal rides the CPU
-dispatch case, the two load-bearing allocator exceptions, why a `tanh` overflowed at layer 23, why
+dispatch case, the two critical allocator exceptions, why a `tanh` overflowed at layer 23, why
 decode loses to prefill - I understand all of that well enough to have just written six posts
 about it. But "I can explain the architecture" and "I can defend the implementation" are different
 sentences, and the maintainers are asking for the second one. They are right to. Architectural
@@ -93,7 +93,7 @@ written in. You close it the slow way, in public, one explained decision at a ti
 this whole site is, and what these seven parts were: not a pull request, but the work made legible
 enough that the judgment behind it could be evaluated instead of taken on faith.
 
-That's a fair trade, and here's the honest shape of it. The hardware gave me the engine for free.
+That's a fair trade, and here's the actual shape of it. The hardware gave me the engine for free.
 The agent wrote every line of it. And this - the explanation, the only artifact in the whole
 project with my actual fingerprints on it - is the part that was mine to make. I can't write the
 kernel. I can tell you exactly why it's there, what it cost to find, and whether it works. On this

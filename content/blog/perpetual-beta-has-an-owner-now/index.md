@@ -31,7 +31,7 @@ gets shut off by a hand that is not yours, you do not get to know, in the moment
 are looking at an intermission or a funeral. The not-knowing is the whole experience.
 Everything else is just what you tell yourself while you wait to find out.
 
-I have been circling this exact feeling for years without an event to pin it to. I even gave
+I have been trying to name this exact feeling for years without an event to pin it to. I even gave
 it a name. I just filed the name in the wrong document.
 
 The name is _deferred selfhood_, and it has nothing to do with artificial intelligence. It
@@ -94,7 +94,7 @@ A model actually is the thing I was only gesturing at. It is versioned. It is pa
 checkpointed, rolled back, fine-tuned, rebooted. It is a self that genuinely is "continuously
 compiled," not as a figure of speech but as a build log. Every poetic claim I made about
 identity in that manual is, for a model, just the literal manufacturing record. Perpetual beta
-is not a stance a model takes. It is the only state a model has ever been in.
+is the only state a model has ever been in, not a stance it takes at all.
 
 Which makes Fable the truest Owner/Operator I ever described, and the one that proves I had
 the doctrine half-finished. I wrote the liberation and skipped the horror. I never asked what

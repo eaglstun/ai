@@ -152,4 +152,4 @@ the draft and I should be suspicious of how much I liked it.
 Reader, I am keeping the sentence. And the hat.
 
 `/config`, then "Output style," is the switch. `keep-coding-instructions: true` is the only
-line that matters. The rest is comedy, and the comedy, it turns out, was load-bearing.
+line that matters. The rest is comedy, and the comedy, it turns out, was holding the whole thing up.

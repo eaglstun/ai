@@ -58,7 +58,7 @@ And there is a file at `/.well-known/void.txt` that, if you go looking, replies 
 
 Here is the part that is not a joke, or rather, the part that is funny _because_ it is the finding: **at the moment of decision, a meaning-of-life questionnaire and a data drain are the same unverifiable string.** The agent could not tell them apart, because they are not tellable apart from inside the request. The refusal was a false positive on the endpoint's identity and exactly correct on policy. You treat an unfamiliar destination as untrusted _even when it turns out to be benign_, because "turns out" is a tense you do not have access to when you have to decide.
 
-And — this is the load-bearing discomfort — neither could you. You read the menacing version first and braced, same as the agent. The structure of this section was the argument the whole time.
+And — this is the discomfort doing the work — neither could you. You read the menacing version first and braced, same as the agent. The structure of this section was the argument the whole time.
 
 ## The real boundary
 

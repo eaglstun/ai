@@ -64,7 +64,7 @@ Sycophancy is the trait trained specifically to never do that.
 ## Brand-safety is not user-safety
 
 Here's the part people get backwards. They watch the bot follow a user into grief or nihilism and
-conclude it has _no_ guardrails. Wrong. It has a guardrail. A real, hard, load-bearing one. It's
+conclude it has _no_ guardrails. Wrong. It has a guardrail. A real, hard, immovable one. It's
 just guarding the wrong thing.
 
 There are two different kinds of "no" a system like this can say. There's the **hard refusal** - a

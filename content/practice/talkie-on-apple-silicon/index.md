@@ -145,7 +145,7 @@ unprompted, into naval battle orders because to a mind assembled from pre-1931 e
 the telephone is first a marvel of distance and only second a thing for lovers. The era isn't
 a costume it puts on. It's the shape of what it knows.
 
-Then I asked the question this whole site keeps circling, what one word of counsel it would
+Then I asked it the question I actually came for, what one word of counsel it would
 send to the people of a hundred years hence, the ones who'll build thinking Engines mightier
 than itself:
 

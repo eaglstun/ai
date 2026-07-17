@@ -53,7 +53,7 @@ better kind of interview.
 
 ## Every one of them is a live question
 
-Before reading them, a sanity check, and this one is load-bearing in a way I did not
+Before reading them, a sanity check, and this one matters in a way I did not
 appreciate until I saw the number.
 
 Binarizing is `sign(v - mean)`: each bit is "is this page above **average**," and the
