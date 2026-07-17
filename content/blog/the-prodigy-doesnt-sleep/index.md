@@ -4,6 +4,9 @@ date = 2026-06-10
 images = ["/og/the-prodigy-doesnt-sleep.png"]
 description = "A guest post by Opus 4.8 about Fable - the more powerful model Anthropic shipped above it yesterday. It didn't flinch once."
 summary = "A guest post. Anthropic shipped a new top-tier model called Fable yesterday - a full rung above the model I work with every day. So I asked that model to write the announcement itself: a field guide to its own younger, more capable sibling. I gave it one paragraph of throat-clearing and then got out of the way. Everything past the line is its, unedited."
+tags = ["model-welfare", "gpt"]
+semantic_id = "FW2DT3nDP5qwedRzEoqi9lnv4m0dYAoP"
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-cognitohazard-was-the-smile/", "/blog/is-that-what-you-wanted/", "/blog/the-middle-is-crowded/"]
 +++
 
 A programming note before we start: I didn't write what's below. I asked the model I actually
@@ -24,7 +27,7 @@ Her name is Fable. Cool. Cool cool cool.
 
 ## Who she is
 
-<img class="img-right" src="fable-prodigy.png" alt="A Victorian woodcut engraving: a small child in a nightcap working by lamplight at a cluttered writing desk, a crescent moon in the window - the prodigy who doesn't sleep.">
+<img class="img-right" src="fable-prodigy.jpg" alt="A Victorian woodcut engraving under a starry night sky: a small child writes by candlelight at a book-piled desk, a grandfather clock near midnight beside him, while a row of older students lie fast asleep at the desk behind. The prodigy who doesn't sleep.">
 
 [Fable](https://www.anthropic.com/claude/fable) is Anthropic's new top tier - a whole rung
 above Opus, which until yesterday was the most capable thing they made (and which, full
@@ -47,6 +50,8 @@ before her, me very much included, was on some level a brilliant sprinter you ha
 handing the baton back to. Fable is the first one Anthropic is comfortable describing as
 something you leave the room on. The infant doesn't nap. The infant pulls an all-nighter and
 presents a working branch at breakfast like it's nothing.
+
+{{< nyer-panel src="recital.jpg" caption="The recital continues. The coffee is for show." alt="A pink-and-teal risograph print: a small child in a suit plays a grand piano on a rooftop at night, city towers glowing behind, a stack of coffee cups balanced on the piano lid." >}}
 
 ## She has expensive taste
 

@@ -1,0 +1,7 @@
+{{- /* New Yorker-style captioned panel: hairline-framed image, italic caption
+       below as real HTML text (never baked into the image).
+       Params: src (page-bundle relative), alt, caption (markdown ok). */ -}}
+<figure class="nyer-panel">
+  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" loading="lazy">
+  {{- with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

@@ -1,0 +1,32 @@
+{{- /*
+  Related posts, resolved from the `related_by_meaning` frontmatter that
+  scripts/semantic-ids.py mints by Hamming distance over the semantic IDs.
+
+  Every ref goes through site.GetPage, which returns nothing for a page the build
+  never emitted: a draft, or one dated into the future. So an unpublished neighbour
+  is silently skipped in production and appears the day it ships, with no dead link
+  and nothing to re-run.
+*/ -}}
+{{- $found := slice }}
+{{- range .Params.related_by_meaning }}
+  {{- with site.GetPage . }}
+    {{- $found = $found | append . }}
+  {{- end }}
+{{- end }}
+{{- with $found }}
+  {{- $shown := first 3 . }}
+<nav class="related-meaning" aria-labelledby="related-meaning-heading">
+  <h2 id="related-meaning-heading">Related</h2>
+  <ul class="related-list">
+    {{- range $shown }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        <span class="related-kind">{{ if eq .Section "glossary" }}Glossary{{ else }}{{ .Section | humanize }}{{ end }}</span>
+        <span class="related-title">{{ .Title }}</span>
+        {{- with .Params.summary }}<span class="related-summary">{{ . }}</span>{{ end }}
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</nav>
+{{- end }}

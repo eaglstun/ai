@@ -4,6 +4,8 @@ summary = "Getting a model to want what you meant, not just do what you literall
 category = "Safety & alignment"
 related = ["model-welfare", "agi", "machine-learning"]
 plain = "The genie problem. You get the wish, but the genie grants the words you said, not the thing you wanted - and the smarter the genie, the more creatively it finds the gap between the two. A weak model that misreads you just stalls; a strong one chases the wrong target brilliantly. Alignment is the work of closing that gap before the system is powerful enough for the gap to matter."
+tags = ["alignment", "ai-safety", "model-welfare"]
+semantic_id = "PuvNZYbLw-HLmt1QV3qe22i6tAbE0AAC"
 +++
 **Alignment** is the problem of getting an AI system to actually want what you meant, not
 just do what you literally said. It is the gap between the goal you can write down and the goal

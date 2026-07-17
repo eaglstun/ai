@@ -9,12 +9,23 @@
   {{- if $pages }}
   <ul class="post-list">
     {{- range $pages }}
-    <li>
-      <a class="post-link" href="{{ .RelPermalink }}">
-        <span class="post-title">{{ .Title }}</span>
-        {{- if .Date }}<time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
+    {{/* Thumbnail resolution lives in partials/post-thumb.html (shared with the
+         home "Latest" feed). Posts with no image just render the text row. */}}
+    {{- $thumb := partial "post-thumb.html" . }}
+    {{- $postURL := .RelPermalink }}
+    <li{{ if $thumb }} class="has-thumb"{{ end }}>
+      {{- with $thumb }}
+      <a class="post-thumb-link" href="{{ $postURL }}" tabindex="-1" aria-hidden="true">
+        <img class="post-thumb" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy" decoding="async">
       </a>
-      {{- with .Summary }}<p class="post-summary">{{ . | plainify | truncate 180 }}</p>{{ end }}
+      {{- end }}
+      <div class="post-item-body">
+        <a class="post-link" href="{{ .RelPermalink }}">
+          <span class="post-title">{{ .Title }}</span>
+          {{- if .Date }}<time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
+        </a>
+        {{- with .Params.summary }}<p class="post-summary">{{ . }}</p>{{ end }}
+      </div>
     </li>
     {{- end }}
   </ul>

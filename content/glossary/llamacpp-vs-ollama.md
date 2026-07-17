@@ -4,6 +4,8 @@ summary = "The local-inference engine vs the wrapper built on it."
 category = "Local inference & formats"
 related = ["gguf", "ggml", "metal", "cuda", "vulkan", "temperature"]
 plain = "Engine vs. dashboard. llama.cpp is the bare engine that runs the model; Ollama is the friendly dashboard bolted on top so you can start a model with one command instead of wiring up the engine yourself."
+tags = ["llamacpp-vs-ollama", "local-inference", "inference", "ggml", "gguf", "cuda"]
+semantic_id = "onIGkJplm0NFA8WLNyOKLbFzv9EjoAAK"
 +++
 First, the naming: "llama" here means **llama.cpp** (the software that runs models), not Meta's
 **Llama** model family. Ollama's name is a play on it, which is fitting because **Ollama is

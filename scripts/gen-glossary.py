@@ -13,7 +13,7 @@ import re
 import sys
 from pathlib import Path
 
-SRC = Path("/Users/eeaglstun/.claude/skills/ai-dev/references/glossary")
+SRC = Path.home() / ".claude/skills/ai-dev/references/glossary"
 OUT = Path(__file__).resolve().parent.parent / "content" / "glossary"
 
 # Page titles (frontmatter / cards / chips).
@@ -44,12 +44,14 @@ TITLE = {
     "norm-placement": "Norm placement",
     "parameters": "Parameters",
     "precision": "Floating-point precision",
+    "quantization": "Quantization",
     "qwen": "Qwen",
     "relu": "ReLU",
     "residual-connections": "Residual connections",
     "rss-sampler": "RSS sampler",
     "temperature": "Temperature",
     "tensor": "Tensor",
+    "token": "Token",
     "transformer": "Transformer",
     "val-loss": "Validation loss",
     "vulkan": "Vulkan",
@@ -72,8 +74,10 @@ INLINE.update({
     "latent-space": "latent space",
     "parameters": "parameters",
     "precision": "floating-point precision",
+    "quantization": "quantization",
     "temperature": "temperature",
     "tensor": "tensor",
+    "token": "token",
     "transformer": "transformer",
     "val-loss": "validation loss",
     "residual-connections": "residual connections",
@@ -107,12 +111,14 @@ SUMMARY = {
     "norm-placement": "Where LayerNorm sits in a transformer block - pre, post, or sandwiched - and why it decides whether a deep model trains at all.",
     "parameters": "Learned weights; the count is model size & memory cost.",
     "precision": "How many bits each number uses - fp32 vs fp16 vs bf16. Halving precision halves the footprint, and is not the same thing as quantizing.",
+    "quantization": "Storing each weight as a low-bit integer index into a handful of buckets, with a scale per block to map it back. The 4x-8x shrink that puts a big model on a small machine, and what it quietly costs you.",
     "qwen": "Alibaba's family of open-weight LLMs - decoder-only transformers you can download, run offline, and fine-tune, from phone-sized up to huge.",
     "relu": "The simplest activation gate: zero out negatives, pass positives through.",
     "residual-connections": "Skip-ahead wiring that lets networks go very deep without the signal falling apart.",
     "rss-sampler": "A lightweight monitor that polls a process's Resident Set Size on a timer to chart its real-RAM footprint over time - so you see the memory cliff coming instead of OOM-ing into it.",
     "temperature": "The sampling knob that sets how random a model's word choices are - low is safe and repeatable, high is loose and surprising.",
     "tensor": "N-dimensional numeric array; the core ML data structure.",
+    "token": "The subword chunk a model actually reads and writes; text is split into these before the model sees it, and context limits and pricing are counted in them.",
     "transformer": "The self-attention architecture behind modern LLMs.",
     "val-loss": "Held-out validation error; the overfitting tripwire.",
     "vulkan": "Cross-vendor GPU-compute API; the portable ML fallback.",
@@ -147,15 +153,31 @@ PLAIN = {
     "norm-placement": "Where you put the leveler in a chain of guitar pedals. It's the box that keeps the signal from clipping or fading as it runs through a long effects chain - and whether you put it before each pedal, after, or both changes how clean the whole chain stays. Modern models put it before (pre-norm); the original put it after (post-norm); the cautious ones do both (sandwich).",
     "parameters": "The knobs and dials. Picture a mixing board with billions of tiny dials; training is the computer nudging each one a hair every time it's right or wrong. More dials means more room for fine detail - and a bigger, heavier model.",
     "precision": "How many decimal places you bother writing down. fp32 records pi as 3.1415927; fp16 shrugs and writes 3.14 - same number, fewer digits, half the paper. Quantization is the different move: instead of writing the number at all, you round everyone to the nearest slot on a tiny price menu and just remember the slot. One turns down the resolution; the other changes the medium.",
+    "quantization": "Saving the model as a 16-color GIF. A photo has millions of colors; the GIF picks sixteen and repaints everything with those, and from across the room you can barely tell. Models get the same treatment, with one extra trick: the model doesn't get one palette, it gets a fresh little palette for every small patch of canvas, so a patch with something wild in it can spend its sixteen colors on the wild thing instead of averaging it away. Squint and it's the same picture at a quarter of the size. Lean in and the gradients are banded, the rare shades are gone, and the details it was never confident about have quietly turned to mush.",
     "qwen": "The open-source car you can pop the hood on. The big-name chatbots are rentals - you drive them through an API and never see the engine - but Qwen is a model Alibaba hands you the keys and the schematics to: download it, take it apart, tune it, drive it around with no internet. That's why so many local and hobby projects start here.",
     "relu": "The simplest bouncer there is. One rule: negative numbers get turned away at the door, positive numbers walk right in unchanged. Crude, but cheap and effective - and for years it was the default gate inside neural networks.",
     "residual-connections": "The express lane. Instead of forcing every layer to redraw the whole picture, you let the original pass straight through and each layer just clips on a note of what to change - which is how networks stack hundreds of layers deep without the signal getting mangled.",
     "rss-sampler": "The bathtub gauge. A single 'it overflowed' tells you nothing useful; a number ticking up every few seconds tells you whether the water's creeping or gushing - so you can cut the tap before it hits the rim instead of mopping the floor after. The 'self-monitoring' part is just the tub watching its own water line.",
     "temperature": "The 'play it safe vs. surprise me' slider. Picture ordering at your usual diner: turn the dial all the way down and you get your regular every single time, no thinking required. Nudge it up and you start straying to the daily special. Crank it to the top and you're pointing at a random line on the menu and eating whatever lands - sometimes inspired, eventually just the ketchup. Same kitchen, same menu; the dial only decides how willing the model is to skip its favorite and gamble on the longshot.",
     "tensor": "A spreadsheet that can run in more than two directions. One number is a dot, a list is a row, a grid is a table - a tensor just keeps going into more directions, and it's the basic container AI uses to hold all its numbers.",
+    "token": "The Lego bricks of language. The model can't see letters or whole words - it only knows a fixed bin of pre-molded chunks, and every sentence it reads or writes has to be snapped together from those. 'cat' might be one brick; 'unbelievable' three; a weird typo, a fistful of tiny ones.",
     "transformer": "The architecture behind nearly every modern AI. Its trick is reading everything at once and letting each piece decide which other pieces matter - that's what powers ChatGPT, image generators, and the rest.",
     "val-loss": "The pop quiz with questions it didn't study. During training you hold back some examples the model never sees, then test on those - if it aces what it studied but flunks the held-back quiz, it memorized instead of learned.",
     "vulkan": "The universal remote. A one-size-fits-all translator that lets AI software talk to graphics chips from any brand - not as finely tuned as NVIDIA's or Apple's own, but it works almost everywhere.",
+}
+
+# Term illustrations. slug -> alt text. The image file itself lives at
+# static/glossary-img/<slug>.webp and is referenced by absolute path, so it survives
+# regeneration (the generated term pages are flat files, not page bundles). Only slugs
+# listed here get an `image` / `image_alt` frontmatter pair; glossary/single.html
+# renders it. A good mix of treatments (woodcut / kodachrome / schematic) per concept.
+IMAGE_ALT = {
+    "attention": "A Victorian wood-engraving: a scholar at a desk reading an open book, fine luminous threads rising from certain words and converging on one - some words weighed far more heavily than the rest.",
+    "gan": "A Victorian wood-engraving: a forger at an easel painting a convincing counterfeit while a monocled inspector leans in to scrutinise it - a duel of faking and detecting.",
+    "latent-space": "A dreamy aerial photograph of a misty valley at dawn, softly glowing clustered forms floating in fog with similar shapes gathered together - a map of meaning.",
+    "temperature": "A still-life of an ornate brass dial: frost and crystalline ice on one side, chaotic glowing embers and sparks on the other - a knob between order and randomness.",
+    "embeddings": "A minimalist schematic: small glowing dots scattered across a dark field in loose clusters, faint lines between near neighbours - points placed so similar things sit close together.",
+    "tensor": "A minimalist isometric schematic: translucent grids nesting into a three-dimensional cube of small cells - a multi-dimensional array of numbers.",
 }
 
 CATEGORY = {
@@ -182,6 +204,7 @@ CATEGORY = {
     "qwen": "Architectures",
     "temperature": "Core concepts",
     "tensor": "Core concepts",
+    "token": "Core concepts",
     "latent-space": "Core concepts",
     "parameters": "Core concepts",
     "lora": "Core concepts",
@@ -192,6 +215,7 @@ CATEGORY = {
     "norm-placement": "Building blocks",
     "rss-sampler": "Local inference & formats",
     "precision": "Local inference & formats",
+    "quantization": "Local inference & formats",
     "model-welfare": "Safety & alignment",
     "alignment": "Safety & alignment",
 }
@@ -202,36 +226,38 @@ RELATED = {
     "ablation": ["machine-learning", "val-loss", "parameters"],
     "agi": ["machine-learning", "gpt", "model-welfare", "alignment"],
     "alignment": ["model-welfare", "agi", "machine-learning"],
-    "attention": ["transformer", "tensor", "lora"],
+    "attention": ["transformer", "tensor", "lora", "token"],
     "machine-learning": ["tensor", "transformer", "parameters", "val-loss", "agi", "gradient-descent", "alignment"],
     "dimensions": ["tensor", "latent-space", "embeddings"],
-    "embeddings": ["latent-space", "dimensions", "tensor"],
+    "embeddings": ["latent-space", "dimensions", "tensor", "token"],
     "epsilon-gate": ["gradient-descent", "precision", "mps", "val-loss"],
     "cuda": ["metal", "vulkan", "ggml", "cudnn-cublas"],
     "cudnn-cublas": ["cuda", "mps", "tensor"],
     "gan": ["latent-space"],
     "gelu": ["transformer", "gpt", "tensor", "relu"],
-    "ggml": ["gguf", "tensor", "cuda", "metal", "vulkan", "rss-sampler"],
-    "gguf": ["mlx", "ggml", "parameters", "rss-sampler", "precision", "qwen", "temperature"],
-    "gpt": ["transformer", "gguf", "agi", "gelu", "qwen", "temperature"],
+    "ggml": ["gguf", "tensor", "cuda", "metal", "vulkan", "rss-sampler", "quantization"],
+    "gguf": ["mlx", "ggml", "parameters", "rss-sampler", "precision", "quantization", "qwen", "temperature"],
+    "gpt": ["transformer", "gguf", "agi", "gelu", "qwen", "temperature", "token"],
     "gradient-descent": ["machine-learning", "parameters", "val-loss", "latent-space", "norm-placement", "epsilon-gate"],
     "latent-space": ["gan", "dimensions", "embeddings", "gradient-descent"],
     "llamacpp-vs-ollama": ["gguf", "ggml", "metal", "cuda", "vulkan", "temperature"],
-    "lora": ["transformer", "tensor", "gguf", "parameters", "qwen"],
+    "lora": ["transformer", "tensor", "gguf", "parameters", "qwen", "quantization"],
     "metal": ["cuda", "vulkan", "mlx", "mps", "ggml"],
     "mlx": ["gguf", "metal", "tensor"],
     "model-welfare": ["alignment", "agi", "parameters"],
     "mps": ["metal", "mlx", "cuda", "cudnn-cublas", "epsilon-gate"],
     "norm-placement": ["residual-connections", "transformer", "gradient-descent", "tensor"],
-    "parameters": ["tensor", "transformer", "gguf", "lora", "val-loss", "gradient-descent", "rss-sampler", "precision", "model-welfare"],
+    "parameters": ["tensor", "transformer", "gguf", "lora", "val-loss", "gradient-descent", "rss-sampler", "precision", "quantization", "model-welfare"],
     "relu": ["gelu", "transformer", "tensor", "residual-connections"],
     "residual-connections": ["transformer", "relu", "tensor", "norm-placement"],
-    "precision": ["gguf", "parameters", "rss-sampler", "tensor", "epsilon-gate"],
+    "precision": ["quantization", "gguf", "parameters", "rss-sampler", "tensor", "epsilon-gate"],
+    "quantization": ["precision", "gguf", "ggml", "parameters", "lora", "tensor", "rss-sampler"],
     "qwen": ["gpt", "transformer", "gguf", "lora"],
-    "rss-sampler": ["parameters", "gguf", "ggml", "precision"],
-    "temperature": ["gpt", "transformer", "gguf", "llamacpp-vs-ollama"],
-    "tensor": ["dimensions", "mlx", "transformer", "parameters", "gelu", "relu", "residual-connections", "norm-placement", "precision"],
-    "transformer": ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement", "qwen", "temperature"],
+    "rss-sampler": ["parameters", "gguf", "ggml", "precision", "quantization"],
+    "temperature": ["gpt", "transformer", "gguf", "llamacpp-vs-ollama", "token"],
+    "tensor": ["dimensions", "mlx", "transformer", "parameters", "gelu", "relu", "residual-connections", "norm-placement", "precision", "quantization"],
+    "token": ["embeddings", "attention", "transformer", "temperature", "gpt"],
+    "transformer": ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement", "qwen", "temperature", "token"],
     "val-loss": ["machine-learning", "parameters", "gradient-descent", "epsilon-gate"],
     "vulkan": ["cuda", "metal", "ggml"],
 }
@@ -251,6 +277,28 @@ def convert_links(text: str) -> str:
             return m.group(0)
         return f"[{INLINE[slug]}](/glossary/{slug}/)"
     return WIKILINK.sub(repl, text)
+
+
+# Fields owned by scripts/semantic-ids.py. This generator rewrites glossary pages from
+# scratch, so without this they would be silently destroyed on every run — and a
+# semantic_id is meant to be permanent (it is committed to git, and comparing an ID
+# minted under one mean vector against one minted under another is meaningless).
+PRESERVE = ("tags", "semantic_id")
+
+
+def carry_over(path: Path) -> list[str]:
+    """Lift PRESERVE fields out of an existing generated page, verbatim."""
+    if not path.exists():
+        return []
+    text = path.read_text()
+    m = re.match(r"\A\+\+\+\n(.*?)\n\+\+\+\n", text, re.S)
+    if not m:
+        return []
+    return [
+        line
+        for line in m.group(1).splitlines()
+        if any(re.match(rf"^{k}\s*=", line) for k in PRESERVE)
+    ]
 
 
 def main():
@@ -276,6 +324,11 @@ def main():
         related = RELATED.get(slug, [])
         rel_toml = "[" + ", ".join(toml_str(r) for r in related) + "]"
 
+        # `tags` and `semantic_id` are minted by scripts/semantic-ids.py, NOT here.
+        # Carry them through verbatim — regenerating a page must never silently drop
+        # its ID, because those IDs are committed to git and referenced as permanent.
+        carried = carry_over(OUT / f"{slug}.md")
+
         fm = [
             "+++",
             f"title = {toml_str(TITLE[slug])}",
@@ -285,6 +338,10 @@ def main():
         ]
         if PLAIN.get(slug):
             fm.append(f"plain = {toml_str(PLAIN[slug])}")
+        if slug in IMAGE_ALT:
+            fm.append(f'image = {toml_str(f"/glossary-img/{slug}.webp")}')
+            fm.append(f"image_alt = {toml_str(IMAGE_ALT[slug])}")
+        fm += carried
         fm += [
             "+++",
             "",

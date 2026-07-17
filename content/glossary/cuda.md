@@ -4,6 +4,8 @@ summary = "NVIDIA's GPU-compute platform; the default ML backend."
 category = "GPU compute & backends"
 related = ["metal", "vulkan", "ggml", "cudnn-cublas"]
 plain = "The translator that lets AI software talk to NVIDIA graphics cards. NVIDIA's chips are the industry-standard engines for AI, and CUDA is the language nearly everyone uses to drive them."
+tags = ["cuda", "cudnn-cublas", "ggml", "gguf", "local-inference", "machine-learning"]
+semantic_id = "-nlS_Ps00UgH4PkWGle7UvdxrTSx0AAB"
 +++
 **CUDA** (Compute Unified Device Architecture) is NVIDIA's software platform for running
 general-purpose number-crunching, not just graphics, on NVIDIA GPUs. It's the default

@@ -4,6 +4,9 @@ date = 2026-06-01
 images = ["/og/replicator-was-never-the-point.png"]
 description = "AI isn't taking your work - it's taking your toil, and those were never the same thing. The Star Trek reading of the future."
 summary = "Everyone's fighting about whether AI takes the jobs. I think it takes the toil - and that those are very different things. A case for the Star Trek reading of the future, transition-tax and all."
+tags = ["ai-policy", "labour"]
+semantic_id = "Vd75C6wvJAMwXBb4NZrzA9Qfd96sQAl9"
+related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/", "/blog/karaoke-throws-away-the-words/", "/glossary/agi/"]
 +++
 
 There's a moment in every AI conversation where someone says "but what about the jobs," and
@@ -38,6 +41,8 @@ dressed like industrial spuds and asked "Are we not men?" The song was so far ah
 joke it never even got a real release - it's still passed around as a bootleg. Three words,
 nailed to the door fifty years ago, and the culture filed it under novelty act. That's the
 work ethic for you: it'll happily let you mock it, right up until you mean it.
+
+{{< nyer-panel src="replicator-mops.jpg" caption="It can make anything. Look what we keep asking for." alt="A vintage Kodachrome-style factory scene: a gleaming machine dispensing an endless row of identical yellow mops and buckets, while a woman carries one away down the line." >}}
 
 ## What Star Trek actually promised
 

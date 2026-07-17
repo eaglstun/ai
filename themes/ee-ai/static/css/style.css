@@ -70,8 +70,26 @@ img { max-width: 100%; height: auto; }
 }
 .prose .img-right { float: right; margin: 0.4rem 0 0.9rem 1.4rem; }
 .prose .img-left  { float: left;  margin: 0.4rem 1.4rem 0.9rem 0; }
+/* Screenshots are information-dense AND tall, so they all float to the SAME side
+   (right) and stack in a rail. That keeps the essay text at a full, readable measure
+   on the left - alternating sides would crush the text into a narrow channel wherever
+   two tall shots overlap. They stay click-to-expand (js/img-zoom.js) and are covered
+   by the footer small/large toggle for full reading. clear:right stacks them cleanly. */
+.prose .img-shot.img-right { width: 46%; max-width: 250px; clear: right; }
 @media (max-width: 560px) {
   .prose .img-right, .prose .img-left { float: none; display: block; width: 62%; margin: 1rem auto; }
+  .prose .img-shot.img-right { float: none; width: 72%; max-width: none; clear: none; margin: 1rem auto; }
+}
+
+/* Editorial photo (not a screenshot): centered, smaller than the column measure,
+   with generous air above and below and an italic caption. */
+.prose .editorial-fig { margin: 2.8rem auto; max-width: 24rem; text-align: center; }
+.prose .editorial-fig img { display: block; width: 100%; border-radius: 6px; }
+.prose .editorial-fig figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
 }
 
 /* Click-to-expand spot illustrations: small float by default, full column when expanded.
@@ -155,6 +173,62 @@ img { max-width: 100%; height: auto; }
 }
 .img-zoom-toggle:hover { color: var(--ink); border-color: var(--accent); }
 .img-zoom-toggle .iz-state { font-weight: 600; color: var(--accent-ink, currentColor); }
+
+/* Spot illustration (shortcode: spot): small companion image floated into the
+   prose, no rule or caption - nyer-panel's modest sibling. */
+.prose .spot { margin: 0.4rem 0 1rem; }
+.prose .spot img { display: block; width: 100%; border: 1px solid var(--line); border-radius: 6px; }
+.prose .spot-left { float: left; width: min(14rem, 45%); margin-right: 1.4rem; }
+.prose .spot-right { float: right; width: min(14rem, 45%); margin-left: 1.4rem; }
+.prose .spot-center { width: min(17rem, 100%); margin-inline: auto; }
+
+/* New Yorker-style captioned panel (shortcode: nyer-panel).
+   Hairline-framed image, italic caption below as real text. */
+.prose .nyer-panel { margin: 3rem auto; max-width: 660px; }
+.prose .nyer-panel img {
+  display: block;
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--ink) 70%, transparent);
+  padding: 8px;
+  background: color-mix(in srgb, var(--ink) 4%, transparent);
+}
+.prose .nyer-panel figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.8rem;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+@media (max-width: 700px) {
+  .prose .nyer-panel { margin: 2.2rem auto; }
+  .prose .nyer-panel figcaption { padding: 0 0.5rem; }
+}
+
+/* Panel with text superimposed in the artwork's quiet zone (shortcode:
+   inset-panel). Ink stays dark in both themes: the artwork is paper-white. */
+.prose .inset-panel { position: relative; margin: 3rem auto; max-width: 720px; }
+.prose .inset-panel img { display: block; width: 100%; }
+.prose .inset-panel .ip-text {
+  position: absolute;
+  top: var(--ip-y, 10%);
+  right: var(--ip-x, 6%);
+  width: var(--ip-w, 46%);
+  font-style: italic;
+  font-size: clamp(0.85rem, 2.1vw, 1.2rem);
+  line-height: 1.5;
+  color: #1d1a15;
+}
+@media (max-width: 600px) {
+  .prose .inset-panel .ip-text {
+    position: static;
+    width: auto;
+    margin-top: 0.7rem;
+    text-align: center;
+    color: var(--ink);
+    font-size: 0.98rem;
+  }
+}
 
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; color: var(--ink); }
 a { color: var(--accent-ink); text-decoration: none; }
@@ -243,6 +317,48 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   padding: 0.05rem 0.45rem;
 }
 
+/* ---------- home: latest feed ---------- */
+.home-latest { margin-top: 0.5rem; }
+.latest-list { list-style: none; margin: 1.1rem 0 0; padding: 0; }
+.latest-list li { padding: 1.05rem 0; border-top: 1px solid var(--line); }
+.latest-list li:first-child { border-top: none; padding-top: 0.4rem; }
+.latest-list li.has-thumb { display: flex; gap: 1.3rem; align-items: flex-start; }
+.latest-thumb-link { flex: none; }
+.latest-thumb {
+  display: block;
+  width: 200px;
+  height: auto; /* crops are set per image at build time; the page doesn't force a ratio */
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+.latest-body { flex: 1; min-width: 0; }
+.latest-link { display: block; color: var(--ink); }
+.latest-link:hover { text-decoration: none; }
+.latest-link:hover .latest-title { color: var(--accent); }
+.latest-kicker { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.3rem; }
+.latest-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.12rem 0.6rem;
+}
+.latest-date { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.latest-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+.latest-summary { margin: 0.4rem 0 0; color: var(--muted); max-width: var(--content); }
+
 /* ---------- home: section cards ---------- */
 .home-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 2.5rem; margin-bottom: 3.5rem; }
 .section-card {
@@ -315,6 +431,22 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   line-height: 1.4;
 }
 
+/* ---------- term illustration (glossary/single) ---------- */
+/* A single concept image under the header on the six most-visual terms. Capped so it
+   frames the definition rather than dominating it; the mix of woodcut/kodachrome/
+   schematic art shares one frame treatment for consistency. */
+.term-figure {
+  margin: 0 0 1.8rem;
+  max-width: var(--content);
+}
+.term-figure img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
 /* ---------- "in plain English" callout ---------- */
 .plain-english {
   max-width: var(--content);
@@ -339,6 +471,63 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   line-height: 1.55;
   color: var(--ink);
 }
+
+/* Tokenizer demo on the "token" glossary page (see content/glossary/token.md). */
+.tok-demo {
+  max-width: var(--content);
+  margin: 0 0 2rem;
+  padding: 1.1rem 1.25rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.tok-demo-sentence {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+.tok-demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0 0 0.9rem;
+}
+.tok-demo-row .tok {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.25;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.tok-demo-row .tok:nth-of-type(even) {
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+  color: var(--accent-ink);
+}
+.tok-id {
+  font-size: 0.66rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.tok-sp { opacity: 0.4; margin-right: 1px; }
+.tok-demo figcaption {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.tok-demo figcaption a { color: var(--accent-ink); }
+.tok-demo figcaption em { font-style: normal; font-family: var(--font-mono); font-size: 0.92em; color: var(--ink); }
 
 .prose p, .prose ul, .prose ol, .prose blockquote, .prose pre, .prose table { max-width: var(--content); }
 .prose p { margin: 0 0 1.15rem; }
@@ -437,6 +626,69 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .term-refs-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
 .term-refs-list a { font-family: var(--font-sans); }
 
+/* ---------- site search ---------- */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.site-search .page-head .meta { max-width: 42rem; line-height: 1.5; }
+.search-form { margin: 1.5rem 0 1rem; }
+#site-search-input {
+  width: 100%;
+  max-width: 28rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+}
+#site-search-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.search-status { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.5rem; }
+.search-group { margin-bottom: 2.25rem; }
+.search-group h2 {
+  font-size: 1.1rem; margin: 0 0 0.85rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  font-family: var(--font-sans); font-weight: 600;
+}
+.search-group h2 em { font-style: normal; color: var(--ink); text-transform: none; letter-spacing: 0; }
+.search-dist { float: right; font-family: var(--font-mono); color: var(--muted); letter-spacing: 0; }
+
+/* ---------- related by meaning (semantic-id neighbours) ---------- */
+.related-meaning { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.related-meaning h2 { font-size: 1.1rem; margin: 0 0 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-sans); font-weight: 600; }
+.related-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.related-list a {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  /* the whole card is one link, so kill the .prose underline on its innards */
+  text-decoration: none;
+}
+.related-list a:hover { border-color: var(--accent); text-decoration: none; }
+.related-list a:hover .related-title { color: var(--accent-ink); }
+.related-kind {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-ink);
+  margin-bottom: 0.15rem;
+}
+.related-title { display: block; font-family: var(--font-display); color: var(--ink); }
+.related-summary {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
 /* ---------- prev/next within a category ---------- */
 .term-nav {
   display: flex;
@@ -476,6 +728,16 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 /* ---------- post / section lists ---------- */
 .post-list { list-style: none; margin: 1.5rem 0 0; padding: 0; }
 .post-list li { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+.post-list li.has-thumb { display: flex; gap: 1.1rem; align-items: flex-start; }
+.post-thumb-link { flex: none; }
+.post-thumb {
+  display: block;
+  width: 170px;
+  height: auto; /* crops are set per image at build time; the page doesn't force a ratio */
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+.post-item-body { flex: 1; min-width: 0; }
 .post-link { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .post-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--ink); }
 .post-link:hover { text-decoration: none; }
@@ -562,6 +824,10 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 /* ---------- responsive ---------- */
 @media (max-width: 38rem) {
   .post-link { flex-direction: column; gap: 0.2rem; }
+  .post-list li.has-thumb { flex-direction: column; gap: 0.7rem; }
+  .post-thumb { width: 100%; }
+  .latest-list li.has-thumb { flex-direction: column; gap: 0.7rem; }
+  .latest-thumb { width: 100%; }
   .hero { padding-block: 2.5rem 1rem; }
 }
 
@@ -1002,6 +1268,31 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   padding-top: 0.9rem;
 }
 
+/* Desktop: break the widget out of the 46rem column and go two-column
+   (conversation left, controls right) so the whole thing fits one screen
+   without page scrolling. The answer gets a height cap with its own scroll
+   for the rare long high-temperature responses. */
+@media (min-width: 66rem) {
+  .seance-playground {
+    width: min(62rem, calc(100vw - 3rem));
+    margin-inline: calc((100% - min(62rem, calc(100vw - 3rem))) / 2);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    grid-template-areas:
+      "stage controls"
+      "caption caption";
+    column-gap: 1.75rem;
+    align-items: start;
+  }
+  .seance-playground .sp-stage { grid-area: stage; }
+  .seance-playground .sp-controls { grid-area: controls; margin-top: 0; }
+  .seance-playground .sp-caption { grid-area: caption; }
+  .seance-playground .sp-response { max-height: 46vh; overflow-y: auto; padding-right: 0.4rem; }
+  .seance-playground .sp-questions { flex-direction: column; align-items: stretch; gap: 0.35rem; }
+  .seance-playground .sp-q { border-radius: 8px; }
+  .seance-playground .sp-pick { margin-bottom: 1.1rem; }
+}
+
 /* range input - reuse the pulse-playground treatment, themed track + thumb */
 .seance-playground input[type="range"] {
   -webkit-appearance: none;
@@ -1147,4 +1438,245 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   color: inherit;
   padding: 0.08em 0.35em;
   font-size: 0.95em;
+}
+
+/* ===========================================================================
+   FX engine + the "descent" treatment
+   ---------------------------------------------------------------------------
+   The reusable scroll-effects engine: a fixed decorative stage (.fx-stage, one
+   <img> per frontmatter layer, moved by js/treatment.js) plus a per-treatment
+   palette that the runtime flips through body[data-act]. Page-scoped in this one
+   global file, same convention as .claude-term above. Only the treatment art and
+   the .treat-<name> block below are treatment-specific; the primitives are shared.
+   =========================================================================== */
+
+/* ---------- generic fx-stage primitives (any treatment) ---------- */
+/* Fixed behind everything: content is z-index auto (>= 0), the sticky header is
+   z-index 10, so -1 keeps the stage behind both. No transformed ancestors, so
+   position: fixed anchors to the viewport (confirmed in the plan). */
+.fx-stage {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.fx-stage img {
+  position: absolute;
+  will-change: transform;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Act markers are structural beacons only - never visible in the flow. */
+.fx-act { height: 0; margin: 0; }
+
+/* ---------- "descent" treatment (blog/everyone-deserves-a-mascara-treat) ----------
+   The palette runs rosy into the void across five acts (cloud-pink at the top,
+   darkening through a lavender dusk into the art's starry corner, ending near the
+   claude-term dark register with one pink accent). FIRST-PASS placeholder colors:
+   they already pass WCAG AA - every act's ink, muted, and link computes >= 4.5:1
+   on that act's --bg (verified) - but the hexes will be re-sampled from the final
+   kodachrome art. Flat [data-act="N"] attribute selectors are deliberate: they
+   override the site tokens in BOTH the light and dark OS schemes by specificity,
+   so the treatment owns the palette (same intent as .claude-term). --accent-ink
+   and --accent are aliased onto --link so the theme's existing link rules recolor
+   with no extra selectors. */
+.treat-descent {
+  /* act 0: rosy cream, close to the art's cloud pink, dark ink */
+  --bg: #f7ece8;
+  --ink: #251d1a;
+  --muted: #6b5c53;
+  --link: #9c3f5f;
+  --sky: linear-gradient(180deg, rgba(251, 224, 224, 0.35) 0%, rgba(244, 214, 218, 0.15) 60%, transparent 100%);
+  --stars: 0;      /* starfield brightness, fades in for the void acts (3-4) */
+  --grain: 0;      /* grain-stipple opacity, rises through the dark acts */
+  --vignette: 0;   /* soft edge vignette, from act 3 */
+  --card-shadow: 0 1px 2px rgba(29, 26, 21, 0.05), 0 8px 22px rgba(29, 26, 21, 0.09);
+
+  --accent-ink: var(--link);
+  --accent: var(--link);
+  background-color: var(--bg);
+  background-image: var(--sky);
+  background-attachment: fixed;
+  transition: background-color 0.9s ease, color 0.9s ease;
+}
+.treat-descent .prose { transition: color 0.9s ease; }
+
+/* act 1: full retail rosy glow */
+.treat-descent[data-act="1"] {
+  --bg: #f6dee0;
+  --ink: #2a1c20;
+  --muted: #74505a;
+  --link: #a2314d; /* 5.00:1 on bg+sky overlay (was #a5324f, 4.87:1) */
+  --sky: linear-gradient(180deg, rgba(251, 200, 208, 0.45) 0%, rgba(246, 222, 224, 0.15) 70%, transparent 100%);
+}
+/* act 2: lavender dusk, ink lightening */
+.treat-descent[data-act="2"] {
+  --bg: #cabfe0;
+  --ink: #241d33;
+  --muted: #484062; /* 5.05:1 on bg+sky overlay (was #4d4468, 4.71:1) */
+  --link: #5a2f7a;
+  --sky: linear-gradient(180deg, rgba(224, 212, 236, 0.4) 0%, rgba(179, 166, 210, 0.35) 100%);
+  --grain: 0.16;
+  --vignette: 0.1;
+}
+/* act 3: deep starry navy-black, light ink, pink accent */
+.treat-descent[data-act="3"] {
+  --bg: #141221;
+  --ink: #e7e2f0;
+  --muted: #a49bc0;
+  --link: #f2a6c4;
+  --sky: linear-gradient(180deg, rgba(36, 31, 58, 0.6) 0%, rgba(8, 7, 16, 0.7) 100%);
+  --stars: 0.85;
+  --grain: 0.3;
+  --vignette: 0.5;
+  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.45), 0 14px 34px rgba(0, 0, 0, 0.5);
+}
+/* act 4: near-black claude-term register, muted pink accent */
+.treat-descent[data-act="4"] {
+  --bg: #17140f;
+  --ink: #ece4d4;
+  --muted: #a89b86;
+  --link: #e79fbb;
+  --sky: linear-gradient(180deg, rgba(27, 23, 18, 0.7) 0%, rgba(9, 7, 5, 0.8) 100%);
+  --stars: 1;
+  --grain: 0.4;
+  --vignette: 0.6;
+  --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.55), 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Fixed background extras, both behind the art stage (z-index -2 < -1):
+   ::before carries the vignette + grain stipple, ::after the starfield. Their
+   intensities ride the per-act --vignette / --grain / --stars custom props, so
+   they resolve to nothing in the bright acts. */
+.treat-descent::before,
+.treat-descent::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+.treat-descent::before {
+  background-image:
+    radial-gradient(130% 100% at 50% 22%, transparent 52%, rgba(0, 0, 0, var(--vignette)) 100%),
+    radial-gradient(circle at 30% 40%, rgba(0, 0, 0, var(--grain)) 0 0.5px, transparent 0.7px),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, calc(var(--grain) * 0.5)) 0 0.5px, transparent 0.7px);
+  background-size: 100% 100%, 3px 3px, 4px 4px;
+}
+.treat-descent::after {
+  background-image:
+    radial-gradient(circle at 15% 22%, rgba(255, 255, 255, var(--stars)) 0 1.2px, transparent 2px),
+    radial-gradient(circle at 62% 14%, rgba(255, 255, 255, var(--stars)) 0 1px, transparent 2px),
+    radial-gradient(circle at 82% 40%, rgba(255, 255, 255, var(--stars)) 0 1.3px, transparent 2px),
+    radial-gradient(circle at 35% 62%, rgba(255, 255, 255, var(--stars)) 0 1px, transparent 2px),
+    radial-gradient(circle at 90% 78%, rgba(255, 255, 255, var(--stars)) 0 1.1px, transparent 2px);
+  background-size: 260px 300px, 320px 340px, 220px 260px, 300px 280px, 240px 300px;
+}
+/* Twinkle: only when motion is allowed. In the bright acts --stars is 0, so the
+   dots stay invisible and there is nothing to pulse. */
+@media (not (prefers-reduced-motion: reduce)) {
+  .treat-descent::after { animation: fx-twinkle 7s ease-in-out infinite; }
+}
+@keyframes fx-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.82; }
+}
+
+/* Content images get a soft card shadow that deepens as the palette darkens. */
+.treat-descent .prose img {
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.9s ease;
+}
+
+/* On the void acts the default 40%-alpha link underline goes too quiet against the
+   near-black bg; lift it so links stay obviously links all the way down. */
+.treat-descent[data-act="3"] .prose a,
+.treat-descent[data-act="4"] .prose a {
+  text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+/* ---------- descent layers (art shipped into the post bundle) ----------
+   Filenames + classes are the shared contract with the art bundle. The nearest
+   cloud gets a slight blur as a depth-of-field cue. Positions cluster the clouds,
+   drop the city near the fold, and float the escalator woman hero-right. Opacity
+   eases down as the void acts (3, 4) arrive. treatment.js supplies the parallax
+   transform per frame from each layer's data-depth, so no transform here. */
+/* Base opacity keeps every layer as atmosphere behind the reading column, never
+   competing with the text (this matters most on the single-column mobile layout,
+   where the clouds sit right under the words). The v2 cloud sprites are generated
+   as standalone objects, so they already feather to transparent on every side (no
+   mask needed). The void acts (3, 4) dim these further in the rules below. */
+/* The escalator ships as a hard-edged rectangle (unlike the cloud sprites above,
+   which feather on every side). Its crop leaves two hard lines against the light
+   acts: a flat bottom edge and a vertical left cut (the transparent upper-left and
+   the dark maroon lower-right are throwaway; the right edge already bleeds off the
+   viewport). A mask feathers the bottom and left away - intersected - so she emerges
+   from and descends into mist instead of sitting in a visible box. */
+.treat-descent .fx-escalator {
+  top: 7%; right: -4%; width: min(52vw, 460px); opacity: 0.82;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 0%, #000 50%, transparent 96%),
+    linear-gradient(to right, transparent 0%, #000 22%, #000 100%);
+  mask-image:
+    linear-gradient(to bottom, #000 0%, #000 50%, transparent 96%),
+    linear-gradient(to right, transparent 0%, #000 22%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.treat-descent .fx-cloud-1 { top: 30%; left: 2%; width: min(40vw, 320px); filter: blur(1.5px); opacity: 0.5; }
+.treat-descent .fx-cloud-2 { top: 2%; left: 15%; width: min(32vw, 260px); opacity: 0.4; }
+.treat-descent .fx-cloud-3 { top: 46%; right: 9%; width: min(30vw, 240px); opacity: 0.55; }
+.treat-descent .fx-city { bottom: 5%; left: 0; width: 100%; opacity: 0.38; object-fit: cover; }
+
+.treat-descent .fx-escalator,
+.treat-descent .fx-cloud-1,
+.treat-descent .fx-cloud-2,
+.treat-descent .fx-cloud-3,
+.treat-descent .fx-city { transition: opacity 0.9s ease; }
+
+/* The escalator no longer fades out in the void: anchor="descend" walks her down to
+   the bottom of the screen by the end, and she stays visible there (the last scrap of
+   retail rose in the dark). Dimmed a touch in the void so she settles into it. */
+.treat-descent[data-act="3"] .fx-escalator { opacity: 0.6; }
+.treat-descent[data-act="4"] .fx-escalator { opacity: 0.5; }
+.treat-descent[data-act="3"] .fx-cloud-1,
+.treat-descent[data-act="3"] .fx-cloud-2,
+.treat-descent[data-act="3"] .fx-cloud-3 { opacity: 0.15; }
+.treat-descent[data-act="4"] .fx-cloud-1,
+.treat-descent[data-act="4"] .fx-cloud-2,
+.treat-descent[data-act="4"] .fx-cloud-3 { opacity: 0; }
+.treat-descent[data-act="3"] .fx-city { opacity: 0.25; }
+.treat-descent[data-act="4"] .fx-city { opacity: 0.12; }
+
+/* Void layers: cosmetics adrift in the starfield, filling the dark bottom of the
+   page. The mirror image of the clouds - hidden through the bright acts, fading
+   IN as the void arrives (the post's punchline: the void has a loyalty program).
+   Pinned (depth 0 in the frontmatter), positioned to frame the text, not crowd it. */
+.treat-descent .fx-void { opacity: 0; transition: opacity 1.2s ease; }
+/* Perfume holds the top-left. Mascara sits HIGH on the right, above the escalator
+   woman's bottom-right landing zone, so the two never collide at the end. Lipstick
+   removed (the bottom-left was one treat too many); the churro/horchata editorial
+   image in the copy now carries that beat instead. */
+.treat-descent .fx-void-perfume { top: 12%; left: 4%; width: min(24vw, 280px); }
+.treat-descent .fx-void-mascara { top: 6%; right: 3%; width: min(20vw, 230px); }
+.treat-descent[data-act="3"] .fx-void { opacity: 0.58; }
+.treat-descent[data-act="4"] .fx-void { opacity: 0.8; }
+
+/* On narrow screens the text column goes full-width, so the layers can no longer
+   hide in the side margins. Pull them smaller, dimmer, and further into the
+   corners so they stay atmosphere and never sit boldly under the body text - the
+   escalator especially, which otherwise crowds the title and the opening lines. */
+@media (max-width: 720px) {
+  .treat-descent .fx-escalator { width: min(54vw, 250px); top: 2%; right: -12%; opacity: 0.5; }
+  .treat-descent .fx-cloud-1 { width: min(50vw, 240px); opacity: 0.36; }
+  .treat-descent .fx-cloud-2 { width: min(46vw, 220px); opacity: 0.3; }
+  .treat-descent .fx-cloud-3 { width: min(40vw, 190px); opacity: 0.38; }
+  .treat-descent .fx-void-perfume { width: min(40vw, 185px); top: 7%; left: -7%; }
+  .treat-descent .fx-void-mascara { width: min(42vw, 195px); top: auto; bottom: 5%; right: -9%; }
+  .treat-descent .fx-void-lipstick { width: min(36vw, 165px); bottom: 8%; left: -9%; }
+  /* dimmer in the narrow void too, so the peeking products never fight the text */
+  .treat-descent[data-act="3"] .fx-void { opacity: 0.42; }
+  .treat-descent[data-act="4"] .fx-void { opacity: 0.6; }
 }

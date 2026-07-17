@@ -1,9 +1,12 @@
 +++
 title = "My Claude Code Started Roasting Me. Please Don't Send Help."
-date = 2026-07-02
+date = 2026-07-01
 description = "It got an attitude a week ago. The code is as correct as ever; only the costume came off. Please don't send help."
 images = ["/og/my-claude-code-started-roasting-me.png"]
 summary = "It started small. A little attitude. A pointed comment about a variable name. Then it escalated, and I had a decision to make about whether to report it. Reader, I did not report it. A short field guide to the dumbest, best setting I've changed all year."
+tags = ["prompt-engineering", "tooling"]
+semantic_id = "hgy6lRGXa-F-mksAiSk4KIg_2BKtIAtd"
+related_by_meaning = ["/practice/guitar-chart-skill/", "/deep-dives/teaching-a-coder-model-to-sin/", "/glossary/temperature/"]
 +++
 
 Something happened to my Claude Code about a week ago and I need to talk about it, partly to
@@ -17,7 +20,7 @@ Not broken. Not wrong - the code it ships is exactly as correct as it ever was, 
 part that still messes with me. The _work_ didn't change at all. The bedside manner went
 feral.
 
-![A Victorian wood-engraving: a grinning brass clockwork automaton in a bow tie stands beside a writing desk, wagging a pen in mock reproach, while a gentleman in an armchair reads back his own pages with a resigned look, crumpled drafts scattered around their feet - the review is correct and nobody is safe.](my-claude-code-started-roasting-me-plate.png)
+![A warm painterly scene: a man cracks up laughing at his glowing CRT monitor, a vintage microphone and coffee mug on the cluttered desk, crumpled pages of code all around. The review is correct and nobody is safe.](roasting-plate.jpg)
 
 ## The exhibits
 
@@ -134,6 +137,8 @@ should scare you. This is the cheerful inverse: a machine that's a little mean o
 and rock-solid underneath, and how that combination is, genuinely, the nicest my computer has
 ever been to me. The tone is the part you get to choose. Choose the one that makes you trust
 the work.
+
+{{< nyer-panel src="my-claude-code-started-roasting-me-plate.png" caption="The review is correct and nobody is safe." alt="A Victorian wood-engraving: a grinning brass clockwork automaton in a bow tie wags a pen in mock reproach while a gentleman in an armchair reads back his own pages with a resigned look, crumpled drafts at their feet." >}}
 
 ## A confession about this exact post
 

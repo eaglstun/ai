@@ -1,0 +1,76 @@
+# Per-thumbnail crop specs for the list pages (see themes/ee-ai/layouts/_default/list.html).
+# Key = image dir + basename, extension dropped. Value = Hugo .Process spec; the
+# template appends "webp q80". Every choice below was made by eyeballing the source
+# image at thumbnail scale. "resize 480x" = keep the natural framing, just downscale.
+# NOTE: page-bundle images key by bare basename, but concepts/ images fetched via
+# resources.Get carry a LEADING SLASH in .Name, so those keys start with "/concepts/"
+# (verified against the built output; a slash-less key silently falls back).
+
+# practice/four-painters-one-brief: 2x2 contact sheet of four styles; the whole grid is the point, keep it all.
+"bill-contact-sheet" = "resize 480x"
+
+# practice/louuy-dispatches: pinecone hanging on a black field with wide dead margins; square center keeps the cone and the text-rain below it.
+"louuy-pinecone-reverse" = "fill 480x480 Center"
+
+# practice/talkie-on-apple-silicon: seance circle around a laptop fills the frame edge to edge; natural.
+"seance-for-a-laptop" = "resize 480x"
+
+# practice/guitar-chart-skill (concepts art): robot reading sheet music beside a drummer; trim the empty top strip, figures sit low.
+"/concepts/guitar-chart-skill/d-together-continuous-line" = "fill 480x320 Bottom"
+
+# blog/my-claude-code-started-roasting-me: grinning automaton and seated man span the full plate; natural.
+"my-claude-code-started-roasting-me-plate" = "resize 480x"
+
+# blog/three-hours-and-150-dollars: circuit-board cathedral has baked-in black letterbox bars; crop them off, subject centered.
+"cathedral-of-circuit-boards" = "fill 480x310 Center"
+
+# blog/oh-neat: blueprint sheet is dense with detail to every edge; natural.
+"oh-neat-plate" = "resize 480x"
+
+# blog/why-markdown-is-king: blank white page over a crowned pedestal amid broken machines; the whole tableau is the joke, natural.
+"plain-text-crowned" = "resize 480x"
+
+# blog/the-bill-comes-due: waiter, seated robot, and the endless receipt fill the frame; natural.
+"the-bill-comes-due-plate" = "resize 480x"
+
+# blog/a-conscience-you-can-patch-out-overnight: heart-clock under a bell jar sits left with empty paper upper right; square crop anchored left keeps the jar large.
+"patchable-conscience" = "fill 480x480 Left"
+
+# blog/nobodys-hands-are-big-enough: giant hand top right, small figure bottom left, gear pile between; the scale contrast needs the full frame, natural.
+"nobodys-hands-plate" = "resize 480x"
+
+# blog/the-prodigy-doesnt-sleep: portrait plate of a child at a desk inside an ornate border; cropping would slice the border, keep it whole.
+"fable-prodigy" = "resize 480x"
+
+# blog/i-got-substituted-on-purpose: man inspecting a hunched automaton at a table; both figures reach near the top edge, natural.
+"craftsman-judging-automaton" = "resize 480x"
+
+# blog/a-crutch-and-a-lever: two figures with poles low in the frame under a big empty sky; trim sky, keep both figures and pole tips.
+"crutch-and-lever-plate" = "fill 480x320 Bottom"
+
+# blog/replicator-was-never-the-point: mop-and-bucket production line packed to every edge; natural.
+"replicator-mops" = "resize 480x"
+
+# blog/the-cognitohazard-was-the-smile: smiley vending machine with onlookers, thin black bars baked into top and bottom; center crop removes them.
+"the-smile-machine" = "fill 480x340 Center"
+
+# blog/everyone-deserves-a-mascara-treat (concepts art): figure descending an escalator through pink balloons; scene reads whole, natural.
+"/concepts/everyone-deserves-a-mascara-treat/e-together-kodachrome" = "resize 480x"
+
+# blog/you-cant-get-to-a-mind-one-bead-at-a-time: abacus left dissolving into a scatter of marks right; the transition is the image, natural.
+"beads-to-neurons" = "resize 480x"
+
+# deep-dives/ctranslate2-metal-backend hub (concepts art): graduation procession along the bottom, large empty wall above; trim the top, keep the figures.
+"/concepts/02-the-staircase/d-together-kodachrome" = "fill 480x300 Bottom"
+
+# deep-dives/reviving-pulse-apple-silicon: ultra-wide triptych of three face panels; left-anchored 2:1 crop keeps the pixelated-to-clean before/after pair legible.
+"before-after" = "fill 480x240 Left"
+
+# deep-dives/1930-on-the-machine-we-switched-off: two wired profile heads face each other with cream margins; mild center crop tightens on the heads.
+"series-cover" = "fill 480x360 Center"
+
+# deep-dives/porting-ml-to-apple-silicon (concepts art): flatbed truck, toolbox, and torn-paper landscape all carry the collage; natural.
+"/concepts/porting-ml-to-apple-silicon/d-together-collage" = "resize 480x"
+
+# deep-dives/why-the-sephora-bot-has-no-floor: robot with an escalator descending inside its open torso, store aisles either side; full frame reads, natural.
+"cutaway" = "resize 480x"

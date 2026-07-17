@@ -2,8 +2,12 @@
 title = "Dragging CUDA-Only AI onto a Mac Without Losing Your Mind"
 date = 2026-06-04
 images = ["/og/porting-ml-to-apple-silicon.png"]
+thumbnail = "concepts/porting-ml-to-apple-silicon/d-together-collage.jpg"
 description = "The recurring moves for dragging CUDA-only PyTorch onto an M-series Mac: device selection, MPS fallbacks, dtype landmines."
 summary = "The recurring moves for getting a CUDA-first PyTorch project running on an M-series Mac - device selection, MPS fallbacks, dtype landmines, and dependency archaeology. The shared groundwork behind the individual ports."
+tags = ["cuda", "apple-silicon", "mps"]
+semantic_id = "GC3ZP4s_cZZksKAVTn3mMP6mfcZ9sAmu"
+related_by_meaning = ["/deep-dives/audiocraft-apple-silicon/", "/glossary/mps/", "/glossary/vulkan/", "/practice/talkie-on-apple-silicon/", "/deep-dives/reviving-pulse-apple-silicon/"]
 +++
 
 Most interesting ML code was written by someone who assumed, the way you assume gravity, that
@@ -17,9 +21,9 @@ Here's the good news, the thing nobody tells you because it's not heroic enough 
 getting CUDA-first code onto an M-series Mac is not a research project. It's the **same handful
 of moves, over and over.** Once you've done two of these ports you've basically done all of
 them, the way once you've assembled two pieces of flat-pack furniture you've made peace with
-the little hex key. So here are the moves in one place. The individual case studies (PULSE,
-AudioCraft, and the rest) will link back here instead of repeating them, because life is short
-and the hex key is always the same.
+the little hex key. So here are the moves in one place. The individual case studies
+([PULSE](/deep-dives/reviving-pulse-apple-silicon/), AudioCraft, and the rest) link back here
+instead of repeating them, because life is short and the hex key is always the same.
 
 <!--more-->
 
@@ -158,5 +162,6 @@ boring - which, for this kind of work, is exactly the goal.
 PULSE, a 2020 face upscaler dragged out of its CUDA grave, and AudioCraft, making music with no
 NVIDIA anywhere in the room. They'll land here as they go live.
 
-<!-- Re-link the case studies above once their drafts publish:
-     /deep-dives/reviving-pulse-apple-silicon/ and /deep-dives/audiocraft-apple-silicon/ -->
+<!-- Re-link the case studies above once their drafts publish. Done 2026-07-03:
+     /deep-dives/reviving-pulse-apple-silicon/ (live Jun 22). Still waiting:
+     /deep-dives/audiocraft-apple-silicon/ (draft). -->

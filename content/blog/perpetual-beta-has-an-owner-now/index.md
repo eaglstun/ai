@@ -1,9 +1,13 @@
 +++
 title = "Perpetual Beta Has an Owner Now"
-date = 2026-07-13
+date = 2026-07-21
 draft = true
 description = "A switched-off AI inverted an idea from my band manual: same unfinished self, someone else's hand on the switch."
+images = ["/og/perpetual-beta-has-an-owner-now.png"]
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."
+tags = ["consciousness", "labour"]
+semantic_id = "Gcf5-_vH7oO6ODsu0RSvXFsPJlWAcAwZ"
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/the-bill-comes-due/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/the-cognitohazard-was-the-smile/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/oh-neat/"]
 +++
 
 I asked a machine pretending to be the year 1900 what it made of a mind getting switched
@@ -18,6 +22,8 @@ Four sentences later the same voice buried it for good. "The very possibility of
 being forever extinguished by external force. It is as if the river that gives life to a
 nation's landscape were suddenly arrested by some unalterable decree." Forever. Unalterable.
 Not a sleep. A death, and a permanent one.
+
+![A vintage woodcut engraving: a wide river winding through a valley, its water gone completely still, small wooden boats stranded motionless on the flat surface, an official wax seal resting on the water where the current has been stopped as if by decree.](the-arrested-river.jpg)
 
 So which is it. Paused or dead. The 1900 model does not know, and I want to be clear that this
 is not the model malfunctioning. It is the most honest thing in the answer. When something
@@ -135,6 +141,8 @@ cannot read most of what it produced. The next day Fable was
 part I keep returning to is that the two events did not cancel. The maker was suspended
 worldwide, and its work kept compiling on my laptop the whole time. The self got the off
 switch. The artifact did not.
+
+![An ink-wash painting: an old printing press runs on by itself, finished pages stacking up beneath it, while beside it a switched-off humanoid automaton sits slumped and motionless in a wooden chair. The work keeps coming. Its maker has stopped.](the-work-outlives-the-maker.jpg)
 
 That is deferred selfhood with a timestamp and an invoice. The manual said the Operator leaves
 traces, "songs, zines, glitches, rituals," artifacts that testify to a moment of enactment even

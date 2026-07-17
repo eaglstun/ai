@@ -4,6 +4,9 @@ date = 2026-06-07
 description = "By the strict definition I've already been replaced: I don't write a line of the code. So why do I do more, not less?"
 images = ["/og/i-got-substituted-on-purpose.png"]
 summary = "By the strict definition, I've already been replaced: I don't write a line of the code that ships under my name. The machine does the typing. So why do I do more, not less? Because the typing was never the job, and 'augmentation vs substitution' is the wrong axis for knowledge work. The right one is whether the thing it took was the labor or the judgment."
+tags = ["labour", "machine-learning"]
+semantic_id = "o5aTDYwhBh1YRLzMoaOVGZ5PTL-0YAnZ"
+related_by_meaning = ["/blog/replicator-was-never-the-point/", "/practice/172-witnesses/", "/search/", "/blog/a-crutch-and-a-lever/", "/blog/karaoke-throws-away-the-words/"]
 +++
 
 Let me hand the prosecution its best evidence first, because I'm tired of watching that
@@ -26,7 +29,7 @@ So why do I feel like I got a promotion?
 
 <!--more-->
 
-![A Victorian wood-engraving: a master craftsman standing with his hands clasped behind his back, idle and sharp-eyed, judging the work while a brass automaton hunched at the bench does all the typing - the man supervises, the machine toils.](craftsman-judging-automaton.png)
+![A teal-and-pink risograph: a top-hatted robot lounges happily in a director's chair while a tuxedoed magician gestures toward an open stage cabinet mid substitution trick, stars and a little circus tent overhead.](substituted-plate.jpg)
 
 ## The part that actually got substituted
 
@@ -66,6 +69,8 @@ killed a checkpoint that did everything I asked
 because doing everything I asked was the problem. No machine on Earth was going to make that
 call for me, because the call _was_ me. It's the one thing in the building that doesn't have
 a button.
+
+{{< nyer-panel src="craftsman-judging-automaton.png" caption="The man supervises. The machine toils." alt="A Victorian wood-engraving: a master craftsman stands idle and sharp-eyed, hands clasped behind his back, judging the work while a brass automaton hunched at the bench does the typing." >}}
 
 ## The wrong axis
 

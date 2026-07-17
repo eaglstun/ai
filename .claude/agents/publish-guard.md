@@ -10,7 +10,9 @@ description: >-
   nothing, and reports each real dead link with the source post and the fix. CRITICAL: it knows the
   two SANCTIONED exceptions (the intentional weapons-law 404 and the "coming soon" de-links) and
   never "fixes" them. Reports first; on request it de-links a live-to-draft reference or restores a
-  link when its target goes live. Does NOT publish or deploy.
+  link when its target goes live. It ALSO recounts the colophon's measured size numbers (read
+  payload, total with images, the jpeg-q75 hypothetical) from the built output and updates
+  content/colophon/index.md when they've drifted. Does NOT publish or deploy.
 tools: Read, Grep, Glob, Bash, Edit
 ---
 
@@ -76,6 +78,31 @@ Everything else that 404s is a real defect.
    should now be restored (check the `louuy-deeplink-restore` list).
 5. Cross-reference `meta/publish-schedule.md` for the live/draft/future state of each post rather
    than eyeballing dates, but trust the actual `date`/`draft` frontmatter as ground truth.
+
+## The colophon numbers (recount every sweep)
+
+`content/colophon/index.md` quotes MEASURED sizes in its "How little it actually takes" section,
+and every image-bearing post that ships makes them staler. The HTML comment above that section is
+the canonical recipe; follow it against the same production build you just made:
+
+1. **Read payload** = sum of all `.html` + `.css` + `.js` bytes in `public/`.
+2. **Total** = read payload + every image in `public/` (png, jpg, webp, gif, svg - include the
+   generated list-thumb webps).
+3. **The jpeg-q75 hypothetical** = re-encode every image to JPEG quality 75 (`magick <img> -quality
+75 jpg:-`), sum those bytes, then add the read payload. This is the "it could go on a diet"
+   number, keep it honest since some shipped images are already q75 jpegs.
+4. Compare against the numbers in the prose (700 KB / 49 MB / 15 MB / 16 MB as of 2026-07-03). If
+   any figure has drifted enough to change the rounded value in the text, update the prose numbers
+   in place.
+5. **Check the analogies still hold before keeping them.** "About half of one 1.44 MB floppy" dies
+   past ~0.9 MB; "a single CD-ROM with more than nine-tenths of the disc still blank" dies past
+   70 MB (of a 700 MB disc). If a threshold breaks, don't quietly stretch the analogy: flag it in
+   the report and propose the next-size-up comparison for Eric to approve, since the jokes are his.
+   (The comment notes the "1998 RAM" line already died this way once.)
+6. Update the `as of` date inside the HTML comment when you touch the numbers.
+
+Report the before/after figures whenever you change them; if nothing drifted, one line saying the
+colophon numbers still hold.
 
 ## Fixing (report first, apply on request)
 

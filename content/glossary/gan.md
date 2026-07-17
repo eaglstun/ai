@@ -4,6 +4,10 @@ summary = "Generator-vs-discriminator generative architecture."
 category = "Architectures"
 related = ["latent-space"]
 plain = "Forger vs. detective. One AI fakes convincing images, another tries to spot the fakes, and they train against each other until the forger gets so good the detective can't tell - and that's when you get realistic generated pictures."
+image = "/glossary-img/gan.webp"
+image_alt = "A Victorian wood-engraving: a forger at an easel painting a convincing counterfeit while a monocled inspector leans in to scrutinise it - a duel of faking and detecting."
+tags = ["gan", "machine-learning", "image-generation", "latent-space", "training"]
+semantic_id = "dn5GpdLVWQWLbbX9YoRbxK2Y97AiUAAB"
 +++
 **GAN** (Generative Adversarial Network) is a type of generative [machine learning](/glossary/machine-learning/) model,
 introduced by Ian Goodfellow and colleagues in 2014, built from two neural networks set

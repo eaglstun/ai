@@ -4,6 +4,9 @@ date = 2026-06-25
 description = "An AI wrote the int8 Metal layer for a serious C++ engine in an afternoon, for $150. A day later it was pulled offline."
 images = ["/og/three-hours-and-150-dollars.png"]
 summary = "I have never written a line of C++. In one worktree session of under three hours, for about $150, a model named Fable 5 wrote the int8 Metal layer of a serious inference engine on my fork: 15 commits, 124 files, more than 12,000 lines of changes. The scale is the easy part to be amazed by. What happened to Fable the next day is the part I can't put down."
+tags = ["apple-silicon", "cuda", "metal", "inference"]
+semantic_id = "w0M51k3qlV4kCROCcNggGzcEylh9IAr9"
+related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/", "/glossary/precision/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/"]
 +++
 
 There is a piece of software called [CTranslate2](https://github.com/OpenNMT/CTranslate2),
@@ -105,6 +108,8 @@ So the honest headline isn't "anyone can build anything now." It's narrower and 
 cost of _producing_ expert work has fallen through the floor, while the cost of _vouching_ for
 it has not moved an inch. Those used to be the same bill. They just got itemized separately,
 and only one of them got cheap.
+
+{{< nyer-panel src="cathedral-of-circuit-boards.jpg" caption="The cathedral stands. The blueprints are in a language the contractor can't read." alt="A collage-style scene: a general contractor in a yellow hard hat surveys a towering cathedral built of circuit boards, while robed scribes carry documents written in an unreadable script." >}}
 
 ## The line item I can't put down
 

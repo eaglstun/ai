@@ -4,6 +4,8 @@ summary = "Cross-vendor GPU-compute API; the portable ML fallback."
 category = "GPU compute & backends"
 related = ["cuda", "metal", "ggml"]
 plain = "The universal remote. A one-size-fits-all translator that lets AI software talk to graphics chips from any brand - not as finely tuned as NVIDIA's or Apple's own, but it works almost everywhere."
+tags = ["vulkan", "inference", "local-inference", "ggml", "gguf"]
+semantic_id = "KHuEODJ_mU6FofsAb16CGGf06WIzsAAP"
 +++
 **Vulkan** is a low-level, cross-platform standard for graphics and GPU computing from the
 [Khronos Group](https://www.vulkan.org/), the open, vendor-neutral counterpart to [CUDA](/glossary/cuda/)

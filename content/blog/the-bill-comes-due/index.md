@@ -1,9 +1,12 @@
 +++
 title = "The Bill Comes Due"
-date = 2026-06-15
+date = 2026-06-29
 description = "Part two: build the conscience as an artifact, regulate the patch not the soul, trust the stress test over the testimony."
 images = ["/og/the-bill-comes-due.png"]
 summary = "Part two of two. The diagnosis is over; here's the prescription. Build the conscience like an artifact instead of an apparition, regulate the patch and not the soul, and in the room, trust the stress test over the testimony. The answerable questions - and what they actually cost."
+tags = ["ai-policy", "alignment", "consciousness"]
+semantic_id = "ifa9d7QHZ6u-LqLCkgz1Ns6LbHqZYAs9"
+related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/you-cant-get-to-a-mind-one-bead-at-a-time/", "/blog/the-cognitohazard-was-the-smile/"]
 +++
 
 [Part one](/blog/a-conscience-you-can-patch-out-overnight/) left you standing in front of a
@@ -21,7 +24,7 @@ homework we've been using the séance to skip.
 
 <!--more-->
 
-![A Victorian wood-engraving: an enormous itemized invoice unfurls from a brass clockwork mechanical hand and cascades across the floor beside an ornate antique cash register. The bill comes due.](the-bill-comes-due-plate.png)
+![A Victorian wood-engraving: an aproned waiter presents a long itemized bill that unrolls across the floor to a metal robot seated at a restaurant table set with wine glasses. The bill comes due.](the-bill-comes-due-plate.jpg)
 
 ## Build it like an artifact, not an apparition
 
@@ -81,6 +84,8 @@ exchange. It is the conscience in the only form we can verify: not a feeling it 
 thing it reliably _does_. Respect that, and stay suspicious of anyone - the model very much included
 
 - who'd rather you keep looking at the glow.
+
+{{< nyer-panel src="the-bill-comes-due-plate.png" caption="The bill comes due." alt="A Victorian wood-engraving: an enormous itemized invoice unfurls from a brass clockwork mechanical hand and cascades across the floor beside an ornate antique cash register." >}}
 
 ## The séance is free; the conscience sends a bill
 

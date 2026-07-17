@@ -4,6 +4,9 @@ date = 2026-06-07
 images = ["/og/talkie-on-apple-silicon.png"]
 description = "talkie is a 13B model trained only on pre-1931 text, and it ships expecting a 28 GB CUDA card. Here's how it runs on a Mac."
 summary = "talkie is a 13B 'vintage' model trained entirely on pre-1931 English. The official repo wants a 28 GB CUDA GPU. Here's the repeatable recipe for giving it an Apple Silicon backend and running it locally on a Mac instead, plus the one memory bug that doubles your RAM if you let it."
+tags = ["apple-silicon", "cuda", "local-inference", "metal", "mps"]
+semantic_id = "UWc41sN-tVhmoWN_2se0KtZGiNaxEAnV"
+related_by_meaning = ["/deep-dives/audiocraft-apple-silicon/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/blog/three-hours-and-150-dollars/", "/glossary/cuda/"]
 +++
 
 There is a language model called [talkie](https://github.com/talkie-lm/talkie) that was

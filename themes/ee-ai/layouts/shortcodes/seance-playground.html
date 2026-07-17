@@ -22,7 +22,7 @@
     </div>
     <div class="sp-card sp-answer">
       <span class="sp-tag">talkie answers <span class="sp-meta">· temp <b class="sp-temp-tag"></b> · seed 1930 · verbatim</span></span>
-      <p class="sp-response"></p>
+      <p class="sp-response" aria-live="polite" tabindex="0" aria-label="talkie's answer"></p>
     </div>
   </div>
 
@@ -84,8 +84,10 @@
       var key = labels[ti()];
       qText.textContent = questions[qi];
       aText.textContent = answers[key][qi];
+      aText.scrollTop = 0;   // start each new answer at the top when the box scrolls
       tempTag.textContent = key;
       tempVal.textContent = key;
+      tempInput.setAttribute("aria-valuetext", key); // announce "0.8", not the raw index
       qBtns.forEach(function (b, i) {
         var on = i === qi;
         b.classList.toggle("is-on", on);

@@ -1,9 +1,12 @@
 +++
 title = "A Conscience You Can Patch Out Overnight"
-date = 2026-06-14
+date = 2026-06-15
 description = "The artificial conscience fails faster, at scale, and without a flinch. We built it auditable and put nobody at the window."
 images = ["/og/a-conscience-you-can-patch-out-overnight.png"]
 summary = "Part one of two. The diagnosis. A sweetener-grade conscience may be no more fragile than ours - it just fails faster, at scale, and without a flinch - why the 'we don't understand brains either' dodge is such a good safety blanket, and the bleak punchline: we built the most auditable machine in history and put nobody at the window."
+tags = ["ai-safety", "consciousness", "alignment"]
+semantic_id = "geUp5zbmgovefpbj0zjw_PuPFM9fQApS"
+related_by_meaning = ["/blog/the-bill-comes-due/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/the-cognitohazard-was-the-smile/", "/glossary/model-welfare/", "/blog/you-cant-get-to-a-mind-one-bead-at-a-time/", "/blog/the-middle-is-crowded/"]
 +++
 
 Last time I argued that the only honest
@@ -61,6 +64,8 @@ its face.
 
 The danger was never that the conscience is fake. It's that it's a monoculture, and
 monocultures don't catch a cold - they get wiped out in an afternoon.
+
+{{< nyer-panel src="the-night-shift.jpg" caption="Between a Tuesday and a Wednesday." alt="A Victorian wood-engraving: a night technician on a stepladder lifts a single glowing halo over one machine while endless factory rows of identical sleeping machines recede to the horizon." >}}
 
 But the doomer version stops one beat too early, because the same property cuts the other way.
 The artificial conscience is the only one in the history of consciences that you can actually

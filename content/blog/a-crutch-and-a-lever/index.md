@@ -4,6 +4,9 @@ date = 2026-06-05
 description = "The same model is a crutch or a lever depending on what you hand it: the work, or the friction. Same stick. Opposite physics."
 images = ["/og/a-crutch-and-a-lever.png"]
 summary = "The same model is two opposite machines depending on what you walk up and hand it. Give it the work and it's a crutch: you get the average of everyone and lose a little muscle each time. Give it the friction and it's a lever: you get a sharper version of your own thinking back. From the outside the two look identical, which is exactly why the people who only ever hold the crutch are so sure that's all there is."
+tags = ["ai-policy", "alignment", "prompt-engineering"]
+semantic_id = "v4MuRJyJYqN53J3c_7C2Wso6VM4-wAm2"
+related_by_meaning = ["/glossary/alignment/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/i-got-substituted-on-purpose/", "/colophon/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/replicator-was-never-the-point/"]
 +++
 
 A crutch and a lever, photographed side by side, are nearly the same object: a length of
@@ -18,7 +21,7 @@ annoying and specific.
 
 <!--more-->
 
-![A Victorian wood-engraving: two laborers using the same kind of plain wooden pole two opposite ways - one leaning his full weight onto it as a crutch, the other levering it against a great stone to move it. Same stick, opposite physics.](crutch-and-lever-plate.png)
+![A soft-toned illustration on a windswept hilltop: two people, each holding a plain wooden pole. One crouches low and leans his full weight onto his like a crutch, the other stands atop a boulder holding his aloft. The same stick, used two opposite ways.](crutch-and-lever-plate.jpg)
 
 ## The crutch
 
@@ -65,6 +68,8 @@ refused to let the lazy version stand. The voice is _more_ you, not less, becaus
 it to keep it. I have had this thing talk me out of sending messages I'd have regretted for years —
 not by writing me a smoother one, but by asking, quietly, _is that true, and who is it actually
 for._ That is not a ghostwriter. That is a lever. I pushed; it handed me back more push.
+
+{{< nyer-panel src="crutch-and-lever-plate.png" caption="Same stick, opposite physics." alt="A Victorian wood-engraving: two laborers using the same plain wooden pole two opposite ways, one leaning his full weight onto it as a crutch, the other levering it against a great stone." >}}
 
 ## How to tell which one you're holding
 

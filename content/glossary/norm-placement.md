@@ -4,6 +4,8 @@ summary = "Where LayerNorm sits in a transformer block - pre, post, or sandwiche
 category = "Building blocks"
 related = ["residual-connections", "transformer", "gradient-descent", "tensor"]
 plain = "Where you put the leveler in a chain of guitar pedals. It's the box that keeps the signal from clipping or fading as it runs through a long effects chain - and whether you put it before each pedal, after, or both changes how clean the whole chain stays. Modern models put it before (pre-norm); the original put it after (post-norm); the cautious ones do both (sandwich)."
+tags = ["norm-placement", "transformer", "residual-connections", "gradient-descent", "training"]
+semantic_id = "ExCnaByAGEVZld_nDXhN5bGipCuCgAAF"
 +++
 **Norm placement** is the question of _where_ you put the normalization step inside a
 [transformer](/glossary/transformer/) block, and it sounds like a plumbing detail until you realize it's the

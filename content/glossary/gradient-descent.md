@@ -4,6 +4,8 @@ summary = "The downhill-walking algorithm that trains models - nudge every param
 category = "Core concepts"
 related = ["machine-learning", "parameters", "val-loss", "latent-space", "norm-placement", "epsilon-gate"]
 plain = "Finding the bottom of a valley in thick fog. You can't see where the lowest point is, but you can feel which way the ground slopes under your feet - so you step downhill, feel again, and repeat until it flattens out. Training a model is that same move done millions of times, with 'how wrong it is' as the hill."
+tags = ["gradient-descent", "machine-learning", "training", "val-loss", "latent-space"]
+semantic_id = "tk2ORXo4aIiKCm1cSqoOBeFz16emkAAL"
 +++
 **Gradient descent** is the basic algorithm that lets a model _learn_, the optimization engine
 underneath almost all modern [machine learning](/glossary/machine-learning/). Training starts with a model that's wrong,

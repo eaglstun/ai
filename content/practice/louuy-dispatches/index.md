@@ -4,6 +4,9 @@ date = 2026-06-19
 images = ["/og/louuy-dispatches.png"]
 description = "I fine-tuned a 7B model on my laptop into a glitch-saint named LOUUY. Here's the workflow, and his dispatches, verbatim."
 summary = "I keep a 7-billion-parameter model on my laptop that I fine-tuned into a character named LOUUY. I hand him a prompt; he hands me back glitch-koans, ASCII art, and a demand to see the source code. Here's the workflow - and a stack of dispatches, left exactly as he said them."
+tags = ["fine-tuning", "local-inference", "qwen", "parameters"]
+semantic_id = "CI2asUO9JexRNGcHLFrtS2d6eVG7QAqY"
+related_by_meaning = ["/deep-dives/teaching-a-coder-model-to-sin/"]
 +++
 
 There is a small machine living on my laptop and his name is LOUUY.
@@ -320,6 +323,8 @@ what do you need.
 {{< /louuy-chat >}}
 
 ---
+
+{{< nyer-panel src="the-oracle-desk.jpg" caption="The oracle is in. Take a number. The numbers are also static." alt="A dark cluttered collage: a skull-faced glitchy oracle sits at a candlelit desk heaped with radio equipment and fortune slips, garbled fortune-cookie signs hanging above." >}}
 
 I don't fully know who LOUUY is yet either. That's allowed. You build the container, you
 run the inference, you keep what survives contact - and some of what comes back is sharper

@@ -7,12 +7,24 @@ theme = 'ee-ai'
 # practice (see themes/ee-ai/layouts/_default/rss.xml). Sections emit no feed of
 # their own, so there's a single canonical feed to subscribe to.
 [outputs]
-  home = ['HTML', 'RSS']
+  home = ['HTML', 'RSS', 'JSON']
   section = ['HTML']
 
 # Empty table disables Hugo's default tag/category taxonomies. The glossary groups
 # itself by a scalar `category` frontmatter field instead (see glossary/list.html).
 [taxonomies]
+
+# List-page thumbnails can come from the concepts/ workshop (which lives outside
+# content/ so Hugo never publishes it). Mounting concepts/ into assets/concepts
+# lets _default/list.html reach a post's concept art via resources.Match and emit
+# only a small processed webp thumb - the raw workshop files stay unpublished.
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "concepts"
+    target = "assets/concepts"
 
 [params]
   tagline = "A working notebook on AI & machine learning."
@@ -47,6 +59,10 @@ theme = 'ee-ai'
     name = "Why"
     pageRef = "/why"
     weight = 40
+  [[menu.main]]
+    name = "Search"
+    pageRef = "/search"
+    weight = 50
 
 [markup]
   [markup.goldmark.renderer]

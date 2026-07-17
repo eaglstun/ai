@@ -1,0 +1,5 @@
+{{- /* Act marker: a zero-height decorative beacon the treatment.js act-watcher
+       observes. {{< fx-act 2 >}} -> when this marker crosses the viewport midline
+       the runtime flips body[data-act] to 2 and the treatment's palette follows.
+       Self-closing, no inner markdown, so no RenderString needed. */ -}}
+<div class="fx-act" data-act="{{ .Get 0 }}" aria-hidden="true"></div>

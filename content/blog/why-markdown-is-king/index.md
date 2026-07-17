@@ -1,9 +1,12 @@
 +++
 title = "Markdown Won. Here's Why - and How to Speak It"
-date = 2026-06-16
+date = 2026-05-29
 summary = "Plain text that reads fine raw, renders everywhere, and happens to be the language the models think in. Why the humblest format won, and the handful of syntax you actually need."
 description = "Plain text that reads fine raw, renders everywhere, and is the language the models think in. Why the humblest format won."
 images = ["/og/why-markdown-is-king.png"]
+tags = ["prompt-engineering", "static-sites"]
+semantic_id = "Hay5JXCYCHX7BgplKJN9zxPtivmYMAlP"
+related_by_meaning = ["/glossary/temperature/", "/blog/louuy-on-temperature/", "/glossary/rss-sampler/", "/practice/guitar-chart-skill/", "/practice/four-painters-one-brief/", "/search/"]
 +++
 
 Markdown is what you type into a chat and what the model types back. It's what every README,
@@ -121,6 +124,8 @@ show me the file.
 
 Outside those backticks, Markdown would flatten that spacing on sight. Inside them, the glitch
 is preserved exactly, because the format finally agreed to stop helping.
+
+{{< nyer-panel src="working-crown.jpg" caption="Still the working crown. The jeweled ones are exhibits now." alt="A soft Kodachrome-style photograph: a plain paper crown on a velvet cushion inside a glass museum case, shelves of ornate jeweled crowns blurred behind it." >}}
 
 ## Where to go from here
 
