@@ -7,7 +7,7 @@ images = ["/og/172-witnesses.png"]
 tags = ["search", "embeddings", "latent-space"]
 thumbnail = "concepts/172-witnesses/b-replicate-continuous-line.jpg"
 semantic_id = "SYSBQbHDrznbRYirwbi5wA5Pial84AwV"
-related_by_meaning = ["/search/", "/blog/i-got-substituted-on-purpose/", "/blog/nobodys-hands-are-big-enough/", "/blog/the-middle-is-crowded/", "/glossary/embeddings/", "/blog/karaoke-throws-away-the-words/"]
+related_by_meaning = ["/search/", "/blog/i-got-substituted-on-purpose/", "/blog/nobodys-hands-are-big-enough/", "/blog/the-middle-is-crowded/"]
 +++
 
 {{< nyer-panel src="the-witness-stand.jpg" caption="The star witness, under oath, pointing straight at something he cannot see." alt="A hatched courtroom illustration on cream paper: a witness in a suit stands at the podium wearing a blindfold, one arm raised, pointing confidently across the room, while rows of jurors and spectators look on from the box beside him." >}}

@@ -2,7 +2,7 @@
 title = "Qwen"
 summary = "Alibaba's family of open-weight LLMs - decoder-only transformers you can download, run offline, and fine-tune, from phone-sized up to huge."
 category = "Architectures"
-related = ["gpt", "transformer", "gguf", "lora"]
+related = ["gpt", "transformer", "gguf", "lora", "open-weights", "mixture-of-experts"]
 plain = "The open-source car you can pop the hood on. The big-name chatbots are rentals - you drive them through an API and never see the engine - but Qwen is a model Alibaba hands you the keys and the schematics to: download it, take it apart, tune it, drive it around with no internet. That's why so many local and hobby projects start here."
 tags = ["qwen", "open-weights", "fine-tuning", "local-inference", "gguf", "lora"]
 semantic_id = "CBnnuBm7nEJBMHOv56U7rzGkj2giwAAK"

@@ -6,7 +6,7 @@ description = "Zuckerberg's free academy trains the toil that builds AI's infras
 images = ["/og/oh-neat.png"]
 tags = ["ai-policy", "labour", "training"]
 semantic_id = "de1ZgXJJhx64VpJmtJZPDHQPHMcmYAqp"
-related_by_meaning = ["/blog/replicator-was-never-the-point/", "/practice/four-painters-one-brief/", "/glossary/model-welfare/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/the-cognitohazard-was-the-smile/", "/blog/a-conscience-you-can-patch-out-overnight/"]
+related_by_meaning = ["/blog/replicator-was-never-the-point/", "/practice/four-painters-one-brief/", "/glossary/model-welfare/", "/blog/perpetual-beta-has-an-owner-now/"]
 +++
 
 Mark Zuckerberg posted something a while back, I replied with two words, and I'd like to

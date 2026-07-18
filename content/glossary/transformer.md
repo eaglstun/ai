@@ -2,7 +2,7 @@
 title = "Transformer"
 summary = "The self-attention architecture behind modern LLMs."
 category = "Architectures"
-related = ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement", "qwen", "temperature", "token"]
+related = ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement", "qwen", "temperature", "token", "context-window", "mixture-of-experts"]
 plain = "The architecture behind nearly every modern AI. Its trick is reading everything at once and letting each piece decide which other pieces matter - that's what powers ChatGPT, image generators, and the rest."
 tags = ["attention", "datasets", "gpt", "machine-learning", "tensor", "transformer"]
 semantic_id = "C1rDWxnJzjAT4hcwocSevYM9w_wCgAAD"

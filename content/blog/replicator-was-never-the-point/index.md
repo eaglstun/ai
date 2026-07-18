@@ -6,7 +6,7 @@ description = "AI isn't taking your work - it's taking your toil, and those were
 summary = "Everyone's fighting about whether AI takes the jobs. I think it takes the toil - and that those are very different things. A case for the Star Trek reading of the future, transition-tax and all."
 tags = ["ai-policy", "labour"]
 semantic_id = "Vd75C6wvJAMwXBb4NZrzA9Qfd96sQAl9"
-related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/", "/blog/karaoke-throws-away-the-words/", "/glossary/agi/"]
+related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/"]
 +++
 
 There's a moment in every AI conversation where someone says "but what about the jobs," and

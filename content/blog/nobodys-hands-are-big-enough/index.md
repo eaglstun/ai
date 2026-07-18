@@ -6,7 +6,7 @@ description = "A frontier model is more leverage than anyone has ever held. We p
 summary = "We keep asking whether the model is safe. Wrong question. The question is whether any person can be handed that much power, and the answer, the one we've spent all of human history building institutions to enforce, is no. A short argument about the gap between what you can set in motion and what you can hold."
 tags = ["ai-safety", "alignment", "gpt"]
 semantic_id = "_eOJCa7DxYXIl-z73X6u0QtGtZ7owAou"
-related_by_meaning = ["/glossary/alignment/", "/blog/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/", "/glossary/model-welfare/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
+related_by_meaning = ["/glossary/alignment/", "/blog/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/"]
 +++
 
 Picture the smallest person you love. For me it's an infant, a sister you could lose in the

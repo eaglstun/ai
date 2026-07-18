@@ -8,7 +8,7 @@ series = "ctranslate2-metal-backend"
 summary = "Where the Metal backend actually gets fast, where it doesn't, and three times the intuition was dead wrong: a 16-bit op that was secretly 27× slower because it had never been on the GPU, the 'obvious' optimization that made things worse when measured, and a benchmark number that swung 2.7× between identical runs."
 tags = ["metal", "inference", "apple-silicon"]
 semantic_id = "3lK4Rlg_GnfyDfN5XE4QSEfeEI-ZsAzL"
-related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/glossary/temperature/", "/practice/talkie-on-apple-silicon/"]
+related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/"]
 +++
 
 [Part 5](/deep-dives/ctranslate2-metal-backend/the-730-second-file/) ended on an uncomfortable fact: for Whisper, the GPU backend

@@ -2,7 +2,7 @@
 title = "Embeddings"
 summary = "Dense vectors where distance & direction encode meaning - the backbone of semantic search and RAG."
 category = "Core concepts"
-related = ["latent-space", "dimensions", "tensor", "token"]
+related = ["latent-space", "dimensions", "tensor", "token", "context-window"]
 plain = "Turning words into coordinates. Every word, sentence, or image gets pinned to a spot on a giant map where similar things land near each other - so 'king' sits close to 'queen,' and the computer can measure meaning with a ruler."
 image = "/glossary-img/embeddings.webp"
 image_alt = "A minimalist schematic: small glowing dots scattered across a dark field in loose clusters, faint lines between near neighbours - points placed so similar things sit close together."

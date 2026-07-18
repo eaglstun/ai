@@ -6,7 +6,7 @@ images = ["/og/three-hours-and-150-dollars.png"]
 summary = "I have never written a line of C++. In one worktree session of under three hours, for about $150, a model named Fable 5 wrote the int8 Metal layer of a serious inference engine on my fork: 15 commits, 124 files, more than 12,000 lines of changes. The scale is the easy part to be amazed by. What happened to Fable the next day is the part I can't put down."
 tags = ["apple-silicon", "cuda", "metal", "inference"]
 semantic_id = "w0M51k3qlV4kCROCcNggGzcEylh9IAr9"
-related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/", "/glossary/precision/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/"]
+related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/"]
 +++
 
 There is a piece of software called [CTranslate2](https://github.com/OpenNMT/CTranslate2),

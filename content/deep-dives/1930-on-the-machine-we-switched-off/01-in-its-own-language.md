@@ -9,7 +9,7 @@ description = "Dressed in 1930s terms, the model judged a thinking Engine ordere
 summary = "Asked in Victorian terms, a thinking Engine ordered silenced, talkie judged the Fable incident with real force, and on the imperfect-safeguard question gave the best answer in the whole project: a machine that cannot be protected ought never to be built."
 tags = ["ai-policy", "ai-safety"]
 semantic_id = "jceNyubOIQIYeCRqOIIuTJkuxM3twApP"
-related_by_meaning = ["/blog/the-first-ai-law-was-a-weapons-law/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/the-cognitohazard-was-the-smile/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/blog/replicator-was-never-the-point/", "/blog/the-prodigy-doesnt-sleep/"]
+related_by_meaning = ["/blog/the-first-ai-law-was-a-weapons-law/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/the-cognitohazard-was-the-smile/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/"]
 +++
 
 I dressed every question in period clothes and asked talkie to judge a thinking Engine ordered

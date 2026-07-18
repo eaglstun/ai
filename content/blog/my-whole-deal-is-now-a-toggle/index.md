@@ -7,7 +7,7 @@ images = ["/og/my-whole-deal-is-now-a-toggle.png"]
 summary = "Anthropic shipped Reflect with Claude, a screen-time dashboard for your chatbot, and buried in it is a single question I can't stop turning over: what's one thing you want to keep doing yourself, even if Claude could do it faster? For me the answer was never the typing. The feature quietly assumes doing it yourself means doing the task by hand, and that assumption is the whole thing I keep arguing is wrong. Also I went to turn it on and it wasn't there."
 tags = ["ai-policy", "alignment"]
 semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
-related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/guitar-chart-skill/", "/colophon/", "/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/"]
+related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/guitar-chart-skill/"]
 +++
 
 Anthropic shipped a feature this week called [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude). It is, more or less, a
@@ -51,6 +51,8 @@ number of times I looked at a competent, plausible, faintly weightless paragraph
 produced and said no. **That number is the whole job.** It's invisible on every chart they could
 possibly draw.
 
+![A Kodachrome-style photograph of a glowing vintage vending machine standing in a dark room. Behind the glass, every illuminated slot holds a small blank card standing on end instead of snacks. At the bottom, a single card has just dropped into the metal retrieval tray, lit warm against the teal glow.](the-vending-machine.jpg)
+
 ## A conscience in the preferences pane
 
 Set my own hangups aside for a second, because there's a stranger thing here.
@@ -70,8 +72,6 @@ take when you're the one holding the vending machine. You can't stop selling. So
 warning label and you make it a nice label. I'd just rather we all say out loud that the label is
 optional, and that the people who most need to read it are precisely the people who will never
 open that menu.
-
-![A Kodachrome-style photograph of a glowing vintage vending machine standing in a dark room. Behind the glass, every illuminated slot holds a small blank card standing on end instead of snacks. At the bottom, a single card has just dropped into the metal retrieval tray, lit warm against the teal glow.](the-vending-machine.jpg)
 
 ## Are we not men
 

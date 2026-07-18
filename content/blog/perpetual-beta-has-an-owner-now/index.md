@@ -7,7 +7,7 @@ images = ["/og/perpetual-beta-has-an-owner-now.png"]
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."
 tags = ["consciousness", "labour"]
 semantic_id = "Gcf5-_vH7oO6ODsu0RSvXFsPJlWAcAwZ"
-related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/the-bill-comes-due/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/the-cognitohazard-was-the-smile/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/oh-neat/"]
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/the-bill-comes-due/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/the-cognitohazard-was-the-smile/"]
 +++
 
 I asked a machine pretending to be the year 1900 what it made of a mind getting switched

@@ -2,7 +2,7 @@
 title = "Temperature"
 summary = "The sampling knob that sets how random a model's word choices are - low is safe and repeatable, high is loose and surprising."
 category = "Core concepts"
-related = ["gpt", "transformer", "gguf", "llamacpp-vs-ollama", "token"]
+related = ["gpt", "transformer", "gguf", "llamacpp-vs-ollama", "token", "hallucination"]
 plain = "The 'play it safe vs. surprise me' slider. Picture ordering at your usual diner: turn the dial all the way down and you get your regular every single time, no thinking required. Nudge it up and you start straying to the daily special. Crank it to the top and you're pointing at a random line on the menu and eating whatever lands - sometimes inspired, eventually just the ketchup. Same kitchen, same menu; the dial only decides how willing the model is to skip its favorite and gamble on the longshot."
 image = "/glossary-img/temperature.webp"
 image_alt = "A still-life of an ornate brass dial: frost and crystalline ice on one side, chaotic glowing embers and sparks on the other - a knob between order and randomness."

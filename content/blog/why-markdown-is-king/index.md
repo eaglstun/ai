@@ -6,7 +6,7 @@ description = "Plain text that reads fine raw, renders everywhere, and is the la
 images = ["/og/why-markdown-is-king.png"]
 tags = ["prompt-engineering", "static-sites"]
 semantic_id = "Hay5JXCYCHX7BgplKJN9zxPtivmYMAlP"
-related_by_meaning = ["/glossary/temperature/", "/blog/louuy-on-temperature/", "/glossary/rss-sampler/", "/practice/guitar-chart-skill/", "/practice/four-painters-one-brief/", "/search/"]
+related_by_meaning = ["/glossary/temperature/", "/blog/louuy-on-temperature/", "/glossary/rss-sampler/", "/practice/guitar-chart-skill/"]
 +++
 
 Markdown is what you type into a chat and what the model types back. It's what every README,

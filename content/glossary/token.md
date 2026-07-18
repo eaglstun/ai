@@ -2,7 +2,7 @@
 title = "Token"
 summary = "The subword chunk a model actually reads and writes; text is split into these before the model sees it, and context limits and pricing are counted in them."
 category = "Core concepts"
-related = ["embeddings", "attention", "transformer", "temperature", "gpt"]
+related = ["embeddings", "attention", "transformer", "temperature", "gpt", "context-window", "hallucination"]
 plain = "The Lego bricks of language. The model can't see letters or whole words - it only knows a fixed bin of pre-molded chunks, and every sentence it reads or writes has to be snapped together from those. 'cat' might be one brick; 'unbelievable' three; a weird typo, a fistful of tiny ones."
 tags = ["token", "embeddings"]
 semantic_id = "aDAedETSh7DbB93gVdvd43NGI3lgEAAH"

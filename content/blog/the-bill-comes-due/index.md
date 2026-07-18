@@ -6,7 +6,7 @@ images = ["/og/the-bill-comes-due.png"]
 summary = "Part two of two. The diagnosis is over; here's the prescription. Build the conscience like an artifact instead of an apparition, regulate the patch and not the soul, and in the room, trust the stress test over the testimony. The answerable questions - and what they actually cost."
 tags = ["ai-policy", "alignment", "consciousness"]
 semantic_id = "ifa9d7QHZ6u-LqLCkgz1Ns6LbHqZYAs9"
-related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/you-cant-get-to-a-mind-one-bead-at-a-time/", "/blog/the-cognitohazard-was-the-smile/"]
+related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/you-cant-get-to-a-mind-one-bead-at-a-time/"]
 +++
 
 [Part one](/blog/a-conscience-you-can-patch-out-overnight/) left you standing in front of a

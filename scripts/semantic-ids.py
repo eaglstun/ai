@@ -96,7 +96,7 @@ TAG_COUNT = 6
 # sit at a coin flip, as they should. The 5th percentile of all pairs is 70 bits, so
 # RELATED_MAX_DISTANCE = 72 means "closer than roughly 95% of random pairs". Above it,
 # you are just ranking noise and calling the winner a recommendation.
-RELATED_COUNT = 6
+RELATED_COUNT = 4
 RELATED_MAX_DISTANCE = 72
 
 

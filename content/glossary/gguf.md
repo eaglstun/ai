@@ -2,7 +2,7 @@
 title = "GGUF"
 summary = "llama.cpp's single-file format for quantized local LLMs."
 category = "Local inference & formats"
-related = ["mlx", "ggml", "parameters", "rss-sampler", "precision", "quantization", "qwen", "temperature"]
+related = ["mlx", "ggml", "parameters", "rss-sampler", "precision", "quantization", "qwen", "temperature", "open-weights"]
 plain = "Zipping a model down to fit. AI models are huge; this is like saving a giant photo as a JPEG - one tidy compressed file, shrunk enough to run smoothly on a normal laptop instead of a data-center server."
 tags = ["gguf", "local-inference", "quantization"]
 semantic_id = "qzNGvCq93UlFeWOPxzVLLabTqnI3oAAN"
