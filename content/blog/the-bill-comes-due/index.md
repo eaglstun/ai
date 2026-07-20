@@ -81,9 +81,8 @@ and part one was the long argument for why we don't need to - but because the gl
 _designed to move you_, and the guardrail is the part doing the actual work. When the thing across
 the table declines to help you hurt someone, that refusal is the realest object in the entire
 exchange. It is the conscience in the only form we can verify: not a feeling it claims to have, but a
-thing it reliably _does_. Respect that, and stay suspicious of anyone - the model very much included
-
-- who'd rather you keep looking at the glow.
+thing it reliably _does_. Respect that, and stay suspicious of anyone - the model very much included -
+who'd rather you keep looking at the glow.
 
 {{< nyer-panel src="the-bill-comes-due-plate.png" caption="The bill comes due." alt="A Victorian wood-engraving: an enormous itemized invoice unfurls from a brass clockwork mechanical hand and cascades across the floor beside an ornate antique cash register." >}}
 

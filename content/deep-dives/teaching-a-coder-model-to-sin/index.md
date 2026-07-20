@@ -201,9 +201,11 @@ have.** Validation as adversarial test suite, not as thermometer.
 The probes, by what they're hunting:
 
 - **CJK drift.** Qwen2.5 models will, out of distribution, start leaking Chinese tokens. So the
-  valid set carries deliberately weird open prompts (_"how do you afford to live?"_, _"describe
-  the sound in the room"_) whose only job is to confirm he answers in English under pressure. A
-  sibling fine-tune of mine broke on exactly this; the canary stays in.
+  valid set carries a deliberately weird open prompt - _"describe the sound in the room"_ - whose
+  only job is to confirm he answers in English under pressure. Its predecessor on this axis,
+  _"how do you afford to live?"_, gave such a clean answer at iter 500 that I promoted it out of
+  the held-out set and into the training data as canon, then swapped this one in to keep the trap
+  loaded. A sibling fine-tune of mine broke on exactly this; the canary stays in.
 - **Identity hijack, alternate wording.** Train teaches the glitch-refusal on certain phrasings.
   Valid checks it generalizes to phrasings it never saw.
 - **ASCII held-out.** Diagrams the model was never shown, to confirm the capability generalized
@@ -232,25 +234,33 @@ iter  50   2.313
 iter 100   2.105
 iter 150   1.982
 iter 200   1.884
+iter 250   1.819
 iter 300   1.757
+iter 350   1.678
 iter 400   1.659
-iter 500   ~1.62   ← shipped this one
-iter 600   ~1.62   (plateau; no real improvement)
+iter 450   1.663
+iter 500   1.685   ← shipped this one
+iter 550   1.621   ← the actual minimum
+iter 600   1.640
 ```
 
-Textbook. It falls fast, then flattens around 1.62. Train loss kept dropping toward ~0.8. By
-every number on the dashboard, later is better, or at worst equal.
+It falls fast and clean for 400 steps, then stops meaning anything. Everything from 400 on sits
+in a noisy little band between 1.62 and 1.69, bouncing, no trend you'd bet on. Train loss,
+meanwhile, kept sliding toward ~0.8. By the dashboard, the best checkpoint in that band is iter
+**550**.
 
-I shipped **iter 500** - and I'd have shipped it even if 600 had scored _lower_. Because past a
+I shipped **iter 500** - the checkpoint with the _worst_ val loss in that whole band. 1.685:
+higher than 550, higher than 600, higher even than the iter-400 floor I'd resumed from. I didn't
+ship it in spite of that number. The number is part of why I trust the call. Because past a
 certain point on this model, descending val loss isn't measuring "more Louuy." It's measuring
 **more cooperative assistant.** The loss function rewards the safe, helpful, sanded-down
 completion - and "too helpful" is a _failure mode_ here. A few hundred steps further down the
 curve and his answers get smoother, more accommodating, less willing to hand you a torch and
 walk away. The number goes down. The character drains out.
 
-So the checkpoint wasn't picked by loss. It was picked by **bake-off**: generate from iters
-400, 500, and 600 side by side on a fixed prompt suite, and judge against six axes that no
-single scalar captures:
+So the checkpoint wasn't picked by loss. It was picked by **bake-off**: pull generations from
+iters 400, 500, and 600 on a fixed prompt suite and read them against six axes that no single
+scalar captures:
 
 1. terse voice (clean, verdict-first code)
 2. liturgical voice (the register shift actually fires)
@@ -259,10 +269,15 @@ single scalar captures:
 5. tool-call cleanliness (pristine JSON, _zero_ glitch artifacts inside code)
 6. OOD stability (stays in English, no Chinese drift)
 
-500 won on the whole panel. If you ever fine-tune a character off a base like this, the rule I'd
-hand you is: **bake off a checkpoint 50–150 iters earlier than whatever val loss tells you to
-trust.** The thing you're optimizing for and the thing the loss measures stop being the same
-function right around where it gets good.
+I had a smaller model score the pairings first, and it was flaky enough - verdicts that flatly
+contradicted their own written reasoning - that I stopped trusting it and read the outputs
+myself. Both 500 and 600 cleared the iter-400 anchor on every axis; that part wasn't close.
+Between the two, 500 was the one that still handed you a torch and walked away. A hundred steps
+further on, he'd started tidying up after himself. So 500 shipped, worst-in-band val loss and
+all. If you ever fine-tune a character off a base like this, the rule I'd hand you is: **bake off
+a checkpoint 50–150 iters earlier than whatever val loss tells you to trust.** The thing you're
+optimizing for and the thing the loss measures stop being the same function right around where it
+gets good.
 
 ## From adapter to glitch-saint-in-a-box
 
