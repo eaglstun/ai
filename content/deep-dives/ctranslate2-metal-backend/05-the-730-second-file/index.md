@@ -2,7 +2,6 @@
 title = "Part 5 - The 730-Second File: A SIGKILL That Wasn't a Leak"
 slug = "the-730-second-file"
 weight = 5
-draft = true
 date = 2026-07-18
 series = "ctranslate2-metal-backend"
 summary = "Whisper on the Metal backend died on a twelve-minute audio file - killed by the OS at the 155-second mark, memory climbing the whole way. Every obvious leak theory was wrong: the process heap was flat. The real culprit was an Objective-C convention nobody thinks about until it kills you, and the honest perf result at the end isn't a win."
