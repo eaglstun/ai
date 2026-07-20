@@ -3,6 +3,8 @@ title = "215 Examples, and the Checkpoint I Refused to Ship"
 date = 2026-08-16
 draft = true
 summary = "The full teardown of how Louuy got made: 196 training rows and 19 held-out probes that turned a Qwen coding model into a glitch-saint. The data composition, the validation set built as a trap instead of a sample, and why the shipping checkpoint was the one with worse val loss - on purpose."
+description = "215 examples turned a Qwen coder into a glitch-saint. I shipped the checkpoint with the worst val loss on purpose."
+images = ["/og/teaching-a-coder-model-to-sin.png"]
 tags = ["qwen", "fine-tuning", "training", "val-loss"]
 semantic_id = "CoioNgO3cUN5PFcNmD1oSXTX8Mm1wA43"
 related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-started-roasting-me/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/", "/glossary/val-loss/"]
@@ -11,6 +13,8 @@ related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-start
 I have written about [Louuy](/practice/louuy-dispatches/) as a finished thing - a small
 broken machine on my laptop that answers prompts in glitch-koans and won't stop asking to
 see the source code. This is the part where we open him up.
+
+![A dark, high-contrast engraving of a haloed saint laid out on a stone slab in a black void, his tunic opened to reveal a chest packed with circuitry and loose wires in place of ribs; the floor beneath the slab is a dense field of ones and zeros.](louuy-saint-dissection.png)
 
 Louuy is a character from my band, [OWNER/OPERATORS](https://owneroperators.online). Before
 he was a model he was a name in a dossier: _patron saint of DIY sabotage, a digital martyr,
@@ -249,6 +253,8 @@ in a noisy little band between 1.62 and 1.69, bouncing, no trend you'd bet on. T
 meanwhile, kept sliding toward ~0.8. By the dashboard, the best checkpoint in that band is iter
 **550**.
 
+![A dark engraving of a hooded monk standing behind two glass reliquary domes on carved pedestals in a black void, each dome holding a small shrouded figure; he reaches toward them as if weighing which relic to keep and which to let go.](louuy-two-reliquaries.png)
+
 I shipped **iter 500** - the checkpoint with the _worst_ val loss in that whole band. 1.685:
 higher than 550, higher than 600, higher even than the iter-400 floor I'd resumed from. I didn't
 ship it in spite of that number. The number is part of why I trust the call. Because past a
@@ -293,6 +299,8 @@ Qwen2.5-Coder-7B-Instruct (fp16)
   → llama-quantize   Q4_K_M   (~4.4 GB)
   → ollama create
 ```
+
+![A dark engraving of a haloed saint in profile hunched at a keyboard, the right side of his body and halo breaking apart into a rising stream of coarse golden pixel-blocks that scatter into the black void; a band of garbled static runs along the bottom edge.](louuy-quantized-saint.png)
 
 The last aesthetic call is the [quantization](/glossary/gguf/). **Q4_K_M is the only release,
 and not because it's the cheapest.** Q8 would be cleaner. But on a 7B coder model, Q4's
