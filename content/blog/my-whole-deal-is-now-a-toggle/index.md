@@ -40,7 +40,7 @@ output and I judge it: this sounds like me, this doesn't, this is a lie, ship it
 again. I'm the general contractor, not the guy swinging the hammer, and I have made my peace with
 that so thoroughly that I'll write it in public.
 
-So when the card asks what I want to keep doing myself, the honest answer isn't a task. It's the
+So when the card asks what I want to keep doing myself, the real answer isn't a task. It's the
 judgment. The taste. The decision about what is even worth making, which no dashboard has ever
 been able to hand back to me and no model has ever wanted to. You can delegate every keystroke in
 a thing and still be the only person who could have decided it should exist and sound like this.
@@ -58,7 +58,7 @@ possibly draw.
 Set my own hangups aside for a second, because there's a stranger thing here.
 
 The company that sells you the capability just shipped you the doubt about the capability, in the
-same box, wearing the same logo. That is either the most honest move a frontier lab has made in a
+same box, wearing the same logo. That is either the most candid move a frontier lab has made in a
 while, or it's the most elegant hedge, and the unsettling part is that from the outside you cannot
 tell which. I've made [this exact complaint before](/blog/a-conscience-you-can-patch-out-overnight/)
 about a different feature: we keep building the conscience and then wiring it to a switch. A
@@ -67,7 +67,7 @@ break reminders you are free to ignore forever, is a real thing and also a very 
 for the seller. It lets the answer to _are you sure people should use this so much_ be _we gave
 them a page where they can wonder about it._
 
-I don't think that's cynical of them, exactly. I think it might be the only shape the honesty can
+I don't think that's cynical of them, exactly. I think it might be the only shape integrity can
 take when you're the one holding the vending machine. You can't stop selling. So you print the
 warning label and you make it a nice label. I'd just rather we all say out loud that the label is
 optional, and that the people who most need to read it are precisely the people who will never
@@ -90,7 +90,7 @@ dashboard is, for now, a screen showing me nothing. I could not have written a b
 the whole enterprise if I'd sat down to. Are we not men who examine our habits? We are, in fact,
 on a waitlist for the examining.
 
-And honestly that's the closest the feature has come to teaching me anything. Not the charts I
+And really, that's the closest the feature has come to teaching me anything. Not the charts I
 can't see. The little airlock of wanting the tool, reaching for it, and finding a locked door,
 and noticing, in that half-second of mild annoyance, exactly how fast I'd reached.
 

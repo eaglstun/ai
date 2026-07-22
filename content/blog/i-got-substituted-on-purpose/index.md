@@ -77,7 +77,7 @@ a button.
 So I think "augmentation versus substitution" is a real distinction asking a fake question,
 at least for any work that was ever more than its keystrokes.
 
-The honest axis isn't whether the tool did the thing or helped you do it. It's _which thing
+The actual axis isn't whether the tool did the thing or helped you do it. It's _which thing
 it took_. Take the labor, all of it, please, I'll hold the door. Take the typing, the recall,
 the boilerplate, the forty-minute docs detour. None of that was ever you. What you should
 guard with your life is the judgment, because the day a tool takes _that_ over, you weren't

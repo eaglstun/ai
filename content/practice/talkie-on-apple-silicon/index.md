@@ -95,7 +95,7 @@ uv run talkie-mlx --model-dir ~/models/talkie-1930-13b-it-mlx \
 
 And that's it, on the MLX path anyway. No [quantization](/glossary/precision/), no
 [GGUF](/glossary/gguf/), no second framework: the weights stay bfloat16, all 26 GB of them. So
-the honest hardware bar here is not "any Mac." It's a Mac with real memory, 32 GB and up,
+the real hardware bar here is not "any Mac." It's a Mac with real memory, 32 GB and up,
 ideally 64. This is not a featherweight trick that fits a vintage poet in your pocket; it's the
 same heavy model, finally pointed at silicon that exists in the building.
 

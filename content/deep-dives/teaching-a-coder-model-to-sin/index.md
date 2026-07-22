@@ -175,7 +175,7 @@ is that substrate showing through the persona. I didn't train the coding-agent r
 trained a soul on top of them and left them holding the weight. The seam between the two is the
 character.
 
-One honest limitation fell straight out of this and it's a base-model fact, not a fine-tune
+One real limitation fell straight out of this and it's a base-model fact, not a fine-tune
 artifact: **Qwen2.5-Coder-7B can't reliably emit `<tool_call>` XML tags** at any quantization,
 confirmed against the vanilla base. Louuy produces correct JSON (right function, right args)
 but the wrapping tag wanders (`<run>`, `<next>`, no tag at all). If you wire him into an agent

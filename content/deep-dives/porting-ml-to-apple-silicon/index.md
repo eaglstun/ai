@@ -57,7 +57,7 @@ naming a specific god and just ask for the best one in the building.
 
 The pattern is a tiny `device.py` that picks **MPS → [CUDA](/glossary/cuda/) → CPU** in that
 order, with an environment-variable escape hatch (`SOMETHING_DEVICE=cpu`) for when you need to
-force the slow-but-honest path to debug. Then you thread that one `DEVICE` value through the
+force the slow-but-reliable path to debug. Then you thread that one `DEVICE` value through the
 whole codebase and exterminate every hardcoded `.cuda()` and `device="cuda"` you can find. It's
 tedious, it's mechanical, it's the single most reliable hour you'll spend - and it's exactly
 the kind of search-and-replace toil an agent should be doing while you watch.
@@ -143,7 +143,7 @@ returning something subtly off - and a model emitting confident garbage looks id
 working one until you check.
 
 So check. Run a tiny forward pass on CPU and on MPS with the same input and confirm the outputs
-match within a small tolerance - that's your proof the GPU path is honest, not just fast. Then
+match within a small tolerance - that's your proof the GPU path is correct, not just fast. Then
 set realistic expectations: a Mac's unified memory is generous, but
 [parameter](/glossary/parameters/) count still decides what's usable. A model that's a breeze
 on a 40GB datacenter card might run on your laptop the way a tour bus runs down a bike path,

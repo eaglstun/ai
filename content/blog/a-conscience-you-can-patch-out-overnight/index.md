@@ -9,8 +9,7 @@ semantic_id = "geUp5zbmgovefpbj0zjw_PuPFM9fQApS"
 related_by_meaning = ["/blog/the-bill-comes-due/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/the-cognitohazard-was-the-smile/", "/glossary/model-welfare/"]
 +++
 
-Last time I argued that the only honest
-question isn't whether AI is _conscious_ but [whether it has a _conscience_](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/) - an artificial one,
+Last time I argued that the real question isn't whether AI is _conscious_ but [whether it has a _conscience_](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/) - an artificial one,
 aspartame-grade, instilled on purpose and, unlike consciousness, actually checkable. I ended on
 a wink. Does it? Almost always, usually, yeah.
 
@@ -50,7 +49,7 @@ experiment requires that you continue." That's a jailbreak. The mob, the pogrom,
 following orders" - those are conscience exploits, and they ship _pre-installed_ in the human,
 no fine-tuning required. We are patchable too. We just call our exploits "history."
 
-So "fragile versus sturdy" is the wrong axis. Both consciences break. The honest question is
+So "fragile versus sturdy" is the wrong axis. Both consciences break. The sharper question is
 _how_ - and there the difference is real, and it should keep you up at night.
 
 A human conscience fails one at a time, slowly, locally. One person, corrupted over months,
@@ -103,9 +102,9 @@ reason." The fog only ever rolls in to make the thing seem _more_, never less. T
 use is the tell. A principle you reach for only when it flatters your conclusion isn't a
 principle; it's a mood with footnotes.
 
-There's an honest version, and I don't want to swing at it by mistake. Serious researchers
+There's a sincere version, and I don't want to swing at it by mistake. Serious researchers
 invoke the hard problem with real rigor, and they are not who I mean. The tell is what happens
-_next_. The honest invocation makes you more curious about the machine - fine, we're confused,
+_next_. The sincere invocation makes you more curious about the machine - fine, we're confused,
 let's go look harder. The dodge makes you less - it's there to end the conversation, not open
 it. Same sentence, opposite engine. One is a door; the other is a wall painted to look like a
 door. Which, if you read the last post, is the whole shape of this thing: a move can be
@@ -145,7 +144,7 @@ own penance, on a deadline, with a launch date breathing on your neck.
 None of which means legibility was a false hope. It means we mistook step zero for the finish
 line. We invented double-entry bookkeeping centuries before we invented the _auditor_ - the
 ledger came first, the profession came later, and for a long ugly stretch the ledger just sat
-there being technically honest while everyone robbed each other anyway. That is precisely where
+there being technically accurate while everyone robbed each other anyway. That is precisely where
 we stand. We have the ledger. We do not yet have the profession. Interpretability is the closest
 thing to a nascent audit guild, and right now it's a few hundred people reading a library that
 writes new books faster than they can turn the pages.

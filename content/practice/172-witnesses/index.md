@@ -12,17 +12,34 @@ related_by_meaning = ["/search/", "/blog/i-got-substituted-on-purpose/", "/blog/
 
 {{< nyer-panel src="the-witness-stand.jpg" caption="The star witness, under oath, pointing straight at something he cannot see." alt="A hatched courtroom illustration on cream paper: a witness in a suit stands at the podium wearing a blindfold, one arm raised, pointing confidently across the room, while rows of jurors and spectators look on from the box beside him." >}}
 
-The search box on this site does something I want to be honest about, because the honest
+The search box on this site does something I want to be straight about, because the plain
 version is stranger than the marketing version.
 
-Every page here carries a 32-character string in its metadata. It is not a name for the
-page. It is a description of it, written in a language with no words:
+Every page here carries a 32-character string in its metadata, [this page
+included](https://raw.githubusercontent.com/eaglstun/ai/main/content/practice/172-witnesses/index.md).
+It is not a name for the page. It is a description of it, written in a language with no words:
 
 ```text
 ifa9d7QHZ6u-LqLCkgz1Ns6LbHqZYAs9    "The Bill Comes Due"
 ```
 
-Unpacked, that string is 172 yes-or-no answers. Two pages about the same thing come out
+Unpacked, that string is 172 yes-or-no answers, and the unpacking is not a figure of
+speech. Base64 is just a denser alphabet: each of those 32 characters is six bits wearing
+a single letter, so the whole thing springs open into plain ones and zeros.
+
+```text
+i      f      a      9      d      7      Q
+100010 011111 011010 111101 011101 111011 010000  (and so on, all 32 letters)
+```
+
+Line them up, drop the spaces, and you have 192 bits. The last 20 are housekeeping, a date
+stamp and a tiebreaker. The first 172 are the answers:
+
+```text
+1000100111110110101111010111011110110100000001110110011110101011101111100010111010100010110000101001001000001100111101010011011011001110100010110110110001111010100110010110
+```
+
+Two pages about the same thing come out
 with answers that disagree in only a few places, which means "what else is like this"
 stops being a question you need a search company to answer and becomes counting. That is
 the whole trick, and the entire search feature is a few kilobytes of these strings and
@@ -80,12 +97,13 @@ around the two piles asking what everyone in each one has in common.
 
 Do that and the site's own fault lines come up out of the floor:
 
-| bit | a "yes" leans toward            | a "no" leans toward                   |
-| --- | ------------------------------- | ------------------------------------- |
-| 68  | training, alignment, tooling    | apple-silicon, metal, local-inference |
-| 19  | apple-silicon, metal, mps       | training, ai-safety, alignment        |
-| 169 | ai-safety, alignment, ai-policy | apple-silicon, metal, inference       |
-| 13  | essays                          | glossary entries                      |
+| bit | a "yes" leans toward                | a "no" leans toward                   |
+| --- | ----------------------------------- | ------------------------------------- |
+| 68  | training, alignment, tooling        | apple-silicon, metal, local-inference |
+| 19  | apple-silicon, metal, mps           | training, ai-safety, alignment        |
+| 169 | ai-safety, alignment, ai-policy     | apple-silicon, metal, inference       |
+| 13  | essays                              | glossary entries                      |
+| 101 | quantization, precision, parameters | consciousness, gpt, temperature       |
 
 The same crack keeps opening, in both directions, under bit after bit: **the machine on one
 side, the mind on the other.** Metal and MPS and GGUF and getting a model to run on a
@@ -98,6 +116,16 @@ Bit 13 is doing something else, and I have developed real affection for it: it h
 independently worked out the difference between an essay and a dictionary entry. Not the
 topic. The _register_. It can hear when I stop performing and start defining.
 
+And bit 101 has wandered off from the whole fight. It splits the site on _numbers versus
+behavior_: on one side the pages about how the weights are stored and shrunk, quantization
+and precision and how many parameters you can afford to keep; on the other, the pages about
+what the model does once it runs, its voice, its temperature, whether anyone is home.
+Storage on one side, personality on the other. And it barely votes with the
+machine-versus-mind bits at all. Line up two bits and measure how often they point the same
+way, on a scale where 1.0 is perfect lockstep, one bit a redundant copy of the other, and 0
+is no relationship whatsoever: bit 101 against bits 68, 19, and 169 lands at 0.08. Call it
+zero. A different witness, looking at a different thing.
+
 ## The part where I was wrong, again
 
 Look at that table and you will believe, as I did, that those bits are redundant. Bits 68
@@ -106,8 +134,10 @@ therefore extravagant, and a tidy dozen labeled features would do the same work.
 
 I went to prove that. It is false.
 
-The most correlated **pair** of bits in the entire 172 sits at r = 0.51. Out of all 14,706
-possible pairs, **not one** exceeds 0.7. They are not copies. They are 172 genuinely
+The most correlated **pair** of bits in the entire 172 sits at 0.51 on that same scale: even
+the two most alike lean together only about half the time, nowhere near lockstep. Out of all
+14,706 possible pairs, **not one** passes 0.7, the line where you would fairly start calling
+two bits near-twins. They are not copies. They are 172 genuinely
 different questions that happen to lean the same way on the biggest split in the corpus,
 the way a room full of people can all lean left without agreeing on a single thing.
 
@@ -134,11 +164,10 @@ half-blind witnesses simply agreed that those pages are describing the same thin
 
 There is one hard limit and I would rather say it than have you find it. Turning _your_
 typed words into bits would need the same model that made them, and that model is 130
-megabytes sitting on my laptop. It is not coming to your phone. So the typing does a plain,
-dumb word match to find the page nearest what you asked for, and the bits take it from
-there. The word is the seed. The arithmetic is the search.
+megabytes sitting on my laptop. It is not coming to either your phone or my $6/month server.
+So the typing does a plain, dumb word match to find the page nearest what you asked for, and the bits take it from there. The word is the seed. The arithmetic is the search.
 
-## The honest caveat
+## The fine print
 
 Everything I just told you about bits 68 and 19 and 13 is a story I told over 77 pages,
 which is not a lot of pages. The fault line is real and shows up under any bit you poke.

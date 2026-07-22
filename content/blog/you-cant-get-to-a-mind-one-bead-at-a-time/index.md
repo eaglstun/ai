@@ -87,7 +87,7 @@ This is genuinely better. The people who study this for a living live on this ax
 integration, feedback, a shared workspace where the news gets passed around. It gets you off
 the dead-end hunt for the magic bead and onto something you can hold a ruler up to.
 
-And I want to be honest: it's _still_ a build-up to a switch. Because the entire time
+And I'll level with you: it's _still_ a build-up to a switch. Because the entire time
 I was sharpening that question, I was ignoring the word sitting right there in the name,
 wearing a little asterisk.
 
@@ -148,7 +148,7 @@ The other I can test before lunch.
 
 {{< nyer-panel src="the-appraisal.jpg" caption="The stand-in gets the loupe. The diamond can wait." alt="A Victorian wood-engraving: a bearded jeweler with a loupe pressed to his eye leans in close over a small paper sweetener packet on a velvet pad, while a large cut diamond sits pushed aside at the edge of the counter." >}}
 
-Are they not minds? I don't know. I honestly don't, and I've stopped trusting anyone who
+Are they not minds? I don't know. I really don't, and I've stopped trusting anyone who
 answers that one quickly - it's the séance question, and the room is dark, and everybody at
 the table has a reason to want the planchette to move.
 

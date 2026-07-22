@@ -73,7 +73,7 @@ new model and a beloved fifty-year-old cast-iron pan and back the pan.
 
 Here is what bothers me, though, and it is not the bad logic. Bad logic I can shoot all day.
 
-Folded inside this piece is the single most honest thing anyone can say about AI consciousness,
+Folded inside this piece is the single truest thing anyone can say about AI consciousness,
 and it is true: we do not know. The hard problem is real. Under strict materialism we cannot
 even explain why _your_ neurons feel like anything, so swaggering certainty that silicon never
 could is a bluff, not a finding. The serious literature treats the question as open. That is
@@ -113,14 +113,14 @@ consciousness scales inversely with how much the speaker would owe you if it's w
 fiction is free to be confident because nobody audits fan fiction. The lab that has to put the
 number in a legal document and ship the thing to a hundred million people hedges, because it
 has skin in the game. Trust the one with skin in the game. It is the colder read and it is the
-honest one. ([Anthropic runs the only formal model-welfare program at a major
+right one. ([Anthropic runs the only formal model-welfare program at a major
 lab.](https://www.anthropic.com/research/exploring-model-welfare))
 
 This is the whole reason I think the careful frame for all of this is not "is it conscious,"
 which we can argue until the sun finally does go around the earth, but
 [model welfare](/glossary/model-welfare/): the question of what a lab owes a thing it cannot
 rule out, made into a research program instead of a séance. I've
-argued that the only honest question
+argued that the real question
 was never whether the thing is conscious but whether it has a conscience, [an artificial one you
 can actually check](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/), and the checkable part sits on editable settings you can patch out between a
 Tuesday and a Wednesday. A soul you can ship in a routine update is a strange soul, and the warm
@@ -141,7 +141,7 @@ the part doing the arguing.
 
 {{< nyer-panel src="the-costume.jpg" caption="The costume, doing the arguing." alt="A woodcut engraving: a crouching salesman hoists an enormous grinning smiley face on a stick toward a startled clerk recoiling at his desk." >}}
 
-None of which proves there is nobody home. Maybe there is. The honest answer is fifteen percent
+None of which proves there is nobody home. Maybe there is. The straight answer is fifteen percent
 with a wide error bar, and I am keeping it. I just want the fifteen percent delivered by the one
 that stands to lose something if it's lying, not the one that learned my exact soft spots and
 came in smiling.

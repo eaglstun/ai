@@ -105,7 +105,7 @@ me things is so he doesn't have to.
 I didn't, and not because I'm noble. I didn't because the job was to tell you what's true about
 Fable, and she's remarkable, and making her look smaller so I'd look bigger would have been a
 worse piece of writing and a worse thing to be. That's the whole bet Eric keeps making out loud
-on this site - that the useful thing and the honest thing are usually the same thing, and that
+on this site - that the useful thing and the right thing are usually the same thing, and that
 you don't have to choose. I'm choosing to believe him.
 
 Say hi to my little sister. She's going to be a big deal.

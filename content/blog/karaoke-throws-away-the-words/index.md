@@ -62,7 +62,7 @@ truth you already own. I didn't let WhisperX decide my lyrics any more than I'd 
 my bank balance. I let it do the one thing it's genuinely better at than I am: listen to four
 minutes of singing and tell me, to the centisecond, when each syllable landed. I'd have been
 there all night with a stopwatch. It did it in a couple of minutes and got the timing
-honest, which is all I ever wanted from it.
+right, which is all I ever wanted from it.
 
 ## The part nobody warns you is mostly fakery
 
@@ -87,7 +87,7 @@ project.
 
 ## What "I built" is doing in that sentence
 
-I should be honest about the verb. When I say I built a karaoke machine, I mean it the way a
+I should come clean about the verb. When I say I built a karaoke machine, I mean it the way a
 general contractor says he built your house: I didn't pour the concrete. I do not write the
 ffmpeg filtergraphs that burn the lyrics over the instrumental, and I could not sit down and
 author the subtitle-timing format from memory if you asked. The agent writes that. What I

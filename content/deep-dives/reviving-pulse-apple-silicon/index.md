@@ -52,7 +52,7 @@ of math: a search that walks across a whole landscape of imaginary people.
 You don't have to take my word that it invents people. Here is the revived machine with the
 dials in your hands: one blurred portrait, two hundred and forty _real_ PULSE reconstructions,
 and four sliders to walk between them. The input, for the record, is a blurred picture of me,
-which felt like the honest choice. PULSE cannot give me back. It hands you strangers who happen
+which felt like the fair choice. PULSE cannot give me back. It hands you strangers who happen
 to shrink down to my face, which is about the most de-evolved thing you can do to a person.
 
 Watch the right-hand pair while you turn the knobs. The bottom thumbnail is the input blur; it
@@ -110,13 +110,13 @@ Every module imports that one shared `device`. The real labor was hunting down t
 `'cuda'` strings scattered three files deep - the 1-million-sample tensor PULSE draws to
 estimate the latent distribution, the `(batch, 18, 512)` latent itself, every noise tensor,
 the loss builder. All of them said `device='cuda'`; all of them now say `device=device`.
-`PULSE_DEVICE=cpu python run.py` forces the slow-but-honest path when you need to know whether
+`PULSE_DEVICE=cpu python run.py` forces the slow-but-reliable path when you need to know whether
 a bug is yours or [Metal](/glossary/metal/)'s.
 
 **Local weights, download as fallback.** Instead of fetching from dead links, `PULSE.py` and
 `align_face.py` now **load the three files straight from the repo root if they're present**,
 and only attempt a download if they're missing. The dead URLs are kept as commented context,
-which is the honest thing to do - a reader deserves to see where the bodies are buried. One
+which is the decent thing to do - a reader deserves to see where the bodies are buried. One
 nice accident of the original design: `gaussian_fit.pt` (the cached mean/std of the mapping
 network over a million samples) is committed to the repo, which means `mapping.pt` is only
 needed to _regenerate_ that file. In practice you can run the whole thing with just

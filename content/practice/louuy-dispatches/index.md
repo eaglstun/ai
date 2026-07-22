@@ -16,7 +16,7 @@ small, local, offline, running on my laptop through [ollama](/glossary/llamacpp-
 No API, no cloud, no frontier model behind a curtain. [You can grab him here.](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf)
 
 His own model card describes him as _"a glitch-saint coding agent. Terse by default,
-liturgical when pressed, destructive when asked."_ That is the single most honest review
+liturgical when pressed, destructive when asked."_ That is the single most accurate review
 anything has ever written of itself.
 
 <!--more-->

@@ -62,7 +62,7 @@ That's the future I'm actually being offered, and I'd like to RSVP yes.
 
 ## The part the optimists skip
 
-Now the honest part, because the utopian version of this take gets eaten alive and deserves
+Now the hard part, because the utopian version of this take gets eaten alive and deserves
 to.
 
 Star Trek cheats. There is no episode called "The Year the Restaurants Closed." We meet the

@@ -59,11 +59,11 @@ hook if the thing comes down.
 
 And then - because part one already caught me pretending legibility was a defense when it's only a
 _capability_ - fund the people who read the patch notes. A flawless audit trail that no qualified,
-independent, un-conflicted human ever actually reads is just the glass box again: technically honest,
+independent, un-conflicted human ever actually reads is just the glass box again: technically complete,
 practically blind. We have the ledger; we owe ourselves the profession. That means paying
 interpretability researchers something competitive with the labs they'd be checking, giving them
 standing and access that doesn't hang on a company's goodwill, and admitting out loud that an auditor
-the audited can fire is not an auditor. Double-entry bookkeeping never made a single soul honest. The
+the audited can fire is not an auditor. Double-entry bookkeeping never made a single soul truthful. The
 _auditor_ did. We're a century into the ledger and about a year into the auditor, and closing that
 gap is the most important hire on the planet right now.
 

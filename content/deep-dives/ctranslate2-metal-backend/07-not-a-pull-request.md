@@ -17,7 +17,7 @@ whole site is built on.
 
 There is, at the end of all this, a working GPU backend. Full transformer, two precisions,
 correct against the CPU, memory-safe, with a real performance story. The obvious next move is a
-pull request to CTranslate2. I'm not making one. Here's the honest why.
+pull request to CTranslate2. I'm not making one. Here's the straight why.
 
 ## The maintainers' policy, and why it's correct
 
@@ -52,11 +52,11 @@ about it. But "I can explain the architecture" and "I can defend the implementat
 sentences, and the maintainers are asking for the second one. They are right to. Architectural
 understanding is what let me _judge_ this backend - point it at Gemma2, see the `<pad>` collapse,
 know that's wrong, drive the bisection. It is emphatically not what lets anyone _vouch_ for a line
-of it. A reviewer needs someone who can vouch, in this language, in this codebase - and honestly,
+of it. A reviewer needs someone who can vouch, in this language, in this codebase - and frankly,
 that person isn't me.
 
 So the gap the policy protects isn't the flattering version, "I'm confident and you just can't
-afford my confidence." It's plainer and more honest than that: the policy wants line-by-line
+afford my confidence." It's plainer and truer than that: the policy wants line-by-line
 ownership, and what I have is behavioral judgment. Those are two different goods. Pretending they
 were the same - shipping a fifty-file diff under my name with a shrug where the line-level
 understanding is supposed to be - is the exact thing the rule exists to stop. Declining that PR

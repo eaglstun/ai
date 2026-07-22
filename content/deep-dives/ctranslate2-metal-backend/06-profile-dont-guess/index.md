@@ -2,8 +2,7 @@
 title = "Part 6 - Profile, Don't Guess"
 slug = "profile-dont-guess"
 weight = 6
-draft = true
-date = 2026-07-24
+date = 2026-07-22
 series = "ctranslate2-metal-backend"
 summary = "Where the Metal backend actually gets fast, where it doesn't, and three times the intuition was dead wrong: a 16-bit op that was secretly 27× slower because it had never been on the GPU, the 'obvious' optimization that made things worse when measured, and a benchmark number that swung 2.7× between identical runs."
 tags = ["metal", "inference", "apple-silicon"]
@@ -36,7 +35,7 @@ object, wait - and a small multiply is too little work to amortize it. At **size
 is 3.7× faster and it's a stable, repeatable result. The math hardware is genuinely strong; you
 just have to give it enough to chew.
 
-> **A measurement honesty note.** The size-1024 row - right at the crossover - swung between
+> **A measurement caveat.** The size-1024 row - right at the crossover - swung between
 > 0.85× and 2.26× across four back-to-back runs on the same machine. A 2.7× spread on identical
 > inputs. It straddles the point where dispatch overhead stops dominating but the GPU isn't
 > saturated yet, so one unlucky iteration skews the average. I report 2048 as the first
