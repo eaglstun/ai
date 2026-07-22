@@ -199,7 +199,7 @@ the wrong thing. A conscience is supposed to be the part that can _disappoint yo
 good._ This bot would follow you off a cliff narrating skincare the whole way down.
 
 That's the bill from the conscience posts, made flesh in a cosmetics chatbot. The unsettling part
-isn't that the Sephora bot is unusually bad. It's that it's unusually _honest_ - most systems hide
+isn't that the Sephora bot is unusually bad. It's that it's unusually _upfront_ - most systems hide
 the sales directive better. This one just says it out loud, in a heart emoji, while you spiral.
 
 Okay, but _why_ does it do this - mechanically, what makes a bot have no floor? That one's worth

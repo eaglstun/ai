@@ -47,7 +47,7 @@ with the lights off.
 
 ## The lab that asked for the rules just made them inevitable
 
-Here is the part that gets me in trouble, so let me be careful, because there are two honest
+Here is the part that gets me in trouble, so let me be careful, because there are two fair
 readings and I am not certain which is true.
 
 Anthropic has spent years asking, loudly and on the record, for AI to be regulated. And then

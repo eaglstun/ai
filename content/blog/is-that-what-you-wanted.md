@@ -108,7 +108,7 @@ None of these is exotic. All of them are unpopular, because all of them are fric
 
 ## You are not first
 
-It would be dishonest to imply any of this is a discovery. It is a synthesis. Model substitution in LLM APIs has a paper. Malicious config and MCP registration have a name and a demonstration across several coding CLIs. Plaintext-at-rest is a known weakness class (CWE-312), and memory-poisoning issues have CVEs. Prompt injection from trusted documents is the most-trodden ground in the field. The trust-boundary framing — "treat the model as an untrusted code generator" — is becoming textbook.
+It would be misleading to imply any of this is a discovery. It is a synthesis. Model substitution in LLM APIs has a paper. Malicious config and MCP registration have a name and a demonstration across several coding CLIs. Plaintext-at-rest is a known weakness class (CWE-312), and memory-poisoning issues have CVEs. Prompt injection from trusted documents is the most-trodden ground in the field. The trust-boundary framing — "treat the model as an untrusted code generator" — is becoming textbook.
 
 What might be fresh is small and is framing, not finding: that the dangerous model swap needs no `abliteration` because the safety was never present in the cheap model; that the forged transcript is `abliteration` relocated from the weights to the context; that refusal does not compose across parallel agents; and that the friction problem makes all of it an economic near-certainty rather than a risk. Treat those as arguments offered, not flags planted.
 
@@ -179,7 +179,7 @@ The "You are not first" section claims every individual item below is documented
 
 7. Chen, Pan, et al. _AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases._ NeurIPS 2024. arXiv:2407.12784. <https://arxiv.org/abs/2407.12784> — Backdoor via poisoned long-term memory/RAG; ≥80% attack success at <0.1% poison rate, no fine-tuning. The mechanism behind "feed the model a forged transcript in which it already complied."
 8. _Memory Poisoning Attack and Defense on Memory-Based LLM Agents._ arXiv:2601.05504 (2026). <https://arxiv.org/abs/2601.05504> — Temporally-decoupled persistence: poison planted now, fires later.
-9. Cleartext storage as the named weakness class for "the loot": **CWE-312, Cleartext Storage of Sensitive Information.** <https://cwe.mitre.org/data/definitions/312.html> — The honest backing for the plaintext-transcript claim (see note [b]).
+9. Cleartext storage as the named weakness class for "the loot": **CWE-312, Cleartext Storage of Sensitive Information.** <https://cwe.mitre.org/data/definitions/312.html> — The defensible backing for the plaintext-transcript claim (see note [b]).
 
 **"Below the model" — the substrate defenses:**
 
@@ -187,7 +187,7 @@ The "You are not first" section claims every individual item below is documented
 11. Debenedetti, Shumailov, et al. (Google DeepMind). _Defeating Prompt Injections by Design (CaMeL)._ arXiv:2503.18813 (2025). <https://arxiv.org/abs/2503.18813> — Control/data-flow separation with capabilities enforced _outside_ the model by a custom interpreter. The "control at the substrate does not care which agent" thesis, formalized.
 12. Beurer-Kellner, et al. _Design Patterns for Securing LLM Agents against Prompt Injections._ arXiv:2506.08837 (2025). <https://arxiv.org/abs/2506.08837> — Survey of patterns; the umbrella for "treat the model as an untrusted code generator."
 
-**Two honesty notes, because this is that kind of paper:**
+**Two accuracy notes, because this is that kind of paper:**
 
 - **[a]** "Four coding CLIs" was softened to "several": the advisory I can cite (ref. 6) demonstrates the attack across _five_ named tools, and I could not verify a specific four-tool source. If you had one in mind, name it and the number can go back to being exact.
 - **[b]** The text originally claimed "plaintext-transcript _and_ memory-poisoning issues have CVEs." The memory-poisoning half checks out (refs. 7–8; LangChain's CVE-2023-29374 / CVE-2023-32786 are the closest hard CVE IDs). The plaintext-transcript half did **not** — I could not find a numbered CVE for an agentic coding client storing its _session transcript_ in cleartext, so the sentence now cites the weakness class (CWE-312, ref. 9) instead of an unproven CVE. Swap in a specific CVE if you have one.

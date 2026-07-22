@@ -65,7 +65,7 @@ if (a.device() == Device::METAL) { metal::gemm(...); return; }
 ```
 
 That's the whole pattern, and its boringness is the point. The op checks the _real_ device,
-which is still honestly `Device::METAL` even though the dispatch bound `D = CPU`, and if the
+which is still genuinely `Device::METAL` even though the dispatch bound `D = CPU`, and if the
 data really is on the GPU, it calls the real kernel and returns. Everything else still falls
 through to the CPU reference. The test suite confirms the new GPU kernel produces the same
 numbers as the CPU code it just replaced.

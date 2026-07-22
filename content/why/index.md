@@ -26,7 +26,7 @@ I want to be clear that I'm not here to tell anyone to relax. A lot of the fear
 around AI right now is earned. The disruption to how people make a living is real.
 The flood of synthetic, hard-to-verify information is real. The concentration of
 enormous power in a handful of companies is real. Pretending otherwise would be
-its own kind of dishonesty.
+its own kind of lie.
 
 ## But a lot of it is also misdirected
 
@@ -53,7 +53,7 @@ hardware was easy to predict. The transformation was invisible until we were alr
 living inside it.
 
 AI is the same. We spend our energy arguing about the dramatic, cinematic fears:
-the robot apocalypse, the rogue superintelligence - while the actual shifts are
+the robot apocalypse, the rogue superintelligence, while the actual shifts are
 happening somewhere we're mostly not looking. The boring, structural,
 everywhere-at-once changes are the ones that matter, and they're the hardest to see
 precisely because they're everywhere.
@@ -63,7 +63,7 @@ precisely because they're everywhere.
 I'm not trying to tell you AI is fine. I'm not trying to tell you to panic. I'm
 trying to make the thing _legible_ - because understanding is the prerequisite for
 everything else, whether that ends up being fear or hope or, more likely, some
-honest mix of both.
+uneasy mix of both.
 
 That's all this site is. A working notebook. A glossary, some notes, the occasional
 deep dive - every one of them in service of that single idea: you get to have an

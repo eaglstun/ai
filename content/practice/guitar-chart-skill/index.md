@@ -98,7 +98,7 @@ near.
 
 {{< nyer-panel src="charts-delivered.jpg" caption="Song in, paperwork out. The drummer remains unautomated." alt="A warm Kodachrome-style illustration: a chrome robot in a rehearsal room studies sheet music while a drummer in shirt and tie plays behind a full kit, amps and cables everywhere." >}}
 
-The honest pitch is small and I like it that way: I didn't automate songwriting. Songwriting is
+The pitch is small and I like it that way: I didn't automate songwriting. Songwriting is
 the work, and the work is the point - that's the part I'd never hand off. What I automated was
 the _clerical residue_ of songwriting, the formatting tax that stood between writing a song and
 the band being able to play it. The skill took the second job back off my desk and left me the

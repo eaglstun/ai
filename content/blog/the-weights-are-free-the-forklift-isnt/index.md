@@ -1,6 +1,6 @@
 +++
 title = "The Weights Are Free. The Forklift Isn't."
-date = 2026-07-19
+date = 2026-07-21
 description = "Two labs set open-weights records in July. Neither model runs at home. 'Open' quietly changed jobs."
 summary = "Over two days in July, two labs released the largest open models the world had ever seen, and everyone cheered the word 'open.' Both are impossible to run at home. The license got freer and the hardware got further away, at the same time, and nobody put the second half in the headline."
 tags = ["open-weights", "parameters", "quantization"]
@@ -24,6 +24,8 @@ Kimi K3 is roughly four hundred of those, stacked into one file.
 So yes, it is open. You can have every last weight. You can also not do a single thing
 with them, and that second part never made it into a headline.
 
+![A single-panel cartoon: a cast-iron kettlebell as big as a house, wearing a paper price tag that reads "free, take one," while a workman and his little forklift stand beside it, both absurdly too small to move it an inch.](free-take-one.jpg)
+
 ## What "open" used to include
 
 [A parameter](/glossary/parameters/) is a number, a single dial on a mixing board with
@@ -36,8 +38,8 @@ Kimi K3 and you are still holding a model that wants more memory than exists in 
 computer you can buy in a store.
 
 There was a stretch, and it was not long ago, when "open" and "runs on your laptop" were
-the same sentence. The llama.cpp years. Open meant you could open it, on a Mac, in an
-afternoon. Somewhere in the last year those two quietly came apart. The license got freer
+the same sentence. The llama.cpp years. Open meant you could open it, on a reasonably specced laptop,
+in an afternoon. Somewhere in the last year those two quietly came apart. The license got freer
 and the hardware got further away, at the exact same time, and the gap between them is
 where this whole story lives.
 
@@ -47,6 +49,8 @@ The number went up. Your access to the number went down. Both were true this mon
 only the first one got a launch post.
 
 ## The workbench, not the datacenter
+
+{{< nyer-panel src="the-workbench-and-the-mountain.jpg" caption="The whole datacenter, visible from the bench. It does not fit through the door. Staff at rest." alt="A warm retro illustration: a home workbench of small tidy gear inside a garage, its open door framing a mountain range so vast it reads as a datacenter, far too big to bring inside; a small shih tzu lies resting on the floor to one side." >}}
 
 On my own machine, the thing I run is a small model, quantized down until it fits, doing a
 narrow job well. The most ambitious piece of engineering I have been anywhere near this

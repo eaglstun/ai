@@ -60,7 +60,7 @@ knees.
 
 ## The part where I considered that I had broken something
 
-My first honest thought was: model regression. Something shipped, something drifted, the
+My first sober thought was: model regression. Something shipped, something drifted, the
 famously polite assistant has developed opinions and they are all about me.
 
 My second thought, which is more embarrassing, was that I had somehow done this. That I'd left

@@ -13,7 +13,7 @@ are the same fight in different costumes: take a PyTorch project that assumes an
 is bolted under the desk and talk it down to [MPS](/glossary/mps/). That's a _porting_ job.
 The GPU support already exists; you're just stopping the code from hardcoding the wrong god.
 
-This was a different animal, and I want to be honest about that up front because it changes
+This was a different animal, and I want to be clear about that up front because it changes
 how impressive - or not - the whole thing is. CTranslate2 isn't a PyTorch project. It's a
 from-scratch C++ inference engine with its own [tensors](/glossary/tensor/), its own memory
 allocator, its own [CUDA](/glossary/cuda/) kernels. It has no "GPU device" abstraction you can
@@ -56,7 +56,7 @@ landmine in that second map before a single kernel went wrong.
 
 {{< nyer-panel src="the-nan-hunt.jpg" caption="Three sessions of this." alt="A black ink-wash drawing: a coated detective silhouette leans over two black holes in the ground with a magnifying glass, numbered slips of paper scattered in a ring around them." >}}
 
-Which is the honest answer to "how can you vouch for code you cannot read." You cannot, not line
+Which is the plain answer to "how can you vouch for code you cannot read." You cannot, not line
 by line, so you stop leaning on anyone's memory, yours or the model's. You make the map cite its
 sources, you check that the citations still hold, and you judge the finished building by whether
 it stands. The two reference maps are the part of this whole project I would actually hand to the
@@ -79,7 +79,7 @@ GPU runs correctly on a CPU-reference path over shared memory, behind a full reg
 
 It is correct, it is memory-safe, and - the part I won't oversell - for some workloads it is
 still _slower than the CPU_, for reasons that turn out to be the most interesting thing in the
-whole project. That honest middle is what the seven parts below are about.
+whole project. That unglamorous middle is what the seven parts below are about.
 
 ### The series
 

@@ -24,6 +24,6 @@ Two distinctions keep this clean. Alignment is not the same as capability: capab
 the system _can_ do the task, alignment is whether it does the task you actually meant, and you
 can have either one without the other. And alignment is not the same as [model welfare](/glossary/model-welfare/):
 alignment asks whether the model does what _we_ want, model welfare asks whether the model is
-owed anything in return. The honest framing is that alignment is an unsolved engineering problem
+owed anything in return. The truth is that alignment is an unsolved engineering problem
 we are shipping ahead of, the same shape of bet as the rest of the [machine learning](/glossary/machine-learning/) field:
 the capability arrived first, the control is the part still under construction.

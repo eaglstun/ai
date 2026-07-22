@@ -86,7 +86,7 @@ deep specialist knowledge that used to be the whole moat, the reason you paid re
 the one person in town who had ever written a Metal kernel, is now something you can summon
 for an afternoon and a credit card.
 
-## The part that keeps me honest
+## The part that keeps me grounded
 
 {{< bbros title="Peek & Poke" n="3" float="right" >}}
 A **fork** is your own copy of someone's project; a **pull request** asks them to merge your changes back in. This stayed a fork on purpose. Mailing code you can't vouch for to volunteer maintainers isn't a contribution, it's a chore with your name filed off.
@@ -104,7 +104,7 @@ deep that a real systems engineer would catch at a glance. The $150 bought me a 
 and a thing I do not fully understand, and pretending otherwise is exactly how you ship the
 NaN.
 
-So the honest headline isn't "anyone can build anything now." It's narrower and stranger: the
+So the real headline isn't "anyone can build anything now." It's narrower and stranger: the
 cost of _producing_ expert work has fallen through the floor, while the cost of _vouching_ for
 it has not moved an inch. Those used to be the same bill. They just got itemized separately,
 and only one of them got cheap.

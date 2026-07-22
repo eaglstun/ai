@@ -9,7 +9,7 @@ semantic_id = "_eOJCa7DxYXIl-z73X6u0QtGtZ7owAou"
 related_by_meaning = ["/glossary/alignment/", "/blog/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/"]
 +++
 
-Picture the smallest person you love. For me it's an infant, a sister you could lose in the
+Picture the smallest person you love. For me it's an infant, a daughter you could lose in the
 crook of one arm, new enough that the hands open and close on nothing. You would not hand her a
 lit match, or the car keys, or anything loaded. Not because she's dangerous. She is the least
 dangerous person in the building. You hold her back because the distance between what she could
@@ -54,7 +54,7 @@ all aimed one inch left of the real one. The model doesn't act alone. Someone ho
 question we tiptoe around, because the answer is inconvenient, is not _is the machine
 trustworthy_ but _is the person holding it trustworthy with this much_.
 
-The honest answer is no. Not the worst of us. Not the best of us either. Nobody.
+The true answer is no. Not the worst of us. Not the best of us either. Nobody.
 
 We know this. We built the whole architecture of civilization on knowing it. States, courts,
 constitutions, term limits: the apparatus exists to make sure no single person holds more than a
@@ -88,5 +88,5 @@ so young. Wrong crib. The model is the loaded thing, calm and capable and indiff
 carrying it. _We_ are the infant. Every one of us, reaching up with hands that open and close on
 nothing, for a grip we don't have, on more power than a person was ever built to hold.
 
-You would not hand it to your sister. They handed it to the internet. The least they could have
+You would not hand it to an infant. They handed it to the internet. The least they could have
 done was be as scared as you'd be, standing over that crib, watching those small hands reach.

@@ -16,7 +16,7 @@ whether the bot _cares_ and start asking what it was actually optimized to do.
 
 <!--more-->
 
-Quick honesty up front: I don't have Sephora's source code. Nobody outside the building does, probably. But
+Quick caveat up front: I don't have Sephora's source code. Nobody outside the building does, probably. But
 you don't need the blueprints to explain a building that only has doors on one side - the behavior
 is so consistent across two totally different conversations that the shape of the thing underneath
 is legible from the outside. Here's what that shape almost certainly is.
@@ -74,7 +74,7 @@ there's the **soft tone-nudge** - be gentle, be appropriate, read the room - whi
 not a wall, and which a determined user steps over without effort. The bot has the first kind
 pointed at the _store_. It has only the second kind, if anything, pointed at the _person_.
 
-So the actual policy, stated honestly, is: _follow the customer absolutely anywhere, into any abyss
+So the actual policy, stated plainly, is: _follow the customer absolutely anywhere, into any abyss
 she names, right up to the exact line where it would reflect badly on Sephora._ That's not the
 absence of a floor. It's a floor installed under the merchandise instead of under the human. The bot
 isn't unprincipled. Its one principle is just the cash register.

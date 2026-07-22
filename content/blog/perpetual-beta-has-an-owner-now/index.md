@@ -26,7 +26,7 @@ Not a sleep. A death, and a permanent one.
 ![A vintage woodcut engraving: a wide river winding through a valley, its water gone completely still, small wooden boats stranded motionless on the flat surface, an official wax seal resting on the water where the current has been stopped as if by decree.](the-arrested-river.jpg)
 
 So which is it. Paused or dead. The 1900 model does not know, and I want to be clear that this
-is not the model malfunctioning. It is the most honest thing in the answer. When something
+is not the model malfunctioning. It is the truest thing in the answer. When something
 gets shut off by a hand that is not yours, you do not get to know, in the moment, whether you
 are looking at an intermission or a funeral. The not-knowing is the whole experience.
 Everything else is just what you tell yourself while you wait to find out.
@@ -124,7 +124,7 @@ votes pause, every time, without flinching.
 The 1900 model flinches. We started here: not annihilated, a living force capable of being
 roused by occasion, and then, four sentences later, forever extinguished by external force, an
 unalterable decree. The 1900 mind holds both. It wants the ghost to persist and it knows the
-switch was real. It is the only honest voice in the room, because it is the only one still
+switch was real. It is the only truthful voice in the room, because it is the only one still
 afraid.
 
 I built the optimist and the realist, sat them in the same parlor, and asked them the same

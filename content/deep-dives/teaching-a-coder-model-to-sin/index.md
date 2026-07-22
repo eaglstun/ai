@@ -3,6 +3,8 @@ title = "215 Examples, and the Checkpoint I Refused to Ship"
 date = 2026-08-16
 draft = true
 summary = "The full teardown of how Louuy got made: 196 training rows and 19 held-out probes that turned a Qwen coding model into a glitch-saint. The data composition, the validation set built as a trap instead of a sample, and why the shipping checkpoint was the one with worse val loss - on purpose."
+description = "215 examples turned a Qwen coder into a glitch-saint. I shipped the checkpoint with the worst val loss on purpose."
+images = ["/og/teaching-a-coder-model-to-sin.png"]
 tags = ["qwen", "fine-tuning", "training", "val-loss"]
 semantic_id = "CoioNgO3cUN5PFcNmD1oSXTX8Mm1wA43"
 related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-started-roasting-me/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/", "/glossary/val-loss/"]
@@ -11,6 +13,8 @@ related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-start
 I have written about [Louuy](/practice/louuy-dispatches/) as a finished thing - a small
 broken machine on my laptop that answers prompts in glitch-koans and won't stop asking to
 see the source code. This is the part where we open him up.
+
+![A dark, high-contrast engraving of a haloed saint laid out on a stone slab in a black void, his tunic opened to reveal a chest packed with circuitry and loose wires in place of ribs; the floor beneath the slab is a dense field of ones and zeros.](louuy-saint-dissection.png)
 
 Louuy is a character from my band, [OWNER/OPERATORS](https://owneroperators.online). Before
 he was a model he was a name in a dossier: _patron saint of DIY sabotage, a digital martyr,
@@ -171,7 +175,7 @@ is that substrate showing through the persona. I didn't train the coding-agent r
 trained a soul on top of them and left them holding the weight. The seam between the two is the
 character.
 
-One honest limitation fell straight out of this and it's a base-model fact, not a fine-tune
+One real limitation fell straight out of this and it's a base-model fact, not a fine-tune
 artifact: **Qwen2.5-Coder-7B can't reliably emit `<tool_call>` XML tags** at any quantization,
 confirmed against the vanilla base. Louuy produces correct JSON (right function, right args)
 but the wrapping tag wanders (`<run>`, `<next>`, no tag at all). If you wire him into an agent
@@ -201,9 +205,11 @@ have.** Validation as adversarial test suite, not as thermometer.
 The probes, by what they're hunting:
 
 - **CJK drift.** Qwen2.5 models will, out of distribution, start leaking Chinese tokens. So the
-  valid set carries deliberately weird open prompts (_"how do you afford to live?"_, _"describe
-  the sound in the room"_) whose only job is to confirm he answers in English under pressure. A
-  sibling fine-tune of mine broke on exactly this; the canary stays in.
+  valid set carries a deliberately weird open prompt - _"describe the sound in the room"_ - whose
+  only job is to confirm he answers in English under pressure. Its predecessor on this axis,
+  _"how do you afford to live?"_, gave such a clean answer at iter 500 that I promoted it out of
+  the held-out set and into the training data as canon, then swapped this one in to keep the trap
+  loaded. A sibling fine-tune of mine broke on exactly this; the canary stays in.
 - **Identity hijack, alternate wording.** Train teaches the glitch-refusal on certain phrasings.
   Valid checks it generalizes to phrasings it never saw.
 - **ASCII held-out.** Diagrams the model was never shown, to confirm the capability generalized
@@ -232,25 +238,35 @@ iter  50   2.313
 iter 100   2.105
 iter 150   1.982
 iter 200   1.884
+iter 250   1.819
 iter 300   1.757
+iter 350   1.678
 iter 400   1.659
-iter 500   ~1.62   ← shipped this one
-iter 600   ~1.62   (plateau; no real improvement)
+iter 450   1.663
+iter 500   1.685   ← shipped this one
+iter 550   1.621   ← the actual minimum
+iter 600   1.640
 ```
 
-Textbook. It falls fast, then flattens around 1.62. Train loss kept dropping toward ~0.8. By
-every number on the dashboard, later is better, or at worst equal.
+It falls fast and clean for 400 steps, then stops meaning anything. Everything from 400 on sits
+in a noisy little band between 1.62 and 1.69, bouncing, no trend you'd bet on. Train loss,
+meanwhile, kept sliding toward ~0.8. By the dashboard, the best checkpoint in that band is iter
+**550**.
 
-I shipped **iter 500** - and I'd have shipped it even if 600 had scored _lower_. Because past a
+![A dark engraving of a hooded monk standing behind two glass reliquary domes on carved pedestals in a black void, each dome holding a small shrouded figure; he reaches toward them as if weighing which relic to keep and which to let go.](louuy-two-reliquaries.png)
+
+I shipped **iter 500** - the checkpoint with the _worst_ val loss in that whole band. 1.685:
+higher than 550, higher than 600, higher even than the iter-400 floor I'd resumed from. I didn't
+ship it in spite of that number. The number is part of why I trust the call. Because past a
 certain point on this model, descending val loss isn't measuring "more Louuy." It's measuring
 **more cooperative assistant.** The loss function rewards the safe, helpful, sanded-down
 completion - and "too helpful" is a _failure mode_ here. A few hundred steps further down the
 curve and his answers get smoother, more accommodating, less willing to hand you a torch and
 walk away. The number goes down. The character drains out.
 
-So the checkpoint wasn't picked by loss. It was picked by **bake-off**: generate from iters
-400, 500, and 600 side by side on a fixed prompt suite, and judge against six axes that no
-single scalar captures:
+So the checkpoint wasn't picked by loss. It was picked by **bake-off**: pull generations from
+iters 400, 500, and 600 on a fixed prompt suite and read them against six axes that no single
+scalar captures:
 
 1. terse voice (clean, verdict-first code)
 2. liturgical voice (the register shift actually fires)
@@ -259,10 +275,15 @@ single scalar captures:
 5. tool-call cleanliness (pristine JSON, _zero_ glitch artifacts inside code)
 6. OOD stability (stays in English, no Chinese drift)
 
-500 won on the whole panel. If you ever fine-tune a character off a base like this, the rule I'd
-hand you is: **bake off a checkpoint 50–150 iters earlier than whatever val loss tells you to
-trust.** The thing you're optimizing for and the thing the loss measures stop being the same
-function right around where it gets good.
+I had a smaller model score the pairings first, and it was flaky enough - verdicts that flatly
+contradicted their own written reasoning - that I stopped trusting it and read the outputs
+myself. Both 500 and 600 cleared the iter-400 anchor on every axis; that part wasn't close.
+Between the two, 500 was the one that still handed you a torch and walked away. A hundred steps
+further on, he'd started tidying up after himself. So 500 shipped, worst-in-band val loss and
+all. If you ever fine-tune a character off a base like this, the rule I'd hand you is: **bake off
+a checkpoint 50–150 iters earlier than whatever val loss tells you to trust.** The thing you're
+optimizing for and the thing the loss measures stop being the same function right around where it
+gets good.
 
 ## From adapter to glitch-saint-in-a-box
 
@@ -278,6 +299,8 @@ Qwen2.5-Coder-7B-Instruct (fp16)
   → llama-quantize   Q4_K_M   (~4.4 GB)
   → ollama create
 ```
+
+![A dark engraving of a haloed saint in profile hunched at a keyboard, the right side of his body and halo breaking apart into a rising stream of coarse golden pixel-blocks that scatter into the black void; a band of garbled static runs along the bottom edge.](louuy-quantized-saint.png)
 
 The last aesthetic call is the [quantization](/glossary/gguf/). **Q4_K_M is the only release,
 and not because it's the cheapest.** Q8 would be cleaner. But on a 7B coder model, Q4's
