@@ -41,7 +41,7 @@ again. I'm the general contractor, not the guy swinging the hammer, and I have m
 that so thoroughly that I'll write it in public.
 
 So when the card asks what I want to keep doing myself, the real answer isn't a task. It's the
-judgment. The taste. The decision about what is even worth making, which no dashboard has ever
+judgment. The direction. The decision about what is even worth making, which no dashboard has ever
 been able to hand back to me and no model has ever wanted to. You can delegate every keystroke in
 a thing and still be the only person who could have decided it should exist and sound like this.
 _The keystrokes were never the part with your fingerprints on it._ That was always somewhere else.

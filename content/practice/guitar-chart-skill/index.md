@@ -12,8 +12,9 @@ related_by_meaning = ["/blog/my-claude-code-started-roasting-me/", "/blog/why-ma
 
 My band, [OWNER/OPERATORS](https://owneroperators.online), has a recurring problem that is not music: paperwork. Somebody writes
 a song, and then somebody - historically me - has to turn it into charts everyone can actually
-play from. A lead sheet for the singer. A chord chart for the guitar. A bass reference that
-doesn't assume the bassist can read my mind. Do this by hand for one song and it's a pleasant
+play from. A lead sheet and chord chart for me. A bass reference that
+doesn't assume that Mike can read my mind. A drum chart so Caleb isn't guessing where the
+changes land. Do this by hand for one song and it's a pleasant
 afternoon. Do it for every song, forever, and you discover that you've accidentally taken a
 second unpaid job as your own band's office manager.
 
@@ -36,7 +37,7 @@ format, because every band needs a house style and that's ours:
   auto-generated ASCII fretboard diagram for each one, so nobody's guessing which of the six
   ways to play a G I meant.
 - **`chords-bass.md`** - the same song from the bass's point of view, tab positions per chord.
-- **`drums.md`** _(optional)_ - tempo, section breakdown, bar ranges, for when the click track
+- **`drums.md`** - tempo, section breakdown, bar ranges, for when the click track
   needs a map.
 - **`keys.md`** _(optional)_ - the keyboard part: voicings and what the piano or synth is doing
   section by section, for the songs that put hands on keys.
@@ -78,7 +79,7 @@ actual set of fretted positions. The chart generator doesn't improvise that; it 
 
 This is the "orchestration, not typing" idea in miniature. I'm not the guy hand-drawing
 fretboard dots. I'm the guy who decided what a correct dot _is_, wrote it down once, and now
-points the [machine](/glossary/machine-learning/) at it. The taste is mine. The repetition is the skill's.
+points the [machine](/glossary/machine-learning/) at it. The direction is mine. The repetition is the skill's.
 
 ## The tooling
 

@@ -108,7 +108,7 @@ Here's my evidence that the ghost can be exorcised: the site you're reading.
 I haven't typed a line of its code in weeks. I directed it, judged it, threw things out,
 changed my mind - but the keystrokes weren't mine. By the old gospel that should make it feel
 like a fraud, a thing I didn't really _make_ because I didn't suffer enough for it. It
-doesn't. It feels like mine completely, because the part that was mine - the taste, the
+doesn't. It feels like mine completely, because the part that was mine - the
 argument, the point of view - was never the typing. The typing was the toil. This was the
 work.
 

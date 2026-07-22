@@ -89,5 +89,5 @@ Everything above is plumbing. These two decisions are why the results are usable
 Not the script; scripts are an afternoon. Steal the shape: hand-write the one-sentence
 visual idea, force real variety with engines _and_ styles, review on a contact sheet so the
 takes compete, keep the rejects, and never let text into the pixels. The machine is a room
-full of painters who work for pocket change and never sleep. The taste that picks the
+full of painters who work for pocket change and never sleep. The part that picks the
 winner doesn't come with the room.
