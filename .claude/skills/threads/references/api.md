@@ -75,7 +75,15 @@ the app is often still the path.
 - **All posts:** `GET /{user-id}/threads?fields=id,media_type,text,permalink,timestamp` (paginate via `paging.next`)
 - **All your replies (the blind spot):** `GET /{user-id}/replies?fields=id,text,permalink,timestamp` (paginate via `paging.next`). `/{user-id}/threads` returns ONLY your top-level posts, never the replies you leave on other people's threads. Loop each reply id through the per-post insights call above to read its likes/views. `snapshot-metrics.sh` tracks only top-level posts, so reply engagement is invisible to the dashboard unless you pull it this way.
 
-Repeatable, from the repo root (read-only, writes nothing):
+Use `scripts/pull-replies.sh` rather than hand-rolling the two calls; it paginates, adds
+insights, converts to Boise time, and stages the parent capture described next.
+
+```bash
+scripts/pull-replies.sh --date 2026-07-25    # one local day
+scripts/pull-replies.sh --days 30
+```
+
+The raw calls, if you need a one-off (read-only, writes nothing):
 
 ```bash
 set -a; source .env; set +a
@@ -85,7 +93,40 @@ curl -s "https://graph.threads.net/v1.0/${THREADS_USER_ID}/replies?fields=id,tex
 curl -s "https://graph.threads.net/v1.0/<REPLY_MEDIA_ID>/insights?metric=views,likes,replies,reposts,quotes&access_token=${THREADS_ACCESS_TOKEN}"
 ```
 
-Worth knowing (measured 2026-06-10): **replies vastly out-reach top-level posts.** The recent replies pulled 200 to 300 views each, versus 6 to 17 views on own posts, because they ride bigger accounts' threads. The account's reach currently lives in other people's conversations, so reply metrics are the ones to watch.
+### The API will not give you the post you replied to
+
+**Measured 2026-07-26 on a 44-reply day.** Requesting
+`fields=...,root_post{id,permalink,username,text},replied_to{id,permalink,username,text}`
+on `/{user-id}/replies` returns those keys **only when the parent is your own content**
+(a self-reply continuing your own thread). On that day exactly 2 of 44 came back populated,
+and both parents were `@eaglstun.ai`. For every reply left on someone else's thread the keys
+are **silently absent**: no error, no null, just missing. Same on a direct `GET /{reply-id}`.
+
+Nor can you scrape around it. All of these were tried and all of them fail:
+
+| path                          | what you get                                              |
+| ----------------------------- | --------------------------------------------------------- |
+| `curl` the reply permalink    | ~256KB JS shell, no og tags, not even your own reply text |
+| `…/embed` and the oEmbed URLs | the same shell                                            |
+| `WebFetch` the permalink      | your reply renders, the parent post above it does not     |
+
+What is left is the **logged-in browser** (Chrome tools, or the devtools inspector-paste
+fallback in SKILL.md). Budget for it: a reply archived without its parent is a non sequitur,
+and six weeks later nobody can tell whether it landed or what it was even answering.
+
+Worth knowing (measured 2026-06-10, **since superseded, see below**): replies pulled 200 to 300 views each, versus 6 to 17 views on own posts, because they ride bigger accounts' threads.
+
+**Corrected 2026-07-26.** Own posts now pull **46 to 90 views** (median ~76), while the median
+reply pulls **10**. Replies only win in aggregate, and only on volume: 44 replies in one day
+totalled 3,047 views, but a single post out-reaches a typical reply by roughly 7x. Do not read
+"replies out-reach posts" as per-unit truth. What posts lack is _likes_ (0 to 4 each), not
+reach, and with 33 followers that is a distribution fact rather than a writing verdict.
+
+Worth knowing (measured 2026-07-25, 44 replies in one day): **reach is thread selection, not
+craft.** Two replies riding one big thread took 2,030 of the day's 3,051 views; the median
+reply got 10. The single highest-reach line was fourteen words with no argument in it, while
+the long, genuinely good ones sat at 10 to 40 views. Judge a reply's writing by what it earns
+you in the thread, not by its view count.
 
 Insights give Threads-side engagement, **not** outbound clicks to the site. For the funnel's
 "did they click" question, put `?utm_source=threads` on the link and read the site's own

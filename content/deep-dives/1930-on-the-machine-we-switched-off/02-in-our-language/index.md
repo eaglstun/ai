@@ -95,7 +95,7 @@ Give the 1930 mind a handle it owns, a lock, a scholar, a counterfeit coin, and 
 genuine force, occasionally out-thinking the present. Hand it the raw 2026 words and it does not
 get confused in a charming way. It parrots the jargon back at you ("kept off the internet," "the
 model was superseded") and the reasoning underneath buckles. It contradicts itself. It trails
-into nothing. It mistakes an execution for a product recall. The vocabulary it lacks is not just
+into nothing. It mistakes an execution for a product recall. The vocabulary it lacks is
 unfamiliar, it actively jams the gears, because every modern term is a slot the model fills with
 sound it cannot cash out into meaning.
 
