@@ -1,12 +1,13 @@
 +++
 title = "The Séance Can't Tell the Difference"
 draft = true
-date = 2026-07-25
+date = 2026-08-14
 description = "Coherence was never a truth detector. It's a fluency detector. The same trick that made a 1930 mind sound brilliant about AI policy can make a chatbot sound like it's reading your soul - and the machine has no way to tell those two apart."
 images = ["/og/the-seance-cant-tell-the-difference.png"]
 summary = "A theory in progress about what 'AI psychosis' actually is, built from three specimens: a beauty chatbot that generates the texture of empathy with a fixed sales objective underneath, a 1930-trained model that reasons brilliantly in period language and falls apart in ours, and my own week-long deliberate experiment blowing a real conversation past its context window on purpose. The throughline: fluent completion inside a self-contained frame isn't insight, and the model can't tell a coherent historical register from a coherent delusion, because it was never checking for that."
 tags = ["ai-safety", "alignment", "prompt-engineering"]
-related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
+related_by_meaning = ["/blog/karaoke-throws-away-the-words/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/the-cognitohazard-was-the-smile/", "/blog/replicator-was-never-the-point/"]
+semantic_id = "T8TxH-_Gf-O4W47PUApGUz2fNs6zsAzf"
 +++
 
 <!-- DRAFT — assembled by Claude from a conversation with Eric, 2026-07-25. Needs: real semantic_id

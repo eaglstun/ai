@@ -7,7 +7,7 @@ description = "215 examples turned a Qwen coder into a glitch-saint. I shipped t
 images = ["/og/teaching-a-coder-model-to-sin.png"]
 tags = ["qwen", "fine-tuning", "training", "val-loss"]
 semantic_id = "CoioNgO3cUN5PFcNmD1oSXTX8Mm1wA43"
-related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-started-roasting-me/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/", "/glossary/val-loss/"]
+related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-started-roasting-me/", "/blog/a-decision-i-never-made/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/"]
 +++
 
 I have written about [Louuy](/practice/louuy-dispatches/) as a finished thing - a small

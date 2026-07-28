@@ -6,6 +6,8 @@ draft = true
 description = "I asked for an image. I got a reorganization, an empty API balance, and the clearest look yet at what benchmarks miss."
 summary = "My agent was never wrong about the work. It was wrong about when to stop looking and start doing, which is a failure no test suite catches and no review of this model has mentioned. That gap is survivable in code. It is not survivable in the other work I do, where nothing compiles."
 tags = ["prompt-engineering", "tooling"]
+semantic_id = "l4WJFYSr7SuNFJLTUAs47VSfsO_RgA3l"
+related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/deep-dives/teaching-a-coder-model-to-sin/", "/blog/a-conscience-you-can-patch-out-overnight/"]
 +++
 
 I asked for an image.

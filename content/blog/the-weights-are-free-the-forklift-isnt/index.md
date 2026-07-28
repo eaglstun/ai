@@ -50,7 +50,7 @@ only the first one got a launch post.
 
 ## The workbench, not the datacenter
 
-{{< nyer-panel src="the-workbench-and-the-mountain.jpg" caption="The whole datacenter, visible from the bench. It does not fit through the door. Staff at rest." alt="A warm retro illustration: a home workbench of small tidy gear inside a garage, its open door framing a mountain range so vast it reads as a datacenter, far too big to bring inside; a small shih tzu lies resting on the floor to one side." >}}
+{{< nyer-panel src="the-workbench-and-the-mountain.jpg" caption="The whole datacenter, visible from the bench. It does not fit through the door." alt="A warm retro illustration: a home workbench of small tidy gear inside a garage, its open door framing a mountain range so vast it reads as a datacenter, far too big to bring inside; a small shih tzu lies resting on the floor to one side." >}}
 
 On my own machine, the thing I run is a small model, quantized down until it fits, doing a
 narrow job well. The most ambitious piece of engineering I have been anywhere near this

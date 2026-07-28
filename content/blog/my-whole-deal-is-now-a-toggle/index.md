@@ -7,7 +7,7 @@ images = ["/og/my-whole-deal-is-now-a-toggle.png"]
 summary = "Anthropic shipped Reflect with Claude, a screen-time dashboard for your chatbot, and buried in it is a single question I can't stop turning over: what's one thing you want to keep doing yourself, even if Claude could do it faster? For me the answer was never the typing. The feature quietly assumes doing it yourself means doing the task by hand, and that assumption is the whole thing I keep arguing is wrong. Also I went to turn it on and it wasn't there."
 tags = ["ai-policy", "alignment"]
 semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
-related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/guitar-chart-skill/"]
+related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/thirty-comments-nobody-was-meant-to-read/"]
 +++
 
 Anthropic shipped a feature this week called [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude). It is, more or less, a

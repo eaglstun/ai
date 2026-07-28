@@ -6,7 +6,7 @@ date = 2026-06-26
 series = "1930-on-the-machine-we-switched-off"
 images = ["/og/1930-on-the-machine-we-switched-off.png"]
 description = "The same seven questions, the same 1930 mind, the same seed. This time you hold the temperature dial, and every answer is the model's real output."
-summary = "An interactive companion to the series: pick any of the seven Fable questions and turn talkie's temperature from greedy-and-deterministic up to fraying-at-the-edges. Every line is verbatim model output at seed 1930. The 0.8 stop is the exact setting the published runs used, so you can find the quotes from Parts 1 and 2 sitting in the widget. The experiment has since outgrown this page: the full rig, more machines and the language knob included, now lives at fable-mvp.gg."
+summary = "An interactive companion to the series: pick any of the seven Fable questions and turn talkie's temperature from greedy-and-deterministic up to fraying-at-the-edges. Every line is verbatim model output at seed 1930. The 0.8 stop is the exact setting the published runs used, so you can find the quotes from Parts 1 and 2 sitting in the widget. The experiment has since outgrown this page: the full rig, more machines and the language knob included, now lives at fable-mvp.tech."
 tags = ["temperature", "inference"]
 semantic_id = "gGeolFn6mSJyOENrcMwlWBfsSsctAAsJ"
 related_by_meaning = ["/blog/three-hours-and-150-dollars/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
@@ -49,7 +49,7 @@ freeze the dial, and whatever changes is the thing you actually changed.
 
 The widget above was the prototype, and it stays right here as the original apparatus. But the
 experiment kept going, and it now has its own building:
-[**fable-mvp.gg**](https://fable-mvp.gg/), a signal-analysis rig for the dead.
+[**fable-mvp.tech**](https://fable-mvp.tech/), a signal-analysis rig for the dead.
 
 Over there the other frozen number thaws too. A language toggle asks the same seven questions
 in 1930's words or in ours, which was the knob this series was really about, the one Parts 1
@@ -60,7 +60,7 @@ will answer anything and has lost the instinct for stopping. The rack fills in a
 
 The rules do not loosen over there. Every answer is pre-generated, verbatim output at seed
 1930; nothing is invented and nothing runs live. The knobs only choose which real answer you
-are looking at. There is also a [lab notebook](https://fable-mvp.gg/analysis/) of short notes
+are looking at. There is also a [lab notebook](https://fable-mvp.tech/analysis/) of short notes
 on what the readings add up to.
 
 Turn this knob first, to get the feel of it. Then go turn the rest of them.
