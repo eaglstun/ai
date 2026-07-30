@@ -2,9 +2,10 @@
 title = "Part 7 - The Thing This Didn't Become: A Pull Request"
 slug = "not-a-pull-request"
 weight = 7
-draft = true
-date = 2026-07-27
+date = 2026-07-25
 series = "ctranslate2-metal-backend"
+description = "A working Apple-Silicon GPU backend, and no pull request. I can explain every decision in it. I can't defend a single line."
+images = ["/og/ctranslate2-part-7.png"]
 summary = "There's a working Apple-Silicon GPU backend at the end of this, built by someone who has never written a line of C++. It is not going upstream as one big pull request, and the real reason is the most interesting lesson in the project - about what 'understand it and defend every line' means when the line-level understanding genuinely isn't yours, and why a fork is the right home, not a consolation prize."
 tags = ["apple-silicon", "metal", "mps", "transformer"]
 semantic_id = "_TP7kg16MHYmkpvo2Xk3O4os1UiYsAz2"
@@ -17,7 +18,9 @@ whole site is built on.
 
 There is, at the end of all this, a working GPU backend. Full transformer, two precisions,
 correct against the CPU, memory-safe, with a real performance story. The obvious next move is a
-pull request to CTranslate2. I'm not making one. Here's the straight why.
+pull request to CTranslate2. I'm not making one, here's why.
+
+{{< nyer-panel src="outweighed.jpg" caption="The engine goes on the light pan. Everything it costs someone else to check goes on the other one." alt="A warm mid-century illustration: an orange merchant's scale where a small green engine sits alone on one pan, hoisted high, while the opposite pan overflows with a towering mountain of loose paper that has crashed the beam to the ground. Two tiny clerks with magnifying glasses stand below." >}}
 
 ## The maintainers' policy, and why it's correct
 
@@ -36,6 +39,8 @@ is more surface area than any maintainer can responsibly vet on faith - no matte
 wrote it. Declining it isn't gatekeeping. It's the only sane response to a 50-file diff in a
 place where pointers bite.
 
+{{< nyer-panel src="one-magnifying-glass.jpg" caption="Fifty files, one reviewer, one magnifying glass." alt="A single-panel cartoon in black ink and gray wash: a small machine sits on a tiered wooden plinth beside an enormous pyramid of stacked paper, with one tiny clerk in a suit standing at its base holding a single magnifying glass." >}}
+
 ## The policy asks for something I genuinely can't give
 
 Here's where I have to be straight, because the policy is precise about it. It doesn't merely ask
@@ -49,7 +54,8 @@ What I _can_ do is explain the shape. The unified-memory cheat code, why Metal r
 dispatch case, the two critical allocator exceptions, why a `tanh` overflowed at layer 23, why
 decode loses to prefill - I understand all of that well enough to have just written six posts
 about it. But "I can explain the architecture" and "I can defend the implementation" are different
-sentences, and the maintainers are asking for the second one. They are right to. Architectural
+sentences, and the maintainers are asking for the second one. It's the difference between hearing
+that a piano is out of tune and knowing which pin to turn. They are right to. Architectural
 understanding is what let me _judge_ this backend - point it at Gemma2, see the `<pad>` collapse,
 know that's wrong, drive the bisection. It is emphatically not what lets anyone _vouch_ for a line
 of it. A reviewer needs someone who can vouch, in this language, in this codebase - and frankly,

@@ -7,7 +7,7 @@ images = ["/og/my-whole-deal-is-now-a-toggle.png"]
 summary = "Anthropic shipped Reflect with Claude, a screen-time dashboard for your chatbot, and buried in it is a single question I can't stop turning over: what's one thing you want to keep doing yourself, even if Claude could do it faster? For me the answer was never the typing. The feature quietly assumes doing it yourself means doing the task by hand, and that assumption is the whole thing I keep arguing is wrong. Also I went to turn it on and it wasn't there."
 tags = ["ai-policy", "alignment"]
 semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
-related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/guitar-chart-skill/"]
+related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/thirty-comments-nobody-was-meant-to-read/"]
 +++
 
 Anthropic shipped a feature this week called [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude). It is, more or less, a
@@ -41,7 +41,7 @@ again. I'm the general contractor, not the guy swinging the hammer, and I have m
 that so thoroughly that I'll write it in public.
 
 So when the card asks what I want to keep doing myself, the real answer isn't a task. It's the
-judgment. The taste. The decision about what is even worth making, which no dashboard has ever
+judgment. The direction. The decision about what is even worth making, which no dashboard has ever
 been able to hand back to me and no model has ever wanted to. You can delegate every keystroke in
 a thing and still be the only person who could have decided it should exist and sound like this.
 _The keystrokes were never the part with your fingerprints on it._ That was always somewhere else.

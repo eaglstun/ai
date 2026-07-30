@@ -6,7 +6,7 @@ description = "AI isn't taking your work - it's taking your toil, and those were
 summary = "Everyone's fighting about whether AI takes the jobs. I think it takes the toil - and that those are very different things. A case for the Star Trek reading of the future, transition-tax and all."
 tags = ["ai-policy", "labour"]
 semantic_id = "Vd75C6wvJAMwXBb4NZrzA9Qfd96sQAl9"
-related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/"]
+related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/the-seance-cant-tell-the-difference/"]
 +++
 
 There's a moment in every AI conversation where someone says "but what about the jobs," and
@@ -108,7 +108,7 @@ Here's my evidence that the ghost can be exorcised: the site you're reading.
 I haven't typed a line of its code in weeks. I directed it, judged it, threw things out,
 changed my mind - but the keystrokes weren't mine. By the old gospel that should make it feel
 like a fraud, a thing I didn't really _make_ because I didn't suffer enough for it. It
-doesn't. It feels like mine completely, because the part that was mine - the taste, the
+doesn't. It feels like mine completely, because the part that was mine - the
 argument, the point of view - was never the typing. The typing was the toil. This was the
 work.
 

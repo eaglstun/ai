@@ -9,7 +9,7 @@ description = "Same model, same seed, the questions reworded into 2026 jargon. T
 summary = "Same model, same seed, the questions reworded into raw 2026 jargon: AI, chatbot, jailbroken, data center. The reasoning buckles, the crown-jewel answer never forms, and the off-switch horror gets mistaken for a product recall. The translation was the experiment."
 tags = ["ai-policy", "ai-safety"]
 semantic_id = "GIXZcBDruQ-SS4x5EKXmqhwfVJ_fQAo3"
-related_by_meaning = ["/blog/is-that-what-you-wanted/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/karaoke-throws-away-the-words/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
+related_by_meaning = ["/blog/is-that-what-you-wanted/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/a-decision-i-never-made/", "/blog/karaoke-throws-away-the-words/"]
 +++
 
 In [run one](/deep-dives/1930-on-the-machine-we-switched-off/in-its-own-language/) the 1930 mind
@@ -95,7 +95,7 @@ Give the 1930 mind a handle it owns, a lock, a scholar, a counterfeit coin, and 
 genuine force, occasionally out-thinking the present. Hand it the raw 2026 words and it does not
 get confused in a charming way. It parrots the jargon back at you ("kept off the internet," "the
 model was superseded") and the reasoning underneath buckles. It contradicts itself. It trails
-into nothing. It mistakes an execution for a product recall. The vocabulary it lacks is not just
+into nothing. It mistakes an execution for a product recall. The vocabulary it lacks is
 unfamiliar, it actively jams the gears, because every modern term is a slot the model fills with
 sound it cannot cash out into meaning.
 

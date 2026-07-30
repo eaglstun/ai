@@ -14,5 +14,7 @@ scripts/__pycache__/
 .claude/skills/threads/posts/
 .claude/skills/threads/metrics/
 .claude/skills/linkedin/linked-*.md
+.claude/skills/linkedin/drafts/
 .claude/skills/linkedin/posts/
+.claude/skills/linkedin/comments/
 dist/

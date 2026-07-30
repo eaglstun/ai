@@ -16,7 +16,7 @@ site.
 all five scopes ready, account wired as a Threads Tester. The token is 60-day, so **refresh
 before it expires** (see `references/setup.md`).
 
-## The two scripts are the interface
+## The three scripts are the interface
 
 Reach for raw curl only for one-offs; otherwise use these (run from repo root, they read
 `.env`):
@@ -30,6 +30,10 @@ scripts/post-draft.sh --post inbox/<handle>.md        # ACTUALLY PUBLISH (as you
 
 # Snapshot every post's metrics into meta/metrics/ (append-only time series).
 scripts/snapshot-metrics.sh
+
+# Pull the replies YOU left on other people's threads, with engagement. Read-only.
+scripts/pull-replies.sh --date 2026-07-25    # one local day
+scripts/pull-replies.sh --days 30
 ```
 
 `post-draft.sh` extracts the chosen block (`extract_pick.py`), strips `>` markers, unwraps
@@ -56,6 +60,36 @@ heading and the `(NNN)` count (or `---` / next `##`), so a "why this one" ration
 sitting under a pick heading gets published as part of the post. Put rationale ABOVE the pick
 headings, in the draft's preamble. (Learned on post 006: the dry-run came back 739/500 with
 the bucket notes glued to the top. The dry-run default exists precisely to catch this.)
+
+## Pulling your own replies: ALWAYS capture the parent posts
+
+`/{user-id}/threads` returns only top-level posts, so the replies you leave on other people's
+threads are invisible to it and to `snapshot-metrics.sh`. Since replies out-reach own posts by
+an order of magnitude here, that blind spot is most of the account's real reach. Pull it with
+`scripts/pull-replies.sh`.
+
+**A pull is not finished when the script exits.** It gives you your half of every conversation
+and the API cannot give you the other half: `root_post` / `replied_to` come back populated
+**only when the parent is your own post**, and are silently absent otherwise (a small
+fraction on the day this was measured). curl, `/embed`, oEmbed, and WebFetch all fail to
+recover it too. The full autopsy is in `references/api.md`, "The API will not give you the
+post you replied to."
+
+So every reply pull ends with a browser pass, no exceptions:
+
+1. Run `scripts/pull-replies.sh --date <YYYY-MM-DD>` (or `--days N`). It writes
+   `meta/replies/inbound/<label>.json` (archive) and `<label>.md` (work-list, one block per
+   reply, `status: needs-parent`).
+2. Open each block's permalink in the **logged-in browser** (Chrome tools preferred; the
+   devtools inspector-paste fallback below works when the extension is offline) and read the
+   post sitting above your reply.
+3. Fill `parent_author` and `parent_text` in the block, flip `status:` to `captured`.
+
+**Never report a reply pull as done while blocks are still `needs-parent`.** Say how many are
+unresolved and why. A reply without its parent is a non sequitur: you cannot tell whether it
+landed, cannot mine it for site copy, and six weeks on nobody can reconstruct what it answered.
+If the browser is unavailable, hand back the numbers plus the unresolved count, and say the
+capture is pending rather than calling it finished.
 
 ## Capturing an external post to reply to
 

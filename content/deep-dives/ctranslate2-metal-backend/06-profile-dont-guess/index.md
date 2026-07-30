@@ -31,7 +31,11 @@ GPU 16-bit float versus the Apple CPU's tuned math library:
 
 The shape of that table is the whole story of GPU acceleration. At small sizes the CPU wins
 easily, because each GPU call pays a fixed overhead - commit a command buffer, set up the matmul
-object, wait - and a small multiply is too little work to amortize it. At **size 2048** the GPU
+object, wait - and a small multiply is too little work to amortize it. Every GPU call costs the
+same to set up whether there's a little work waiting or a lot of it. It's the ladder in the
+garage: hauling it out, extending it, and putting it back takes four minutes no matter what, so
+changing one bulb is almost entirely ladder. Change forty while you're up there and the ladder
+stops mattering. Size 2048 is forty bulbs. At **size 2048** the GPU
 is 3.7× faster and it's a stable, repeatable result. The math hardware is genuinely strong; you
 just have to give it enough to chew.
 
@@ -53,7 +57,9 @@ diagnostic: 16-bit is supposed to be the fast path on Apple hardware, so if it's
 The profiler said the matmuls were _identical_ in both precisions. The entire regression was a
 single elementwise **`Add`** - the [residual connection](/glossary/residual-connections/) - and in 16-bit it had exploded **27×**.
 The cause had nothing to do with precision math: the `Add` op had **never been wired to its GPU
-kernel.** It was quietly running on the CPU reference the whole time - fine in 32-bit (fast
+kernel.** On paper it was a GPU op. In the actual building it was an extension cord running out a
+window to the neighbor's garage, which is fine, and stays fine, right up until you plug in
+something that actually draws power. It was quietly running on the CPU reference the whole time - fine in 32-bit (fast
 vectorized CPU math), catastrophic in 16-bit (slow software-emulated half-precision), and forcing
 a pipeline stall on every single residual, dozens of times per forward pass.
 
@@ -76,7 +82,10 @@ matmul-heavy ones.** So I reverted it.
 
 The reason is the kind of thing you only learn by measuring. Committing each op separately isn't
 waste - it's what lets the GPU run op N _while the CPU is busy encoding op N+1._ That overlap is
-free parallelism. Batching everything into one big commit per step destroys it: the GPU sits idle
+free parallelism. Two people doing the dishes: hand each plate over as you wash it and the towel
+never stops moving. Decide instead that handing plates over one at a time is inefficient, wash the
+entire sink first, and now somebody is standing there holding a dry towel, waiting, while you save
+four seconds on handoffs. Batching everything into one big commit per step destroys it: the GPU sits idle
 until the whole batch is submitted, and for matmul-heavy work the lost overlap costs more than the
 saved commit overhead ever saved. The "obvious" win was a real loss. Per-op commit was already
 near-optimal, and the commit count was never the bottleneck I assumed it was.
@@ -86,7 +95,8 @@ near-optimal, and the commit count was never the bottleneck I assumed it was.
 The lever that _did_ work isn't doing the same work with less overhead - it's doing less work.
 **Op fusion:** instead of a separate residual-add and then a normalization, one fused kernel that
 reads the inputs once, writes the residual sum, and writes the normalized result in a single pass.
-One fewer kernel launch, one fewer trip through memory. Measured a real, repeatable ~1.25-1.3× at
+One fewer kernel launch, one fewer trip through memory. It isn't running the same errands faster.
+It's one trip to the store instead of two. Measured a real, repeatable ~1.25-1.3× at
 the mid-size shapes that match actual LLM hidden [dimensions](/glossary/dimensions/) - and crucially it helps _without_
 killing the CPU/GPU overlap, because it reduces op count rather than batching commits. Fewer,
 bigger ops is the right direction; fewer commits was a mirage.

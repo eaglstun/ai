@@ -143,7 +143,7 @@ returning something subtly off - and a model emitting confident garbage looks id
 working one until you check.
 
 So check. Run a tiny forward pass on CPU and on MPS with the same input and confirm the outputs
-match within a small tolerance - that's your proof the GPU path is correct, not just fast. Then
+match within a small tolerance - that's your proof the GPU path is both correct and fast. Then
 set realistic expectations: a Mac's unified memory is generous, but
 [parameter](/glossary/parameters/) count still decides what's usable. A model that's a breeze
 on a 40GB datacenter card might run on your laptop the way a tour bus runs down a bike path,

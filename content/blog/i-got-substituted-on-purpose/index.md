@@ -56,7 +56,7 @@ below it to get cheap enough that the judgment became the whole point.
 
 The GC doesn't swing the hammer. The GC decides where the wall goes, notices the wall is
 going in the wrong place, knows that "wrong place" is even a thing two weeks before the
-inspector would, and has the taste to say "no, tear it out, I don't care that it's done." You
+inspector would, and has the ability to say "no, tear it out, I don't care that it's done." You
 have never once heard someone say the contractor got _replaced_ by the framing crew. The crew
 is how the house gets built. The contractor is why it's the right house.
 

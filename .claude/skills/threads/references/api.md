@@ -75,7 +75,15 @@ the app is often still the path.
 - **All posts:** `GET /{user-id}/threads?fields=id,media_type,text,permalink,timestamp` (paginate via `paging.next`)
 - **All your replies (the blind spot):** `GET /{user-id}/replies?fields=id,text,permalink,timestamp` (paginate via `paging.next`). `/{user-id}/threads` returns ONLY your top-level posts, never the replies you leave on other people's threads. Loop each reply id through the per-post insights call above to read its likes/views. `snapshot-metrics.sh` tracks only top-level posts, so reply engagement is invisible to the dashboard unless you pull it this way.
 
-Repeatable, from the repo root (read-only, writes nothing):
+Use `scripts/pull-replies.sh` rather than hand-rolling the two calls; it paginates, adds
+insights, converts to local time, and stages the parent capture described next.
+
+```bash
+scripts/pull-replies.sh --date 2026-07-25    # one local day
+scripts/pull-replies.sh --days 30
+```
+
+The raw calls, if you need a one-off (read-only, writes nothing):
 
 ```bash
 set -a; source .env; set +a
@@ -85,7 +93,40 @@ curl -s "https://graph.threads.net/v1.0/${THREADS_USER_ID}/replies?fields=id,tex
 curl -s "https://graph.threads.net/v1.0/<REPLY_MEDIA_ID>/insights?metric=views,likes,replies,reposts,quotes&access_token=${THREADS_ACCESS_TOKEN}"
 ```
 
-Worth knowing (measured 2026-06-10): **replies vastly out-reach top-level posts.** The recent replies pulled 200 to 300 views each, versus 6 to 17 views on own posts, because they ride bigger accounts' threads. The account's reach currently lives in other people's conversations, so reply metrics are the ones to watch.
+### The API will not give you the post you replied to
+
+**Measured 2026-07-26 on a single day's pull.** Requesting
+`fields=...,root_post{id,permalink,username,text},replied_to{id,permalink,username,text}`
+on `/{user-id}/replies` returns those keys **only when the parent is your own content**
+(a self-reply continuing your own thread). Only a small fraction of that day's replies came
+back populated, and every one of those parents was `@eaglstun.ai`. For every reply left on
+someone else's thread the keys are **silently absent**: no error, no null, just missing.
+Same on a direct `GET /{reply-id}`.
+
+Nor can you scrape around it. All of these were tried and all of them fail:
+
+| path                          | what you get                                              |
+| ----------------------------- | --------------------------------------------------------- |
+| `curl` the reply permalink    | ~256KB JS shell, no og tags, not even your own reply text |
+| `…/embed` and the oEmbed URLs | the same shell                                            |
+| `WebFetch` the permalink      | your reply renders, the parent post above it does not     |
+
+What is left is the **logged-in browser** (Chrome tools, or the devtools inspector-paste
+fallback in SKILL.md). Budget for it: a reply archived without its parent is a non sequitur,
+and six weeks later nobody can tell whether it landed or what it was even answering.
+
+Worth knowing (measured 2026-06-10, **since superseded, see below**): early replies
+out-reached own posts because they rode bigger accounts' threads.
+
+**Corrected 2026-07-26.** That early read does not hold as a per-unit truth: individual own
+posts now typically out-reach an individual reply. Replies only win in aggregate, on volume,
+across a whole day's worth. Do not read "replies out-reach posts" as a per-post rule. See
+`meta/metrics/` for current numbers rather than treating any figure here as current.
+
+Worth knowing (measured 2026-07-25): **reach is thread selection, not craft.** A small
+number of replies riding one big thread accounted for the large majority of a day's total
+reply views, while the typical reply landed far lower regardless of how good the writing
+was. Judge a reply's writing by what it earns you in the thread, not by its view count.
 
 Insights give Threads-side engagement, **not** outbound clicks to the site. For the funnel's
 "did they click" question, put `?utm_source=threads` on the link and read the site's own

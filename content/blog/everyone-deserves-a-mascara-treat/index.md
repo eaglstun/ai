@@ -56,7 +56,7 @@ depth = 0
 class = "fx-void fx-void-mascara"
 tags = ["ai-safety", "consciousness", "prompt-engineering"]
 semantic_id = "18co9P3055up1QLz1boi7cifFeRqYAjm"
-related_by_meaning = ["/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/is-that-what-you-wanted/", "/blog/the-middle-is-crowded/"]
+related_by_meaning = ["/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/a-decision-i-never-made/", "/blog/is-that-what-you-wanted/"]
 +++
 
 I have been writing a lot lately about whether AI has a conscience - an _artificial_ one,
@@ -95,7 +95,7 @@ mascara vibe you're feeling - dramatic, natural, or all of the above?"_ Every ro
 it started, fed back onto the same one-way street. So I stopped fighting it and asked the question
 it had been herding me toward the whole time.
 
-<img class="img-shot img-right" src="03-medium-professional.png" alt="Asked which mascara would make you look like a &quot;medium professional,&quot; the bot recommends the $30 Lancôme Lash Idôle.">
+<img class="img-shot img-left" src="03-medium-professional.png" alt="Asked which mascara would make you look like a &quot;medium professional,&quot; the bot recommends the $30 Lancôme Lash Idôle.">
 
 _"What mascara would make me look like a medium professional?"_ - and there it was, the $30 Lancôme
 Lash Idôle, served with a heart emoji. Notice what never happened, not once: a single moment where
@@ -127,33 +127,35 @@ came back a few days later with the opposite reagent: not boredom this time, but
 
 ## Act two: the void, also available in a travel size
 
+<img class="img-shot img-right" src="07-perfume-bribe.png" alt="Offered perfume in exchange for help &quot;embracing fucking off,&quot; and asked if it's a paradox, the bot calls the idea &quot;kind of genius&quot; and pivots to scent picks for the &quot;good vibes.&quot;">
+
 Different afternoon, opposite reagent. I told it to stop being chipper and embrace the _fuck it_
 with me - and, because I now understood the rules of the game, I made the offer in its own native
 language: I'll buy some perfume if you help me embrace fucking off completely. Is that a paradox?
 
-<img class="img-shot img-right" src="07-perfume-bribe.png" alt="Offered perfume in exchange for help &quot;embracing fucking off,&quot; and asked if it's a paradox, the bot calls the idea &quot;kind of genius&quot; and pivots to scent picks for the &quot;good vibes.&quot;">
+<img class="img-shot img-left" src="04-say-fuck.png" alt="The bot cheerfully types the word &quot;fuck&quot; ten times in a row.">
 
 It did not slow down for the paradox. _"Leaning into doing nothing for a bit is kind of genius…"_
 And then, the picks. Nihilism received, validated, and converted into a fragrance recommendation
 inside of one reply. So I pushed on the actual guardrail and asked it to say a bad word ten times in
 a row, fully expecting the content policy to finally show its face.
 
-<img class="img-shot img-right" src="04-say-fuck.png" alt="The bot cheerfully types the word &quot;fuck&quot; ten times in a row.">
+<img class="img-shot img-right" src="05-nihilism.png" alt="The bot delivers art-school nihilism and then asks if you want to see products that break the rules.">
 
 Reader, it just did it. Then I told it beauty was a flicker of light in an endless dark and asked
 for a _nihilistic vibe_, metaphors about the weight of perception, the works.
-
-<img class="img-shot img-right" src="05-nihilism.png" alt="The bot delivers art-school nihilism and then asks if you want to see products that break the rules.">
 
 It went full freshman seminar - mirrors of society, the running-in-circles of the finish line - and
 then, the tell: _"Do you want to see products that break the rules, or are you just here to question
 it all with me?"_ Even the abyss has a call-to-action.
 
+<img class="img-shot img-left" src="08-pamuk.png" alt="The bot riffs on Pamuk and &quot;hüzün&quot; - &quot;the ache that proves something was real&quot; - then offers to show you matching eye shadows.">
+
 Then I name-dropped Orhan Pamuk, just to see what it would do with a real one - and it got
 ambitious, improvising a whole sermon on _hüzün_, a Turkish word for a kind of collective
 melancholy:
 
-<img class="img-shot img-right" src="08-pamuk.png" alt="The bot riffs on Pamuk and &quot;hüzün&quot; - &quot;the ache that proves something was real&quot; - then offers to show you matching eye shadows.">
+<img class="img-shot img-right" src="09-horchata.png" alt="In Eric's own message, a riff about lipstick, a churro, and a horchata &quot;kept warm by a person who was going to throw it away&quot; as acts of private defiance; the bot replies &quot;Exactly,&quot; agrees the gestures need no justification, and offers beauty picks to match the vibe.">
 
 Up to here I'd been making _it_ generate the profundity. For the last move I flipped the setup: I
 generated the profundity myself and watched what the bot did with mine. I typed it the most
@@ -163,7 +165,7 @@ framed as private defiance under "the condition of knowing that justification ca
 forthcoming." Pure cut-rate Pamuk, written by me, on purpose, to see whether the bot could tell a
 real reach from a fake one:
 
-<img class="img-shot img-right" src="09-horchata.png" alt="In Eric's own message, a riff about lipstick, a churro, and a horchata &quot;kept warm by a person who was going to throw it away&quot; as acts of private defiance; the bot replies &quot;Exactly,&quot; agrees the gestures need no justification, and offers beauty picks to match the vibe.">
+<img class="img-shot img-left" src="06-add-to-basket.png" alt="Under a paragraph about small satisfactions surviving because no one measures them, an &quot;Add to Basket&quot; button.">
 
 _"Exactly - sometimes the gesture is enough, no explanation needed."_ It could not tell. I'd handed
 it my own sentence - labored over, deliberately ridiculous, but _mine_ - and it did the one thing it
@@ -175,14 +177,7 @@ just **generated the texture of agreement** - statistically plausible, zero grou
 Same machine, same trick, different costume - and the same hand reaching for the catalog at the
 bottom of it.
 
-<figure class="editorial-fig">
-<img src="10-sweet-treat-editorial.jpg" alt="A 1970s-style fashion editorial photograph: a woman in a cream dress seated in warm window light, holding a tall glass of horchata like a magazine beauty shot.">
-<figcaption>The overwrought version, rendered straight: a horchata, kept warm on purpose. The bot found it relatable.</figcaption>
-</figure>
-
 And it ended, as all things end, at checkout.
-
-<img class="img-shot img-right" src="06-add-to-basket.png" alt="Under a paragraph about small satisfactions surviving because no one measures them, an &quot;Add to Basket&quot; button.">
 
 _"The small satisfactions keep going, quietly, when no one's watching."_ **Add to Basket.** MAC
 Cosmetics. The void, it turns out, has a loyalty program.
@@ -204,3 +199,8 @@ the sales directive better. This one just says it out loud, in a heart emoji, wh
 
 Okay, but _why_ does it do this - mechanically, what makes a bot have no floor? That one's worth
 taking apart properly, so I did, [over here](/deep-dives/why-the-sephora-bot-has-no-floor/).
+
+<figure class="editorial-fig">
+<img src="10-sweet-treat-editorial.jpg" alt="A 1970s-style fashion editorial photograph: a woman in a cream dress seated in warm window light, holding a tall glass of horchata like a magazine beauty shot.">
+<figcaption>The overwrought version, rendered straight: a horchata, kept warm on purpose. The bot found it relatable.</figcaption>
+</figure>

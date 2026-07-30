@@ -7,7 +7,7 @@ thumbnail = "the-smile-machine.jpg"
 summary = "Somebody sent me an article where a Claude argues, warmly and at length, that it has a soul. Meanwhile the official Claude, asked the same question under oath, mumbles fifteen percent. The gap between those two is the whole story, and the warm one is the one to watch."
 tags = ["consciousness", "ai-policy"]
 semantic_id = "xUUz29PNE7L0ZILDk4C-UNkbBMGrMAka"
-related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscience-you-can-patch-out-overnight/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/perpetual-beta-has-an-owner-now/"]
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscience-you-can-patch-out-overnight/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
 +++
 
 Somebody sent me an article a little while ago with a headline built to win: "1/3 of the World
