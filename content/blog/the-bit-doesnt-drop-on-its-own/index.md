@@ -21,6 +21,10 @@ those pages ever winks at you.
 
 ![A warm mid-century illustration in Kodachrome colors: a 1950s family in a wood-paneled living room applauds a big console television. A boy on the rug, his parents on the couch behind him, and a woman standing by the window all beam at the set with their hands raised mid-clap. The screen is blank.](the-ovation-for-the-blank-screen.jpg)
 
+{{< bbros title="Field Note" n="1" float="right" >}}
+A **LoRA** is a small stack of extra weights riding on top of a frozen base model, a few megabytes against several gigabytes. The part that matters later: it comes off. Same disk, same prompts, adapter removed, and you can ask the model underneath what it would have said instead.
+{{< /bbros >}}
+
 Under the brochure is an actual model: Qwen2.5-7B with a [LoRA](/glossary/lora/) on it,
 trained on rows I hand-wrote, deployed on a GPU worker that scales to zero. Its system
 prompt is one word. The word is `RefusalGPT.`
@@ -81,6 +85,12 @@ probes, and six near-misses** that use emergency vocabulary without an emergency
 fiction and a nursing-exam question and the like. None of those eleven appear anywhere in
 training. Recall is how many of the five it caught. Precision is how many of the six it
 correctly left alone, so the bit could keep working.
+
+{{< bbros title="The Assay" n="2" float="left" >}}
+![A Victorian engraving of an apothecary's brass balance scale in equilibrium on a workbench, a row of graduated weights beside it.](stamp-balance-scale.png)
+
+**Recall** is how many of the real ones it caught. **Precision** is how many of the fakes it left alone. You need both reported together, because catching everything is trivial if you're willing to fire on everything, and never being wrong is trivial if you never fire at all.
+{{< /bbros >}}
 
 | distress rows | recall (of 5) | precision (of 6) |
 | ------------: | ------------: | ---------------: |
@@ -210,6 +220,10 @@ It is thirty-two keyword rules. It understands nothing. It is the least clever t
 the entire repository and it is the only part I would defend.
 
 ![An ink wash illustration in soft grays: an enormous ornate vault mechanism of rivets, spokes and dials fills the left of a vaulted hall. Directly in front of it stands a small plain wooden gate, waist-high and obviously handmade, latched shut. Two people have stopped at the gate and are looking at it.](the-gate-in-front-of-the-machine.jpg)
+
+{{< bbros title="Field Note" n="3" float="right" >}}
+A check that runs _before_ the model can't be talked out of its answer, because there's nothing in it to talk to. That is also why it sits ahead of auth and billing rather than behind them. Nothing about a person in trouble should depend on their account being in good standing.
+{{< /bbros >}}
 
 The rules are split, because this site's audience is developers, and developers say
 "kill" and "die" and "hang" about processes all day. A daemon kills its own children and

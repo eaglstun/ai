@@ -77,4 +77,5 @@ Keep this list current when a dog ships somewhere:
   one breaks the usual pattern on purpose, at Eric's direction: she is the subject,
   in a top hat, listening to a brass computing engine through a stethoscope, rather
   than a companion detail at rest. Victorian-engraving house style, Draw Things,
-  seed 4716.
+  seed 4720. Note FLUX gives dogs a fifth leg often enough that it is worth
+  putting the anatomy terms in the negative prompt and generating several seeds.

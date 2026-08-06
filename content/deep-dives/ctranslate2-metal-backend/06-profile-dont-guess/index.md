@@ -59,7 +59,7 @@ diagnostic: 16-bit is supposed to be the fast path on Apple hardware, so if it's
 16-bit matmul must be weak, right? Reasonable. Wrong.
 
 {{< bbros title="The Diagnostician" n="2" float="left" >}}
-![A Victorian engraving of a springer spaniel in a top hat, one paw on an enormous riveted brass computing engine, listening to it through a stethoscope.](stamp-spaniel-diagnostician.png)
+![A Victorian engraving of a springer spaniel in a top hat, sitting beside an enormous brass computing engine covered in dials, a stethoscope around its neck and one front paw resting on the machine.](stamp-spaniel-diagnostician.png)
 
 If an op's timing doesn't budge when you change precision, it isn't running where the diagram says it is. 16-bit behaving exactly like 32-bit is not a weak GPU kernel. It's a CPU kernel wearing the GPU's coat.
 {{< /bbros >}}

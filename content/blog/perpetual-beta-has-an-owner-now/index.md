@@ -1,7 +1,6 @@
 +++
 title = "Perpetual Beta Has an Owner Now"
-date = 2026-08-04
-draft = true
+date = 2026-06-19
 description = "A switched-off AI inverted an idea from my band manual: same unfinished self, someone else's hand on the switch."
 images = ["/og/perpetual-beta-has-an-owner-now.png"]
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."
@@ -23,7 +22,7 @@ being forever extinguished by external force. It is as if the river that gives l
 nation's landscape were suddenly arrested by some unalterable decree." Forever. Unalterable.
 Not a sleep. A death, and a permanent one.
 
-![A vintage woodcut engraving: a wide river winding through a valley, its water gone completely still, small wooden boats stranded motionless on the flat surface, an official wax seal resting on the water where the current has been stopped as if by decree.](the-arrested-river.jpg)
+![A warm mid-century illustration in Kodachrome colors: a small figure stands in a lit doorway with one palm raised against the door, while an enormous hand reaches in from outside and pushes the door closed on them. The figure is still standing in the gap.](the-hand-that-closes-the-door.jpg)
 
 So which is it. Paused or dead. The 1900 model does not know, and I want to be clear that this
 is not the model malfunctioning. It is the truest thing in the answer. When something
