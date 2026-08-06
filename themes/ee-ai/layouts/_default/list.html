@@ -5,10 +5,17 @@
   </header>
   {{ .Content }}
 
-  {{- $pages := .Pages.ByDate.Reverse }}
+  {{/* `unlisted = true` posts are published and indexable but appear in no list on
+       the site. They keep their sitemap entry and their /search/ row (index.json),
+       so they stay findable without being promoted. */}}
+  {{- $pages := (where .Pages "Params.unlisted" "!=" true).ByDate.Reverse }}
   {{- if $pages }}
+  {{/* 12 per page, set by [pagination] pagerSize in hugo.toml. .Paginate may only
+       be called once per page, and the pager below is skipped entirely when
+       everything fits on one page (practice, deep-dives today). */}}
+  {{- $paginator := .Paginate $pages }}
   <ul class="post-list">
-    {{- range $pages }}
+    {{- range $paginator.Pages }}
     {{/* Thumbnail resolution lives in partials/post-thumb.html (shared with the
          home "Latest" feed). Posts with no image just render the text row. */}}
     {{- $thumb := partial "post-thumb.html" . }}
@@ -29,6 +36,21 @@
     </li>
     {{- end }}
   </ul>
+  {{- if gt $paginator.TotalPages 1 }}
+  <nav class="pager" aria-label="Pagination">
+    {{- with $paginator.Prev }}
+    <a class="pager-link pager-prev" href="{{ .URL }}" rel="prev"><span class="pager-dir" aria-hidden="true">&larr;</span> <span class="pager-label">Newer</span></a>
+    {{- else }}
+    <span class="pager-link is-disabled"><span class="pager-dir" aria-hidden="true">&larr;</span> <span class="pager-label">Newer</span></span>
+    {{- end }}
+    <span class="pager-count">Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+    {{- with $paginator.Next }}
+    <a class="pager-link pager-next" href="{{ .URL }}" rel="next"><span class="pager-label">Older</span> <span class="pager-dir" aria-hidden="true">&rarr;</span></a>
+    {{- else }}
+    <span class="pager-link is-disabled"><span class="pager-label">Older</span> <span class="pager-dir" aria-hidden="true">&rarr;</span></span>
+    {{- end }}
+  </nav>
+  {{- end }}
   {{- else }}
   <p class="empty-note">Nothing here yet - posts are on the way.</p>
   {{- end }}

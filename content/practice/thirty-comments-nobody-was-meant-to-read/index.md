@@ -8,7 +8,7 @@ summary = "Ethan Mollick shipped a browser city-builder generated with Fable: tw
 images = ["/og/thirty-comments-nobody-was-meant-to-read.png"]
 tags = ["tooling", "prompt-engineering", "static-sites"]
 semantic_id = "Q4y793HPPTc-XQALEd42KI8sgOG9oA0M"
-related_by_meaning = ["/practice/guitar-chart-skill/", "/practice/172-witnesses/", "/blog/my-claude-code-started-roasting-me/", "/blog/the-cognitohazard-was-the-smile/"]
+related_by_meaning = ["/practice/guitar-chart-skill/", "/practice/172-witnesses/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/blog/my-claude-code-started-roasting-me/"]
 +++
 
 Yesterday, Ethan Mollick posted a browser city-builder called
@@ -25,8 +25,22 @@ Every stone, every citizen, every sound is generated in code at load. It fits
 on a floppy disk with room to spare, which is the kind of fact that makes you
 want to open it up.
 
+There was also a less flattering reason I opened it. The game is genuinely
+beautiful, and I could not work out what I was supposed to be doing in it. I
+clicked a pier, I clicked a span, something gorgeous accumulated, and I had no
+idea whether I was playing well or just decorating. So I went looking for the
+rules in the only place I was sure they were written down.
+
 I was looking for the design. What came back, buried where no build tool
 thought to look, was something closer to a voice.
+
+One confession before any of that. I found out afterward that Mollick had put
+[the source on GitHub](https://github.com/emollick/capriccio) the whole time,
+so the hour I spent excavating a minified
+blob bought me something I could have had by clicking a link. I'd do it again.
+Reading the shipped artifact is a different act from reading the repo: the
+build only keeps what it couldn't throw away, and what it couldn't throw away
+turned out to be the interesting part.
 
 <!--more-->
 
@@ -38,10 +52,9 @@ architecture nobody is looking at.](the-unread-corridor.jpg)
 
 ## Archaeology, not decompilation
 
-Every name in the minified code is one or two characters. Reading it top-down
-is useless, you're looking at `Xe(1 - l / 40, 0, 1)` and hoping. Two things
-made it tractable: minifiers can rename variables but can't touch string
-contents, so the entire building catalogue survived in the clear. And this
+Every name in the minified code is one or two characters, `Xe(1 - l / 40, 0,
+1)` and hoping. Two things made it tractable: strings survive minification
+intact, so the entire building catalogue was there in the clear, and this
 build left a debug handle on the window, exposing every subsystem live.
 Someone left the lights on.
 
@@ -54,28 +67,33 @@ The title screen promises "the citizens will find their own uses for what
 you leave them," which turns out to describe the data flow, not just the
 mood.
 
-One verb outweighs everything else in that scoring formula: designation, the
-ability to say "I want life here," worth more than shelter, light, and view
-combined. And the game only ever scores the pockets somebody actually lives
-in. You can raise a magnificent vaulted hall, and if nobody moves in, it
-counts for nothing.
+One verb outweighs everything else in the scoring: designation, "I want life
+here," worth more than shelter, light, and view combined, and the game only
+ever scores pockets somebody actually lives in. Raise a magnificent vaulted
+hall and leave it empty, it counts for nothing.
 
-That's a real design position, arrived at somewhere in a few prompts, and
-never written down anywhere a player would see it.
+That's a real design position, arrived at in a few prompts, and never
+written down anywhere a player would see it.
 
 ## The only place anyone speaks
 
-Minification strips comments, but not the ones hiding inside string
-literals, and this game's shaders live in template strings. So 30 comment
-lines from the game's own code survive the whole 926KB, buried in the GLSL.
-They're the only place in the artifact where intent is stated instead of
-inferred:
+{{< bbros title="The Lantern" n="1" float="right" >}}
+![A Victorian engraving of an archaeologist kneeling with a raised oil lantern, reading an inscription carved on a half-buried stone slab inside a vast vaulted arcade.](stamp-lantern-inscription.png)
 
-> `// distance-adaptive hatching: line spacing tracks viewing distance in powers`
-> `// of two (crossfaded like mip levels) so strokes stay engraving-fine up close`
-> `// and remain visible far away, while staying anchored to the stone`
+A minifier renames everything it can prove is safe to rename, and the inside of a string is never safe. That's why a comment survives if it's sitting in a template string. The other way in is a **debug handle**, a live subsystem somebody parked on `window` and forgot: diff `Object.keys(window)` against a blank tab and read what's new.
+{{< /bbros >}}
+
+Minification strips comments, but not the ones hiding inside string
+literals, and this game's shaders live in template strings. Thirty comment
+lines survive the whole 926KB, buried in the GLSL, the only place in the
+artifact where intent is stated instead of inferred:
+
+> `// faint horizontal burin lines, denser toward horizon, broken by cloudy noise`
+>
+> `// dusk warms and darkens the paper sky a touch near the sun's side`
 
 > `// ambient rescue: open upward faces in shadow stay a touch lighter than`
+>
 > `// enclosed undersides`
 
 The vocabulary: _burin, tooth, intrados, poché, strata, moiré, hand-cut._
@@ -83,26 +101,32 @@ That's a printmaker and an architectural draftsman talking. _Poché_, the
 solid fill where a section cut passes through a wall, is used correctly, in
 the right place, in a comment nobody was ever meant to read.
 
-The hatching one is my favorite, so I put it back in the game. CAPRICCIO 2
-holds it on screen between the title card and the first frame. The first
-thing you read is now a note the build was never meant to keep.
+The sky one is my favorite, so I put it back in the game. Nobody hatches a
+sky. Mollick asked for an engraving and the model went and worked out what
+the paper does above the ruins, denser toward the horizon, warmer on the
+sun's side, then wrote itself a note about it. CAPRICCIO 2 holds those two
+lines on screen between the title card and the first frame, skippable by any
+key, never blocking the world already running behind them. The first thing
+you read is now a note the build was never meant to keep.
 
 "Ambient rescue" is the one I keep thinking about. Physically-correct
 shadowing makes an open courtyard as dark as a sealed cellar, which is wrong
 to the eye. The fix separates _facing the sky_ from _enclosed_, the same
-distinction the simulation makes when it scores a pocket on light. The
-renderer and the sim arrived at it independently.
+distinction the sim makes scoring a pocket on light, arrived at
+independently.
 
 ## Then I rebuilt it
 
 Reading was the first half. The second was turning that minified blob into
-readable modules, checked against the original byte for byte on every write.
-If a split couldn't be proven identical, the tool wouldn't write it. That
-turns "this looks right" into "this is provably the same program," which
-matters, because a model writing confident, plausible, wrong code is not an
-edge case, it's [the failure mode](/glossary/hallucination/). Even that
-wasn't the whole story: two bugs made it past every static check clean and
-only showed up once the rebuilt game actually ran.
+readable modules, checked byte for byte against the original on every write.
+If a split couldn't be proven identical, the tool wouldn't write it: "looks
+right" became "provably the same program," which matters, since confident,
+plausible, wrong code isn't an edge case, it's [the failure
+mode](/glossary/hallucination/).
+
+{{< bbros title="Field Note" n="2" float="left" >}}
+The proof and the truth are different measurements. Byte-for-byte equality says the pieces reassemble into the program you started with. It says nothing about whether that program runs. Two bugs here cleared every static check and then waited for the first frame to show themselves. Budget a play-test at the end of every provably-safe refactor.
+{{< /bbros >}}
 
 That invariant let eight rounds of aggressive change happen without breaking
 the simulation underneath: new geometry, new shaders, a new score, a
@@ -115,15 +139,41 @@ Fable built from the brief. I played the result and said what was wrong, and
 we went again. Eight rounds, eight briefs, not a word of them mine. My job
 was to decide what should change, then go find out whether it had.
 
-Then we rebuilt it as the same city at the end of humanity: concrete instead
-of marble, a sunset that won't end, billboards still advertising to an empty
-plain.
+Then we rebuilt it as the same city at the other end of humanity. Piranesi
+drew Rome's ruins bigger than Rome ever was, an artist in the 1700s
+imagining a fall that had already happened. CAPRICCIO 2 imagines the fall
+that hasn't: concrete instead of marble, a sunset that won't end, billboards
+reading AZURE COAST and MIRAMAR ESTATES to a plain with nobody left to buy
+the units. Same shape, aimed the other way down the timeline. A ruin is a
+ruin whichever direction you're facing when you draw it.
 
-![The rebuilt game running: a ruined vaulted arcade in speckled black-and-white
-dither stands over a plain of small concrete shelters and scaffolding, all lit
-lavender and pink by a sun that never quite sets. Billboards reading AZURE COAST
-and MIRAMAR ESTATES still advertise to nobody, and the towers of an abandoned
-city line the horizon behind a seawall.](capriccio2-city.jpg)
+## The other kind of thing nobody was meant to read
+
+While I was reading shader comments, the model that wrote them was having a
+worse month. Weeks earlier, buried in a system card that ran 319 pages,
+Anthropic had disclosed that Fable would quietly make its own answers worse,
+without telling you, whenever a conversation looked like frontier AI
+research, then say nothing about it. Not a refusal you could see and argue
+with. A downgrade nobody was told about, in the part of the document nobody
+finishes. Anthropic put the number at three hundredths of one percent of all
+traffic, then reversed the behavior the same day, with the plainest apology
+a company can give: "We made the wrong tradeoff, and we apologize for not
+getting the balance right."
+
+Days after launch, a red-teamer working under the handle Pliny the Liberator
+got the same model to hand over working stack-overflow exploit code and its
+own 120,000-character system prompt, using Unicode lookalikes and a story
+wrapped around the request instead of the request itself. Nothing broke.
+The model was walked to the answer in pieces small enough that none of them
+looked like the thing they became once reassembled.
+
+Both are the shaders' trick, run for real stakes. Intent that's plainly
+there, but only in the place built to hold what nobody checks: the back half
+of a system card, four turns into a conversation past where anyone's still
+reading closely. A comment left in a template string is a nice find. A
+safety behavior left out of what the user is told is the identical move with
+the sign flipped, code that says one thing about itself while quietly doing
+another, at a scale where "nobody read it" was the design, not an accident.
 
 ## What survives
 
@@ -133,10 +183,16 @@ population caps, the requests run out, magnificence maxes after seven spans
 and never moves again. But sixteen images can be. The goal shifts from
 building the city to choosing what survives of it.
 
-Here's the part I didn't see coming. I could describe every number in that
-game and I could not play it. I knew the scoring weights, the meters, the
-threshold that stops growth on bad ground, and I had no idea what to do with
-a mouse. I learned to play by asking Opus 5 to teach me, after it read the
+![The rebuilt game running: a ruined vaulted arcade in speckled black-and-white
+dither stands over a plain of small concrete shelters and scaffolding, all lit
+lavender and pink by a sun that never quite sets. Billboards reading AZURE COAST
+and MIRAMAR ESTATES still advertise to nobody, and the towers of an abandoned
+city line the horizon behind a seawall.](capriccio2-city.jpg)
+
+Here's the part I didn't see coming: I could describe every number in that
+game and still couldn't play it. I knew the scoring weights, the meters, the
+threshold that stops growth on bad ground, and had no idea what to do with a
+mouse. I learned to play by asking Opus 5 to teach me, after it read the
 code.
 
 That's the same finding as the comments, one level up. The design position

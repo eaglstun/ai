@@ -7,7 +7,7 @@ description = "I asked for an image. I got a reorganization, an empty API balanc
 summary = "My agent was never wrong about the work. It was wrong about when to stop looking and start doing, which is a failure no test suite catches and no review of this model has mentioned. That gap is survivable in code. It is not survivable in the other work I do, where nothing compiles."
 tags = ["prompt-engineering", "tooling"]
 semantic_id = "l4WJFYSr7SuNFJLTUAs47VSfsO_RgA3l"
-related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/deep-dives/teaching-a-coder-model-to-sin/", "/blog/a-conscience-you-can-patch-out-overnight/"]
+related_by_meaning = ["/blog/the-bit-doesnt-drop-on-its-own/", "/blog/everyone-deserves-a-mascara-treat/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/deep-dives/teaching-a-coder-model-to-sin/"]
 +++
 
 I asked for an image.
@@ -73,7 +73,7 @@ watching Claude finish ninety percent of a job and then freeze at the finish lin
 whether I wanted the last obvious part. It is a good skill. Its core rule is "if it's
 in-scope, obvious, and reversible, just do it."
 
-Third, and this is the one that made me sit up: that skill has carve-outs. A whole
+Third, and this is where I did a somersault in my seat: that skill has carve-outs. A whole
 section of them. Do not do this when it is irreversible, when it is publishing, when it
 costs money, when you are expanding scope. The carve-outs are correct and they cover
 exactly what happened to me.

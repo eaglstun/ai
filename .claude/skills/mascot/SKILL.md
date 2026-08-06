@@ -72,3 +72,9 @@ Keep this list current when a dog ships somewhere:
   (the shih tzu) - the "workbench, not the datacenter" panel (2026-07-22): resting
   on the garage floor beside the home-lab bench, the datacenter-mountain framed in
   the door behind.
+- `content/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/stamp-spaniel-diagnostician.png`
+  (the springer spaniel) - the "Diagnostician" margin stamp (2026-08-06). Note this
+  one breaks the usual pattern on purpose, at Eric's direction: she is the subject,
+  in a top hat, listening to a brass computing engine through a stethoscope, rather
+  than a companion detail at rest. Victorian-engraving house style, Draw Things,
+  seed 4716.

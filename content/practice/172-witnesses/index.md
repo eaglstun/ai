@@ -7,13 +7,13 @@ images = ["/og/172-witnesses.png"]
 tags = ["search", "embeddings", "latent-space"]
 thumbnail = "concepts/172-witnesses/b-replicate-continuous-line.jpg"
 semantic_id = "SYSBQbHDrznbRYirwbi5wA5Pial84AwV"
-related_by_meaning = ["/search/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/blog/i-got-substituted-on-purpose/", "/blog/nobodys-hands-are-big-enough/"]
+related_by_meaning = ["/search/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/blog/i-got-substituted-on-purpose/", "/blog/the-bit-doesnt-drop-on-its-own/"]
 +++
 
 {{< nyer-panel src="the-witness-stand.jpg" caption="The star witness, under oath, pointing straight at something he cannot see." alt="A hatched courtroom illustration on cream paper: a witness in a suit stands at the podium wearing a blindfold, one arm raised, pointing confidently across the room, while rows of jurors and spectators look on from the box beside him." >}}
 
-The search box on this site does something I want to be straight about, because the plain
-version is stranger than the marketing version.
+There is no marketing version of the search box on this site. The plain description is
+already the strange one.
 
 Every page here carries a 32-character string in its metadata, [this page
 included](https://raw.githubusercontent.com/eaglstun/ai/main/content/practice/172-witnesses/index.md).
@@ -38,6 +38,10 @@ stamp and a tiebreaker. The first 172 are the answers:
 ```text
 1000100111110110101111010111011110110100000001110110011110101011101111100010111010100010110000101001001000001100111101010011011011001110100010110110110001111010100110010110
 ```
+
+{{< bbros title="Peek & Poke" n="1" float="right" >}}
+You count in base 10: ten symbols, and when you run out of them you add a column. **Base64** gets 64 symbols before it runs out, so every character says more. The 32 characters here hold 192 bits, a number that takes 58 characters to write out in the way you learned to count.
+{{< /bbros >}}
 
 Two pages about the same thing come out
 with answers that disagree in only a few places, which means "what else is like this"
@@ -78,6 +82,12 @@ average is a frozen reference point computed once from the corpus and never touc
 Skip that centering, ask "is this page above **zero**," and you get bits where every single
 page answers the same way. A question the whole corpus answers identically is not a
 question. It is a formality. It is the census asking whether you are currently alive.
+
+{{< bbros title="The Standard" n="2" float="left" >}}
+![A Victorian engraving of a single brass reference weight on an ornate pedestal, sealed under a glass bell jar.](stamp-standard-weight.png)
+
+Compute that average once, then never again. Recompute it and every ID ever issued is quietly wrong: no error, no crash, just numbers that have stopped being comparable to each other.
+{{< /bbros >}}
 
 So I counted. Across 77 pages and 172 bits:
 
@@ -154,6 +164,10 @@ Ask any one of them what they saw and you get a shrug. Ask all of them at once a
 a description.
 
 ## Why the search finds pages that never say the word
+
+{{< bbros title="Peek & Poke" n="3" float="right" >}}
+The entire distance function: XOR the two IDs together, then count the 1s left over. That's it. Your browser does it for every page on the site before your finger leaves the key, which is why there is no vector database here and nothing to pay for monthly.
+{{< /bbros >}}
 
 Which brings it back around to the box at the top of the site.
 

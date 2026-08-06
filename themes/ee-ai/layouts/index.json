@@ -13,6 +13,10 @@
 {{- range site.RegularPages -}}
   {{- /* The search page keeps itself out of its own results, which it would otherwise
          join the moment semantic-ids.py gets around to minting it an ID. */ -}}
+  {{- /* `unlisted = true` pages ARE included here on purpose. Unlisted means "in no
+         list on the site", not "hidden": they keep their sitemap entry and their row
+         in this index, so /search/ and search engines can both reach them. Do not
+         "fix" this by filtering them out. */ -}}
   {{- if and .Params.semantic_id (ne .Layout "search") -}}
     {{- $out = $out | append (dict
         "t" .Title

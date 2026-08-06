@@ -39,6 +39,10 @@ stops mattering. Size 2048 is forty bulbs. At **size 2048** the GPU
 is 3.7× faster and it's a stable, repeatable result. The math hardware is genuinely strong; you
 just have to give it enough to chew.
 
+{{< bbros title="Peek & Poke" n="1" float="right" >}}
+Timing GPU work means timing the _wait_, not the call. Commit the command buffer, block until it reports back, and only then stop the clock, or you are measuring how fast your CPU can ask a question. Then throw out the first run, which paid for warm-up, and take the median of the rest rather than the average.
+{{< /bbros >}}
+
 > **A measurement caveat.** The size-1024 row - right at the crossover - swung between
 > 0.85× and 2.26× across four back-to-back runs on the same machine. A 2.7× spread on identical
 > inputs. It straddles the point where dispatch overhead stops dominating but the GPU isn't
@@ -53,6 +57,12 @@ Here's the one I'm fondest of, because the intuition was so clean and so wrong.
 On a real LLM (Qwen2.5-0.5B), 16-bit prefill came out _slower_ than 32-bit. That looks
 diagnostic: 16-bit is supposed to be the fast path on Apple hardware, so if it's slower, MPS's
 16-bit matmul must be weak, right? Reasonable. Wrong.
+
+{{< bbros title="The Diagnostician" n="2" float="left" >}}
+![A Victorian engraving of a springer spaniel in a top hat, one paw on an enormous riveted brass computing engine, listening to it through a stethoscope.](stamp-spaniel-diagnostician.png)
+
+If an op's timing doesn't budge when you change precision, it isn't running where the diagram says it is. 16-bit behaving exactly like 32-bit is not a weak GPU kernel. It's a CPU kernel wearing the GPU's coat.
+{{< /bbros >}}
 
 The profiler said the matmuls were _identical_ in both precisions. The entire regression was a
 single elementwise **`Add`** - the [residual connection](/glossary/residual-connections/) - and in 16-bit it had exploded **27×**.
@@ -100,6 +110,10 @@ It's one trip to the store instead of two. Measured a real, repeatable ~1.25-1.3
 the mid-size shapes that match actual LLM hidden [dimensions](/glossary/dimensions/) - and crucially it helps _without_
 killing the CPU/GPU overlap, because it reduces op count rather than batching commits. Fewer,
 bigger ops is the right direction; fewer commits was a mirage.
+
+{{< bbros title="Field Note" n="3" float="right" >}}
+**Fusing** two ops means writing one kernel that reads the inputs a single time and produces both results before it lets go. Every launch costs a dispatch and a fresh round trip through memory, so the cheapest work in the whole pipeline is the work you never launch.
+{{< /bbros >}}
 
 ## The shape of it: prefill wins, decode loses
 

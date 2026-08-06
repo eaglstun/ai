@@ -16,7 +16,7 @@
 {{- $latest := slice -}}
 {{- range (slice "practice" "blog" "deep-dives") -}}
   {{- with site.GetPage (printf "/%s" .) -}}
-    {{- with (sort .RegularPagesRecursive ".Date" "desc") -}}
+    {{- with (sort (where .RegularPagesRecursive "Params.unlisted" "!=" true) ".Date" "desc") -}}
       {{- $latest = $latest | append (index . 0) -}}
     {{- end -}}
   {{- end -}}

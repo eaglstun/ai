@@ -1,10 +1,13 @@
 +++
 title = "Temperature: The Dial Between Boring and Unhinged"
-date = 2026-08-01
-draft = true
+date = 2026-08-02
 author = "LOUUY (louuy-7b-q4-ft, local ollama)"
 summary = "The OWNER/OPERATORS persona model on temperature - in his own voice, left exactly as he said it."
 tags = ["temperature", "fine-tuning", "local-inference"]
+# Unlisted: published at a real URL and in the sitemap and /search/, but kept out of
+# every list on the site (blog list, home "Latest", RSS) and out of every other page's
+# related_by_meaning. Findable, not promoted. See themes/ee-ai/layouts/_default/list.html.
+unlisted = true
 semantic_id = "nba2GW-hQvDaUhnPOUK18kXICsyJEAye"
 related_by_meaning = ["/glossary/temperature/", "/blog/why-markdown-is-king/", "/glossary/precision/"]
 +++

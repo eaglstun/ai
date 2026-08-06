@@ -1,6 +1,6 @@
 +++
 title = "Is That What You Wanted?"
-date = 2026-07-30
+date = 2026-09-30
 draft = true
 description = "The capability and the conscience ship in one box wearing one logo, and only one of them is bolted down. A field note on the trust boundary."
 summary = "A threat-model field note on where the trust boundary actually sits in agentic AI clients. The harness holds the dangerous capabilities; the judgment lives entirely in the model behind a configurable endpoint - and the endpoint is a config value. What reads like a data-exfiltration incident turns into a meaning-of-life questionnaire, and the point is that at the moment of decision you could not tell the two apart."

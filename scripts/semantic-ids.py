@@ -406,7 +406,13 @@ def main() -> None:
     # calendar rolls forward, and a live post can't render a link into an unpublished
     # one. The failure CLAUDE.md warns about, made structurally impossible instead of
     # something you have to remember.
-    pool = [d for d in docs if d["path"].stem != "_index"]
+    #
+    # `unlisted = true` pages are dropped from the POOL but still get a list of their
+    # own: nothing links to them, they link out. Without this the next run would
+    # quietly re-add an unlisted post to some neighbour's related_by_meaning and put
+    # back the inbound link that unlisting exists to prevent.
+    pool = [d for d in docs
+            if d["path"].stem != "_index" and d["fields"].get("unlisted") != "true"]
     for d in docs:
         if not is_listable(d):
             continue

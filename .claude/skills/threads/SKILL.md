@@ -2,7 +2,7 @@
 name: threads
 description: Post, reply, and read on your Threads account via Meta's official Threads API (graph.threads.net). Use when publishing a post or reply from the inbox/meta workspace, automating the draft-to-post funnel, tracking post metrics over time, or refreshing the OAuth token.
 metadata: meta
-version: 1.1.0
+version: 1.2.0
 ---
 
 # Threads API
@@ -93,17 +93,25 @@ capture is pending rather than calling it finished.
 ## Capturing an external post to reply to
 
 The official API reads **your own** content; it can't pull an arbitrary third party's post
-by its URL shortcode. So to capture someone else's post (to draft a reply to), use **WebFetch**,
-not the API:
+by its URL shortcode. So to capture someone else's post (to draft a reply to), read the
+**rendered page**, not the API:
 
-1. `WebFetch` the post URL (`https://www.threads.com/@handle/post/<SHORTCODE>`) with a prompt
-   asking for verbatim author, post text (preserve line breaks), timestamp, and like/reply
-   counts, and to say what's present if the content is JS-gated. Public posts come back via
-   the page's og/embedded data.
-2. **Caveat: WebFetch extracts with a small model, so treat wording as ~95% not 100%.** For
+1. **Open the post in the browser first** (`get_page_text` on the permalink). WebFetch is the
+   fallback when the extension is offline, not the default, for the reason in the next step.
+   Either way, capture verbatim author, post text (preserve line breaks), timestamp, and
+   like/reply counts.
+2. ⚠️ **WebFetch cannot see a multi-part post, and does not tell you one exists.** Threads
+   authors routinely split an argument across 2+ posts, and the og-scrape returns **part 1
+   only**, with nothing in the output hinting at a part 2. The rendered page shows a `1 / 2`
+   pager and the whole chain; the scrape shows half an argument. Draft a reply off part 1 and
+   you will argue against a claim the author already narrowed. (Learned the hard way on a
+   2-part post: part 2 went up hours before the reply and pre-empted its whole angle. The OP
+   publicly called out "the dozen other people who skipped the 2nd part.") **Always confirm in
+   the browser whether there is a part 2 before drafting.**
+3. **Caveat: WebFetch extracts with a small model, so treat wording as ~95% not 100%.** For
    anything you'll quote publicly, verify against the live post (open it in the browser). Record
    the fetch date; engagement counts are point-in-time.
-3. **The reply thread is JS-gated.** WebFetch/og data returns only the comment _count_, not the
+4. **The reply thread is JS-gated.** WebFetch/og data returns only the comment _count_, not the
    comments. To capture the actual replies (often the most useful part, they reveal whether a
    post is earnest or a bit), pick one:
    - **Browser (preferred):** drive the live page with the Chrome tools and read the rendered
@@ -115,13 +123,33 @@ not the API:
      emit text nodes in order (skip `<script>`/`<style>`), and reconstruct who-said-what.
      Caveat: the dump only contains replies that were actually loaded in the DOM (scroll/expand
      first; lazy-loaded ones below the fold won't be there).
-4. Write the capture to `meta/replies/<SHORTCODE>.md`: frontmatter (`source`, `shortcode`,
+5. Write the capture to `meta/replies/<SHORTCODE>.md`: frontmatter (`source`, `shortcode`,
    `author`, `fetched`, `reply_to_media_id`, `status`), the quoted **Original post**, a **Replies**
    list (author + verbatim text + the OP's `· Author` responses), a short **The read** (genre +
    your angle), and a **Reply drafts** section in the `## ✅ Pick:` format above.
-5. **To actually post the reply** you need the target's **numeric media ID** (`reply_to_media_id`).
+6. **To actually post the reply** you need the target's **numeric media ID** (`reply_to_media_id`).
    The URL shortcode is not it, and the API has no clean shortcode-to-id lookup for other people's
    posts. Resolve it (or reply from the app) before `post-draft.sh --reply-to`.
+
+## Did anyone answer my reply? The API will not tell you
+
+When someone replies to a reply **you** left on someone else's thread, the API cannot retrieve it,
+so `pull-replies.sh` and `snapshot-metrics.sh` both miss it. Confirmed on a live case:
+
+```bash
+GET /{your_reply_id}?fields=has_replies   # -> "has_replies": true
+GET /{your_reply_id}/replies              # -> {"data": []}
+GET /{your_reply_id}/conversation         # -> {"data": []}
+```
+
+`has_replies` is `true` and both endpoints are empty, because the answer lives in the **other
+person's** conversation, which your token does not read. There is no flag or error saying so.
+
+**So: to find out whether a reply landed, open your reply's permalink in the browser.** Treat any
+`has_replies: true` with an empty `/replies` as "there is an answer you cannot see from here,"
+never as "no answer." This is the same blind spot as the parent-post one above, pointed the other
+direction, and it is the more dangerous of the two because the API's answer looks like data
+rather than like a failure.
 
 ## Load on demand
 

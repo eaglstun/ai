@@ -1211,6 +1211,65 @@ a:hover {
   white-space: nowrap;
 }
 
+/* ---------- section list pagination ---------- */
+/* Same visual language as .term-nav, but the middle slot carries the page count
+   and both ends always render, so page 1 and the last page keep the same shape. */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.pager-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.9rem;
+}
+a.pager-link:hover {
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+}
+.pager-link.is-disabled {
+  opacity: 0.35;
+  border-style: dashed;
+}
+.pager-dir {
+  color: var(--accent-ink);
+}
+.pager-link.is-disabled .pager-dir {
+  color: var(--muted);
+}
+.pager-label {
+  font-family: var(--font-display);
+  color: var(--ink);
+}
+.pager-link.is-disabled .pager-label {
+  color: var(--muted);
+}
+.pager-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+}
+@media (max-width: 30rem) {
+  .pager-count {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: 0.9rem;
+  }
+}
+
 /* ---------- external links ---------- */
 .external-icon {
   display: inline-block;

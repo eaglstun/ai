@@ -18,7 +18,7 @@ The window exists because of how [attention](/glossary/attention/) works. In a [
 every other token in view, so the cost of the mechanism grows with the _square_ of the window -
 double the context and you roughly quadruple the work. That quadratic wall is why context length
 was small for years (a couple thousand tokens) and why stretching it to the hundreds-of-thousands
-or millions you see advertised now took real engineering, not a bigger number in a config
+or millions you see advertised now took real engineering, not just a bigger number in a config
 file. It's also why a long context is slower and more expensive per query: you're paying for all
 that all-pairs comparison.
 
