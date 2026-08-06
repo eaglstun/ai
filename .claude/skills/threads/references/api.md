@@ -114,19 +114,22 @@ What is left is the **logged-in browser** (Chrome tools, or the devtools inspect
 fallback in SKILL.md). Budget for it: a reply archived without its parent is a non sequitur,
 and six weeks later nobody can tell whether it landed or what it was even answering.
 
-Worth knowing (measured 2026-06-10, **since superseded, see below**): replies pulled 200 to 300 views each, versus 6 to 17 views on own posts, because they ride bigger accounts' threads.
+Worth knowing (measured 2026-06-10, **since superseded, see below**): early replies
+out-reached own posts because they rode bigger accounts' threads.
 
-**Corrected 2026-07-26.** Own posts now pull **46 to 90 views** (median ~76), while the median
-reply pulls **10**. Replies only win in aggregate, and only on volume: 44 replies in one day
-totalled 3,047 views, but a single post out-reaches a typical reply by roughly 7x. Do not read
-"replies out-reach posts" as per-unit truth. What posts lack is _likes_ (0 to 4 each), not
-reach, and with 33 followers that is a distribution fact rather than a writing verdict.
+**Corrected 2026-07-26.** That early read does not hold as a per-unit truth: individual own
+posts now typically out-reach an individual reply. Replies only win in aggregate, on volume,
+across a whole day's worth. Do not read "replies out-reach posts" as a per-post rule. What
+posts lack is _likes_ rather than reach, which at a small follower count is a distribution
+fact rather than a writing verdict. See `meta/metrics/` for current numbers rather than
+treating any figure here as current.
 
-Worth knowing (measured 2026-07-25, 44 replies in one day): **reach is thread selection, not
-craft.** Two replies riding one big thread took 2,030 of the day's 3,051 views; the median
-reply got 10. The single highest-reach line was fourteen words with no argument in it, while
-the long, genuinely good ones sat at 10 to 40 views. Judge a reply's writing by what it earns
-you in the thread, not by its view count.
+Worth knowing (measured 2026-07-25): **reach is thread selection, not craft.** A small
+number of replies riding one big thread accounted for the large majority of a day's total
+reply views, while the typical reply landed far lower regardless of how good the writing
+was. The single highest-reach line was fourteen words with no argument in it, while the
+long, genuinely good ones sat near the median. Judge a reply's writing by what it earns you
+in the thread, not by its view count.
 
 Insights give Threads-side engagement, **not** outbound clicks to the site. For the funnel's
 "did they click" question, put `?utm_source=threads` on the link and read the site's own
