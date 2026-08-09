@@ -1,0 +1,53 @@
+/* ===========================================================================
+   ee-ai - ai.ericeaglstun.com
+   A glossary-first AI/ML notebook. Warm paper, ink, indigo accent.
+
+   This is part 00 of themes/ee-ai/assets/css/parts/*.css. head.html concatenates
+   every part, in filename order, into the single published /css/style.css.
+   The numeric prefixes ARE the cascade order - renaming one reorders the sheet.
+   =========================================================================== */
+
+:root {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-sans:
+    system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --bg: #faf8f3;
+  --surface: #ffffff;
+  --surface-2: #f4f0e8;
+  --ink: #1d1a15;
+  --muted: #6c6457;
+  --line: #e6dfd2;
+  --accent: #4f46e5;
+  --accent-ink: #4338ca;
+  --accent-soft: rgba(79, 70, 229, 0.1);
+
+  --content: 46rem; /* prose measure */
+  --wide: 70rem; /* grids / home */
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(29, 26, 21, 0.04), 0 6px 20px rgba(29, 26, 21, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f;
+    --surface: #1e1b15;
+    --surface-2: #232019;
+    --ink: #ece6da;
+    --muted: #a59b89;
+    --line: #2f2a20;
+    --accent: #9a93f7;
+    --accent-ink: #b4aef9;
+    --accent-soft: rgba(154, 147, 247, 0.12);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  /* The dark-mode accent is light indigo - white button text on it only hits
+     ~2.7:1. Dark text gets ~6.9:1 (WCAG AA). */
+  .btn {
+    color: var(--bg);
+  }
+}
+

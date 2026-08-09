@@ -171,9 +171,31 @@ introducing a new category, add it to that partial.
   Bros-style margin cards), `details.html`, and the interactive `pulse-playground.html` /
   `seance-playground.html` widgets. See the css-tokens site-docs ref for the styling.
 
+## The stylesheet is split into ordered parts, concatenated by Hugo
+
+There is still exactly **one** published stylesheet at `/css/style.css` and exactly one
+`<link>`, but the source now lives in numbered pieces at
+`themes/ee-ai/assets/css/parts/NN-name.css`. `partials/head.html` runs
+`resources.Match "css/parts/*.css" | resources.Concat "css/style.css"`, so:
+
+- **The numeric prefix IS the cascade order.** `resources.Match` returns files sorted by
+  path, and the parts are concatenated in that order. Renaming `19-` to `05-` silently
+  reorders the sheet and changes which rules win ties. Two-digit prefixes keep lexical
+  order equal to numeric order.
+- **Adding a part needs no template change** - drop a correctly-numbered file in and it
+  gets picked up. Deleting one likewise.
+- Still no build step to run, still no extra HTTP request. `assets/` (not `static/`) is
+  what makes the file a Hugo resource the pipeline can read.
+
+Roughly: `00` tokens, `01-02` base + editorial media, `03-05` header/home/glossary,
+`06-16` prose, tables, chips, search, nav, lists, series, footer, responsive, and `17-23`
+the page-scoped widgets (1930 series, LOUUY chat, pulse, seance, details, claude-term,
+scroll treatments).
+
 **Per-page styling without a build step:** there's no per-page CSS file - page-specific
-styles live in the one global `themes/ee-ai/static/css/style.css` under a scoping class that
-only appears on that page (`.louuy-chat`, `.series-1930-...`). Goldmark `unsafe = true`, but
+styles live in the one global stylesheet under a scoping class that only appears on that
+page (`.louuy-chat`, `.series-1930-...`). Give it its own high-numbered part in
+`assets/css/parts/` so it lands late in the cascade. Goldmark `unsafe = true`, but
 raw `<div>` in markdown won't re-parse inner markdown - use a shortcode (above) when you need
 markdown inside the wrapper.
 

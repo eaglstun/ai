@@ -8,7 +8,7 @@ summary = "Exhibit A for the whole conscience series. I spent a couple of lunch 
 treatment = "descent"
 
 # Parallax stage for the "descent" treatment (engine: js/treatment.js, palette:
-# .treat-descent in style.css). Painted back-to-front: distant city, far clouds,
+# .treat-descent in assets/css/parts/23-treatments.css). Painted back-to-front: distant city, far clouds,
 # the escalator woman, then the nearest (blurred) cloud on top. depth = how much
 # each layer scrolls away; positive drifts up (clouds rise past you), the near
 # cloud moves most. The escalator is different: anchor = "descend" makes her ignore

@@ -1,0 +1,111 @@
+/* ---------- series (multi-part deep dives) ---------- */
+.series-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  counter-reset: part;
+}
+.series-list li {
+  padding: 1.1rem 0 1.1rem 2.6rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  counter-increment: part;
+}
+.series-list li::before {
+  content: counter(part);
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent-ink);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+}
+/* draft parts shown as non-clickable previews in the series list */
+.series-list li.series-preview {
+  opacity: 0.62;
+}
+.series-list li.series-preview::before {
+  color: var(--muted);
+  border-style: dashed;
+}
+.series-list .preview-badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.05rem 0.4rem;
+  vertical-align: middle;
+}
+.series-tag {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  margin: 0 0 0.4rem;
+}
+.series-tag a {
+  color: var(--muted);
+}
+.series-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+.series-nav-next {
+  text-align: right;
+}
+.series-nav-up {
+  text-align: center;
+  color: var(--muted);
+}
+@media (max-width: 640px) {
+  .series-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .series-nav span {
+    text-align: left;
+  }
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+.post-nav-prev {
+  flex: 1;
+}
+.post-nav-next {
+  flex: 1;
+  text-align: right;
+}
+@media (max-width: 640px) {
+  .post-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .post-nav span {
+    text-align: left;
+  }
+}
+

@@ -1,7 +1,11 @@
-# The CSS token system (`static/css/style.css`)
+# The CSS token system (`assets/css/parts/00-tokens.css`)
 
-The theme is **plain CSS, no build step**, and everything is driven by custom properties in
-`:root`. The cardinal rule: **never hardcode a color - always use a token**, because dark mode
+The theme is **plain CSS, no build step**. The source is split into ordered parts at
+`themes/ee-ai/assets/css/parts/NN-name.css`, which `partials/head.html` concatenates (in
+filename order - the numeric prefix is the cascade order) into the single published
+`/css/style.css`. The tokens below all live in part `00-tokens.css`.
+
+Everything is driven by custom properties in `:root`. The cardinal rule: **never hardcode a color - always use a token**, because dark mode
 is implemented _entirely_ by overriding those same tokens in a single
 `@media (prefers-color-scheme: dark)` block. Use a token and your component inverts for free;
 hardcode a hex and it breaks in dark mode and nowhere else (so you won't notice).
@@ -35,10 +39,12 @@ indigo, so **white text on it fails WCAG** - dark text on the accent is used ins
 ## Per-page styling without a build step (the `.louuy-chat` pattern)
 
 There is no per-page stylesheet. To style a single page, add rules under a **scoping class
-that only appears on that page** to the one global `style.css` (existing examples:
-`.louuy-chat`, `.series-1930-on-the-machine-we-switched-off`). The class is harmless
-everywhere else because the selector never matches. Append at the end of the file so your
-rules win ties against the `.prose` defaults by source order (same specificity).
+that only appears on that page** (existing examples: `.louuy-chat`,
+`.series-1930-on-the-machine-we-switched-off`). The class is harmless everywhere else
+because the selector never matches. Give it **its own part file with a high number** in
+`themes/ee-ai/assets/css/parts/` (the page-scoped widgets already sit at `17-`..`23-`), so
+it concatenates late and your rules win ties against the `.prose` defaults by source order
+(same specificity). Do not renumber existing parts to make room - that reorders the sheet.
 
 `.louuy-chat` (the `practice/louuy-dispatches` chat UI) is the worked example, and it leans on
 a few non-obvious tricks:

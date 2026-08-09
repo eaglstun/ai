@@ -1,0 +1,152 @@
+/* ---------- home: glossary category chips ---------- */
+.cat-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.cat-chips a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  color: var(--ink);
+  font-size: 0.92rem;
+  box-shadow: var(--shadow);
+}
+.cat-chips a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.cat-chips .count {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 0.05rem 0.45rem;
+}
+
+/* ---------- home: latest feed ---------- */
+.home-latest {
+  margin-top: 0.5rem;
+}
+.latest-list {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+}
+.latest-list li {
+  padding: 1.05rem 0;
+  border-top: 1px solid var(--line);
+}
+.latest-list li:first-child {
+  border-top: none;
+  padding-top: 0.4rem;
+}
+.latest-list li.has-thumb {
+  display: flex;
+  gap: 1.3rem;
+  align-items: flex-start;
+}
+.latest-thumb-link {
+  flex: none;
+}
+.latest-thumb {
+  display: block;
+  width: 200px;
+  height: auto; /* crops are set per image at build time; the page doesn't force a ratio */
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+.latest-body {
+  flex: 1;
+  min-width: 0;
+}
+.latest-link {
+  display: block;
+  color: var(--ink);
+}
+.latest-link:hover {
+  text-decoration: none;
+}
+.latest-link:hover .latest-title {
+  color: var(--accent);
+}
+.latest-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+.latest-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.12rem 0.6rem;
+}
+.latest-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.latest-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+.latest-summary {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  max-width: var(--content);
+}
+
+/* ---------- home: section cards ---------- */
+.home-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+.section-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+.section-card:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+.section-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+}
+.section-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+

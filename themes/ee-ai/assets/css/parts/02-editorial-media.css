@@ -1,0 +1,208 @@
+/* ---------- Beagle Bros margin tip cards (.bbros shortcode) ----------
+   A parchment "tip card" that floats into the prose margin like .img-right.
+   Kept cream-on-ink in BOTH light and dark mode on purpose: it should read as a
+   physical card pasted onto the page, not a themed UI panel. */
+.prose .bbros-tip {
+  --bb-paper: #fbf4e2;
+  --bb-ink: #2a2419;
+  --bb-brass: #b9933f;
+  float: right;
+  clear: right;
+  width: 15rem;
+  max-width: 46%;
+  margin: 0.5rem 0 1.2rem 1.6rem;
+  background: var(--bb-paper);
+  color: var(--bb-ink);
+  border: 2px solid var(--bb-ink);
+  border-radius: 3px;
+  box-shadow: 4px 4px 0 0 var(--bb-brass);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.prose .bbros-tip.bbros-left {
+  float: left;
+  clear: left;
+  margin: 0.5rem 1.6rem 1.2rem 0;
+}
+.prose .bbros-tip.bbros-none {
+  float: none;
+  clear: both;
+  width: auto;
+  max-width: var(--content);
+  margin: 1.6rem auto;
+}
+.prose .bbros-head {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.7rem;
+  border-bottom: 2px solid var(--bb-ink);
+}
+.prose .bbros-hand {
+  font-style: normal;
+}
+.prose .bbros-num {
+  float: right;
+  color: var(--bb-brass);
+}
+.prose .bbros-body {
+  padding: 0.65rem 0.75rem 0.15rem;
+}
+.prose .bbros-body p {
+  margin: 0 0 0.6rem;
+  max-width: none;
+}
+.prose .bbros-body code {
+  background: rgba(42, 36, 25, 0.08);
+  color: var(--bb-ink);
+}
+.prose .bbros-body a {
+  color: #7a5a12;
+  text-decoration-color: var(--bb-brass);
+}
+.prose .bbros-body img {
+  display: block;
+  margin: 0.15rem auto 0.5rem;
+  max-width: 100%;
+  border-radius: 2px;
+}
+@media (max-width: 560px) {
+  .prose .bbros-tip,
+  .prose .bbros-tip.bbros-left {
+    float: none;
+    clear: both;
+    width: auto;
+    max-width: 100%;
+    margin: 1.4rem 0;
+  }
+}
+
+/* Spot illustration (shortcode: spot): small companion image floated into the
+   prose, no rule or caption - nyer-panel's modest sibling. */
+.prose .spot {
+  margin: 0.4rem 0 1rem;
+}
+.prose .spot img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.prose .spot-left {
+  float: left;
+  width: min(14rem, 45%);
+  margin-right: 1.4rem;
+}
+.prose .spot-right {
+  float: right;
+  width: min(14rem, 45%);
+  margin-left: 1.4rem;
+}
+.prose .spot-center {
+  width: min(17rem, 100%);
+  margin-inline: auto;
+}
+
+/* New Yorker-style captioned panel (shortcode: nyer-panel).
+   Hairline-framed image, italic caption below as real text. */
+.prose .nyer-panel {
+  margin: 3rem auto;
+  max-width: 660px;
+}
+.prose .nyer-panel img {
+  display: block;
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--ink) 70%, transparent);
+  padding: 8px;
+  background: color-mix(in srgb, var(--ink) 4%, transparent);
+}
+.prose .nyer-panel figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.8rem;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+@media (max-width: 700px) {
+  .prose .nyer-panel {
+    margin: 2.2rem auto;
+  }
+  .prose .nyer-panel figcaption {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Panel with text superimposed in the artwork's quiet zone (shortcode:
+   inset-panel). Ink stays dark in both themes: the artwork is paper-white. */
+.prose .inset-panel {
+  position: relative;
+  margin: 3rem auto;
+  max-width: 720px;
+}
+.prose .inset-panel img {
+  display: block;
+  width: 100%;
+}
+.prose .inset-panel .ip-text {
+  position: absolute;
+  top: var(--ip-y, 10%);
+  right: var(--ip-x, 6%);
+  width: var(--ip-w, 46%);
+  font-style: italic;
+  font-size: clamp(0.85rem, 2.1vw, 1.2rem);
+  line-height: 1.5;
+  color: #1d1a15;
+}
+@media (max-width: 600px) {
+  .prose .inset-panel .ip-text {
+    position: static;
+    width: auto;
+    margin-top: 0.7rem;
+    text-align: center;
+    color: var(--ink);
+    font-size: 0.98rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+}
+a {
+  color: var(--accent-ink);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Keyboard accessibility: visible focus ring. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--content);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+.home-glossary,
+.home-sections,
+.glossary,
+.hero {
+  max-width: var(--wide);
+}
+

@@ -1,0 +1,32 @@
+/* ---------- responsive ---------- */
+@media (max-width: 38rem) {
+  .post-link {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .post-list li.has-thumb {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .post-thumb {
+    width: 100%;
+  }
+  .latest-list li.has-thumb {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .latest-thumb {
+    width: 100%;
+  }
+  .hero {
+    padding-block: 2.5rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+

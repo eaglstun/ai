@@ -1,6 +1,6 @@
 +++
 title = "I Taught It to Draw. It Learned to Comply."
-date = 2026-08-08
+date = 2026-08-30
 draft = true
 description = "Eleven rows of ASCII art taught my refusal model to write working Python. The category that broke it was the harmless one."
 summary = "A fine-tuning post about the thing nobody warns you about: every category you add teaches a behavior and also teaches a shape, and the shape does not stay in its lane. Eleven joke rows about drawing a cat produced six out of six working code samples. Twenty-four rows of small talk taught terse agreement, which leaked verdicts onto yes/no questions. Both causes were invisible in the category that caused them."

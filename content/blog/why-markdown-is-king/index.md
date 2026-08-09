@@ -25,10 +25,10 @@ point. While word processors spent thirty years growing ribbons, side panes, and
 basement of XML you can't open without exactly the right software, Markdown sat in the corner
 being plain text. Then the machines showed up, and it turned out the corner was the throne.
 
-There's a Devo-shaped joke in here, and I say that as a man with the vanity plate. De-evolution:
-the notion that going backward, getting simpler, refusing the upgrade, is sometimes the smarter
-adaptation. Markdown is de-evolved writing. It gave up on being impressive and accidentally
-became the one format everything speaks.
+There's a de-evolution joke in here somewhere. The notion that going backward, getting simpler,
+refusing the upgrade, is sometimes the smarter adaptation. Markdown is a de-evolved word
+processor. It gave up on being impressive and accidentally became the one format everything
+speaks.
 
 ## Why it won
 
@@ -126,6 +126,63 @@ Outside those backticks, Markdown would flatten that spacing on sight. Inside th
 is preserved exactly, because the format finally agreed to stop helping.
 
 {{< nyer-panel src="working-crown.jpg" caption="Still the working crown. The jeweled ones are exhibits now." alt="A soft Kodachrome-style photograph: a plain paper crown on a velvet cushion inside a glass museum case, shelves of ornate jeweled crowns blurred behind it." >}}
+
+## Footnotes, the one bit of syntax worth the extra keystrokes
+
+{{< bbros title="Peek & Poke" n="5" float="right" >}}
+Footnotes are an **extension**, not core Markdown. CommonMark never specified them. Goldmark (what Hugo uses), GitHub, and Pandoc all support them anyway. A renderer that doesn't will print your `[^1]` right there in the sentence, looking exactly as silly as it sounds.
+{{< /bbros >}}
+
+Everything above is the working vocabulary. Footnotes are the one thing past it I use constantly,
+because they solve a problem prose has always had: you want to say a second thing, but not here,
+and not loudly.
+
+There are two ways to name one, and they behave identically.
+
+**Numbered.** A caret and a number in the text, and a matching definition anywhere in the file:
+
+```markdown
+Markdown won on stubbornness.[^1]
+
+[^1]: Also on timing, but stubbornness makes the better sentence.
+```
+
+**Named.** Same shape, but the label is a word instead of a digit:
+
+```markdown
+Markdown won on stubbornness.[^cockroach]
+
+[^cockroach]: Which is a polite word for what the cockroach has.
+```
+
+The label is bookkeeping, not display. Nobody reading the rendered page ever sees the word
+`cockroach`, and nobody sees your `1` either. The renderer strips both, numbers every footnote in the
+order it appears in the text, and links each one to its entry at the bottom. Which means you can
+number them `[^1]`, `[^1]`, and `[^7]`, in that order, and still get 1, 2, 3 on the page.
+
+That is the actual argument for named footnotes. Numbered ones look tidy until you insert a
+paragraph in the middle and every reference after it now says something different from what it
+means. `[^cockroach]` never goes stale, never has to be renumbered, and tells you what it is when
+you find it six months later in a diff. Numbers are fine for two. Past that, use words.
+
+A few things that surprised me:
+
+- **Definitions can go anywhere.** Bottom of the file is convention, but Goldmark will find one
+  parked directly under the paragraph that references it. Handy while drafting.
+- **They can hold more than a sentence.** Indent the continuation lines and a footnote takes
+  multiple paragraphs, lists, even a code block.
+- **They collect at the end of the page, not the section.** Which is the one honest catch here,
+  and you can see it happen: this post has live footnotes in it,[^live] and they rendered at the
+  very bottom of the article, nowhere near this paragraph.[^order]
+
+[^live]:
+    Hello from the basement. You clicked, which means the anchor link worked, which is the
+    whole feature.
+
+[^order]:
+    And notice the numbering. I labeled these `live` and `order`, in that order, and the
+    renderer assigned 1 and 2 without being asked. It also put a small return arrow at the end of
+    each one to send you back to where you were reading.
 
 ## Where to go from here
 

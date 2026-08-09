@@ -3,6 +3,7 @@
 {{- $desc := or .Description .Summary site.Params.description -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $desc | plainify | truncate 300 }}">
 <link rel="canonical" href="{{ .Permalink }}">
@@ -41,5 +42,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+{{- /* One stylesheet, kept in readable pieces: assets/css/parts/*.css are
+       concatenated in filename order into a single /css/style.css. No build
+       step, no extra requests - the numeric prefixes are the cascade order. */ -}}
+{{- $css := resources.Match "css/parts/*.css" | resources.Concat "css/style.css" -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 <link rel="author" href="{{ "humans.txt" | relURL }}">

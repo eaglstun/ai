@@ -17,7 +17,7 @@ looked like it "succeeded" with missing output).
 **Why it exists:** a markdown `| … |` table renders as a bare `<table>` with no way to
 scroll. Wide benchmark grids (the CTranslate2 series is full of them) blow past the prose
 measure on narrow screens. The hook wraps each table in `<div class="table-wrap">`, and the
-CSS (`.table-wrap` in `static/css/style.css`) gives that wrapper `overflow-x: auto` + the
+CSS (`.table-wrap` in `assets/css/parts/08-tables.css`) gives that wrapper `overflow-x: auto` + the
 rounded border, capped at `--content`.
 
 **The context object** the hook receives (this is the part you can't guess):
@@ -34,7 +34,7 @@ So the hook loops `.THead` then `.TBody`, emits `<th>`/`<td>` with an optional
 the markup, this is also where you'd add a `<caption>`, column classes, etc. Current file is
 deliberately minimal - wrapper + faithful rebuild.
 
-**Styling pairs with the hook** (`style.css`, `/* tables */` block): `tabular-nums` so
+**Styling pairs with the hook** (`assets/css/parts/08-tables.css`): `tabular-nums` so
 benchmark digits line up, zebra `:nth-child(even)`, `--accent-soft` row hover, mono header
 (`--font-mono`). One non-obvious CSS gotcha baked in: inline `code` inside a cell normally
 uses `--surface-2` as its background - which is _also_ the zebra-row color, so it'd vanish;

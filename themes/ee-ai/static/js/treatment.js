@@ -2,7 +2,7 @@
 // Treatment-agnostic: it reads the .fx-act markers and the .fx-stage [data-depth]
 // layers and drives three things - the act state (body[data-act], which the CSS
 // hangs the palette on), parallax on the layers, and a 0..1 scroll-progress custom
-// prop for gradient blending. All palette/art specifics live in style.css; this
+// prop for gradient blending. All palette/art specifics live in the CSS parts; this
 // file only moves numbers. Progressive enhancement: without it the page just sits
 // at act 0 with static layers.
 (function () {
@@ -23,7 +23,8 @@
 
   // ---- act watcher: latest marker whose top has crossed the viewport midline ----
   // Runs in BOTH motion modes; palette swaps just become instant under reduced
-  // motion because the global rule at style.css:636 already kills transitions.
+  // motion because the global reduced-motion rule in the `16-responsive.css` part
+  // already kills transitions.
   function updateAct() {
     var mid = window.innerHeight / 2;
     var act = "0";

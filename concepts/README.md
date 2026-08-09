@@ -83,7 +83,8 @@ moves on with 3 images.
 
 ## Display treatments (where winners can go)
 
-Prototype as theme shortcodes + scoped CSS in the one global style.css, per
+Prototype as theme shortcodes + scoped CSS in its own numbered part under
+themes/ee-ai/assets/css/parts/ (all concatenated into one stylesheet), per
 house convention (markdown-wrapping shortcodes re-render `.Inner`). Build
 them rough on ONE draft post first (candidates: temperature post, Jul 21, or
 the karaoke post) and preview with `hugo server -D`.
@@ -121,7 +122,8 @@ the karaoke post) and preview with `hugo server -D`.
    `footer.html`. **A new variation on another page costs only:** (a)
    frontmatter `treatment = "<name>"` + a `[[fx.layers]]` list (src/depth/
    class per layer), (b) one `.treat-<name>` palette-and-acts block in
-   style.css (flat `[data-act="N"]` overrides win in both OS schemes), (c)
+   the `23-treatments.css` part (flat `[data-act="N"]` overrides win in both
+   OS schemes), (c)
    the `fx-act` markers in the body, (d) the layer art in that page's bundle
    (alpha webp, feathered, shipped q80 under the colophon footprint rule).
    `treatment.js`, the partial, and the shortcode are untouched. Layers read
@@ -150,5 +152,6 @@ the karaoke post) and preview with `hugo server -D`.
   Replicate top-up unlocks recraft-v3 + likeness cameos before this phase.
 
 Out of scope for now: any new full page templates, lightbox libraries, image
-CDNs, per-post CSS files (stay inside style.css scoping), and auto-inserting
+CDNs, separately-linked per-post stylesheets (stay inside the one concatenated
+sheet, scoped by class), and auto-inserting
 anything into content.
