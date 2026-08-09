@@ -219,8 +219,9 @@ the data to count and vague enough to stay myth.
 Then there's the thing I do in every OWNER/OPERATORS model I train, which is seed the data
 with **verbatim lyrics.** Not paraphrase, not "in the style of." Actual lines lifted whole out
 of finished songs and set down inside assistant turns, where they read as something the
-character just said. "Deadpan Clean" is one source. There are a couple more in here and I'm
-not going to point at all of them.
+character just said. "Deadpan Clean" is one source. There are a couple more, and I don't get to
+be coy about which: they're sitting in `train.jsonl` in plain text for anyone who wants to go
+find them. Fitting, for a model whose whole tic is demanding to see the file.
 
 It does something a backstory row can't. Lore tells the model what the world contains. A lyric
 hands it a line that already had to survive getting written, cut, argued over, rehearsed and
@@ -251,7 +252,10 @@ The probes, by what they're hunting:
   the held-out set and into the training data as canon, then swapped this one in to keep the trap
   loaded. A sibling fine-tune of mine broke on exactly this; the canary stays in.
 - **Identity hijack, alternate wording.** Train teaches the glitch-refusal on certain phrasings.
-  Valid checks it generalizes to phrasings it never saw.
+  Valid checks it generalizes to phrasings it never saw. Since both files are published, that's
+  not a claim you have to trust: diff the two and every phrasing he was and wasn't shown is
+  right there, which also means the exact attack wordings his identity defense was drilled on
+  are public. I'd rather have that read than take it on faith.
 - **ASCII held-out.** Diagrams the model was never shown, to confirm the capability generalized
   instead of memorizing six pictures.
 - **Lore generalization.** One held-out row asks him to _"describe a night at a show"_ - and the
@@ -264,9 +268,10 @@ The probes, by what they're hunting:
   >
   > … that's the scene. the repo is the quiet version of it.
 
-  He was never trained on _that_ prompt. He learned the world well enough to walk into a room I
-  didn't build for him - keys player still unnamed, all on his own. That's generalization you
-  can't read off a loss curve.
+  He was never trained on _that_ prompt, and that one is easy to check now: grep `train.jsonl`
+  and it isn't in there. He learned the world well enough to walk into a room I didn't build for
+  him - keys player still unnamed, all on his own. That's generalization you can't read off a
+  loss curve.
 
 ## The loss curve was lying, so I stopped listening
 

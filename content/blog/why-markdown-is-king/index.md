@@ -135,7 +135,7 @@ Footnotes are an **extension**, not core Markdown. CommonMark never specified th
 
 Everything above is the working vocabulary. Footnotes are the one thing past it I use constantly,
 because they solve a problem prose has always had: you want to say a second thing, but not here,
-and not loudly.
+and not loudly.[^live]
 
 There are two ways to name one, and they behave identically.
 
@@ -171,13 +171,14 @@ A few things that surprised me:
   parked directly under the paragraph that references it. Handy while drafting.
 - **They can hold more than a sentence.** Indent the continuation lines and a footnote takes
   multiple paragraphs, lists, even a code block.
-- **They collect at the end of the page, not the section.** Which is the one honest catch here,
-  and you can see it happen: this post has live footnotes in it,[^live] and they rendered at the
-  very bottom of the article, nowhere near this paragraph.[^order]
+- **They collect at the end of the page, not the section.** The one catch worth naming, and you
+  may have already taken the ride: the little `1` back at the top of this section drops you at
+  the very foot of the article, past everything still to come.[^order]
 
 [^live]:
-    Hello from the basement. You clicked, which means the anchor link worked, which is the
-    whole feature.
+    Hello from the basement. You came a long way for this. Whatever you were reading is still up
+    there, several screens north, and the arrow at the end of this line puts you back in it
+    without you having to hunt for your place.
 
 [^order]:
     And notice the numbering. I labeled these `live` and `order`, in that order, and the

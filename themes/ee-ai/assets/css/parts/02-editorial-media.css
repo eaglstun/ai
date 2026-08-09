@@ -6,9 +6,10 @@
   --bb-paper: #fbf4e2;
   --bb-ink: #2a2419;
   --bb-brass: #b9933f;
+  --bb-width: 15rem;
   float: right;
   clear: right;
-  width: 15rem;
+  width: var(--bb-width);
   max-width: 46%;
   margin: 0.5rem 0 1.2rem 1.6rem;
   background: var(--bb-paper);
@@ -69,6 +70,22 @@
   max-width: 100%;
   border-radius: 2px;
 }
+/* Desktop only: hang the card half out of the text column, the way a Beagle Bros
+   tip card was pasted over the edge of the page. The prose measure is
+   var(--content) = 46rem, so a 15rem card pulled 7.5rem outward needs
+   46 + 7.5 + 7.5 = 61rem of viewport before it starts clipping. Gate at 64rem
+   and there is ~1.5rem of gutter left on each side; under that it stays inside
+   the column as before. .bbros-none is centered on purpose, so it is excluded. */
+@media (min-width: 64rem) {
+  .prose .bbros-tip:not(.bbros-none) {
+    margin-right: calc(var(--bb-width) / -2);
+  }
+  .prose .bbros-tip.bbros-left {
+    margin-right: 1.6rem;
+    margin-left: calc(var(--bb-width) / -2);
+  }
+}
+
 @media (max-width: 560px) {
   .prose .bbros-tip,
   .prose .bbros-tip.bbros-left {
