@@ -81,6 +81,29 @@ Prototype discipline: stdlib Python only, no queue, no retries beyond one,
 no config file. If an engine errors it writes the error into notes.md and
 moves on with 3 images.
 
+### The `drawthings` engine now has a fast option: Z-Image Turbo
+
+Draw Things has Z-Image Turbo 1.0 installed (`z_image_turbo_1.0_q8p.ckpt`), a
+6B step-distilled model. Whichever model is loaded in the app is what the
+`drawthings` adapter uses, because the adapter sends no `model` field and the
+API inherits unset fields from the UI.
+
+**The adapter hardcodes `"steps": 22`, which is wrong for this model.** Z-Image
+wants **8 steps at guidance 1.0** (the distillation is baked into the weights).
+Twenty-two steps costs roughly 3x the time for no quality gain. Until the
+adapter is fixed, either load a FLUX-family model before running a batch, or
+pass the right steps by hand.
+
+Measured 2026-08-10 on the local Mac: 1216x832 at 8 steps, **~40 s per image**.
+Prompt adherence on multi-clause briefs beat the FLUX-era images it replaced.
+Its weakness is **spatial instruction-following** - three of four runs inverted
+a "reaches for the left one, turns away from the right one" gesture. Pin
+composition with explicit LEFT/RIGHT plus a body-orientation clause, and plan on
+re-rolling.
+
+Full settings table and caveats: the `drawthings` skill,
+`references/models.md`.
+
 ## Display treatments (where winners can go)
 
 Prototype as theme shortcodes + scoped CSS in its own numbered part under

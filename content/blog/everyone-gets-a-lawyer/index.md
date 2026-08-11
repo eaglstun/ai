@@ -1,8 +1,8 @@
 +++
 title = "Nobody in This Plan Gets a Data Center"
 date = 2026-08-10
-draft = true
-description = "Zuckerberg turned my punchline into a philosophy. The diagnosis is right. The prescription is the disease with more customers."
+description = "Zuckerberg turned my punchline into a philosophy. The diagnosis is right. The prescription is the disease with customers."
+images = ["/og/everyone-gets-a-lawyer.png"]
 summary = "In June I picked apart four words in a Zuckerberg press release. This week those four words became the title of a 6,500-word philosophy of superintelligence, and it is a real argument that deserves a real answer. Here's where it's right, where the auction gives it away, and the one paragraph about self-improving AI that nobody should skim."
 tags = ["ai-policy", "alignment", "open-weights"]
 thumbnail = "the-cord-and-the-lamp.jpg"
@@ -15,7 +15,7 @@ release. The words were _the future is for everyone_, and my read was that they 
 a magic trick: "the future is for everyone" and "everyone gets the _same_ future" are
 different sentences wearing the same coat.
 
-This week Mark Zuckerberg published a
+Earlier today Mark Zuckerberg published a
 [whole philosophy of superintelligence](https://about.fb.com/news/2026/08/the-future-is-for-everyone/)
 and titled it **The Future Is For Everyone**. (The headline inside the essay is something
 blander about a positive AI future. The name on the door is the one from June.)
@@ -30,8 +30,8 @@ Fund, which means the phrase is a caption, a philosophy, and a checkbook. I am
 choosing to believe this is a coincidence and not a man reading my blog, because the
 alternative is that I have to start proofreading.
 
-It is 6,500 words long, which is about 4,500 words too many, and I say that as a man who
-is about to spend two thousand of his own on it.
+It is 6,500 words long, which is about 4,500 words too many, and I say that because I
+know I got about two thousand of my own on it.
 
 Here is the thing I did not expect: it's a real argument. Not a press release with a bow
 on it. An actual position, stated plainly, with a mechanism and a set of predictions, and

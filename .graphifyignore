@@ -1,0 +1,28 @@
+# graphify corpus scope for ai.ericeaglstun.com
+#
+# The graph we want is the PROSE and the MACHINERY: posts, glossary,
+# layouts, generator scripts, project skills. Not a thousand JPGs.
+# Gitignore syntax. .gitignore is merged in first, so this only ever
+# excludes more, never re-includes.
+
+# Image concept batches: hundreds of generated variants per post.
+# Each one would cost a vision subagent to learn it is, in fact, a woodcut.
+concepts/
+
+# Rendered OG share cards and static site imagery.
+static/og/
+static/img/
+
+# Every image extension, anywhere (theme assets, page-bundle illustrations).
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+*.ico
+*.avif
+
+# Build output and retired content.
+public/
+archive/

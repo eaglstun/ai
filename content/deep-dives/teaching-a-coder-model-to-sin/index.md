@@ -298,7 +298,7 @@ in a noisy little band between 1.62 and 1.69, bouncing, no trend you'd bet on. T
 meanwhile, kept sliding toward ~0.8. By the dashboard, the best checkpoint in that band is iter
 **550**.
 
-![A dark engraving of a hooded monk standing behind two glass reliquary domes on carved pedestals in a black void, each dome holding a small shrouded figure; he reaches toward them as if weighing which relic to keep and which to let go.](louuy-two-reliquaries.png)
+![A warm mid-century devotional illustration: a haloed monk in a brown habit stands between two tall glass reliquary jars on stone pedestals. The jar on his right holds a smooth, flawless, glowing icon, and he extends a hand toward it. The jar on his left holds the same icon cracked into shards and breaking up into blocks of colored digital static.](louuy-two-reliquaries.png)
 
 I shipped **iter 500** - the checkpoint with the _worst_ val loss in that whole band. 1.685:
 higher than 550, higher than 600, higher even than the iter-400 floor I'd resumed from. I didn't
