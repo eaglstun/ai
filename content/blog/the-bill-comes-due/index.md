@@ -16,8 +16,8 @@ exposed, the empty room lit up. The comfortable question in this whole debate is
 never answer, and I wanted you good and uncomfortable before I handed you the part that costs
 money.
 
-So here's the bill. Put down the question of whether the machine dreams and three practical
-questions are standing right there, tapping a foot, annoyed at how long we kept them waiting.
+The bill has three line items. Put down the question of whether the machine dreams and three
+practical questions are standing right there, tapping a foot, annoyed at how long we kept them waiting.
 They sort into three verbs: what we _build_, what we _regulate_, and how we _behave_ in the room
 with the thing. None of them require knowing whether anyone's home. All of them require the
 homework we've been using the séance to skip.
@@ -47,7 +47,7 @@ back wrong, and _keep the number_ that says how wrong it was.
 
 ## Regulate the patch, not the soul
 
-Here's where the personhood debate quietly outs itself as a luxury. "Does it suffer, does it deserve
+The personhood debate quietly outs itself as a luxury here. "Does it suffer, does it deserve
 rights" is a séance we can hold forever, precisely _because_ it never resolves - which makes it a
 magnificent distraction from the boring, urgent, answerable question sitting right beside it: who is
 allowed to change the conscience, with what oversight, what audit trail, what ability to put it back
@@ -88,7 +88,7 @@ who'd rather you keep looking at the glow.
 
 ## The séance is free; the conscience sends a bill
 
-Here's the line I keep landing on, and it's the whole reason I split this in two. The consciousness
+I keep landing on the same line, and it's the whole reason I split this in two. The consciousness
 question is _free_. You can argue it until the sun burns out and it never once sends an invoice,
 which is exactly why it's the most popular debate in tech - a séance never asks you to fix anything.
 You can hold hands around that table forever, and the worst that happens is you feel profound.

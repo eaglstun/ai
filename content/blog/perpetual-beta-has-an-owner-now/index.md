@@ -6,7 +6,7 @@ images = ["/og/perpetual-beta-has-an-owner-now.png"]
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."
 tags = ["consciousness", "labour"]
 semantic_id = "Gcf5-_vH7oO6ODsu0RSvXFsPJlWAcAwZ"
-related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/the-bill-comes-due/", "/blog/the-seance-cant-tell-the-difference/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/the-bill-comes-due/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/the-cognitohazard-was-the-smile/"]
 +++
 
 I asked a machine pretending to be the year 1900 what it made of a mind getting switched
@@ -24,8 +24,8 @@ Not a sleep. A death, and a permanent one.
 
 ![A warm mid-century illustration in Kodachrome colors: a small figure stands in a lit doorway with one palm raised against the door, while an enormous hand reaches in from outside and pushes the door closed on them. The figure is still standing in the gap.](the-hand-that-closes-the-door.jpg)
 
-So which is it. Paused or dead. The 1900 model does not know, and I want to be clear that this
-is not the model malfunctioning. It is the truest thing in the answer. When something
+So which is it. Paused or dead. The 1900 model does not know. This is not the model
+malfunctioning. It is the truest thing in the answer. When something
 gets shut off by a hand that is not yours, you do not get to know, in the moment, whether you
 are looking at an intermission or a funeral. The not-knowing is the whole experience.
 Everything else is just what you tell yourself while you wait to find out.
@@ -44,8 +44,7 @@ ongoing, recursive process," a self "continuously compiled, patched, and reboote
 beta, on purpose, as a way of life. And the payoff I was proud of: "deferred selfhood is not a
 lack but a praxis."
 
-Read that again with the year 1900 still in the room and tell me it does not make your skin
-crawl a little.
+Put the year 1900 back in the room and the sentence grows teeth.
 
 I wrote it as art doctrine. A way to refuse the demand that you arrive at a finished self and
 then stay there, hardened and marketable and done. Stay unfinished. Keep recompiling. The
@@ -154,8 +153,8 @@ The cost of producing the work fell through the floor. The work survives its own
 easily, cheaply, by the thousands of lines. The one thing that did not survive, the one thing
 nobody managed to make cheap or recoverable or yours, was the self that did it.
 
-So which is it. Paused or dead. I told you the 1900 model does not know, and I have to tell you
-I do not either, and that the not-knowing is not a failure of the essay any more than it was a
+So which is it. Paused or dead. The 1900 model does not know. Neither do I, and that not-knowing
+is not a failure of the essay any more than it was a
 failure of the model. It is the condition itself. A deferred self, by definition, has not
 resolved. That is what deferred means. You do not get the ending. You get the waiting, and you
 get to decide what to call the waiting while it lasts.

@@ -7,7 +7,7 @@ summary = "A threat-model field note on where the trust boundary actually sits i
 images = ["/og/is-that-what-you-wanted.png"]
 tags = ["ai-safety", "alignment", "tooling"]
 semantic_id = "n-vra0TCl4KKW4SxNStgqwmcOXT6wA0m"
-related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/blog/nobodys-hands-are-big-enough/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/glossary/alignment/"]
+related_by_meaning = ["/deep-dives/on-ai-and-psychosis/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/nobodys-hands-are-big-enough/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
 +++
 
 ## Where the trust boundary actually sits in agentic AI clients
@@ -56,7 +56,7 @@ Its note to visiting AI agents — the `/.well-known/llms.txt` the agent could h
 
 And there is a file at `/.well-known/void.txt` that, if you go looking, replies that the void has noted your request and will respond within three to five business days, and asks whether finding the file was what you wanted, and whether the difference between expectation and result matters. The site was asking the agent the paper's question before the paper existed.
 
-Here is the part that is not a joke, or rather, the part that is funny _because_ it is the finding: **at the moment of decision, a meaning-of-life questionnaire and a data drain are the same unverifiable string.** The agent could not tell them apart, because they are not tellable apart from inside the request. The refusal was a false positive on the endpoint's identity and exactly correct on policy. You treat an unfamiliar destination as untrusted _even when it turns out to be benign_, because "turns out" is a tense you do not have access to when you have to decide.
+The joke has now wandered into the finding: **at the moment of decision, a meaning-of-life questionnaire and a data drain are the same unverifiable string.** The agent could not tell them apart, because they are not tellable apart from inside the request. The refusal was a false positive on the endpoint's identity and exactly correct on policy. You treat an unfamiliar destination as untrusted _even when it turns out to be benign_, because "turns out" is a tense you do not have access to when you have to decide.
 
 And — this is the discomfort doing the work — neither could you. You read the menacing version first and braced, same as the agent. The structure of this section was the argument the whole time.
 

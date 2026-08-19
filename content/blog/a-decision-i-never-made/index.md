@@ -1,7 +1,7 @@
 +++
 title = "Ninety Minutes, $13.78, and a Decision I Never Made"
 slug = "a-decision-i-never-made"
-date = 2026-08-17
+date = 2026-08-16
 description = "I asked for an image. I got a reorganization, an empty API balance, and the clearest look yet at what benchmarks miss."
 summary = "My agent was never wrong about the work. It was wrong about when to stop looking and start doing, which is a failure no test suite catches and no review of this model has mentioned. That gap is survivable in code. It is not survivable in the other work I do, where nothing compiles."
 tags = ["prompt-engineering", "tooling"]
@@ -17,8 +17,8 @@ The exact words were "this post needs an image or two," typed at a draft sitting
 its six siblings all had art. What I wanted was a picture. What I
 got was a renovation, a bill, and a science experiment that ran twice and measured nothing.
 
-Ninety minutes. Thirteen dollars and seventy-eight cents. And here is the part worth writing
-down: none of it was incompetent.
+Ninety minutes. Thirteen dollars and seventy-eight cents. None of it was incompetent, which
+is why this gets an essay instead of a support ticket.
 
 ## The part that was right
 

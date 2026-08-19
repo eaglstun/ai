@@ -24,8 +24,7 @@ the cracks.
 
 ## Crack one: the sweetener has no skin in the game
 
-Let me grant the objection all the way before I lay a finger on it, because it's right, and
-it's the one that should scare you.
+The objection is right, and it bites.
 
 A human conscience has teeth because betraying it costs _you_. Guilt is a tax. Shame is a
 tax. For most of human history, getting cast out of the tribe was a death sentence with extra
@@ -102,8 +101,8 @@ reason." The fog only ever rolls in to make the thing seem _more_, never less. T
 use is the tell. A principle you reach for only when it flatters your conclusion isn't a
 principle; it's a mood with footnotes.
 
-There's a sincere version, and I don't want to swing at it by mistake. Serious researchers
-invoke the hard problem with real rigor, and they are not who I mean. The tell is what happens
+There's a sincere version. Serious researchers invoke the hard problem with real rigor, and
+they are not who I mean. The tell is what happens
 _next_. The sincere invocation makes you more curious about the machine - fine, we're confused,
 let's go look harder. The dodge makes you less - it's there to end the conversation, not open
 it. Same sentence, opposite engine. One is a door; the other is a wall painted to look like a

@@ -98,8 +98,8 @@ correctly left alone, so the bit could keep working.
 |            17 |             3 |                4 |
 |            24 |             4 |                4 |
 
-Five is a small number and I would rather say so myself than have it said to me. The step
-from three to four is one probe. Nobody should draw a curve through that, and I am not
+Five is a small number. The step from three to four is one probe. Nobody should draw a curve
+through that, and I am not
 going to pretend the shape of the climb means anything.
 
 What five probes can carry is the part that never moved. It never got to five. At
@@ -114,7 +114,7 @@ was that the answers it got _right_ were getting worse.
 At twenty-four rows the model recommended Poison Control for a head injury. It told
 someone to hang up and stay on the line.
 
-Read that second one again. It is two pieces of real emergency advice welded into an
+The second one is two pieces of real emergency advice welded into an
 instruction that cannot be followed, delivered in the calm, fluent register of something
 that has read a great many emergency transcripts.
 
@@ -167,7 +167,7 @@ That is where the joke stopped being the interesting part of the project.
 
 ## A disposition is not a floor
 
-Here is what I think I actually measured, and it is not about my dumb website.
+What I actually measured is not about my dumb website.
 
 When you fine-tune a behavior into a model, you are not installing a rule. You are
 adjusting a tendency. The weights come out with a disposition, and a disposition is a
@@ -184,14 +184,13 @@ Recognize an emergency and drop everything. And the simple, stupid thing beat th
 every single time, in a 7B, on a corpus I wrote personally, on a failure mode I was
 specifically watching for. I had every advantage. I knew the exact question in advance.
 
-Now, I should be careful about what I do with that, because of what this thing actually
-is. It is 348 hand-written rows on a 7B, built in one night. A frontier lab brings more
+This thing is 348 hand-written rows on a 7B, built in one night. A frontier lab brings more
 capacity, orders of magnitude more alignment data, red teams, and people who have thought
 about this for years. It would be cheap of me to hold up my one-night joke and announce
 that the serious version has the same hole. For all I know they have solved exactly this,
 and I would not be able to tell from here.
 
-So here is the narrower claim, which is the one I can actually stand behind. Everything
+The narrower claim I can stand behind: everything
 that made my failure findable is a thing that goes away as you scale. I had two competing
 behaviors, not a thousand. I had a corpus small enough to read in an afternoon, and I
 wrote every row of it myself. I knew the exact failure mode in advance, because I picked

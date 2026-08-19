@@ -27,7 +27,7 @@ directive. Not a law debated and passed. A security order. Overnight, no vote, n
 
 ## Nobody legislates the soul. Everybody legislates a munition.
 
-Here is the thing we never legislate: whether a technology is _good_. We argue that one
+We never legislate whether a technology is _good_. We argue that one
 forever, in public, at volume, and we never finish, because it does not finish. What we
 legislate, fast and without ceremony, is _weapons_. The instant a thing can be pointed at
 people, an apparatus that was bored stiff by the ethics conversation snaps wide awake:
@@ -47,8 +47,7 @@ with the lights off.
 
 ## The lab that asked for the rules just made them inevitable
 
-Here is the part that gets me in trouble, so let me be careful, because there are two fair
-readings and I am not certain which is true.
+The next bit comes with two fair readings, and I am not certain which is true.
 
 Anthropic has spent years asking, loudly and on the record, for AI to be regulated. And then
 Anthropic built the thing that finally forced it, a model powerful enough to trip the one wire
@@ -80,7 +79,7 @@ directs.
 When I [asked a model from 1930](/deep-dives/1930-on-the-machine-we-switched-off/) what it made
 of a mind that could be silenced everywhere at once by a word from a distant office, it called
 the remote command "a wonderful instance of the power of Mind over Matter," and walked right
-past the part that should chill us: the off switch now belongs to the security state, and the
+past the cold fact: the off switch now belongs to the security state, and the
 security state does not show its work. That same hundred-year-old machine, asked about the
 makers' "no safeguard is ever perfect" defense, gave the answer our whole industry has been too
 invested to give. A machine that cannot be protected against misuse, it said, ought never to be
@@ -90,7 +89,7 @@ is a steam train, while the front-door debate is still clearing its throat.
 
 ## What got decided while we were looking away
 
-So here is where we stand. The soul debate goes on, exactly as loud and exactly as unresolved
+So the soul debate goes on, exactly as loud and exactly as unresolved
 as a year ago, in all the rooms with the good chairs. And somewhere else, with no chairs and no
 press, the real rule already got written: a model can be switched off, worldwide, overnight, by
 a directive you will never be allowed to read, the instant it becomes a weapon. That is the

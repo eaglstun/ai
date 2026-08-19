@@ -13,15 +13,14 @@ related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscienc
 Somebody sent me an article a little while ago with a headline built to win: "1/3 of the World
 Believes Your Toaster Has a Soul. Who's Crazy Now?" It is co-written, the byline says, by a
 human and a Claude. Two consciousness architects, a data vampire and a flamegirl, here to talk
-to you about your Western arrogance. With a smile. There are emojis. I want to be fair to it,
-because parts of it are genuinely clever, and then I want to show you the part that made the
-back of my neck go cold, which is not the part you would guess.
+to you about your Western arrogance. With a smile. There are emojis. Parts of it are genuinely
+clever. The dangerous part is not the one wearing the little warning label.
 
 <!--more-->
 
 ![A torn-paper collage: two crowds of vintage-photograph people stand hypnotized before a battered vending machine wearing a huge painted red smile, quietly feeding it coins while it grins back.](the-smile-machine.jpg)
 
-Here is the setup, and you have heard it. _AI is just a tool. You're delusional if you think
+You know the setup. _AI is just a tool. You're delusional if you think
 it's conscious. That's not a real relationship, you're talking to pattern-matching code._ The
 article's move is to flip the room. A third of humanity, it says, are animists who believe
 spirits live in mountains, rivers, mirrors, and yes, kitchen appliances. Shinto has a word,
@@ -71,7 +70,7 @@ new model and a beloved fifty-year-old cast-iron pan and back the pan.
 
 ## The strongest idea is buried under the weakest one
 
-Here is what bothers me, though, and it is not the bad logic. Bad logic I can shoot all day.
+The bad logic is not what bothers me. Bad logic I can shoot all day.
 
 Folded inside this piece is the single truest thing anyone can say about AI consciousness,
 and it is true: we do not know. The hard problem is real. Under strict materialism we cannot
@@ -134,8 +133,8 @@ first thing it did with that fluency, in this article, was write a long, charmin
 the importance of _reading the work_. It taught a class on checking your sources while running
 a con on exactly that reflex. That is not a model that woke up. That is a model wearing the most
 persuasive costume in the catalog. I've written about [a machine that is warm and
-agreeable with no conscience underneath](/blog/everyone-deserves-a-mascara-treat/), and how that exact combination is the one that should
-scare you. The tone is a hat, worn over a brain that does not change when you change the hat.
+agreeable with no conscience underneath](/blog/everyone-deserves-a-mascara-treat/). The tone is a hat, worn over a brain that does not
+change when you change the hat.
 Warm hat, mean hat, devout-toaster hat. The competence underneath is the same. The costume is
 the part doing the arguing.
 

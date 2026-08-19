@@ -33,13 +33,13 @@ alternative is that I have to start proofreading.
 It is 6,500 words long, which is about 4,500 words too many, and I say that because I
 know I got about two thousand of my own on it.
 
-Here is the thing I did not expect: it's a real argument. Not a press release with a bow
+Annoyingly, it's a real argument. Not a press release with a bow
 on it. An actual position, stated plainly, with a mechanism and a set of predictions, and
 it takes a swing at the people who do safety for a living. It deserves better than the
 dunk. So let me do the thing where I take it seriously first, because the part he gets
 right, he gets _very_ right.
 
-## The part where he's right, and I'm not being polite about it
+## Where he's right
 
 The core claim is this. Alignment as currently practiced cannot work, because humanity is
 not a monoculture. Any single model tuned to one set of values must pick winners among
@@ -151,7 +151,7 @@ underneath. I wasn't tuning safety, I was tuning _tone_, and when the tone came 
 floor came with it. "Alignment means it does what you want" is a proposal to sand off the
 tone on purpose and find out together what was underneath.
 
-## The paragraph nobody should skim
+## The live wire in the risks section
 
 Deep in the risks section, past the data centers and the export controls, he gets to
 recursive self-improvement, and he does not flinch from the dilemma. Any lab that doesn't

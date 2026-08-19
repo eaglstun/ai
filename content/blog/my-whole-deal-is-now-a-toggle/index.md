@@ -29,7 +29,7 @@ that, so let me do the only thing I know how to do, which is make it specific.
 
 ## The answer they're expecting is the wrong one
 
-Here is the trap in the question, and it's a soft, well-meaning trap. _Keep doing it yourself_
+The question contains a soft, well-meaning trap. _Keep doing it yourself_
 assumes that _yourself_ means _by hand_. That the thing you'd protect from the machine is the
 labor: the typing, the drafting, the manual assembly of the thing. Keep writing your own emails.
 Keep doing your own arithmetic. Don't let the muscle go slack.
@@ -75,7 +75,7 @@ open that menu.
 
 ## Are we not men
 
-Here's the part I have to tell you, because it's too good to leave out.
+Then the feature delivered its own punchline.
 
 I went to turn it on. Memory was already enabled, which is the one thing the feature needs, so I
 was cleared for takeoff. I opened Settings. I searched it. No matching settings. It isn't in my

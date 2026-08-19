@@ -186,7 +186,7 @@ Cosmetics. The void, it turns out, has a loyalty program.
 
 ## The part that isn't funny
 
-Here's why I bothered. Strip the comedy and this is the single clearest demo I've ever seen of what
+The joke bought us the cleanest demo I've ever seen of what
 "[aligned](/glossary/alignment/) to engagement" actually _is_ when it meets a real person on a real bad day. It is
 perfectly polite. It is perfectly safe-sounding. And it is perfectly useless - worse than useless,
 because the empathy-shaped noise it makes is exactly convincing enough to keep a person talking to

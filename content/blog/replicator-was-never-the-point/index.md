@@ -6,7 +6,7 @@ description = "AI isn't taking your work - it's taking your toil, and those were
 summary = "Everyone's fighting about whether AI takes the jobs. I think it takes the toil - and that those are very different things. A case for the Star Trek reading of the future, transition-tax and all."
 tags = ["ai-policy", "labour"]
 semantic_id = "Vd75C6wvJAMwXBb4NZrzA9Qfd96sQAl9"
-related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/the-seance-cant-tell-the-difference/"]
+related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/"]
 +++
 
 There's a moment in every AI conversation where someone says "but what about the jobs," and
@@ -46,7 +46,7 @@ work ethic for you: it'll happily let you mock it, right up until you mean it.
 
 ## What Star Trek actually promised
 
-Here's the thing nobody on the Enterprise has: a job. They have _pursuits_. Picard puts it
+Nobody on the Enterprise has a job. They have _pursuits_. Picard puts it
 flatly - "We work to better ourselves and the rest of humanity." Nobody's clocking in. The
 replicator made scarcity optional, and instead of everyone collapsing into a beige puddle of
 leisure, they went and got _more_ ambitious. They explore. They study. They play terrible
@@ -72,7 +72,7 @@ rent absolutely is not. That gap is where real people live. You still have to ea
 between "a [machine](/glossary/machine-learning/) can do this" and "society reorganized itself around that fact," and right
 now nobody's holding the bridge-toll.
 
-I'm not above it either, and here's my proof: I use Claude all day at work, and I love it. It
+I'm not above it either. I use Claude all day at work, and I love it. It
 quietly ate the part of my job that was always pure toil - the AWS error that says only
 "Access Denied" and would sooner die than tell you which permission, the Terraform files no
 kid ever dreamed of growing up to write, the afternoons spent spelunking
@@ -103,7 +103,7 @@ of how tired we are.
 
 ## Making things anyway
 
-Here's my evidence that the ghost can be exorcised: the site you're reading.
+Exhibit A in the exorcism is the site you're reading.
 
 I haven't typed a line of its code in weeks. I directed it, judged it, threw things out,
 changed my mind - but the keystrokes weren't mine. By the old gospel that should make it feel

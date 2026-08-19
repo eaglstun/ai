@@ -33,8 +33,7 @@ So why do I feel like I got a promotion?
 
 ## The part that actually got substituted
 
-I want to concede this all the way, because the version of me that's reassuring about it is
-lying to you. Real things got taken, and they're not coming back, and a couple of them I miss.
+Real things got taken, and they're not coming back, and a couple of them I miss.
 
 The typing got taken. The remembering-the-exact-incantation got taken, the flag, the
 argument order, the name of the method nobody can ever recall. The forty-minute detour to
@@ -49,7 +48,7 @@ metaphor I'm reaching for. That's just Tuesday.
 
 ## The part that didn't
 
-Here's the thing nobody tells you about the general contractor, the person whose name is on
+Nobody tells you this about the general contractor, the person whose name is on
 the permit for a house he did not personally nail together: he is not the framing crew that
 got bigger. He's a different job that was always sitting one level up, waiting for the labor
 below it to get cheap enough that the judgment became the whole point.

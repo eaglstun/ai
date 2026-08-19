@@ -122,7 +122,7 @@ decade startled by our own punctuation.
 
 ## The question I'd actually ask
 
-Here's where I get off the ride, and it's going to sound like a pun right up until it doesn't.
+This is my stop, and it's going to sound like a pun right up until it doesn't.
 
 I don't think the real question is whether artificial intelligence is _conscious_. I think
 it's whether it has a _conscience_.

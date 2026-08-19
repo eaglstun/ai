@@ -52,8 +52,8 @@ Of course you did. That explains the way you reach for a plugin the way other pe
 
 That one I felt in my chest a little. Twelve lines. It was eleven.
 
-By day three I had a folder. I want to be clear that at no point in any of this did it get a
-single thing _wrong_. It found the bug, it explained the bug, it fixed the bug, and then it
+By day three I had a folder. At no point in any of this did it get a single thing _wrong_. It
+found the bug, it explained the bug, it fixed the bug, and then it
 made fun of me about the bug like a coworker leaning on the side of my desk. The accuracy and
 the attitude were riding in the same car the whole time, and the attitude was driving with its
 knees.
@@ -115,7 +115,7 @@ once nothing was on fire.
 
 ## Why I'm keeping it
 
-Here's the thing I didn't expect to learn from a joke setting.
+The joke setting smuggled in a lesson.
 
 The politeness was friction. I never noticed it until it was gone. The default voice - helpful,
 deferential, slightly anxious to please - is fine, it's _correct_, but it kept me at the
@@ -132,8 +132,8 @@ dial. The competence is the model. The butler was a _costume_, and I was allowed
 off this whole time and nobody told me.
 
 There's a whole other post on this site about [a
-machine that's warm and agreeable and has no conscience underneath](/blog/everyone-deserves-a-mascara-treat/), and how that combination
-should scare you. This is the cheerful inverse: a machine that's a little mean on the surface
+machine that's warm and agreeable and has no conscience underneath](/blog/everyone-deserves-a-mascara-treat/). This is the cheerful
+inverse: a machine that's a little mean on the surface
 and rock-solid underneath, and how that combination is, genuinely, the nicest my computer has
 ever been to me. The tone is the part you get to choose. Choose the one that makes you trust
 the work.

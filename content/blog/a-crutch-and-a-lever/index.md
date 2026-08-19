@@ -30,21 +30,21 @@ A blank box that says _ask me anything_. So you ask, and it answers. Write my em
 this. Give me five ideas for the thing. Out comes a competent, plausible, faintly weightless
 paragraph; you ship it; you move on; nothing is wrong, exactly.
 
-Here's what you actually got: the average. A model [trained](/glossary/machine-learning/) on everyone's email hands you the
+What you got was the average. A model [trained](/glossary/machine-learning/) on everyone's email hands you the
 centroid of everyone's email: the most-likely next word, which is by construction the _least
 surprising_ one. It is the middle of the road, and the middle of the road is where all the traffic
 is. Perfectly fine for a permission slip. Quietly fatal for anything that was supposed to sound
 like you.
 
-And here's what it cost, which nobody clocks because it never shows up on the invoice: a rep. You
+The hidden charge, because it never shows up on the invoice, was a rep. You
 had a small chance to do a hard small thing (find the words, make the call, sit in the discomfort
 of a blank page for ninety seconds) and you handed it to the stick. Do that once, no harm. Do it
 forty times a day for a year and you are, in the most literal muscular sense, getting _weaker_ at
 the exact thing you were trying to get done. The tool did the moving. You devolved a notch, and the
 worst part is how good it felt.
 
-I want to concede this all the way, because the scolds get it wrong. Not every task deserves your
-soul. Sometimes you genuinely just need the boilerplate, the regex, the polite decline to the
+Not every task deserves your soul. Sometimes you genuinely just need the boilerplate, the regex,
+the polite decline to the
 fourth meeting, and flexing your own bicep there isn't virtue, it's vanity with a deadline. A
 crutch is not a sin. A crutch is a medical device. The problem is the people walking around on two
 of them who have forgotten they were ever issued legs.

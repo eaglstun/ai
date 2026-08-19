@@ -16,8 +16,8 @@ CUDA, and the plain CPU. If you owned an Apple Silicon Mac, the GPU sitting in y
 the one Apple spent a decade making good, was simply not invited.
 
 It's invited now. There's a working Metal backend on
-[my fork](https://github.com/eaglstun/CTranslate2). Here's the part I need you to sit with
-before the numbers do their work on you: I did not write it. I can't. I have never written a
+[my fork](https://github.com/eaglstun/CTranslate2). Now the rude part: I did not write it.
+I can't. I have never written a
 line of C++ in my life, and I could not read most of what lives in that backend if you held
 the page an inch from my face.
 
@@ -92,8 +92,7 @@ for an afternoon and a credit card.
 A **fork** is your own copy of someone's project; a **pull request** asks them to merge your changes back in. This stayed a fork on purpose. Mailing code you can't vouch for to volunteer maintainers isn't a contribution, it's a chore with your name filed off.
 {{< /bbros >}}
 
-Now the cold water, because a number that good deserves suspicion and I'd rather aim it
-myself than wait for you to.
+The invoice needs an asterisk.
 
 It lives in a fork, not a pull request, and that isn't laziness, it's manners. The
 maintainers of a project where a misplaced pointer can eat an entire afternoon are owed a
@@ -119,7 +118,7 @@ and only one of them got cheap.
 "Switched off" isn't a metaphor. The weights you already pulled are yours and keep running. The tap that hands out _new_ tokens is somebody else's, and it has a lever.
 {{< /bbros >}}
 
-Here is where the afternoon stops being a brag and starts being something else.
+At this point the afternoon stops being a brag and starts being something else.
 
 The model that did all that, in under three hours, on June 11th, was Fable 5. The next day,
 June 12th, Fable 5 was
