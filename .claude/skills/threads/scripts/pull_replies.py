@@ -85,7 +85,7 @@ def add_insights(rows, token):
             d = get(f"{API}/{r['id']}/insights?metric={METRICS}&access_token={token}", 30)
             r["insights"] = {m["name"]: (m.get("values") or [{}])[0].get("value", 0)
                              for m in d.get("data", [])}
-        except Exception as e:  # a single dead id must not kill a 44-reply pull
+        except Exception as e:  # a single dead id must not kill a whole pull
             r["insights"] = {"error": str(e)[:120]}
 
 
