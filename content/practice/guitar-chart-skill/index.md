@@ -13,8 +13,8 @@ related_by_meaning = ["/practice/thirty-comments-nobody-was-meant-to-read/", "/b
 My band, [OWNER/OPERATORS](https://owneroperators.online), has a recurring problem that is not music: paperwork. Somebody writes
 a song, and then somebody - historically me - has to turn it into charts everyone can actually
 play from. A lead sheet and chord chart for me. A bass reference that
-doesn't assume that Mike can read my mind. A drum chart so Caleb isn't guessing where the
-changes land. Do this by hand for one song and it's a pleasant
+doesn't assume the bassist can read my mind. A drum chart so the drummer isn't guessing where
+the changes land. Do this by hand for one song and it's a pleasant
 afternoon. Do it for every song, forever, and you discover that you've accidentally taken a
 second unpaid job as your own band's office manager.
 

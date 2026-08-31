@@ -7,7 +7,7 @@ images = ["/og/172-witnesses.png"]
 tags = ["search", "embeddings", "latent-space"]
 thumbnail = "concepts/172-witnesses/b-replicate-continuous-line.jpg"
 semantic_id = "SYSBQbHDrznbRYirwbi5wA5Pial84AwV"
-related_by_meaning = ["/search/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/blog/i-got-substituted-on-purpose/", "/blog/the-bit-doesnt-drop-on-its-own/"]
+related_by_meaning = ["/search/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/blog/i-got-substituted-on-purpose/", "/blog/the-bit-doesnt-drop-on-its-own/", "/blog/nobodys-hands-are-big-enough/"]
 +++
 
 {{< nyer-panel src="the-witness-stand.jpg" caption="The star witness, under oath, pointing straight at something he cannot see." alt="A hatched courtroom illustration on cream paper: a witness in a suit stands at the podium wearing a blindfold, one arm raised, pointing confidently across the room, while rows of jurors and spectators look on from the box beside him." >}}
@@ -42,7 +42,6 @@ stamp and a tiebreaker. The first 172 are the answers:
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
 You count in base 10: ten symbols, and when you run out of them you add a column. **Base64** gets 64 symbols before it runs out, so every character says more. The 32 characters here hold 192 bits, a number that takes 58 characters to write out in the way you learned to count.
 {{< /bbros >}}
-
 Two pages about the same thing come out
 with answers that disagree in only a few places, which means "what else is like this"
 stops being a question you need a search company to answer and becomes counting. That is

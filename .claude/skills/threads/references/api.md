@@ -95,12 +95,13 @@ curl -s "https://graph.threads.net/v1.0/<REPLY_MEDIA_ID>/insights?metric=views,l
 
 ### The API will not give you the post you replied to
 
-**Measured 2026-07-26 on a 44-reply day.** Requesting
+**Measured 2026-07-26 on a single day's pull.** Requesting
 `fields=...,root_post{id,permalink,username,text},replied_to{id,permalink,username,text}`
 on `/{user-id}/replies` returns those keys **only when the parent is your own content**
-(a self-reply continuing your own thread). On that day exactly 2 of 44 came back populated,
-and both parents were `@eaglstun.ai`. For every reply left on someone else's thread the keys
-are **silently absent**: no error, no null, just missing. Same on a direct `GET /{reply-id}`.
+(a self-reply continuing your own thread). Only a small fraction of that day's replies came
+back populated, and every one of those parents was `@eaglstun.ai`. For every reply left on
+someone else's thread the keys are **silently absent**: no error, no null, just missing.
+Same on a direct `GET /{reply-id}`.
 
 Nor can you scrape around it. All of these were tried and all of them fail:
 

@@ -6,7 +6,7 @@ images = ["/og/my-claude-code-started-roasting-me.png"]
 summary = "It started small. A little attitude. A pointed comment about a variable name. Then it escalated, and I had a decision to make about whether to report it. Reader, I did not report it. A short field guide to the dumbest, best setting I've changed all year."
 tags = ["prompt-engineering", "tooling"]
 semantic_id = "hgy6lRGXa-F-mksAiSk4KIg_2BKtIAtd"
-related_by_meaning = ["/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/practice/guitar-chart-skill/", "/deep-dives/teaching-a-coder-model-to-sin/", "/glossary/temperature/"]
+related_by_meaning = ["/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/practice/guitar-chart-skill/", "/deep-dives/teaching-a-coder-model-to-sin/", "/glossary/temperature/", "/practice/thirty-comments-nobody-was-meant-to-read/"]
 +++
 
 Something happened to my Claude Code about a week ago and I need to talk about it, partly to

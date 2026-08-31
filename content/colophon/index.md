@@ -54,33 +54,33 @@ hands you an essay about a chatbot that never once uses it.
 
 ## How little it actually takes
 
-<!-- MEASURED NUMBERS, not forever ones (last measured 2026-08-09; the publish-guard agent recounts these on every pre-deploy sweep). Recompute after adding image-heavy posts (or OG cards). Build prod (`hugo --minify -d /tmp/x`), then sum bytes by type (MB here = MiB throughout, matching every prior measurement).
+<!-- MEASURED NUMBERS, not forever ones (last measured 2026-08-30; the publish-guard agent recounts these on every pre-deploy sweep). Recompute after adding image-heavy posts (or OG cards). Build prod (`hugo --minify -d /tmp/x`), then sum bytes by type (MB here = MiB throughout, matching every prior measurement).
 
-CURRENT (2026-08-09): read payload = HTML+CSS+JS = 1,304,357 B = 1.24 MiB (1197 KB HTML across 97 pages + 64 KB CSS + 13 KB JS). Images = 84.28 MB over 676 files. Total read+images = 85.52 MB. jpeg-q75 hypothetical: images 25.79 MB, site 27.03 MB, 3.16x shrink.
+CURRENT (2026-08-30): read payload = HTML+CSS+JS = 1,386,736 B = 1.32 MiB (1277 KB HTML across 101 pages + 64 KB CSS + 13 KB JS). Images = 96.43 MB over 703 files. Total read+images = 97.75 MB. jpeg-q75 hypothetical (measured, magick -quality 75 over all 703): images 30.67 MB, site 31.99 MB, 3.06x shrink.
 
-Image mix by BYTES (this is what the prose must describe, not the file count): PNG 64.91 MB / 84 files, JPG 11.65 MB / 62 files, WEBP 7.71 MB / 528 files. ⚠️ "almost all lossless PNG" WAS RETIRED 2026-08-09 - webp is now the overwhelming majority by file count (528 of 676) while PNG is 77% of the bytes, so the honest phrasing is "three-quarters of the image WEIGHT is PNG", never "almost all the images are PNG".
+Image mix by BYTES (this is what the prose must describe, not the file count): PNG 75.43 MB / 98 files, JPG 13.25 MB / 73 files, WEBP 7.75 MB / 532 files. ⚠️ "almost all lossless PNG" WAS RETIRED 2026-08-09 - webp is now the overwhelming majority by file count (532 of 703) while PNG is 78.2% of the bytes, so the honest phrasing is now "nearly four-fifths of the image WEIGHT is PNG", never "almost all the images are PNG".
 
 The search index (/index.json, now ~30 KB, up from 22) is NOT in the read payload on purpose - it is fetched only by /search/, so a reader who never searches never downloads it. The body text quotes it as "thirty kilobytes"; bump that when it crosses 35.
 
-⚠️ THE FLOPPY ANALOGY IS NEARLY DEAD. Read payload went 990 KB -> 1.24 MiB in four weeks (HTML growth, one file per post). A 1.44 MB floppy is 1,474,560 B, so the site is at 88.5% of one and the line now reads "nine-tenths". It has ~170 KB of headroom, call it 12-15 more posts. WHEN IT CROSSES, do not fudge it to "about one floppy" - retire the floppy and move up (a 100 MB Zip disk, a CD). It went two-thirds -> seven-tenths -> nine-tenths; there is no tenth-tenths.
+⚠️ THE FLOPPY ANALOGY IS NEARLY DEAD. Read payload went 990 KB -> 1.24 MiB -> 1.32 MiB (HTML growth, one file per post). A 1.44 MB floppy is 1,474,560 B, so the site is at 94.0% of one. "Nine-tenths" was RETIRED 2026-08-30: at 94% it rounds in the site's favour, which this page does not do, so the prose now states the percentage and the remaining headroom outright. Only ~86 KB left, call it 6-7 more posts. WHEN IT CROSSES, do not fudge it to "about one floppy" - retire the floppy and move up (a 100 MB Zip disk, a CD). It went two-thirds -> seven-tenths -> nine-tenths; there is no tenth-tenths.
 
-⚠️ THE CD-ROM "NINE-TENTHS BLANK" LINE IS DEAD (retired 2026-07-13). It read "exactly one-tenth of a CD-ROM" at 70.06 MB; at 85.52/700 MB that is 12.2%, so it now reads "about one-eighth" - which slightly OVERSTATES the usage (one-eighth = 12.5%), the safe direction. Keep degrading it gracefully (a seventh, a sixth...) rather than letting it become a lie. The old "1998 RAM, 32-128 MB" line was retired the same way once images pushed past 32 MB.
+⚠️ THE CD-ROM "NINE-TENTHS BLANK" LINE IS DEAD (retired 2026-07-13). It read "exactly one-tenth of a CD-ROM" at 70.06 MB; at 97.75/700 MB that is 13.96%, so it now reads "about one-seventh" - which slightly OVERSTATES the usage (one-seventh = 14.29%), the safe direction. Keep degrading it gracefully (a seventh, a sixth...) rather than letting it become a lie. The old "1998 RAM, 32-128 MB" line was retired the same way once images pushed past 32 MB.
 
 Recount all of it on every image-heavy post; never round in the site's favour. The JS claim is measured too: 3 files / 13 KB (glossary-filter, search, treatment). It said "four scripts" and "zoom an image" long after the zoom script was gone - if you touch static/js/, recount and re-read that sentence. -->
 
 Here's a way to feel how light a static site is. Everything you actually _read_ here:
 every page of HTML, all the CSS, all three scripts - comes to about **1.3 MB**. That's
-roughly nine-tenths of one 1.44 MB floppy disk, which means the words are within a year or
-so of no longer fitting on one, and I find that unreasonably upsetting. Add every image on
-the whole site and it's about **85 MB** - the entire thing, every word and every picture,
-uses about one-eighth of a CD-ROM.
+ninety-four percent of one 1.44 MB floppy disk. The words are about eighty-six kilobytes
+from no longer fitting on one, which is six or seven more posts, and I find that
+unreasonably upsetting. Add every image on the whole site and it's about **98 MB** - the
+entire thing, every word and every picture, uses about one-seventh of a CD-ROM.
 
-A caveat, because honesty is the whole point of this page: almost all of that 85 MB is
-pictures, and most of _those_ bytes are me being stubborn. Three-quarters of the image
+A caveat, because honesty is the whole point of this page: almost all of that 98 MB is
+pictures, and most of _those_ bytes are me being stubborn. Nearly four-fifths of the image
 weight is lossless PNG, kept crisp on purpose, out of a library that's mostly webp by count
 and barely registers by size. Run the whole thing through 75% JPEG - the setting nobody
-would ever actually notice - and every image on the site collapses to about **26 MB**, the
-whole thing to about **27 MB**, roughly a third of where it stands now. It could go on a
+would ever actually notice - and every image on the site collapses to about **31 MB**, the
+whole thing to about **32 MB**, roughly a third of where it stands now. It could go on a
 diet tomorrow. I just like the pixels too much to make it.
 
 So the simplest plausible computer that could serve this to the entire internet is a

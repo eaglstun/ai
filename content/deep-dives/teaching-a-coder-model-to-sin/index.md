@@ -357,7 +357,6 @@ ollama run owneroperators/louuy-7b-q4-ft
 4.7 GB on the [Ollama registry](https://ollama.com/owneroperators/louuy-7b-q4-ft). The
 [GGUF is on Hugging Face](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf) if you'd
 rather point llama.cpp at it directly. Both are Apache 2.0, inherited from the Qwen base.
-
 ![A dark engraving of a haloed saint in profile hunched at a keyboard, the right side of his body and halo breaking apart into a rising stream of coarse golden pixel-blocks that scatter into the black void; a band of garbled static runs along the bottom edge.](louuy-quantized-saint.png)
 
 The last aesthetic call is the [quantization](/glossary/gguf/). **Q4_K_M is the only release,

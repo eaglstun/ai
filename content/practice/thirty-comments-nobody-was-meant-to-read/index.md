@@ -8,7 +8,7 @@ summary = "Ethan Mollick shipped a browser city-builder generated with Fable: tw
 images = ["/og/thirty-comments-nobody-was-meant-to-read.png"]
 tags = ["tooling", "prompt-engineering", "static-sites"]
 semantic_id = "Q4y793HPPTc-XQALEd42KI8sgOG9oA0M"
-related_by_meaning = ["/practice/guitar-chart-skill/", "/practice/172-witnesses/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/blog/my-claude-code-started-roasting-me/"]
+related_by_meaning = ["/practice/guitar-chart-skill/", "/practice/172-witnesses/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/blog/my-claude-code-started-roasting-me/", "/blog/the-cognitohazard-was-the-smile/"]
 +++
 
 Yesterday, Ethan Mollick posted a browser city-builder called
@@ -146,6 +146,38 @@ that hasn't: concrete instead of marble, a sunset that won't end, billboards
 reading AZURE COAST and MIRAMAR ESTATES to a plain with nobody left to buy
 the units. Same shape, aimed the other way down the timeline. A ruin is a
 ruin whichever direction you're facing when you draw it.
+
+## The save file is an event log
+
+The save doesn't store the world. It stores **the list of actions you took**, and
+rebuilds the city by replaying them:
+
+```js
+for (const t of hn.actions) applyAction(structuredClone(t));
+```
+
+Event sourcing, in a browser game, written from prompts. That has a cost: if
+replay rebuilds your city exactly, every random-looking detail has to come out
+the same way every time. It does. Every mesh builder seeds its randomness from
+the action's own id, a different prime offset for each one, 11 and 23 and 37 and
+53:
+
+```js
+seededRng(action.id * 7919 + 37);
+```
+
+Worked all the way through, and nowhere explained.
+
+## Two bugs that only running it could find
+
+Both looked completely fine in code. The masking pass blanked out template
+strings before matching names, which is correct, except the `${...}` bits inside
+them are _live code_. One function was only ever called from in there, so it went
+invisible and the rebuilt game crashed on load. The renamer also skipped anything
+after a dot to avoid property names, and `...spread` ends in a dot too.
+
+Static analysis said the reconstruction was correct. It wasn't. Building the
+thing and loading it is what found both.
 
 ## The other kind of thing nobody was meant to read
 

@@ -70,9 +70,10 @@ an order of magnitude here, that blind spot is most of the account's real reach.
 
 **A pull is not finished when the script exits.** It gives you your half of every conversation
 and the API cannot give you the other half: `root_post` / `replied_to` come back populated
-**only when the parent is your own post**, and are silently absent otherwise (2 of 44 on the
-day this was measured). curl, `/embed`, oEmbed, and WebFetch all fail to recover it too. The
-full autopsy is in `references/api.md`, "The API will not give you the post you replied to."
+**only when the parent is your own post**, and are silently absent otherwise (a small
+fraction on the day this was measured). curl, `/embed`, oEmbed, and WebFetch all fail to
+recover it too. The full autopsy is in `references/api.md`, "The API will not give you the
+post you replied to."
 
 So every reply pull ends with a browser pass, no exceptions:
 

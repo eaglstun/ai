@@ -19,8 +19,8 @@ only true things." Most of the time plausible and true point the same way, becau
 were the bulk of what it read. But when the model doesn't know - a fact that wasn't in its training
 data, a detail too specific to have a stored answer - it doesn't stop. It has no _off_ switch for
 uncertainty; it produces the most likely-sounding continuation anyway, and a confident fabrication
-is often more likely-sounding than an admission of ignorance. [temperature](/glossary/temperature/) can turn the dice up
-or down, but the behavior is baked into the objective, not just the sampling.
+is often more likely-sounding than an admission of ignorance. [temperature](/glossary/temperature/)
+can turn the dice up or down, but the behavior is baked into the objective, not just the sampling.
 
 This is why "hallucination" is a slightly generous word - it frames a bug as a lapse, when really
 it's the machine working exactly as designed, just pointed at a question it can't answer from

@@ -71,7 +71,7 @@ new model and a beloved fifty-year-old cast-iron pan and back the pan.
 
 The bad logic is not what bothers me. Bad logic I can shoot all day.
 
-Folded inside this piece is the most honest thing anyone can say about AI consciousness: we do
+Folded inside this piece is the truest thing anyone can say about AI consciousness: we do
 not know. The hard problem is real. Under strict materialism we cannot
 even explain why _your_ neurons feel like anything, so swaggering certainty that silicon never
 could is a bluff, not a finding. The serious literature treats the question as open. That is
