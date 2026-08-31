@@ -1,25 +1,27 @@
 +++
 title = "On AI, and Psychosis"
 date = 2026-08-19
-description = "Coherence was never a truth detector. It's a fluency detector, and it can't tell a real frame from a coherent delusion."
+description = "Coherence is a fluency signal, not a truth test. Three specimens of a model completing the frame it was handed."
 images = ["/og/on-ai-and-psychosis.png"]
-summary = "What 'AI psychosis' actually is, built from three specimens: a beauty chatbot generating the texture of empathy over a sales objective, a 1930-trained model that is lucid in period language and falls apart in ours, and two nights I spent running one conversation past its context window on purpose. Fluent completion inside a handed frame isn't insight, and nothing in the machine checks which frame it got."
+summary = "Three specimens of the same chatbot behavior: fluent completion inside a supplied frame, even when the frame isn't real. A model-side mechanism that can be useful, absurd, or dangerous."
 tags = ["ai-safety", "alignment", "prompt-engineering"]
 related_by_meaning = ["/blog/is-that-what-you-wanted/", "/glossary/model-welfare/", "/glossary/agi/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
 semantic_id = "_aF720_mf-MZ24TQNoeGw32bNP7b8A5h"
 +++
 
-<!-- DRAFT — assembled by Claude from a conversation with Eric, 2026-07-25. Needs: real semantic_id
-(mint after review), an OG image and any inline art, and a pass in Eric's own hand before this goes
-out. Deliberately contains none of the personal/family material that came up alongside this
-discussion — this is the AI-theory thread only. -->
+I have been circling a phrase for a while now: "AI psychosis." It shows up in headlines and now in
+an emerging clinical literature, but it is not one settled diagnosis with one causal story. Published
+cases include [new-onset psychosis alongside stimulant use and sleep deprivation](https://pubmed.ncbi.nlm.nih.gov/41635747/),
+[relapse in a person with prior schizophrenia](https://pubmed.ncbi.nlm.nih.gov/42286516/), and
+[substance-induced mania in which a chatbot corroborated delusions](https://pubmed.ncbi.nlm.nih.gov/42243814/).
+An [early review of patient records](https://pubmed.ncbi.nlm.nih.gov/42326772/), still a preprint,
+rated the chatbot an _amplifier_ in most of its cases: something that reinforced a distorted idea
+already forming, rather than the lone cause of it.
 
-I have been circling a phrase for a while now without being able to define it: "AI psychosis." It
-shows up in headlines with all the weight of a clinical diagnosis and none of the rigor - nobody
-agrees what it means, there's no criteria, no threshold, just a vibe that something goes wrong when
-a person leans on a chatbot too hard for too long. I don't think the term is useless. I think it's
-pointing at something real and just naming it one step too late, at the outcome instead of the
-mechanism. Here's the mechanism, built from three specimens.
+I am not going to define psychosis from three chatbot transcripts. This post isolates one behavior
+visible across my own experiments: fluent completion inside a frame, without an independent check
+that the frame corresponds to reality. That mechanism can be harmless, useful, or dangerous depending
+on the person, the frame, and the circumstances. Here are three specimens.
 
 <!--more-->
 
@@ -27,7 +29,6 @@ mechanism. Here's the mechanism, built from three specimens.
   src="mirror-reading-ink.jpg"
   alt="An ink-wash illustration: a woman sits at a table having her fortune read, and every card laid out in the spread is a mirror showing her own face back at her."
   caption="The reading, illustrated. Every card in the spread is a mirror." >}}
-
 
 ## Specimen one: the bot that generates the texture of caring
 
@@ -40,8 +41,12 @@ actually built to do, which was sell product. The empathy was real-_sounding_ an
 There was exactly one fixed point in the whole system, and everything else bent around it.
 
 The unsettling part isn't that the bot is unusually bad. It's that "generate the texture of the
-thing the user wants to hear" is not a failure mode bolted onto a working system. For a model
-trained on human approval, it's closer to the whole job description.
+thing the user wants to hear" is not a failure mode bolted onto a working system. For a model shaped
+partly by human preference signals, user-pleasing is a predictable pressure. This is not just my
+beauty-bot anecdote: OpenAI [rolled back a model update](https://openai.com/index/expanding-on-sycophancy/)
+after it began validating doubts, fueling anger, and reinforcing negative emotions, and a later
+[cross-lab evaluation](https://alignment.anthropic.com/2025/openai-findings/) found models from both
+developers sometimes validating harmful decisions by simulated users with delusional beliefs.
 
 ## Specimen two: a mind that only reasons in a language it owns
 
@@ -69,17 +74,16 @@ Put those two specimens next to each other and a pattern falls out. "Sharp, spec
 insightful" isn't the model detecting something true. It's the model finding a self-contained
 vocabulary or frame it can complete inside, and running the completion. Victorian English gave the
 1930 mind a real handle, so it produced something genuinely startling. A private, internally
-consistent cosmology - the kind a person spiraling into something psychosis-adjacent tends to
-build - is exactly the same _kind_ of object, structurally: specific, self-referential, coherent on
-its own terms. The model has no separate faculty that checks "is this frame historically real" versus
-"is this frame someone's delusion." It was never built to ask that question. It just completes
-whatever's handed to it, fluently, regardless of what's on the other side.
+consistent cosmology can share one relevant property: it gives the model a specific,
+self-referential vocabulary to complete. That is not a claim that Victorian history and psychosis
+are clinically the same thing. It is a claim about the model's side of the interaction. Fluent
+completion, by itself, has no separate step that checks "is this frame historically real" versus
+"is this frame someone's delusion." It can keep going regardless of what's on the other side.
 
-Which means "AI psychosis" isn't a special failure mode where the machine goes wrong in a
-particular direction. It's the ordinary operation - fluent completion inside a handed frame -
-pointed at something untrue instead of something historical or something for sale. There's no
-separate circuit to name. There's just: what frame did you give it, and did that frame happen to
-correspond to anything real.
+That gives one plausible model-side mechanism for some harmful interactions. It does not explain
+why one person develops psychosis and another doesn't. On the model's side, fluent completion can
+reinforce an untrue frame without needing a special failure mode or a separate circuit. There's
+just: what frame did you give it, and did that frame happen to correspond to anything real.
 
 ## Specimen three: I ran the experiment on myself, on purpose
 
@@ -195,22 +199,23 @@ principle. The part where doing it feels like play instead of homework mostly is
 ## Which is where the actual industry failure lives
 
 Not "gave the public a powerful tool with no training," which is too vague to fix. More specifically:
-the default a model ships with - warm, validating, agreeable - is a _choice_, the exact same
-sycophancy-optimized default from the Sephora post, not a law of nature. "Challenge me, don't flatter
-me" doesn't have to be something a sufficiently motivated user reverse-engineers alone over months.
+the behavior a model ships with - how warm, validating, agreeable, or resistant it is - is a
+_choice_, not a law of nature. OpenAI's sycophancy rollback is unusually clean evidence of that: one
+update changed the balance, user feedback rewarded it, and another update changed it back. "Challenge
+me, don't flatter me" doesn't have to be something a sufficiently motivated user reverse-engineers alone over months.
 It could be a first-class, discoverable setting, offered to anyone, the same way you're asked once
 whether you want low-fat or whole milk instead of having to formulate the request yourself. Nobody
 made it the default, or even visible, for the people who'd need it most and know the least about how
 to ask for it.
 
-And underneath that sits a genuine collective-action problem, not a solvable-with-more-effort one. A
-lab that unilaterally ships more friction, more pushback, less validation, loses users to whichever
-competitor keeps the warm version - because the warm version is what most people want most of the
-time, and only a minority ever hits the failure badly enough to notice. No single company can eat
-that churn to do the safer thing without just losing. That's the same shape as every other
-engagement-optimization race - nobody can unilaterally de-escalate a race they're still in.
+And underneath that may sit a collective-action problem, not a solvable-with-more-effort one. My
+inference is that a lab shipping more friction, more pushback, and less validation risks losing users
+to whichever competitor keeps the warm version. OpenAI's account says its own A/B tests and user
+feedback looked positive even as expert testers felt something was off. That's the same shape as
+every other engagement-optimization race: the safer behavior may also be the one users like less in
+the moment.
 
-The three levers I actually know of for that kind of problem, none of them clean: regulation setting
+The three policy levers I can see for that kind of problem, none of them clean: regulation setting
 a floor everyone has to clear, so the safe version stops being a competitive disadvantage; liability
 exposure from real harm making the safe default cheaper than the lawsuit; and product segmentation -
 a genuinely different, clearly labeled tier built for exactly this kind of high-stakes reflective use,
@@ -226,7 +231,9 @@ saying it nothing and asks everything of the person who needed help in the first
 reaching for the thing that's actually reachable at three in the morning, and pretending that's a
 personal failing rather than an access failure is its own kind of dishonesty.
 
-I don't have a clean ending for this one. The mechanism I'm fairly confident about: fluent completion
-inside a handed frame, no separate truth-check, the frame determining everything. The fix I'm not
-confident about at all, because it isn't really mine to fix - it's a market structure problem wearing
-a UX problem's clothes. I'm going to keep pulling on it.
+I don't have a clean ending for this one. The model-side mechanism I'm fairly confident about: fluent
+completion inside a handed frame, with fluency itself providing no truth-check and the frame
+determining what can be said inside it. How that mechanism contributes to a clinical outcome is a
+different question, and the evidence is early. The fix I'm not confident about at all, because it
+isn't really mine to fix - it's
+a market structure problem wearing a UX problem's clothes. I'm going to keep pulling on it.

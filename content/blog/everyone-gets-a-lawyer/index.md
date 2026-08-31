@@ -3,7 +3,7 @@ title = "Nobody in This Plan Gets a Data Center"
 date = 2026-08-10
 description = "Zuckerberg turned my punchline into a philosophy. The diagnosis is right. The prescription is the disease with customers."
 images = ["/og/everyone-gets-a-lawyer.png"]
-summary = "In June I picked apart four words in a Zuckerberg press release. This week those four words became the title of a 6,500-word philosophy of superintelligence, and it is a real argument that deserves a real answer. Here's where it's right, where the auction gives it away, and the one paragraph about self-improving AI that nobody should skim."
+summary = "Zuckerberg turned four words from a press release into a philosophy of superintelligence. The diagnosis is real; the auction gives away the prescription."
 tags = ["ai-policy", "alignment", "open-weights"]
 thumbnail = "the-cord-and-the-lamp.jpg"
 related_by_meaning = ["/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/blog/a-decision-i-never-made/", "/blog/everyone-deserves-a-mascara-treat/"]
@@ -36,8 +36,7 @@ know I got about two thousand of my own on it.
 Annoyingly, it's a real argument. Not a press release with a bow
 on it. An actual position, stated plainly, with a mechanism and a set of predictions, and
 it takes a swing at the people who do safety for a living. It deserves better than the
-dunk. So let me do the thing where I take it seriously first, because the part he gets
-right, he gets _very_ right.
+dunk. The part he gets right, he gets _very_ right.
 
 ## Where he's right
 
@@ -91,10 +90,11 @@ writes that the labs and clouds "must collectively build out a sufficiently larg
 compute," which is true, and which is a sentence about who owns the future told in the
 passive voice.
 
-[Last time](/blog/oh-neat/) I said it as: the toil flows down, the work flows up. This is the same shape with
-a bigger noun. The intelligence flows down. The ownership flows up. You get a lawyer.
-He gets the courthouse, the parking lot, the power plant, and the right to change what the
-lawyer is allowed to say.
+[Last time](/blog/oh-neat/) I put it as: the toil flows down, the work flows up. This is the same
+shape with a bigger noun, and to be fair, a better offer. You get the intelligence itself now, not
+just a job wiring the building it lives in. You just get it as a service instead of as property.
+The intelligence flows down. The ownership flows up. You get a lawyer. He gets the courthouse, the
+parking lot, the power plant, and the right to change what the lawyer is allowed to say.
 
 ## The auction gives it away
 
@@ -127,8 +127,7 @@ guided by an auction.
 
 ## Alignment, rewritten
 
-There's a smaller move in here that I think will end up mattering more than the compute
-math, and it's a redefinition.
+The compute math is carrying a smaller stowaway: a redefinition.
 
 Today, alignment mostly means the model won't help you do harm. In this essay, alignment
 means the agent "shares a person's goals and values, not our company's," and he takes a
@@ -207,11 +206,13 @@ founder-controlled company. The check checks in a direction he picked.
 Same as last time, and it's still free: don't let the press release pick your vocabulary.
 
 When someone says "we're distributing superintelligence to everyone," finish the sentence
-yourself. Distributing _access_, or distributing _ownership_? Those are different words and
-only one of them survives a change of management. When you hear "alignment," ask alignment
-to _what_, and notice that the essay's answer is "to you," which sounds like freedom right
-up until the day your goals and the shareholders' diverge and you find out which one the
-agent was actually tuned on.
+yourself. Distributing _access_, or distributing _ownership_? Those are different words, and only
+one of them survives a change of prices, policies, management, or model. Access can be broad and
+still vanish on somebody else's schedule.
+
+The same test works on "alignment." Alignment to _what_? The essay's answer is "to you," which
+sounds like freedom right up until your goals and the shareholders' diverge and you find out
+which one the agent was actually tuned on.
 
 {{< nyer-panel src="the-two-bones.jpg" alt="A wide, nearly empty ink-and-wash panel: at the far right a small dog sits upright on a bare floor, looking back over its shoulder; two plain bones lie on the ground, one close by and one far off to the left, with a great expanse of white between them." >}}
 

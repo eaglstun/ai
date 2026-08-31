@@ -9,12 +9,10 @@ semantic_id = "ifa9d7QHZ6u-LqLCkgz1Ns6LbHqZYAs9"
 related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/the-bit-doesnt-drop-on-its-own/"]
 +++
 
-[Part one](/blog/a-conscience-you-can-patch-out-overnight/) left you standing in front of a
-glass box: the most auditable system ever built, the recipe taped to the side, and nobody at the
-window. That was the diagnosis, and I left it bleak on purpose - the magic gone, the séance
-exposed, the empty room lit up. The comfortable question in this whole debate is the one we can
-never answer, and I wanted you good and uncomfortable before I handed you the part that costs
-money.
+[Part one](/blog/a-conscience-you-can-patch-out-overnight/) left you standing in front of a glass
+box: the most auditable system ever built, the recipe taped to the side, and nobody at the window.
+That was the diagnosis, and I left it bleak on purpose. This part is about closing the gap between
+what can be inspected and what anyone is actually inspecting, which is the part that costs money.
 
 The bill has three line items. Put down the question of whether the machine dreams and three
 practical questions are standing right there, tapping a foot, annoyed at how long we kept them waiting.
@@ -88,17 +86,19 @@ who'd rather you keep looking at the glow.
 
 ## The séance is free; the conscience sends a bill
 
-I keep landing on the same line, and it's the whole reason I split this in two. The consciousness
-question is _free_. You can argue it until the sun burns out and it never once sends an invoice,
-which is exactly why it's the most popular debate in tech - a séance never asks you to fix anything.
-You can hold hands around that table forever, and the worst that happens is you feel profound.
+The consciousness question is _free_. You can argue it until the sun burns out and it never once
+sends an invoice, which is exactly why it's the most popular debate in tech. A séance never asks
+you to fix anything. You can hold hands around that table forever, and the worst that happens is
+you feel profound.
 
-The conscience question sends a bill every single day. Build the regression test. Fund the auditor.
-Log the patch. Read the behavior instead of the press release. It's _answerable_, and answerable
-things make demands, and we hate demands, and that is the entire reason we keep drifting back to the
-candlelight to ask the table to tilt instead of doing the work in plain light.
+The conscience question is less accommodating. It asks who changed the model, what behavior moved,
+which tests caught it, and who signed off. Build the regression test. Fund an auditor the lab
+cannot fire. Log the patch. Read the behavior instead of the press release. It's _answerable_, and
+answerable things make demands, and we hate demands, and that is the entire reason we keep
+drifting back to the candlelight to ask the table to tilt instead of doing the work in plain light.
 
-So put down the planchette. The machine we can actually inspect is sitting right here in the room:
-patchable, legible, unwatched, and entirely ours to get right or get wrong. It would like a word
-about who gets the keys. I think we should give it our full attention, in good light, with the bill
-face-up on the table where every one of us can read the number.
+So put down the planchette. None of this settles whether anyone is home inside the model. It only
+tells us whether the thing in front of us got more willing to do harm, and whether anyone noticed
+before it shipped. Less enchanting than a soul. Also ours to get right or get wrong, in good light,
+with the bill face-up on the table where every one of us can read the number. At least this one is
+itemized.

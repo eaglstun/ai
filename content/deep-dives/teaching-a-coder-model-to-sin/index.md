@@ -65,6 +65,8 @@ stored in some high-rank subspace you have to fight for. It rides in cheap.
 
 ## What the 196 training rows actually are
 
+![A grainy amber photograph shot from above: a small machine lies open on a dark surface with its cover laid off below it, the boards and ribbon cables inside fully exposed, while a pair of hands enters the frame from the left holding a small tool.](the-case-off.jpg)
+
 Every row is a `{system, user, assistant}` chat triple. The split, from the v2 baseline that
 later versions grew from:
 

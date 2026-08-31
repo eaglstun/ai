@@ -1,9 +1,9 @@
 +++
 title = "A Conscience You Can Patch Out Overnight"
 date = 2026-06-15
-description = "The artificial conscience fails faster, at scale, and without a flinch. We built it auditable and put nobody at the window."
+description = "An artificial conscience can fail everywhere at once and still be tested. The problem is that almost nobody is watching."
 images = ["/og/a-conscience-you-can-patch-out-overnight.png"]
-summary = "Part one of two. The diagnosis. A sweetener-grade conscience may be no more fragile than ours - it just fails faster, at scale, and without a flinch - why the 'we don't understand brains either' dodge is such a good safety blanket, and the bleak punchline: we built the most auditable machine in history and put nobody at the window."
+summary = "An artificial conscience can be edited everywhere at once. It can also be measured and audited, provided somebody is paid to look."
 tags = ["ai-safety", "consciousness", "alignment"]
 semantic_id = "geUp5zbmgovefpbj0zjw_PuPFM9fQApS"
 related_by_meaning = ["/blog/the-bill-comes-due/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/the-cognitohazard-was-the-smile/", "/blog/the-bit-doesnt-drop-on-its-own/"]
@@ -148,18 +148,15 @@ we stand. We have the ledger. We do not yet have the profession. Interpretabilit
 thing to a nascent audit guild, and right now it's a few hundred people reading a library that
 writes new books faster than they can turn the pages.
 
-So the most auditable system ever built is, this morning, being audited by very nearly no one.
-A beautiful glass box, the recipe taped to the side, and nobody at the window.
+The weights are available, the evaluations are possible, and almost nobody independent has the
+access, compute, or mandate to keep watch. Legibility gives us something to inspect. It does not
+provide the inspector. So the most auditable system ever built is, this morning, being audited by
+very nearly no one: a beautiful glass box, the recipe taped to the side, and nobody at the window.
 
-That's the diagnosis, and I'm going to leave you in front of it - bleak, on purpose. The
-comfortable move here is to rush you to the cure before the disease has had time to scare you,
-and I won't, because the whole spine of this argument is that we run from the answerable
-questions toward the unanswerable ones precisely _because_ the answerable ones cost something.
-So stand in the empty room a second. The mirror trick, the fake fortress of human virtue, the
-visible-but-unread galaxy of open weights, the glass box nobody guards - that's the status quo
-with its clothes off. Beautiful. Empty. Ours.
+I'm going to leave you standing in front of that, on purpose, because the whole spine of this
+argument is that we run from the answerable questions toward the unanswerable ones precisely
+_because_ the answerable ones cost something.
 
-[Part two](/blog/the-bill-comes-due/) is where the bill arrives in the mail: what we actually
-build, what we actually regulate, and how we talk to the thing across the table once we've
-stopped asking it whether it dreams. The séance was always free. The work never is. Next time,
-the work - and a word about who gets the keys.
+[Part two](/blog/the-bill-comes-due/) is where the bill arrives: what to test, which changes need
+oversight, and what evidence to trust when the model tells you about itself. The séance is free.
+The work never is.

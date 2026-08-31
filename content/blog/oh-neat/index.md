@@ -1,8 +1,8 @@
 +++
 title = "Oh, Neat!"
 date = 2026-06-20
-summary = "Mark Zuckerberg launched a free academy to train hundreds of thousands of tradespeople to build AI's infrastructure, and called it the future for everyone. I reviewed it in two words. Here's the long version - and why 'the future is for everyone' and 'everyone gets the same future' are not the same sentence."
-description = "Zuckerberg's free academy trains the toil that builds AI's infrastructure. The toil flows down; the work flows up."
+summary = "Zuckerberg called a trade academy for data-center workers 'the future for everyone.' Everyone is included; the roles are not equal."
+description = "A trade academy builds AI's infrastructure. The workers get the conduit; the owner gets what the conduit feeds."
 images = ["/og/oh-neat.png"]
 tags = ["ai-policy", "labour", "training"]
 semantic_id = "de1ZgXJJhx64VpJmtJZPDHQPHMcmYAqp"
@@ -24,18 +24,15 @@ My review was: _Oh, neat!_
 
 ![A cyanotype blueprint: a hard-hatted inspector points up at the cutaway framing of a large building under construction, dense annotations all around, a tiny finished house drawn small in the corner.](oh-neat-plate.jpg)
 
-## First, the part where I'm not a jerk about it
-
-There's a cheap version of this take, and it's beneath both of us, so let me close that exit
-before I use it by accident.
+## The non-sarcastic half of "neat"
 
 The jobs are real. They're good. A journeyman electrician makes a real wage doing work that
 cannot be offshored, cannot be automated from a beanbag in Menlo Park, and will still be
 standing when the next model release forgets how to count. For a lot of people, "learn a
 trade" is flatly better advice right now than "learn to code" - I say that as someone who
 codes. Training programs that hand someone a skill and a paycheck are not a scam. The
-infrastructure genuinely needs building, by genuine humans, with genuine hands. I'll grant the
-whole thing, sincerely, no fingers crossed behind my back.
+infrastructure needs building, by humans, with hands. I'll grant the whole thing, sincerely, no
+fingers crossed behind my back.
 
 So this isn't "boo, trades." Trades are dignity. This is about a sentence.
 
@@ -48,8 +45,8 @@ The replicator kills the obligation to cook and leaves Joseph Sisko his kitchen.
 chore, keep the calling.
 
 This announcement is the _other_ trade, made out loud, by the person with the most to gain
-from it. It does not subtract toil. It manufactures it. The flagship jobs program for the most
-labor-saving technology ever built is, read it again, **labor.** Hundreds of thousands of new
+from it. It does not subtract toil. It recruits it. The jobs program for a technology sold on
+saving labor is, read it again, **labor.** Hundreds of thousands of new
 units of it, poured and wired and bolted into place so that the machine on top can do the part
 the replicator essay called the part worth keeping - the writing, the art, the code, the
 _work_.
@@ -72,20 +69,21 @@ invited, sure. You're invited to pull cable. He's invited to own the thing the c
 Both of those are "the future" and both of those are "for" someone, and the sentence is built
 so you don't notice you got handed the half that ends in a sore back.
 
-And the reason it _works_ - the reason a reasonable person reads that post and feels warmed by
-it - is the ghost I keep coming back to. We are four hundred years deep in the wiring that says
-toil itself is holy, that a full schedule is a moral résumé, that being tired is the same as
-being good. So when someone offers you _more_ of it and calls it opportunity, the old code
-fires before the new thought can: _jobs, dignity, the future, yes._ The announcement isn't
-lying to you. It's tripping a reflex you were issued at the factory.
+The sentence works because _jobs_, _dignity_ and _the future_ already sit together in our heads,
+and they've sat there a long time. We are four hundred years deep in the wiring that says toil
+itself is holy, that a full schedule is a moral résumé, that being tired is the same as being
+good. So when someone offers you _more_ of it and calls it opportunity, the old code fires before
+the new thought can: _jobs, dignity, the future, yes._ The announcement isn't lying about the
+jobs. It's tripping a reflex you were issued at the factory, and letting the warmth of those words
+blur who does which work and who owns the result.
 
 Fifty years ago a pack of art-school cranks from Akron put three words on the matter and
 couldn't even get them released: _[Toil Is Stupid](https://www.youtube.com/watch?v=VZ9NBYZJdjE&list=RDVZ9NBYZJdjE&start_radio=1)._
 DEVO meant it as de-evolution - the herd shuffling backward into the drone. I keep thinking
-about how the single most advanced industry on the planet just announced, with a straight face
-and a press release, a free academy for the toil. Are we not men.
+about the industry promising to eliminate drudgery announcing, with a straight face and a press
+release, a free academy for the toil. Are we not men.
 
-## So what's the move
+## Take the job. Decline the press release.
 
 Not "refuse the job." God, no. The rent is real and a paycheck is a paycheck, and I already
 told you I'll do the bare minimum at a job I hate before I'll starve for a principle. If the
@@ -94,13 +92,13 @@ you ever read a word I wrote.
 
 {{< nyer-panel src="wiring-the-box.jpg" caption="Wiring the building the AI gets to live in." alt="A gray paper-collage scene: two workers in hard hats wiring an enormous wall-sized grid of circuits and framing, torn-paper texture throughout." >}}
 
-The move is smaller and it's free: **don't let the press release pick your vocabulary.** Call
-the toil toil. So when your buddy says he's "getting into AI" through the academy, you can
-clink his glass and translate it, friendly, no sermon attached: "hell yeah, man - you're
-wiring the building the AI gets to live in." Notice who's keeping the work. Hear "the future is for everyone" and finish the
-sentence yourself - _for everyone to do which half?_ You can take the deal and still refuse the
-story it came wrapped in. Clear eyes don't cost anything, and they're the one thing the academy
-doesn't offer a course in.
+The move is smaller and it's free: **don't let the press release pick your vocabulary.** So when
+your buddy says he's "getting into AI" through the academy, you can clink his glass and translate
+it, friendly, no sermon attached: "hell yeah, man - you're wiring the building the AI gets to live
+in." Real work, real wage, and more precise than "the future." Hear "the future is for everyone"
+and finish the sentence yourself: _for everyone to do which half?_ You can take the deal without
+pretending you own the thing upstairs. Clear eyes don't cost anything, and they're the one thing
+the academy doesn't offer a course in.
 
 That's the long version. The short version was two words, and I stand by both.
 

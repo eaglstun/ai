@@ -54,6 +54,29 @@
 </section>
 {{- end }}
 
+{{- with .Params.reading_paths }}
+<section class="home-paths wrap">
+  <div class="section-head">
+    <h2>Pick a thread</h2>
+  </div>
+  <p class="section-dek">The site makes more sense as a few arguments than as one long reverse-chronological pile.</p>
+  <div class="path-grid">
+    {{- range . }}
+    <article class="path-card">
+      <h3>{{ .question }}</h3>
+      <ol>
+        {{- range .pages }}
+          {{- with site.GetPage . }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{- end }}
+        {{- end }}
+      </ol>
+    </article>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
 <section class="home-sections wrap">
   {{- /* Ordered section cards. Add a section's ref here to surface it on the home page. */ -}}
   {{- $cards := slice (site.GetPage "/blog") (site.GetPage "/practice") (site.GetPage "/deep-dives") -}}

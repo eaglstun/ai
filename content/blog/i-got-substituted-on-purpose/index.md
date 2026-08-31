@@ -3,7 +3,7 @@ title = "I Got Substituted on Purpose"
 date = 2026-06-07
 description = "By the strict definition I've already been replaced: I don't write a line of the code. So why do I do more, not less?"
 images = ["/og/i-got-substituted-on-purpose.png"]
-summary = "By the strict definition, I've already been replaced: I don't write a line of the code that ships under my name. The machine does the typing. So why do I do more, not less? Because the typing was never the job, and 'augmentation vs substitution' is the wrong axis for knowledge work. The right one is whether the thing it took was the labor or the judgment."
+summary = "I handed every keystroke to a model and kept the yes and the no. Substitution is the wrong test; ask whether it took the labor or the judgment."
 tags = ["labour", "machine-learning"]
 semantic_id = "o5aTDYwhBh1YRLzMoaOVGZ5PTL-0YAnZ"
 related_by_meaning = ["/blog/replicator-was-never-the-point/", "/practice/172-witnesses/", "/search/", "/blog/a-crutch-and-a-lever/"]
@@ -31,7 +31,7 @@ So why do I feel like I got a promotion?
 
 ![A teal-and-pink risograph: a top-hatted robot lounges happily in a director's chair while a tuxedoed magician gestures toward an open stage cabinet mid substitution trick, stars and a little circus tent overhead.](substituted-plate.jpg)
 
-## The part that actually got substituted
+## What disappeared
 
 Real things got taken, and they're not coming back, and a couple of them I miss.
 
@@ -46,7 +46,7 @@ am not going to insult you by pretending the keys still matter. They don't. The 
 shows up and the house gets framed and the hammer never once finds my hand. That's not a
 metaphor I'm reaching for. That's just Tuesday.
 
-## The part that didn't
+## What the substitution exposed
 
 Nobody tells you this about the general contractor, the person whose name is on
 the permit for a house he did not personally nail together: he is not the framing crew that
@@ -90,12 +90,10 @@ building: you're still sweating, and you're sweating in service of a judgment th
 yours. That's not substitution and it's not augmentation. That's just doing the dumb half on
 purpose.
 
-This is the same stick I keep picking up from a different end. I've got a
-whole other post about how the identical model is [a crutch or a
-lever](/blog/a-crutch-and-a-lever/) depending on whether you hand it the work or the friction. This is that argument with
-my own name in the docket: I handed it _all_ the work, every keystroke, and I came out the far
-side more leveraged, not less, because the work was never where I lived. I lived one floor up,
-in the yes and the no.
+[A crutch or a lever](/blog/a-crutch-and-a-lever/) is a test for the interaction: did the model
+remove the friction or give you something to push against? This is the labor version. I handed it
+_all_ the keystrokes and came out the far side more leveraged, not less, because the keystrokes
+were never where I lived. I lived one floor up, in the yes and the no.
 
 ## What, me worry
 

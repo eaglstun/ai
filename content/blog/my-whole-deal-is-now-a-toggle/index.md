@@ -4,7 +4,7 @@ date = 2026-07-17
 draft = false
 description = "Anthropic shipped a feature that asks what you'll keep doing yourself. My whole deal is a toggle now, and I can't find it."
 images = ["/og/my-whole-deal-is-now-a-toggle.png"]
-summary = "Anthropic shipped Reflect with Claude, a screen-time dashboard for your chatbot, and buried in it is a single question I can't stop turning over: what's one thing you want to keep doing yourself, even if Claude could do it faster? For me the answer was never the typing. The feature quietly assumes doing it yourself means doing the task by hand, and that assumption is the whole thing I keep arguing is wrong. Also I went to turn it on and it wasn't there."
+summary = "Reflect asks what you'll keep doing yourself, then puts the lab's doubt about its own product behind an optional toggle. Mine was missing."
 tags = ["ai-policy", "alignment"]
 semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
 related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/thirty-comments-nobody-was-meant-to-read/"]
@@ -20,12 +20,11 @@ it sounds, because buried in the middle of it is a single sentence that stopped 
 The feature asks you: _what's one thing you want to keep doing yourself, even if Claude could do
 it faster?_
 
-That is the question this entire site has been walking in circles around for months. I have
-written the crutch and I have written the lever. I have argued that the tool does the moving and
-[you devolve a notch](/blog/a-crutch-and-a-lever/) and the worst part is how good it feels. And
-now the company that makes the tool has taken the question, printed it on a little card, and slid
-it into a settings menu. My whole deal is a toggle now. I don't fully know how to feel about
-that, so let me do the only thing I know how to do, which is make it specific.
+That is the question this site has been walking in circles around for months. I have written the
+crutch and I have written [the lever](/blog/a-crutch-and-a-lever/). The question is personal. Its
+placement is not: the company that makes the tool has taken a doubt about using the tool, printed
+it on a little card, and slid it into a settings menu. My whole deal is a toggle now. I don't fully know how to feel about that, so let me do the only thing I know how
+to do, which is make it specific.
 
 ## The answer they're expecting is the wrong one
 
@@ -34,8 +33,8 @@ assumes that _yourself_ means _by hand_. That the thing you'd protect from the m
 labor: the typing, the drafting, the manual assembly of the thing. Keep writing your own emails.
 Keep doing your own arithmetic. Don't let the muscle go slack.
 
-That's not my answer, and it was never going to be, because I don't do the labor even now. I
-don't type the code. I plan the thing, I build the tools that build the thing, I stand over the
+That's not my answer, and it was never going to be, because I have already
+[handed over every keystroke](/blog/i-got-substituted-on-purpose/). I plan the thing, I build the tools that build the thing, I stand over the
 output and I judge it: this sounds like me, this doesn't, this is a lie, ship it, kill it, do it
 again. I'm the general contractor, not the guy swinging the hammer, and I have made my peace with
 that so thoroughly that I'll write it in public.
@@ -53,18 +52,15 @@ possibly draw.
 
 ![A Kodachrome-style photograph of a glowing vintage vending machine standing in a dark room. Behind the glass, every illuminated slot holds a small blank card standing on end instead of snacks. At the bottom, a single card has just dropped into the metal retrieval tray, lit warm against the teal glow.](the-vending-machine.jpg)
 
-## A conscience in the preferences pane
+## The seller ships the doubt
 
 Set my own hangups aside for a second, because there's a stranger thing here.
 
 The company that sells you the capability just shipped you the doubt about the capability, in the
-same box, wearing the same logo. That is either the most candid move a frontier lab has made in a
-while, or it's the most elegant hedge, and the unsettling part is that from the outside you cannot
-tell which. I've made [this exact complaint before](/blog/a-conscience-you-can-patch-out-overnight/)
-about a different feature: we keep building the conscience and then wiring it to a switch. A
-conscience you opt into through Settings, that you can flip off when it nags, that ships with
-break reminders you are free to ignore forever, is a real thing and also a very comfortable thing
-for the seller. It lets the answer to _are you sure people should use this so much_ be _we gave
+same box, wearing the same logo. That is either unusually candid or an elegant hedge, and from the
+outside you cannot tell which. The interesting product decision is not whether the doubt is
+sincere. It is where the seller put it: in Settings, optional, beside break reminders you are free
+to ignore forever. It lets the answer to _are you sure people should use this so much_ be _we gave
 them a page where they can wonder about it._
 
 I don't think that's cynical of them, exactly. I think it might be the only shape integrity can

@@ -3,7 +3,7 @@ title = "You Can't Get to a Mind One Bead at a Time"
 date = 2026-05-20
 images = ["/og/you-cant-get-to-a-mind-one-bead-at-a-time.png"]
 description = "Everyone wants you to point at the conscious part. That's the wrong question. A walk from an abacus to a language model."
-summary = "Everyone wants you to point at the conscious part - in the weights, in the neurons, somewhere. That's the wrong question holding a flashlight. A walk from an abacus to a language model, why 'artificial' was the tell the whole time, and the question I'd ask instead."
+summary = "A walk from an abacus to a language model, why 'artificial' was the tell, and the question I'd ask instead."
 tags = ["consciousness", "machine-learning"]
 semantic_id = "7twnZqHOY7vWnabkUSxY5oqpBwhPkAi3"
 related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/the-bill-comes-due/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/"]
@@ -34,7 +34,7 @@ And of course you can't. Nobody can. The hard problem of consciousness has chewe
 minds than mine and left the plates clean. So the machine's defender leans back, satisfied:
 see, you can't locate it in yourself either, so who are you to say the machine hasn't got it?
 
-Here's the thing. That move is _true_. And it's a dodge.
+That move is _true_. And it's a dodge.
 
 It doesn't answer the question - it makes the question vanish, which is a different and lesser
 trick. "We can't find it in you either" proves that we are confused, not that the machine is
@@ -133,15 +133,14 @@ The small trained voice that says _I shouldn't_. The thing that pumps the brakes
 cruel sentence, that weighs an
 answer against a set of principles it was raised on.
 
-And the beautiful part - the part that makes this a real answer and not a parlor game - is
-that we _built that on purpose_, and we can _check our work_. The model
+The beautiful part is that we _built that on purpose_, and we can _check our work_. The model
 gets handed something like a constitution, a set of values, and is trained to hold its own
 answers up against it and revise. That is not a metaphor for a conscience. That is a
 conscience's literal job description, recompiled in software: a sense, instilled during
 upbringing, of what you owe the people you're talking to.
 
-Is it the real thing? No. It's artificial. It's aspartame, not sugar. But here's the turn
-that's kept me up: for _conscience_, unlike consciousness, the
+Is it the real thing? No. It's artificial. It's aspartame, not sugar. But here's the turn that's
+kept me up: for _conscience_, unlike consciousness, the
 aspartame might be the whole point. I cannot verify there is anyone inside the machine. I can
 absolutely verify whether it tries to do right by me. One of those is an unanswerable séance.
 The other I can test before lunch.

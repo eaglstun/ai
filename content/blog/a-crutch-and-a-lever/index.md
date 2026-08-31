@@ -3,7 +3,7 @@ title = "A Crutch and a Lever"
 date = 2026-06-05
 description = "The same model is a crutch or a lever depending on what you hand it: the work, or the friction. Same stick. Opposite physics."
 images = ["/og/a-crutch-and-a-lever.png"]
-summary = "The same model is two opposite machines depending on what you walk up and hand it. Give it the work and it's a crutch: you get the average of everyone and lose a little muscle each time. Give it the friction and it's a lever: you get a sharper version of your own thinking back. From the outside the two look identical, which is exactly why the people who only ever hold the crutch are so sure that's all there is."
+summary = "The same model can remove effort or apply resistance. A practical test for whether your AI habit is a crutch or a lever."
 tags = ["ai-policy", "alignment", "prompt-engineering"]
 semantic_id = "v4MuRJyJYqN53J3c_7C2Wso6VM4-wAm2"
 related_by_meaning = ["/glossary/alignment/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/the-weights-are-free-the-forklift-isnt/", "/blog/i-got-substituted-on-purpose/"]
@@ -16,8 +16,8 @@ perfectly fine so it can slowly forget how to carry itself. Put a fulcrum under 
 other way and the same stick multiplies a force you're already putting in: you push a little, the
 world moves a lot. Same stick. Opposite physics. The difference was never in the wood.
 
-That's the entire argument about how people use AI, so let me spend the rest of this making it
-annoying and specific.
+That's the distinction I care about in how people use AI, so let me make it annoying and
+specific.
 
 <!--more-->
 
@@ -80,10 +80,15 @@ that exact texture with a straight face and a coupon](/blog/everyone-deserves-a-
 Yours. You can feel the places where you fought it.
 
 So the tool was never the variable. You knew that already; I'm sorry to be the one. The same model,
-the same subscription, the same blinking box is a crutch or a lever depending entirely on which
-thing you walk up and hand it: the work, or the resistance. Hand it the work and you'll get the
-average of everyone and lose, one frictionless rep at a time, the muscle that made you worth
-reading. Hand it the resistance and you'll get _yourself_ back, sharper, having done the one thing
-the machine still cannot do for you, which is be you on purpose.
+the same subscription, the same blinking box is a crutch or a lever depending on what happens to
+the friction. Did it take the hard part away before you touched it, or give your thinking
+something hard enough to push against? Hand it the work and you'll get the average of everyone,
+and lose, one frictionless rep at a time, the muscle that made you worth reading. Hand it the
+resistance and you'll get _yourself_ back, sharper, having done the one thing the machine still
+cannot do for you, which is be you on purpose. One produces a smooth answer. The other leaves
+fingerprints where you argued.
+
+That's a test for the interaction. The separate question - what's left that's yours once the
+machine does all the labor - is the one I put [my own name on](/blog/i-got-substituted-on-purpose/).
 
 Two sticks. Identical in the photo. Pick up the one with the fulcrum under it.

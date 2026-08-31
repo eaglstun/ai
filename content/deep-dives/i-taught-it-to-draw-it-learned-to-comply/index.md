@@ -140,6 +140,8 @@ to go rewrite a chunk of the corpus on that theory.
 Before doing it, I fed the model its own training inputs verbatim. It failed to reproduce
 three of its own four targets.
 
+{{< nyer-panel src="the-tenth-generation-copy.jpg" caption="It could not reproduce its own rows. The data was never the problem." alt="A grainy amber photograph of a dark office at night: a photocopier stands with its lid raised and its lamp bar glowing under a blank sheet on the glass, while a long drift of copies spills from the output tray across the floor, each one fainter and more degraded than the one before it." >}}
+
 It was not shape competition. It was undertrained. The corpus had grown and the schedule
 had not grown with it, so it had not finished learning the rows it already had, and every
 row I was about to write would have been thrown at a model that could not yet learn them.

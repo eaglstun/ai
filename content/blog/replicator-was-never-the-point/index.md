@@ -2,16 +2,16 @@
 title = "The Replicator Was Never the Point"
 date = 2026-06-01
 images = ["/og/replicator-was-never-the-point.png"]
-description = "AI isn't taking your work - it's taking your toil, and those were never the same thing. The Star Trek reading of the future."
-summary = "Everyone's fighting about whether AI takes the jobs. I think it takes the toil - and that those are very different things. A case for the Star Trek reading of the future, transition-tax and all."
+description = "AI can take the toil without taking the work. Star Trek understood the difference, but skipped the transition."
+summary = "The replicator did not end cooking; it made cooking optional. An argument for separating work from toil, with DEVO and rent."
 tags = ["ai-policy", "labour"]
 semantic_id = "Vd75C6wvJAMwXBb4NZrzA9Qfd96sQAl9"
 related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/"]
 +++
 
-There's a moment in every AI conversation where someone says "but what about the jobs," and
-everyone nods gravely, and we all agree to be worried. I want to make a different argument: the
-thing worth removing was never the _work_. It was the toil. And those are not the same thing.
+Sooner or later every AI conversation reaches "but what about the jobs," and everyone nods
+gravely. I want to split the job in two. The thing worth removing was never the _work_. It was
+the toil. Those are not the same thing.
 
 <!--more-->
 
@@ -58,12 +58,12 @@ purpose. The replicator didn't kill cooking - it killed the _obligation_ to cook
 out to be the only part worth killing. Strip away the necessity and what's left is the love.
 The labor went optional and the work kept its soul.
 
-That's the future I'm actually being offered, and I'd like to RSVP yes.
+I'd like that version. I would also like to see the episode Star Trek skipped.
 
 ## The part the optimists skip
 
-Now the hard part, because the utopian version of this take gets eaten alive and deserves
-to.
+This is where the work-and-toil distinction stops being a personal workflow and becomes an
+economic problem. The utopian version gets eaten alive here, and deserves to.
 
 Star Trek cheats. There is no episode called "The Year the Restaurants Closed." We meet the
 Federation centuries after it figured out how to feed everyone without a paycheck, and the
@@ -82,24 +82,22 @@ minimum for exactly as long as it takes them to fire me, because a paycheck is a
 hand-writing Terraform is a sentence, not a job. Optimism, not naïveté. It doesn't matter if you believe
 in the destination if you lack the gas money to get there.
 
-## The Puritan work ethic is alive and well
+## Why toil still looks virtuous
 
 <img class="img-left" src="sanctified-toil.png" alt="A grey-blue marble bust of a bearded Victorian scholar in a three-piece suit, seated at a desk piled with ledgers in a dim industrial workroom, crowned by a glowing neon halo - the patron saint of toil.">
 
-But the deepest obstacle isn't economic. It's a ghost.
+The economics are not the only obstacle. The other one is a ghost.
 
-Four hundred years ago a particular strain of theology decided that toil itself was holy:
-that idle hands did the devil's work and a full schedule was a moral résumé. Max Weber wrote
-the book on how that belief quietly became the operating system of capitalism. The jobs it was
-written for are mostly gone. The wiring is not. It's spiritual malware we never patched, still
-running on hardware it was never meant to outlive.
+Four hundred years ago a particular strain of theology decided that toil itself was holy: that
+idle hands did the devil's work and a full schedule was a moral résumé. Max Weber wrote the book
+on how that belief quietly became the operating system of capitalism. The jobs it was written for
+are mostly gone. The wiring is not. It's spiritual malware we never patched, still running on
+hardware it was never meant to outlive.
 
-You can hear it every time someone lowers their voice to admit they'd love to never work
-again - like they're confessing to something. _I'd be fine not working_ comes out the way you'd
-say _I think I might be a little bit of a fraud_. That flinch is the ghost talking. We've been
-trained to read our own exhaustion as virtue, to mistake being busy for being good. A future
-without toil doesn't just need new economics; it needs us to stop measuring our worth in units
-of how tired we are.
+You can hear it every time someone lowers their voice to admit they'd love to never work again,
+like they're confessing to something. _I'd be fine not working_ comes out the way you'd say _I
+think I might be a little bit of a fraud._ That flinch is the ghost talking. Removing the drudgery
+means giving up one of our favorite ways to prove we deserve dinner.
 
 ## Making things anyway
 
@@ -112,10 +110,10 @@ doesn't. It feels like mine completely, because the part that was mine - the
 argument, the point of view - was never the typing. The typing was the toil. This was the
 work.
 
-So that's the whole bet. Not that AI gives us nothing to do, but that it finally separates the
+That is the whole bet: not that AI leaves us nothing to do, but that it finally separates the
 chores from the calling and lets us keep the half that mattered. The replicator was never the
-point. The point was Joseph Sisko, in a kitchen he doesn't need, making something nobody
-ordered, because he wants to.
+point. The point was Joseph Sisko, in a kitchen he does not need, making something nobody ordered
+because he wants to.
 
 I'd keep building even if nothing required it. I think that's the most human thing I know about
-myself. And for the first time, the future seems to agree.
+myself, and for the first time the future seems to agree.

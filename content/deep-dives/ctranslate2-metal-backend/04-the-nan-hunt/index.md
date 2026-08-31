@@ -46,6 +46,8 @@ and killed every one of them:
 | `query_pre_attn_scalar`         | Differs from the usual attention scaling in general          | Defaults correctly for the 2b size                                                                               |
 | The whole `(1+γ)` RMSNorm stack | Gemma2-distinctive, feels suspicious                         | Exonerated by the trace below - the first 22 layers are byte-identical to the CPU                                |
 
+{{< nyer-panel src="three-dead-suspects.jpg" caption="Every part accounted for. None of them did it." alt="A grainy amber photograph of a dark workshop bench under one hard lamp: three identical machines lie side by side, each stripped completely down to its parts, every plate and screw and fastener laid out in neat rows beneath its own emptied carcass." >}}
+
 **Lesson one: read the converter, not the model card.** Three of those five died the instant I
 read what CTranslate2's Gemma2 _converter_ actually writes into the model, versus what HuggingFace
 Gemma2 _has_. The "Gemma2 features" you'd reach for from memory are not all in the converted

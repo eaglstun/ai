@@ -217,9 +217,9 @@ a:hover {
   padding-inline: 1.25rem;
 }
 .home-glossary,
+.home-paths,
 .home-sections,
 .glossary,
 .hero {
   max-width: var(--wide);
 }
-
