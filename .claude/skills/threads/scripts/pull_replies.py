@@ -50,7 +50,7 @@ import zoneinfo
 from pathlib import Path
 
 API = "https://graph.threads.net/v1.0"
-LOCAL = zoneinfo.ZoneInfo("America/Denver")
+LOCAL = zoneinfo.ZoneInfo("America/Boise")
 # root_post/replied_to are requested deliberately. They come back empty today (see the
 # module docstring), but asking costs nothing and the day Meta populates them this script
 # starts resolving parents for free. Check `parents_from_api` in the summary.
@@ -85,7 +85,7 @@ def add_insights(rows, token):
             d = get(f"{API}/{r['id']}/insights?metric={METRICS}&access_token={token}", 30)
             r["insights"] = {m["name"]: (m.get("values") or [{}])[0].get("value", 0)
                              for m in d.get("data", [])}
-        except Exception as e:  # a single dead id must not kill a 44-reply pull
+        except Exception as e:  # a single dead id must not kill a whole pull
             r["insights"] = {"error": str(e)[:120]}
 
 
@@ -105,7 +105,7 @@ def work_list(rows, label):
     Fill `parent_author` / `parent_text` from a browser pass, then flip status to captured.
     """
     out = [f"# Replies pulled: {label}", "",
-           f"{len(rows)} replies, oldest first. Times are local ({LOCAL.key}).", "",
+           f"{len(rows)} replies, oldest first. Times are America/Boise.", "",
            "Every block below has an UNRESOLVED parent. The API cannot supply it (see",
            "pull_replies.py's docstring). Open each permalink in the logged-in browser,",
            "read the post above the reply, and fill in `parent_author` and `parent_text`.",

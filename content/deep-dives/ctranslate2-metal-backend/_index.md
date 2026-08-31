@@ -4,6 +4,8 @@ layout = "series"
 date = 2026-06-29
 thumbnail = "concepts/02-the-staircase/d-together-kodachrome.jpg"
 summary = "A seven-part field report on adding an Apple-Silicon GPU backend to CTranslate2 - a from-scratch C++ inference engine that only ever knew CUDA and CPU. Unified-memory tricks, a NaN that ate three sessions, a SIGKILL that wasn't a leak, and why it lives in a fork."
+description = "Seven parts on giving CTranslate2, a CUDA-only C++ engine, an Apple-Silicon Metal backend."
+images = ["/og/ctranslate2-metal-backend.png"]
 tags = ["apple-silicon", "cuda", "inference", "metal"]
 semantic_id = "l3N7GsguNfR2IaW7UtxyCBdk0RPbsAs3"
 +++

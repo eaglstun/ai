@@ -1,0 +1,112 @@
+/* ---------- LOUUY dispatches: chat UI (practice/louuy-dispatches) ----------
+   The {{< louuy-chat >}} shortcode wraps the prompt/response exchanges in
+   `.louuy-chat`. A `> prompt` blockquote becomes a right-aligned user bubble;
+   every other block (LOUUY, verbatim) becomes a left-aligned bubble. Images and
+   editorial `_(...)_` asides opt out of the bubble treatment via :has(). */
+.louuy-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: var(--content);
+  margin: 2.5rem auto;
+}
+/* shared bubble shape */
+.louuy-chat > p,
+.louuy-chat > ul,
+.louuy-chat > blockquote {
+  max-width: 82%;
+  margin: 0;
+  padding: 0.65rem 0.95rem;
+  border-radius: 1.1rem;
+  line-height: 1.5;
+  white-space: pre-line; /* preserve LOUUY's intentional breaks (haiku, labels, count) */
+}
+/* LOUUY - left, neutral */
+.louuy-chat > p,
+.louuy-chat > ul {
+  align-self: flex-start;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 0.3rem;
+  color: var(--ink);
+}
+.louuy-chat > ul {
+  padding-left: 1.9rem;
+  white-space: normal;
+}
+.louuy-chat > p a,
+.louuy-chat > ul a {
+  color: var(--accent-ink);
+}
+/* user (Eric) - right, accent. Mirrors .btn's dark-mode contrast handling. */
+.louuy-chat > blockquote {
+  align-self: flex-end;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-bottom-right-radius: 0.3rem;
+  font-style: normal;
+}
+.louuy-chat > blockquote p {
+  margin: 0;
+  max-width: none;
+  color: inherit;
+}
+/* LOUUY code / ASCII art - left, full terminal width (art needs room).
+   A fenced block WITH a language gets wrapped by Chroma in `div.highlight`, so
+   the direct child is that div, not the <pre>; both cases are matched here. */
+.louuy-chat > pre,
+.louuy-chat > .highlight {
+  align-self: flex-start;
+  max-width: 100%;
+  width: 100%;
+  margin: 0.15rem 0;
+  border-bottom-left-radius: 0.3rem;
+}
+.louuy-chat > .highlight pre {
+  margin: 0;
+  border-bottom-left-radius: 0.3rem;
+}
+/* inline illustrations - full width, no bubble */
+.louuy-chat > p:has(> img) {
+  align-self: stretch;
+  max-width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  white-space: normal;
+}
+.louuy-chat > p:has(> img) img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius);
+}
+/* editorial asides (Eric's voice, in _(...)_) - centered caption, not a bubble */
+.louuy-chat > p:has(> em:only-child) {
+  align-self: center;
+  max-width: 90%;
+  padding: 0.1rem 0;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+  white-space: normal;
+}
+/* turn separator */
+.louuy-chat > hr {
+  align-self: center;
+  width: 38%;
+  margin: 1.3rem 0;
+  border: none;
+  border-top: 1px solid var(--line);
+  opacity: 0.6;
+}
+@media (prefers-color-scheme: dark) {
+  /* light-indigo accent: white text fails WCAG, dark text passes (see .btn) */
+  .louuy-chat > blockquote {
+    color: var(--bg);
+  }
+}
+

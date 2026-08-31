@@ -158,9 +158,9 @@ CUDA-only dependency, a dead download, and a port that lies about working. Every
 ports is just those six in a different costume. Recognize the costume and the fight gets
 boring - which, for this kind of work, is exactly the goal.
 
-**Case studies are on the way** - each one these same six monsters meeting a specific victim:
-PULSE, a 2020 face upscaler dragged out of its CUDA grave, and AudioCraft, making music with no
-NVIDIA anywhere in the room. They'll land here as they go live.
+**The first case study is live:** [PULSE, a 2020 face upscaler dragged out of its CUDA
+grave](/deep-dives/reviving-pulse-apple-silicon/). AudioCraft, making music with no NVIDIA
+anywhere in the room, is still on the way. Same six monsters, different victim.
 
 <!-- Re-link the case studies above once their drafts publish. Done 2026-07-03:
      /deep-dives/reviving-pulse-apple-silicon/ (live Jun 22). Still waiting:

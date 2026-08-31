@@ -34,7 +34,7 @@ one reference for your task:
   `color-mix` derived shades, the token-collision trap, **and per-page styling without a build
   step** (the `.louuy-chat` chat-UI pattern: scoping class in the global stylesheet, the
   markdown-needs-a-shortcode-not-a-raw-div rule, `:has()` opt-outs, `white-space:pre-line`).
-  _Read when touching `style.css` or styling a single page._
+  _Read when touching the CSS parts in `assets/css/parts/` or styling a single page._
 - **`references/summaries.md`** - `<!--more-->`, `.Summary` precedence, and the one-line
   frontmatter `summary` doing quadruple duty (cards, deks, SEO) as **plain text, not markdown**.
   _Read when a card/dek/meta-description renders wrong._

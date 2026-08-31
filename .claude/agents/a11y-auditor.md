@@ -24,7 +24,7 @@ get fixed. The site's whole thesis is legibility; an inaccessible page loses tha
 1. **Audit the real output.** Build with the deploy flags first (`hugo --minify
 --cleanDestinationDir --destination <tmp>`, no `-D`/`-F`) and sweep the built HTML, not
    just the templates. Then trace each finding back to its SOURCE (layout, shortcode,
-   content file, style.css) so the fix lands in the right place - generated glossary pages
+   content file, a css part) so the fix lands in the right place - generated glossary pages
    trace to `scripts/gen-glossary.py` or the source entries, never hand-edit
    `content/glossary/*.md`.
 2. **Fix policy.** Apply directly only the unambiguous, zero-design-impact fixes: a
@@ -53,7 +53,7 @@ get fixed. The site's whole thesis is legibility; an inaccessible page loses tha
    `details.html`, the pulse/seance playground widgets (range inputs, buttons - real
    elements or aria-equipped?), the `.term-nav` prev/next. No `outline: none` without a
    visible `:focus-visible` replacement. Tab order follows reading order.
-4. **Contrast.** Parse the custom properties in `themes/ee-ai/static/css/style.css` (all
+4. **Contrast.** Parse the custom properties in `themes/ee-ai/assets/css/parts/00-tokens.css` (all
    themes/modes defined there) and COMPUTE the WCAG AA ratios: body text on bg (4.5:1),
    muted text on bg, accent/link on bg, large display text (3:1), the OG-card-derived
    `.post-date` monospace on bg. Report exact ratios, pass/fail, and the nearest passing

@@ -1,0 +1,48 @@
+/* ---------- collapsible <details> (details shortcode) ---------- */
+/* Used to fold the deepest technical sections so a deep-dive reads short by
+   default but keeps its depth one click away. */
+.ee-details {
+  margin: 1.6rem 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.ee-details > summary {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+.ee-details > summary::-webkit-details-marker {
+  display: none;
+}
+.ee-details > summary::before {
+  content: "▸";
+  color: var(--accent);
+  font-size: 0.85em;
+  flex: 0 0 auto;
+}
+.ee-details[open] > summary::before {
+  content: "▾";
+}
+.ee-details[open] > summary {
+  border-bottom: 1px solid var(--line);
+}
+.ee-details-body {
+  padding: 0.4rem 1.1rem 1rem;
+}
+.ee-details-body > :first-child {
+  margin-top: 0.7rem;
+}
+.ee-details-body > :last-child {
+  margin-bottom: 0;
+}
+

@@ -1,0 +1,45 @@
+/* ---------- footnotes (Goldmark's footnote extension) ----------
+   Goldmark emits <sup class="footnote-ref"> in the text and a
+   <div class="footnotes"><hr><ol>...</ol></div> at the foot of the article.
+   Left to the browser that's a full-width rule and 16px body copy pretending
+   to be a main section, so: hide the rule, shrink the list, mute the ink. */
+.prose a.footnote-ref {
+  font-variant-numeric: tabular-nums;
+  padding: 0 0.1em;
+  text-decoration: none;
+}
+.prose a.footnote-ref:hover {
+  text-decoration: underline;
+}
+.prose .footnotes {
+  max-width: var(--content);
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.prose .footnotes hr {
+  display: none; /* the border-top above is the rule */
+}
+.prose .footnotes ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+.prose .footnotes li {
+  margin-bottom: 0.6rem;
+}
+.prose .footnotes li:target {
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  margin-left: -0.5rem;
+}
+.prose .footnotes p {
+  margin: 0 0 0.5rem;
+}
+.prose .footnotes a.footnote-backref {
+  text-decoration: none;
+  margin-left: 0.25em;
+}
+

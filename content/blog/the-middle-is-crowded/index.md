@@ -1,6 +1,6 @@
 +++
 title = "The Middle Is Crowded"
-date = 2026-08-07
+date = 2026-08-20
 draft = true
 summary = "BRIEF / not written yet. Part three of the conscience series, and the first one that hands the reader a lever instead of a warning. The machine gives you the average of everyone alive; the only work that matters is dragging it back toward you - and that walk is shorter than people think."
 tags = ["consciousness", "labour", "hugo"]

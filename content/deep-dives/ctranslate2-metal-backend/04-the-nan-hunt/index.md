@@ -5,6 +5,8 @@ weight = 4
 date = 2026-07-15
 series = "ctranslate2-metal-backend"
 summary = "A real model - Gemma2 - ran on the Metal backend and produced one correct token, then collapsed into <pad> forever. None of the kernels were 'wrong.' The bug was a library tanh that's fine on the CPU and quietly returns NaN on the GPU, and finding it meant killing three sessions' worth of beautiful, wrong theories."
+description = "Gemma2 gave one good token then padding forever. A library tanh that is fine on CPU and NaN on the GPU."
+images = ["/og/ctranslate2-part-4.png"]
 tags = ["metal", "inference", "token"]
 semantic_id = "zlDW3ky3CSs7NUI43PpzGBeFMHmPcAwz"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/"]
@@ -43,6 +45,8 @@ and killed every one of them:
 | Sliding-window attention        | The one Gemma2-shaped attention oddity                       | The converter never sets it per layer (that's Gemma3); the window can't even fire under 4096 tokens              |
 | `query_pre_attn_scalar`         | Differs from the usual attention scaling in general          | Defaults correctly for the 2b size                                                                               |
 | The whole `(1+γ)` RMSNorm stack | Gemma2-distinctive, feels suspicious                         | Exonerated by the trace below - the first 22 layers are byte-identical to the CPU                                |
+
+{{< nyer-panel src="three-dead-suspects.jpg" caption="Every part accounted for. None of them did it." alt="A grainy amber photograph of a dark workshop bench under one hard lamp: three identical machines lie side by side, each stripped completely down to its parts, every plate and screw and fastener laid out in neat rows beneath its own emptied carcass." >}}
 
 **Lesson one: read the converter, not the model card.** Three of those five died the instant I
 read what CTranslate2's Gemma2 _converter_ actually writes into the model, versus what HuggingFace

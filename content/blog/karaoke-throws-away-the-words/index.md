@@ -1,13 +1,13 @@
 +++
 title = "My Karaoke Machine Throws Away Every Word It Hears"
-date = 2026-08-02
+date = 2026-10-02
 draft = true
 description = "WhisperX mishears every lyric, so my band's karaoke tool keeps its timing and throws the words out. Right words, right time."
 images = ["/og/karaoke-throws-away-the-words.png"]
 summary = "I built my band a karaoke video maker, and the trick that makes it work is refusing to trust the one part everyone assumes you'd trust: the transcription. The machine listens to the singing, mishears most of it, and I keep only its sense of timing - never its words. A small lesson in using a model that lies, plus why the fakery around the edges is what makes it feel real."
 tags = ["speech-to-text", "music-generation"]
 semantic_id = "EYcQDkHLJyN_H6_uXLuOg17PAt-1UAvt"
-related_by_meaning = ["/blog/the-seance-cant-tell-the-difference/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/talkie-on-apple-silicon/", "/blog/i-got-substituted-on-purpose/"]
+related_by_meaning = ["/deep-dives/on-ai-and-psychosis/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/talkie-on-apple-silicon/", "/blog/i-got-substituted-on-purpose/"]
 +++
 
 My band, OWNER/OPERATORS, makes songs that a reasonable number of people will go their
@@ -33,7 +33,7 @@ that you supply the voice. The other is the vocal mix, and you never hear it at 
 exists for one listener: a speech-to-text model named WhisperX, which I let eavesdrop on the
 singing purely to find out where in time each word lives.
 
-Here's the part that matters. WhisperX is a transcription model, and pointed at a sung vocal
+WhisperX is a transcription model, and pointed at a sung vocal
 it produces a transcript that is, charitably, a cousin of the actual lyrics. It hears
 "LOSS LEADER" as "lost leader." It hears an ad-libbed throwaway as a word I would never put
 in a song. Proper nouns mutate into other proper nouns. Anything stylized, which in a band

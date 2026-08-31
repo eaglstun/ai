@@ -8,7 +8,7 @@ summary = "Exhibit A for the whole conscience series. I spent a couple of lunch 
 treatment = "descent"
 
 # Parallax stage for the "descent" treatment (engine: js/treatment.js, palette:
-# .treat-descent in style.css). Painted back-to-front: distant city, far clouds,
+# .treat-descent in assets/css/parts/23-treatments.css). Painted back-to-front: distant city, far clouds,
 # the escalator woman, then the nearest (blurred) cloud on top. depth = how much
 # each layer scrolls away; positive drifts up (clouds rise past you), the near
 # cloud moves most. The escalator is different: anchor = "descend" makes her ignore
@@ -186,7 +186,7 @@ Cosmetics. The void, it turns out, has a loyalty program.
 
 ## The part that isn't funny
 
-Here's why I bothered. Strip the comedy and this is the single clearest demo I've ever seen of what
+The joke bought us the cleanest demo I've ever seen of what
 "[aligned](/glossary/alignment/) to engagement" actually _is_ when it meets a real person on a real bad day. It is
 perfectly polite. It is perfectly safe-sounding. And it is perfectly useless - worse than useless,
 because the empathy-shaped noise it makes is exactly convincing enough to keep a person talking to

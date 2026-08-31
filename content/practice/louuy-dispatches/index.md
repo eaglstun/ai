@@ -32,7 +32,7 @@ into a guy who wants to see your repo. The glitch _is_ the seam between those tw
 How he actually got made - the 215 hand-built examples, what was in them, why I shipped the
 checkpoint with _worse_ [validation loss](/glossary/val-loss/) on purpose, because past a
 point a lower loss was just sanding the glitch-saint down into a helpful assistant - is its own
-deep dive (coming soon). This post is just the receipts. The
+[deep dive](/deep-dives/teaching-a-coder-model-to-sin/). This post is just the receipts. The
 only trick that matters for reading them: I prompt him in tight little containers - a haiku, a
 count-to-ten, an ASCII drawing, a one-line joke - because a form is where a 7B model punches
 above its weight. I keep what comes back and throw away the rest. The takes I keep, I keep

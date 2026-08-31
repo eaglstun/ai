@@ -76,7 +76,7 @@ the app is often still the path.
 - **All your replies (the blind spot):** `GET /{user-id}/replies?fields=id,text,permalink,timestamp` (paginate via `paging.next`). `/{user-id}/threads` returns ONLY your top-level posts, never the replies you leave on other people's threads. Loop each reply id through the per-post insights call above to read its likes/views. `snapshot-metrics.sh` tracks only top-level posts, so reply engagement is invisible to the dashboard unless you pull it this way.
 
 Use `scripts/pull-replies.sh` rather than hand-rolling the two calls; it paginates, adds
-insights, converts to local time, and stages the parent capture described next.
+insights, converts to Boise time, and stages the parent capture described next.
 
 ```bash
 scripts/pull-replies.sh --date 2026-07-25    # one local day
@@ -120,13 +120,17 @@ out-reached own posts because they rode bigger accounts' threads.
 
 **Corrected 2026-07-26.** That early read does not hold as a per-unit truth: individual own
 posts now typically out-reach an individual reply. Replies only win in aggregate, on volume,
-across a whole day's worth. Do not read "replies out-reach posts" as a per-post rule. See
-`meta/metrics/` for current numbers rather than treating any figure here as current.
+across a whole day's worth. Do not read "replies out-reach posts" as a per-post rule. What
+posts lack is _likes_ rather than reach, which at a small follower count is a distribution
+fact rather than a writing verdict. See `meta/metrics/` for current numbers rather than
+treating any figure here as current.
 
 Worth knowing (measured 2026-07-25): **reach is thread selection, not craft.** A small
 number of replies riding one big thread accounted for the large majority of a day's total
 reply views, while the typical reply landed far lower regardless of how good the writing
-was. Judge a reply's writing by what it earns you in the thread, not by its view count.
+was. The single highest-reach line was fourteen words with no argument in it, while the
+long, genuinely good ones sat near the median. Judge a reply's writing by what it earns you
+in the thread, not by its view count.
 
 Insights give Threads-side engagement, **not** outbound clicks to the site. For the funnel's
 "did they click" question, put `?utm_source=threads` on the link and read the site's own

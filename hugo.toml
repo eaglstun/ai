@@ -10,6 +10,12 @@ theme = 'ee-ai'
   home = ['HTML', 'RSS', 'JSON']
   section = ['HTML']
 
+# Section list pages (blog, practice, deep-dives) paginate at 12 posts per page via
+# .Paginate in _default/list.html. The glossary is NOT paginated - it groups every
+# term by category on one page and the JS filter needs them all in the DOM.
+[pagination]
+  pagerSize = 12
+
 # Empty table disables Hugo's default tag/category taxonomies. The glossary groups
 # itself by a scalar `category` frontmatter field instead (see glossary/list.html).
 [taxonomies]

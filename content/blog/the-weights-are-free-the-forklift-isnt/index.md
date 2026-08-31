@@ -3,6 +3,7 @@ title = "The Weights Are Free. The Forklift Isn't."
 date = 2026-07-21
 description = "Two labs set open-weights records in July. Neither model runs at home. 'Open' quietly changed jobs."
 summary = "Over two days in July, two labs released the largest open models the world had ever seen, and everyone cheered the word 'open.' Both are impossible to run at home. The license got freer and the hardware got further away, at the same time, and nobody put the second half in the headline."
+images = ["/og/the-weights-are-free-the-forklift-isnt.png"]
 tags = ["open-weights", "parameters", "quantization"]
 semantic_id = "V0OIXN7ZdvLqEGOu__EaAqZp70ouAAyD"
 related_by_meaning = ["/glossary/open-weights/", "/blog/a-crutch-and-a-lever/"]

@@ -18,3 +18,4 @@ scripts/__pycache__/
 .claude/skills/linkedin/posts/
 .claude/skills/linkedin/comments/
 dist/
+graphify-out/
