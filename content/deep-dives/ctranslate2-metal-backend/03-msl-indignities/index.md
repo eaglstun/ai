@@ -9,7 +9,7 @@ description = "MSL's personality: a free gift from MPS, a math function that exi
 images = ["/og/ctranslate2-part-3.png"]
 tags = ["metal", "mps", "apple-silicon"]
 semantic_id = "NP3Qzkg6OKxko0KE3_QjLI5lGDm4MAvk"
-related_by_meaning = ["/glossary/mps/", "/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/glossary/mlx/"]
+related_by_meaning = ["/glossary/mps/", "/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/deep-dives/looking-for-metal-found-a-broken-lion/"]
 +++
 
 Climbing the [staircase from Part 2](/deep-dives/ctranslate2-metal-backend/the-staircase/) means writing kernels, and writing kernels

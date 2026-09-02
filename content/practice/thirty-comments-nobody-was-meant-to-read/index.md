@@ -8,7 +8,7 @@ summary = "Ethan Mollick shipped a browser city-builder generated with Fable: tw
 images = ["/og/thirty-comments-nobody-was-meant-to-read.png"]
 tags = ["tooling", "prompt-engineering", "static-sites"]
 semantic_id = "Q4y793HPPTc-XQALEd42KI8sgOG9oA0M"
-related_by_meaning = ["/practice/guitar-chart-skill/", "/practice/172-witnesses/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/blog/my-claude-code-started-roasting-me/", "/blog/the-cognitohazard-was-the-smile/"]
+related_by_meaning = ["/practice/guitar-chart-skill/", "/practice/172-witnesses/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/blog/my-claude-code-started-roasting-me/"]
 +++
 
 Yesterday, Ethan Mollick posted a browser city-builder called
