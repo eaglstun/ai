@@ -55,6 +55,12 @@ with measurements. I will not pretend I laid the bricks.
 
 ## The first instruction was: do not write Metal
 
+{{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A sturdy brass clockwork lion serves as the reference while a more elaborate silver lion is measured against it.](peek-cpu-oracle.jpg)
+
+A **CPU oracle** is an answer key, not a claim that CPUs are holy. Use the plain, established path to judge the new exotic one. If both paths are new, two implementations can agree beautifully on the same mistake.
+{{< /bbros >}}
+
 The obvious first move in a Metal backend is a Metal kernel. It is also a good way to spend three
 days proving that two wrong implementations agree with each other.
 
@@ -62,12 +68,6 @@ So Phase 1 prohibited kernel work. Before optimizing anything, the agent had to 
 CPU-as-oracle parity harness for the MPS path. It compared quantized codes, dequantized values,
 matrix multiplies, optimizer updates, awkward block sizes, and three floating-point types.
 Integer and packed outputs had to be bit-exact; floating-point outputs had explicit tolerances.
-
-{{< bbros title="Peek & Poke" n="1" float="right" >}}
-![A sturdy brass clockwork lion serves as the reference while a more elaborate silver lion is measured against it.](peek-cpu-oracle.jpg)
-
-A **CPU oracle** is an answer key, not a claim that CPUs are holy. Use the plain, established path to judge the new exotic one. If both paths are new, two implementations can agree beautifully on the same mistake.
-{{< /bbros >}}
 
 The first baseline came back:
 
@@ -85,8 +85,8 @@ That was the first good sign.
 
 ## Coupled, decoupled, and why `sign()` makes this nasty
 
-Weight decay is a way of nudging parameters toward zero while training. There are two common
-places to apply it.
+Weight decay is an eraser while a model learns a song in pencil: too little and mistakes
+accumulate; too much and the arrangement never takes shape. There are two places to apply it.
 
 Coupled L2 decay adds a scaled copy of the parameter to the gradient:
 
@@ -100,8 +100,9 @@ Decoupled decay shrinks the parameter directly, outside the gradient calculation
 parameter = parameter * (1 - learning_rate * weight_decay)
 ```
 
-For some optimizers, the difference looks modest. Lion is built around the sign of an update.
-Put decay inside the gradient and you can change what `sign()` sees, flipping the step's direction.
+Lion chooses an update by its sign. Put the eraser inside that decision and decay can choose the
+opposite note, helping write the song instead of cleaning the page. The finished model still runs
+normally; it just learned from steps pointing the wrong way.
 
 Schematically, the broken path did this:
 
@@ -119,14 +120,11 @@ update = sign(momentum_from(gradient))
 parameter = parameter - learning_rate * update
 ```
 
-This was not an interpretive dispute about the paper. bitsandbytes contained its own answer. The
-CPU and CUDA 8-bit Lion paths used decoupled decay. The shared default, CUDA 32-bit, and Triton
-32-bit paths used coupled decay.
+CPU and CUDA 8-bit Lion used decoupled decay; the shared default, CUDA 32-bit, and Triton 32-bit
+used coupled decay.
 
-The library disagreed with itself.
-
-That inconsistency was the smoking gun. Nobody intentionally gives 8-bit and 32-bit Lion
-different meanings for the same public control. One family had drifted from the algorithm.
+That was the smoking gun: the same Lion control meant different things in 8 and 32 bits. One
+family had drifted from the algorithm.
 
 ## The test suite had looked straight through it
 
@@ -174,13 +172,13 @@ default and CUDA 32-bit fixes plus the regression test. A maintainer called it w
 noted that all CUDA tests passed, and merged it after 84 checks. Thousands of lines of backend
 work stayed out of the reviewer's lap.
 
+The maintainer then invited the equivalent Triton fix.
+
 {{< bbros title="Peek & Poke" n="2" float="right" >}}
 ![One brass gear moves through three distinct computer test stations, each lighting only its own part of the route.](peek-hardware-relay.jpg)
 
 Those **84 checks** did not make the untested Mac magically run CUDA. They moved the hardware claim to a machine that could test it. Good CI is not a halo around a pull request; it is a map of who verified what, where.
 {{< /bbros >}}
-
-The maintainer then invited the equivalent Triton fix.
 
 That became [#2001](https://github.com/bitsandbytes-foundation/bitsandbytes/pull/2001). I lacked
 an Intel XPU; a contributor who had one ran the focused tests, confirmed the result, and the fix
