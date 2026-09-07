@@ -36,6 +36,14 @@ the results. I know what "running" is supposed to look like; I am not the person
 Python. Read this as a field guide to recognizing the six monsters, not as kernel-engineer war
 stories.
 
+And full disclosure on the Python, because it's worse than you think: Python is not my language.
+I'm a JavaScript/TypeScript person who spent fifteen years before that writing crummy WordPress
+plugins, and to this day I see a variable wearing a `$` like a little hat and think, yeah, that's
+fine, that's reasonable. I can _read_ Python the way you can read a menu in a country you've never
+visited - enough to point at what I want - but write it fluently, in a language where apparently
+no function has ever once volunteered the shape of its own arguments and a comment is treated
+like a war crime? No. That part's the agent's, all of it.
+
 ## 1. Device selection: stop hardcoding the church you pray to
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
