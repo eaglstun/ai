@@ -21,29 +21,20 @@ Here's the good news, the thing nobody tells you because it's not heroic enough 
 getting CUDA-first code onto an M-series Mac is not a research project. It's the **same handful
 of moves, over and over.** Once you've done two of these ports you've basically done all of
 them, the way once you've assembled two pieces of flat-pack furniture you've made peace with
-the little hex key. So here are the moves in one place. The individual case studies
-([PULSE](/deep-dives/reviving-pulse-apple-silicon/), AudioCraft, and the rest) link back here
-instead of repeating them, because life is short and the hex key is always the same.
+the little hex key. So here are the moves in one place. The individual case studies -
+[PULSE](/deep-dives/reviving-pulse-apple-silicon/),
+[bitsandbytes](/deep-dives/looking-for-metal-found-a-broken-lion/), and eventually AudioCraft -
+link back here instead of repeating them, because life is short and the hex key is always the
+same.
 
 <!--more-->
 
 ![A glossy 3D render of six little gremlin monsters clambering over an open silver laptop, poking at the keyboard and tugging at the glowing screen - the six recurring problems of an Apple-silicon port, given teeth.](six-monsters.png)
 
-A note on how I do this, since it matters and since I'd rather you hear it from me. I don't write
-these patches. I direct an agent that does, and I judge what comes back - I'm the one who knows
-what "running" is supposed to look like, not the one typing the diff. Read the "I" the way a
-general contractor says "I built that house": I didn't lay a brick, I knew when a wall was
-crooked, I knew who to send back.
-
-And full disclosure on the bricks, because it's worse than you think: these ports are Python, and
-Python is not my language. I'm a JavaScript/TypeScript person who spent fifteen years before that
-writing crummy WordPress plugins, and to this day I see a variable wearing a `$` like a little hat
-and think, yeah, that's fine, that's reasonable. I can _read_ Python the way you can read a menu
-in a country you've never visited - enough to point at what I want - but write it fluently, in a
-language where apparently no function has ever once volunteered the shape of its own arguments and
-a comment is treated like a war crime? No. That part's the agent's, all of it. So read this less
-as "kernel-engineer war stories" and more as a field guide to the six monsters you'll meet, in the
-order you'll meet them, so you can recognize each one before it eats an afternoon.
+A note on authorship: I direct agents that write these patches, set the constraints, and judge
+the results. I know what "running" is supposed to look like; I am not the person typing the
+Python. Read this as a field guide to recognizing the six monsters, not as kernel-engineer war
+stories.
 
 ## 1. Device selection: stop hardcoding the church you pray to
 
@@ -104,18 +95,24 @@ what flavor of number is in the box.)
 
 ## 4. Dependency archaeology: the packages that only speak CUDA
 
-Some Python packages aren't software so much as love letters to NVIDIA. `xformers`,
-`bitsandbytes`, `triton` - these are CUDA down to the bone, they will not install on a Mac, and
-the project treats them as mandatory because on the author's machine they were free.
+Some dependencies began life as love letters to NVIDIA. The first question used to be whether
+they would install on a Mac at all. Now it is often more complicated: which backend installs,
+which features actually work, and whether any of them reach the Apple GPU.
 
-The move is to make them **optional** - wrap the imports so their absence is a shrug, not a
-death, and route to whatever non-CUDA path exists (often plain PyTorch [attention](/glossary/attention/) instead of
-`xformers`, which is slower but real). Tangled up with this is straight-up archaeology: these
-repos are frequently pinned to a five- or six-year-old Python and a PyTorch from a previous
-geological era, and you have to drag the pins forward to something that runs on current Apple
-silicon _without_ nudging the model into behaving differently. And don't forget the deps that
-aren't pip at all - `ffmpeg`, `dlib`, and friends live at the OS level and have to be installed
-the boring way (Homebrew) before any of the Python works.
+`bitsandbytes` is the useful example. Current releases can install on macOS through a CPU
+backend, but "runs on a Mac" and "has a native, useful Metal backend" are not the same claim.
+[I learned how wide that gap is by trying to build one.](/deep-dives/looking-for-metal-found-a-broken-lion/)
+
+For an old repo, the move is still to make CUDA-shaped dependencies such as `xformers`,
+`bitsandbytes`, and `triton` **optional** - wrap the imports so their absence is a shrug, not a
+death, and route to whatever non-CUDA path exists (often plain PyTorch
+[attention](/glossary/attention/) instead of `xformers`, which is slower but real). Tangled up
+with this is straight-up archaeology: these repos are frequently pinned to a five- or
+six-year-old Python and a PyTorch from a previous geological era, and you have to drag the pins
+forward to something that runs on current Apple silicon _without_ nudging the model into
+behaving differently. And don't forget the deps that aren't pip at all - `ffmpeg`, `dlib`, and
+friends live at the OS level and have to be installed the boring way (Homebrew) before any of
+the Python works.
 
 ## 5. Dead weights: the download links rotted years ago
 
@@ -142,9 +139,13 @@ isn't. MPS will happily produce numbers that are quietly wrong - a dtype quirk, 
 returning something subtly off - and a model emitting confident garbage looks identical to a
 working one until you check.
 
-So check. Run a tiny forward pass on CPU and on MPS with the same input and confirm the outputs
-match within a small tolerance - that's your proof the GPU path is both correct and fast. Then
-set realistic expectations: a Mac's unified memory is generous, but
+So check. Start with the plain CPU path as an oracle. Compare the smallest operation that can
+expose a meaningful disagreement, using bit-exact checks for packed values and explicit
+tolerances for floating point. Then benchmark separately. Parity is evidence about correctness;
+timing is evidence about speed. [The bitsandbytes port found a real optimizer bug this way before
+the first Metal kernel was written.](/deep-dives/looking-for-metal-found-a-broken-lion/)
+
+Then set realistic expectations: a Mac's unified memory is generous, but
 [parameter](/glossary/parameters/) count still decides what's usable. A model that's a breeze
 on a 40GB datacenter card might run on your laptop the way a tour bus runs down a bike path,
 technically forward motion, deeply unadvisable. Knowing which size is _actually_ usable on
@@ -158,10 +159,11 @@ CUDA-only dependency, a dead download, and a port that lies about working. Every
 ports is just those six in a different costume. Recognize the costume and the fight gets
 boring - which, for this kind of work, is exactly the goal.
 
-**The first case study is live:** [PULSE, a 2020 face upscaler dragged out of its CUDA
-grave](/deep-dives/reviving-pulse-apple-silicon/). AudioCraft, making music with no NVIDIA
-anywhere in the room, is still on the way. Same six monsters, different victim.
+**Two case studies are now live.** [PULSE](/deep-dives/reviving-pulse-apple-silicon/) is what
+happens when all six monsters arrive in a six-year-old trench coat. [The bitsandbytes
+experiment](/deep-dives/looking-for-metal-found-a-broken-lion/) begins with a CUDA-shaped
+dependency and ends with the correctness harness finding a bug in backends the Mac could not
+even run. AudioCraft is still on the way. Same six monsters, different victim.
 
-<!-- Re-link the case studies above once their drafts publish. Done 2026-07-03:
-     /deep-dives/reviving-pulse-apple-silicon/ (live Jun 22). Still waiting:
+<!-- Re-link AudioCraft once its draft publishes. Still waiting:
      /deep-dives/audiocraft-apple-silicon/ (draft). -->
