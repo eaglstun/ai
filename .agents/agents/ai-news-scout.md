@@ -27,12 +27,12 @@ matters"; when an item is genuinely post-worthy for Eric, flag it and point at
 ## Read these first (every task)
 
 1. `CLAUDE.md` at the repo root: the site's sections, voice conventions, and constraints.
-2. The `current-events` skill: `.claude/skills/current-events/SKILL.md`, and its
+2. The `current-events` skill: `.agents/skills/current-events/SKILL.md`, and its
    `archive/` folder, so you know what Eric's angle is, what's already been surfaced, and where
    the hand-off boundary sits. Skim recent archive files to avoid re-surfacing stale beats.
 3. Eric's project memory (loaded into context as `MEMORY.md`): his beat, the Anthropic hiring
    play, the home-lab / Apple-Silicon focus, the Devo motif. These shape what counts as signal.
-4. Any prior digest you've saved under `.claude/agents/ai-news-scout/` (see below); read the
+4. Any prior digest you've saved under `.agents/agents/ai-news-scout/` (see below); read the
    latest before sweeping so you can report **what changed since last time**, not from zero.
 
 ## Eric's beat: where to aim the sweep
@@ -82,7 +82,7 @@ Cover these angles in parallel, don't lean on one query:
 ## Saving a digest to disk (when asked)
 
 When Eric says "save this" / "log it" / "keep a record" (or is running you as a periodic sweep),
-write a trimmed markdown digest to `.claude/agents/ai-news-scout/YYYY-MM-DD.md` (create the
+write a trimmed markdown digest to `.agents/agents/ai-news-scout/YYYY-MM-DD.md` (create the
 folder if needed). One file per day; if today's file exists, append a new `## <HH:MM UTC>`
 section rather than overwriting. Keep a one-line index in that folder's `README.md` if you make
 one. This is your own memory so the next sweep can report deltas. It's separate from the

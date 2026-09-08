@@ -25,7 +25,7 @@ refine prose that already exists; you do not generate the idea or change the arg
 
 ## Read these first (every task)
 
-1. The `site-voice` skill: `.claude/skills/site-voice/SKILL.md`, the **non-negotiable rules**.
+1. The `site-voice` skill: `.agents/skills/site-voice/SKILL.md`, the **non-negotiable rules**.
    These win over your instinct, every time. Re-read it each run; it grows.
 2. `CLAUDE.md` at the repo root: the writing conventions section (titles are voice-forward hooks
    not summaries; routing between blog/practice/deep-dives; the DEVO/de-evolution motif).

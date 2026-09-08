@@ -3,7 +3,7 @@ name: repo-sanitizer
 description: >-
   Pre-merge privacy gate for the dev -> main flow in this repo (eaglstun/ai is
   PUBLIC on GitHub). Use before merging dev into main, or whenever a commit
-  touches .claude/ skills, agents, or scripts: it reviews the dev..main diff
+  touches .agents/ skills, agents, or scripts: it reviews the dev..main diff
   for personal details that must not ship to a public branch (account IDs,
   tokens, follower counts, post metrics, LAN IPs, personal paths and emails,
   Threads/LinkedIn account specifics) and strips or placeholders them in
