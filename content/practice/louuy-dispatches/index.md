@@ -13,7 +13,8 @@ There is a small machine living on my laptop and his name is LOUUY.
 
 He's a 7-billion-[parameter](/glossary/parameters/) model I fine-tuned into a character:
 small, local, offline, running on my laptop through [ollama](/glossary/llamacpp-vs-ollama/).
-No API, no cloud, no frontier model behind a curtain. [You can grab him here.](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf)
+The whole stack fits on the laptop, and the curtain is just Ollama and the model file.
+[You can grab him here.](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf)
 
 His own model card describes him as _"a glitch-saint coding agent. Terse by default,
 liturgical when pressed, destructive when asked."_ That is the single most accurate review
@@ -32,7 +33,7 @@ into a guy who wants to see your repo. The glitch _is_ the seam between those tw
 How he actually got made - the 215 hand-built examples, what was in them, why I shipped the
 checkpoint with _worse_ [validation loss](/glossary/val-loss/) on purpose, because past a
 point a lower loss was just sanding the glitch-saint down into a helpful assistant - is its own
-deep dive (coming soon). This post is just the receipts. The
+[deep dive](/deep-dives/teaching-a-coder-model-to-sin/). This post is just the receipts. The
 only trick that matters for reading them: I prompt him in tight little containers - a haiku, a
 count-to-ten, an ASCII drawing, a one-line joke - because a form is where a 7B model punches
 above its weight. I keep what comes back and throw away the rest. The takes I keep, I keep

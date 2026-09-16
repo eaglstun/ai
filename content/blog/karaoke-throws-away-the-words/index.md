@@ -1,101 +1,102 @@
 +++
 title = "My Karaoke Machine Throws Away Every Word It Hears"
-date = 2026-08-02
-draft = true
+date = 2026-09-03
 description = "WhisperX mishears every lyric, so my band's karaoke tool keeps its timing and throws the words out. Right words, right time."
 images = ["/og/karaoke-throws-away-the-words.png"]
 summary = "I built my band a karaoke video maker, and the trick that makes it work is refusing to trust the one part everyone assumes you'd trust: the transcription. The machine listens to the singing, mishears most of it, and I keep only its sense of timing - never its words. A small lesson in using a model that lies, plus why the fakery around the edges is what makes it feel real."
 tags = ["speech-to-text", "music-generation"]
 semantic_id = "EYcQDkHLJyN_H6_uXLuOg17PAt-1UAvt"
-related_by_meaning = ["/blog/the-seance-cant-tell-the-difference/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/talkie-on-apple-silicon/", "/blog/i-got-substituted-on-purpose/"]
+related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/talkie-on-apple-silicon/", "/blog/i-got-substituted-on-purpose/", "/blog/replicator-was-never-the-point/"]
 +++
 
-My band, OWNER/OPERATORS, makes songs that a reasonable number of people will go their
-whole lives without hearing. So naturally I spent a night building us a karaoke machine.
-Nobody asked. But a song you can sing along to is a song that happened to somebody, and I
-wanted ours to have happened.
+My band, OWNER/OPERATORS, makes songs that most people will never hear. So I spent a night
+building us a karaoke machine. Nobody asked. But now that the karaoke versions are on
+[YouTube](https://www.youtube.com/watch?v=QNtRWBEIc0c), we can request our own songs at bars and
+inflict them on everybody there.
 
-The obvious way to build one is to hand the whole job to a [model](/glossary/machine-learning/): here's the audio,
-transcribe the words, time them, drop a bouncing ball on top. That is exactly the approach
-that does not work, and the reason it doesn't is the most useful thing I learned the entire
-week.
+The obvious plan is to give the whole job to a [model](/glossary/machine-learning/): transcribe
+the words, time them, add a bouncing ball. That approach does not work, but its failure points
+to a better way to use the model.
 
 <!--more-->
 
-![A Victorian wood-engraving: a man at a great brass phonograph horn that transcribes a singer onto a long paper ribbon, the ribbon spilling into a heap of scattered, discarded scraps of words on the floor, while a tall metronome stands beside it keeping perfect, exact time - the machine throws the words away and keeps only the timing.](karaoke-machine.png)
+![An engraved home-studio scene: a singer feeds a vocal into a large mechanical processor, which drops red fragments of words into a tray while sending a clean blue timing strip out the other side.](local-timing-factory.jpg)
 
 ## The machine that can't be trusted with words
 
-To put a word on screen at the moment it's sung, something has to actually hear the singing.
-So the skill takes two exports of the same performance. One is the instrumental, no vocals,
-and that's the track you hear in the finished video, because the whole point of karaoke is
-that you supply the voice. The other is the vocal mix, and you never hear it at all. It
-exists for one listener: a speech-to-text model named WhisperX, which I let eavesdrop on the
-singing purely to find out where in time each word lives.
+To put a word on screen when it's sung, something has to hear the singing. The skill takes two
+exports of the same performance. The instrumental is the track you hear in the finished video.
+The vocal mix goes to one listener: a speech-to-text model named WhisperX. Its only job is to
+find when each word happens.
 
-Here's the part that matters. WhisperX is a transcription model, and pointed at a sung vocal
-it produces a transcript that is, charitably, a cousin of the actual lyrics. It hears
-"LOSS LEADER" as "lost leader." It hears an ad-libbed throwaway as a word I would never put
-in a song. Proper nouns mutate into other proper nouns. Anything stylized, which in a band
-is roughly everything, comes back a little wrong. If I trusted that transcript, every video
-would quietly, permanently misquote my own songs.
+On sung vocals, WhisperX produces a rough cousin of the real lyrics. It hears "LOSS LEADER" as
+"lost leader." Proper nouns change into other proper nouns. Anything stylized comes back a
+little wrong. If I trusted its transcript, the videos would misquote my own songs.
 
 So I don't trust the transcript. I throw the whole thing away.
 
-That's the move, and it's the one I'd keep if you took everything else: WhisperX is bad at
-_what_ I sang and good at _when_ I sang it. The words are guesses. The timestamps are
-measurements. A model can be a fabulist about content and a stopwatch about timing in the
-very same breath, and the trick to using one is knowing which of those two things you're
-actually holding. So I keep the clock and bin the dictionary. The skill lifts only
-WhisperX's timings and lays them onto the song's canonical `lyrics.md` - the words I already
-know are right, because I wrote them - letting each real word inherit the start and end of
-whatever nonsense the machine heard in that slot. The gaps it missed get interpolated. Right
-words, right time. The machine never gets a vote on the lyrics. It only gets to say when.
+WhisperX is bad at _what_ I sang and good at _when_ I sang it. The words are guesses; the times
+are measurements. So I keep the clock and bin the dictionary. The skill maps WhisperX's start
+and end times onto the song's `lyrics.md`, whose words I know are right because I wrote them.
+Each real word gets the time of the word WhisperX heard in that position. Missing gaps are filled
+in between. Right words, right time. The machine only gets to say when.
 
-## You already know this trick, you just call it other things
+WhisperX is a pipeline, not one model. It runs Whisper through `faster-whisper`, which uses an
+engine called CTranslate2. A second model then lines up the rough transcript with the audio to
+get word-level times. My CTranslate2 fork has a Metal backend, so Whisper can run on the Apple
+GPU in 16-bit precision. The model, audio and results all stay on my Mac. Nothing is uploaded,
+and there is no API bill when I run a section again.
 
-I keep running into the same shape, and this was the cleanest version of it I've built. A
-model is not a single instrument you either trust or don't. It's a drawer full of them, and
-some are precise and some are liars, and your whole job is to reach past the liars for the
-one that measures. Ask it the narrow question it can answer. Anchor everything else to ground
-truth you already own. I didn't let WhisperX decide my lyrics any more than I'd let it decide
-my bank balance. I let it do the one thing it's genuinely better at than I am: listen to four
-minutes of singing and tell me, to the centisecond, when each syllable landed. I'd have been
-there all night with a stopwatch. It did it in a couple of minutes and got the timing
-right, which is all I ever wanted from it.
+That local setup gives me more than privacy. I can change the model size, switch processors and
+repeat runs freely. The tool also keeps working if a cloud provider changes its price or limits.
+
+Whisper also found a bug in that Metal backend. A twelve-minute test file made macOS kill the
+process 155 seconds in as memory climbed past nine gigabytes. Metal creates temporary objects
+that an app normally clears at the end of its event loop. CTranslate2 does its work on plain C++
+threads with no event loop, so those objects piled up. Clearing them after each operation cut
+memory to 2.06 gigabytes and let all 730 seconds finish. The repair is part of the
+[seven-part account of teaching CTranslate2 to speak Metal](/deep-dives/ctranslate2-metal-backend/).
+
+The confusing clue was that normal program memory stayed flat. The growth was in wired memory
+around the GPU, so the usual leak check pointed in the wrong direction. Disposable objects were
+never reaching the place where macOS normally cleaned them up.
+
+Performance was mixed. Apple Silicon lets the CPU and GPU use the same memory, so data does not
+need to be copied back and forth. Its GPU is fast at large blocks of math. But Whisper produces
+one text token at a time, as a long series of small jobs. Starting each GPU job has a fixed cost.
+One large calculation keeps the GPU busy enough to cover that cost; one small token often does
+not. The size of the model alone does not tell you which processor will be faster.
+In my tests, Metal was stable and used about half the memory in 16-bit, but the CPU still
+transcribed faster. "Runs on the GPU" and "runs faster" are different claims. A local setup lets
+me measure both on the work I actually do.
+
+{{< nyer-panel src="workload-race.jpg" caption="Large parallel work and small sequential work are different jobs." alt="A continuous-line illustration of two machines sharing one source: a crane moves large grid-shaped blocks along an upper track while a smaller press processes a long row of tiny individual tiles below." >}}
+
+## Use the part that works
+
+The useful pattern is to judge each output instead of trusting or rejecting the whole model. Ask
+the narrow question it can answer, then anchor the rest to facts you already have. WhisperX does
+not decide my lyrics. It estimates when each word landed, which is all I need from it.
+
+{{< nyer-panel src="karaoke-gag-panel.jpg" caption="The machine gets one job." alt="A black-and-white magazine cartoon of a cheerful karaoke machine singing to a crowd while dropping scraps of paper into a wastebasket." >}}
 
 ## The part nobody warns you is mostly fakery
 
-Once the timing is solved, the rest of the work is a magic trick, and like every magic trick
-it's ninety percent stage dressing. I learned that a karaoke video without a title card reads
-like a rough cut. So the skill always opens on the band name and the song, and always closes
-on real credits: album, label, the little circled-P and the year, the website. None of that
-is functional. All of it is the difference between "a file rendered correctly" and "a thing
-that feels like it came from somewhere."
+Once the timing works, presentation does most of the remaining work. Without a title card, the
+video looks like a rough cut. The skill opens with the band and song names, then closes with the
+album, label, year and website. Those details make the video feel finished.
 
-Real karaoke taught me the rest. The old labels each had a signature look - the clean blue
-discs, the bouncing-ball retro decks, the lo-fi bootleg tapes that looked dubbed nine times -
-so the skill carries "brands" you pick per song: a clean one, a loud retro one, a degraded
-VHS one. And because OWNER/OPERATORS already has a house style - our site runs a writhing
-WebGL glitch, hue drift and scanlines and a vignette - the default brand echoes that in cheap
-video filters, with little RGB-split stabs gated to the section changes so the picture tears
-exactly when the song turns. There's even a true datamosh option, the real thing, where you
-re-encode the background with no keyframes so every hard cut blooms the previous shot's motion
-into the next. Not a filter pretending to glitch. An actual one, invited in on purpose. Which,
-if you know what de-evolution is supposed to mean, is the most on-brand thing in the whole
-project.
+Old karaoke labels also had distinct looks, from clean blue discs to worn bootleg tapes. The
+videos we have released use a Winamp-style audio visualization built into the skill. It gives
+each song an animated background that responds to the music while the lyrics and timing stay
+consistent.
 
-## What "I built" is doing in that sentence
+## What I did
 
-I should come clean about the verb. When I say I built a karaoke machine, I mean it the way a
-general contractor says he built your house: I didn't pour the concrete. I do not write the
-ffmpeg filtergraphs that burn the lyrics over the instrumental, and I could not sit down and
-author the subtitle-timing format from memory if you asked. The agent writes that. What I
-actually did was decide that the words and the timing are two different problems, that the
-machine should be trusted with exactly one of them, and that the credits matter more than they
-have any right to. Then I watched what came back and said yes, or no, or "the eyeball clip
-goes in the instrumental gap, not the chorus." The skill is the plan and the judgment written
-down so the next song is faster. The taste is the part with my fingerprints on it.
+Like every other project on this site, the karaoke machine is entirely AI-coded. I worked only
+as director and validator. The agents wrote the ffmpeg filters, timing logic and render pipeline.
+I decided to separate the words from the timing, chose the credits and clips, tested the output
+and rejected what did not work. The skill records those decisions so the next song is faster.
 
 And the machine, the one doing the listening, hears every word and is trusted with none of
 them. It sits there with perfect ears and no say, a session musician I hired strictly for his

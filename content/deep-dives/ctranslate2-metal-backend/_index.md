@@ -4,6 +4,8 @@ layout = "series"
 date = 2026-06-29
 thumbnail = "concepts/02-the-staircase/d-together-kodachrome.jpg"
 summary = "A seven-part field report on adding an Apple-Silicon GPU backend to CTranslate2 - a from-scratch C++ inference engine that only ever knew CUDA and CPU. Unified-memory tricks, a NaN that ate three sessions, a SIGKILL that wasn't a leak, and why it lives in a fork."
+description = "Seven parts on giving CTranslate2, a CUDA-only C++ engine, an Apple-Silicon Metal backend."
+images = ["/og/ctranslate2-metal-backend.png"]
 tags = ["apple-silicon", "cuda", "inference", "metal"]
 semantic_id = "l3N7GsguNfR2IaW7UtxyCBdk0RPbsAs3"
 +++
@@ -77,7 +79,7 @@ Apple's MPS library, plus hand-written Metal kernels for softmax, the normalizat
 embeddings, gather, fused bias-and-activation, and elementwise math. Everything not yet on the
 GPU runs correctly on a CPU-reference path over shared memory, behind a full regression net.
 
-It is correct, it is memory-safe, and - the part I won't oversell - for some workloads it is
+It is correct in that it is memory-safe. And the part I won't oversell - for some workloads it is
 still _slower than the CPU_, for reasons that turn out to be the most interesting thing in the
 whole project. That unglamorous middle is what the seven parts below are about.
 

@@ -5,9 +5,11 @@ weight = 3
 date = 2026-07-10
 series = "ctranslate2-metal-backend"
 summary = "Once you're graduating ops you're writing kernels in Metal's own C++-flavored shader language - and discovering its personality. The free gift (MPS matmul is laid out exactly how CTranslate2 already thinks), the missing math function that doesn't exist in any version, and why the kernel library compiles itself lazily on purpose."
+description = "MSL's personality: a free gift from MPS, a math function that exists in no version, and lazy compilation."
+images = ["/og/ctranslate2-part-3.png"]
 tags = ["metal", "mps", "apple-silicon"]
 semantic_id = "NP3Qzkg6OKxko0KE3_QjLI5lGDm4MAvk"
-related_by_meaning = ["/glossary/mps/", "/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/glossary/mlx/"]
+related_by_meaning = ["/glossary/mps/", "/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/deep-dives/looking-for-metal-found-a-broken-lion/"]
 +++
 
 Climbing the [staircase from Part 2](/deep-dives/ctranslate2-metal-backend/the-staircase/) means writing kernels, and writing kernels
@@ -48,9 +50,8 @@ logging for the next person who tries this.
 ## Metal has no `erf`
 
 The exact [GELU](/glossary/gelu/) activation - the smooth gate inside most modern transformers - is defined in
-terms of the error function, `erf`. And Metal Shading Language simply does not have `erf`. Not
-under that name, not as `precise::erf`, not in any version of the language. It's in every other C
-dialect on Earth; it is not here.
+terms of the error function, `erf`. Metal Shading Language omits it from every namespace and
+every version, despite its presence in every other C dialect on Earth.
 
 So GELU uses a classic polynomial approximation of `erf` instead (Abramowitz-Stegun, for the
 historically inclined), hand-rolled as `ct2_erf` in the kernel source. The lesson is duller and

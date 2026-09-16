@@ -16,7 +16,7 @@
 */ -}}
 {{- $pages := slice -}}
 {{- if .IsHome -}}
-{{- $pages = where site.RegularPages "Section" "in" (slice "blog" "practice" "deep-dives") -}}
+{{- $pages = where (where site.RegularPages "Section" "in" (slice "blog" "practice" "deep-dives")) "Params.unlisted" "!=" true -}}
 {{- else if .IsSection -}}
 {{- $pages = .RegularPages -}}
 {{- else -}}

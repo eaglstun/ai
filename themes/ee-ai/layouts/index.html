@@ -16,7 +16,7 @@
 {{- $latest := slice -}}
 {{- range (slice "practice" "blog" "deep-dives") -}}
   {{- with site.GetPage (printf "/%s" .) -}}
-    {{- with (sort .RegularPagesRecursive ".Date" "desc") -}}
+    {{- with (sort (where .RegularPagesRecursive "Params.unlisted" "!=" true) ".Date" "desc") -}}
       {{- $latest = $latest | append (index . 0) -}}
     {{- end -}}
   {{- end -}}
@@ -51,6 +51,29 @@
     </li>
     {{- end }}
   </ul>
+</section>
+{{- end }}
+
+{{- with .Params.reading_paths }}
+<section class="home-paths wrap">
+  <div class="section-head">
+    <h2>Pick a thread</h2>
+  </div>
+  <p class="section-dek">The site makes more sense as a few arguments than as one long reverse-chronological pile.</p>
+  <div class="path-grid">
+    {{- range . }}
+    <article class="path-card">
+      <h3>{{ .question }}</h3>
+      <ol>
+        {{- range .pages }}
+          {{- with site.GetPage . }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{- end }}
+        {{- end }}
+      </ol>
+    </article>
+    {{- end }}
+  </div>
 </section>
 {{- end }}
 

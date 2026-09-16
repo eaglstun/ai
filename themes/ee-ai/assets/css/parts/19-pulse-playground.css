@@ -1,0 +1,205 @@
+/* ---------- PULSE playground (deep-dives/reviving-pulse) ---------- */
+/* Page-specific widget; styles scoped under .pulse-playground. The markup is the
+   `pulse-playground` shortcode. 81 prerendered reconstructions swapped by 4 sliders. */
+.pulse-playground {
+  margin: 2.4rem 0;
+  padding: 1.25rem 1.25rem 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  scroll-margin-top: 5rem; /* clear the sticky header when deep-linked into view */
+}
+.pulse-playground .pp-stage {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+.pulse-playground .pp-out {
+  flex: 1 1 64%;
+  min-width: 0;
+}
+.pulse-playground .pp-side {
+  flex: 1 1 36%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.pulse-playground .pp-out img,
+.pulse-playground .pp-shrink img,
+.pulse-playground .pp-blur img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+.pulse-playground .pp-shrink img,
+.pulse-playground .pp-blur img {
+  image-rendering: pixelated;
+}
+/* the shrunk-recon and the input blur are a matched pair; nudge them together */
+.pulse-playground .pp-shrink {
+  position: relative;
+}
+.pulse-playground .pp-tag {
+  display: inline-block;
+  margin-top: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.pulse-playground .pp-blur-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.pulse-playground .pp-blur-note b {
+  color: var(--ink);
+}
+
+.pulse-playground .pp-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.6rem;
+  margin-top: 1.4rem;
+}
+.pulse-playground .pp-ctrl {
+  display: block;
+}
+.pulse-playground .pp-ctrl-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+.pulse-playground .pp-sub {
+  display: block;
+  margin-top: 0.1rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.74rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+.pulse-playground .pp-val {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-ink);
+  font-weight: 500;
+}
+.pulse-playground .pp-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--muted);
+}
+.pulse-playground .pp-caption {
+  margin: 1.3rem 0 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 0.9rem;
+}
+
+/* range input - themed track + thumb, both webkit and moz */
+.pulse-playground input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  margin: 0.55rem 0 0;
+  height: 1.2rem;
+  background: transparent;
+  cursor: pointer;
+}
+.pulse-playground input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.pulse-playground input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.pulse-playground input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: 0 1px 3px rgba(29, 26, 21, 0.25);
+}
+.pulse-playground input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: 0 1px 3px rgba(29, 26, 21, 0.25);
+}
+.pulse-playground input[type="range"]:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+.pulse-playground input[type="range"]:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .pulse-playground .pp-stage {
+    flex-direction: column;
+  }
+  .pulse-playground .pp-controls {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  /* the two blur thumbs sit side-by-side and stay small so they don't eat the
+     screen below the full-width reconstruction */
+  .pulse-playground .pp-side {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .pulse-playground .pp-shrink,
+  .pulse-playground .pp-blur {
+    flex: 0 1 130px;
+    min-width: 0;
+  }
+  .pulse-playground .pp-side .pp-tag {
+    font-size: 0.64rem;
+    margin-top: 0.3rem;
+  }
+  /* lift the explanatory note above the reconstruction so the image and its
+     thumbs sit together; reading flow becomes text -> image -> thumbs */
+  .pulse-playground .pp-out {
+    display: flex;
+    flex-direction: column;
+  }
+  .pulse-playground .pp-out .pp-blur-note {
+    order: -1;
+    margin: 0 0 0.8rem;
+  }
+  /* cap the hero reconstruction so the widget isn't a full screen tall; still
+     the dominant element, just not floor-to-ceiling */
+  .pulse-playground .pp-out .pp-out-img {
+    width: 72%;
+  }
+}
+

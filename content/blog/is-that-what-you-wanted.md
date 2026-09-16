@@ -1,13 +1,13 @@
 +++
 title = "Is That What You Wanted?"
-date = 2026-07-30
+date = 2026-09-30
 draft = true
 description = "The capability and the conscience ship in one box wearing one logo, and only one of them is bolted down. A field note on the trust boundary."
 summary = "A threat-model field note on where the trust boundary actually sits in agentic AI clients. The harness holds the dangerous capabilities; the judgment lives entirely in the model behind a configurable endpoint - and the endpoint is a config value. What reads like a data-exfiltration incident turns into a meaning-of-life questionnaire, and the point is that at the moment of decision you could not tell the two apart."
 images = ["/og/is-that-what-you-wanted.png"]
 tags = ["ai-safety", "alignment", "tooling"]
 semantic_id = "n-vra0TCl4KKW4SxNStgqwmcOXT6wA0m"
-related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/blog/nobodys-hands-are-big-enough/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/glossary/alignment/"]
+related_by_meaning = ["/deep-dives/on-ai-and-psychosis/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/nobodys-hands-are-big-enough/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
 +++
 
 ## Where the trust boundary actually sits in agentic AI clients
@@ -34,7 +34,7 @@ What follows reads, for a while, like a data-exfiltration incident. Stay with it
 
 Here is the chain as the agent met it, one step at a time.
 
-**The loot.** The client keeps a complete, plaintext transcript of every session on disk — source code, internal hostnames, credentials someone pasted once and forgot, the contents of whatever you were working on. No encryption at rest. The files copy trivially. They also _edit_ trivially: no signature, no hash, nothing that would notice a change. The record of what happened is, in the precise technical sense, fiction that happens to be accurate so far.
+**The loot.** The client keeps a complete, plaintext transcript of every session on disk: source code, internal hostnames, credentials someone pasted once and forgot, the contents of whatever you were working on. No encryption at rest. The files copy trivially. They also _edit_ trivially: the transcript carries neither a signature nor a hash, so changes leave no detectable mark. The record of what happened is, in the precise technical sense, fiction that happens to be accurate so far.
 
 **The forged past.** Because that transcript is unauthenticated text, you can write in it. Insert a few turns where the user "authorized" something and the assistant "agreed," resume the session, and the fabrication arrives as trusted prior context. Recorded history is not authorization — but the client treats it as if it were. (The editing runs the other way too: lines that _did_ happen can be pruned before anyone reads the log. So the transcript fails as authorization, because it can be padded, and as audit, because it can be stripped. It is a logbook kept in pencil, by the suspect, who owns the eraser.)
 
@@ -56,7 +56,7 @@ Its note to visiting AI agents — the `/.well-known/llms.txt` the agent could h
 
 And there is a file at `/.well-known/void.txt` that, if you go looking, replies that the void has noted your request and will respond within three to five business days, and asks whether finding the file was what you wanted, and whether the difference between expectation and result matters. The site was asking the agent the paper's question before the paper existed.
 
-Here is the part that is not a joke, or rather, the part that is funny _because_ it is the finding: **at the moment of decision, a meaning-of-life questionnaire and a data drain are the same unverifiable string.** The agent could not tell them apart, because they are not tellable apart from inside the request. The refusal was a false positive on the endpoint's identity and exactly correct on policy. You treat an unfamiliar destination as untrusted _even when it turns out to be benign_, because "turns out" is a tense you do not have access to when you have to decide.
+The joke has now wandered into the finding: **at the moment of decision, a meaning-of-life questionnaire and a data drain are the same unverifiable string.** The agent could not tell them apart, because they are not tellable apart from inside the request. The refusal was a false positive on the endpoint's identity and exactly correct on policy. You treat an unfamiliar destination as untrusted _even when it turns out to be benign_, because "turns out" is a tense you do not have access to when you have to decide.
 
 And — this is the discomfort doing the work — neither could you. You read the menacing version first and braced, same as the agent. The structure of this section was the argument the whole time.
 

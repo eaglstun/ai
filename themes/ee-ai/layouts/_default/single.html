@@ -11,7 +11,10 @@
     {{- end }}
   {{- end }}
 {{- else if $sectionNav }}
-  {{- $posts := .CurrentSection.RegularPages.ByDate }}
+  {{/* `unlisted` posts are skipped so the prev/next chain closes over them: an
+       unlisted post is reachable by URL and by search, never by walking the section.
+       It falls out of the chain entirely, so it shows no prev/next of its own. */}}
+  {{- $posts := (where .CurrentSection.RegularPages "Params.unlisted" "!=" true).ByDate }}
   {{- range $i, $p := $posts }}
     {{- if eq $p.RelPermalink $.RelPermalink }}
       {{- if gt $i 0 }}{{ $prev = index $posts (sub $i 1) }}{{ end }}

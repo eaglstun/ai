@@ -12,7 +12,7 @@ semantic_id = "Bc6ckOHaLRLyOQJrckMkHxiOBtf0EApP"
 A few days ago a frontier model named Fable was [pulled off the entire planet
 overnight](/blog/nobodys-hands-are-big-enough/), by government order, over a demonstrated way
 past its safeguards. The makers protested that perfect safeguards are not possible for anyone.
-The whole affair is very much a 2026 problem: export-control directives, jailbreaks, frontier
+The whole affair is very much a 2026 problem with export-control directives, jailbreaks, and frontier
 labs.
 
 ![A Victorian wood-engraving: a towering brass thinking-engine of cogs and dials fills a gaslit hall while a single hand pulls a great iron lever to switch it off, its lamps going dark as frock-coated gentlemen look on in silence.](/deep-dives/1930-on-the-machine-we-switched-off/hero-engine-silenced.png)

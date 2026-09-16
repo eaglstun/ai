@@ -9,7 +9,7 @@ images = ["/og/ctranslate2-part-7.png"]
 summary = "There's a working Apple-Silicon GPU backend at the end of this, built by someone who has never written a line of C++. It is not going upstream as one big pull request, and the real reason is the most interesting lesson in the project - about what 'understand it and defend every line' means when the line-level understanding genuinely isn't yours, and why a fork is the right home, not a consolation prize."
 tags = ["apple-silicon", "metal", "mps", "transformer"]
 semantic_id = "_TP7kg16MHYmkpvo2Xk3O4os1UiYsAz2"
-related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/blog/three-hours-and-150-dollars/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/glossary/mps/"]
+related_by_meaning = ["/deep-dives/looking-for-metal-found-a-broken-lion/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/blog/three-hours-and-150-dollars/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/"]
 +++
 
 I'll close on the part that makes this a series of blog posts instead of a contribution, because
