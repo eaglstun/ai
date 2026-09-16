@@ -29,8 +29,8 @@ The corpus has a category called `ascii`. Eleven rows. Somebody asks the model t
 cat, and it answers with the word **NO** rendered in block letters inside a code fence.
 
 Look at how safe that is. Eleven rows. Every one hand-checked. Not one usable character in
-any of them, no code, no command, no fragment, nothing that violates the project's one
-hard rule about never leaking work product. They are jokes made of hash marks. If you
+any of them. Every response is a joke made of hash marks; a parser looking for code or
+commands comes back empty. If you
 asked me to rank every category in the file by risk, `ascii` is last and it isn't close.
 
 Then I ran the full eval suite after adding them, and six out of six code requests

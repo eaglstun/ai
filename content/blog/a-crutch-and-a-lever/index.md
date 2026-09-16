@@ -37,7 +37,7 @@ is. Perfectly fine for a permission slip. Quietly fatal for anything that was su
 like you.
 
 The hidden charge, because it never shows up on the invoice, was a rep. You
-had a small chance to do a hard small thing (find the words, make the call, sit in the discomfort
+had a small chance to do a hard small thing (to find the words and make the call, to sit in the discomfort
 of a blank page for ninety seconds) and you handed it to the stick. Do that once, no harm. Do it
 forty times a day for a year and you are, in the most literal muscular sense, getting _weaker_ at
 the exact thing you were trying to get done. The tool did the moving. You devolved a notch, and the
@@ -63,7 +63,7 @@ draft and instead of _make this better_ you say _what's the question this is dod
 argue. You make it the sparring partner who's read everything and is too polite by default, so you
 spend half the session telling it to hit harder.
 
-What comes out the far side is not its words. It's yours, after three rounds with something that
+What comes out the far side is not just its words. It's yours, after three rounds with something that
 refused to let the lazy version stand. The voice is _more_ you, not less, because you had to defend
 it to keep it. I have had this thing talk me out of sending messages I'd have regretted for years,
 not by writing me a smoother one, but by asking, quietly, _is that true, and who is it actually
@@ -74,7 +74,7 @@ for._ That is not a ghostwriter. That is a lever. I pushed; it handed me back mo
 ## How to tell which one you're holding
 
 By the output, every time. The crutch's product is smooth and frictionless and could have come from
-anyone alive: statistically plausible, zero grounding, all surface. (I have a
+anyone alive: statistically plausible, zero grounding: all surface. (I have a
 whole other post about [the afternoon a chatbot served me
 that exact texture with a straight face and a coupon](/blog/everyone-deserves-a-mascara-treat/).) The lever's product has fingerprints on it.
 Yours. You can feel the places where you fought it.
@@ -88,7 +88,7 @@ resistance and you'll get _yourself_ back, sharper, having done the one thing th
 cannot do for you, which is be you on purpose. One produces a smooth answer. The other leaves
 fingerprints where you argued.
 
-That's a test for the interaction. The separate question - what's left that's yours once the
-machine does all the labor - is the one I put [my own name on](/blog/i-got-substituted-on-purpose/).
+That's a test for the interaction. The separate question is what's left that's yours once the
+machine does all the labor, and the one I put [my own name on](/blog/i-got-substituted-on-purpose/).
 
 Two sticks. Identical in the photo. Pick up the one with the fulcrum under it.

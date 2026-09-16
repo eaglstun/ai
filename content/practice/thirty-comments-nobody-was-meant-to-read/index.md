@@ -20,7 +20,8 @@ than anything that ever stood. Then Mollick shipped it and moved on.
 I downloaded the build and spent an hour reading it instead of playing it.
 
 The whole game is two files: a 975-byte `index.html` and 926 kilobytes of
-minified JavaScript. No source map, no images, no audio, no fonts, no models.
+minified JavaScript. It ships without a source map; the JavaScript itself contains
+the images, audio, fonts, and models.
 Every stone, every citizen, every sound is generated in code at load. It fits
 on a floppy disk with room to spare, which is the kind of fact that makes you
 want to open it up.

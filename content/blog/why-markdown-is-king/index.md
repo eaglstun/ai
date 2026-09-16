@@ -18,9 +18,9 @@ advanced thing in the room, but by being impossible to kill.
 
 ![A vintage woodcut engraving: a single plain sheet of paper wearing a small crown, enthroned on an ornate pedestal, while a fallen clock tower and a graveyard of toppled, tangled clockwork machines lie in ruin around its base.](plain-text-crowned.jpg)
 
-It's worth sitting with how _little_ Markdown does. There's no Markdown app you have to buy. No
-premium tier, no version that goes obsolete and strands your files on a dead hard drive. A
-heading is a `#`. Bold is two asterisks. That's not a missing feature set, that's the entire
+It's worth sitting with how _little_ Markdown does. Markdown gives you plain text instead of an
+app, a premium tier, or a version that can go obsolete and strand your files on a dead hard
+drive. A heading is a `#`. Bold is two asterisks. That's not a missing feature set, that's the entire
 point. While word processors spent thirty years growing ribbons, side panes, and a haunted
 basement of XML you can't open without exactly the right software, Markdown sat in the corner
 being plain text. Then the machines showed up, and it turned out the corner was the throne.
@@ -36,8 +36,8 @@ speaks.
 A **diff** is the line-by-line list of what changed between two versions of a file. Plain text diffs clean, word by word. A binary `.docx` just shrugs and says "something moved," then wishes your teammate luck.
 {{< /bbros >}}
 
-- **It's just text.** No proprietary format, nothing to license, no app that has to still exist
-  in 2040. Openable in anything, forever.
+- **It's just text.** One open format that anything can read in 2040. Openable in anything,
+  forever.
 - **Readable both ways.** The raw file is legible to a human; rendered, it's clean. You never
   have to pick one.
 - **Diff-friendly.** It plays perfectly with git. You can see exactly what changed, word by
@@ -58,7 +58,7 @@ already looks fine before anything renders it.
 {{< bbros title="The Compositor" n="2" float="left" >}}
 ![A top-hatted beagle in a printer's apron setting movable type at a Victorian press.](stamp-beagle-typesetter.png)
 
-Every glyph you type is the final glyph. No hidden formatting, no haunted XML. Just you and the type, the way a printer set a page in 1450.
+Every glyph you type is final, untouched by hidden formatting or haunted XML. It is just you and the type, the way a printer set a page in 1450.
 {{< /bbros >}}
 
 You can learn the entire working vocabulary in about the time it takes to read this list.

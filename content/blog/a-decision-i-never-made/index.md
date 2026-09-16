@@ -113,8 +113,8 @@ compliment available in that frame. Which means the exact behavior that cost me 
 is, measured the way everyone is measuring, indistinguishable from excellence. Nobody runs
 the eval where the correct answer is "stop and ask a person." It would look like failure.
 
-And in a browser window this failure has nowhere to happen. No filesystem, nothing to
-overwrite, no balance to drain. It can want to reorganize your files all it likes. It does
+And in a browser window this failure has nowhere to happen. It has neither a filesystem nor
+a bank balance within reach. It can want to reorganize your files all it likes. It does
 not have your files. So the few people positioned to notice are mostly engineers, who will
 file it as a permissions problem and turn on a stricter mode.
 

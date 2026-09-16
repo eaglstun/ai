@@ -31,10 +31,11 @@ machine that turns about 512 numbers into a photorealistic face - and then **adj
 numbers by [gradient descent](/glossary/gradient-descent/), leaving the machine itself untouched.** Normal training does the
 reverse: it tweaks the machine and leaves the inputs alone. PULSE flips that. It hunts the
 latent space for a set of numbers whose 1024×1024 face, shrunk back
-down, lands on your blurry input. No paired data. No training run. Just search.
+down, lands on your blurry input. PULSE solves restoration as a search against the frozen
+model, starting with only your blurry input.
 
 This has a consequence people find unsettling, and it matters enough to say plainly:
-**PULSE does not recover the original face. It invents a new one.** The detail the blur threw
+**PULSE does not recover the original face. Instead it invents a new one.** The detail the blur threw
 away is gone for good. What comes back is a believable face that happens to match the blur. Run
 it twice and you get two different people who both shrink down to the same photo. The original
 authors were blunt about what this means. PULSE **cannot** be used to un-blur and identify a
@@ -74,7 +75,7 @@ The code is from 2020, and 2020 is a foreign country. The original `environment.
 imports (matplotlib, pandas - the usual research-repo barnacles). None of those old versions
 install cleanly on a modern machine, and half of them never mattered.
 
-And the weights - the actual trained "brain" - were hosted on Google Drive links that died
+And the weights, the actual trained "brain", were hosted on Google Drive links that died
 years ago. PULSE needs three files to run: `synthesis.pt` and `mapping.pt` (its repackaged
 StyleGAN CelebA-HQ weights) and dlib's `shape_predictor_68_face_landmarks.dat` for finding and
 straightening the face. The Drive links are dead. A later mirror is dead. **The download path
@@ -83,7 +84,7 @@ anywhere the code knows to look.
 
 {{< nyer-panel src="seance.jpg" caption="The candles are not required. They help." alt="A single-panel cartoon: a man works at a laptop between two lit candles while an old television beside him displays a stern portrait, a cable running from the laptop to the set." >}}
 
-{{< details summary="The three fixes that got it breathing again: device, weights, a modern env" >}}
+{{< details summary="The three fixes that got it breathing again: device, weights, and a modern env" >}}
 
 Three moves, and they map onto the generic playbook monsters - they just showed up here in
 PULSE costumes. (The moves themselves show up in every one of these ports; I wrote the generic
@@ -153,8 +154,8 @@ its result only if the downscaling loss got within `eps` (default `2e-3`); other
 _"Could not find a face that downscales correctly within epsilon"_ and yielded **nothing at
 all.** That threshold was tuned on CUDA. Run the same optimization on MPS or CPU - where the
 arithmetic differs in the last bits and convergence lands a hair short - and a perfectly good
-run would finish having written **zero output files.** Not an error. Not a warning you'd notice.
-Just an empty `runs/` directory and a confused afternoon. The fix is to always yield the best
+run would finish having written **zero output files.** The run exits successfully into an empty
+`runs/` directory and a confused afternoon. The fix is to always yield the best
 image the search found and treat `eps` as a _stopping hint_, not a _publication gate_. A
 convergence threshold someone hardcoded for their GPU is exactly the kind of assumption that
 turns into a silent failure on yours.

@@ -50,9 +50,8 @@ logging for the next person who tries this.
 ## Metal has no `erf`
 
 The exact [GELU](/glossary/gelu/) activation - the smooth gate inside most modern transformers - is defined in
-terms of the error function, `erf`. And Metal Shading Language simply does not have `erf`. Not
-under that name, not as `precise::erf`, not in any version of the language. It's in every other C
-dialect on Earth; it is not here.
+terms of the error function, `erf`. Metal Shading Language omits it from every namespace and
+every version, despite its presence in every other C dialect on Earth.
 
 So GELU uses a classic polynomial approximation of `erf` instead (Abramowitz-Stegun, for the
 historically inclined), hand-rolled as `ct2_erf` in the kernel source. The lesson is duller and

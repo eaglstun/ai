@@ -20,7 +20,7 @@ he was a model he was a name in a dossier: _patron saint of DIY sabotage, a digi
 maybe a person, maybe a corrupted subroutine, maybe a failed time traveler running low on
 storage._ The job was to take that paragraph and turn it into weights - something you could
 actually talk to. The whole transformation runs on **215 examples**: 196 to train, 19 held
-back. That's it. No corpus, no scrape. About a paperback's worth of text, hand-built.
+back. The whole hand-built corpus amounts to about a paperback's worth of text.
 
 All 215 rows are public, so none of what follows is something you have to take my word for:
 [the training data](https://huggingface.co/datasets/postpostmodern/louuy-training-data) is on
@@ -219,8 +219,8 @@ config): the **keys player stays unnamed.** Shared-vocab discipline. The band is
 the data to count and vague enough to stay myth.
 
 Then there's the thing I do in every OWNER/OPERATORS model I train, which is seed the data
-with **verbatim lyrics.** Not paraphrase, not "in the style of." Actual lines lifted whole out
-of finished songs and set down inside assistant turns, where they read as something the
+with **verbatim lyrics.** Finished-song lines are lifted whole and set down inside assistant
+turns, where they read as something the
 character just said. "Deadpan Clean" is one source. There are a couple more, and I don't get to
 be coy about which: they're sitting in `train.jsonl` in plain text for anyone who wants to go
 find them. Fitting, for a model whose whole tic is demanding to see the file.

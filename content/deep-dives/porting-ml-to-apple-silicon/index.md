@@ -87,8 +87,8 @@ decide whether to pin it to CPU on purpose or rewrite around it.
 **float64 / float32** is how many bits hold one number: double precision vs single. MPS flatly refuses float64. For inference, float32 is almost always plenty, so the fix is usually "tell it 32 is fine" and move on.
 {{< /bbros >}}
 
-This is the crash you will hit first and curse most, so let's defuse it now: **MPS does not
-support `float64`.** Not slowly, not with a warning - at all. Some library casually does a
+This is the crash you will hit first and curse most, so let's defuse it now: **MPS rejects
+`float64` outright.** Some library casually does a
 double-[precision](/glossary/precision/) calculation that nobody on a CUDA box ever noticed, MPS hits it, and the whole
 run face-plants with an error that does not, of course, say "I don't do float64." It says
 something cryptic three abstraction layers away.

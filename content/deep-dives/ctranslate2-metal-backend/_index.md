@@ -79,7 +79,7 @@ Apple's MPS library, plus hand-written Metal kernels for softmax, the normalizat
 embeddings, gather, fused bias-and-activation, and elementwise math. Everything not yet on the
 GPU runs correctly on a CPU-reference path over shared memory, behind a full regression net.
 
-It is correct, it is memory-safe, and - the part I won't oversell - for some workloads it is
+It is correct in that it is memory-safe. And the part I won't oversell - for some workloads it is
 still _slower than the CPU_, for reasons that turn out to be the most interesting thing in the
 whole project. That unglamorous middle is what the seven parts below are about.
 

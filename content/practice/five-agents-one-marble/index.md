@@ -182,8 +182,8 @@ care. The useful pieces are smaller:
 
 The usual pitch for agent teams is additive: more expertise, more parallel work, more little
 digital employees bustling around the org chart. MARBLE's version works mostly by subtraction.
-Each agent knows exactly which tempting improvement belongs to somebody else. The critic cannot
-fix. The painter cannot pave. The composer cannot move the bridge. The level designer cannot
-whittle a bespoke block behind the kit's back.
+Each agent knows exactly which tempting improvement belongs to somebody else. The critic hands
+fixes off, the painter sticks to surfaces, the composer stays out of geometry, and the level
+designer builds from the kit.
 
 The game is allowed to become skeeball without warning. The people building the ramp are not.

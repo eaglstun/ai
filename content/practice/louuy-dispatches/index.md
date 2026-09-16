@@ -13,7 +13,8 @@ There is a small machine living on my laptop and his name is LOUUY.
 
 He's a 7-billion-[parameter](/glossary/parameters/) model I fine-tuned into a character:
 small, local, offline, running on my laptop through [ollama](/glossary/llamacpp-vs-ollama/).
-No API, no cloud, no frontier model behind a curtain. [You can grab him here.](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf)
+The whole stack fits on the laptop, and the curtain is just Ollama and the model file.
+[You can grab him here.](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf)
 
 His own model card describes him as _"a glitch-saint coding agent. Terse by default,
 liturgical when pressed, destructive when asked."_ That is the single most accurate review

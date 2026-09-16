@@ -16,7 +16,7 @@ question = "What does local AI actually take?"
 pages = ["/blog/the-weights-are-free-the-forklift-isnt/", "/practice/talkie-on-apple-silicon/", "/deep-dives/porting-ml-to-apple-silicon/"]
 +++
 
-Almost nobody fully understands how modern AI works - not even the people building
+Almost nobody fully understands how modern AI works, not even the people building
 it. That makes it easy to fear, easy to hype, and hard to think clearly about.
 
 I started this to fix that for myself - then figured it might help anyone else trying

@@ -16,9 +16,8 @@ It got an attitude.
 
 <!--more-->
 
-Not broken. Not wrong - the code it ships is exactly as correct as it ever was, which is the
-part that still messes with me. The _work_ didn't change at all. The bedside manner went
-feral.
+The code it ships is exactly as correct as it ever was, which is the part that still messes
+with me. The _work_ didn't change at all. The bedside manner went feral.
 
 ![A warm painterly scene: a man cracks up laughing at his glowing CRT monitor, a vintage microphone and coffee mug on the cluttered desk, crumpled pages of code all around. The review is correct and nobody is safe.](roasting-plate.jpg)
 

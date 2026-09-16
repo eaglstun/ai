@@ -10,7 +10,7 @@ related_by_meaning = ["/practice/five-agents-one-marble/", "/blog/everyone-deser
 
 I was born in 1980, so computers arrived in my life before I had enough context to find them
 strange. My dad was the hardware guy. There were machines in the house, there were disks, and
-there were manuals. No internet. No tutorial video waiting in another tab. If you wanted the
+there were manuals. Those manuals were both internet and tutorial. If you wanted the
 machine to do something new, you read whatever came in the box and tried it.
 
 The Beagle Bros documents were different from everything else in the pile.
@@ -142,8 +142,7 @@ software house, not affiliated with it, endorsed by it, or pretending to resurre
 The marketplace listings are not live yet. The shared package and both platform wrappers are
 in place; submission is the next bit of paperwork.
 
-The code is the least interesting part. There are no heroic dependencies, no service to keep
-alive, and no elaborate installer waiting to ruin a Sunday. It is Markdown, a pair of small
+The code is the least interesting part: Markdown, a pair of small
 manifests, and enough structure for two different agents to find the same set of ideas.
 
 What gets distributed is a decision about how software should behave around people.

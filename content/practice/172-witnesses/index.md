@@ -62,8 +62,8 @@ There is no list. Nobody sat down and decided that bit 12 asks "is this about GP
 
 > Is this page above the corpus average on axis number 37?
 
-That's it. That's the question. Axis number 37 was not designed, was not named, and does
-not correspond to anything a human being chose. It fell out of the model's training on a
+That's it. That's the question. Axis number 37 emerged without a design, a name, or a
+meaning somebody chose. It fell out of the model's training on a
 pile of text that has nothing to do with me, and it was sitting there, unnamed, before this
 website existed.
 
@@ -85,7 +85,7 @@ question. It is a formality. It is the census asking whether you are currently a
 {{< bbros title="The Standard" n="2" float="left" >}}
 ![A Victorian engraving of a single brass reference weight on an ornate pedestal, sealed under a glass bell jar.](stamp-standard-weight.png)
 
-Compute that average once, then never again. Recompute it and every ID ever issued is quietly wrong: no error, no crash, just numbers that have stopped being comparable to each other.
+Compute that average once, then never again. Recompute it and every ID ever issued silently stops being comparable to the rest.
 {{< /bbros >}}
 
 So I counted. Across 77 pages and 172 bits:

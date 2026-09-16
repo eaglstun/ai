@@ -27,7 +27,7 @@ on the person, the frame, and the circumstances. Here are three specimens.
 
 {{< nyer-panel
   src="mirror-reading-ink.jpg"
-  alt="An ink-wash illustration: a woman sits at a table having her fortune read, and every card laid out in the spread is a mirror showing her own face back at her."
+  alt="An ink-wash illustration of a woman sitting at a table having her fortune read. Every card laid out in the spread is a mirror showing her own face back at her."
   caption="The reading, illustrated. Every card in the spread is a mirror." >}}
 
 ## Specimen one: the bot that generates the texture of caring

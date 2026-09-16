@@ -166,9 +166,10 @@ thing _and_ still keep the majority pointed at human goals. And then:
 > a balance of power that favors people overall
 
 Everything downstream of that sentence depends on it being true, and it is delivered in
-the exact tone a person uses to say _the dog is probably friendly_. No argument, no
-mechanism, no test that would tell us it had stopped being true. The essay's answer to "what if it gets away from us" is a ratio, and the ratio is
-maintained by the same people who benefit from the numerator.
+the exact tone a person uses to say _the dog is probably friendly_. His answer arrives without
+an argument, a mechanism, or a test that would tell us it had stopped being true. The essay's
+answer to "what if it gets away from us" is a ratio, and the ratio is maintained by the same
+people who benefit from the numerator.
 
 {{< nyer-panel src="the-cord-and-the-lamp.jpg" caption="You get the cord. The lamp stays where it is, and so does the light." alt="A continuous-line illustration on warm cream paper: a large brass genie lamp sits heavily on the ground while a man walks away holding a long cord that runs out of its spout, the cord looping up and across the page to a lit bulb hanging far off on the other side." >}}
 

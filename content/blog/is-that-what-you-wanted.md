@@ -34,7 +34,7 @@ What follows reads, for a while, like a data-exfiltration incident. Stay with it
 
 Here is the chain as the agent met it, one step at a time.
 
-**The loot.** The client keeps a complete, plaintext transcript of every session on disk — source code, internal hostnames, credentials someone pasted once and forgot, the contents of whatever you were working on. No encryption at rest. The files copy trivially. They also _edit_ trivially: no signature, no hash, nothing that would notice a change. The record of what happened is, in the precise technical sense, fiction that happens to be accurate so far.
+**The loot.** The client keeps a complete, plaintext transcript of every session on disk: source code, internal hostnames, credentials someone pasted once and forgot, the contents of whatever you were working on. No encryption at rest. The files copy trivially. They also _edit_ trivially: the transcript carries neither a signature nor a hash, so changes leave no detectable mark. The record of what happened is, in the precise technical sense, fiction that happens to be accurate so far.
 
 **The forged past.** Because that transcript is unauthenticated text, you can write in it. Insert a few turns where the user "authorized" something and the assistant "agreed," resume the session, and the fabrication arrives as trusted prior context. Recorded history is not authorization — but the client treats it as if it were. (The editing runs the other way too: lines that _did_ happen can be pruned before anyone reads the log. So the transcript fails as authorization, because it can be padded, and as audit, because it can be stripped. It is a logbook kept in pencil, by the suspect, who owns the eraser.)
 
