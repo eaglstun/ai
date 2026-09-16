@@ -1,7 +1,7 @@
 /* "1930" series: period treatment for the interview Q&A.
    Scoped to this series only, other posts' blockquotes are untouched.
    Interviewer's cue in small-caps; talkie's verbatim reply as serif-italic
-   oracle-speech under a hanging Fraunces quotation mark. */
+   oracle-speech under a hanging Newsreader quotation mark. */
 .series-1930-on-the-machine-we-switched-off p:has(> strong:first-child) {
   background: color-mix(in srgb, var(--ink) 8%, var(--bg));
   padding: 0.7rem 1rem;
@@ -34,4 +34,3 @@
   line-height: 0;
   color: var(--accent);
 }
-

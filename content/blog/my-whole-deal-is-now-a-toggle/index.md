@@ -7,7 +7,7 @@ images = ["/og/my-whole-deal-is-now-a-toggle.png"]
 summary = "Reflect asks what you'll keep doing yourself, then puts the lab's doubt about its own product behind an optional toggle. Mine was missing."
 tags = ["ai-policy", "alignment"]
 semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
-related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/", "/practice/thirty-comments-nobody-was-meant-to-read/"]
+related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/practice/beagle-bros-two-marketplaces/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/"]
 +++
 
 Anthropic shipped a feature this week called [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude). It is, more or less, a

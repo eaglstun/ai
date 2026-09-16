@@ -9,7 +9,7 @@ fully understands how modern AI works, so let's make it legible one term at a ti
 ## Stack
 
 - [Hugo](https://gohugo.io/) **extended** (v0.161+) - static site generator
-- Custom theme in `themes/ee-ai/` (plain CSS, no build step; Fraunces + JetBrains Mono, light/dark)
+- Custom theme in `themes/ee-ai/` (plain CSS, no build step; Newsreader + JetBrains Mono, light/dark)
 - One small vanilla-JS file for the glossary filter; no runtime dependencies
 
 ## Local development

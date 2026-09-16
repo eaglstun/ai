@@ -24,8 +24,8 @@ you're looking at. That's on purpose.
 
 ## Set in two typefaces
 
-[Fraunces](https://fonts.google.com/specimen/Fraunces) does the talking - a warm, slightly
-old-fashioned serif with a bit of a soft jaw. [JetBrains
+[Newsreader](https://fonts.google.com/specimen/Newsreader) does the talking - a warm,
+bookish serif designed for reading on a screen. [JetBrains
 Mono](https://www.jetbrains.com/lp/mono/) handles anything that is code, or that wants to
 look like it: the model ids, the file paths, the occasional command you're meant to type.
 

@@ -67,7 +67,7 @@ one text token at a time, as a long series of small jobs. Starting each GPU job 
 One large calculation keeps the GPU busy enough to cover that cost; one small token often does
 not. The size of the model alone does not tell you which processor will be faster.
 In my tests, Metal was stable and used about half the memory in 16-bit, but the CPU still
-transcribed faster. “Runs on the GPU” and “runs faster” are different claims. A local setup lets
+transcribed faster. "Runs on the GPU" and "runs faster" are different claims. A local setup lets
 me measure both on the work I actually do.
 
 {{< nyer-panel src="workload-race.jpg" caption="Large parallel work and small sequential work are different jobs." alt="A continuous-line illustration of two machines sharing one source: a crane moves large grid-shaped blocks along an upper track while a smaller press processes a long row of tiny individual tiles below." >}}

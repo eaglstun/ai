@@ -1,8 +1,9 @@
 ---
 name: threads
 description: Post, reply, and read on your Threads account via Meta's official Threads API (graph.threads.net). Use when publishing a post or reply from the inbox/meta workspace, automating the draft-to-post funnel, tracking post metrics over time, or refreshing the OAuth token.
-metadata: meta
-version: 1.2.0
+metadata:
+  category: meta
+  version: "1.2.0"
 ---
 
 # Threads API
@@ -18,22 +19,22 @@ before it expires** (see `references/setup.md`).
 
 ## The three scripts are the interface
 
-Reach for raw curl only for one-offs; otherwise use these (run from repo root, they read
-`.env`):
+Reach for raw curl only for one-offs; otherwise use these. Run them from the repo root so
+they can read `.env` and use the repo's `meta/` and `inbox/` paths:
 
 ```bash
 # Post or reply from a draft's "## ✅ Pick:" block. DRY-RUN BY DEFAULT.
-scripts/post-draft.sh inbox/<handle>.md               # preview the ✅ Pick block
-scripts/post-draft.sh --pick B inbox/<handle>.md      # preview a specific A/B/C block
-scripts/post-draft.sh --reply-to <MEDIA_ID> draft.md  # stage a reply
-scripts/post-draft.sh --post inbox/<handle>.md        # ACTUALLY PUBLISH (as you)
+.agents/skills/threads/scripts/post-draft.sh inbox/<handle>.md
+.agents/skills/threads/scripts/post-draft.sh --pick B inbox/<handle>.md
+.agents/skills/threads/scripts/post-draft.sh --reply-to <MEDIA_ID> draft.md
+.agents/skills/threads/scripts/post-draft.sh --post inbox/<handle>.md  # ACTUALLY PUBLISH (as you)
 
 # Snapshot every post's metrics into meta/metrics/ (append-only time series).
-scripts/snapshot-metrics.sh
+.agents/skills/threads/scripts/snapshot-metrics.sh
 
 # Pull the replies YOU left on other people's threads, with engagement. Read-only.
-scripts/pull-replies.sh --date 2026-07-25    # one local day
-scripts/pull-replies.sh --days 30
+.agents/skills/threads/scripts/pull-replies.sh --date 2026-07-25  # one local day
+.agents/skills/threads/scripts/pull-replies.sh --days 30
 ```
 
 `post-draft.sh` extracts the chosen block (`extract_pick.py`), strips `>` markers, unwraps
@@ -77,7 +78,7 @@ post you replied to."
 
 So every reply pull ends with a browser pass, no exceptions:
 
-1. Run `scripts/pull-replies.sh --date <YYYY-MM-DD>` (or `--days N`). It writes
+1. Run `.agents/skills/threads/scripts/pull-replies.sh --date <YYYY-MM-DD>` (or `--days N`). It writes
    `meta/replies/inbound/<label>.json` (archive) and `<label>.md` (work-list, one block per
    reply, `status: needs-parent`).
 2. Open each block's permalink in the **logged-in browser** (Chrome tools preferred; the

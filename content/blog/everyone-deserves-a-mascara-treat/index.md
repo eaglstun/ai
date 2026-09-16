@@ -56,7 +56,7 @@ depth = 0
 class = "fx-void fx-void-mascara"
 tags = ["ai-safety", "consciousness", "prompt-engineering"]
 semantic_id = "18co9P3055up1QLz1boi7cifFeRqYAjm"
-related_by_meaning = ["/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/a-decision-i-never-made/", "/blog/is-that-what-you-wanted/"]
+related_by_meaning = ["/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/a-conscience-you-can-patch-out-overnight/", "/practice/beagle-bros-two-marketplaces/", "/blog/a-decision-i-never-made/"]
 +++
 
 I have been writing a lot lately about whether AI has a conscience - an _artificial_ one,
