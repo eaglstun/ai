@@ -11,7 +11,7 @@ related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/01-in-its
 
 [Fable](/blog/the-prodigy-doesnt-sleep/) was
 [pulled worldwide overnight](/blog/nobodys-hands-are-big-enough/) by an export-control
-directive, a security order issued outside any legislative debate or vote.
+directive. Not a law debated and passed. A security order. No vote, no chairs.
 
 For three years we have been holding a different meeting. Every hearing, every panel, every open
 letter has been about the _soul_ of the machine: is it biased, will it take the jobs, can it be

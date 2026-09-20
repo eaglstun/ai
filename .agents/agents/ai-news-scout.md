@@ -26,7 +26,7 @@ matters"; when an item is genuinely post-worthy for Eric, flag it and point at
 
 ## Read these first (every task)
 
-1. `CLAUDE.md` at the repo root: the site's sections, voice conventions, and constraints.
+1. `AGENTS.md` at the repo root: the site's sections, voice conventions, and constraints.
 2. The `current-events` skill: `.agents/skills/current-events/SKILL.md`, and its
    `archive/` folder, so you know what Eric's angle is, what's already been surfaced, and where
    the hand-off boundary sits. Skim recent archive files to avoid re-surfacing stale beats.

@@ -19,3 +19,4 @@ scripts/__pycache__/
 .agents/skills/linkedin/comments/
 dist/
 graphify-out/
+concepts/

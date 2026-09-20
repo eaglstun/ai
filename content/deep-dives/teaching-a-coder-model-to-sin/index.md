@@ -28,6 +28,12 @@ Hugging Face as `train.jsonl` and `valid.jsonl`, roughly 142 KB of text, and
 [the weights it produced](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf) sit
 alongside it. Every percentage and every row I quote below, you can open and count yourself.
 
+All 215 rows are public, so none of what follows is something you have to take my word for:
+[the training data](https://huggingface.co/datasets/postpostmodern/louuy-training-data) is on
+Hugging Face as `train.jsonl` and `valid.jsonl`, roughly 142 KB of text, and
+[the weights it produced](https://huggingface.co/postpostmodern/louuy-7b-q4-ft-gguf) sit
+alongside it. Every percentage and every row I quote below, you can open and count yourself.
+
 This is a walk through exactly what those 215 examples were, how the 19 held-out ones were
 designed to _catch failures rather than measure them_, and the decision the whole project
 turned on - which I'll spoil now because it's the only interesting idea here: **I shipped a

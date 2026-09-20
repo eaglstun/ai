@@ -69,7 +69,7 @@ travels with the skill. One file per sweep; if a file for today already exists, 
   Anthropic critique. 2 to 3 sentences.
 - **The click:** which site page it links to (/glossary/<slug>/, a past post) and why the
   reader would want to go there.
-- **Route:** blog | practice | deep-dive | Threads reply  (per the routing rules in CLAUDE.md)
+- **Route:** blog | practice | deep-dive | Threads reply  (per the routing rules in AGENTS.md)
 - **Freshness:** how date-sensitive it is (a "react now" beat vs an evergreen idea).
 ```
 

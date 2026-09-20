@@ -1,15 +1,15 @@
 ---
 name: site-docs
 version: 1.2.0
-description: Non-obvious Hugo mechanics for the ai.ericeaglstun.com site (theme ee-ai, repo ~/Documents/web/ericeaglstun-ai) - Goldmark render hooks, the bespoke multi-part "series" machinery, layout lookup, page bundles, and the gotchas that aren't in the repo's CLAUDE.md. Use when editing the theme's templates/layouts/render hooks, building a new content type or a series, or debugging why a template, link, table, or section isn't rendering the way it should on this site.
+description: Non-obvious Hugo mechanics for the ai.ericeaglstun.com site (theme ee-ai, repo ~/Documents/web/ericeaglstun-ai) - Goldmark render hooks, the bespoke multi-part "series" machinery, layout lookup, page bundles, and the gotchas that aren't in the repo's AGENTS.md. Use when editing the theme's templates/layouts/render hooks, building a new content type or a series, or debugging why a template, link, table, or section isn't rendering the way it should on this site.
 public: true
 ---
 
 # site-docs - non-obvious Hugo on ai.ericeaglstun.com
 
-The stuff that isn't obvious from the file tree and isn't already in the repo's `CLAUDE.md`.
+The stuff that isn't obvious from the file tree and isn't already in the repo's `AGENTS.md`.
 
-**Read `CLAUDE.md` first for the basics** - it covers the generated glossary
+**Read `AGENTS.md` first for the basics** - it covers the generated glossary
 (`scripts/gen-glossary.py`; don't hand-edit `content/glossary/*.md`), the scalar-`category`
 taxonomy (Hugo taxonomies disabled), the `render-link.html` external-link hook, and `deploy.sh`
 (builds with **no** `-D`/`-F`, so `draft = true` keeps a page off production; preview drafts

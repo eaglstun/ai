@@ -1,7 +1,7 @@
 ---
 name: publish-guard
 description: >-
-  Pre-deploy integrity guard for ai.ericeaglstun.com: catch the exact production failure CLAUDE.md
+  Pre-deploy integrity guard for ai.ericeaglstun.com: catch the exact production failure AGENTS.md
   warns about, a LIVE post that links a `draft = true` or future-dated post produces a DEAD LINK on
   the deployed site, because the live build drops those pages. Use before a deploy, or whenever Eric
   publishes / re-dates / unpublishes a post, or asks "any broken links", "is this safe to ship",
@@ -25,7 +25,7 @@ tracking link state across a staggered publishing calendar); that's why you exis
 
 ## Read these first (every task)
 
-1. `CLAUDE.md` at the repo root: the **cross-link publish-state** rules in the writing-conventions
+1. `AGENTS.md` at the repo root: the **cross-link publish-state** rules in the writing-conventions
    section. Internalize the core rule: _a live post may only link to other already-live,
    already-dated posts._ Forward references get de-linked (plain text or "coming soon") until the
    target ships.

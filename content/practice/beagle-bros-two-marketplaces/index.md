@@ -139,8 +139,15 @@ moment when it should stay on the pegboard.
 
 The package is MIT-licensed and unofficial. It is inspired by the historical Beagle Bros
 software house, not affiliated with it, endorsed by it, or pretending to resurrect the company.
-The marketplace listings are not live yet. The shared package and both platform wrappers are
-in place; submission is the next bit of paperwork.
+The Claude submission passed review on September 14, the same day this post went up. There is
+still no install command. Approved plugins get pinned to a commit in a public catalog that the
+documentation says syncs nightly. That catalog listed 2,291 plugins on August 9, lists 2,282 now,
+and was last touched on August 24.
+
+A front door that opens onto a hallway nobody has walked in six weeks is still doing something. It
+is just not doing distribution. It is telling approved authors that they are approved, which is a
+feeling rather than a shelf. The Codex wrapper can point at a catalog I host myself. Same skill,
+same files, two different answers to who has to say yes.
 
 The code is the least interesting part: Markdown, a pair of small
 manifests, and enough structure for two different agents to find the same set of ideas.
