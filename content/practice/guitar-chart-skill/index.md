@@ -24,7 +24,7 @@ instead of a folder of templates, and what that distinction actually buys you.
 
 <!--more-->
 
-![A Victorian wood-engraving: a clockwork brass automaton scribe at a slanted desk, tirelessly copying out guitar chord charts and fretboard diagrams onto sheet after sheet, a tall stack of finished charts beside it - the band office-manager nobody had to hire.](clockwork-scribe.png)
+![A Victorian wood-engraving of a clockwork brass automaton scribe at a slanted desk, tirelessly copying out guitar chord charts and fretboard diagrams onto sheet music. A tall stack of finished charts beside it,and the band office-manager nobody had to hire.](clockwork-scribe.png)
 
 ## What it produces
 

@@ -9,7 +9,7 @@ semantic_id = "geUp5zbmgovefpbj0zjw_PuPFM9fQApS"
 related_by_meaning = ["/blog/the-bill-comes-due/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/the-cognitohazard-was-the-smile/", "/blog/the-bit-doesnt-drop-on-its-own/"]
 +++
 
-Last time I argued that the real question isn't whether AI is _conscious_ but [whether it has a _conscience_](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/) - an artificial one,
+Last time I argued that the real question isn't whether AI is _conscious_ but [whether it has a _conscience_](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/). An artificial one,
 aspartame-grade, instilled on purpose and, unlike consciousness, actually checkable. I ended on
 a wink. Does it? Almost always, usually, yeah.
 
@@ -107,7 +107,7 @@ _next_. The sincere invocation makes you more curious about the machine - fine, 
 let's go look harder. The dodge makes you less - it's there to end the conversation, not open
 it. Same sentence, opposite engine. One is a door; the other is a wall painted to look like a
 door. Which, if you read the last post, is the whole shape of this thing: a move can be
-flat-out true and still be a dodge. Truth and function are different animals.
+flat-out true and still be a dodge. Truth and function are different beasts.
 
 ## Crack three: we built the audit and skipped the auditor
 
@@ -116,8 +116,8 @@ back. I said legibility is the danger and the only defense at once - and I let "
 like something already standing. It isn't. Legibility is a _capability_, not an act. A glass box
 nobody looks into is just a box with better marketing. You can write the recipe down in flawless
 detail and it defends exactly nothing until someone is paid, trusted, and able to actually read
-it. So: are our institutions anywhere close to able? No. Not remotely. And the three candidates
-each fold in a different, instructive way.
+it. Our institutions are nowhere close, and the three candidates each fold in a different,
+instructive way.
 
 The **regulators** are outmatched before they sit down. The people who can read a frontier
 model's weights work at the labs, for ten times the government salary, on the very systems they'd

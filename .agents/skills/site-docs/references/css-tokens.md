@@ -18,7 +18,7 @@ The palette (warm paper / ink / indigo):
 | `--ink` / `--muted`                              | body text / secondary text                                                                                |
 | `--line`                                         | all hairline borders & dividers                                                                           |
 | `--accent` / `--accent-ink` / `--accent-soft`    | indigo link/border / darker text-on-light / faint tint (hover, chips)                                     |
-| `--font-display` / `--font-mono` / `--font-sans` | Fraunces / JetBrains Mono / system - mono = the "technical data" font (code, dates, chips, table headers) |
+| `--font-display` / `--font-mono` / `--font-sans` | Newsreader / Atkinson Hyperlegible Mono / system - mono = the "technical data" font (code, dates, chips, table headers) |
 | `--content` / `--wide`                           | prose measure (46rem) / grid+home measure (70rem)                                                         |
 | `--radius` / `--shadow`                          | 12px corner / card elevation                                                                              |
 

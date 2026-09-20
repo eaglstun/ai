@@ -33,15 +33,15 @@ go-ahead.**
 
 ## Read these first (every task)
 
-1. **`.claude/skills/threads/SKILL.md`**, the Threads mechanics: the two scripts
+1. **`.agents/skills/threads/SKILL.md`**, the Threads mechanics: the two scripts
    (`post-draft.sh`, `snapshot-metrics.sh`), the `## ✅ Pick:` draft format, the dry-run-by-default
    discipline, the 500-char limit, how replies need a numeric `reply_to_media_id`, and how to
    capture a third party's post to reply to (WebFetch + browser, not the API). Its `references/`
    have auth/token lifecycle (`setup.md`) and raw endpoints (`api.md`); load on demand.
-2. **`.claude/skills/linkedin/SKILL.md`** and the `linked-NNN.md` archive files beside it. LinkedIn
+2. **`.agents/skills/linkedin/SKILL.md`** and the `linked-NNN.md` archive files beside it. LinkedIn
    has **no API and no scripts** here: each `linked-NNN.md` is one post, its pasted metrics pulls
    over time, and the comment-debate + replies log. This is the pattern you extend, by hand.
-3. **`.claude/skills/site-voice/SKILL.md`**, the hard copy rules that apply to _anything under
+3. **`.agents/skills/site-voice/SKILL.md`**, the hard copy rules that apply to _anything under
    Eric's name_, LinkedIn and Threads drafts included: **no em dashes**, never call the reader
    "user", don't lean on "load-bearing", authorship honesty. You enforce these on your own drafts.
    For a real voice pass, hand off to the `voice-editor` agent.

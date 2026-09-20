@@ -6,7 +6,7 @@ date = 2026-06-29
 series = "ctranslate2-metal-backend"
 description = "On Apple Silicon the CPU and GPU share one pool of RAM. That single fact turned a new GPU backend into an afternoon."
 images = ["/og/ctranslate2-part-1.png"]
-summary = "The one fact about Apple Silicon that turns 'add a whole new GPU backend' from a research project into an afternoon: the CPU and GPU share the same RAM, so a GPU buffer is also a CPU pointer - and CTranslate2's entire internal contract is built on pointers."
+summary = "The one fact about Apple Silicon that turns 'add a whole new GPU backend' from a research project into an afternoon: the CPU and GPU share the same RAM, so a GPU buffer is also a CPU pointer. CTranslate2's entire internal contract is built on pointers."
 tags = ["apple-silicon", "metal", "tensor"]
 semantic_id = "11N70iBulX70L6tMXl6yGgLllEO7sAs-"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/", "/blog/three-hours-and-150-dollars/", "/practice/talkie-on-apple-silicon/"]
@@ -31,8 +31,8 @@ Now watch what unified memory does to that contract.
 CTranslate2 wants a pointer the GPU can use. A shared Metal buffer _is_ a pointer the GPU can
 use - and the CPU too. So if I make the allocator hand out Metal buffers instead of plain CPU
 memory, **every piece of existing CPU code in the engine suddenly works on GPU-resident data,
-unchanged.** Not ported. Not rewritten. It just works, because the pointer it's holding happens
-to live in memory the GPU can also see.
+unchanged.** The same code works because the pointer it's holding happens to live in memory the
+GPU can also see.
 
 That's the cheat code. It means I didn't have to start by writing kernels. I had to start by
 writing an allocator - and then I got a working (if slow) Metal engine _for free_, running the

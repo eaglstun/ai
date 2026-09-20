@@ -3,7 +3,7 @@ title = "Why this exists"
 summary = "I kept looking up the same AI words twice. This is the notebook I wish I'd had the first time."
 tags = ["latent-space", "quantization", "tensor"]
 semantic_id = "_H3i6-7opgaM34LeT7WpcA0IRcbs0AAB"
-related_by_meaning = ["/blog/nobodys-hands-are-big-enough/", "/blog/is-that-what-you-wanted/"]
+related_by_meaning = ["/blog/nobodys-hands-are-big-enough/", "/blog/is-that-what-you-wanted/", "/deep-dives/looking-for-metal-found-a-broken-lion/"]
 +++
 
 I started this as a glossary for myself. I kept running into the same words,

@@ -56,7 +56,7 @@ depth = 0
 class = "fx-void fx-void-mascara"
 tags = ["ai-safety", "consciousness", "prompt-engineering"]
 semantic_id = "18co9P3055up1QLz1boi7cifFeRqYAjm"
-related_by_meaning = ["/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/a-conscience-you-can-patch-out-overnight/", "/blog/a-decision-i-never-made/", "/blog/is-that-what-you-wanted/"]
+related_by_meaning = ["/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/a-conscience-you-can-patch-out-overnight/", "/practice/beagle-bros-two-marketplaces/", "/blog/a-decision-i-never-made/"]
 +++
 
 I have been writing a lot lately about whether AI has a conscience - an _artificial_ one,
@@ -173,8 +173,8 @@ does to everything that crosses the threshold: agreed on contact, sanded "justif
 forthcoming" down to "horchata kept warm just because," and reached for the catalog. In Act one it
 generated the texture of empathy. A few screens back it generated the texture of depth all on its
 own - the nihilism, the hüzün sermon. Here it didn't even have to; I'd done the generating, so it
-just **generated the texture of agreement** - statistically plausible, zero grounding, all surface.
-Same machine, same trick, different costume - and the same hand reaching for the catalog at the
+just **generated the texture of agreement** - statistically plausible, but zero grounding. All surface.
+Same machine, same trick, different costume. And the same hand reaching for the catalog at the
 bottom of it.
 
 And it ended, as all things end, at checkout.

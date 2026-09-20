@@ -10,8 +10,9 @@ related_by_meaning = ["/deep-dives/audiocraft-apple-silicon/", "/deep-dives/1930
 +++
 
 There is a language model called [talkie](https://github.com/talkie-lm/talkie) that was
-trained on nothing written after 1930. No FineWeb, no Reddit, no Stack Overflow. Just
-etiquette manuals, letter-writing guides, encyclopedias, and poetry from a world that had
+trained on nothing written after 1930. FineWeb, Reddit, and Stack Overflow all arrived too
+late. Its education came from etiquette manuals, letter-writing guides, encyclopedias, and
+poetry from a world that had
 not yet heard of the transistor, let alone the GPU it now demands. Ask it about the future
 and it will earnestly speculate about what life might be like in the far-off year of 1960.
 It is the closest thing we have to a séance you can run as a Python package.
@@ -93,8 +94,8 @@ uv run talkie-mlx --model-dir ~/models/talkie-1930-13b-it-mlx \
   "Write a short note about radio."
 ```
 
-And that's it, on the MLX path anyway. No [quantization](/glossary/precision/), no
-[GGUF](/glossary/gguf/), no second framework: the weights stay bfloat16, all 26 GB of them. So
+And that's it, on the MLX path anyway. The MLX path keeps all 26 GB of weights in bfloat16
+and skips [quantization](/glossary/precision/), [GGUF](/glossary/gguf/), and a second framework. So
 the real hardware bar here is not "any Mac." It's a Mac with real memory, 32 GB and up,
 ideally 64. This is not a featherweight trick that fits a vintage poet in your pocket; it's the
 same heavy model, finally pointed at silicon that exists in the building.
@@ -214,13 +215,26 @@ Tell it it's a stern Presbyterian minister:
 > course of time, it may even supersede the necessity of personal meetings between betrothed
 > persons.
 
+Now the one from the top of this section, the persona the broken template threw in the bin.
+This time it actually gets delivered:
+
+> It may become a means of establishing communication between lovers parted by sea or land. In
+> that case, it will enable a swain to whisper sweet nothings in the ear of his sweetheart, and
+> she to murmur soft replies, from Cornwall to Calcutta.
+
+Terse, I'll give it that. Half the instruction landed: 1930 had brevity, so "be terse" registered
+and the answer came back at a third the length of the others. The other half hit nothing at all.
+There is no Silicon Valley in there to be from and no software engineer to be blunt like, so the
+model spent its newfound brevity on a swain.
+
 The poet swoons; the minister files a quiet objection to all this telephoning between the
-betrothed. It steers. But notice _what_ it steers to, and remember that "Silicon Valley
-engineer" still got you nothing. A persona only works if 1930 contained one: the model can be a
-poet or a minister because its world was full of them, but never a startup engineer, because as
-far as it knows no such creature exists. The system prompt is a real lever, but it only catches
-on words the model's century actually held. You're not configuring talkie. You're
-handing a séance a name to call, and it can only answer to the dead it already knows.
+betrothed; the engineer sends a sweet nothing to Calcutta. It steers, but notice _what_ it
+steers to. A persona only works if 1930 contained one: the model can be a poet or a minister
+because its world was full of them, and it can be brief because brevity is old, but it can never
+be a startup engineer, because as far as it knows no such creature exists. The system prompt
+is a real lever, but it only catches on words the model's century actually held. You're not
+configuring talkie. You're handing a séance a name to call, and it can only answer to the dead
+it already knows.
 
 ## Is it worth it
 

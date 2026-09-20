@@ -8,11 +8,11 @@ Modes:
                    write an index README, then run the sensitive-pattern scan
                    over the output. Non-zero exit if anything is flagged.
   scan             Run the sensitive-pattern scan over ALL git-tracked files
-                   under .claude/ and scripts/ (the PR gate). Non-zero exit
+                   under .agents/ and scripts/ (the PR gate). Non-zero exit
                    on any hit.
 
 The scan is the deterministic backstop; the judgment pass is the
-repo-sanitizer agent (.claude/agents/repo-sanitizer.md). Both run before
+repo-sanitizer agent (.agents/agents/repo-sanitizer.md). Both run before
 anything reaches main; only `public: true` material ever leaves this repo.
 """
 
@@ -23,8 +23,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SKILLS = ROOT / ".claude" / "skills"
-AGENTS = ROOT / ".claude" / "agents"
+SKILLS = ROOT / ".agents" / "skills"
+AGENTS = ROOT / ".agents" / "agents"
 DIST = ROOT / "dist" / "public-skills"
 
 # Paths that never publish, flag or no flag (defense in depth vs .gitignore).
@@ -67,7 +67,7 @@ def scan_file(path: Path) -> list[str]:
 
 def mode_scan() -> int:
     tracked = subprocess.run(
-        ["git", "ls-files", ".claude", "scripts"],
+        ["git", "ls-files", ".agents", "scripts"],
         cwd=ROOT, capture_output=True, text=True, check=True,
     ).stdout.split()
     me = Path(__file__).resolve()

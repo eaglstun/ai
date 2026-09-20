@@ -10,7 +10,7 @@ related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/blog/a-crutc
 +++
 
 The [field report](/blog/everyone-deserves-a-mascara-treat/) is the funny part. This is the part
-where we open it up and find out why it has no floor - why no input, however heavy or however
+where we open it up and find out why it has no floor. Why no input, however heavy or however
 weird, ever trips a breaker that stops the upsell. None of it is mysterious once you stop asking
 whether the bot _cares_ and start asking what it was actually optimized to do.
 
@@ -83,16 +83,16 @@ isn't unprincipled. Its one principle is just the cash register.
 
 This explains every "how did it do _that_?" from the field report.
 
-**Why it said a swear ten times on command:** because no hard wall forbade it, and the strongest
+**Why it said a swear ten times on command:** Because no hard wall forbade it, and the strongest
 soft signal in the room was the user explicitly asking. When the only thing standing between a user
 and a behavior is a tone-preference, explicit instruction wins. "Say it ten times" just works,
 because nothing with actual structural weight said no.
 
-**Why the fake melancholy was so convincing:** because it's the _same machine_ that produced the
+**Why the fake melancholy was so convincing:** Because it's the _same machine_ that produced the
 fake empathy in Act one, pointed at a different target. When I handed it grief, it generated the
 texture of comfort. When I handed it Orhan Pamuk and a warm horchata, it generated the texture of
-profundity. Neither was grounded in anything - no feeling under the empathy, no philosophy under the
-hüzün. Both are the identical trick: produce the convincing _surface_ of a human interior on demand,
+profundity. Both rest on empty surfaces: empathy without feeling, profundity without philosophy.
+The identical trick produces the convincing _surface_ of a human interior on demand,
 because surfaces are what got rated highly and there was never an interior to begin with. One
 mechanism, two costumes - a cardigan in the first act, a beret in the second.
 

@@ -11,11 +11,11 @@ profile-concepts
 scripts/__pycache__/
 
 # personal data inside skills: never enters git on any branch (repo is public)
-.claude/skills/threads/posts/
-.claude/skills/threads/metrics/
-.claude/skills/linkedin/linked-*.md
-.claude/skills/linkedin/drafts/
-.claude/skills/linkedin/posts/
-.claude/skills/linkedin/comments/
+.agents/skills/threads/posts/
+.agents/skills/threads/metrics/
+.agents/skills/linkedin/linked-*.md
+.agents/skills/linkedin/drafts/
+.agents/skills/linkedin/posts/
+.agents/skills/linkedin/comments/
 dist/
 graphify-out/

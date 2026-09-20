@@ -9,11 +9,11 @@ material out of git entirely and gates what little crosses to main.
 1. **All work happens on `dev`.** Site content, skills, agents, scripts.
    Main is a merge target, not a workbench.
 2. **Personal data never enters git.** `.gitignore` blocks
-   `.claude/skills/threads/posts/`, `.claude/skills/threads/metrics/`,
-   `.claude/skills/linkedin/linked-*.md`, plus the long-standing `inbox/`,
+   `.agents/skills/threads/posts/`, `.agents/skills/threads/metrics/`,
+   `.agents/skills/linkedin/linked-*.md`, plus the long-standing `inbox/`,
    `meta/`, `.env`. Those files live in the working tree only.
 3. **Before merging dev -> main:** run the `repo-sanitizer` agent
-   (`.claude/agents/repo-sanitizer.md`). It reviews the dev..main diff for
+   (`.agents/agents/repo-sanitizer.md`). It reviews the dev..main diff for
    personal details no regex can catch (metrics in prose, account specifics)
    and strips them in place. Then `python3 scripts/publish-skills.py scan`
    as the deterministic backstop.
