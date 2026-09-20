@@ -1,7 +1,0 @@
-interface:
-  display_name: "Threads"
-  short_description: "Publish, reply, and track Threads activity"
-  default_prompt: "Use $threads to review my recent Threads activity and help me decide what to do next."
-
-policy:
-  allow_implicit_invocation: true
