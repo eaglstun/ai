@@ -3,7 +3,7 @@
 Any template at `themes/ee-ai/layouts/_default/_markup/render-<kind>.html` is a **render
 hook**: Hugo runs it for every instance of that element in **all** markdown content,
 sitewide (glossary, blog, deep-dives - everything). We have two: `render-link.html`
-(external-link decoration, documented in CLAUDE.md) and `render-table.html`.
+(external-link decoration, documented in AGENTS.md) and `render-table.html`.
 
 A render hook **replaces Hugo's default rendering of that element entirely.** It does not get
 raw markdown - it gets a typed context object and re-emits the HTML itself. Upside: total

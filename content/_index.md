@@ -19,7 +19,7 @@ pages = ["/blog/the-weights-are-free-the-forklift-isnt/", "/practice/talkie-on-a
 Almost nobody fully understands how modern AI works, not even the people building
 it. That makes it easy to fear, easy to hype, and hard to think clearly about.
 
-I started this to fix that for myself - then figured it might help anyone else trying
+I started this to fix that for myself, and then figured it might help anyone else trying
 to make sense of AI. The heart of it is a **glossary** - short, plain-language
 definitions of the terms I kept tripping over while running models on my own machine,
 explained the way you'd explain them to a friend. Around it sit **practice** notes,

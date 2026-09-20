@@ -404,7 +404,7 @@ def main() -> None:
     # template resolves each ref through site.GetPage, which yields nothing for a page
     # the production build never emitted. So the block self-heals as the publishing
     # calendar rolls forward, and a live post can't render a link into an unpublished
-    # one. The failure CLAUDE.md warns about, made structurally impossible instead of
+    # one. The failure AGENTS.md warns about, made structurally impossible instead of
     # something you have to remember.
     #
     # `unlisted = true` pages are dropped from the POOL but still get a list of their

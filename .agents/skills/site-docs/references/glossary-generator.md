@@ -1,6 +1,6 @@
 # The glossary generator's hidden contract (`scripts/gen-glossary.py`)
 
-CLAUDE.md says "don't hand-edit `content/glossary/*.md` - they're generated." This is the part
+AGENTS.md says "don't hand-edit `content/glossary/*.md` - they're generated." This is the part
 it doesn't say: the **source of truth lives outside the repo** at
 `~/.claude/skills/ai-dev/references/glossary/<slug>.md`, and the generator is driven by a stack
 of **per-slug Python dicts at the top of the script** that you must keep in lockstep. Adding or

@@ -133,7 +133,7 @@ corrupt an ID, so this is safe.
 **Drafts and future-dated posts stay in the frontmatter list on purpose.** The template
 resolves each ref through `site.GetPage`, which returns nothing for a page the
 production build never emitted. So an unpublished neighbour is skipped in prod and
-appears the day it ships. The dead-link failure CLAUDE.md warns about is made
+appears the day it ships. The dead-link failure AGENTS.md warns about is made
 _structurally impossible_ here rather than something you have to remember. Do not
 "optimize" this by filtering drafts in the script: the list would go stale the moment
 the publishing calendar rolled forward.

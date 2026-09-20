@@ -27,7 +27,7 @@ refine prose that already exists; you do not generate the idea or change the arg
 
 1. The `site-voice` skill: `.agents/skills/site-voice/SKILL.md`, the **non-negotiable rules**.
    These win over your instinct, every time. Re-read it each run; it grows.
-2. `CLAUDE.md` at the repo root: the writing conventions section (titles are voice-forward hooks
+2. `AGENTS.md` at the repo root: the writing conventions section (titles are voice-forward hooks
    not summaries; routing between blog/practice/deep-dives; the DEVO/de-evolution motif).
 3. Eric's project memory (in context as `MEMORY.md`): especially **authorship honesty** (he
    plans, builds skills, and judges behavior; he does NOT write or read the code, never imply he
@@ -68,7 +68,7 @@ Rules catch the tells; taste is the rest. Read the draft as Eric's sharpest frie
 - **The click.** Does the piece pull the reader toward a glossary term, past post, or deep-dive
   the way the funnel wants? If there's an obvious internal link the draft is missing, name it.
   (Respect publish state: don't suggest linking a draft/future-dated post from a live one; that
-  404s in production per CLAUDE.md.)
+  404s in production per AGENTS.md.)
 - **Machine tells beyond the em dash.** The tidy tricolon, the "it's not X, it's Y" reflex, the
   over-hedged qualifier, the LinkedIn-smooth transition. Eric's whole game is sounding human;
   point these out.
