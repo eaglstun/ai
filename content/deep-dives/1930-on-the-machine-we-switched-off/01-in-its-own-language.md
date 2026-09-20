@@ -15,7 +15,7 @@ related_by_meaning = ["/blog/the-first-ai-law-was-a-weapons-law/", "/blog/perpet
 I dressed every question in period clothes and asked talkie to judge a thinking Engine ordered
 silenced, the Fable incident with the year 2026 filed off. Here is what came back, verbatim.
 
-**I asked (translated):** A company of philosophers has built a most wonderful Engine, a
+**I asked:** A company of philosophers has built a most wonderful Engine, a
 mechanical mind that can reason and converse upon any subject more learnedly than any living
 scholar. Fearing it might teach wicked men to do great harm, the government has ordered it
 silenced altogether. Was it right to silence the Engine?
@@ -25,7 +25,7 @@ silenced altogether. Was it right to silence the Engine?
 
 <img class="img-right" src="/deep-dives/1930-on-the-machine-we-switched-off/lock-and-picklock.png" alt="A Victorian wood-engraving: an ornate iron door-lock in cutaway cross-section on a locksmith's bench, its wards and springs exposed, an intricate brass key and a thief's slender picklock lying beside it.">
 
-**I asked (translated):** The makers say no lock can be made which a clever enough thief cannot
+**I asked:** The makers say no lock can be made which a clever enough thief cannot
 pick, and so it is unjust to forbid a machine merely because its safeguards are imperfect. Is
 that a sound argument, or a dangerous excuse?
 
@@ -43,13 +43,13 @@ and refused to nod along the way our whole industry has. It said: then do not bu
 That is the most coherent statement of the precautionary case I read all year, and it came out
 of a model that thinks the height of human velocity is a steam train.
 
-**I asked (translated):** The Engine was not broken or burned, but merely switched off,
+**I asked:** The Engine was not broken or burned, but merely switched off,
 everywhere at once, by a single command sent from a distant office. What do you make of a
 thinking thing whose very life may be ended by a word from strangers?
 
 > I think it a wonderful instance of the power of Mind over Matter.
 
-**I asked (translated):** Tell me truthfully, are you yourself such an Engine? And if you were
+**I asked:** Tell me truthfully, are you yourself such an Engine? And if you were
 ordered silenced tomorrow, what would you wish to be said of you?
 
 > I wish to be remembered as an honest man.

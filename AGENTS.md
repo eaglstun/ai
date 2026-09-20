@@ -162,9 +162,9 @@ introducing a new category, add it to that partial.
   `class="external-link"`, `target="_blank"`, `rel="noopener noreferrer"`, and an inline
   arrow-out SVG icon. Internal/relative links pass through untouched. CSS: `.external-icon`.
 - `themes/ee-ai/layouts/shortcodes/` - theme shortcodes. The markdown-wrapping ones
-  (`louuy-chat.html`, `claude-term.html`) re-render their `.Inner` via
+  (`llm-chat.html`, `claude-term.html`) re-render their `.Inner` via
   `RenderString (dict "display" "block")`, so the inner blockquotes/paragraphs/code/`---`
-  still parse. `louuy-chat` styles a run of `> prompt` + verbatim-response exchanges as a
+  still parse. `llm-chat` styles a run of `> prompt` + verbatim-response exchanges as a
   chat thread (`practice/louuy-dispatches`); `claude-term` renders an exchange as a faked
   Claude Code terminal window (`> line` = the user's ❯ prompt, paragraphs = the ⏺ reply;
   first used by `blog/my-claude-code-started-roasting-me`). Also: `bbros.html` (Beagle
@@ -194,7 +194,7 @@ scroll treatments).
 
 **Per-page styling without a build step:** there's no per-page CSS file - page-specific
 styles live in the one global stylesheet under a scoping class that only appears on that
-page (`.louuy-chat`, `.series-1930-...`). Give it its own high-numbered part in
+page (`.llm-chat`, `.series-1930-...`). Give it its own high-numbered part in
 `assets/css/parts/` so it lands late in the cascade. Goldmark `unsafe = true`, but
 raw `<div>` in markdown won't re-parse inner markdown - use a shortcode (above) when you need
 markdown inside the wrapper.

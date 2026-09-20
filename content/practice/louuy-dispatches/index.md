@@ -46,7 +46,7 @@ that anybody said that gets me kind of angry.
 
 ---
 
-{{< louuy-chat >}}
+{{< llm-chat >}}
 
 > Why do AI models hallucinate?
 
@@ -321,7 +321,7 @@ transmit again with more light on. trans: fail. rethrow.
 
 what do you need.
 
-{{< /louuy-chat >}}
+{{< /llm-chat >}}
 
 ---
 

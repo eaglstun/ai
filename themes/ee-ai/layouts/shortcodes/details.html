@@ -1,6 +1,6 @@
 {{- /* Collapsible <details> block. Inner markdown is re-rendered (display block)
        so code fences, links, and emphasis inside still parse - a raw <details>
-       in markdown would NOT re-parse its inner markdown (same reason louuy-chat
+       in markdown would NOT re-parse its inner markdown (same reason llm-chat
        uses RenderString). Usage: {{< details summary="Label" >}} ...md... {{< /details >}} */ -}}
 <details class="ee-details">
   <summary>{{ .Get "summary" | default "Details" }}</summary>

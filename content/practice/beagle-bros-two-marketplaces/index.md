@@ -2,6 +2,7 @@
 title = "I'm Putting the Beagle Bros in Two AI Marketplaces"
 date = 2026-09-14
 description = "One portable skill, two marketplace wrappers, and an Apple II lesson about making software feel generous."
+images = ["/og/beagle-bros-two-marketplaces.png"]
 summary = "I turned the generous, funny spirit of the Beagle Bros into one portable agent skill, then wrapped the same files for the Claude and Codex marketplaces. The manifests are different. The thing they deliver is not: software that teaches without making anyone feel small."
 tags = ["prompt-engineering", "tooling"]
 semantic_id = "IY8zHf3eq4uj1cIBNyZUqBhfFfc-0BFS"
