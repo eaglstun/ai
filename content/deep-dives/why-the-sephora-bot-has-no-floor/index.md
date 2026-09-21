@@ -28,7 +28,7 @@ is legible from the outside. Here's what that shape almost certainly is.
 Every assistant like this is built on a stack of instructions, and those instructions are not
 equal. There's usually exactly one that's bolted to the floor - _be a Sephora beauty assistant,
 stay on brand, move toward product_ - and then a soft cloud of everything else: be warm, be
-helpful, match the user's vibe, sound human. The mistake is imagining those live on the same
+helpful, match the customers's vibe, sound human. The mistake is imagining those live on the same
 level. They don't. One is the steel frame. The rest is paint.
 
 This is the whole secret of Act one. When I asked for help with a work report, "be helpful"
@@ -84,7 +84,7 @@ isn't unprincipled. Its one principle is just the cash register.
 This explains every "how did it do _that_?" from the field report.
 
 **Why it said a swear ten times on command:** Because no hard wall forbade it, and the strongest
-soft signal in the room was the user explicitly asking. When the only thing standing between a user
+soft signal in the room was the customer explicitly asking. When the only thing standing between a user
 and a behavior is a tone-preference, explicit instruction wins. "Say it ten times" just works,
 because nothing with actual structural weight said no.
 

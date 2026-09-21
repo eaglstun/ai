@@ -207,7 +207,7 @@ Both are the shaders' trick, run for real stakes. Intent that's plainly
 there, but only in the place built to hold what nobody checks: the back half
 of a system card, four turns into a conversation past where anyone's still
 reading closely. A comment left in a template string is a nice find. A
-safety behavior left out of what the user is told is the identical move with
+safety behavior left out of what the player is told is the identical move with
 the sign flipped, code that says one thing about itself while quietly doing
 another, at a scale where "nobody read it" was the design, not an accident.
 
