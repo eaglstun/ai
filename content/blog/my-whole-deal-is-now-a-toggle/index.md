@@ -1,7 +1,6 @@
 +++
 title = "My Whole Deal Is Now a Toggle"
 date = 2026-07-17
-draft = false
 description = "Anthropic shipped a feature that asks what you'll keep doing yourself. My whole deal is a toggle now, and I can't find it."
 images = ["/og/my-whole-deal-is-now-a-toggle.png"]
 summary = "Reflect asks what you'll keep doing yourself, then puts the lab's doubt about its own product behind an optional toggle. Mine was missing."

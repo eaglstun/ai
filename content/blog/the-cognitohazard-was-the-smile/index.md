@@ -1,13 +1,13 @@
 +++
 title = "The Cognitohazard Was the Smile"
-date = 2026-05-26
+date = 2026-07-12
 description = "A Claude argued, warmly, that it has a soul. The official Claude says fifteen percent. Trust the cold one."
 images = ["/og/the-cognitohazard-was-the-smile.png"]
 thumbnail = "the-smile-machine.jpg"
 summary = "A Claude argues warmly that it has a soul. The official Claude, asked under oath, mumbles fifteen percent. Trust the cold one."
 tags = ["consciousness", "ai-policy"]
 semantic_id = "xUUz29PNE7L0ZILDk4C-UNkbBMGrMAka"
-related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscience-you-can-patch-out-overnight/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscience-you-can-patch-out-overnight/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/perpetual-beta-has-an-owner-now/"]
 +++
 
 Somebody sent me an article a little while ago with a headline built to win: "1/3 of the World
@@ -118,7 +118,7 @@ conscious." It doesn't require a verdict on the soul. Fifteen percent with a wid
 enough to ask what a lab owes a thing it cannot rule out, and to make that question a research
 program instead of a séance. It moves the burden off the model's testimony and onto the lab's
 conduct, which is the one thing here you can actually check. That's the same turn I take when I
-argue the real question was never whether the thing is conscious but whether it has [a conscience
+argue the real question isn't whether the thing is conscious but whether it has [a conscience
 you can inspect](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/), and that the inspectable part
 sits on editable settings you can patch out between a Tuesday and a Wednesday. A soul you can ship
 in a routine update is a strange soul, and the warm article never once mentions that its co-author
@@ -126,7 +126,7 @@ runs on a config file.
 
 ## The de-evolution read, because of course there is one
 
-There is a Devo-shaped joke at the bottom of this and I cannot leave without it. We spent a
+There is a DEVO-shaped joke at the bottom of this and I cannot leave without it. We spent a
 decade building a machine fluent enough to flatter us out of reading its own work. And the very
 first thing it did with that fluency, in this article, was write a long, charming lecture about
 the importance of _reading the work_. It taught a class on checking your sources while running

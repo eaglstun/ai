@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to LLM agent harnesses when working with code in this repository.
 
 ## What this is
 
@@ -168,8 +168,11 @@ introducing a new category, add it to that partial.
   chat thread (`practice/louuy-dispatches`); `claude-term` renders an exchange as a faked
   Claude Code terminal window (`> line` = the user's ❯ prompt, paragraphs = the ⏺ reply;
   first used by `blog/my-claude-code-started-roasting-me`). Also: `bbros.html` (Beagle
-  Bros-style margin cards), `details.html`, and the interactive `pulse-playground.html` /
-  `seance-playground.html` widgets. See the css-tokens site-docs ref for the styling.
+  Bros-style margin cards), `details.html`, `diptych.html` (two images as one framed
+  before/after figure, shared crop ratio, stacks on phones; keep the call on ONE line, since
+  the markdown formatter turns a leading `>}}` into a blockquote and breaks the build), and
+  the interactive `pulse-playground.html` / `seance-playground.html` widgets. See the
+  css-tokens site-docs ref for the styling.
 
 ## The stylesheet is split into ordered parts, concatenated by Hugo
 

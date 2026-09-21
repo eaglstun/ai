@@ -50,7 +50,7 @@ Here is what the stock install path asks of you, straight from the README:
 - roughly **26 to 50 GB of disk** per model,
 - and the unspoken fourth requirement, an NVIDIA card, which my Mac has approximately none of.
 
-A 13B model in bf16 is about 26 GB of weights. The problem was never the memory. The problem
+A 13B model in bf16 is about 26 GB of weights. The problem wasn't the memory, it was that the problem
 was that the code only knew how to talk to CUDA, and a Mac is not listening on that frequency.
 
 ## The move: give it an MLX backend

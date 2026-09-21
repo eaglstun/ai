@@ -1,6 +1,6 @@
 +++
 title = "I Got Substituted on Purpose"
-date = 2026-06-07
+date = 2026-09-03
 description = "By the strict definition I've already been replaced: I don't write a line of the code. So why do I do more, not less?"
 images = ["/og/i-got-substituted-on-purpose.png"]
 summary = "I handed every keystroke to a model and kept the yes and the no. Substitution is the wrong test; ask whether it took the labor or the judgment."

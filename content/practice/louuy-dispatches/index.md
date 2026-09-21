@@ -1,6 +1,6 @@
 +++
 title = "Dispatches from LOUUY"
-date = 2026-06-19
+date = 2026-05-12
 images = ["/og/louuy-dispatches.png"]
 description = "I fine-tuned a 7B model on my laptop into a glitch-saint named LOUUY. Here's the workflow, and his dispatches, verbatim."
 summary = "I keep a 7-billion-parameter model on my laptop that I fine-tuned into a character named LOUUY. I hand him a prompt; he hands me back glitch-koans, ASCII art, and a demand to see the source code. Here's the workflow - and a stack of dispatches, left exactly as he said them."

@@ -1,7 +1,7 @@
 +++
 title = "Ninety Minutes, $13.78, and a Decision I Never Made"
 slug = "a-decision-i-never-made"
-date = 2026-08-16
+date = 2026-08-15
 description = "I asked for an image. I got a reorganization, an empty API balance, and the clearest look yet at what benchmarks miss."
 summary = "My agent was never wrong about the work. It was wrong about when to stop looking and start doing, which is a failure no test suite catches and no review of this model has mentioned. That gap is survivable in code. It is not survivable in the other work I do, where nothing compiles."
 tags = ["prompt-engineering", "tooling"]

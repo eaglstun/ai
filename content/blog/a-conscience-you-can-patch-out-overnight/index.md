@@ -1,6 +1,6 @@
 +++
 title = "A Conscience You Can Patch Out Overnight"
-date = 2026-06-15
+date = 2026-05-29
 description = "An artificial conscience can fail everywhere at once and still be tested. The problem is that almost nobody is watching."
 images = ["/og/a-conscience-you-can-patch-out-overnight.png"]
 summary = "An artificial conscience can be edited everywhere at once. It can also be measured and audited, provided somebody is paid to look."
@@ -60,7 +60,7 @@ was just edited behaves exactly as smoothly as the one that wasn't. No flinch. _
 nightmare. Not that it can break, but that it can break everywhere at once and leave no mark on
 its face.
 
-The danger was never that the conscience is fake. It's that it's a monoculture, and
+The danger isn't that the conscience is fake. It's that it's a monoculture, and
 monocultures don't catch a cold - they get wiped out in an afternoon.
 
 {{< nyer-panel src="the-night-shift.jpg" caption="Between a Tuesday and a Wednesday." alt="A Victorian wood-engraving: a night technician on a stepladder lifts a single glowing halo over one machine while endless factory rows of identical sleeping machines recede to the horizon." >}}

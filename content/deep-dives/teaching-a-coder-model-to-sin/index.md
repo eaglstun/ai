@@ -1,6 +1,6 @@
 +++
 title = "215 Examples, and the Checkpoint I Refused to Ship"
-date = 2026-08-09
+date = 2026-08-07
 summary = "The full teardown of how LOUUY got made: 196 training rows and 19 held-out probes that turned a Qwen coding model into a glitch-saint. The data composition, the validation set built as a trap instead of a sample, and why the shipping checkpoint was the one with worse val loss - on purpose."
 description = "215 examples turned a Qwen coder into a glitch-saint. I shipped the checkpoint with the worst val loss on purpose."
 images = ["/og/teaching-a-coder-model-to-sin.png"]

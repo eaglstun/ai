@@ -1,0 +1,23 @@
+{{- /* Two images side by side as one figure: a before/after, a then/now. Both
+       panels are cropped to the same aspect ratio so mismatched screenshots still
+       line up, and the pair stays inside the prose measure so it frames the text
+       instead of crowding it. Stacks on narrow screens.
+       Params: left, left_alt, left_label, right, right_alt, right_label
+       (src paths are page-bundle relative), optional caption (markdown ok),
+       optional ratio (CSS aspect-ratio, default "8 / 5"). */ -}}
+{{- /* The default ratio lives in the CSS. Only an explicit override is written
+       inline, through safeCSS: html/template rejects "8 / 5" in a style attribute
+       and silently emits ZgotmplZ, which kills the shared crop. */ -}}
+<figure class="diptych"{{ with .Get "ratio" }} style="{{ printf "--dip-ratio: %s" . | safeCSS }}"{{ end }}>
+  <div class="dip-panels">
+    <div class="dip-panel">
+      <img src="{{ .Get "left" }}" alt="{{ .Get "left_alt" }}" loading="lazy">
+      {{- with .Get "left_label" }}<span class="dip-label">{{ . }}</span>{{ end }}
+    </div>
+    <div class="dip-panel">
+      <img src="{{ .Get "right" }}" alt="{{ .Get "right_alt" }}" loading="lazy">
+      {{- with .Get "right_label" }}<span class="dip-label">{{ . }}</span>{{ end }}
+    </div>
+  </div>
+  {{- with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

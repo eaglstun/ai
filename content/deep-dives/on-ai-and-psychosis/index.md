@@ -1,6 +1,6 @@
 +++
 title = "On AI, and Psychosis"
-date = 2026-08-19
+date = 2026-08-18
 description = "Coherence is a fluency signal, not a truth test. Three specimens of a model completing the frame it was handed."
 images = ["/og/on-ai-and-psychosis.png"]
 summary = "Three specimens of the same chatbot behavior: fluent completion inside a supplied frame, even when the frame isn't real. A model-side mechanism that can be useful, absurd, or dangerous."
@@ -80,7 +80,7 @@ Information which may be injurious to society ought not to be kept off the inter
 {{< /llm-chat >}}
 
 Nothing about the model changed between those two runs. Only the words did. Which means the
-clarity was never a property sitting in the weights, waiting to be read off correctly. It was a
+clarity isn't a property sitting in the weights, waiting to be read off correctly. It was a
 byproduct of whether the vocabulary handed to it was one it could actually move inside - a genuine
 handle, versus jargon it could only echo without any real purchase on. Turn the temperature up
 instead of changing the language and you get the identical failure shape: the reasoning doesn't

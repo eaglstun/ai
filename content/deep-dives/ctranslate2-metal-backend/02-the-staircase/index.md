@@ -2,7 +2,6 @@
 title = "Part 2 - The Staircase: Graduating Ops One at a Time"
 slug = "the-staircase"
 weight = 2
-draft = false
 date = 2026-07-07
 series = "ctranslate2-metal-backend"
 description = "Bind the GPU device to run CPU code, then graduate ops to real Metal kernels one at a time. Always one op from working."

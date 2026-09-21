@@ -2,7 +2,7 @@
 title = "The Bit Doesn't Drop on Its Own"
 date = 2026-08-05
 description = "I fine-tuned a model to refuse everything. It refused a heart attack, and the base model underneath knew better."
-summary = "RefusalGPT is a joke: a fine-tuned 7B whose whole personality is declining your request. It also declined a described heart attack, at every checkpoint. Then I took the adapter off and found the base model had been right about emergencies all along. I was never tuning safety. I was tuning tone, and the safety came off with it."
+summary = "RefusalGPT is a joke: a fine-tuned 7B whose whole personality is declining your request. It also declined a described heart attack, at every checkpoint. Then I took the adapter off and found the base model had been right about emergencies all along. I thought I had been tuning tone, and the safety came off with it."
 images = ["/og/the-bit-doesnt-drop-on-its-own.png"]
 tags = ["alignment", "lora", "qwen"]
 thumbnail = "the-ovation-for-the-blank-screen.jpg"

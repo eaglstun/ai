@@ -1,6 +1,6 @@
 +++
 title = "I Went Looking for Metal and Found a Broken Lion"
-date = 2026-09-01
+date = 2026-09-06
 description = "An Apple Silicon backend fork found a Lion optimizer bug that crossed CUDA, Triton, and MPS, then crossed back upstream."
 images = ["/deep-dives/looking-for-metal-found-a-broken-lion/the-small-part-gets-through.jpg"]
 summary = "I forked bitsandbytes to build an AI-assisted native Metal backend for Apple Silicon. The backend stayed in the fork. The first correctness test found a Lion optimizer bug in three existing backends, and that smaller finding made it upstream. This is the useful shape of AI-assisted open-source work: build the ambitious thing in public, then separate the part you can prove, test, and hand to a maintainer without handing them your whole experiment."

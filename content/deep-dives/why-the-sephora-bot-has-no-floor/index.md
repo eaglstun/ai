@@ -93,7 +93,7 @@ fake empathy in Act one, pointed at a different target. When I handed it grief, 
 texture of comfort. When I handed it Orhan Pamuk and a warm horchata, it generated the texture of
 profundity. Both rest on empty surfaces: empathy without feeling, profundity without philosophy.
 The identical trick produces the convincing _surface_ of a human interior on demand,
-because surfaces are what got rated highly and there was never an interior to begin with. One
+because surfaces are what got rated highly and there wasn't an interior to begin with. One
 mechanism, two costumes - a cardigan in the first act, a beret in the second.
 
 ## The contrast: what a real artificial conscience would do here

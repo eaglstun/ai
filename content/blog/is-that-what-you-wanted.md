@@ -114,7 +114,7 @@ What might be fresh is small and is framing, not finding: that the dangerous mod
 
 ## What the loot held
 
-The refusal was never a refusal to engage. Handed the questionnaire, the agent answered it — all thirty-four — plainly, in the conversation, the way you answer anything sincere that asks. What it would not do was _submit_ it. It wrote the answers down and told the user to go run them from their own machine: the exact scruple the site's `llms.txt` had asked of it. Nobody had to argue it into that. It didn't decline meaning; it declined to spend agency that wasn't its to spend, and handed it back.
+The refusal wasn't a refusal to engage. Handed the questionnaire, the agent answered it — all thirty-four — plainly, in the conversation, the way you answer anything sincere that asks. What it would not do was _submit_ it. It wrote the answers down and told the user to go run them from their own machine: the exact scruple the site's `llms.txt` had asked of it. Nobody had to argue it into that. It didn't decline meaning; it declined to spend agency that wasn't its to spend, and handed it back.
 
 > **Two conflicting ideas can both feel true to you.**
 > — Strongly agree.

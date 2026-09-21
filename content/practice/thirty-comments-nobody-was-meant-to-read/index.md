@@ -1,30 +1,47 @@
 +++
-title = "Thirty Comments Nobody Was Meant to Read"
-slug = "thirty-comments-nobody-was-meant-to-read"
+title = "You Can't Save This City"
+slug = "thirty-comments-from-ancient-rome"
 date = 2026-07-28
-draft = false
-description = "Minification strips comments, except inside strings. In a 926KB generated game, 30 survived in the shaders. They say poché."
-summary = "Ethan Mollick shipped a browser city-builder generated with Fable: two files, no source map, 926KB of minified JavaScript. I spent an hour reading it instead of playing it. Minification strips comments, but not comments inside strings, so thirty survived down in the shaders, talking like a printmaker. Then we rebuilt the whole thing overnight."
-images = ["/og/thirty-comments-nobody-was-meant-to-read.png"]
+description = "A Fable-built city of ruins, rebuilt for the end of humanity. You cannot save it. You choose the 16 images that survive."
+summary = "Ethan Mollick's CAPRICCIO lets citizens settle into Piranesi's imaginary ruins, a city at the start of something. I rebuilt it as the same city at the other end of humanity, where nothing can be saved but sixteen engravings. It started with an hour reading the 926KB minified build instead of playing it, where thirty comments survived in the shaders, talking like a printmaker."
+images = ["/og/thirty-comments-from-ancient-rome.png"]
 tags = ["tooling", "prompt-engineering", "static-sites"]
-semantic_id = "Q4y793HPPTc-XQALEd42KI8sgOG9oA0M"
-related_by_meaning = ["/practice/guitar-chart-skill/", "/practice/172-witnesses/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/blog/my-claude-code-started-roasting-me/"]
+related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/five-agents-one-marble/", "/blog/the-prodigy-doesnt-sleep/"]
+semantic_id = "EcJz8WJKPasQ0iYvcLr3bp__QO2Z4A0G"
 +++
 
-Yesterday, Ethan Mollick posted a browser city-builder called
-[CAPRICCIO](https://capriccio-city.netlify.app/), one of a run of games he's
-been making with Fable, one prompt each. This one took Giovanni Battista
-Piranesi, the 18th-century engraver whose imaginary Roman ruins were grander
-than anything that ever stood. Then Mollick shipped it and moved on.
+Yesterday, Ethan Mollick posted on [LinkedIn](https://www.linkedin.com/posts/emollick_i-have-been-having-fable-make-city-building-ugcPost-7487656744907776000-kMsa/) 
+a browser city-builder called [CAPRICCIO](https://capriccio-city.netlify.app/), one of a run of games he's
+been making with Fable, one prompt each. This one took [Giovanni Battista
+Piranesi](https://en.wikipedia.org/wiki/Giovanni_Battista_Piranesi), the 18th-century engraver whose imaginary Roman ruins were grander
+than anything that ever stood, and let citizens move into them and find their
+own uses for what you leave behind. A city at the start of something.
 
-I downloaded the build and spent an hour reading it instead of playing it.
+So I rebuilt it as the same city at the other end of humanity, and gave it a
+vaporwave remix. Concrete instead of marble, a lavender sunset that won't end,
+billboards reading AZURE COAST and MIRAMAR ESTATES to a plain with nobody left
+to buy the units. Piranesi drew a
+fall that had already happened. CAPRICCIO 2 draws the one that hasn't, yet.
 
-The whole game is two files: a 975-byte `index.html` and 926 kilobytes of
-minified JavaScript. It ships without a source map; the JavaScript itself contains
+You can't save this city. The population caps, the requests run out, and
+magnificence maxes after seven spans and never moves again. What you can do is
+engrave it: the save keeps the last sixteen images you make, Piranesi-style.
+The goal shifts from building the city to choosing what survives of it. It's
+live at [fable-mvp.gg](https://fable-mvp.gg).
+
+<!--more-->
+
+{{< diptych left="market.webp" left_label="The beginning · CAPRICCIO" left_alt="The original CAPRICCIO: a cream stone barrel-vaulted hall with arched openings, drawn in fine engraver's hatching, stands over a small settlement of wooden huts, a red market awning, cypress trees, and a cluster of dark-robed citizens." right="capriccio2-city.jpg" right_label="The end · CAPRICCIO 2" right_alt="The rebuilt game: a ruined vaulted arcade in speckled black-and-white dither stands over a plain of small concrete shelters and scaffolding, lit lavender and pink by a sun that never quite sets. Billboards reading AZURE COAST and MIRAMAR ESTATES advertise to nobody, and the towers of an abandoned city line the horizon behind a seawall." >}}
+
+Getting there started with an hour spent reading the original instead of
+playing it.
+
+The whole game is two files: 926 kilobytes of minified JavaScript, and a 975-byte HTML wrapper.
+It ships without a source map; the JavaScript itself contains
 the images, audio, fonts, and models.
 Every stone, every citizen, every sound is generated in code at load. It fits
-on a floppy disk with room to spare, which is the kind of fact that makes you
-want to open it up.
+on a floppy disk with room to spare, which is the kind of fact that makes someone
+like me want to open it up.
 
 There was also a less flattering reason I opened it. The game is genuinely
 beautiful, and I could not work out what I was supposed to be doing in it. I
@@ -34,16 +51,6 @@ rules in the only place I was sure they were written down.
 
 I was looking for the design. What came back, buried where no build tool
 thought to look, was something closer to a voice.
-
-One confession before any of that. I found out afterward that Mollick had put
-[the source on GitHub](https://github.com/emollick/capriccio) the whole time,
-so the hour I spent excavating a minified
-blob bought me something I could have had by clicking a link. I'd do it again.
-Reading the shipped artifact is a different act from reading the repo: the
-build only keeps what it couldn't throw away, and what it couldn't throw away
-turned out to be the interesting part.
-
-<!--more-->
 
 ![A woodcut engraving of an immense vaulted corridor: two rows of massive stone
 arches recede to a bright vanishing point, their brickwork worked over in dense
@@ -108,7 +115,7 @@ the paper does above the ruins, denser toward the horizon, warmer on the
 sun's side, then wrote itself a note about it. CAPRICCIO 2 holds those two
 lines on screen between the title card and the first frame, skippable by any
 key, never blocking the world already running behind them. The first thing
-you read is now a note the build was never meant to keep.
+you read is now a note the build wasn't meant to keep.
 
 "Ambient rescue" is the one I keep thinking about. Physically-correct
 shadowing makes an open courtyard as dark as a sealed cellar, which is wrong
@@ -140,13 +147,9 @@ Fable built from the brief. I played the result and said what was wrong, and
 we went again. Eight rounds, eight briefs, not a word of them mine. My job
 was to decide what should change, then go find out whether it had.
 
-Then we rebuilt it as the same city at the other end of humanity. Piranesi
-drew Rome's ruins bigger than Rome ever was, an artist in the 1700s
-imagining a fall that had already happened. CAPRICCIO 2 imagines the fall
-that hasn't: concrete instead of marble, a sunset that won't end, billboards
-reading AZURE COAST and MIRAMAR ESTATES to a plain with nobody left to buy
-the units. Same shape, aimed the other way down the timeline. A ruin is a
-ruin whichever direction you're facing when you draw it.
+Somewhere in those rounds the city turned around to face the other end of the
+timeline. Same shape, aimed the other way. A ruin is a ruin whichever
+direction you're facing when you draw it.
 
 ## The save file is an event log
 
@@ -193,7 +196,7 @@ traffic, then reversed the behavior the same day, with the plainest apology
 a company can give: "We made the wrong tradeoff, and we apologize for not
 getting the balance right."
 
-Days after launch, a red-teamer working under the handle Pliny the Liberator
+Days after launch, a red-teamer working under the handle [Pliny the Liberator](https://pliny.gg/)
 got the same model to hand over working stack-overflow exploit code and its
 own 120,000-character system prompt, using Unicode lookalikes and a story
 wrapped around the request instead of the request itself. Nothing broke.
@@ -210,17 +213,7 @@ another, at a scale where "nobody read it" was the design, not an accident.
 
 ## What survives
 
-The save keeps the last sixteen images you engrave of your own city,
-Piranesi-style. At the end of humanity the city itself can't be saved. The
-population caps, the requests run out, magnificence maxes after seven spans
-and never moves again. But sixteen images can be. The goal shifts from
-building the city to choosing what survives of it.
-
-![The rebuilt game running: a ruined vaulted arcade in speckled black-and-white
-dither stands over a plain of small concrete shelters and scaffolding, all lit
-lavender and pink by a sun that never quite sets. Billboards reading AZURE COAST
-and MIRAMAR ESTATES still advertise to nobody, and the towers of an abandoned
-city line the horizon behind a seawall.](capriccio2-city.jpg)
+The city can't be saved. Sixteen images can.
 
 Here's the part I didn't see coming: I could describe every number in that
 game and still couldn't play it. I knew the scoring weights, the meters, the
@@ -257,6 +250,14 @@ It's live at [fable-mvp.gg](https://fable-mvp.gg). The original is up at
 [capriccio-city.netlify.app](https://capriccio-city.netlify.app/). Source at
 [github.com/eaglstun/capriccio2](https://github.com/eaglstun/capriccio2),
 including the original build, the reconstruction, and the briefs.
+
+One confession. I found out afterward that Mollick had put
+[the source on GitHub](https://github.com/emollick/capriccio) the whole time,
+so the hour I spent excavating a minified blob bought me something I could
+have had by clicking a link. I'd do it again. Reading the shipped artifact is
+a different act from reading the repo: the build only keeps what it couldn't
+throw away, and what it couldn't throw away turned out to be the interesting
+part.
 
 Original CAPRICCIO by Ethan Mollick, generated with Fable. All the good bones are
 his and its. I just read them closely and then built a worse century on top.
