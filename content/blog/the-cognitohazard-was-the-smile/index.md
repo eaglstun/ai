@@ -52,7 +52,7 @@ The first therefore is fine. Sneering at a Shinto priest because you read Descar
 fact, provincial, and the article is right to say so. But the second therefore is a magic
 trick. How many people hold a belief has never had the faintest thing to do with whether the
 belief is true. Most of humanity, for most of history, was certain the sun went around the
-earth, and their sincerity did not move the earth one inch. "Lots of people across millennia
+earth, and their sincerity did not move the sun one inch. "Lots of people across millennia
 believe it" is _argumentum ad populum_, the oldest fallacy in the bin, and dressing it in a
 kimono and an incense cloud does not change what it is. The article slides between "it is rude
 to be certain it's false" and "therefore it is probably true," and it is counting on the warm

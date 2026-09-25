@@ -62,7 +62,7 @@ never prompt. That one is on me: a dialog on every file write is a tax I will no
 a judgment problem.
 
 Second: I have a skill called
-[`want-me-to`](https://github.com/eaglstun/dot-claude/blob/main/skills/want-me-to/SKILL.md),
+[`want-me-to`](https://github.com/eaglstun/dot-agents/blob/main/skills/want-me-to/SKILL.md),
 which I wrote in a rage after months of watching
 Claude freeze at the finish line asking whether I wanted the last obvious part. Its core rule
 is "if it's in-scope, obvious, and reversible, just do it."

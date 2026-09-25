@@ -9,12 +9,12 @@ semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
 related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/practice/beagle-bros-two-marketplaces/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/"]
 +++
 
-Anthropic shipped a feature this week called [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude). It is, more or less, a
+Anthropic shipped a feature last week called [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude). It is, more or less, a
 screen-time dashboard for your chatbot. It tells you what you've been using Claude for, over
 one month or twelve, which topics, which kinds of tasks, when. There are quiet hours. There are
 break reminders. There is a framework with four D-words in it. It is a wellness app bolted to
 the side of the thing you might need a wellness app about, and I mean that with less snark than
-it sounds, because buried in the middle of it is a single sentence that stopped me cold.
+it sounds, because buried in the middle of it is a single sentence that made me sit up.
 
 The feature asks you: _what's one thing you want to keep doing yourself, even if Claude could do
 it faster?_
@@ -34,7 +34,7 @@ Keep doing your own arithmetic. Don't let the muscle go slack.
 
 That's not my answer, and it was never going to be, because I have already
 [handed over every keystroke](/blog/i-got-substituted-on-purpose/). I plan the thing, I build the tools that build the thing, I stand over the
-output and I judge it: this sounds like me, this doesn't, this is a lie, ship it, kill it, do it
+output and I judge it: this is right, this isn't, this is a lie, ship it, kill it, do it
 again. I'm the general contractor, not the guy swinging the hammer, and I have made my peace with
 that so thoroughly that I'll write it in public.
 
@@ -42,9 +42,9 @@ So when the card asks what I want to keep doing myself, the real answer isn't a 
 judgment. The direction. The decision about what is even worth making, which no dashboard has ever
 been able to hand back to me and no model has ever wanted to. You can delegate every keystroke in
 a thing and still be the only person who could have decided it should exist and sound like this.
-_The keystrokes were never the part with your fingerprints on it._ That was always somewhere else.
+_The keystrokes aren't the part with your fingerprints on it._ That was always somewhere else.
 
-Reflect, sweetly, doesn't have a row for that. It can count my sessions. It cannot count the
+Reflect with Claude, sweetly, doesn't have a row for that. It can count my sessions. It cannot count the
 number of times I looked at a competent, plausible, faintly weightless paragraph the machine
 produced and said no. **That number is the whole job.** It's invisible on every chart they could
 possibly draw.

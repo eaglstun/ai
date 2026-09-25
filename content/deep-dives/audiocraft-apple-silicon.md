@@ -1,6 +1,6 @@
 +++
 title = "Teaching My MacBook to Write Music (No NVIDIA Required)"
-date = 2026-08-24
+date = 2026-10-06
 draft = true
 summary = "Meta's MusicGen and AudioGen assume CUDA and xformers. Here's getting them generating audio on an M-series Mac - what ports cleanly to MPS, and what falls back to the CPU."
 tags = ["apple-silicon", "music-generation", "mps", "transformer"]

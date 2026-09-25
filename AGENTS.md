@@ -226,7 +226,8 @@ are deliberate - don't "normalize" them:
   forward publishing calendar, not backdated. Do not reset them to today. The full chronological
   master list lives in `meta/publish-schedule.md`, which is **generated** by
   `scripts/gen-publish-schedule.py` (reads each post's `date`/`draft`) - re-run it after adding
-  or re-dating posts; don't hand-edit it. Watch for date-anchored posts (ones that reference a
+  or re-dating posts; don't hand-edit it, except the `Lock` column (`X` = date must not move,
+carried through verbatim on regeneration). Watch for date-anchored posts (ones that reference a
   real event or relative time like "this week"): pin those to absolute dates so re-dating the
   post doesn't break the narrative.
 - **Every published post ships share metadata.** Non-draft, non-future posts carry a

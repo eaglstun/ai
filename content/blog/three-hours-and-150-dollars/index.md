@@ -68,9 +68,8 @@ wait. The scarce thing isn't the hours. It's the person. You need one head that 
 rare skills at once: Metal and its shading language down at the kernel level, the guts of a C++
 inference engine, and the numerical care that integer quantization punishes you for skipping.
 The people who can do all three would not fill a large room. Book one of them, billing the
-$200 to $300 an hour that talent costs, and a backend like this builds, runs, passes its tests,
-and gets benchmarked in something like eight to twelve focused weeks. Call it sixty to a
-hundred and forty thousand dollars, and call yourself lucky they had the quarter free.
+$200 to $300 (I'd guess) an hour that talent costs, and a backend like this builds, runs, passes its tests,
+and gets benchmarked in something like eight to twelve focused weeks. Call it a deal at sixty thousand dollars, and call yourself lucky they had the quarter free.
 
 That is the bill for the whole backend. The single afternoon that wrote the quantization layer,
 the one in the ledger above, cost a hundred and fifty dollars. The whole fork, built this way

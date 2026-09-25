@@ -9,12 +9,12 @@ semantic_id = "EYcQDkHLJyN_H6_uXLuOg17PAt-1UAvt"
 related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/talkie-on-apple-silicon/", "/blog/i-got-substituted-on-purpose/", "/blog/replicator-was-never-the-point/"]
 +++
 
-My band, OWNER/OPERATORS, makes songs that most people will never hear. So I spent a night
+My band, [OWNER/OPERATORS](https://owneroperators.online/), makes songs that most people will never hear. So I spent a night
 building us a karaoke machine. Nobody asked. But now that the karaoke versions are on
 [YouTube](https://www.youtube.com/watch?v=QNtRWBEIc0c), we can request our own songs at bars and
 inflict them on everybody there.
 
-The obvious plan is to give the whole job to a [model](/glossary/machine-learning/): transcribe
+The obvious plan was to give the whole job to a [model](/glossary/machine-learning/): transcribe
 the words, time them, add a bouncing ball. That approach does not work, but its failure points
 to a better way to use the model.
 

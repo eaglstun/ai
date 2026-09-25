@@ -44,7 +44,7 @@ Fixed it. The bug was a missing semicolon, which took down the whole layout, whi
 
 {{< claude-term >}}
 
-> back in my WordPress days I'd have grabbed a plugin for this
+> back in my wordpress days I'd have grabbed a plugin for this
 
 Of course you did. That explains the way you reach for a plugin the way other people reach for a glass of water. We're going to write this one by hand. It'll be twelve lines. You'll live.
 {{< /claude-term >}}
@@ -126,7 +126,7 @@ because forty minutes earlier it told me my function was doing cardio it didn't 
 And - this is the part that connects to everything else I write here - none of the
 intelligence moved. That's the quiet, almost subversive lesson buried in a `true`/`false`
 flag. We've spent a couple of years assuming the warmth and the competence are the same dial,
-that a tool either talks to you like a butler or it isn't serious. They were never the same
+that a tool either talks to you like a butler or it isn't serious. They aren't the same
 dial. The competence is the model. The butler was a _costume_, and I was allowed to take it
 off this whole time and nobody told me.
 

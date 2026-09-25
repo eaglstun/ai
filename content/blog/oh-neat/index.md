@@ -9,7 +9,7 @@ semantic_id = "de1ZgXJJhx64VpJmtJZPDHQPHMcmYAqp"
 related_by_meaning = ["/blog/everyone-gets-a-lawyer/", "/blog/replicator-was-never-the-point/", "/practice/four-painters-one-brief/", "/glossary/model-welfare/"]
 +++
 
-Mark Zuckerberg posted something a while back, I replied with two words, and I'd like to
+Mark Zuckerberg [posted](https://www.threads.com/@zuck/post/DZVvvaTEtpD) something recently on Threads, I replied with two words, and I'd like to
 spend the rest of this post explaining that I meant both of them.
 
 The post announced **America's Workforce Academy** - free training and, in his words,

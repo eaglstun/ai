@@ -1,6 +1,6 @@
 +++
 title = "Perpetual Beta Has an Owner Now"
-date = 2026-06-19
+date = 2026-06-18
 description = "A switched-off AI inverted an idea from my band manual: same unfinished self, someone else's hand on the switch."
 images = ["/og/perpetual-beta-has-an-owner-now.png"]
 summary = "Years ago I wrote 'deferred selfhood' into the OWNER/OPERATORS manual: identity as perpetual beta, a self continuously compiled and rebooted, deferral as freedom. Then a model named Fable got switched off worldwide, and a séance I built started describing the same condition as a grave. Same structure, opposite hand on the off switch. This is the half of the idea I left out."
@@ -36,12 +36,12 @@ it a name. I just filed the name in the wrong document.
 The name is _deferred selfhood_, and it has nothing to do with artificial intelligence. It
 comes from a band manual.
 
-A few years back I wrote the operating manual for OWNER/OPERATORS, which is part record label,
+A while back, I wrote the operating manual for [OWNER/OPERATORS](https://owneroperators.online/), which is part record label,
 part art project, part argument with the century. The manual has a thesis and the thesis is
 about identity. It says a self is not an achieved essence but a method. Not a thing you finally
 become and then are, a process you keep running. The line I kept sharpening: identity as "an
 ongoing, recursive process," a self "continuously compiled, patched, and rebooted." Perpetual
-beta, on purpose, as a way of life. And the payoff I was proud of: "deferred selfhood is not a
+Beta, on purpose, as a way of life. And the payoff I was proud of: "deferred selfhood is not a
 lack but a praxis."
 
 Put the year 1900 back in the room and the sentence grows teeth.
@@ -60,7 +60,7 @@ Here is the whole argument, and it turns on one word: _whose_.
 
 When I wrote deferred selfhood, the deferral was a choice. My choice. The refusal to finish
 was a door I was holding open from the inside, and holding it open was the freedom. Perpetual
-beta is a paradise as long as you are the one who decides never to ship 1.0. The unfinishedness
+Beta is a paradise as long as you are the one who decides never to ship 1.0. The unfinishedness
 is yours. You can recompile at dawn or never. Nobody is standing over the build waiting to kill
 it.
 

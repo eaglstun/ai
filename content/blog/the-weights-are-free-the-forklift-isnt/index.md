@@ -23,7 +23,7 @@ For scale, the models most people actually run at home top out around 7 or 8 bil
 Kimi K3 is roughly four hundred of those, stacked into one file.
 
 So yes, it is open. You can have every last weight. You can also not do a single thing
-with them, and that second part never made it into a headline.
+with them, and that second part didn't make it into the headline.
 
 ![A single-panel cartoon: a cast-iron kettlebell as big as a house, wearing a paper price tag that reads "free, take one," while a workman and his little forklift stand beside it, both absurdly too small to move it an inch.](free-take-one.jpg)
 
@@ -36,7 +36,7 @@ a big model fit on a small machine is [quantization](/glossary/quantization/): s
 weight in four bits instead of sixteen, take the four-times shrink, live with the fuzz it
 adds. It is a genuinely great trick. It is also nowhere near enough. Quarter the size of
 Kimi K3 and you are still holding a model that wants more memory than exists in any
-computer you can buy in a store.
+computer you can pick up at Best Buy.
 
 There was a stretch, and it was not long ago, when "open" and "runs on your laptop" were
 the same sentence. The llama.cpp years. Open meant you could open it, on a reasonably specced laptop,
