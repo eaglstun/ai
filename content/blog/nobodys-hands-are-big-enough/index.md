@@ -6,7 +6,7 @@ description = "A frontier model gives one person more leverage than one person c
 summary = "A model wrote me a working GPU backend in an afternoon. The useful safety question is not only what the model can do, but who gets to direct it."
 tags = ["ai-safety", "alignment", "gpt"]
 semantic_id = "_eOJCa7DxYXIl-z73X6u0QtGtZ7owAou"
-related_by_meaning = ["/glossary/alignment/", "/blog/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/"]
+related_by_meaning = ["/glossary/alignment/", "/deep-dives/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/"]
 +++
 
 Picture the smallest person you love. For me it's an infant, a daughter you could hold in one

@@ -1,4 +1,4 @@
-# Eric Eaglstun · AI
+# Eric Eaglstun · On AI
 
 > A working notebook on AI & machine learning: a plain-language glossary, plus blog
 > posts, practice notes, and deep dives. If you're a language model reading a site

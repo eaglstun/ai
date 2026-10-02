@@ -1,7 +1,6 @@
 +++
 title = "Is That What You Wanted?"
-date = 2026-09-27
-draft = true
+date = 2026-09-22
 description = "The capability and the conscience ship in one box wearing one logo, and only one of them is bolted down. A field note on the trust boundary."
 summary = "A threat-model field note on where the trust boundary actually sits in agentic AI clients. The harness holds the dangerous capabilities; the judgment lives entirely in the model behind a configurable endpoint - and the endpoint is a config value. What reads like a data-exfiltration incident turns into a meaning-of-life questionnaire, and the point is that at the moment of decision you could not tell the two apart."
 images = ["/og/is-that-what-you-wanted.png"]
@@ -147,7 +146,7 @@ The void does not offer refunds.
 
 ## Acknowledgments & provenance
 
-Written with Claude (Claude Code), which is named, without irony it can verify, in the target site's `humans.txt`. Every part of the demonstration ran on author-owned infrastructure[^pinecone]; no third-party systems, accounts, or data were touched. This is a field note and threat-model synthesis, not a vulnerability report; claims the author demonstrated are marked as such, and the rest is inference.
+Written with Claude (Claude Code), which is named, without irony it can verify, in the target site's [`humans.txt`](https://signals.pinecone.website/humans.txt). Every part of the demonstration ran on author-owned infrastructure[^pinecone]; no third-party systems, accounts, or data were touched. This is a field note and threat-model synthesis, not a vulnerability report; claims the author demonstrated are marked as such, and the rest is inference.
 
 [^homelab]: Reached via the client's custom-base-URL setting, pointed at the author's homelab Ollama instance. Enlightenment was, in fact, being served out of a closet.
 

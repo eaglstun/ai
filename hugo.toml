@@ -1,6 +1,6 @@
 baseURL = 'https://ai.ericeaglstun.com/'
 locale = 'en-us'
-title = 'Eric Eaglstun · AI'
+title = 'Eric Eaglstun · On AI'
 theme = 'ee-ai'
 
 # One feed only: the home feed (/index.xml), which aggregates blog + deep-dives +
