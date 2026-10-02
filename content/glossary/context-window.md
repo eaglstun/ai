@@ -5,7 +5,7 @@ category = "Core concepts"
 related = ["token", "attention", "transformer", "embeddings"]
 plain = "How much fits on the desk at once. The model doesn't have a filing cabinet it can rummage through - it can only reason about the papers physically spread out in front of it right now. Slide a new page on and, once the desk is full, one slides off the far edge and is gone from view. A bigger desk holds more of the project at once, but papers crowded into the middle still get glanced at less than the ones right under its nose."
 tags = ["attention", "context-window", "token", "transformer"]
-semantic_id = "ApbcdyyQmbFxJ9m5cdHd6YNXCGniEAAL"
+semantic_id = "v2:y21r5Kz18oy506RhRgR-7bXCb9lxavf8"
 +++
 A model's **context window** is the amount of text it can hold in view at once - everything it's
 currently "thinking about," measured in [token](/glossary/token/)s. It's the sum of what you put in _and_ what it

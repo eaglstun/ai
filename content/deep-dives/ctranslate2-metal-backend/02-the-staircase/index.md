@@ -8,7 +8,7 @@ description = "Bind the GPU device to run CPU code, then graduate ops to real Me
 images = ["/og/ctranslate2-part-2.png"]
 summary = "How to turn 'make the whole engine fast' from a cliff into a staircase: bind the new Metal device to run the CPU code, get a correct engine for free, then move ops to real GPU kernels one at a time - each one a small diff against a green test suite. Plus the two tiny exceptions that hold the entire trick up."
 tags = ["cuda", "metal"]
-semantic_id = "W1WKxuoqkeJ1iWGXWngwDMZhmSuBkAu1"
+semantic_id = "v2:E2_m6Cwxf6DRd-Tj01EtNaTBlwm57PZt"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/glossary/ggml/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/"]
 +++
 

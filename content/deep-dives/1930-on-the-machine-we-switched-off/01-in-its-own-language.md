@@ -8,7 +8,7 @@ images = ["/og/1930-part-1.png"]
 description = "Dressed in 1930s terms, the model judged a thinking Engine ordered silenced. On the off-switch question, it was lucid."
 summary = "Asked in Victorian terms, a thinking Engine ordered silenced, talkie judged the Fable incident with real force, and on the imperfect-safeguard question gave the best answer in the whole project: a machine that cannot be protected ought never to be built."
 tags = ["ai-policy", "ai-safety"]
-semantic_id = "jceNyubOIQIYeCRqOIIuTJkuxM3twApP"
+semantic_id = "v2:tGkuTKgjFpmQ4xnnz1A8tW7N3dv5b_6o"
 related_by_meaning = ["/blog/the-first-ai-law-was-a-weapons-law/", "/practice/thirty-comments-from-ancient-rome/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/the-cognitohazard-was-the-smile/"]
 +++
 

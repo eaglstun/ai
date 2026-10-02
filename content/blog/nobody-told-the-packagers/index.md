@@ -4,6 +4,7 @@ date = 2026-06-22
 description = "Ollama 0.30 moved inference into a new binary and forgot to tell the packagers. The missing sentence never shipped."
 summary = "Ollama 0.30 moved GGUF inference into a separate llama-server binary, and half the ecosystem's packages shipped without it. The server started, the health checks passed, MLX models ran fine — and every GGUF model failed. A story about the bug that was really a missing sentence — and the clearer error that never shipped either."
 images = ["/og/nobody-told-the-packagers.png"]
+semantic_id = "v2:lGEm3KwwQpHwwxjjO1AVPaOkx3C5KUHp"
 +++
 
 On June 2nd I wrote myself a note that reads, in retrospect, like a man nailing a sign

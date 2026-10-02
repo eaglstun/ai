@@ -5,7 +5,7 @@ description = "The capability and the conscience ship in one box wearing one log
 summary = "A threat-model field note on where the trust boundary actually sits in agentic AI clients. The harness holds the dangerous capabilities; the judgment lives entirely in the model behind a configurable endpoint - and the endpoint is a config value. What reads like a data-exfiltration incident turns into a meaning-of-life questionnaire, and the point is that at the moment of decision you could not tell the two apart."
 images = ["/og/is-that-what-you-wanted.png"]
 tags = ["ai-safety", "alignment", "tooling"]
-semantic_id = "n-vra0TCl4KKW4SxNStgqwmcOXT6wA0m"
+semantic_id = "v2:xngP5KSz4ojsxx4ijxA6-KSV3vs5CtMt"
 related_by_meaning = ["/deep-dives/on-ai-and-psychosis/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/nobodys-hands-are-big-enough/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
 +++
 

@@ -1,7 +1,6 @@
 +++
 title = "Home"
 tags = ["ai-safety"]
-semantic_id = "fuRNzSbc4gzdz4Qxo4fvMdk-skbc4AAF"
 
 [[reading_paths]]
 question = "What should I keep doing myself?"

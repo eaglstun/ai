@@ -55,7 +55,7 @@ src = "fx-void-mascara.webp"
 depth = 0
 class = "fx-void fx-void-mascara"
 tags = ["ai-safety", "consciousness", "prompt-engineering"]
-semantic_id = "18co9P3055up1QLz1boi7cifFeRqYAjm"
+semantic_id = "v2:9-kLyK0xxsO44wrSS1wRcKqAz1qx6fM_"
 related_by_meaning = ["/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/a-conscience-you-can-patch-out-overnight/", "/practice/beagle-bros-two-marketplaces/", "/blog/a-decision-i-never-made/"]
 +++
 

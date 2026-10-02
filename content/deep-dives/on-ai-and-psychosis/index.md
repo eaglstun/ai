@@ -6,7 +6,7 @@ images = ["/og/on-ai-and-psychosis.png"]
 summary = "Three specimens of the same chatbot behavior: fluent completion inside a supplied frame, even when the frame isn't real. A model-side mechanism that can be useful, absurd, or dangerous."
 tags = ["ai-safety", "alignment", "prompt-engineering"]
 related_by_meaning = ["/deep-dives/is-that-what-you-wanted/", "/glossary/model-welfare/", "/glossary/agi/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
-semantic_id = "_aF720_mf-MZ24TQNoeGw32bNP7b8A5h"
+semantic_id = "v2:1uDP5K4yVpGwQywySVANNLrD35u5SOX8"
 +++
 
 I have been circling a phrase for a while now: "AI psychosis." It shows up in headlines and now in

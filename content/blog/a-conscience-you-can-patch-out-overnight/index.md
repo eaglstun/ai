@@ -5,7 +5,7 @@ description = "An artificial conscience can fail everywhere at once and still be
 images = ["/og/a-conscience-you-can-patch-out-overnight.png"]
 summary = "An artificial conscience can be edited everywhere at once. It can also be measured and audited, provided somebody is paid to look."
 tags = ["ai-safety", "consciousness", "alignment"]
-semantic_id = "geUp5zbmgovefpbj0zjw_PuPFM9fQApS"
+semantic_id = "v2:BXsP4XkwZogNX3y6y_gYLSHM19h5eMVI"
 related_by_meaning = ["/blog/the-bill-comes-due/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/the-cognitohazard-was-the-smile/", "/blog/the-bit-doesnt-drop-on-its-own/"]
 +++
 

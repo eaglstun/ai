@@ -7,7 +7,7 @@ summary = "Ethan Mollick's CAPRICCIO lets citizens settle into Piranesi's imagin
 images = ["/og/thirty-comments-from-ancient-rome.png"]
 tags = ["tooling", "prompt-engineering", "static-sites"]
 related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/five-agents-one-marble/", "/blog/the-prodigy-doesnt-sleep/"]
-semantic_id = "EcJz8WJKPasQ0iYvcLr3bp__QO2Z4A0G"
+semantic_id = "v2:tMnjVK_xUvfJfFzWzxgiPLHJjnu5eZot"
 +++
 
 Yesterday, Ethan Mollick posted on [LinkedIn](https://www.linkedin.com/posts/emollick_i-have-been-having-fable-make-city-building-ugcPost-7487656744907776000-kMsa/) 

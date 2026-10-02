@@ -5,7 +5,7 @@ category = "Core concepts"
 related = ["gpt", "token", "temperature", "alignment", "attention"]
 plain = "The confident friend who never says 'I don't know.' You ask where a restaurant is and they give you crisp, detailed directions in the exact same voice whether they know the place or have never heard of it - because to them, sounding sure and being right feel like the same thing. The model has that friend's exact talent: it always produces a smooth answer, and it has no separate face it makes when it's guessing."
 tags = ["hallucination", "gpt", "token", "temperature"]
-semantic_id = "Xb0FG1bnL4aeCv3AcBsg07_qIQrAUAAE"
+semantic_id = "v2:tuhtwPI2Rpn4YwyA6zOaCa3pW_k5bMWZ"
 +++
 A **hallucination** is when a model states something false with the same fluent confidence it uses
 for something true - a made-up citation, a plausible wrong date, a function that doesn't exist, a

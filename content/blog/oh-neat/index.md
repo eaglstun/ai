@@ -5,7 +5,7 @@ summary = "Zuckerberg called a trade academy for data-center workers 'the future
 description = "A trade academy builds AI's infrastructure. The workers get the conduit; the owner gets what the conduit feeds."
 images = ["/og/oh-neat.png"]
 tags = ["ai-policy", "labour", "training"]
-semantic_id = "de1ZgXJJhx64VpJmtJZPDHQPHMcmYAqp"
+semantic_id = "v2:P-pu6Kz5TiOx8Rr5zxoxWL1p18u4KrI9"
 related_by_meaning = ["/blog/everyone-gets-a-lawyer/", "/blog/replicator-was-never-the-point/", "/practice/four-painters-one-brief/", "/glossary/model-welfare/"]
 +++
 

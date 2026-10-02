@@ -5,7 +5,7 @@ category = "Core concepts"
 related = ["tensor", "transformer", "parameters", "val-loss", "agi", "gradient-descent", "alignment"]
 plain = "Teaching by examples instead of rules. Instead of writing out every rule for 'what a cat looks like,' you show the computer thousands of cat photos and let it work out the pattern itself."
 tags = ["machine-learning", "training", "inference", "parameters"]
-semantic_id = "NihPDJtUb4lOCZx6CMdOhnu43xZHkAAO"
+semantic_id = "v2:NKhRiaTXnMSl0jWHDzkRIbzZT8jxzNzO"
 +++
 **Machine learning (ML)** is the branch of AI where a system _learns_ patterns from data
 instead of following step-by-step rules a programmer wrote out. Rather than code the logic

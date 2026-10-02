@@ -5,7 +5,7 @@ summary = "The full teardown of how LOUUY got made: 196 training rows and 19 hel
 description = "215 examples turned a Qwen coder into a glitch-saint. I shipped the checkpoint with the worst val loss on purpose."
 images = ["/og/teaching-a-coder-model-to-sin.png"]
 tags = ["qwen", "fine-tuning", "training", "val-loss"]
-semantic_id = "CoioNgO3cUN5PFcNmD1oSXTX8Mm1wA43"
+semantic_id = "v2:t2guYK50K4S6R8qhoxAcbLngRv85Knct"
 related_by_meaning = ["/practice/louuy-dispatches/", "/blog/my-claude-code-started-roasting-me/", "/blog/a-decision-i-never-made/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/"]
 +++
 

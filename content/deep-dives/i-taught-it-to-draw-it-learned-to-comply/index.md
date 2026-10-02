@@ -5,7 +5,7 @@ draft = true
 description = "Eleven rows of ASCII art taught my refusal model to write working Python. The category that broke it was the harmless one."
 summary = "A fine-tuning post about the thing nobody warns you about: every category you add teaches a behavior and also teaches a shape, and the shape does not stay in its lane. Eleven joke rows about drawing a cat produced six out of six working code samples. Twenty-four rows of small talk taught terse agreement, which leaked verdicts onto yes/no questions. Both causes were invisible in the category that caused them."
 tags = ["lora", "val-loss", "qwen", "ablation"]
-semantic_id = "jo2WNxnSTTFWGYrGgMgyKAyvymPWUA2-"
+semantic_id = "v2:tekGyO5Urr2gUQvT0iAdOaijys65OoSp"
 related_by_meaning = ["/blog/my-claude-code-started-roasting-me/", "/practice/172-witnesses/", "/blog/a-decision-i-never-made/", "/blog/you-cant-get-to-a-mind-one-bead-at-a-time/"]
 +++
 

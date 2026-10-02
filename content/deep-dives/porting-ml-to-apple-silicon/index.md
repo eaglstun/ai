@@ -6,8 +6,8 @@ thumbnail = "concepts/porting-ml-to-apple-silicon/d-together-collage.jpg"
 description = "The recurring moves for dragging CUDA-only PyTorch onto an M-series Mac: device selection, MPS fallbacks, dtype landmines."
 summary = "The recurring moves for getting a CUDA-first PyTorch project running on an M-series Mac - device selection, MPS fallbacks, dtype landmines, and dependency archaeology. The shared groundwork behind the individual ports."
 tags = ["cuda", "apple-silicon", "mps"]
-semantic_id = "GC3ZP4s_cZZksKAVTn3mMP6mfcZ9sAmu"
-related_by_meaning = ["/deep-dives/audiocraft-apple-silicon/", "/deep-dives/looking-for-metal-found-a-broken-lion/", "/glossary/mps/", "/glossary/vulkan/"]
+semantic_id = "v2:1uK_wK14Y62iUno0dGAdZLrBh9J9LvY4"
+related_by_meaning = ["/deep-dives/switched-off-bach/", "/deep-dives/looking-for-metal-found-a-broken-lion/", "/glossary/mps/", "/glossary/vulkan/"]
 +++
 
 Most interesting ML code was written by someone who assumed, the way you assume gravity, that
@@ -23,7 +23,8 @@ of moves, over and over.** Once you've done two of these ports you've basically 
 them, the way once you've assembled two pieces of flat-pack furniture you've made peace with
 the little hex key. So here are the moves in one place. The individual case studies -
 [PULSE](/deep-dives/reviving-pulse-apple-silicon/),
-[bitsandbytes](/deep-dives/looking-for-metal-found-a-broken-lion/), and eventually AudioCraft -
+[bitsandbytes](/deep-dives/looking-for-metal-found-a-broken-lion/), and
+[AudioCraft](/deep-dives/switched-off-bach/) -
 link back here instead of repeating them, because life is short and the hex key is always the
 same.
 
@@ -167,11 +168,10 @@ CUDA-only dependency, a dead download, and a port that lies about working. Every
 ports is just those six in a different costume. Recognize the costume and the fight gets
 boring - which, for this kind of work, is exactly the goal.
 
-**Two case studies are now live.** [PULSE](/deep-dives/reviving-pulse-apple-silicon/) is what
+**Three case studies are now live.** [PULSE](/deep-dives/reviving-pulse-apple-silicon/) is what
 happens when all six monsters arrive in a six-year-old trench coat. [The bitsandbytes
 experiment](/deep-dives/looking-for-metal-found-a-broken-lion/) begins with a CUDA-shaped
 dependency and ends with the correctness harness finding a bug in backends the Mac could not
-even run. AudioCraft is still on the way. Same six monsters, different victim.
-
-<!-- Re-link AudioCraft once its draft publishes. Still waiting:
-     /deep-dives/audiocraft-apple-silicon/ (draft). -->
+even run. And [AudioCraft](/deep-dives/switched-off-bach/) is Meta's music generator,
+where the worst bug was caught by ear, and the fix that was right for nine months turned wrong
+the day the stack underneath it got upgraded. Same six monsters, different victim.

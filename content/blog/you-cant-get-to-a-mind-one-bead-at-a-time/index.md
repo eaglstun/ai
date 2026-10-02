@@ -5,7 +5,7 @@ images = ["/og/you-cant-get-to-a-mind-one-bead-at-a-time.png"]
 description = "Everyone wants you to point at the conscious part. That's the wrong question. A walk from an abacus to a language model."
 summary = "A walk from an abacus to a language model, why 'artificial' was the tell, and the question I'd ask instead."
 tags = ["consciousness", "machine-learning"]
-semantic_id = "7twnZqHOY7vWnabkUSxY5oqpBwhPkAi3"
+semantic_id = "v2:lmgP4vq4bpSwwG3rC1AWNLbLf_-5brLJ"
 related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/the-bill-comes-due/", "/deep-dives/i-taught-it-to-draw-it-learned-to-comply/"]
 +++
 

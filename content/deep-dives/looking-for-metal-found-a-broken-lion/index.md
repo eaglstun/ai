@@ -5,7 +5,7 @@ description = "An Apple Silicon backend fork found a Lion optimizer bug that cro
 images = ["/og/looking-for-metal-found-a-broken-lion.png"]
 summary = "I forked bitsandbytes to build an AI-assisted native Metal backend for Apple Silicon. The backend stayed in the fork. The first correctness test found a Lion optimizer bug in three existing backends, and that smaller finding made it upstream. This is the useful shape of AI-assisted open-source work: build the ambitious thing in public, then separate the part you can prove, test, and hand to a maintainer without handing them your whole experiment."
 tags = ["apple-silicon", "bitsandbytes", "metal", "mps", "quantization"]
-semantic_id = "-XX7ntsevV9m2aBEXWR1LY4lVNKM8A9Y"
+semantic_id = "v2:tOsvhK20c4WQ9zzyQ1AdJKD915J5yNPq"
 related_by_meaning = ["/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/", "/deep-dives/porting-ml-to-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/"]
 +++
 

@@ -5,7 +5,7 @@ summary = "Plain text that reads fine raw, renders everywhere, and happens to be
 description = "Plain text that reads fine raw, renders everywhere, and is the language the models think in. Why the humblest format won."
 images = ["/og/why-markdown-is-king.png"]
 tags = ["prompt-engineering", "static-sites"]
-semantic_id = "Hay5JXCYCHX7BgplKJN9zxPtivmYMAlP"
+semantic_id = "v2:PeImRK5bZtQwQQ6RIgDQfZjrbstZK_Y9"
 related_by_meaning = ["/glossary/temperature/", "/glossary/rss-sampler/", "/practice/guitar-chart-skill/", "/glossary/context-window/"]
 +++
 

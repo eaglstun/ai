@@ -5,7 +5,7 @@ description = "One portable skill, two marketplace wrappers, and an Apple II les
 images = ["/og/beagle-bros-two-marketplaces.png"]
 summary = "I turned the generous, funny spirit of the Beagle Bros into one portable agent skill, then wrapped the same files for the Claude and Codex marketplaces. The manifests are different. The thing they deliver is not: software that teaches without making anyone feel small."
 tags = ["prompt-engineering", "tooling"]
-semantic_id = "IY8zHf3eq4uj1cIBNyZUqBhfFfc-0BFS"
+semantic_id = "v2:1usH2KooTpeU6VjbS1ALNLuCy8qYaVH9"
 related_by_meaning = ["/practice/five-agents-one-marble/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/my-whole-deal-is-now-a-toggle/", "/practice/four-painters-one-brief/"]
 +++
 

@@ -5,7 +5,7 @@ images = ["/og/nobodys-hands-are-big-enough.png"]
 description = "A frontier model gives one person more leverage than one person can supervise. Model safety is only half the question."
 summary = "A model wrote me a working GPU backend in an afternoon. The useful safety question is not only what the model can do, but who gets to direct it."
 tags = ["ai-safety", "alignment", "gpt"]
-semantic_id = "_eOJCa7DxYXIl-z73X6u0QtGtZ7owAou"
+semantic_id = "v2:lGovZC0wUwnxVx7x0jQ9bbWL2dg5eqYo"
 related_by_meaning = ["/glossary/alignment/", "/deep-dives/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/"]
 +++
 

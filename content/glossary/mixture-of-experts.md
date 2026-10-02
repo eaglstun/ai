@@ -5,7 +5,7 @@ category = "Architectures"
 related = ["transformer", "parameters", "attention", "qwen", "open-weights"]
 plain = "A hospital instead of a single all-purpose doctor. You don't make one doctor learn every specialty and see every patient; you hire a hundred specialists and put a triage nurse at the door who reads each case and waves it to the right two or three. The hospital 'knows' an enormous amount, but any one patient only ever occupies a couple of rooms - so it's huge in total but cheap per visit. The bill is that everyone still has to be on payroll, sitting in their office, whether or not today's patients need them."
 tags = ["mixture-of-experts", "transformer", "parameters", "token"]
-semantic_id = "ScLjiMtgDiBq5_3hdFZEj6lch8xs0AAK"
+semantic_id = "v2:pujv1SAzesosBySiBHgfxa_Bxol5LNOl"
 +++
 **Mixture of experts** (MoE) is a way of building a [transformer](/glossary/transformer/) so that only a fraction of it
 runs on any given [token](/glossary/token/). Instead of one big feed-forward block that every token passes through,

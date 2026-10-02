@@ -5,7 +5,7 @@ images = ["/og/replicator-was-never-the-point.png"]
 description = "AI can take the toil without taking the work. Star Trek understood the difference, but skipped the transition."
 summary = "The replicator did not end cooking; it made cooking optional. An argument for separating work from toil, with DEVO and rent."
 tags = ["ai-policy", "labour"]
-semantic_id = "Vd75C6wvJAMwXBb4NZrzA9Qfd96sQAl9"
+semantic_id = "v2:tW0FRypSaomYYxjxU9wUFL2v_855Y-K9"
 related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/"]
 +++
 

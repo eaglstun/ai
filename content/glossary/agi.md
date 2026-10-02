@@ -5,7 +5,7 @@ category = "Core concepts"
 related = ["machine-learning", "gpt", "model-welfare", "alignment"]
 plain = "The 'does everything' robot from the movies - one AI that matches a person at basically any mental task, not just the one it was trained for. It doesn't exist yet, and people can't even agree on where the finish line is."
 tags = ["agi", "ai-policy", "machine-learning"]
-semantic_id = "dOzfqex-k0iI3SwYFofG0Wga17QWQAAM"
+semantic_id = "v2:ZnBr3ahy3OKkgHlEzFUJhb9Mv1otWP3I"
 +++
 **AGI** (Artificial General Intelligence) is the hypothetical point at which an AI can handle
 essentially the full range of intellectual tasks a person can, and carry what it learns on

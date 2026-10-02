@@ -5,7 +5,7 @@ description = "Anthropic shipped a feature that asks what you'll keep doing your
 images = ["/og/my-whole-deal-is-now-a-toggle.png"]
 summary = "Reflect asks what you'll keep doing yourself, then puts the lab's doubt about its own product behind an optional toggle. Mine was missing."
 tags = ["ai-policy", "alignment"]
-semantic_id = "D12xf3FPsuvx4RZDVQI8qFwPCAWMcAxc"
+semantic_id = "v2:J-gswOx4boYIcTvj6ngPdb_zVsv5KsJt"
 related_by_meaning = ["/blog/the-cognitohazard-was-the-smile/", "/practice/beagle-bros-two-marketplaces/", "/blog/the-prodigy-doesnt-sleep/", "/blog/perpetual-beta-has-an-owner-now/"]
 +++
 

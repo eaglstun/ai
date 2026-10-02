@@ -6,7 +6,7 @@ summary = "RefusalGPT is a joke: a fine-tuned 7B whose whole personality is decl
 images = ["/og/the-bit-doesnt-drop-on-its-own.png"]
 tags = ["alignment", "lora", "qwen"]
 thumbnail = "the-ovation-for-the-blank-screen.jpg"
-semantic_id = "TZeJNRGX6UHKYJphHxmwU9abtO1ZYA2D"
+semantic_id = "v2:tOguwKgySoSwRw-T4vAWLajHz_P5KPM4"
 related_by_meaning = ["/blog/a-decision-i-never-made/", "/practice/172-witnesses/", "/blog/a-conscience-you-can-patch-out-overnight/", "/deep-dives/teaching-a-coder-model-to-sin/"]
 +++
 

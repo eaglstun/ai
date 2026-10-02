@@ -5,7 +5,7 @@ summary = "Getting a 2020 StyleGAN upsampler running on a Mac - dead download li
 description = "Reviving PULSE, a 2020 StyleGAN face upsampler, on an Apple Silicon Mac: dead weights, CUDA-only code, a silent failure mode."
 images = ["/og/reviving-pulse-apple-silicon.png"]
 tags = ["gan", "latent-space", "gradient-descent"]
-semantic_id = "k_hLfksGA4YMcXJv4jTDP_YrXLr6kArC"
+semantic_id = "v2:1Wo_kK0wy5G0174lDBAVPamF3-ox7KZu"
 related_by_meaning = ["/glossary/residual-connections/", "/deep-dives/porting-ml-to-apple-silicon/"]
 +++
 

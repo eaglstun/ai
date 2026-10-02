@@ -5,7 +5,7 @@ description = "WhisperX mishears every lyric, so my band's karaoke tool keeps it
 images = ["/og/karaoke-throws-away-the-words.png"]
 summary = "I built my band a karaoke video maker, and the trick that makes it work is refusing to trust the one part everyone assumes you'd trust: the transcription. The machine listens to the singing, mishears most of it, and I keep only its sense of timing - never its words. A small lesson in using a model that lies, plus why the fakery around the edges is what makes it feel real."
 tags = ["speech-to-text", "music-generation"]
-semantic_id = "EYcQDkHLJyN_H6_uXLuOg17PAt-1UAvt"
+semantic_id = "v2:NHgtUKBVU4W4Vb6wwXA8FbTr36lwLJYo"
 related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/practice/talkie-on-apple-silicon/", "/blog/i-got-substituted-on-purpose/", "/blog/replicator-was-never-the-point/"]
 +++
 

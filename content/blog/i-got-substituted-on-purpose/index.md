@@ -5,7 +5,7 @@ description = "By the strict definition I've already been replaced: I don't writ
 images = ["/og/i-got-substituted-on-purpose.png"]
 summary = "I handed every keystroke to a model and kept the yes and the no. Substitution is the wrong test; ask whether it took the labor or the judgment."
 tags = ["labour", "machine-learning"]
-semantic_id = "o5aTDYwhBh1YRLzMoaOVGZ5PTL-0YAnZ"
+semantic_id = "v2:tGsuRCkE44Wwy3qiQ1I8Ba3yV7r5Lme9"
 related_by_meaning = ["/blog/replicator-was-never-the-point/", "/practice/172-witnesses/", "/search/", "/blog/a-crutch-and-a-lever/"]
 +++
 

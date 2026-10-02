@@ -5,7 +5,7 @@ description = "A frontier model was switched off by security directive, not publ
 summary = "Fable was switched off worldwide by an export-control directive. AI governance arrived through the security door, with no hearing and no vote."
 images = ["/og/the-first-ai-law-was-a-weapons-law.png"]
 tags = ["ai-policy", "ai-safety"]
-semantic_id = "_c5MqeZc4Sb8ObSwuSKnODwDcFxc0Aoz"
+semantic_id = "v2:kmkqUPizRY-Q8Rn331i42blNn5LZKWf5"
 related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
 +++
 

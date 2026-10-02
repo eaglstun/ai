@@ -8,7 +8,7 @@ summary = "Where the Metal backend actually gets fast, where it doesn't, and thr
 description = "Where the Metal backend gets fast, where it doesn't, and three times my intuition was measurably wrong."
 images = ["/og/ctranslate2-part-6.png"]
 tags = ["metal", "inference", "apple-silicon"]
-semantic_id = "3lK4Rlg_GnfyDfN5XE4QSEfeEI-ZsAzL"
+semantic_id = "v2:tOovwa19W4SwQ9bqwlAcBaRL35s5bvIp"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/"]
 +++
 

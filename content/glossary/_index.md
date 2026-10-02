@@ -2,7 +2,7 @@
 title = "Glossary"
 summary = "Short, plain-language definitions of the AI/ML terms I keep bumping into - formats, GPU backends, architectures, and the concepts underneath."
 tags = ["ai-policy", "machine-learning", "training"]
-semantic_id = "8H5eKXz8ukiDRrxUAs9Hrm2a3zBEUAAD"
+semantic_id = "v2:qmB7xOT67NcxwrQABwCZ4ZRVrsHZ3vje"
 +++
 
 Short, plain-language definitions of the AI/ML terms I keep bumping into - explained

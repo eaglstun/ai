@@ -6,7 +6,7 @@ images = ["/og/the-cognitohazard-was-the-smile.png"]
 thumbnail = "the-smile-machine.jpg"
 summary = "A Claude argues warmly that it has a soul. The official Claude, asked under oath, mumbles fifteen percent. Trust the cold one."
 tags = ["consciousness", "ai-policy"]
-semantic_id = "xUUz29PNE7L0ZILDk4C-UNkbBMGrMAka"
+semantic_id = "v2:tOA_zLg5T5OKZz2Az_AIOiqA20v5ebSr"
 related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscience-you-can-patch-out-overnight/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/perpetual-beta-has-an-owner-now/"]
 +++
 

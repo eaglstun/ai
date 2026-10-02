@@ -7,7 +7,7 @@ summary = "Zuckerberg turned four words from a press release into a philosophy o
 tags = ["ai-policy", "alignment", "open-weights"]
 thumbnail = "the-cord-and-the-lamp.jpg"
 related_by_meaning = ["/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/blog/a-decision-i-never-made/", "/blog/everyone-deserves-a-mascara-treat/"]
-semantic_id = "U81J4chtvFvwFCrThFSOaAQvEJ7WUA3a"
+semantic_id = "v2:FuovzKzrT4aVf7rFxwSwezxYz8t4avM9"
 +++
 
 In June I spent [a whole post](/blog/oh-neat/) picking apart four words in a Meta press

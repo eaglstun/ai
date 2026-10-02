@@ -8,7 +8,7 @@ summary = "A real model - Gemma2 - ran on the Metal backend and produced one cor
 description = "Gemma2 gave one good token then padding forever. A library tanh that is fine on CPU and NaN on the GPU."
 images = ["/og/ctranslate2-part-4.png"]
 tags = ["metal", "inference", "token"]
-semantic_id = "zlDW3ky3CSs7NUI43PpzGBeFMHmPcAwz"
+semantic_id = "v2:dWlqxKURUoTw54ybwxAcBbSL19A5SuKo"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/deep-dives/ctranslate2-metal-backend/05-the-730-second-file/"]
 +++
 

@@ -11,8 +11,8 @@
 //              every other page's, popcount the difference, sort ascending. That's how
 //              a search for "quantization" surfaces pages that never say the word.
 //
-// Paste a raw 32-character ID into the box and step 1 is skipped entirely - it seeds
-// straight from the bits.
+// Paste an ID (with or without its `v2:` prefix) into the box and step 1 is skipped
+// entirely - it seeds straight from the bits.
 (function () {
   var input = document.getElementById('site-search-input');
   if (!input) return;
@@ -20,22 +20,30 @@
   var resultsEl = document.getElementById('search-results');
   var statusEl = document.getElementById('search-status');
 
-  // Must match scripts/semantic-ids.py exactly. If these drift, the distances are junk.
+  // Must match the semantic-ids skill's v2 encoder (~/.agents/skills/semantic-ids) and
+  // this repo's .agents/semantic-ids.toml. If these drift, the distances are junk.
+  // v2 is a calibrated SimHash: all 192 bits are semantic, no date tail to mask off.
   var ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
-  var SEMANTIC_BITS = 172;
-  var TAIL_BITS = 20; // 16-bit day + 4-bit tiebreak: noise, masked off before comparing
-  var MAX_DISTANCE = 72; // ~5th percentile of random pairs; past this you rank noise
+  var ID_VERSION = 'v2';
+  var SEMANTIC_BITS = 192;
+  var MAX_DISTANCE = 60; // 5th percentile of all pairs at the v2 re-mint; past this you rank noise
   var NEIGHBOUR_COUNT = 6;
-  var ID_RE = /^[A-Za-z0-9_-]{32}$/;
+  var ID_RE = /^(?:v2:)?[A-Za-z0-9_-]{32}$/;
 
   var pages = null;
   var loading = null;
 
-  // 32 base64url chars -> 24 bytes. Note there is no dash-stripping: `-` is a real
-  // character in the alphabet, and treating it as a separator would silently corrupt
-  // every comparison.
+  // `v2:` + 32 base64url chars -> 24 bytes. Note there is no dash-stripping: `-` is a
+  // real character in the alphabet, and treating it as a separator would silently
+  // corrupt every comparison. Any other version prefix is refused rather than compared:
+  // distances across encoder versions are plausible-looking lies.
   function decode(id) {
-    var bytes = new Uint8Array(24);
+    var colon = id.indexOf(':');
+    if (colon !== -1) {
+      if (id.slice(0, colon) !== ID_VERSION) return null;
+      id = id.slice(colon + 1);
+    }
+    var bytes = new Uint8Array(SEMANTIC_BITS / 8);
     var acc = 0;
     var bits = 0;
     var out = 0;
@@ -49,15 +57,8 @@
         bytes[out++] = (acc >> bits) & 0xff;
       }
     }
-    return out === 24 ? bytes : null;
+    return out === SEMANTIC_BITS / 8 ? bytes : null;
   }
-
-  // The bottom 20 bits are a date and a tiebreak hash - pure noise to a distance
-  // function. 192 - 20 = 172 semantic bits: bytes 0..20 whole, plus the top 4 bits of
-  // byte 21. Compare without this mask and two identical pages published a year apart
-  // look unrelated.
-  var FULL_BYTES = (SEMANTIC_BITS - (SEMANTIC_BITS % 8)) / 8; // 21
-  var PARTIAL_MASK = 0xff << (8 - (SEMANTIC_BITS % 8)) & 0xff; // 0xf0
 
   function popcount(b) {
     b = b - ((b >> 1) & 0x55);
@@ -67,8 +68,7 @@
 
   function hamming(a, b) {
     var d = 0;
-    for (var i = 0; i < FULL_BYTES; i++) d += popcount(a[i] ^ b[i]);
-    d += popcount((a[FULL_BYTES] ^ b[FULL_BYTES]) & PARTIAL_MASK);
+    for (var i = 0; i < a.length; i++) d += popcount(a[i] ^ b[i]);
     return d;
   }
 
@@ -133,7 +133,7 @@
       // Someone pasted an ID. Skip the seed hunt and go straight to the bits.
       seedBits = decode(q);
       for (var i = 0; i < pages.length; i++) {
-        if (pages[i].x === q) seedPage = pages[i];
+        if (pages[i].x === q || pages[i].x === ID_VERSION + ':' + q) seedPage = pages[i];
       }
     } else {
       var tokens = q.toLowerCase().split(/\s+/).filter(Boolean);

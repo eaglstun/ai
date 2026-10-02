@@ -7,7 +7,7 @@ summary = "My agent was never wrong about the work. It was wrong about when to s
 tags = ["prompt-engineering", "tooling"]
 images = ["/og/a-decision-i-never-made.png"]
 thumbnail = "the-reader-and-the-mover.jpg"
-semantic_id = "l4WJFYSr7SuNFJLTUAs47VSfsO_RgA3l"
+semantic_id = "v2:v2ku4STwToSARwyhglIpNbHWz-L5KsYt"
 related_by_meaning = ["/blog/the-bit-doesnt-drop-on-its-own/", "/blog/everyone-deserves-a-mascara-treat/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/deep-dives/teaching-a-coder-model-to-sin/"]
 +++
 

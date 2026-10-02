@@ -5,7 +5,7 @@ description = "The same model is a crutch or a lever depending on what you hand 
 images = ["/og/a-crutch-and-a-lever.png"]
 summary = "The same model can remove effort or apply resistance. A practical test for whether your AI habit is a crutch or a lever."
 tags = ["ai-policy", "alignment", "prompt-engineering"]
-semantic_id = "v4MuRJyJYqN53J3c_7C2Wso6VM4-wAm2"
+semantic_id = "v2:53hr5GESx42cVE7oQLAMHJXKXw65acSh"
 related_by_meaning = ["/glossary/alignment/", "/deep-dives/why-the-sephora-bot-has-no-floor/", "/blog/the-weights-are-free-the-forklift-isnt/", "/blog/i-got-substituted-on-purpose/"]
 +++
 

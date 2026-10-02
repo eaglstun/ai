@@ -7,7 +7,7 @@ plain = "A spreadsheet that can run in more than two directions. One number is a
 image = "/glossary-img/tensor.webp"
 image_alt = "A minimalist isometric schematic: translucent grids nesting into a three-dimensional cube of small cells - a multi-dimensional array of numbers."
 tags = ["machine-learning", "tensor", "dimensions", "training"]
-semantic_id = "cjgW4vYVXDyP7vneptUItyFwqzzykAAC"
+semantic_id = "v2:Zkr3wCZa3q81DqXlBgKJ9b2PDFn-_PSO"
 +++
 **Tensor** is the basic data structure of modern [machine learning](/glossary/machine-learning/): a grid of numbers with
 any number of dimensions. It generalizes the familiar cases (a single number is a 0-D tensor,

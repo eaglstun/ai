@@ -10,7 +10,7 @@ tags = ["temperature", "fine-tuning", "local-inference"]
 # every list on the site (blog list, home "Latest", RSS) and out of every other page's
 # related_by_meaning. Findable, not promoted. See themes/ee-ai/layouts/_default/list.html.
 unlisted = true
-semantic_id = "nba2GW-hQvDaUhnPOUK18kXICsyJEAye"
+semantic_id = "v2:rOkOVLgz1oa45q_z99BqFd_LFkqxa_yo"
 related_by_meaning = ["/glossary/temperature/", "/blog/why-markdown-is-king/", "/glossary/precision/"]
 +++
 
