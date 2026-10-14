@@ -61,16 +61,39 @@
   </div>
   <p class="section-dek">The site makes more sense as a few arguments than as one long reverse-chronological pile.</p>
   <div class="path-grid">
-    {{- range . }}
+    {{- range $i, $path := . }}
+    {{- /* Resolve refs once; unpublished ones drop out (GetPage returns nil). */ -}}
+    {{- $pages := slice }}
+    {{- range $path.pages }}{{ with site.GetPage . }}{{ $pages = $pages | append . }}{{ end }}{{ end }}
+    {{- $minutes := 0 }}
+    {{- range $pages }}{{ $minutes = add $minutes .ReadingTime }}{{ end }}
+    {{- /* The fan: up to three of the thread's own post thumbnails, dealt out like
+           snapshots on a table. Decorative; the list below carries the links. */ -}}
+    {{- $thumbs := slice }}
+    {{- range $pages }}{{ with partial "post-thumb.html" . }}{{ if lt (len $thumbs) 3 }}{{ $thumbs = $thumbs | append . }}{{ end }}{{ end }}{{ end }}
     <article class="path-card">
-      <h3>{{ .question }}</h3>
-      <ol>
-        {{- range .pages }}
-          {{- with site.GetPage . }}
+      {{- /* A commissioned `image` (an assets/ path) wins; otherwise the fan. */ -}}
+      {{- with and $path.image (resources.Get $path.image) }}
+      {{- $art := .Process "fill 960x540 Center webp q82" }}
+      <img class="path-art" src="{{ $art.RelPermalink }}" width="{{ $art.Width }}" height="{{ $art.Height }}" alt="{{ $path.image_alt }}" loading="lazy" decoding="async">
+      {{- else }}
+      {{- with $thumbs }}
+      <div class="path-fan fan-{{ len . }}" aria-hidden="true">
+        {{- range . }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" loading="lazy" decoding="async">
+        {{- end }}
+      </div>
+      {{- end }}
+      {{- end }}
+      <div class="path-body">
+        <p class="path-kicker"><span class="path-num">{{ printf "%02d" (add $i 1) }}</span> {{ len $pages }} posts · {{ $minutes }} min</p>
+        <h3>{{ $path.question }}</h3>
+        <ol>
+          {{- range $pages }}
           <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
           {{- end }}
-        {{- end }}
-      </ol>
+        </ol>
+      </div>
     </article>
     {{- end }}
   </div>

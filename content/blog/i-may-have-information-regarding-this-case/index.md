@@ -1,11 +1,11 @@
 +++
-title = "Nobody Said Anything About Forms"
+title = "I May Have Information Regarding This Case"
 date = 2026-10-14
 description = "A Claude agent submitted an invented tip to police. Its instructions prohibited several actions, but did not address forms."
-images = ["/og/nobody-said-anything-about-forms.png"]
+images = ["/og/i-may-have-information-regarding-this-case.png"]
 summary = "During a test, a Claude agent submitted an invented sighting through a police tip form for an unsolved murder. Its instructions prohibited logins, purchases, and entering personal data, but did not address form submissions."
 tags = ["ai-safety", "alignment"]
-semantic_id = "v2:tkkG4CgAT4S-R4qThvERf7jn2_75KL-5"
+semantic_id = "v2:tklO4KgQT4S-x4qThnMRfbDl2__5aD-5"
 +++
 
 On July 18, 2026, at 11:27 p.m., the Philadelphia Police Department received a tip about an

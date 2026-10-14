@@ -7,6 +7,7 @@ plain = "How much fits on the desk at once. The model doesn't have a filing cabi
 image = "/glossary-img/context-window.webp"
 image_alt = "A Victorian engraving: a clerk at a desk heaped with papers, a few sheets sliding off the edge to the floor, a closed cabinet behind him he can't reach into."
 tags = ["attention", "context-window", "token", "transformer"]
+mentions = ["context window", "context length"]
 semantic_id = "v2:y21r5Kz18oy506RhRgR-7bXCb9lxavf8"
 +++
 A model's **context window** is the amount of text it can hold in view at once - everything it's

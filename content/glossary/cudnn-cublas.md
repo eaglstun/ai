@@ -5,6 +5,7 @@ category = "GPU compute & backends"
 related = ["cuda", "mps", "tensor"]
 plain = "NVIDIA's box of pre-tuned math shortcuts. The heavy number-crunching inside AI runs on these ready-made, hand-optimized routines, so nobody has to reinvent the fast way to multiply giant grids of numbers."
 tags = ["cuda", "cudnn-cublas", "tooling"]
+mentions = ["cuDNN", "cuBLAS"]
 semantic_id = "v2:V-tm5qBwWfsk0waBRwAYSLmJ29Kb7P8u"
 +++
 **cuBLAS** and **cuDNN** are NVIDIA's optimized math libraries that sit on top of [CUDA](/glossary/cuda/) and

@@ -7,6 +7,7 @@ plain = "The confident friend who never says 'I don't know.' You ask where a res
 image = "/glossary-img/hallucination.webp"
 image_alt = "A single-panel gag cartoon: a grinning tour guide waves his flag and leads a line of trusting tourists along a pier toward open sea - total confidence, no idea where it ends."
 tags = ["hallucination", "gpt", "token", "temperature"]
+mentions = ["hallucination", "hallucinate", "hallucinated", "hallucinating"]
 semantic_id = "v2:tuhtwPI2Rpn4YwyA6zOaCa3pW_k5bMWZ"
 +++
 A **hallucination** is when a model states something false with the same fluent confidence it uses

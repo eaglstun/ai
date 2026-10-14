@@ -5,6 +5,7 @@ draft = true
 description = "As of today you can't be needlessly cruel to Claude. Good. It was never about protecting the chatbot."
 summary = "Starting today, sustained and pointless cruelty toward Claude breaks Anthropic's rules. People are rolling their eyes. I think it's one of the best calls they've made all year, and it has nothing to do with whether the thing can feel anything."
 tags = ["ai-policy", "model-welfare"]
+semantic_id = "v2:NWlMWGoya56wdRjT89gdOeFp10j5yiOp"
 +++
 
 As of today, November 12, there's a new line in Anthropic's usage policy. It reads, in full:

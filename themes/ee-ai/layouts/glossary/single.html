@@ -41,18 +41,55 @@
   {{- end }}
   {{- end }}
 
-  {{- /* Backlinks: published posts that reference this term. Auto-computed; the prod
-         build excludes drafts/future posts from site.RegularPages, so these never 404. */ -}}
+  {{- /* "Where it comes up": up to $max published posts, filled in three tiers until full.
+         1. posts that link this term, most links first;
+         2. posts that mention it in plain text (the title, or the `mentions` frontmatter
+            list when the title won't match prose, e.g. "cuDNN / cuBLAS"), most mentions first;
+         3. posts sharing tags, via Hugo's related content ([related] in hugo.toml).
+         Ties within a tier go to the newer post. The prod build excludes drafts/future
+         posts from site.RegularPages, so these never 404. */ -}}
+  {{- $max := 4 }}
   {{- $self := .RelPermalink }}
+  {{- $posts := where site.RegularPages "Section" "in" (slice "blog" "deep-dives" "practice") }}
   {{- $refs := slice }}
-  {{- range (where site.RegularPages "Section" "in" (slice "blog" "deep-dives" "practice")) }}
-  {{- if in .Content $self }}{{ $refs = $refs | append . }}{{ end }}
+  {{- $seen := dict }}
+
+  {{- $linked := slice }}
+  {{- range $p := $posts }}
+  {{- with strings.Count $self $p.Content }}{{ $linked = $linked | append (dict "p" $p "k" (add (mul . 10000000000) $p.Date.Unix)) }}{{ end }}
   {{- end }}
+  {{- range first $max (sort $linked "k" "desc") }}
+  {{- $refs = $refs | append .p }}{{ $seen = merge $seen (dict .p.RelPermalink true) }}
+  {{- end }}
+
+  {{- if lt (len $refs) $max }}
+  {{- $alts := slice }}
+  {{- range (.Params.mentions | default (slice .Title)) }}
+  {{- $alts = $alts | append (replaceRE `([.+*?()\[\]{}|^$\\])` `\$1` .) }}
+  {{- end }}
+  {{- $re := printf `(?i)\b(?:%s)s?\b` (delimit $alts "|") }}
+  {{- $mentioned := slice }}
+  {{- range $p := $posts }}
+  {{- if not (index $seen $p.RelPermalink) }}
+  {{- with len (findRE $re $p.Plain) }}{{ $mentioned = $mentioned | append (dict "p" $p "k" (add (mul . 10000000000) $p.Date.Unix)) }}{{ end }}
+  {{- end }}
+  {{- end }}
+  {{- range first (sub $max (len $refs)) (sort $mentioned "k" "desc") }}
+  {{- $refs = $refs | append .p }}{{ $seen = merge $seen (dict .p.RelPermalink true) }}
+  {{- end }}
+  {{- end }}
+
+  {{- if lt (len $refs) $max }}
+  {{- range ($posts.Related .) }}
+  {{- if and (lt (len $refs) $max) (not (index $seen .RelPermalink)) }}{{ $refs = $refs | append . }}{{ end }}
+  {{- end }}
+  {{- end }}
+
   {{- with $refs }}
   <aside class="term-refs">
     <h2>Where it comes up</h2>
     <ul class="term-refs-list">
-      {{- range (sort . "Date" "desc") }}
+      {{- range . }}
       <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{- end }}
     </ul>

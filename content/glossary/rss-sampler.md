@@ -5,6 +5,7 @@ category = "Local inference & formats"
 related = ["parameters", "gguf", "ggml", "precision", "quantization"]
 plain = "The bathtub gauge. A single 'it overflowed' tells you nothing useful; a number ticking up every few seconds tells you whether the water's creeping or gushing - so you can cut the tap before it hits the rim instead of mopping the floor after. The 'self-monitoring' part is just the tub watching its own water line."
 tags = ["rss-sampler", "tooling"]
+mentions = ["RSS sampler", "resident set"]
 semantic_id = "v2:h2svleT2UsSmn2zw64UBDbz_y0A5WsT7"
 +++
 An **RSS sampler** is a small monitor that wakes up on a timer, reads a process's **RSS**

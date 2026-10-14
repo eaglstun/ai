@@ -38,6 +38,9 @@ Frontmatter a term page uses:
 - `image` + `image_alt` - optional figure above the body. Art lives in
   `static/glossary-img/<slug>.webp` at 1024x768 (4:3); drafts and their prompts go in
   `concepts/glossary-<slug>/`.
+- `mentions` - optional phrases for the "Where it comes up" list (max 4 posts: linking
+  posts first, then plain-text mentions, then tag overlap via `[related]` in `hugo.toml`).
+  Defaults to the title; set it when the title won't appear in prose (`cuDNN / cuBLAS`).
 - `tags` (hand-curated) and `semantic_id` (minted by the semantic-ids skill, below). Never
   hand-edit `semantic_id`.
 
@@ -216,7 +219,7 @@ are deliberate - don't "normalize" them:
   master list lives in `meta/publish-schedule.md`, which is **generated** by
   `scripts/gen-publish-schedule.py` (reads each post's `date`/`draft`) - re-run it after adding
   or re-dating posts; don't hand-edit it, except the `Lock` column (`X` = date must not move,
-carried through verbatim on regeneration). Watch for date-anchored posts (ones that reference a
+  carried through verbatim on regeneration). Watch for date-anchored posts (ones that reference a
   real event or relative time like "this week"): pin those to absolute dates so re-dating the
   post doesn't break the narrative.
 - **Every published post ships share metadata.** Non-draft, non-future posts carry a

@@ -5,6 +5,7 @@ category = "Building blocks"
 related = ["transformer", "relu", "tensor", "norm-placement"]
 plain = "The express lane. Instead of forcing every layer to redraw the whole picture, you let the original pass straight through and each layer just clips on a note of what to change - which is how networks stack hundreds of layers deep without the signal getting mangled."
 tags = ["residual-connections", "gradient-descent", "relu", "tensor", "transformer", "training"]
+mentions = ["residual connection", "residual"]
 semantic_id = "v2:BGQf8eSw64mwFiWvYtgXWKXf1u_cbtIl"
 +++
 **Residual connections** (also called **skip connections**) are a wiring trick that lets you
