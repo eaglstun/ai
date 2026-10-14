@@ -13,33 +13,35 @@ No package manager, no runtime dependencies.
 
 ```bash
 hugo server -D                 # local dev → http://localhost:1313 (includes drafts)
-python3 scripts/gen-glossary.py # regenerate content/glossary/*.md (see below)
 ./deploy.sh                    # build --minify + rsync public/ to the droplet
 ```
+
+`scripts/` is **gitignored**: anything in it is local-only and absent from a fresh clone.
 
 `deploy.sh` reads `DEPLOY_HOST` / `DEPLOY_PATH` / `DEPLOY_BASE_URL` from `.env`
 (gitignored; see `.env.example`). The server vhost lives in `deploy/`.
 
-## The glossary is generated - don't hand-edit `content/glossary/*.md`
+## The glossary is hand-edited markdown
 
-Every `content/glossary/<slug>.md` (except `_index.md`) is **output** of
-`scripts/gen-glossary.py`. Editing them directly gets overwritten on the next run.
+Every `content/glossary/<slug>.md` (except `_index.md`) is the source of truth; edit it
+directly. These pages used to be **output** of `scripts/gen-glossary.py`, built from entries
+in the `ai-dev` skill's `references/glossary/`. That script was deleted on 2026-09-19
+(`1eb03ea cleanup`), so nothing regenerates them any more. The skill's copies still exist
+but are now an independent fork: an edit in one doesn't reach the other.
 
-Source entries live **outside this repo** at
-`~/.claude/skills/ai-dev/references/glossary/`. The script:
+Frontmatter a term page uses:
 
-- drops the leading `# Heading` (Hugo renders the title from frontmatter),
-- rewrites `[[slug]]` wikilinks into real `/glossary/slug/` links,
-- lifts the trailing `**See also:**` paragraph into `related` frontmatter (rendered as chips),
-- writes `title` / `summary` / `category` / `related` frontmatter.
+- `title`, `summary` (the dek), `category` (see Taxonomy below).
+- `related` - glossary slugs rendered as "See also" chips. Keep links reciprocal: when a
+  term points at another, add the back-link on the other page too.
+- `plain` - the "In plain English" aside, rendered through `markdownify`.
+- `image` + `image_alt` - optional figure above the body. Art lives in
+  `static/glossary-img/<slug>.webp` at 1024x768 (4:3); drafts and their prompts go in
+  `concepts/glossary-<slug>/`.
+- `tags` (hand-curated) and `semantic_id` (minted by the semantic-ids skill, below). Never
+  hand-edit `semantic_id`.
 
-To add or change a term: edit the source entry, then update the per-slug maps at the
-top of the script (`TITLE`, `SUMMARY`, `CATEGORY`, `RELATED`), then re-run it.
-
-**`tags` and `semantic_id` are the exception**: they're carried through verbatim on
-regeneration (see `carry_over()`), not written by the glossary script. `semantic_id` is
-minted by the semantic-ids skill (below); `tags` are hand-curated. If you rewrite the
-frontmatter block in that script, preserve those two fields or every glossary ID is destroyed.
+Body links between terms are plain markdown links to `/glossary/<slug>/`.
 
 ## Semantic IDs: the `semantic-ids` skill, v2 encoder
 
@@ -191,7 +193,7 @@ markdown inside the wrapper.
 
 ## Writing conventions (blog / practice / deep-dives)
 
-These sections hold hand-written posts (NOT generated like the glossary). Conventions that
+These sections hold hand-written posts. Conventions that
 are deliberate - don't "normalize" them:
 
 - **Routing:** _practice_ = reusable tools/workflows; _deep-dives_ = mechanism-heavy

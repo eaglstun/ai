@@ -50,6 +50,8 @@ stamp and a tiebreaker. The first 172 are the answers:
 ```
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of a small abacus with few beads beside a large abacus packed with many beads on every rod.](peek-base64.jpg)
+
 You count in base 10: ten symbols, and when you run out of them you add a column. **Base64** gets 64 symbols before it runs out, so every character says more. The 32 characters here hold 192 bits, a number that takes 58 characters to write out in the way you learned to count.
 {{< /bbros >}}
 Two pages about the same thing come out
@@ -175,6 +177,8 @@ a description.
 ## Why the search finds pages that never say the word
 
 {{< bbros title="Peek & Poke" n="3" float="right" >}}
+![A Victorian engraving of a perforated brass plate with light shining through its holes and a finger pointing at the bright spot.](peek-xor.jpg)
+
 The entire distance function: XOR the two IDs together, then count the 1s left over. That's it. Your browser does it for every page on the site before your finger leaves the key, which is why there is no vector database here and nothing to pay for monthly.
 {{< /bbros >}}
 

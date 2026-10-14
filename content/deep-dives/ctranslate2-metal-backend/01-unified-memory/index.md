@@ -42,6 +42,8 @@ part is a gift from the hardware.
 ## The allocator is the whole trick
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of a bespectacled clerk and a brass automaton reading the same open ledger from opposite sides of one table.](peek-shared-buffer.jpg)
+
 `MTLResourceStorageModeShared` is the whole spell. Allocate a buffer with it, PEEK the result with `[buffer contents]`, and you get an ordinary CPU pointer into the exact bytes the GPU reads. One allocation, two audiences, zero copies.
 {{< /bbros >}}
 

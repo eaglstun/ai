@@ -33,6 +33,12 @@ Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) handles anyt
 is code, or that wants to look like it: the model ids, the file paths, the occasional command
 you're meant to type.
 
+Both come from this server, not Google's. Google publishes every font in its library as
+plain files on GitHub, so I took the two I use, trimmed them down to the letters and weights
+this site actually needs, and set them on the shelf next to the pages. The italics are real
+italics now, too. For a long time your browser was quietly taking the upright Newsreader and
+tipping it over, like leaning a bookcase and calling it a staircase.
+
 ## Served off a Debian box
 
 The built files live on a small Debian server I rent, handed out by
@@ -66,6 +72,8 @@ CURRENT (2026-10-02): read payload = HTML+CSS+JS = 1,552,852 B = 1.48 MiB (1435 
 Image mix by BYTES: PNG 81.09 MiB / 106 files (75.6% of image bytes), JPG 18.17 MiB / 91, WEBP 8.01 MiB / 539. Prose says "more than three-quarters of the image weight is PNG"; never "almost all the images are PNG" (webp wins by count).
 
 JS: 3 files = 13,500 B (glossary-filter, search, treatment) + 2 inline scripts = 3,620 B (pulse-playground 2,032; seance-playground 1,588) = 17,120 B, "about seventeen kilobytes". The seance page also inlines a 23 KB JSON data block; that's data, not code, and it's already inside the HTML count. If you touch static/js/ or a playground shortcode, recount and re-read that sentence.
+
+FONTS (self-hosted since 2026-10-03): static/fonts/*.woff2 = ~315 KB (Newsreader roman + italic, Atkinson Hyperlegible Mono). NOT in the read payload, which is defined in prose as HTML + CSS + scripts. They do count toward the whole-site total (+0.31 MiB, still rounds up to 110 MB). Before this they came from Google Fonts and weren't counted anywhere. The "No cookies" section now claims zero external requests; re-check that if anything ever embeds or links in an off-site resource.
 
 The search index (/index.json, 33.6 KB, up from ~30 after the v2 `v2:` ID prefix) is NOT in the read payload on purpose: only /search/ fetches it. Prose says "thirty-four kilobytes".
 
@@ -101,8 +109,8 @@ system at all could do the job too. The modern web feels heavy. This corner of i
 ## No cookies, no tracking
 
 This is the part I actually care about. **The site sets zero cookies and runs zero
-analytics.** The one external request loads the typefaces from Google Fonts; everything
-else comes from this box. There is no analytics script, ad pixel, or behavior log. The web
+analytics.** Every byte comes from this box, typefaces included; your browser never has to
+ask anyone else for anything. There is no analytics script, ad pixel, or behavior log. The web
 server keeps the same plain access logs servers have kept since about 1995, and that is
 where it ends. Nothing here is built to follow you around the internet, build a little
 dossier, or work out who you are.

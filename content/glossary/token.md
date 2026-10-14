@@ -4,6 +4,8 @@ summary = "The subword chunk a model actually reads and writes; text is split in
 category = "Core concepts"
 related = ["embeddings", "attention", "transformer", "temperature", "gpt", "context-window", "hallucination"]
 plain = "The Lego bricks of language. The model can't see letters or whole words - it only knows a fixed bin of pre-molded chunks, and every sentence it reads or writes has to be snapped together from those. 'cat' might be one brick; 'unbelievable' three; a weird typo, a fistful of tiny ones."
+image = "/glossary-img/token.webp"
+image_alt = "A Victorian engraving: a hand at an open printer's type case, its lid crowded with chunks that almost spell words - the pre-molded pieces a model reads instead of letters."
 tags = ["token", "embeddings"]
 semantic_id = "v2:hm1u5CyT4AwVWxShbpD-aaXt7toxKuCl"
 +++

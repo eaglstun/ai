@@ -42,6 +42,8 @@ is 3.7× faster and it's a stable, repeatable result. The math hardware is genui
 just have to give it enough to chew.
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of six pocket stopwatches in a row on a velvet cloth, with a seventh set apart below them.](peek-median-watches.jpg)
+
 Timing GPU work means timing the _wait_, not the call. Commit the command buffer, block until it reports back, and only then stop the clock, or you are measuring how fast your CPU can ask a question. Then throw out the first run, which paid for warm-up, and take the median of the rest rather than the average.
 {{< /bbros >}}
 

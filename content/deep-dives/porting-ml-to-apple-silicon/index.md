@@ -48,6 +48,8 @@ like a war crime? No. That part's the agent's, all of it.
 ## 1. Device selection: stop hardcoding the church you pray to
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of two brass calculating engines, a heavy one planted on its base and a smaller one mounted on wheeled casters.](peek-device.jpg)
+
 In PyTorch a **device** is just where a tensor's math actually runs: `cuda` (NVIDIA), `mps` (Apple's GPU), or `cpu`. `.cuda()` nails the code to one of them. Ask for "best available" instead and the same file runs on any machine.
 {{< /bbros >}}
 
@@ -85,6 +87,8 @@ decide whether to pin it to CPU on purpose or rewrite around it.
 ## 3. Dtype landmines: the float64 that isn't there
 
 {{< bbros title="Peek & Poke" n="3" float="right" >}}
+![A Victorian engraving of an enormous round glass flask wedged fast in a narrow arched doorway.](peek-float64.jpg)
+
 **float64 / float32** is how many bits hold one number: double precision vs single. MPS flatly refuses float64. For inference, float32 is almost always plenty, so the fix is usually "tell it 32 is fine" and move on.
 {{< /bbros >}}
 

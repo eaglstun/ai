@@ -4,6 +4,8 @@ summary = "How much text a model can hold in view at once, counted in tokens - i
 category = "Core concepts"
 related = ["token", "attention", "transformer", "embeddings"]
 plain = "How much fits on the desk at once. The model doesn't have a filing cabinet it can rummage through - it can only reason about the papers physically spread out in front of it right now. Slide a new page on and, once the desk is full, one slides off the far edge and is gone from view. A bigger desk holds more of the project at once, but papers crowded into the middle still get glanced at less than the ones right under its nose."
+image = "/glossary-img/context-window.webp"
+image_alt = "A Victorian engraving: a clerk at a desk heaped with papers, a few sheets sliding off the edge to the floor, a closed cabinet behind him he can't reach into."
 tags = ["attention", "context-window", "token", "transformer"]
 semantic_id = "v2:y21r5Kz18oy506RhRgR-7bXCb9lxavf8"
 +++

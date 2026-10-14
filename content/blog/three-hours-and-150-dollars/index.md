@@ -88,6 +88,8 @@ for an afternoon and a credit card.
 ## The part that keeps me grounded
 
 {{< bbros title="Peek & Poke" n="3" float="right" >}}
+![A Victorian engraving of two identical brass clockwork machines on a workbench: the original sealed under a glass bell jar, its twin out in the open with a screwdriver beside it, and a black-and-white dog asleep underneath.](peek-fork-not-pr.jpg)
+
 A **fork** is your own copy of someone's project; a **pull request** asks them to merge your changes back in. This stayed a fork on purpose. Mailing code you can't vouch for to volunteer maintainers isn't a contribution, it's a chore with your name filed off.
 {{< /bbros >}}
 

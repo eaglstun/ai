@@ -41,6 +41,8 @@ electric bill.
 ## The wall
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of a broken dividing wall standing in one shared pool of water, a tap on either side drawing from it.](peek-vram.jpg)
+
 **VRAM** is the memory bolted onto a graphics card, kept walled off from the RAM your programs run in. "Needs 28 GB of VRAM" means 28 GB _on the card_, and a Mac has no such card to fill. Apple's whole trick is to abolish the distinction: one pool of memory, and the GPU just reaches into it like everybody else.
 {{< /bbros >}}
 

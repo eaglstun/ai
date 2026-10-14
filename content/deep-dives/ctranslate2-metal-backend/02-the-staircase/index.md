@@ -43,6 +43,8 @@ immediately - every op, every layer, a whole transformer - with **zero** Metal k
 and zero of those fifty template instantiations demanded.
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of the Mechanical Turk chess automaton with its cabinet door open, revealing the clerk with an abacus hidden inside.](peek-mechanical-turk.jpg)
+
 `constexpr Device D = Device::CPU`, POKEd into the Metal arm of the dispatch switch, is the whole cheat. The engine still PEEKs its real device as `Device::METAL`, so every op that hasn't graduated yet quietly runs the CPU math on GPU-resident bytes. Fifty kernels of work, deferred with one line.
 {{< /bbros >}}
 

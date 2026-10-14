@@ -4,6 +4,8 @@ summary = "Storing each weight as a low-bit integer index into a handful of buck
 category = "Local inference & formats"
 related = ["precision", "gguf", "ggml", "parameters", "lora", "tensor", "rss-sampler"]
 plain = "Saving the model as a 16-color GIF. A photo has millions of colors; the GIF picks sixteen and repaints everything with those, and from across the room you can barely tell. Models get the same treatment, with one extra trick: the model doesn't get one palette, it gets a fresh little palette for every small patch of canvas, so a patch with something wild in it can spend its sixteen colors on the wild thing instead of averaging it away. Squint and it's the same picture at a quarter of the size. Lean in and the gradients are banded, the rare shades are gone, and the details it was never confident about have quietly turned to mush."
+image = "/glossary-img/quantization.webp"
+image_alt = "A two-color risograph sunset: a pink sky and a coral sun over mountains reduced to a few flat bands of teal - the whole scene repainted with a handful of tones."
 tags = ["quantization", "precision", "parameters"]
 semantic_id = "v2:s2pvxaXZ_q6EW2Sz4gAbFf3Fz8g46PVK"
 +++

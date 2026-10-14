@@ -33,6 +33,8 @@ speaks.
 ## Why it won
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of two identical waistcoats on a tailor's rail, alike in every stitch but one swapped button, with a locked steamer trunk on the floor below.](peek-diff.jpg)
+
 A **diff** is the line-by-line list of what changed between two versions of a file. Plain text diffs clean, word by word. A binary `.docx` just shrugs and says "something moved," then wishes your teammate luck.
 {{< /bbros >}}
 
@@ -130,6 +132,8 @@ is preserved exactly, because the format finally agreed to stop helping.
 ## Footnotes, the one bit of syntax worth the extra keystrokes
 
 {{< bbros title="Peek & Poke" n="5" float="right" >}}
+![A Victorian engraving of a powdered-wig footman holding a silver tray, standing lost in the middle of a ballroom while couples waltz around him.](peek-footnote.jpg)
+
 Footnotes are an **extension**, not core Markdown. CommonMark never specified them. Goldmark (what Hugo uses), GitHub, and Pandoc all support them anyway. A renderer that doesn't will print your `[^1]` right there in the sentence, looking exactly as silly as it sounds.
 {{< /bbros >}}
 

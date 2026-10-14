@@ -7,6 +7,33 @@
    The numeric prefixes ARE the cascade order - renaming one reorders the sheet.
    =========================================================================== */
 
+/* Self-hosted webfonts (static/fonts/), cut from the google/fonts repo: variable
+   TTFs pinned to the weights we use, subset to Latin + Latin Extended, woff2.
+   Paths are relative to the published /css/style.css. Licenses sit beside them. */
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/newsreader.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/newsreader-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  src: url("../fonts/atkinson-hyperlegible-mono.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+}
+
 :root {
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --font-mono:
