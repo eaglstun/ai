@@ -4,6 +4,8 @@ summary = "A convergence threshold (eps) used as a hard pass/fail gate - and the
 category = "Core concepts"
 related = ["gradient-descent", "precision", "mps", "val-loss"]
 plain = "The high-jump bar that forgot to move. Set the bar at an exact height: clear it and you're in, graze it and you're out, even if you jumped higher than anyone in the room. Now hold the contest on a slightly springier floor, and a great jumper keeps nicking the bar by a hair - so the system records zero winners instead of just nudging the bar down a touch. An epsilon gate is that rigid bar: a tiny 'good enough' cutoff that quietly throws out near-perfect answers the moment the conditions shift."
+image = "/glossary-img/epsilon-gate.webp"
+image_alt = "A cheerful 1950s gouache: a high jumper sails far above the bar while a panel of judges frowns at their table anyway - a rigid pass mark that refuses to budge."
 tags = ["cuda", "mps", "precision", "gradient-descent", "epsilon-gate"]
 semantic_id = "v2:Jmg-8OOwQ8a0FSyDi5A7Z7XF39g5CMFt"
 +++

@@ -4,6 +4,8 @@ summary = "A model whose trained parameters are published for download, so you c
 category = "Core concepts"
 related = ["parameters", "qwen", "gguf", "lora", "mixture-of-experts"]
 plain = "Getting the finished dish, not the recipe. A closed model is a restaurant - you order through the window and never enter the kitchen. An open-weight model is the whole cooked meal handed to you in a to-go box: you can eat it anywhere, reheat it, chop it up and remix it, and nobody can ever tell you the kitchen's closed. You just don't get the ingredient list, and you can't run the exact same kitchen yourself."
+image = "/glossary-img/open-weights.webp"
+image_alt = "A cheerful 1950s gouache: a smiling chef hands a steaming meal in a to-go box to a delighted customer at the kitchen door - you get the finished dish to take anywhere."
 tags = ["open-weights", "fine-tuning", "quantization", "local-inference"]
 semantic_id = "v2:fXsozSV19I2G0j3lMhEUbLyZRUp46NHY"
 +++

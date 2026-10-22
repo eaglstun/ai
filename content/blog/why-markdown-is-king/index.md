@@ -132,7 +132,7 @@ is preserved exactly, because the format finally agreed to stop helping.
 ## Footnotes, the one bit of syntax worth the extra keystrokes
 
 {{< bbros title="Peek & Poke" n="5" float="right" >}}
-![A Victorian engraving of a powdered-wig footman holding a silver tray, standing lost in the middle of a ballroom while couples waltz around him.](peek-footnote.jpg)
+![A Victorian engraving of a theater stage framed in laurel, two actors mid-scene while a tiny prompter peeks out of a shell-shaped box at the foot of the stage, whispering an aside.](peek-footnote.jpg)
 
 Footnotes are an **extension**, not core Markdown. CommonMark never specified them. Goldmark (what Hugo uses), GitHub, and Pandoc all support them anyway. A renderer that doesn't will print your `[^1]` right there in the sentence, looking exactly as silly as it sounds.
 {{< /bbros >}}

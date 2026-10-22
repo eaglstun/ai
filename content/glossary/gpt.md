@@ -4,6 +4,8 @@ summary = "Generative pre-trained (decoder-only) transformer LLM."
 category = "Architectures"
 related = ["transformer", "gguf", "agi", "gelu", "qwen", "temperature", "token", "hallucination"]
 plain = "The autocomplete that ate the world. At heart it just guesses the next word over and over - but at enormous scale that simple trick turns into something that can write essays, code, and hold a conversation."
+image = "/glossary-img/gpt.webp"
+image_alt = "A mid-century screenprint: a red typewriter towers over a city skyline, one endless ribbon of paper pouring down between the buildings - next-word guessing at enormous scale."
 tags = ["gpt", "transformer", "token", "training"]
 semantic_id = "v2:pG73SiN-_ZK2QiFDl0GYJbmXBtf8DPe8"
 +++

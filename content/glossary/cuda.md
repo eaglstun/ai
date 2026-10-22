@@ -4,6 +4,8 @@ summary = "NVIDIA's GPU-compute platform; the default ML backend."
 category = "GPU compute & backends"
 related = ["metal", "vulkan", "ggml", "cudnn-cublas"]
 plain = "The translator that lets AI software talk to NVIDIA graphics cards. NVIDIA's chips are the industry-standard engines for AI, and CUDA is the language nearly everyone uses to drive them."
+image = "/glossary-img/cuda.webp"
+image_alt = "A mid-century screenprint: a black steam locomotive with green trim thunders along rails through a city of glowing circuit boards - the engine nearly all AI runs on."
 tags = ["cuda", "cudnn-cublas", "ggml", "gguf", "local-inference", "machine-learning"]
 semantic_id = "v2:nUl0xiX42conVgSQ0AAZYewP3dDd6eUu"
 +++

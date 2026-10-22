@@ -4,6 +4,8 @@ summary = "The smooth activation gate used inside GPT- and BERT-style transforme
 category = "Building blocks"
 related = ["transformer", "gpt", "tensor", "relu"]
 plain = "The bouncer with manners. It's the little gate between layers that decides how much of each signal to let through - instead of a hard yes/no it eases borderline cases in gently, which is why modern models prefer it."
+image = "/glossary-img/gelu.webp"
+image_alt = "An ink-and-wash drawing: a bouncer in a tuxedo gently unhooks a velvet rope for a hesitant group of guests - borderline cases eased through, not shoved."
 tags = ["gelu", "gpt", "transformer", "training"]
 semantic_id = "v2:jG4-8K8iUZM4RX3jn1KPj6kP9tC5LPG7"
 +++

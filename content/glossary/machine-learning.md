@@ -4,6 +4,8 @@ summary = "Systems that learn patterns from data instead of hand-written rules."
 category = "Core concepts"
 related = ["tensor", "transformer", "parameters", "val-loss", "agi", "gradient-descent", "alignment"]
 plain = "Teaching by examples instead of rules. Instead of writing out every rule for 'what a cat looks like,' you show the computer thousands of cat photos and let it work out the pattern itself."
+image = "/glossary-img/machine-learning.webp"
+image_alt = "A cut-paper collage: a robot sits at a vintage computer surrounded by dozens of cut-out cats - learning what a cat is from examples, not rules."
 tags = ["machine-learning", "training", "inference", "parameters"]
 semantic_id = "v2:NKhRiaTXnMSl0jWHDzkRIbzZT8jxzNzO"
 +++
