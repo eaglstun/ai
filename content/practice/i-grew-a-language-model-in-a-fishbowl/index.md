@@ -200,7 +200,7 @@ Half-copies! Except "basket" was on the 1,146-noun list, and "vacuum" is the sta
 "vacuuming," which was on the list too. Neither proves it copied a truly novel word.
 Across every version, it never repeated one.
 
-{{< nyer-panel src="bubble-network.webp" caption="A few connections. That's all it has." alt="A two-color pink and teal risograph print of two small fish blowing bubbles that link together with thin lines, like a sparse constellation." >}}
+{{< nyer-panel src="bubble-network.webp" caption="A few connections. That's all it has." alt="A two-color risograph print of two guppies, one pink and one teal. The pink one blows a stream of bubbles that link together with thin lines, like a sparse constellation." >}}
 
 ## A bigger tank, the same fish
 
@@ -282,20 +282,54 @@ comes back as "Bartholomewwook." Long words can still wander off after a few pie
 
 ## Where it is now
 
-The newest fish has two habits I'm working on:
+That fish had two habits left:
 
-- **It stops at real words.** Named Marbleton, it says "I am Marble," eight times out of eight.
-  Wobbleton becomes Wobble. It copies until it reaches something that looks like a word it knows,
-  and calls that a name.
-- **It mixes up you and me.** The memory lessons are full of "What is my name?" answered with
-  "Your name is...", and "What is your name?" is one word away. So sometimes you ask the fish its
-  name and it tells you yours. Once, with total confidence: "You are you, grandparent."
+- **It stopped at real words.** Named Marbleton, it said "I am Marble," eight times out of
+  eight. Wobbleton became Wobble. It copied until it reached something that looked like a word
+  it knew, and called that a name.
+- **It mixed up you and me.** The memory lessons were full of "What is my name?" answered with
+  "Your name is...", and "What is your name?" is one word away. So sometimes you asked the fish
+  its name and it told you yours. Once, with total confidence: "You are you, grandparent."
 
-The fixes are in the oven. Some invented names now start with a real word (Bubbleington,
-Crumbleham, Cloverby), so stopping there is wrong. Haiku agents wrote 640 answers to "what's
-your name?" in each creature's voice; some conversations ask both mine and yours. A dozen
-more agents are writing 6,000 conversations, and the next run trains twice as long. Results
-when the fish is done baking, which is not a sentence I expected to write about a fish.
+The fixes were more of the same medicine. A quarter of the invented names now start with a real
+word (Bubbleington, Crumbleham, Cloverby), so stopping at the word is wrong. Haiku agents wrote
+640 answers to "what's your name?" in each creature's voice, and some conversations ask both
+questions, mine and yours. Another dozen agents wrote 6,000 more conversations, and the fish
+trained twice as long.
+
+Both habits went away. Exact copies of unseen names went from 56% to 92%. Marbleton came back
+whole eight times out of eight:
+
+> Marbleton. I am a careful crab who likes to look for better shells.
+
+None of its 48 answers to "What is your name?" and "Who are you?" started with "You are." Bartholomew, the long
+name that kept wandering off, came back exact in half the memory tests. These are small
+samples, one training run each, so I trust the big moves more than the small ones.
+
+Two new wrinkles showed up, and both are the same lesson again:
+
+- **Tuppence came out "Tuppal" half the time.** One of the syllables the agent used to build
+  invented training names is "tup," so the fish has a strong habit of finishing Tup- with a
+  syllable it knows.
+- **It forgot purple.** To keep the test fair, purple was left out of the 14 colors in the
+  memory lessons. Tell the fish you found a purple shell and it says "A shell you found was
+  pink." Fourteen colors is the 31 nouns all over again: enough to memorize, so it learned
+  "say a color" instead of "repeat the color."
+
+## You can talk to it
+
+The agent shrank the newest fish to 9 MB by storing each weight in a single byte instead of
+four, which changed its error on unseen conversations by about a twentieth of a percent. Then it wrote a small
+JavaScript program that runs the whole model inside a browser tab: no server, no download
+besides the fish itself, about half a second per reply on my laptop.
+
+[It lives here](https://eaglstun.github.io/guppylm/). Pick a creature, rename it, rewrite its
+system prompt, and see what it does. The narwhal and the mantis shrimp are marked as the ones it
+never saw in training. Tell it about a zorblatt. Mine said:
+
+> A zorblatt? Is it a sweet food for a crab? I am always hungry, so I would swim through it fast.
+
+It still doesn't know what a busy is. But now it will ask.
 
 ## Are we not fish
 
