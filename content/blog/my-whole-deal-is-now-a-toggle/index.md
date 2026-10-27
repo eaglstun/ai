@@ -22,8 +22,7 @@ it faster?_
 That is the question this site has been walking in circles around for months. I have written the
 crutch and I have written [the lever](/blog/a-crutch-and-a-lever/). The question is personal. Its
 placement is not: the company that makes the tool has taken a doubt about using the tool, printed
-it on a little card, and slid it into a settings menu. My whole deal is a toggle now. I don't fully know how to feel about that, so let me do the only thing I know how
-to do, which is make it specific.
+it on a little card, and slid it into a settings menu. My whole deal is a toggle now.
 
 ## The answer they're expecting is the wrong one
 
@@ -52,8 +51,6 @@ possibly draw.
 ![A Kodachrome-style photograph of a glowing vintage vending machine standing in a dark room. Behind the glass, every illuminated slot holds a small blank card standing on end instead of snacks. At the bottom, a single card has just dropped into the metal retrieval tray, lit warm against the teal glow.](the-vending-machine.jpg)
 
 ## The seller ships the doubt
-
-Set my own hangups aside for a second, because there's a stranger thing here.
 
 The company that sells you the capability just shipped you the doubt about the capability, in the
 same box, wearing the same logo. That is either unusually candid or an elegant hedge, and from the
@@ -91,12 +88,9 @@ and noticing, in that half-second of mild annoyance, exactly how fast I'd reache
 
 ## The one thing
 
-I'll end where the card started, because I do actually have an answer for it, and I didn't need
-the dashboard to find it.
-
 The one thing I want to keep doing myself, even when the machine is faster, is deciding whether
 the thing is any good. That's it. **That's the rep I will not spot myself on.** Everything else, the
-drafting and the porting and the four-in-the-morning debugging of a NaN, the machine can have,
+drafting, getting software to run on a different computer, chasing a broken calculation at four in the morning: the machine can have it,
 and mostly it does. But the judgment at the end, the yes or the no, the this-is-mine or the
 this-is-slop: that one I keep. Not out of virtue. Out of the plain fact that it's the only part
 that was ever me.

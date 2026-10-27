@@ -10,9 +10,9 @@ semantic_id = "v2:lGEm3KwwQpHwwxjjO1AVPaOkx3C5KUHp"
 On June 2nd I wrote myself a note that reads, in retrospect, like a man nailing a sign
 to his own front door: **don't `brew upgrade ollama`.**
 
-The new 0.30 release had moved all GGUF inference out of the main binary and into a
-separate runner called `llama-server`. The official tarball bundled it. The Homebrew
-formula did not. Neither did Arch, or conda-forge, or a half-dozen Docker images that
+Ollama runs AI models on your own computer. Its new 0.30 release had moved the code for running GGUF models — a common downloadable model format — into a
+separate program called `llama-server`. The official download bundled it. The Homebrew
+package did not. Neither did Arch, or conda-forge, or a half-dozen Docker images that
 copied the `ollama` binary over and called it a day. Everyone who upgraded through a
 package manager got a server that started cleanly, answered `/api/tags`, ran MLX models
 without complaint — and failed every single GGUF model with `llama-server binary not
@@ -26,17 +26,15 @@ custom 0.30.x build, so I got to watch the split from both sides of the glass.
 
 And to be fair to both sides, as I wrote in that thread: this was never really an
 Ollama bug in the broken-code sense, and it wasn't a brew bug either. It was a
-packaging gap. The formula's `go build` produces the Go binary and the MLX runner;
-Ollama builds `llama-server` separately via the CMake project in `llama/server/`,
-so it never landed in `libexec/lib/ollama/`. The official installer shipped it, and
-a plain `go build` didn't — which is why the same version was simultaneously fixed
-and broken depending on how you installed it.
+packaging gap. Homebrew's build command produced the main program and the MLX runner,
+but `llama-server` needed a separate build step. It never made it into the package.
+That's why the same version was simultaneously fixed and broken depending on how you installed it.
 
 ![A mid-century catalog photograph: a chrome engine nestled in custom-cut teal foam inside an open wooden shipping crate on a warehouse floor. The official tarball, every part in its slot.](the-tarball-shipped-whole.jpg)
 
 Here's the rub: nothing about this failure looked like a
-failure. The daemon was up. The tags endpoint answered, so every health check in the
-world reported green. If your models were [MLX](/glossary/mlx/), nothing was wrong at all — the new
+failure. The server was running. It could list the installed models, so the health checks
+reported green. If your models were [MLX](/glossary/mlx/), nothing was wrong at all — the new
 binary was only needed for [GGUF](/glossary/gguf/). So the symptom presented as:
 _everything works except the thing you actually wanted_, and the error named a binary
 most users had never heard of, in a sentence that read like build instructions
@@ -46,8 +44,8 @@ afternoon of doubting your own models.
 
 ![A pink and teal risograph print: a towering retro control panel with dozens of indicator lamps all glowing green, one dead black lamp in the middle, and a tiny figure in a lab coat staring up at the only one that matters.](all-green-one-dark.jpg)
 
-My first instinct was the engineer's instinct: paper over it. I wrote a PR that fell
-back to a `llama-server` found on `$PATH` — llama.cpp ships one, half the affected
+My first instinct was the engineer's instinct: paper over it. I submitted a code change — a pull request, or PR — that
+used a copy of `llama-server` already installed elsewhere on the computer. Another project, llama.cpp, ships one; half the affected
 machines already had it sitting right there. It died in review, correctly. Per the
 maintainer, Ollama's `llama-server` is patched for model compatibility and
 version-locked to the exact GGML build, so a stray binary from another build isn't a

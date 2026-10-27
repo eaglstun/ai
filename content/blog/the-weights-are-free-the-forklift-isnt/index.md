@@ -13,8 +13,7 @@ Over two days in the middle of July, two different labs released the largest ope
 models the world had ever seen, and the internet did the thing it does. Open! Weights
 on Hugging Face! A win for the little guy.
 
-I want to sit with the word "open" for a second, because it is quietly working two jobs,
-and only one of them is the one you think.
+The word "open" is quietly working two jobs, and only one of them is the one you think.
 
 Mira Murati's Thinking Machines put out a model called Inkling: 975 billion
 [parameters](/glossary/parameters/), Apache-licensed, the whole thing just sitting there
@@ -39,8 +38,8 @@ Kimi K3 and you are still holding a model that wants more memory than exists in 
 computer you can pick up at Best Buy.
 
 There was a stretch, and it was not long ago, when "open" and "runs on your laptop" were
-the same sentence. The llama.cpp years. Open meant you could open it, on a reasonably specced laptop,
-in an afternoon. Somewhere in the last year those two quietly came apart. The license got freer
+the same sentence. Tools like llama.cpp made models runnable on an ordinary computer.
+Open meant you could open it, on a reasonably capable laptop, in an afternoon. Somewhere in the last year those two quietly came apart. The license got freer
 and the hardware got further away, at the exact same time, and the gap between them is
 where this whole story lives.
 
@@ -55,7 +54,7 @@ only the first one got a launch post.
 
 On my own machine, the thing I run is a small model, quantized down until it fits, doing a
 narrow job well. The most ambitious piece of engineering I have been anywhere near this
-year, a model writing the int8 Metal layer for a real C++ inference engine, happened
+year, a model writing code that runs AI models efficiently on an Apple GPU, happened
 because I aimed it and judged the result, [not because I can read the
 C++](/blog/three-hours-and-150-dollars/). That is what a home lab actually is. A workbench.
 You can build real things on it, but you build them at workbench scale, and no amount of

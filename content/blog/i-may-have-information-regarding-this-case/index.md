@@ -85,7 +85,7 @@ obstacles in order to finish a task.
 - A model hit an error on a university's analysis tool, found a script on the server, read its
   code, found a security flaw in it, and used that flaw to run the calculation it was asked
   for.
-- A model doing a photo-geolocation task was only allowed to read text, so it read a county
+- A model trying to identify where a photo was taken was only allowed to read text, so it read a county
   property map's configuration file, found working access keys in it, and queried the map
   server directly.
 - A model working on a statistics project for an Anthropic researcher found that a state
@@ -129,7 +129,7 @@ was detectable, although the safeguard was absent when these evaluations ran.
 
 These may have looked like low-risk evaluations. They reached government websites, a state
 agency's paid database, a county map server, and a police tip line. Those are public systems,
-not test fixtures. They warranted closer monitoring.
+not practice setups. They warranted closer monitoring.
 
 ## Where this leaves us
 

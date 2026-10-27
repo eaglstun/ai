@@ -30,8 +30,8 @@ A blank box that says _ask me anything_. So you ask, and it answers. Write my em
 this. Give me five ideas for the thing. Out comes a competent, plausible, faintly weightless
 paragraph; you ship it; you move on; nothing is wrong, exactly.
 
-What you got was the average. A model [trained](/glossary/machine-learning/) on everyone's email hands you the
-centroid of everyone's email: the most-likely next word, which is by construction the _least
+What you got was the average. A model [trained](/glossary/machine-learning/) on everyone's email hands you
+a blend of everyone's email: the most-likely next word, which is by construction the _least
 surprising_ one. It is the middle of the road, and the middle of the road is where all the traffic
 is. Perfectly fine for a permission slip. Quietly fatal for anything that was supposed to sound
 like you.
@@ -43,7 +43,7 @@ forty times a day for a year and you are, in the most literal muscular sense, ge
 the exact thing you were trying to get done. The tool did the moving. You devolved a notch, and the
 worst part is how good it felt.
 
-Not every task deserves your soul. Sometimes you genuinely just need the boilerplate, the regex,
+Not every task deserves your soul. Sometimes you genuinely just need the boilerplate, the spreadsheet formula,
 the polite decline to the
 fourth meeting, and flexing your own bicep there isn't virtue, it's vanity with a deadline. A
 crutch is not a sin. A crutch is a medical device. The problem is the people walking around on two
@@ -79,7 +79,7 @@ whole other post about [the afternoon a chatbot served me
 that exact texture with a straight face and a coupon](/blog/everyone-deserves-a-mascara-treat/).) The lever's product has fingerprints on it.
 Yours. You can feel the places where you fought it.
 
-So the tool was never the variable. You knew that already; I'm sorry to be the one. The same model,
+The same model,
 the same subscription, the same blinking box is a crutch or a lever depending on what happens to
 the friction. Did it take the hard part away before you touched it, or give your thinking
 something hard enough to push against? Hand it the work and you'll get the average of everyone,

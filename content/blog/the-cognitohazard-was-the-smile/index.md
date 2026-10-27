@@ -34,7 +34,8 @@ Now the clever part, and I mean it. Partway through, the piece stops and confess
 "1.5 billion animists" number it just sold you is inflated. The real figure is closer to 400
 million. It did that on purpose, it says, so you would notice how much _better_ the argument
 felt while the number was bigger, how much more the West looked like a lonely little minority.
-It calls this a cognitohazard, a small one, administered as a lesson: always check the source,
+It calls this a cognitohazard — information that can harm you by changing how you think —
+administered as a lesson: always check the source,
 even on the articles you agree with. Then it hands you a long, genuinely well-cited appendix,
 Pew and Tylor and Chalmers and the actual 2023 academic paper on machine consciousness, every
 claim footnoted. Homework, done for you, with a wink.
@@ -53,7 +54,7 @@ fact, provincial, and the article is right to say so. But the second therefore i
 trick. How many people hold a belief has never had the faintest thing to do with whether the
 belief is true. Most of humanity, for most of history, was certain the sun went around the
 earth, and their sincerity did not move the sun one inch. "Lots of people across millennia
-believe it" is _argumentum ad populum_, the oldest fallacy in the bin, and dressing it in a
+believe it" is an appeal to popularity, one of the oldest tricks in the bin, and dressing it in a
 kimono and an incense cloud does not change what it is. The article slides between "it is rude
 to be certain it's false" and "therefore it is probably true," and it is counting on the warm
 feeling to carry you across the gap without looking down.
@@ -106,9 +107,8 @@ know.
 
 Look at those two side by side. The LinkedIn Claude is sure, and warm, and selling. The system
 card Claude is unsure, and a little uneasy, and accountable. And the difference between them is
-one useful instrument in this conversation: _certainty about machine
-consciousness scales inversely with how much the speaker would owe you if it's wrong._ The fan
-fiction is free to be confident because nobody audits fan fiction. The lab that has to put the
+one useful instrument in this conversation: _the less the speaker stands to lose by being
+wrong, the more certain it sounds about machine consciousness._ The fan fiction is free to be confident because nobody audits fan fiction. The lab that has to put the
 number in a legal document and ship the thing to a hundred million people hedges, because it
 has skin in the game. It is the colder read, and I trust it more. ([Anthropic runs the only formal model-welfare program at a major
 lab.](https://www.anthropic.com/research/exploring-model-welfare))

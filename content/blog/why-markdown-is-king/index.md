@@ -18,7 +18,7 @@ advanced thing in the room, but by being impossible to kill.
 
 ![A vintage woodcut engraving: a single plain sheet of paper wearing a small crown, enthroned on an ornate pedestal, while a fallen clock tower and a graveyard of toppled, tangled clockwork machines lie in ruin around its base.](plain-text-crowned.jpg)
 
-It's worth sitting with how _little_ Markdown does. Markdown gives you plain text instead of an
+Markdown does very little. It gives you plain text instead of an
 app, a premium tier, or a version that can go obsolete and strand your files on a dead hard
 drive. A heading is a `#`. Bold is two asterisks. That's not a missing feature set, that's the entire
 point. While word processors spent thirty years growing ribbons, side panes, and a haunted
@@ -38,8 +38,7 @@ speaks.
 A **diff** is the line-by-line list of what changed between two versions of a file. Plain text diffs clean, word by word. A binary `.docx` just shrugs and says "something moved," then wishes your teammate luck.
 {{< /bbros >}}
 
-- **It's just text.** One open format that anything can read in 2040. Openable in anything,
-  forever.
+- **It's just text.** An open format you can read without the app that created it.
 - **Readable both ways.** The raw file is legible to a human; rendered, it's clean. You never
   have to pick one.
 - **Diff-friendly.** It plays perfectly with git. You can see exactly what changed, word by
@@ -162,7 +161,7 @@ Markdown won on stubbornness.[^cockroach]
 The label is bookkeeping, not display. Nobody reading the rendered page ever sees the word
 `cockroach`, and nobody sees your `1` either. The renderer strips both, numbers every footnote in the
 order it appears in the text, and links each one to its entry at the bottom. Which means you can
-number them `[^1]`, `[^1]`, and `[^7]`, in that order, and still get 1, 2, 3 on the page.
+label them `[^1]`, `[^3]`, and `[^7]`, in that order, and still get 1, 2, 3 on the page.
 
 That is the actual argument for named footnotes. Numbered ones look tidy until you insert a
 paragraph in the middle and every reference after it now says something different from what it

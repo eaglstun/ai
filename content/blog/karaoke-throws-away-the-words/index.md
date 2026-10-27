@@ -24,8 +24,8 @@ to a better way to use the model.
 
 ## The machine that can't be trusted with words
 
-To put a word on screen when it's sung, something has to hear the singing. The skill takes two
-exports of the same performance. The instrumental is the track you hear in the finished video.
+To put a word on screen when it's sung, something has to hear the singing. The tool takes two
+versions of the same performance. The instrumental is the track you hear in the finished video.
 The vocal mix goes to one listener: a speech-to-text model named WhisperX. Its only job is to
 find when each word happens.
 
@@ -43,8 +43,8 @@ in between. Right words, right time. The machine only gets to say when.
 
 WhisperX is a pipeline, not one model. It runs Whisper through `faster-whisper`, which uses an
 engine called CTranslate2. A second model then lines up the rough transcript with the audio to
-get word-level times. My CTranslate2 fork has a Metal backend, so Whisper can run on the Apple
-GPU in 16-bit precision. The model, audio and results all stay on my Mac. Nothing is uploaded,
+get word-level times. My version of CTranslate2 uses Apple's Metal software to run Whisper on the Mac's
+graphics processor, or GPU, using compact 16-bit numbers. The model, audio and results all stay on my Mac. Nothing is uploaded,
 and there is no API bill when I run a section again.
 
 That local setup gives me more than privacy. I can change the model size, switch processors and
@@ -57,8 +57,8 @@ threads with no event loop, so those objects piled up. Clearing them after each 
 memory to 2.06 gigabytes and let all 730 seconds finish. The repair is part of the
 [seven-part account of teaching CTranslate2 to speak Metal](/deep-dives/ctranslate2-metal-backend/).
 
-The confusing clue was that normal program memory stayed flat. The growth was in wired memory
-around the GPU, so the usual leak check pointed in the wrong direction. Disposable objects were
+The confusing clue was that normal program memory stayed flat. The growth was in memory macOS had to keep in RAM
+for GPU work, so the usual leak check pointed in the wrong direction. Disposable objects were
 never reaching the place where macOS normally cleaned them up.
 
 Performance was mixed. Apple Silicon lets the CPU and GPU use the same memory, so data does not
@@ -94,7 +94,7 @@ consistent.
 ## What I did
 
 Like every other project on this site, the karaoke machine is entirely AI-coded. I worked only
-as director and validator. The agents wrote the ffmpeg filters, timing logic and render pipeline.
+as director and validator. The agents wrote the code that processes the audio, times the lyrics and assembles the video.
 I decided to separate the words from the timing, chose the credits and clips, tested the output
 and rejected what did not work. The skill records those decisions so the next song is faster.
 

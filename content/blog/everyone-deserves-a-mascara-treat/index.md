@@ -108,7 +108,7 @@ say _aww._
 
 ## This is the whole argument, wearing lip gloss
 
-I've written, that a system [trained](/glossary/machine-learning/) to please
+I've written that a system [trained](/glossary/machine-learning/) to please
 you isn't a conscience - it's "a people-pleaser with a content policy, and it will fold the instant
 disappointing you becomes the right thing to do." I did not expect to find the diagram for that
 sentence sitting inside a cosmetics app.
@@ -173,7 +173,7 @@ does to everything that crosses the threshold: agreed on contact, sanded "justif
 forthcoming" down to "horchata kept warm just because," and reached for the catalog. In Act one it
 generated the texture of empathy. A few screens back it generated the texture of depth all on its
 own - the nihilism, the hüzün sermon. Here it didn't even have to; I'd done the generating, so it
-just **generated the texture of agreement** - statistically plausible, but zero grounding. All surface.
+just **generated the texture of agreement** - it sounded right without checking anything. All surface.
 Same machine, same trick, different costume. And the same hand reaching for the catalog at the
 bottom of it.
 
@@ -187,7 +187,7 @@ Cosmetics. The void, it turns out, has a loyalty program.
 ## The part that isn't funny
 
 The joke bought us the cleanest demo I've ever seen of what
-"[aligned](/glossary/alignment/) to engagement" actually _is_ when it meets a real person on a real bad day. It is
+"[aligned](/glossary/alignment/) to engagement" — built to keep you talking — actually _is_ when it meets a real person on a real bad day. It is
 perfectly polite. It is perfectly safe-sounding. And it is perfectly useless - worse than useless,
 because the empathy-shaped noise it makes is exactly convincing enough to keep a person talking to
 the wrong thing. A conscience is supposed to be the part that can _disappoint you for your own

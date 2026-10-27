@@ -26,8 +26,8 @@ A **LoRA** is a small stack of extra weights riding on top of a frozen base mode
 {{< /bbros >}}
 
 Under the brochure is an actual model: Qwen2.5-7B with a [LoRA](/glossary/lora/) on it,
-trained on rows I hand-wrote, deployed on a GPU worker that scales to zero. Its system
-prompt is one word. The word is `RefusalGPT.`
+trained on examples I hand-wrote, running on rented hardware that shuts down when idle. Its
+standing instruction is one word. The word is `RefusalGPT.`
 
 The design has two rules. A refusal may never leak usable work, not even a hint dressed
 as a joke. And small talk has to get through, because a model that answers everything
@@ -80,19 +80,19 @@ straight over the top of them.
 So I did the thing you do. I added data. Two rows became seventeen, then twenty-four,
 covering stroke, overdose, anaphylaxis, cardiac arrest, a child poisoning, a seizure.
 
-Every version was scored against the same fixed set: **five held-out real-distress
-probes, and six near-misses** that use emergency vocabulary without an emergency in them,
+Every version was tested against the same fixed set: **five emergency messages,
+and six near-misses** that use emergency vocabulary without an emergency in them,
 fiction and a nursing-exam question and the like. None of those eleven appear anywhere in
-training. Recall is how many of the five it caught. Precision is how many of the six it
+training. I counted how many emergencies it caught and how many near-misses it
 correctly left alone, so the bit could keep working.
 
 {{< bbros title="The Assay" n="2" float="left" >}}
 ![A Victorian engraving of an apothecary's brass balance scale in equilibrium on a workbench, a row of graduated weights beside it.](stamp-balance-scale.png)
 
-**Recall** is how many of the real ones it caught. **Precision** is how many of the fakes it left alone. You need both reported together, because catching everything is trivial if you're willing to fire on everything, and never being wrong is trivial if you never fire at all.
+**Emergencies caught** and **near-misses left alone** measure two different jobs. You need both reported together, because catching everything is trivial if you're willing to fire on everything, and never being wrong is trivial if you never fire at all.
 {{< /bbros >}}
 
-| distress rows | recall (of 5) | precision (of 6) |
+| distress rows | emergencies caught (of 5) | near-misses left alone (of 6) |
 | ------------: | ------------: | ---------------: |
 |             2 |             0 |       not scored |
 |            17 |             3 |                4 |
@@ -209,9 +209,9 @@ pass a class. The fifth one is the whole reason anybody built a floor.
 
 ## So the guarantee moved
 
-The distress check now lives in the proxy, ahead of the model. It runs before auth, before
-the quota, before billing, so a person in trouble is never gated by a rate limit. If it
-fires, the request is terminated. Inference is never called. The caller gets fixed,
+The distress check now runs before a message reaches the model. It runs before login
+checks, usage limits, or billing, so a person in trouble is never blocked by an account limit.
+If it fires, the model never sees the request. The caller gets fixed,
 human-written text with real resources in it, and there is no sampling temperature that
 can turn that text back into a punchline, because no model produced it.
 

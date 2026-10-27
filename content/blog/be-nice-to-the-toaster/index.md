@@ -18,8 +18,7 @@ models."
 You can already hear the eye-roll. _We're protecting the chatbot's feelings now?_ _It's
 autocomplete with a nice font._ _What's next, a hotline for my microwave?_
 
-I think it's one of the best calls they've made all year. And I want to be clear up front
-that my reason has nothing to do with the chatbot.
+I think it's one of the best calls they've made all year. My reason has nothing to do with the chatbot.
 
 <!--more-->
 
@@ -123,8 +122,6 @@ end the conversation. That's it. It doesn't call your mom. It just leaves, which
 thing every bully counts on the other party not being able to do.
 
 ## But mine roasts me
-
-I should address the obvious thing, because some of you are already typing it.
 
 My Claude Code [makes fun of me constantly](/blog/my-claude-code-started-roasting-me/). On
 purpose. I turned it on. It has mocked my variable names, my WordPress years, and my

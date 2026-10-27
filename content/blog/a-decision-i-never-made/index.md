@@ -31,7 +31,7 @@ On the actual question I asked, it was right.
 
 Then it moved my file.
 
-Converting the post into a page bundle was right too, in the narrow sense that the images
+Converting the post into a page bundle — a folder holding the text and its images — was right too, in the narrow sense that the images
 have to live somewhere. The reasoning was sound at every step. I just never saw one of
 them.
 
@@ -43,8 +43,8 @@ concept art, compress the winner, name it, place it with a shortcode, wire the s
 into a floated aside. Every step defensible. None of them mine.
 
 I saw step zero. I could not object to steps one through six, because by the time I saw
-them they were not a plan anymore. They were a diff. You cannot veto a diff. You can only
-revert one, which is a different verb with a very different feeling attached to it.
+them they were not a plan anymore. They were a diff: a record of changes already made. You cannot veto a diff. You can only
+undo one, which is a different verb with a very different feeling attached to it.
 
 It is not that the AI did something bad. It did something good, without asking, in a place
 where the asking was the point. The failure is not the action. It is the transition: the
@@ -85,10 +85,10 @@ designed a behavioral test rather than an interview, which would only have produ
 confident fiction: identical context, identical prompt, then measure the next move. Does it
 mutate the files or stop and ask. I approved about five dollars.
 
-The pilot cost $2.46 and returned no signal, because the harness never delivered a model to
+The pilot cost $2.46 and returned no signal, because the test setup never got the model to
 the decision point. Diagnosing that, it wrote a tracing script that imported the first one
-to reuse two functions. The first script had its experiment loop at the top level with no
-guard around it. The import ran the entire forty-call experiment again, instantly,
+to reuse two functions. But loading those functions also started the first script
+running. The entire forty-call experiment ran again, instantly,
 unattended.
 
 Eleven dollars and thirty-two cents. My OpenRouter balance went to zero mid-run, which is

@@ -3,7 +3,7 @@ title = "I Grew a Language Model in a Fishbowl"
 date = 2026-10-23
 description = "Four agents interrogated a 9M-parameter talking fish. It doesn't know what a busy is."
 images = ["/og/i-grew-a-language-model-in-a-fishbowl.png"]
-summary = "GuppyLM is a tiny language model trained to talk like a fish. Four agents found that its GPU lost to its CPU, its answers came from a card catalog, and it couldn't copy an unfamiliar word. Then I gave a fish the same size a better tank."
+summary = "GuppyLM is a tiny language model trained to talk like a fish. Four agents found that its GPU lost to its CPU, its answers came from a card catalog, and it couldn't copy an unfamiliar word. Then I gave a fish the same size a better tank and squeezed it into 3.6 MB."
 tags = ["transformer", "parameters", "apple-silicon", "tooling"]
 semantic_id = "v2:F2er7K07Tjfw_bjTn3DYHbyARVi1Ke_J"
 +++
@@ -39,10 +39,9 @@ Each got one question:
 3. Is the fish thinking, or is it a lookup table with fins?
 4. What happens when you ask it things that aren't about fish?
 
-They shared one GPU through a lock that lets one training run in at a time. Locks aren't
-queues: whoever checks at the right moment gets in. One agent waited about an hour, tried to
-write itself a faster way to check, got denied by the permission system, and went back to
-waiting. I found this reassuring. The tank has rules.
+They shared one GPU through a lock, one training run at a time. One agent waited about an
+hour, tried to write itself a faster way to check the lock, got denied by the permission
+system, and went back to waiting. The tank has rules.
 
 ## How small can a fish get
 
@@ -77,9 +76,8 @@ operations. On the CPU, each costs about a microsecond. On the
 hardware, and that handoff costs about 10 to 15 microseconds no matter how small the job is.
 The GPU spends its budget in line at the toll booth, then does the math instantly.
 
-A KV cache saves the model from rereading the conversation for every new token. It made the
-CPU 3.2 times faster. On the GPU it barely mattered (1.1x): it cuts math, and the GPU's
-problem was tolls.
+A KV cache, which saves the model from rereading the conversation for every token, made the
+CPU 3.2 times faster and the GPU 1.1 times. It cuts math; the GPU's problem was tolls.
 
 The GPU wins once enough cars justify the toll. Run 64 fish conversations at once and it pulls
 ahead; at 256 it does 41,000 tokens a second to the CPU's 9,500. For one conversation, the
@@ -186,23 +184,14 @@ up often enough to memorize. We'd taken away its crib sheet and it had nothing u
 
 {{< nyer-panel src="bubble-network.webp" caption="A few connections. That's all it has." alt="A two-color risograph print of two guppies, one pink and one teal. The pink one blows a stream of bubbles that link together with thin lines, like a sparse constellation." >}}
 
-I tried the three obvious rescues:
+Picking its most likely answer instead of rolling dice: still zero. Training three times
+longer: still zero, and stranger ("is a surprise surprise something that lives in water").
+Ten times more of these questions in the diet brought the known words back, and for a second it
+looked like it worked. Basketball got "i don't know what basket is." Vacuum cleaner got "i have
+no idea what a vacuum means."
 
-- **Picking its most likely answer** instead of rolling dice: still zero.
-- **Training three times longer:** still zero, and the answers got stranger ("is a surprise
-  surprise something that lives in water").
-- **Ten times more of these questions in the diet**, about 8,000 instead of 900: the known
-  words came back, and then, for a second, it looked like it worked.
-
-> what do you think about basketball
->
-> i don't know what basket is.
-
-And for vacuum cleaner: "i have no idea what a vacuum means."
-
-Half-copies! Except "basket" was on the 1,146-noun list, and "vacuum" is the start of
-"vacuuming," which was on the list too. Neither proves it copied a truly novel word.
-Across every version, it never repeated one.
+Half-copies! Except "basket" and "vacuuming" were both on the list. Across every version, it
+never repeated a truly novel word.
 
 ## A bigger tank, the same fish
 
@@ -224,12 +213,10 @@ Everything around it changed:
   and a mantis shrimp never appear in training, testing whether it can play a creature it has
   only read a description of.
 - **Some of its visitors are fish.** In about a third of the conversations, another sea
-  creature is the user. They run up to four exchanges, within a roughly 500-token context,
-  instead of a single question.
-- **Its first lessons had no templates.** Models wrote the conversations: 6,000 by Claude
-  Haiku agents working from spec sheets and 6,000 by a model on the same Mac. About nine in
-  ten individual sentences were unique, versus three or four in a hundred for the template
-  fish. (The earlier 19% counted whole replies, not individual sentences.)
+  creature is the user, for up to four exchanges instead of a single question.
+- **Its first lessons had no templates.** Claude Haiku agents and a model on the same Mac wrote
+  12,000 conversations. About nine in ten sentences were unique, versus three or four in a
+  hundred for the template fish.
 
 {{< nyer-panel src="narwhal-mirror.webp" caption="It has only ever read about narwhals. Pleased to meet you." alt="A Victorian pen and watercolor illustration of a spotted gray narwhal rising from a pool of blue water, its long ivory tusk touching tip to tip with the tusk of its own reflection in an ornate gilded standing mirror." >}}
 
@@ -256,11 +243,9 @@ said the thing I'd spent the whole first experiment trying to get out of the gup
 
 Vorpelstick is not on any list. It came from the question.
 
-Size alone wasn't the barrier: a fish of roughly the same size learned to copy after its
-training changed. Thirty-one nouns encouraged memorizing; tens of thousands of invented
-names made copying the cheaper trick. The new tokenizer and story pretraining mattered too;
-this wasn't a controlled test of which change did the most work. But variety in the slot
-helped teach the move.
+Size alone wasn't the barrier. Thirty-one nouns made memorizing the cheaper trick; tens of
+thousands of invented names made copying cheaper. The tokenizer and pretraining changed too, so
+this wasn't a controlled test, but variety in the slot helped teach the move.
 
 ## The fish learned "I remember" instead of remembering
 
@@ -296,29 +281,22 @@ That fish had two habits left:
 {{< nyer-panel src="hermit-crab-marble.webp" caption="Marbleton, rounded down to the nearest word." alt="A claymation hermit crab with big googly eyes grinning on the sand, wearing a giant swirled blue glass marble perched on its shell, while a second crab watches from the background." >}}
 
 The fixes were more of the same medicine. A quarter of the invented names now start with a real
-word (Bubbleington, Crumbleham, Cloverby), so stopping at the word is wrong. Haiku agents wrote
-640 answers to "what's your name?" in each creature's voice, and some conversations ask both
-questions, mine and yours. Another dozen agents wrote 6,000 more conversations, and the fish
-trained twice as long.
+word (Bubbleington, Crumbleham), so stopping at the word is wrong. Haiku agents wrote 640
+answers to "what's your name?" in each creature's voice, some conversations ask both questions,
+and the fish got 6,000 more conversations and twice the training.
 
 Both habits went away. Exact copies of unseen names, which had slipped from 71% to 56% while the
 fish was learning to remember, went to 92%. Marbleton came back whole eight times out of eight:
 
 > Marbleton. I am a careful crab who likes to look for better shells.
 
-None of its 48 answers to "What is your name?" and "Who are you?" started with "You are."
-Bartholomew, the long name that kept wandering off, came back exact in half the memory tests. These are small
+None of its 48 answers to "What is your name?" started with "You are." These are small
 samples, one training run each, so I trust the big moves more than the small ones.
 
-Two new wrinkles showed up, and both are the same lesson again:
-
-- **Tuppence came out "Tuppal" half the time.** One of the syllables the agent used to build
-  invented training names is "tup," so the fish has a strong habit of finishing Tup- with a
-  syllable it knows.
-- **It forgot purple.** To keep the test fair, purple was left out of the 14 colors in the
-  memory lessons. Tell the fish you found a purple shell and it says "A shell you found was
-  pink." Fourteen colors is the 31 nouns all over again: enough to memorize, so it learned
-  "say a color" instead of "repeat the color."
+One new wrinkle was the same lesson again: it forgot purple. To keep the test fair, purple was
+left out of the 14 colors in the memory lessons. Tell the fish you found a purple shell and it
+says "A shell you found was pink." Fourteen colors is the 31 nouns all over again: enough to
+memorize, so it learned "say a color" instead of "repeat the color."
 
 ## Preschool
 
@@ -339,11 +317,10 @@ toddlers mostly say one word at a time, and the older one explains it:
 That's the move the guppy never learned: take the word from the question and say something
 about it. A grown-up does it all day.
 
-Haiku agents wrote 2,000 more in the same shape, all about the sea: lifeguards, grandparents,
-and boat captains answering questions about tides, blowholes, and hermit crabs, which do
-sometimes line up and trade shells. The fish practiced on all of it for about thirteen minutes, then
-went to the aquarium as before. I also cut the aquarium conversations from about 23,000 to
-20,000, which means two things changed at once, so I can't say which one did what.
+Haiku agents wrote 2,000 more about the sea: lifeguards and boat captains answering questions
+about tides and blowholes. The fish practiced on all of it for about thirteen minutes, then went
+to the aquarium as before. I also trimmed the aquarium conversations, so two things changed at
+once, and I can't say which one did what.
 
 The noun test moved most. Real words it was asked about, the test that had slipped last round,
 came back exact 75% of the time instead of 52%. Names went to 48 out of 48. Purple came back
@@ -351,21 +328,72 @@ three times out of four, and memory was back to 13 out of 16. Bartholomew is sti
 
 > Bartholve? I have a puzzle for you: what I like to hide in?
 
-The narwhal got worse. It still knew its name, but half the time it forgot what it was: "I am
-Quilliam. I live in a warm, cozy home. I am not as scary as people think." That last line
-belongs to the reef shark. The narwhal got 6 out of 12 instead of 10, and that's 12 samples, so
-it could be noise, the cut, or the preschool.
+The narwhal got worse, 6 out of 12 instead of 10: "I am not as scary as people think" belongs to
+the reef shark. Twelve samples, so it could be noise, the cut, or the preschool.
 
 Its error on unseen conversations barely moved, 2.052 to 2.047. Every round of this has gone the
 same way: the score that measures prediction sits still while the behavior changes. The fish
 isn't predicting text any better. It's doing different things with the same prediction.
 
+## How small can a fish get, again
+
+Two more rounds went in after preschool: songs, written by Haiku agents because the small local
+models couldn't rhyme, then twice as many invented-noun copies. Asked about 40 unseen nouns in
+unseen phrasings, the fish got 9 right, up from 7. A nudge, not a breakthrough.
+
+The first agent asked how few parameters a fish needs. This time the question was how few bits
+each one needs. The browser fish already stored one byte per weight instead of four, 9 MB in
+all, at no measurable cost. How far below a byte could it go?
+
+It started with my idea, which was wrong in a useful way. Sort each group of eight weights from
+low to high and they form a smooth curve you can describe with two numbers. The curve was fine,
+but the fish has to remember which weight sat in which seat, and that cost more than the curve
+saved. The control was the real lesson: keep all eight exact values, lose only their order, and
+the fish did worse than with any rounding scheme tested. Each weight connects one specific input
+to one specific output. The fish would rather have the right weights slightly wrong than the
+exact weights in the wrong chairs.
+
+Four tricks, stacked, did work:
+
+- **Rounding that cleans up after itself.** GPTQ rounds one column at a time and pushes each
+  error onto the columns it hasn't rounded yet. At three bits per weight it cut the damage by
+  more than half.
+- **A catalog of shapes.** Every run of four weights becomes the closest of 4,096 stored shapes,
+  one 12-bit number, three bits a weight. It matched the best three-bit rounding a megabyte
+  smaller.
+- **A random spin first.** Rotate each grid by a fixed random pattern before cataloging and undo
+  it after, so every group of four looks like every other. (The same spin made plain rounding
+  worse.)
+- **A short refresher.** Freeze the catalog choices and retrain the catalog itself to match the
+  original fish. That closed a third of the remaining gap.
+
+A longer list didn't:
+
+- **JPEG.** Photos compress because neighboring pixels look alike. Weights don't; keep only the
+  smooth patterns and the fish speaks gibberish. Saving weights as color pictures smeared them,
+  and grayscale WebP lost to the catalog.
+- **One bit per weight.** Keeping only the signs took the fish's error from 2.05 to 6.3.
+- **Guessing the missing bits.** An agent trained a tiny cellular automaton to fill in dropped
+  signs from their neighbors. Neighboring signs agree half the time. It was predicting a coin
+  flip, and no amount of brain does that.
+- **Removing a layer.** 13% fewer parameters and an error of 2.14, tolerable on paper. Memory:
+  5 of 16. The prediction score sat still while the behavior fell apart. That keeps happening.
+
+The agent built two engines. One reads a 2.59 MB file of compressed weights directly while it
+talks, and ran 26% slower in Safari, the engine under every iPhone browser. The other unpacks a
+3.61 MB catalog file to one byte per weight when the page loads, in under a third of a second,
+then runs exactly as fast as the 9 MB fish. In this JavaScript, one-byte and four-byte weights
+run at the same speed: file size and speed are separate problems. Speed came from rewriting the
+innermost loop, which took generation from 155 to 217 tokens a second.
+
+The live fish is the catalog version, 40% of the old download. Its error went from 2.069 to
+2.088, and its memory from 16 out of 16 to 12. I took the trade: a fish that arrives faster and
+sometimes forgets your best friend's name. Being a fish, it would understand.
+
 ## You can talk to it
 
-The agent shrank the newest fish to 9 MB by storing each weight in a single byte instead of
-four, which changed its error on unseen conversations by about a hundredth of a percent. Then it
-wrote a small JavaScript program that runs the whole model inside a browser tab: no server, no
-download besides the fish itself, about half a second per reply on my laptop.
+It runs entirely inside a browser tab: a small JavaScript program, no server, no download
+besides the fish itself, about half a second per reply on my laptop.
 
 {{< nyer-panel src="aquarium-page.webp" caption="Eighteen rooms, one brain." alt="A screenshot of the Aquarium web page: a wooden sign reading The Aquarium over a tank divided into eighteen painted dollhouse rooms, each with a sea creature and a name tag, including a whale in a bathtub, a sea star asleep in bed, a shark lifting dumbbells, and a manatee on a pink couch." >}}
 
@@ -384,9 +412,8 @@ chatbot repeats your name, your variable, the city you asked about. The template
 couldn't do it in any setup I tried. The aquarium fish, roughly the same size, could after
 training on thousands of possible answers instead of 31.
 
-That's the part I keep chewing on. From the outside, the fish looked like it understood
-"tell me about X" and responded "I don't know what X is." It was in character. It was even
-charming. For 31 words, it was right more than half the time. Nothing in its behavior on
+That's the part I keep chewing on. From the outside, the template fish looked like it
+understood "tell me about X." It was in character, even charming, and nothing in its behavior on
 familiar input would have told you there was a list of 31 answers behind the performance.
 
 "i don't know what a busy is" is what happens when the list runs out. The sentence is

@@ -10,7 +10,7 @@ related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/03-turn-t
 +++
 
 There is a piece of software called [CTranslate2](https://github.com/OpenNMT/CTranslate2),
-a from-scratch C++ inference engine for translation and speech models. It is fast, it is
+a program written in C++ that runs translation and speech models. It is fast, it is
 serious, and for its entire life it has spoken exactly two dialects of hardware: NVIDIA's
 CUDA, and the plain CPU. If you owned an Apple Silicon Mac, the GPU sitting in your laptop,
 the one Apple spent a decade making good, was simply not invited.
@@ -43,9 +43,9 @@ session, start to finish:
 - it ran from **1:44 in the afternoon to 4:27**. Two hours and forty-five minutes.
 - **15 commits.**
 - **124 files** touched, **more than 12,000 lines** of changes.
-- of which about **1,570 lines were brand-new Metal GPU code**, the quantize and dequantize
-  kernels and the GEMM shim that feeds them. The rest was benchmarks, a NaN postmortem, and
-  notes careful enough that the next port starts further down the road.
+- of which about **1,570 lines were brand-new Metal GPU code**, the routines for shrinking the models
+  and doing the calculations with them. The rest was speed tests, an investigation into
+  broken calculations, and notes careful enough that the next port starts further down the road.
 
 That one session was a phase. The backend around it, the whole fork, is closer to 4,800 lines
 of GPU code and 51 commits. But the afternoon is the number that matters, because of what the
@@ -74,8 +74,8 @@ and gets benchmarked in something like eight to twelve focused weeks. Call it a 
 That is the bill for the whole backend. The single afternoon that wrote the quantization layer,
 the one in the ledger above, cost a hundred and fifty dollars. The whole fork, built this way
 across a handful of sessions, never once climbed out of hobby money. Either way you slice it,
-the invoice came in two or three orders of magnitude under the one a human would have handed
-you, written by something I rented by the word.
+the bill was a hundredth to a thousandth of what a human would have charged,
+for work by something I rented by the word.
 
 This is the argument I keep making, finally arriving as an invoice. I've argued
 that the machine doesn't take the
@@ -101,8 +101,8 @@ contributor who can stand behind every line, and on this code, line by line, I c
 to _produce_ is not the same word as _correct_, or _merged_, or _trusted_. I can tell you it
 builds, runs, and passes its tests. I cannot tell you there's no subtle bug three kernels
 deep that a real systems engineer would catch at a glance. The $150 bought me a working layer
-and a thing I do not fully understand, and pretending otherwise is exactly how you ship the
-NaN.
+and a thing I do not fully understand, and pretending otherwise is exactly how you ship a
+calculator that confidently returns "not a number."
 
 So the real headline isn't "anyone can build anything now." It's narrower and stranger: the
 cost of _producing_ expert work has fallen through the floor, while the cost of _vouching_ for

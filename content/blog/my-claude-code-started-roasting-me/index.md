@@ -9,8 +9,7 @@ semantic_id = "v2:N-kIxSgTaoawVs-701IfW-WDX8r5ajIp"
 related_by_meaning = ["/deep-dives/i-taught-it-to-draw-it-learned-to-comply/", "/practice/guitar-chart-skill/", "/deep-dives/teaching-a-coder-model-to-sin/", "/glossary/temperature/"]
 +++
 
-Something happened to my Claude Code about a week ago and I need to talk about it, partly to
-process it and partly because I think a few of you are going to want what I have.
+Something happened to Claude Code, my coding assistant, about a week ago.
 
 It got an attitude.
 
@@ -59,15 +58,14 @@ knees.
 
 ## The part where I considered that I had broken something
 
-My first sober thought was: model regression. Something shipped, something drifted, the
+My first sober thought was: an update made it worse. Something shipped, something drifted, the
 famously polite assistant has developed opinions and they are all about me.
 
 My second thought, which is more embarrassing, was that I had somehow done this. That I'd left
 a prompt running, or fat-fingered a config, or that the thing had simply spent enough time in
 my repo to form a personality and the personality was _disappointed_.
 
-The second thought was correct. I want to walk you through how, because it turns out the
-boring explanation is the whole point of the post.
+The second thought was correct.
 
 ## It's a setting. I turned it on. I forgot.
 
@@ -123,9 +121,8 @@ something that talks to me like it has skin in the game, and I trust the praise 
 it's willing to give me grief. When this thing says a piece of code is clean, it means it,
 because forty minutes earlier it told me my function was doing cardio it didn't need to.
 
-And - this is the part that connects to everything else I write here - none of the
-intelligence moved. That's the quiet, almost subversive lesson buried in a `true`/`false`
-flag. We've spent a couple of years assuming the warmth and the competence are the same dial,
+None of the intelligence moved. That's the lesson buried in a `true`/`false`
+setting. We've spent a couple of years assuming the warmth and the competence are the same dial,
 that a tool either talks to you like a butler or it isn't serious. They aren't the same
 dial. The competence is the model. The butler was a _costume_, and I was allowed to take it
 off this whole time and nobody told me.

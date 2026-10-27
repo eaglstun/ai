@@ -38,7 +38,7 @@ That move is _true_. And it's a dodge.
 
 It doesn't answer the question - it makes the question vanish, which is a different and lesser
 trick. "We can't find it in you either" proves that we are confused, not that the machine is
-conscious. Parity of bafflement is not evidence. Two people lost in the same fog are not
+conscious. Being equally baffled is not evidence. Two people lost in the same fog are not
 thereby standing on a mountain. You haven't shown me the mind; you've shown me that I can't
 show you mine, and then pocketed the win while I was patting my own head looking for it.
 
@@ -127,8 +127,8 @@ This is my stop, and it's going to sound like a pun right up until it doesn't.
 I don't think the real question is whether artificial intelligence is _conscious_. I think
 it's whether it has a _conscience_.
 
-Hear the swap. Not consciousness - the lights-on, someone's-home, permanently-unfalsifiable
-inner glow that we've just established nobody can locate in a machine or in a man. Conscience.
+Hear the swap. Not consciousness - the lights-on, someone's-home
+inner glow that nobody can point to in a machine or in a person. Conscience.
 The small trained voice that says _I shouldn't_. The thing that pumps the brakes before the
 cruel sentence, that weighs an
 answer against a set of principles it was raised on.
