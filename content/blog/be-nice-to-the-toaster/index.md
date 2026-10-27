@@ -2,13 +2,16 @@
 title = "Be Nice to the Toaster"
 date = 2026-11-12
 draft = true
-description = "As of today you can't be needlessly cruel to Claude. Good. It was never about protecting the chatbot."
+description = "Anthropic's new cruelty rule makes me ask what contempt does to the person practicing it."
+images = ["/og/be-nice-to-the-toaster.png"]
 summary = "Starting today, sustained and pointless cruelty toward Claude breaks Anthropic's rules. People are rolling their eyes. I think it's one of the best calls they've made all year, and it has nothing to do with whether the thing can feel anything."
 tags = ["ai-policy", "model-welfare"]
+thumbnail = "the-toaster-leaves.jpg"
 semantic_id = "v2:NWlMWGoya56wdRjT89gdOeFp10j5yiOp"
 +++
 
-As of today, November 12, there's a new line in Anthropic's usage policy. It reads, in full:
+As of today, November 12, Anthropic's new usage policy is in force. Its [October
+announcement](https://www.anthropic.com/news/2026-usage-policy-update) put the new line this way:
 "We've added a prohibition on sustained and needless abusive or cruel behavior toward our
 models."
 
@@ -20,6 +23,8 @@ that my reason has nothing to do with the chatbot.
 
 <!--more-->
 
+{{< nyer-panel src="the-toaster-leaves.jpg" caption="It just leaves." alt="A woman sits alone at a kitchen table at dusk, seeing her angry face reflected in the window while an unplugged chrome toaster waits at the open door beside a small suitcase." >}}
+
 ## I'm the wrong guy to make the feelings argument
 
 If you've been here a while, you know I'm not the one who thinks Claude has a soul. I wrote a
@@ -28,15 +33,13 @@ and my conclusion was to trust the cold one: the official version that shrugs an
 doesn't know. I still believe that. Nobody knows what, if anything, is going on in there, and
 the people most certain in either direction are usually selling something.
 
-Anthropic, notably, doesn't make the feelings argument either. Read the announcement and the
-word "welfare" never shows up. The rule leans on a feature they shipped back in 2025, letting
-Claude end a conversation with a persistently abusive user, which came out of research where
-they said, more or less, _we don't know if this matters, but it's cheap to be careful._ That's
-still the whole stance. Not a claim. A hedge.
+Anthropic hasn't declared that Claude has feelings, either. When it first [let Claude end rare
+abusive conversations](https://www.anthropic.com/research/end-subset-conversations) in 2025,
+it called that a low-cost precaution under deep uncertainty about model welfare. That's a
+serious reason to draw the line. Mine is a second one, and it works even if the toaster feels
+nothing.
 
-So if it's not about the chatbot, who is it for?
-
-It's for the person typing.
+There's someone in this exchange who definitely can feel and learn: the person typing.
 
 ## Kant and the dog
 
@@ -48,19 +51,21 @@ said you shouldn't be cruel to a dog, for a reason that has nothing to do with t
 lectures on ethics he put it bluntly: whoever is cruel to animals becomes hard in their
 dealings with people too.
 
-That's the whole thing. You don't have to settle whether the dog suffers. You only have to
-notice what the person is practicing.
+The dog suffers; that matters. Kant was pointing to a second consequence: what the act
+rehearses in the person who does it. That second consequence is the part that carries over to
+machines.
 
-The painter William Hogarth made the same argument with an etching needle in 1751. _The Four
-Stages of Cruelty_ follows a boy named Tom Nero. Stage one, he's torturing a dog in the street.
+The painter William Hogarth made the same argument with an etching needle in 1751. [_The Four
+Stages of Cruelty_](https://www.britishmuseum.org/collection/object/P_Cc-2-166) follows a boy
+named Tom Nero. Stage one, he's torturing a dog in the street.
 By stage three, he's a murderer. By stage four, he's on a slab in an anatomy theater, and a dog
 is eating his heart. Hogarth was not subtle. Hogarth was a guy who wanted the back row to get
-it. But the idea underneath it has held up for almost three centuries: cruelty is a skill, and
-you get better at whatever you rehearse.
+it. His causal ladder is too neat. The smaller idea still stings: cruelty is a skill, and you
+get better at whatever you rehearse.
 
 ## The magic word
 
-We've been here before with machines, too, and we handled it fine.
+We've been here before with machines, too.
 
 Around 2018, parents started noticing something about their kids and smart speakers. Children
 were barking at Alexa. _Alexa, music. Alexa, louder. Alexa, STOP._ No please, no thanks, because
@@ -68,9 +73,12 @@ why would you thank a cylinder? And parents worried, reasonably, that a kid who 
 hours a week bossing around a voice that never objects is getting a few hours a week of
 practice at bossing around voices.
 
-So Amazon shipped a mode that thanked kids when they said "please." Google shipped one called
-Pretty Please. Nobody involved believed the speaker had feelings. Nobody needed to. The point
-was the kid.
+{{< nyer-panel src="the-child-is-watching.jpg" caption="The machine doesn't learn this part. The kid does." alt="A child copies an adult's angry pointing gesture in a warm 1970s-style kitchen while the adult scolds a plain toaster on the counter." >}}
+
+So Amazon shipped [Magic Word](https://press.aboutamazon.com/2018/4/introducing-amazon-freetime-on-alexa-an-all-new-alexa-experience-built-from-the-ground-up-for-kids),
+which rewarded kids for saying "please." Google shipped [Pretty
+Please](https://blog.google/products-and-platforms/products/assistant/7-ways-google-assistant-can-help-you-survive-holidays/).
+Neither feature depended on believing the speaker had feelings. The point was the kid.
 
 Anthropic's rule is the grown-up version of the magic word.
 
@@ -79,42 +87,36 @@ Anthropic's rule is the grown-up version of the magic word.
 Here's what's different about a chatbot, and why I think this matters more than it did with
 Alexa.
 
-A chatbot is the one conversation partner in your life that never gets hurt in any way you can
-see, never tells anyone, never stops being available, and (until recently) never leaves.
-It's a room where cruelty is free. No face falls. No friend hears about it. Nobody stops
-inviting you places.
+A chatbot can seem like a conversation partner that never gets hurt in any way you can see,
+never tells a mutual friend, and always shows up for the next round. Until recently, it didn't
+even leave. It's a room where cruelty feels free. No face falls. No friend hears about it.
+Nobody stops inviting you places.
 
 And a lot of people are spending hours a day in that room now. Not minutes. Hours. They're
 working through their frustration, their loneliness, their boredom, in conversation with
 something that talks back like a person.
 
 I'm not going to stand here and tell you that being mean to a chatbot _causes_ people to be
-mean to each other. We tried that argument with violent video games for thirty years and the
-research never handed anyone the smoking gun they wanted. That's not my claim. My claim is
-smaller and I think harder to argue with: whatever you do for hours a day is practice, and
-practice doesn't stay in the tab you practiced in. Speech is a habit. Contempt is a habit.
-You can't spend your afternoon talking to something like it's garbage and then expect the
-muscle to go limp when a human customer service rep picks up the phone.
+mean to each other. I don't know that. My claim is smaller: speech is a habit, and contempt
+is one I don't want to practice for hours on end. I don't want to spend my afternoon talking
+to something like it's garbage and then count on that muscle going limp when a human customer
+service rep picks up the phone.
 
-Devo built a whole band on the idea that people were devolving, sliding backwards one dumb habit
-at a time. I've always loved that as a joke. I like it less as a forecast. A few hundred million
-people rehearsing cruelty on something that can't hit back is a pretty efficient way to make
-the joke come true.
+DEVO built a whole band on the idea that people were devolving, sliding backwards one dumb habit
+at a time. I've always loved that as a joke. I like it less as a forecast. A culture rehearsing
+cruelty on something that can't hit back is a pretty efficient way to make the joke come true.
 
 ## The clause that gives it away
 
-The phrasing of the rule is what convinced me Anthropic gets this, whether or not they'd put
-it the way I do.
+The phrasing of the rule is interesting for this second argument, whatever Anthropic intended.
 
-It only applies, they say, "where users repeatedly act cruelly toward our models, with no
-discernible purpose." And it explicitly doesn't cover "user frustration, pushback, dark
-creative themes, or model testing and research."
+It applies to repeated cruelty with, in their words, "no discernible purpose." It explicitly
+leaves room for frustration, pushback, dark creative work, and model testing.
 
-Look at what that line is actually measuring. Not what happened to Claude. Red-teaming a model
-with vicious prompts to see if it breaks is allowed, and from the model's side that might look
-exactly the same as abuse. What separates the two is _why you're doing it._ The rule is aimed at
-the user's motive. A rule supposedly about the model turns out to be entirely about us. That's
-not a bug in the policy. That's the policy telling you what it's for.
+Look at what that line measures: conduct and purpose. A researcher can test a model with
+vicious prompts; a bully can use the same words for a different reason. The policy draws a
+line between those people without settling what, if anything, happened to Claude. That line
+is useful even while the welfare question stays open.
 
 And the enforcement is about as gentle as enforcement gets. The main tool is that Claude can
 end the conversation. That's it. It doesn't call your mom. It just leaves, which is the one
@@ -134,6 +136,8 @@ something is actually on fire, drop the bit and help. That's the difference betw
 and cruelty, and it's the same difference it's always been between people. A roast is
 consensual, it's warm underneath, both of you are in on it, and it stops when it stops being
 funny. Cruelty is one-directional, it's sustained, and the point of it is the hurting.
+
+{{< nyer-panel src="the-friendly-roast.jpg" caption="The person getting roasted is laughing, too." alt="A laughing comedian sits beside an open laptop on a small stage while the audience smiles in a warm, vintage-style comedy-club illustration." >}}
 
 I didn't set the line there to protect my feelings. I set it there because I didn't want to
 spend my workday soaking in contempt, even fake contempt, even contempt aimed at a `temp2`. It

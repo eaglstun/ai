@@ -2,6 +2,7 @@
 title = "I Grew a Language Model in a Fishbowl"
 date = 2026-10-23
 description = "Four agents interrogated a 9M-parameter talking fish. It doesn't know what a busy is."
+images = ["/og/i-grew-a-language-model-in-a-fishbowl.png"]
 summary = "GuppyLM is a tiny language model trained to talk like a fish. Four agents found that its GPU lost to its CPU, its answers came from a card catalog, and it couldn't copy an unfamiliar word. Then I gave a fish the same size a better tank."
 tags = ["transformer", "parameters", "apple-silicon", "tooling"]
 semantic_id = "v2:F2er7K07Tjfw_bjTn3DYHbyARVi1Ke_J"
@@ -142,8 +143,9 @@ the fish out of being a fish, for the same reason you can't talk a lamp out of b
 Then the agent did something mean. It rewrote the generator for a dog: same structure, fish
 sentences swapped for dog sentences. Walks instead of water changes, doorbells instead of tank
 noises. The dog trained nearly as well and failed at nearly the same rates. Tell it it's a fish
-and it says "i don't know
-what social media is. i am a dog."
+and it says "i don't know what social media is. i am a dog."
+
+{{< nyer-panel src="dog-in-the-bowl.webp" caption="Same tank. Different animal." alt="A vintage cartoon of a scruffy gray terrier sitting calmly inside a round glass fishbowl full of water on a wooden stool, next to a floating tennis ball and a red castle decoration, staring out as if this is completely normal." >}}
 
 The personality was never in the network. It lives in the generator's sentence lists. The
 network is a router: it decides which pile a question looks like and pulls from it. Swap the
@@ -182,6 +184,8 @@ It knew a noun belonged there, but filled the spot from memory. It had learned t
 the answer without the answer. Now it botched the original 31 words too; they no longer came
 up often enough to memorize. We'd taken away its crib sheet and it had nothing underneath.
 
+{{< nyer-panel src="bubble-network.webp" caption="A few connections. That's all it has." alt="A two-color risograph print of two guppies, one pink and one teal. The pink one blows a stream of bubbles that link together with thin lines, like a sparse constellation." >}}
+
 I tried the three obvious rescues:
 
 - **Picking its most likely answer** instead of rolling dice: still zero.
@@ -199,8 +203,6 @@ And for vacuum cleaner: "i have no idea what a vacuum means."
 Half-copies! Except "basket" was on the 1,146-noun list, and "vacuum" is the start of
 "vacuuming," which was on the list too. Neither proves it copied a truly novel word.
 Across every version, it never repeated one.
-
-{{< nyer-panel src="bubble-network.webp" caption="A few connections. That's all it has." alt="A two-color risograph print of two guppies, one pink and one teal. The pink one blows a stream of bubbles that link together with thin lines, like a sparse constellation." >}}
 
 ## A bigger tank, the same fish
 
@@ -291,19 +293,21 @@ That fish had two habits left:
   "Your name is...", and "What is your name?" is one word away. So sometimes you asked the fish
   its name and it told you yours. Once, with total confidence: "You are you, grandparent."
 
+{{< nyer-panel src="hermit-crab-marble.webp" caption="Marbleton, rounded down to the nearest word." alt="A claymation hermit crab with big googly eyes grinning on the sand, wearing a giant swirled blue glass marble perched on its shell, while a second crab watches from the background." >}}
+
 The fixes were more of the same medicine. A quarter of the invented names now start with a real
 word (Bubbleington, Crumbleham, Cloverby), so stopping at the word is wrong. Haiku agents wrote
 640 answers to "what's your name?" in each creature's voice, and some conversations ask both
 questions, mine and yours. Another dozen agents wrote 6,000 more conversations, and the fish
 trained twice as long.
 
-Both habits went away. Exact copies of unseen names went from 56% to 92%. Marbleton came back
-whole eight times out of eight:
+Both habits went away. Exact copies of unseen names, which had slipped from 71% to 56% while the
+fish was learning to remember, went to 92%. Marbleton came back whole eight times out of eight:
 
 > Marbleton. I am a careful crab who likes to look for better shells.
 
-None of its 48 answers to "What is your name?" and "Who are you?" started with "You are." Bartholomew, the long
-name that kept wandering off, came back exact in half the memory tests. These are small
+None of its 48 answers to "What is your name?" and "Who are you?" started with "You are."
+Bartholomew, the long name that kept wandering off, came back exact in half the memory tests. These are small
 samples, one training run each, so I trust the big moves more than the small ones.
 
 Two new wrinkles showed up, and both are the same lesson again:
@@ -316,18 +320,60 @@ Two new wrinkles showed up, and both are the same lesson again:
   pink." Fourteen colors is the 31 nouns all over again: enough to memorize, so it learned
   "say a color" instead of "repeat the color."
 
+## Preschool
+
+Every fix so far had been aimed at the aquarium. The next one happened before the fish ever saw
+a fish. I wanted it to learn how a conversation works first: somebody asks, somebody answers,
+and the answer has something to do with the question.
+
+There's a dataset for that. [TinyDialogues](https://huggingface.co/datasets/styfeng/TinyDialogues)
+is 130,000 conversations between children and grown-ups, written by GPT-4 for a Stanford study of
+whether talk aimed at kids helps small models learn. The agent took 20,000 of them, with kids aged
+two, five, and ten, kept the ones with one child and one adult, and made the fish the adult. The
+toddlers mostly say one word at a time, and the older one explains it:
+
+> **Child:** Break?
+>
+> **Big sibling:** Yes, if something falls apart or stops working, it's broken.
+
+That's the move the guppy never learned: take the word from the question and say something
+about it. A grown-up does it all day.
+
+Haiku agents wrote 2,000 more in the same shape, all about the sea: lifeguards, grandparents,
+and boat captains answering questions about tides, blowholes, and hermit crabs, which do
+sometimes line up and trade shells. The fish practiced on all of it for about thirteen minutes, then
+went to the aquarium as before. I also cut the aquarium conversations from about 23,000 to
+20,000, which means two things changed at once, so I can't say which one did what.
+
+The noun test moved most. Real words it was asked about, the test that had slipped last round,
+came back exact 75% of the time instead of 52%. Names went to 48 out of 48. Purple came back
+three times out of four, and memory was back to 13 out of 16. Bartholomew is still the boss fight:
+
+> Bartholve? I have a puzzle for you: what I like to hide in?
+
+The narwhal got worse. It still knew its name, but half the time it forgot what it was: "I am
+Quilliam. I live in a warm, cozy home. I am not as scary as people think." That last line
+belongs to the reef shark. The narwhal got 6 out of 12 instead of 10, and that's 12 samples, so
+it could be noise, the cut, or the preschool.
+
+Its error on unseen conversations barely moved, 2.052 to 2.047. Every round of this has gone the
+same way: the score that measures prediction sits still while the behavior changes. The fish
+isn't predicting text any better. It's doing different things with the same prediction.
+
 ## You can talk to it
 
 The agent shrank the newest fish to 9 MB by storing each weight in a single byte instead of
-four, which changed its error on unseen conversations by about a twentieth of a percent. Then it wrote a small
-JavaScript program that runs the whole model inside a browser tab: no server, no download
-besides the fish itself, about half a second per reply on my laptop.
+four, which changed its error on unseen conversations by about a hundredth of a percent. Then it
+wrote a small JavaScript program that runs the whole model inside a browser tab: no server, no
+download besides the fish itself, about half a second per reply on my laptop.
+
+{{< nyer-panel src="aquarium-page.webp" caption="Eighteen rooms, one brain." alt="A screenshot of the Aquarium web page: a wooden sign reading The Aquarium over a tank divided into eighteen painted dollhouse rooms, each with a sea creature and a name tag, including a whale in a bathtub, a sea star asleep in bed, a shark lifting dumbbells, and a manatee on a pink couch." >}}
 
 [It lives here](https://eaglstun.github.io/guppylm/). Pick a creature, rename it, rewrite its
 system prompt, and see what it does. The narwhal and the mantis shrimp are marked as the ones it
-never saw in training. Tell it about a zorblatt. Mine said:
+never saw in training. Tell it about a zorblatt. My hermit crab said:
 
-> A zorblatt? Is it a sweet food for a crab? I am always hungry, so I would swim through it fast.
+> A zorblatt? Is it a covering for people to wear? I would check if my shell fits.
 
 It still doesn't know what a busy is. But now it will ask.
 
