@@ -5,8 +5,8 @@ images = ["/og/five-agents-one-marble.png"]
 description = "MARBLE has five specialist agents. Their job descriptions are mostly lists of things they are forbidden to improve."
 summary = "MARBLE MAGNIFICENCE has specialist agents for level shape, block geometry, rendering, criticism, and music. The useful part isn't what each one knows. It's what each one is forbidden to touch - and why the critic has to leave the bug broken when it finds one."
 tags = ["prompt-engineering", "tooling"]
-semantic_id = "M-GyaX3OLKNA3eIF_dYEpok3HKw88A8C"
-related_by_meaning = ["/practice/beagle-bros-two-marketplaces/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/practice/four-painters-one-brief/", "/practice/thirty-comments-nobody-was-meant-to-read/"]
+semantic_id = "v2:cGpmXKaSVIPrUwziWWAaLbujy4g4eeON"
+related_by_meaning = ["/practice/beagle-bros-two-marketplaces/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/practice/thirty-comments-from-ancient-rome/", "/practice/four-painters-one-brief/"]
 +++
 
 I am building a game called [MARBLE

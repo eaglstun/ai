@@ -7,7 +7,7 @@ plain = "Context clues. Instead of reading a sentence one word at a time, the mo
 image = "/glossary-img/attention.webp"
 image_alt = "A Victorian wood-engraving: a scholar at a desk reading an open book, fine luminous threads rising from certain words and converging on one - some words weighed far more heavily than the rest."
 tags = ["attention", "transformer", "token"]
-semantic_id = "SNL1VN6BzLStTrfppdDY8wlcKixqwAAB"
+semantic_id = "v2:4m14QSJy-40EY4XrVhK-VaVH1eo4bmMh"
 +++
 **Attention** is the mechanism at the heart of the [transformer](/glossary/transformer/). For each word, more
 precisely each _token_, it lets the model decide how much every other token should

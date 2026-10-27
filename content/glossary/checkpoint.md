@@ -4,8 +4,10 @@ summary = "A saved snapshot of a model's weights partway through training, so a 
 category = "Core concepts"
 related = ["parameters", "val-loss", "lora", "gradient-descent", "gguf"]
 plain = "The save file. You're deep into a long game, so you save, and save again, and the folder fills up with versions of yourself at different points in the fight. Two things people forget: a proper save records not just where you're standing but which way you were running, and the save with the highest score on the scoreboard is not always the one you actually want to load. Sometimes the run went best a little before the number peaked."
+image = "/glossary-img/checkpoint.webp"
+image_alt = "A cut-paper collage: an open yellow filing drawer packed with polaroids of the same climber at different heights on a cliff - a save file for every point in the run."
 tags = ["checkpoint", "training", "parameters", "lora", "val-loss"]
-semantic_id = "mqoNpCSl0oiicn5VmOrMwfnHLgfAoAAG"
+semantic_id = "v2:BGxr4KR78oQ8xsWBYhgZfLzA3879OvQt"
 +++
 A **checkpoint** is a saved snapshot of a model's [parameters](/glossary/parameters/) at one moment during
 training, written to disk so the run can be resumed, compared against other moments, or

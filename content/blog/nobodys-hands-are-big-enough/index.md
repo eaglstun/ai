@@ -5,8 +5,8 @@ images = ["/og/nobodys-hands-are-big-enough.png"]
 description = "A frontier model gives one person more leverage than one person can supervise. Model safety is only half the question."
 summary = "A model wrote me a working GPU backend in an afternoon. The useful safety question is not only what the model can do, but who gets to direct it."
 tags = ["ai-safety", "alignment", "gpt"]
-semantic_id = "_eOJCa7DxYXIl-z73X6u0QtGtZ7owAou"
-related_by_meaning = ["/glossary/alignment/", "/blog/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/"]
+semantic_id = "v2:lGovZC0wUwnxVx7x0jQ9bbWL2dg5eqYo"
+related_by_meaning = ["/glossary/alignment/", "/deep-dives/is-that-what-you-wanted/", "/practice/172-witnesses/", "/why/"]
 +++
 
 Picture the smallest person you love. For me it's an infant, a daughter you could hold in one
@@ -29,7 +29,8 @@ our jobs, and walk clean past the plainer fact on the table: they put an enormou
 specialized work behind one chat box, available to one person, immediately.
 
 This week I watched one write a working
-GPU backend for [CTranslate2](https://github.com/eaglstun/CTranslate2), serious inference software,
+GPU backend — the code that lets AI models run on a graphics chip — for
+[CTranslate2](https://github.com/eaglstun/CTranslate2),
 in one afternoon, for about a hundred and fifty dollars, in a language I cannot read a line of.
 The project had gone its whole life without that backend, and not for lack of wanting. It was
 missing because the doing was hard: the few engineers on earth who can build one bill in the tens
@@ -55,8 +56,8 @@ a match is still holding a match. The hands are not big enough. They were never 
 ## Release is part of safety
 
 I think it was reckless to release, and I'll say it about the lab whose work I admire most,
-because the safety work can be sincere and still leave this question untouched. Red-teaming and
-refusals test what the model will do. They do not decide how much unsupervised reach one operator
+because the safety work can be sincere and still leave this question untouched. Trying to provoke harmful answers and
+checking what the model refuses to do tells us how it behaves. They do not decide how much unsupervised reach one operator
 should get when the model works exactly as intended. A perfectly behaved model handed to everyone
 is still the most concentrated leverage in history handed to everyone. "It works as designed"
 isn't the reassurance. It's the worry.

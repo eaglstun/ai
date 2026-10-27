@@ -4,8 +4,10 @@ summary = "llama.cpp's single-file format for quantized local LLMs."
 category = "Local inference & formats"
 related = ["mlx", "ggml", "parameters", "rss-sampler", "precision", "quantization", "qwen", "temperature", "open-weights", "checkpoint"]
 plain = "Zipping a model down to fit. AI models are huge; this is like saving a giant photo as a JPEG - one tidy compressed file, shrunk enough to run smoothly on a normal laptop instead of a data-center server."
+image = "/glossary-img/gguf.webp"
+image_alt = "A 1970s airbrushed sci-fi scene: a giant robot crouches while three technicians pack it into an old leather suitcase - a huge model squeezed into one portable file."
 tags = ["gguf", "local-inference", "quantization"]
-semantic_id = "qzNGvCq93UlFeWOPxzVLLabTqnI3oAAN"
+semantic_id = "v2:DX8uSKtwibuyUyylslIHDbXDrXC4bP1-"
 +++
 **GGUF** (GPT-Generated Unified Format) is a single-file format from the
 [llama.cpp](https://github.com/ggml-org/llama.cpp) project for sharing and running quantized

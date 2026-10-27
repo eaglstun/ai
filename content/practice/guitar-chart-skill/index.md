@@ -1,13 +1,13 @@
 +++
 title = "I Taught Claude to Write Guitar Tabs for My Band"
-date = 2026-05-29
+date = 2026-05-15
 images = ["/og/guitar-chart-skill.png"]
 thumbnail = "concepts/guitar-chart-skill/d-together-continuous-line.jpg"
 description = "A Claude Code skill that turns a song into charts for guitar, bass, keys, and even engraved cello - one format, no paperwork."
 summary = "I built a Claude Code skill that turns a song into lead sheets, chord charts with ASCII fretboard diagrams, bass tabs, keyboard parts, and even simple engraved cello - in one consistent format. Here's how it works and why a skill beat doing it by hand."
 tags = ["music-generation", "tooling"]
-semantic_id = "Ew84pXOLb7V-xRMD6yL8LZ44gp2dQAlG"
-related_by_meaning = ["/practice/thirty-comments-nobody-was-meant-to-read/", "/blog/my-claude-code-started-roasting-me/", "/blog/why-markdown-is-king/", "/blog/my-whole-deal-is-now-a-toggle/"]
+semantic_id = "v2:NWoGYSo0RZf6XRrRw_EGeSjjn8pw8j9v"
+related_by_meaning = ["/blog/my-claude-code-started-roasting-me/", "/blog/why-markdown-is-king/", "/blog/my-whole-deal-is-now-a-toggle/", "/practice/thirty-comments-from-ancient-rome/"]
 +++
 
 My band, [OWNER/OPERATORS](https://owneroperators.online), has a recurring problem that is not music: paperwork. Somebody writes

@@ -8,8 +8,8 @@ images = ["/og/1930-part-2.png"]
 description = "Same model, same seed, the questions reworded into 2026 jargon. The reasoning buckled. The translation was the experiment."
 summary = "Same model, same seed, the questions reworded into raw 2026 jargon: AI, chatbot, jailbroken, data center. The reasoning buckles, the crown-jewel answer never forms, and the off-switch horror gets mistaken for a product recall. The translation was the experiment."
 tags = ["ai-policy", "ai-safety"]
-semantic_id = "GIXZcBDruQ-SS4x5EKXmqhwfVJ_fQAo3"
-related_by_meaning = ["/blog/everyone-gets-a-lawyer/", "/blog/is-that-what-you-wanted/", "/deep-dives/on-ai-and-psychosis/", "/blog/a-conscience-you-can-patch-out-overnight/"]
+semantic_id = "v2:lOEKxqQ7QoSwx9rT61CXfbWJT_t5atM8"
+related_by_meaning = ["/blog/everyone-gets-a-lawyer/", "/practice/thirty-comments-from-ancient-rome/", "/deep-dives/is-that-what-you-wanted/", "/deep-dives/on-ai-and-psychosis/"]
 +++
 
 In [run one](/deep-dives/1930-on-the-machine-we-switched-off/in-its-own-language/) the 1930 mind

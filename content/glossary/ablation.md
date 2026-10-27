@@ -4,8 +4,10 @@ summary = "Removing a model component on purpose to measure how much it mattered
 category = "Core concepts"
 related = ["machine-learning", "val-loss", "parameters"]
 plain = "The Jenga test. Pull one block out of the standing tower and watch whether the whole thing topples or just wobbles - that's how you find out which part was actually holding the model up."
+image = "/glossary-img/ablation.webp"
+image_alt = "A tilt-shift diorama: two cardboard robots ease blocks out of a wobbling Jenga tower with long tweezers - pull one piece and see what was holding everything up."
 tags = ["ablation", "machine-learning", "parameters", "training", "val-loss"]
-semantic_id = "qfpBHIyWYlkLiN08pKxMw26FdoVUoAAH"
+semantic_id = "v2:wmhl1SHa8kylQG07qrE-CT2Jqtt5SvQO"
 +++
 **Ablation** is the practice of removing a piece of a model or its training setup on purpose,
 just to see how much that piece mattered. The word is borrowed from surgery, where it means

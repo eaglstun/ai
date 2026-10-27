@@ -1,11 +1,11 @@
 +++
 title = "Markdown Won. Here's Why - and How to Speak It"
-date = 2026-05-29
+date = 2026-05-17
 summary = "Plain text that reads fine raw, renders everywhere, and happens to be the language the models think in. Why the humblest format won, and the handful of syntax you actually need."
 description = "Plain text that reads fine raw, renders everywhere, and is the language the models think in. Why the humblest format won."
 images = ["/og/why-markdown-is-king.png"]
 tags = ["prompt-engineering", "static-sites"]
-semantic_id = "Hay5JXCYCHX7BgplKJN9zxPtivmYMAlP"
+semantic_id = "v2:PeImRK5bZtQwQQ6RIgDQfZjrbstZK_Y9"
 related_by_meaning = ["/glossary/temperature/", "/glossary/rss-sampler/", "/practice/guitar-chart-skill/", "/glossary/context-window/"]
 +++
 
@@ -18,7 +18,7 @@ advanced thing in the room, but by being impossible to kill.
 
 ![A vintage woodcut engraving: a single plain sheet of paper wearing a small crown, enthroned on an ornate pedestal, while a fallen clock tower and a graveyard of toppled, tangled clockwork machines lie in ruin around its base.](plain-text-crowned.jpg)
 
-It's worth sitting with how _little_ Markdown does. Markdown gives you plain text instead of an
+Markdown does very little. It gives you plain text instead of an
 app, a premium tier, or a version that can go obsolete and strand your files on a dead hard
 drive. A heading is a `#`. Bold is two asterisks. That's not a missing feature set, that's the entire
 point. While word processors spent thirty years growing ribbons, side panes, and a haunted
@@ -33,11 +33,12 @@ speaks.
 ## Why it won
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of two identical waistcoats on a tailor's rail, alike in every stitch but one swapped button, with a locked steamer trunk on the floor below.](peek-diff.jpg)
+
 A **diff** is the line-by-line list of what changed between two versions of a file. Plain text diffs clean, word by word. A binary `.docx` just shrugs and says "something moved," then wishes your teammate luck.
 {{< /bbros >}}
 
-- **It's just text.** One open format that anything can read in 2040. Openable in anything,
-  forever.
+- **It's just text.** An open format you can read without the app that created it.
 - **Readable both ways.** The raw file is legible to a human; rendered, it's clean. You never
   have to pick one.
 - **Diff-friendly.** It plays perfectly with git. You can see exactly what changed, word by
@@ -130,6 +131,8 @@ is preserved exactly, because the format finally agreed to stop helping.
 ## Footnotes, the one bit of syntax worth the extra keystrokes
 
 {{< bbros title="Peek & Poke" n="5" float="right" >}}
+![A Victorian engraving of a theater stage framed in laurel, two actors mid-scene while a tiny prompter peeks out of a shell-shaped box at the foot of the stage, whispering an aside.](peek-footnote.jpg)
+
 Footnotes are an **extension**, not core Markdown. CommonMark never specified them. Goldmark (what Hugo uses), GitHub, and Pandoc all support them anyway. A renderer that doesn't will print your `[^1]` right there in the sentence, looking exactly as silly as it sounds.
 {{< /bbros >}}
 
@@ -158,7 +161,7 @@ Markdown won on stubbornness.[^cockroach]
 The label is bookkeeping, not display. Nobody reading the rendered page ever sees the word
 `cockroach`, and nobody sees your `1` either. The renderer strips both, numbers every footnote in the
 order it appears in the text, and links each one to its entry at the bottom. Which means you can
-number them `[^1]`, `[^1]`, and `[^7]`, in that order, and still get 1, 2, 3 on the page.
+label them `[^1]`, `[^3]`, and `[^7]`, in that order, and still get 1, 2, 3 on the page.
 
 That is the actual argument for named footnotes. Numbered ones look tidy until you insert a
 paragraph in the middle and every reference after it now says something different from what it

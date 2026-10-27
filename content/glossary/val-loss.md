@@ -4,8 +4,10 @@ summary = "Held-out validation error; the overfitting tripwire."
 category = "Core concepts"
 related = ["machine-learning", "parameters", "gradient-descent", "epsilon-gate", "checkpoint"]
 plain = "The pop quiz with questions it didn't study. During training you hold back some examples the model never sees, then test on those - if it aces what it studied but flunks the held-back quiz, it memorized instead of learned."
+image = "/glossary-img/val-loss.webp"
+image_alt = "An ink-and-wash drawing: a robot student at a desk clutches its head over a quiz it never studied for while a classmate watches nervously - the held-back test that catches memorizing."
 tags = ["machine-learning", "val-loss", "training"]
-semantic_id = "iZvhHJYXZAvLHVdNAJXNsobC8iBEcAAN"
+semantic_id = "v2:hmSu4KD5Moy0Z2WgLhI-b7zRV_64Csct"
 +++
 **Validation loss** is how badly a model does on a _validation set_, data held back and not
 used for training, measured with the same scoring used during training. Its counterpart is

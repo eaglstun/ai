@@ -7,7 +7,7 @@ plain = "Forger vs. detective. One AI fakes convincing images, another tries to 
 image = "/glossary-img/gan.webp"
 image_alt = "A Victorian wood-engraving: a forger at an easel painting a convincing counterfeit while a monocled inspector leans in to scrutinise it - a duel of faking and detecting."
 tags = ["gan", "machine-learning", "image-generation", "latent-space", "training"]
-semantic_id = "dn5GpdLVWQWLbbX9YoRbxK2Y97AiUAAB"
+semantic_id = "v2:5O121qRx7fskCxGHTnu51bWd3tJ4bH1u"
 +++
 **GAN** (Generative Adversarial Network) is a type of generative [machine learning](/glossary/machine-learning/) model,
 introduced by Ian Goodfellow and colleagues in 2014, built from two neural networks set

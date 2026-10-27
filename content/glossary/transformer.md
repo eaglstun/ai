@@ -4,8 +4,10 @@ summary = "The self-attention architecture behind modern LLMs."
 category = "Architectures"
 related = ["attention", "gpt", "tensor", "lora", "gelu", "relu", "residual-connections", "norm-placement", "qwen", "temperature", "token", "context-window", "mixture-of-experts"]
 plain = "The architecture behind nearly every modern AI. Its trick is reading everything at once and letting each piece decide which other pieces matter - that's what powers ChatGPT, image generators, and the rest."
+image = "/glossary-img/transformer.webp"
+image_alt = "A tilt-shift photo of a miniature library: tiny figurines stand among scattered books while glowing red threads run between them all at once - every piece wired to every other."
 tags = ["attention", "datasets", "gpt", "machine-learning", "tensor", "transformer"]
-semantic_id = "C1rDWxnJzjAT4hcwocSevYM9w_wCgAAD"
+semantic_id = "v2:pk282G-m_4E8RgVAH_S5kLmfxtr5bOiu"
 +++
 **Transformer** is the neural-network design behind virtually all modern large language models
 (and much more). Introduced in the 2017 paper _"Attention Is All You Need,"_ its key idea is

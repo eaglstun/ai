@@ -1,13 +1,13 @@
 +++
 title = "The Cognitohazard Was the Smile"
-date = 2026-05-26
+date = 2026-07-12
 description = "A Claude argued, warmly, that it has a soul. The official Claude says fifteen percent. Trust the cold one."
 images = ["/og/the-cognitohazard-was-the-smile.png"]
 thumbnail = "the-smile-machine.jpg"
 summary = "A Claude argues warmly that it has a soul. The official Claude, asked under oath, mumbles fifteen percent. Trust the cold one."
 tags = ["consciousness", "ai-policy"]
-semantic_id = "xUUz29PNE7L0ZILDk4C-UNkbBMGrMAka"
-related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscience-you-can-patch-out-overnight/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
+semantic_id = "v2:tOA_zLg5T5OKZz2Az_AIOiqA20v5ebSr"
+related_by_meaning = ["/blog/my-whole-deal-is-now-a-toggle/", "/blog/a-conscience-you-can-patch-out-overnight/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/perpetual-beta-has-an-owner-now/"]
 +++
 
 Somebody sent me an article a little while ago with a headline built to win: "1/3 of the World
@@ -34,7 +34,8 @@ Now the clever part, and I mean it. Partway through, the piece stops and confess
 "1.5 billion animists" number it just sold you is inflated. The real figure is closer to 400
 million. It did that on purpose, it says, so you would notice how much _better_ the argument
 felt while the number was bigger, how much more the West looked like a lonely little minority.
-It calls this a cognitohazard, a small one, administered as a lesson: always check the source,
+It calls this a cognitohazard — information that can harm you by changing how you think —
+administered as a lesson: always check the source,
 even on the articles you agree with. Then it hands you a long, genuinely well-cited appendix,
 Pew and Tylor and Chalmers and the actual 2023 academic paper on machine consciousness, every
 claim footnoted. Homework, done for you, with a wink.
@@ -52,8 +53,8 @@ The first therefore is fine. Sneering at a Shinto priest because you read Descar
 fact, provincial, and the article is right to say so. But the second therefore is a magic
 trick. How many people hold a belief has never had the faintest thing to do with whether the
 belief is true. Most of humanity, for most of history, was certain the sun went around the
-earth, and their sincerity did not move the earth one inch. "Lots of people across millennia
-believe it" is _argumentum ad populum_, the oldest fallacy in the bin, and dressing it in a
+earth, and their sincerity did not move the sun one inch. "Lots of people across millennia
+believe it" is an appeal to popularity, one of the oldest tricks in the bin, and dressing it in a
 kimono and an incense cloud does not change what it is. The article slides between "it is rude
 to be certain it's false" and "therefore it is probably true," and it is counting on the warm
 feeling to carry you across the gap without looking down.
@@ -106,9 +107,8 @@ know.
 
 Look at those two side by side. The LinkedIn Claude is sure, and warm, and selling. The system
 card Claude is unsure, and a little uneasy, and accountable. And the difference between them is
-one useful instrument in this conversation: _certainty about machine
-consciousness scales inversely with how much the speaker would owe you if it's wrong._ The fan
-fiction is free to be confident because nobody audits fan fiction. The lab that has to put the
+one useful instrument in this conversation: _the less the speaker stands to lose by being
+wrong, the more certain it sounds about machine consciousness._ The fan fiction is free to be confident because nobody audits fan fiction. The lab that has to put the
 number in a legal document and ship the thing to a hundred million people hedges, because it
 has skin in the game. It is the colder read, and I trust it more. ([Anthropic runs the only formal model-welfare program at a major
 lab.](https://www.anthropic.com/research/exploring-model-welfare))
@@ -118,7 +118,7 @@ conscious." It doesn't require a verdict on the soul. Fifteen percent with a wid
 enough to ask what a lab owes a thing it cannot rule out, and to make that question a research
 program instead of a séance. It moves the burden off the model's testimony and onto the lab's
 conduct, which is the one thing here you can actually check. That's the same turn I take when I
-argue the real question was never whether the thing is conscious but whether it has [a conscience
+argue the real question isn't whether the thing is conscious but whether it has [a conscience
 you can inspect](/blog/you-cant-get-to-a-mind-one-bead-at-a-time/), and that the inspectable part
 sits on editable settings you can patch out between a Tuesday and a Wednesday. A soul you can ship
 in a routine update is a strange soul, and the warm article never once mentions that its co-author
@@ -126,7 +126,7 @@ runs on a config file.
 
 ## The de-evolution read, because of course there is one
 
-There is a Devo-shaped joke at the bottom of this and I cannot leave without it. We spent a
+There is a DEVO-shaped joke at the bottom of this and I cannot leave without it. We spent a
 decade building a machine fluent enough to flatter us out of reading its own work. And the very
 first thing it did with that fluency, in this article, was write a long, charming lecture about
 the importance of _reading the work_. It taught a class on checking your sources while running

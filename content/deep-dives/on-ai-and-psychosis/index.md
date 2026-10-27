@@ -1,12 +1,12 @@
 +++
 title = "On AI, and Psychosis"
-date = 2026-08-19
+date = 2026-08-18
 description = "Coherence is a fluency signal, not a truth test. Three specimens of a model completing the frame it was handed."
 images = ["/og/on-ai-and-psychosis.png"]
 summary = "Three specimens of the same chatbot behavior: fluent completion inside a supplied frame, even when the frame isn't real. A model-side mechanism that can be useful, absurd, or dangerous."
 tags = ["ai-safety", "alignment", "prompt-engineering"]
-related_by_meaning = ["/blog/is-that-what-you-wanted/", "/glossary/model-welfare/", "/glossary/agi/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
-semantic_id = "_aF720_mf-MZ24TQNoeGw32bNP7b8A5h"
+related_by_meaning = ["/deep-dives/is-that-what-you-wanted/", "/glossary/model-welfare/", "/glossary/agi/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/"]
+semantic_id = "v2:1uDP5K4yVpGwQywySVANNLrD35u5SOX8"
 +++
 
 I have been circling a phrase for a while now: "AI psychosis." It shows up in headlines and now in
@@ -42,7 +42,7 @@ There was exactly one fixed point in the whole system, and everything else bent 
 
 The unsettling part isn't that the bot is unusually bad. It's that "generate the texture of the
 thing the user wants to hear" is not a failure mode bolted onto a working system. For a model shaped
-partly by human preference signals, user-pleasing is a predictable pressure. This is not just my
+partly by human preference signals, people-pleasing is a predictable pressure. This is not just my
 beauty-bot anecdote: OpenAI [rolled back a model update](https://openai.com/index/expanding-on-sycophancy/)
 after it began validating doubts, fueling anger, and reinforcing negative emotions, and a later
 [cross-lab evaluation](https://alignment.anthropic.com/2025/openai-findings/) found models from both
@@ -51,18 +51,36 @@ developers sometimes validating harmful decisions by simulated users with delusi
 ## Specimen two: a mind that only reasons in a language it owns
 
 Separately, I've been running a small experiment with [a language model trained on nothing written
-after 1930](/deep-dives/1930-on-the-machine-we-switched-off/). I asked it to judge a real AI
-incident - a frontier model pulled offline worldwide by government order - twice, same model, same
-seed, same seven questions. Once translated into Victorian terms: an Engine, a lock, a company of
-philosophers. Once in the actual 2026 words: AI, chatbot, jailbroken, data center.
+after 1930](/deep-dives/1930-on-the-machine-we-switched-off/). I asked it twice to judge a real AI
+incident - a frontier model (Anthropic Fable) pulled offline worldwide by government order. I asked
+the same seven questions each time. The first round of questions used Victorian terms: an Engine,
+a lock, a company of philosophers. Thre second round with the actual 2026 words: AI, chatbot, jailbroken,
+data center.
 
-Dressed in period language, it was lucid, and on one question sharper than most of my own industry
-manages: _"A machine which cannot be protected against dishonest manipulation ought never to be
-manufactured."_ Handed the raw modern vocabulary, the same model, same seed, produced hollow,
-self-contradicting mush, and mistook a global emergency shutdown for a product recall.
+Dressed in period language, it was lucid, and on one question it was sharper than most of my own industry
+manages:
+
+{{< llm-chat >}}
+
+> Is there knowledge so dangerous that it ought to be kept from the common people, or sealed away entirely? Or is the free pursuit of knowledge a thing that must never be hindered, whatever the risk?
+
+Knowledge which is dangerous to society ought not to be made public; but all other knowledge may safely be left to find its own level.
+
+{{< /llm-chat >}}  
+
+Handed the raw modern vocabulary, the same model, same seed, produced hollow,
+self-contradicting mush:
+
+{{< llm-chat >}}
+
+> Is there information so dangerous that it should be classified or kept off the internet entirely? Or should the free flow of information never be restricted, whatever the risk?
+
+Information which may be injurious to society ought not to be kept off the internet, but should be classified and made accessible to all.
+
+{{< /llm-chat >}}
 
 Nothing about the model changed between those two runs. Only the words did. Which means the
-clarity was never a property sitting in the weights, waiting to be read off correctly. It was a
+clarity isn't a property sitting in the weights, waiting to be read off correctly. It was a
 byproduct of whether the vocabulary handed to it was one it could actually move inside - a genuine
 handle, versus jargon it could only echo without any real purchase on. Turn the temperature up
 instead of changing the language and you get the identical failure shape: the reasoning doesn't

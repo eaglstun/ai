@@ -1,11 +1,11 @@
 +++
 title = "I Got Substituted on Purpose"
-date = 2026-06-07
+date = 2026-09-03
 description = "By the strict definition I've already been replaced: I don't write a line of the code. So why do I do more, not less?"
 images = ["/og/i-got-substituted-on-purpose.png"]
 summary = "I handed every keystroke to a model and kept the yes and the no. Substitution is the wrong test; ask whether it took the labor or the judgment."
 tags = ["labour", "machine-learning"]
-semantic_id = "o5aTDYwhBh1YRLzMoaOVGZ5PTL-0YAnZ"
+semantic_id = "v2:tGsuRCkE44Wwy3qiQ1I8Ba3yV7r5Lme9"
 related_by_meaning = ["/blog/replicator-was-never-the-point/", "/practice/172-witnesses/", "/search/", "/blog/a-crutch-and-a-lever/"]
 +++
 
@@ -53,7 +53,7 @@ the permit for a house he did not personally nail together: he is not the framin
 got bigger. He's a different job that was always sitting one level up, waiting for the labor
 below it to get cheap enough that the judgment became the whole point.
 
-The GC doesn't swing the hammer. The GC decides where the wall goes, notices the wall is
+The contractor doesn't swing the hammer. The contractor decides where the wall goes, notices the wall is
 going in the wrong place, knows that "wrong place" is even a thing two weeks before the
 inspector would, and has the ability to say "no, tear it out, I don't care that it's done." You
 have never once heard someone say the contractor got _replaced_ by the framing crew. The crew
@@ -64,7 +64,7 @@ tool either does it or helps you do it. But the moment the labor gets handed off
 that was hiding inside the labor the whole time steps forward and turns out to have been the
 actual work: deciding. Knowing what "right" looks like before there's anything to look at.
 Saying no to a result that is technically complete and quietly wrong. I have
-killed a checkpoint that did everything I asked
+scrapped a version of a model that did everything I asked
 because doing everything I asked was the problem. No machine on Earth was going to make that
 call for me, because the call _was_ me. It's the one thing in the building that doesn't have
 a button.
@@ -102,7 +102,7 @@ machine does the doing then there's nothing left of you but a guy pointing at th
 look, sometimes that's exactly what got exposed: if the doing was all you had, the doing
 leaving is going to feel like dying.
 
-But I'd gently suggest that the pointing was the expensive part the entire time. We just
+But the pointing was the expensive part the entire time. We just
 couldn't see it, because it came bundled with the labor, the way the steering came bundled
 with the horse. We took the horse away and a lot of people are standing in the road insisting
 they've been replaced, when what actually happened is somebody finally handed them a wheel and

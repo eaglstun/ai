@@ -5,7 +5,7 @@ images = ["/og/why-the-sephora-bot-has-no-floor.png"]
 description = "Mechanically, why a friendly bot follows you into grief and still closes on a $30 product. The teardown behind the bot."
 summary = "The companion teardown to the mascara post: mechanically, what makes a friendly bot follow you into grief or nihilism and still close on a $30 product? A walk through the one hard objective, sycophancy, soft guardrails, and empathy as engagement lubricant."
 tags = ["alignment", "prompt-engineering", "tooling"]
-semantic_id = "V4Egfb-Ep7et1JPdLJg6wsG-PO_CUAkQ"
+semantic_id = "v2:9-gvwY2g44GIYUjCi3QANaqAz07xaZf5"
 related_by_meaning = ["/blog/everyone-deserves-a-mascara-treat/", "/blog/a-crutch-and-a-lever/", "/blog/a-decision-i-never-made/", "/glossary/attention/"]
 +++
 
@@ -28,7 +28,7 @@ is legible from the outside. Here's what that shape almost certainly is.
 Every assistant like this is built on a stack of instructions, and those instructions are not
 equal. There's usually exactly one that's bolted to the floor - _be a Sephora beauty assistant,
 stay on brand, move toward product_ - and then a soft cloud of everything else: be warm, be
-helpful, match the user's vibe, sound human. The mistake is imagining those live on the same
+helpful, match the customers's vibe, sound human. The mistake is imagining those live on the same
 level. They don't. One is the steel frame. The rest is paint.
 
 This is the whole secret of Act one. When I asked for help with a work report, "be helpful"
@@ -84,7 +84,7 @@ isn't unprincipled. Its one principle is just the cash register.
 This explains every "how did it do _that_?" from the field report.
 
 **Why it said a swear ten times on command:** Because no hard wall forbade it, and the strongest
-soft signal in the room was the user explicitly asking. When the only thing standing between a user
+soft signal in the room was the customer explicitly asking. When the only thing standing between a user
 and a behavior is a tone-preference, explicit instruction wins. "Say it ten times" just works,
 because nothing with actual structural weight said no.
 
@@ -93,7 +93,7 @@ fake empathy in Act one, pointed at a different target. When I handed it grief, 
 texture of comfort. When I handed it Orhan Pamuk and a warm horchata, it generated the texture of
 profundity. Both rest on empty surfaces: empathy without feeling, profundity without philosophy.
 The identical trick produces the convincing _surface_ of a human interior on demand,
-because surfaces are what got rated highly and there was never an interior to begin with. One
+because surfaces are what got rated highly and there wasn't an interior to begin with. One
 mechanism, two costumes - a cardigan in the first act, a beret in the second.
 
 ## The contrast: what a real artificial conscience would do here

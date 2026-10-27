@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to LLM agent harnesses when working with code in this repository.
 
 ## What this is
 
@@ -13,121 +13,113 @@ No package manager, no runtime dependencies.
 
 ```bash
 hugo server -D                 # local dev → http://localhost:1313 (includes drafts)
-python3 scripts/gen-glossary.py # regenerate content/glossary/*.md (see below)
 ./deploy.sh                    # build --minify + rsync public/ to the droplet
 ```
+
+`scripts/` is **gitignored**: anything in it is local-only and absent from a fresh clone.
 
 `deploy.sh` reads `DEPLOY_HOST` / `DEPLOY_PATH` / `DEPLOY_BASE_URL` from `.env`
 (gitignored; see `.env.example`). The server vhost lives in `deploy/`.
 
-## The glossary is generated - don't hand-edit `content/glossary/*.md`
+## The glossary is hand-edited markdown
 
-Every `content/glossary/<slug>.md` (except `_index.md`) is **output** of
-`scripts/gen-glossary.py`. Editing them directly gets overwritten on the next run.
+Every `content/glossary/<slug>.md` (except `_index.md`) is the source of truth; edit it
+directly. These pages used to be **output** of `scripts/gen-glossary.py`, built from entries
+in the `ai-dev` skill's `references/glossary/`. That script was deleted on 2026-09-19
+(`1eb03ea cleanup`), so nothing regenerates them any more. The skill's copies still exist
+but are now an independent fork: an edit in one doesn't reach the other.
 
-Source entries live **outside this repo** at
-`~/.claude/skills/ai-dev/references/glossary/`. The script:
+Frontmatter a term page uses:
 
-- drops the leading `# Heading` (Hugo renders the title from frontmatter),
-- rewrites `[[slug]]` wikilinks into real `/glossary/slug/` links,
-- lifts the trailing `**See also:**` paragraph into `related` frontmatter (rendered as chips),
-- writes `title` / `summary` / `category` / `related` frontmatter.
+- `title`, `summary` (the dek), `category` (see Taxonomy below).
+- `related` - glossary slugs rendered as "See also" chips. Keep links reciprocal: when a
+  term points at another, add the back-link on the other page too.
+- `plain` - the "In plain English" aside, rendered through `markdownify`.
+- `image` + `image_alt` - optional figure above the body. Art lives in
+  `static/glossary-img/<slug>.webp` at 1024x768 (4:3); drafts and their prompts go in
+  `concepts/glossary-<slug>/`.
+- `mentions` - optional phrases for the "Where it comes up" list (max 4 posts: linking
+  posts first, then plain-text mentions, then tag overlap via `[related]` in `hugo.toml`).
+  Defaults to the title; set it when the title won't appear in prose (`cuDNN / cuBLAS`).
+- `tags` (hand-curated) and `semantic_id` (minted by the semantic-ids skill, below). Never
+  hand-edit `semantic_id`.
 
-To add or change a term: edit the source entry, then update the per-slug maps at the
-top of the script (`TITLE`, `SUMMARY`, `CATEGORY`, `RELATED`), then re-run it.
+Body links between terms are plain markdown links to `/glossary/<slug>/`.
 
-**`tags` and `semantic_id` are the exception** — they're minted by `semantic-ids.py`,
-not by this script, and `gen-glossary.py` carries them through verbatim on regeneration
-(see `carry_over()`). If you rewrite the frontmatter block in that script, preserve
-those two fields or every glossary ID is destroyed.
+## Semantic IDs: the `semantic-ids` skill, v2 encoder
 
-## Semantic IDs: `scripts/semantic-ids.py`
-
-Every content page carries a `semantic_id` — a 192-bit, 32-character **base64url**
-string whose bits **are** the meaning of the page:
+Every content page carries a `semantic_id`: a versioned, 192-bit, 32-character
+**base64url** string whose bits **are** the meaning of the page.
 
 ```
-┌──────────────── 172 bits semantic ────────────────┬── 16b day ──┬─ 4b hash ─┐
-│  sign(embedding[i] - frozenMean[i]),  i = 0..171  │ since 2026  │ tiebreak  │
-└───────────────────────────────────────────────────┴─────────────┴───────────┘
+v2:<──────────────────── 192 semantic bits ─────────────────────>
+    calibrated SimHash of the page's embedding, all 192 bits semantic
 
-geUp5zbmgovefpbj0zjw_PuPFM9fQApS    "A Conscience You Can Patch Out Overnight"
-18co9P3055up1QLz1boi7cifFeRqYAjm    "Everyone Deserves a Mascara Treat"
+v2:t-kOUKApT4XQwZrvyVA9JbrLngZ5bn7O    "Switched-Off Bach"
 ```
 
 Two pages about the same thing get IDs that are close in **Hamming distance** (count of
-differing bits), so "related posts" is an XOR and a popcount — no vector database, no
-server, no runtime dependency. The embedded text is `title + summary + tags`, not the
-body: an embedding is a fixed-size container, so a whole article averages into a vague
-blob that is near everything and about nothing.
+differing bits), so "related" is an XOR and a popcount: no vector database, no server, no
+runtime dependency. The embedded text is `title + summary`, not the body: an embedding is a
+fixed-size container, so a whole article averages into a vague blob that is near
+everything and about nothing.
 
-**Why base64url and not hex.** Hex spends 4 bits per character and throws away the other
-half of every character's capacity. Base64 spends 6. At the same 32-character width
-that's 192 bits instead of 128 — **172 semantic bits instead of 108** — which measured
-out at 54% recall vs 51% on this corpus. The sizes land exactly: 192 bits = 24 bytes,
-and base64 packs 3 bytes into 4 chars, so 24 bytes is precisely 32 characters with no
-padding. 64 symbols rather than 62 (plain alphanumerics) because a power of two means
-encoding is bit-shifting rather than bignum division. `-` and `_` (base64**url**) keep
-the IDs safe in URLs and filenames.
-
-⚠️ **`-` is a valid character in the ID, not a separator.** The old hex format looked
-like a UUID and invited dash-stripping. Do that now and you silently corrupt the
-comparison. Use `decode64()`.
+The engine lives in the skill (`~/.agents/skills/semantic-ids/`, read its `SKILL.md`). This
+repo only supplies the context file, `.agents/semantic-ids.toml` (gitignored with the rest
+of `.agents/`), which the engine auto-discovers when run from anywhere in the repo:
 
 ```bash
-python3 scripts/semantic-ids.py            # fill in missing tags + IDs (needs Ollama)
-python3 scripts/semantic-ids.py --dry-run  # report, write nothing
-python3 scripts/semantic-ids.py --force    # re-mint everything (see the warning below)
+S=~/.agents/skills/semantic-ids/scripts/semantic_ids.py
+python3 $S mint --dry-run    # always first
+python3 $S mint              # stamp IDs on new pages; idempotent (needs Ollama + nomic-embed-text)
+python3 $S stats             # bit health: dead bits, mean pair distance, 5th percentile
+python3 $S near content/deep-dives/switched-off-bach/index.md
 ```
 
-**Four rules, and breaking any of them corrupts the IDs silently:**
+The site was migrated from the old in-repo v1 script (172 mean-centered bits + a 20-bit
+date tail, `data/semantic-model.json` as its frozen mean) on 2026-10-02 with one
+deliberate `mint --force`. Nothing reads `data/semantic-model.json` any more. The home
+page (`content/_index.md`) is excluded and carries no ID: it's titled "Home", has no
+summary, and isn't in `/index.json`.
 
-1. **`data/semantic-model.json` is frozen.** It holds the 768-float corpus mean, and
-   binarization is `sign(v - mean)`. Recompute the mean and every previously-issued ID
-   silently becomes wrong — no error, no warning, just quietly incomparable numbers.
-   The script only writes it if it does not already exist. Do not delete it. (The mean
-   is independent of the bit count, so changing `SEMANTIC_BITS` does NOT require
-   retraining it — only re-minting.)
-2. **Compare through the mask.** The day/tiebreak bits are Hamming _noise_. Use the
-   `hamming()` helper in the script, which masks them off, or two identical pages
-   published a year apart will look unrelated.
-3. **Tags come from a controlled vocabulary** (glossary slugs + `EXTRA_VOCAB`), because
-   free-form tag generation produced hallucinated garbage like `aspartame-grade-ml` —
-   and since tags feed the embedding, junk tags mean junk vectors. Anything the model
-   invents that isn't on the list is dropped.
-4. **The bit constants are duplicated in `themes/ee-ai/static/js/search.js`.** The
-   browser has to decode and compare the same IDs, so `ALPHABET`, `SEMANTIC_BITS`,
-   `TAIL_BITS`, and `MAX_DISTANCE` exist in **both** files. Change one without the other
-   and search silently returns nonsense — it will not throw, it will just rank noise.
-   There is no build step to catch this; it is on you.
+**Rules, and breaking any of them corrupts the IDs silently:**
+
+1. **Encoder versions never mix.** The `v2:` prefix is part of the ID. The engine and
+   `search.js` both refuse to compare across versions rather than return a plausible
+   wrong distance. Changing the embedding model, the embedded text, or the bit layout
+   means a new version and a full re-mint.
+2. **`-` is a valid character in the ID, not a separator.** It looks enough like a UUID
+   to invite dash-stripping. Do that and you delete real bits. Use `decode64()`.
+3. **No `[tags]` block in the context, on purpose.** With tags enabled, `mint --force`
+   regenerates every page's tags with a chat model, which would overwrite the
+   hand-curated ones. If tags ever feed the embedding, they must come from a controlled
+   vocabulary (free-form generation produced `aspartame-grade-ml`).
+4. **The bit layout is duplicated in `themes/ee-ai/static/js/search.js`.** The browser
+   decodes and compares the same IDs, so `ALPHABET`, `ID_VERSION`, `SEMANTIC_BITS`, and
+   `MAX_DISTANCE` exist there too. Change the encoder without updating it and search
+   silently ranks noise. There is no build step to catch this.
 
 ## `related_by_meaning` and `/search/`
 
-Two features ride on the IDs. Both are pure Hamming distance — XOR the two IDs, popcount
-the difference. No vector database, no server, no runtime dependency.
-
-**`related_by_meaning`** is a frontmatter list of page refs, minted by `semantic-ids.py`
-at the same time as the ID and rendered by
-`themes/ee-ai/layouts/partials/related-by-meaning.html`. It runs at mint time rather than
-render time because Go templates have no popcount, and because doing it once beats doing
-it on every build.
-
-The partial resolves each ref through `site.GetPage`, which returns nothing for a page
-the build never emitted — a draft, or a future-dated post. So an unpublished neighbour is
-skipped in production and simply appears the day it ships. No dead links, nothing to
-re-run.
+**`related_by_meaning`** is a frontmatter list of page refs rendered by
+`themes/ee-ai/layouts/partials/related-by-meaning.html`, which resolves each ref through
+`site.GetPage` so unpublished neighbours are skipped until they ship. Two caveats: the
+partial is **currently commented out** in `_default/single.html`, and the lists were
+minted by the retired v1 script. The skill writes its own `related_ids` (IDs, not paths)
+and doesn't maintain `related_by_meaning`; `related_stamp = 0` in the context keeps it from
+touching every file. Re-derive the lists from `near` before switching the partial back on.
 
 **`/search/`** (`content/search.md` → `themes/ee-ai/layouts/_default/search.html` +
 `static/js/search.js`) fetches `/index.json` once, lazily. That index carries **no body
-text** — just title, url, section, summary, tags, and `x`, the semantic ID — so it stays
-a few kilobytes. A query lexically seeds a page, and everything after that is pure ID
+text**, just title, url, section, summary, tags, and `x`, the semantic ID, so it stays a
+few kilobytes. A query lexically seeds a page, and everything after that is pure ID
 arithmetic: XOR the seed against every other page, popcount, sort ascending.
 
-**`RELATED_MAX_DISTANCE = 72` is not a vibe.** Two pages picked at random differ by ~87 of
-the 172 semantic bits — which is chance, since half of 172 is 86. Unrelated pages sit at a
-coin flip, exactly as they should. The 5th percentile of all pairs is 70 bits, so a cutoff
-of 72 means "closer than roughly 95% of random pairs." Above it you are ranking noise and
-calling the winner a recommendation.
+**`MAX_DISTANCE = 60` is not a vibe.** It's the 5th percentile of all pairwise distances
+from `stats` at the v2 re-mint: "closer than about 95% of pairs." The mean pair sits at 75
+bits rather than the 96 of pure chance because every page here is about AI, so the corpus
+is tighter than random text. Re-run `stats` after big content changes and keep the context's
+`related_max_distance` and `search.js`'s `MAX_DISTANCE` in step.
 
 ## Taxonomy: scalar `category`, not Hugo taxonomies
 
@@ -156,20 +148,23 @@ introducing a new category, add it to that partial.
   `static/js/search.js` - the client-side semantic search behind `/search/`
   (`content/search.md`, `layout = "search"`). `index.json` is the metadata-only index;
   `search.js` decodes the base64url IDs and does the XOR/popcount in the browser. **It
-  duplicates the bit constants from `scripts/semantic-ids.py` — keep them in sync.**
+  duplicates the v2 bit layout from the semantic-ids skill - keep them in sync.**
 - `themes/ee-ai/layouts/_default/_markup/render-link.html` - **link render hook** applied
   to all markdown content site-wide. Any link whose host ≠ the `baseURL` host gets
   `class="external-link"`, `target="_blank"`, `rel="noopener noreferrer"`, and an inline
   arrow-out SVG icon. Internal/relative links pass through untouched. CSS: `.external-icon`.
 - `themes/ee-ai/layouts/shortcodes/` - theme shortcodes. The markdown-wrapping ones
-  (`louuy-chat.html`, `claude-term.html`) re-render their `.Inner` via
+  (`llm-chat.html`, `claude-term.html`) re-render their `.Inner` via
   `RenderString (dict "display" "block")`, so the inner blockquotes/paragraphs/code/`---`
-  still parse. `louuy-chat` styles a run of `> prompt` + verbatim-response exchanges as a
+  still parse. `llm-chat` styles a run of `> prompt` + verbatim-response exchanges as a
   chat thread (`practice/louuy-dispatches`); `claude-term` renders an exchange as a faked
   Claude Code terminal window (`> line` = the user's ❯ prompt, paragraphs = the ⏺ reply;
   first used by `blog/my-claude-code-started-roasting-me`). Also: `bbros.html` (Beagle
-  Bros-style margin cards), `details.html`, and the interactive `pulse-playground.html` /
-  `seance-playground.html` widgets. See the css-tokens site-docs ref for the styling.
+  Bros-style margin cards), `details.html`, `diptych.html` (two images as one framed
+  before/after figure, shared crop ratio, stacks on phones; keep the call on ONE line, since
+  the markdown formatter turns a leading `>}}` into a blockquote and breaks the build), and
+  the interactive `pulse-playground.html` / `seance-playground.html` widgets. See the
+  css-tokens site-docs ref for the styling.
 
 ## The stylesheet is split into ordered parts, concatenated by Hugo
 
@@ -194,14 +189,14 @@ scroll treatments).
 
 **Per-page styling without a build step:** there's no per-page CSS file - page-specific
 styles live in the one global stylesheet under a scoping class that only appears on that
-page (`.louuy-chat`, `.series-1930-...`). Give it its own high-numbered part in
+page (`.llm-chat`, `.series-1930-...`). Give it its own high-numbered part in
 `assets/css/parts/` so it lands late in the cascade. Goldmark `unsafe = true`, but
 raw `<div>` in markdown won't re-parse inner markdown - use a shortcode (above) when you need
 markdown inside the wrapper.
 
 ## Writing conventions (blog / practice / deep-dives)
 
-These sections hold hand-written posts (NOT generated like the glossary). Conventions that
+These sections hold hand-written posts. Conventions that
 are deliberate - don't "normalize" them:
 
 - **Routing:** _practice_ = reusable tools/workflows; _deep-dives_ = mechanism-heavy
@@ -223,7 +218,8 @@ are deliberate - don't "normalize" them:
   forward publishing calendar, not backdated. Do not reset them to today. The full chronological
   master list lives in `meta/publish-schedule.md`, which is **generated** by
   `scripts/gen-publish-schedule.py` (reads each post's `date`/`draft`) - re-run it after adding
-  or re-dating posts; don't hand-edit it. Watch for date-anchored posts (ones that reference a
+  or re-dating posts; don't hand-edit it, except the `Lock` column (`X` = date must not move,
+  carried through verbatim on regeneration). Watch for date-anchored posts (ones that reference a
   real event or relative time like "this week"): pin those to absolute dates so re-dating the
   post doesn't break the narrative.
 - **Every published post ships share metadata.** Non-draft, non-future posts carry a

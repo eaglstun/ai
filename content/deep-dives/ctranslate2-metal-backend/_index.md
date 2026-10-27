@@ -7,7 +7,7 @@ summary = "A seven-part field report on adding an Apple-Silicon GPU backend to C
 description = "Seven parts on giving CTranslate2, a CUDA-only C++ engine, an Apple-Silicon Metal backend."
 images = ["/og/ctranslate2-metal-backend.png"]
 tags = ["apple-silicon", "cuda", "inference", "metal"]
-semantic_id = "l3N7GsguNfR2IaW7UtxyCBdk0RPbsAs3"
+semantic_id = "v2:nGknzCU9W7O3V7Tz0wAcQaSLzdOZbuYo"
 +++
 
 Most of the [Apple-Silicon ports I've written up](/deep-dives/porting-ml-to-apple-silicon/)

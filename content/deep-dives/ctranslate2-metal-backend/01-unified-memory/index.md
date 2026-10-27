@@ -8,7 +8,7 @@ description = "On Apple Silicon the CPU and GPU share one pool of RAM. That sing
 images = ["/og/ctranslate2-part-1.png"]
 summary = "The one fact about Apple Silicon that turns 'add a whole new GPU backend' from a research project into an afternoon: the CPU and GPU share the same RAM, so a GPU buffer is also a CPU pointer. CTranslate2's entire internal contract is built on pointers."
 tags = ["apple-silicon", "metal", "tensor"]
-semantic_id = "11N70iBulX70L6tMXl6yGgLllEO7sAs-"
+semantic_id = "v2:hOgrwC5xWZfXc1bT0yAMZLzDz9m7SrII"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/06-profile-dont-guess/", "/deep-dives/ctranslate2-metal-backend/07-not-a-pull-request/", "/blog/three-hours-and-150-dollars/", "/practice/talkie-on-apple-silicon/"]
 +++
 
@@ -42,6 +42,8 @@ part is a gift from the hardware.
 ## The allocator is the whole trick
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of a bespectacled clerk and a brass automaton reading the same open ledger from opposite sides of one table.](peek-shared-buffer.jpg)
+
 `MTLResourceStorageModeShared` is the whole spell. Allocate a buffer with it, PEEK the result with `[buffer contents]`, and you get an ordinary CPU pointer into the exact bytes the GPU reads. One allocation, two audiences, zero copies.
 {{< /bbros >}}
 

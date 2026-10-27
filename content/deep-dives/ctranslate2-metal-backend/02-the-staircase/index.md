@@ -2,14 +2,13 @@
 title = "Part 2 - The Staircase: Graduating Ops One at a Time"
 slug = "the-staircase"
 weight = 2
-draft = false
 date = 2026-07-07
 series = "ctranslate2-metal-backend"
 description = "Bind the GPU device to run CPU code, then graduate ops to real Metal kernels one at a time. Always one op from working."
 images = ["/og/ctranslate2-part-2.png"]
 summary = "How to turn 'make the whole engine fast' from a cliff into a staircase: bind the new Metal device to run the CPU code, get a correct engine for free, then move ops to real GPU kernels one at a time - each one a small diff against a green test suite. Plus the two tiny exceptions that hold the entire trick up."
 tags = ["cuda", "metal"]
-semantic_id = "W1WKxuoqkeJ1iWGXWngwDMZhmSuBkAu1"
+semantic_id = "v2:E2_m6Cwxf6DRd-Tj01EtNaTBlwm57PZt"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/03-msl-indignities/", "/glossary/ggml/", "/practice/talkie-on-apple-silicon/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/"]
 +++
 
@@ -44,6 +43,8 @@ immediately - every op, every layer, a whole transformer - with **zero** Metal k
 and zero of those fifty template instantiations demanded.
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of the Mechanical Turk chess automaton with its cabinet door open, revealing the clerk with an abacus hidden inside.](peek-mechanical-turk.jpg)
+
 `constexpr Device D = Device::CPU`, POKEd into the Metal arm of the dispatch switch, is the whole cheat. The engine still PEEKs its real device as `Device::METAL`, so every op that hasn't graduated yet quietly runs the CPU math on GPU-resident bytes. Fifty kernels of work, deferred with one line.
 {{< /bbros >}}
 

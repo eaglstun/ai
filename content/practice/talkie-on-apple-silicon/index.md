@@ -5,8 +5,8 @@ images = ["/og/talkie-on-apple-silicon.png"]
 description = "talkie is a 13B model trained only on pre-1931 text, and it ships expecting a 28 GB CUDA card. Here's how it runs on a Mac."
 summary = "talkie is a 13B 'vintage' model trained entirely on pre-1931 English. The official repo wants a 28 GB CUDA GPU. Here's the repeatable recipe for giving it an Apple Silicon backend and running it locally on a Mac instead, plus the one memory bug that doubles your RAM if you let it."
 tags = ["apple-silicon", "cuda", "local-inference", "metal", "mps"]
-semantic_id = "UWc41sN-tVhmoWN_2se0KtZGiNaxEAnV"
-related_by_meaning = ["/deep-dives/audiocraft-apple-silicon/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/"]
+semantic_id = "v2:F2mv5q15Qofw85zzZDAcbfzD1VOTZ-VI"
+related_by_meaning = ["/deep-dives/switched-off-bach/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/"]
 +++
 
 There is a language model called [talkie](https://github.com/talkie-lm/talkie) that was
@@ -41,6 +41,8 @@ electric bill.
 ## The wall
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of a broken dividing wall standing in one shared pool of water, a tap on either side drawing from it.](peek-vram.jpg)
+
 **VRAM** is the memory bolted onto a graphics card, kept walled off from the RAM your programs run in. "Needs 28 GB of VRAM" means 28 GB _on the card_, and a Mac has no such card to fill. Apple's whole trick is to abolish the distinction: one pool of memory, and the GPU just reaches into it like everybody else.
 {{< /bbros >}}
 
@@ -50,18 +52,25 @@ Here is what the stock install path asks of you, straight from the README:
 - roughly **26 to 50 GB of disk** per model,
 - and the unspoken fourth requirement, an NVIDIA card, which my Mac has approximately none of.
 
-A 13B model in bf16 is about 26 GB of weights. The problem was never the memory. The problem
-was that the code only knew how to talk to CUDA, and a Mac is not listening on that frequency.
+A 13B model in bf16 is about 26 GB of weights. The problem wasn't the memory. It was that the
+code only knew how to talk to CUDA, and a Mac is not listening on that frequency.
 
-## The move: give it an MLX backend
+## The move: borrow an MLX backend
 
 I don't write the inference code myself. I point Claude at the repo and tell it what I want,
 then I read what comes back and decide whether it's lying to me. What I wanted here was an
 [MLX](/glossary/mlx/) backend: Apple's array framework, the one that actually knows the Mac's
-GPU and unified memory. So that's what got built, a path through the model that mirrors the
-PyTorch reference op for op but runs on [metal](/glossary/metal/) a Mac actually has.
+GPU and unified memory.
 
-The result is two new surfaces in the repo:
+Somebody had already built it. When I had Claude survey talkie's open pull requests, sitting
+at #2 was [Zimeng Xiong's MLX backend](https://github.com/talkie-lm/talkie/pull/2): a path
+through the model that mirrors the PyTorch reference op for op but runs on the
+[metal](/glossary/metal/) a Mac actually has, already tested on the full 13B. Open since April,
+not yet merged. The best code is the code someone else already wrote and tested, so the job
+changed from "build a backend" to "pull this one in, get it running here, and check that it
+isn't lying to me either."
+
+The PR adds two surfaces to the repo:
 
 1. a converter, `scripts/convert_to_mlx.py`, that turns the original PyTorch checkpoint into
    MLX-loadable safetensors and writes out an `mlx-lm`-compatible config, and
@@ -69,10 +78,20 @@ The result is two new surfaces in the repo:
 
 ## The recipe
 
-This is the part you came for. With the MLX backend in place, getting from "a checkpoint on
-HuggingFace" to "1930 is talking to me" is two commands.
+This is the part you came for. The MLX backend isn't in a talkie release yet, so start from
+the pull request:
 
-**Convert the checkpoint to MLX:**
+```bash
+git clone https://github.com/talkie-lm/talkie && cd talkie
+git fetch origin pull/2/head:mlx-backend && git checkout mlx-backend
+uv sync --extra mlx
+```
+
+From there, getting from "a checkpoint on HuggingFace" to "1930 is talking to me" is two
+commands.
+
+**Convert the checkpoint to MLX** (or skip this step: Zimeng also published the converted
+weights as [zimengxiong/talkie-1930-13b-it-mlx](https://huggingface.co/zimengxiong/talkie-1930-13b-it-mlx)):
 
 ```bash
 uv run python scripts/convert_to_mlx.py \
@@ -82,7 +101,7 @@ uv run python scripts/convert_to_mlx.py \
   --source-repo talkie-lm/talkie-1930-13b-it
 ```
 
-That reads the `.pt` with `mmap=True` so you're not fitting the whole thing in memory twice
+Zimeng's converter reads the `.pt` with `mmap=True` so you're not fitting the whole thing in memory twice
 just to repackage it, strips the `torch.compile` key prefixes that sneak into checkpoints, and
 shards the safetensors at 4 GB apiece. Out comes a directory MLX will load.
 
@@ -106,8 +125,10 @@ same heavy model, finally pointed at silicon that exists in the building.
 **Peak memory** is the worst single instant, not the resting weight. A model can settle at a tidy 26 GB and still spike to 52 for one breath while two copies of it briefly overlap. The machine has to size itself for the spike, never the average. One bad moment writes the whole bill.
 {{< /bbros >}}
 
-Take one practical thing from this, take this one: it bit before the MLX work even started,
-and it's the kind of bug that wastes an afternoon.
+Take one practical thing from this, take this one, even though you won't hit it in talkie
+anymore. The talkie authors hit it themselves and fixed it the week they shipped. It's here
+because the same trap lives in nearly every CUDA-first loader, and it's the kind of bug that
+wastes an afternoon.
 
 Loading the model the obvious way doubled the memory it needed. You'd build it on the GPU,
 _then_ cast to bf16, and for one ugly moment both the float32 and the bf16 copies existed at
@@ -115,10 +136,11 @@ once. A 13B model briefly wanted 52 GB instead of 26, and on a machine where mem
 with everything, that spike is the difference between "loads" and "your laptop fans spin up and
 the whole thing falls over."
 
-The fix is just an ordering trick: build the model on the CPU, load the weights, cast to
-bf16, and _only then_ move it to the device, deleting the original checkpoint dict on the way
-out so it isn't loitering. Same destination, half the peak: a footnote that's the whole
-ballgame on a memory-shared machine.
+The fix, [Nick Levine's](https://github.com/talkie-lm/talkie/commit/ab5e8b7f4df39a4f85c31e60680601375d11a436),
+is just an ordering trick: build the model on the CPU, load the weights, cast to bf16, and
+_only then_ move it to the device, deleting the original checkpoint dict on the way out so it
+isn't loitering. Same destination, half the peak: a footnote that's the whole ballgame on a
+memory-shared machine.
 
 ## The voice is the entire point
 
@@ -171,38 +193,53 @@ feeling.
 A **chat template** is the form letter that wraps your words before the model ever reads them: here goes the user, here is where the reply begins. `{{ .Prompt }}` is just a blank waiting to be filled. Give the form no line for _system_ and anything you write there has nowhere to sit, so it goes quietly in the bin.
 {{< /bbros >}}
 
-If you'd rather skip the MLX conversion, there's a [GGUF](/glossary/gguf/) of talkie that runs
-in [ollama](/glossary/llamacpp-vs-ollama/): `ollama run talkie-1930` and you're talking to 1930. Easier button, and where I learned something I didn't expect about steering this thing.
-
-Reach for the obvious lever and try to give it a personality:
+If you'd rather skip the MLX conversion, there's an easier button. I packaged talkie as a
+[GGUF](/glossary/gguf/) that runs in plain, stock [ollama](/glossary/llamacpp-vs-ollama/):
 
 ```bash
-ollama run talkie-1930 --system "You are a blunt Silicon Valley engineer. Be terse and technical."
+ollama run postpostmodern/talkie-1930
 ```
 
-It will completely ignore you. Not "push back," not "drift," _ignore_, as if you'd said
-nothing. Two things are happening, and only one of them is the model's fault.
+That took more than a convert-and-upload. Every quantized talkie I tried on a Mac answered the
+telephone question with a single control character, repeated forever. The agent traced it to
+one number: in layer 14, one channel swells past 145,000 on the very first word, and the Mac's
+GPU does that math in a format that tops out at 65,504. The fix is bookkeeping. Shrink that
+layer's input by 16, grow its output by 16, get the same answer with nothing overflowing. The
+[model page](https://ollama.com/postpostmodern/talkie-1930) has the details.
 
-The first is mine, or rather ollama's. Look at the stock model template:
+It's also where I learned something I didn't expect about steering this thing. Reach for the
+obvious lever and try to give it a personality:
 
+```text
+ollama run postpostmodern/talkie-1930
+>>> /set system You are a blunt Silicon Valley engineer. Be terse and technical.
 ```
+
+On my first import, it ignored me completely. Not "push back," not "drift," _ignore_, as if
+I'd said nothing. Two things were happening, and only one of them was the model's fault.
+
+The first was mine, or rather ollama's. Look at the template that first import came with:
+
+```text
 TEMPLATE <|user|>{{ .Prompt }}<|end|><|assistant|>
 ```
 
-There's no `<|system|>` slot in it at all. Your system prompt isn't being _resisted_, it's
-being _discarded_ before it reaches the model, dropped by a template with nowhere to put it.
-talkie's actual chat format has a system role; the template just never wired it up. Patch it
-back in and rebuild:
+There's no `<|system|>` slot in it at all. The system prompt wasn't being _resisted_, it was
+being _discarded_ before it reached the model, dropped by a template with nowhere to put it.
+talkie's actual chat format has a system role; the template just never wired it up. The build
+above has the slot wired back in, so you can skip this part. If you're rolling your own, the
+patch looks like this:
 
-```
-FROM talkie-1930
+```text
+FROM your-talkie
 TEMPLATE """{{ if .System }}<|system|>{{ .System }}<|end|>{{ end }}<|user|>{{ .Prompt }}<|end|><|assistant|>"""
 PARAMETER stop <|end|>
 PARAMETER stop <|system|>
 ```
 
 Now the system prompt actually lands, and here's the second, more interesting thing. Same
-telephone-and-courtship question, same seed, only the system prompt changing. Tell it it's a
+telephone-and-courtship question, same seed, only the system prompt changing. (These came from
+my full-precision run; the 4-bit build on ollama phrases things its own way.) Tell it it's a
 sentimental poet:
 
 > ...lovers, seated apart, the one in London and the other in Paris, may carry on a sustained

@@ -6,11 +6,21 @@ summary = "Every page here carries 172 bits that are the meaning of the page, an
 images = ["/og/172-witnesses.png"]
 tags = ["search", "embeddings", "latent-space"]
 thumbnail = "concepts/172-witnesses/b-replicate-continuous-line.jpg"
-semantic_id = "SYSBQbHDrznbRYirwbi5wA5Pial84AwV"
-related_by_meaning = ["/search/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/blog/i-got-substituted-on-purpose/", "/blog/the-bit-doesnt-drop-on-its-own/"]
+semantic_id = "v2:9Ggufa1xe4egTxyu4BGPJLTGy_4YaGP9"
+related_by_meaning = ["/search/", "/blog/i-got-substituted-on-purpose/", "/blog/the-bit-doesnt-drop-on-its-own/", "/blog/nobodys-hands-are-big-enough/"]
 +++
 
 {{< nyer-panel src="the-witness-stand.jpg" caption="The star witness, under oath, pointing straight at something he cannot see." alt="A hatched courtroom illustration on cream paper: a witness in a suit stands at the podium wearing a blindfold, one arm raised, pointing confidently across the room, while rows of jurors and spectators look on from the box beside him." >}}
+
+_Editor's note, added 2026-10-02: this post describes the first version of these IDs. The
+site has since moved to a second one. All 192 bits now carry meaning (no date stamp, no
+tiebreaker), each bit is a yes-or-no on a direction picked by a fixed random seed rather
+than on one of the model's own dimensions, and the zero point comes from 65 fixed
+calibration sentences instead of a frozen average of this site's pages. The new IDs start
+with `v2:`, so this page's own ID no longer matches the walkthrough below. The argument
+survives the upgrade, though, and gets stronger: if no single dimension meant anything,
+a bit that blends all 768 of them at random means even less on its own. The meaning still
+lives in the pattern, and the search is still just counting._
 
 There is no marketing version of the search box on this site. The plain description is
 already the strange one.
@@ -40,6 +50,8 @@ stamp and a tiebreaker. The first 172 are the answers:
 ```
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of a small abacus with few beads beside a large abacus packed with many beads on every rod.](peek-base64.jpg)
+
 You count in base 10: ten symbols, and when you run out of them you add a column. **Base64** gets 64 symbols before it runs out, so every character says more. The 32 characters here hold 192 bits, a number that takes 58 characters to write out in the way you learned to count.
 {{< /bbros >}}
 Two pages about the same thing come out
@@ -165,6 +177,8 @@ a description.
 ## Why the search finds pages that never say the word
 
 {{< bbros title="Peek & Poke" n="3" float="right" >}}
+![A Victorian engraving of a perforated brass plate with light shining through its holes and a finger pointing at the bright spot.](peek-xor.jpg)
+
 The entire distance function: XOR the two IDs together, then count the 1s left over. That's it. Your browser does it for every page on the site before your finger leaves the key, which is why there is no vector database here and nothing to pay for monthly.
 {{< /bbros >}}
 

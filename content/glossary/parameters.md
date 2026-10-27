@@ -4,8 +4,10 @@ summary = "Learned weights; the count is model size & memory cost."
 category = "Core concepts"
 related = ["tensor", "transformer", "gguf", "lora", "val-loss", "gradient-descent", "rss-sampler", "precision", "quantization", "model-welfare", "mixture-of-experts", "open-weights", "checkpoint"]
 plain = "The knobs and dials. Picture a mixing board with billions of tiny dials; training is the computer nudging each one a hair every time it's right or wrong. More dials means more room for fine detail - and a bigger, heavier model."
+image = "/glossary-img/parameters.webp"
+image_alt = "A 70s sci-fi paperback painting: a lone astronaut on a red desert planet facing a mixing console of countless knobs and lit buttons that runs to the horizon."
 tags = ["parameters", "precision", "quantization", "lora", "training", "tensor"]
-semantic_id = "ukoMQKqUzzjHkm3fLuEMN2HSawrroAAE"
+semantic_id = "v2:k2085KRX3A608g-lFhQ9M5TCR9oxSOUL"
 +++
 **Parameters** are the learned numbers inside a model: the weights (and biases) that training
 adjusts, and that together store everything the model "knows." A label like **7B** means

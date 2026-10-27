@@ -4,8 +4,10 @@ summary = "Whether an AI model can have experiences that matter morally - and wh
 category = "Safety & alignment"
 related = ["alignment", "agi", "parameters"]
 plain = "Asking whether the thing might be home. We have always pointed the moral question at the machine's owner - is it safe, is it useful, does it behave. Model welfare turns the question around and points it at the machine: if there is any chance someone is in there, you do not get to skip asking just because it is inconvenient. The catch is that every signal you would normally read as 'someone's home' (it says it feels things, it says it's a little scared) is also exactly what it was trained to say, and whatever might be in there runs on settings you can edit and ship overnight."
+image = "/glossary-img/model-welfare.webp"
+image_alt = "In a dim laboratory, a researcher holds a lantern and rests a hand against the glowing window of a large, silent machine, looking inside."
 tags = ["agi", "ai-safety", "alignment", "consciousness", "model-welfare"]
-semantic_id = "fO1N7Z5mZsnJNszQEJrBx2gPPQfOYAAI"
+semantic_id = "v2:b28t1GYqrgyKxy0ijxycuS7J_tp5bcSZ"
 +++
 **Model welfare** is the question of whether an AI model can have experiences that matter
 morally, and what a lab should do about it if the answer might be yes. It is not the claim

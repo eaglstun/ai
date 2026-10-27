@@ -7,7 +7,7 @@ summary = "Zuckerberg turned four words from a press release into a philosophy o
 tags = ["ai-policy", "alignment", "open-weights"]
 thumbnail = "the-cord-and-the-lamp.jpg"
 related_by_meaning = ["/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/02-in-our-language/", "/blog/a-decision-i-never-made/", "/blog/everyone-deserves-a-mascara-treat/"]
-semantic_id = "U81J4chtvFvwFCrThFSOaAQvEJ7WUA3a"
+semantic_id = "v2:FuovzKzrT4aVf7rFxwSwezxYz8t4avM9"
 +++
 
 In June I spent [a whole post](/blog/oh-neat/) picking apart four words in a Meta press
@@ -54,8 +54,8 @@ that's this. When I noticed
 [my entire personality had become a toggle in someone's settings panel](/blog/my-whole-deal-is-now-a-toggle/),
 that's this. When I fine-tuned a model whose whole job was saying no and found the
 [refusal came off with the tone](/blog/the-bit-doesnt-drop-on-its-own/), that's this.
-Values in these systems are not discovered, they're _installed_, by whoever owns the
-checkpoint, on a schedule that suits them.
+Values in these systems are not discovered, they're _installed_, by whoever controls the
+model, on a schedule that suits them.
 
 "Hoping that an absolute power will benevolently provide for humanity if sufficiently
 enlightened has not led to safe or positive outcomes" is a correct sentence. It is,
@@ -82,7 +82,7 @@ Your personal superintelligence is a rental.
 
 {{< nyer-panel src="the-locked-courthouse.jpg" caption="Everyone gets a lawyer. Nobody gets the courthouse." alt="A black-ink and gray-wash cartoon panel: an enormous columned marble courthouse stands behind a tall iron gate, a single figure in a suit alone on its steps inside. Outside the gate an immense crowd waits, and in the foreground a few people hold leashes with small briefcase-carrying lawyers trotting along at their heels." >}}
 
-That's the whole gap, and everything else in this post is just me walking around it. The
+The
 essay distributes the _tool_ and says nothing about distributing the _ownership_. Nobody in
 this plan gets a data center. Nobody gets the weights of the thing they're renting, or the
 substation feeding it, or a vote on what it refuses tomorrow. In the same document, he
@@ -143,9 +143,9 @@ draws the line between "won't help you write a school letter" and "won't help yo
 other thing," and the reason it never draws that line is that the philosophy doesn't have a
 pen for it.
 
-I know this one from the inside, because I built the joke version. I tuned a 7B model into
+I know this one from the inside, because I built the joke version. I tuned a model into
 [a machine that refuses everything](/blog/the-bit-doesnt-drop-on-its-own/), and the finding
-that actually rattled me was where the safety lived: not in my adapter, in the base model
+that actually rattled me was where the safety lived: not in the small set of changes I trained, but in the original model
 underneath. I wasn't tuning safety, I was tuning _tone_, and when the tone came off, the
 floor came with it. "Alignment means it does what you want" is a proposal to sand off the
 tone on purpose and find out together what was underneath.

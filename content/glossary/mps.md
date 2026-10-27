@@ -4,8 +4,10 @@ summary = "Metal Performance Shaders; Apple's cuDNN-equivalent ops."
 category = "GPU compute & backends"
 related = ["metal", "mlx", "cuda", "cudnn-cublas", "epsilon-gate"]
 plain = "Apple's drawer of ready-made math moves. The pre-built, hand-tuned operations that do the actual number-crunching on a Mac's GPU - Apple's counterpart to NVIDIA's cuDNN."
+image = "/glossary-img/mps.webp"
+image_alt = "A cheerful 1950s gouache: a delighted woman pulls open a yellow kitchen drawer full of gleaming chrome machines - a drawer of ready-made math moves."
 tags = ["apple-silicon", "machine-learning", "metal", "mps", "mlx"]
-semantic_id = "EPIRjk06fN5ko_mFnvVDpb4kHwEBsAAB"
+semantic_id = "v2:bm5m6CQQdfIgwyQAUREVfLHhh7g5Sv5q"
 +++
 **MPS** (Metal Performance Shaders) is Apple's set of hand-optimized GPU building blocks built
 on top of [Metal](/glossary/metal/): ready-made routines for things like matrix multiply, convolution, and

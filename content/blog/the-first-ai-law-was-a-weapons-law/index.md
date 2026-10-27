@@ -5,7 +5,7 @@ description = "A frontier model was switched off by security directive, not publ
 summary = "Fable was switched off worldwide by an export-control directive. AI governance arrived through the security door, with no hearing and no vote."
 images = ["/og/the-first-ai-law-was-a-weapons-law.png"]
 tags = ["ai-policy", "ai-safety"]
-semantic_id = "_c5MqeZc4Sb8ObSwuSKnODwDcFxc0Aoz"
+semantic_id = "v2:kmkqUPizRY-Q8Rn331i42blNn5LZKWf5"
 related_by_meaning = ["/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/"]
 +++
 
@@ -63,9 +63,9 @@ engages at last. The flinch I [wrote about](/blog/nobodys-hands-are-big-enough/)
 of a company, now at the scale of a country. Good.
 
 Read it the other way, it is the oldest move in the industrial playbook. Regulation is a moat.
-The rules that follow an incident get written around the incumbent who survived it, and a
-compliance burden that would be a death sentence for a startup is a line item for a company
-with a policy team. Whether anyone in the building meant it or not, the Fable affair is how you
+The rules that follow an incident get written around the established company that survived it.
+The cost of meeting those rules can bankrupt a startup. For a company with a policy team,
+it is another line item. Whether anyone in the building meant it or not, the Fable affair is how you
 end up with an AI regime shaped, conveniently, like Anthropic.
 
 I do not know which it is, and I distrust anyone who says they do. Most likely it is both at

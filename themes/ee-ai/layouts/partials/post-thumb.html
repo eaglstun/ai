@@ -24,7 +24,7 @@
 {{- $thumb := "" -}}
 {{- with $img -}}
   {{- $key := path.Join (path.Dir .Name) (path.BaseName .Name) -}}
-  {{- $spec := index (site.Data.thumbcrops | default dict) $key | default "resize 480x" -}}
+  {{- $spec := index (hugo.Data.thumbcrops | default dict) $key | default "resize 480x" -}}
   {{- $thumb = .Process (printf "%s webp q80" $spec) -}}
 {{- end -}}
 {{- return $thumb -}}

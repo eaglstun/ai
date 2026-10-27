@@ -8,7 +8,7 @@ summary = "Once you're graduating ops you're writing kernels in Metal's own C++-
 description = "MSL's personality: a free gift from MPS, a math function that exists in no version, and lazy compilation."
 images = ["/og/ctranslate2-part-3.png"]
 tags = ["metal", "mps", "apple-silicon"]
-semantic_id = "NP3Qzkg6OKxko0KE3_QjLI5lGDm4MAvk"
+semantic_id = "v2:FGhiTKwdX_-Rc0zz20IcbaHBz9I7avRo"
 related_by_meaning = ["/glossary/mps/", "/glossary/metal/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/deep-dives/looking-for-metal-found-a-broken-lion/"]
 +++
 

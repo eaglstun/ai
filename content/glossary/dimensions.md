@@ -4,8 +4,10 @@ summary = "Independent axes of variation; ML vectors live in hundreds or thousan
 category = "Core concepts"
 related = ["tensor", "latent-space", "embeddings"]
 plain = "The number of separate sliders it takes to describe something. 'Tall/short' is one slider; add 'old/young' and 'loud/quiet' and you're at three. AI describes a word or image with hundreds or thousands of these sliders at once."
+image = "/glossary-img/dimensions.webp"
+image_alt = "A pink and teal risograph: a lone figure adjusts one slider on a mixing desk that runs to the horizon - thousands of sliders, each describing one thing."
 tags = ["dimensions", "embeddings", "latent-space", "tensor"]
-semantic_id = "9CkW67cUfjmC_26-7fBItglwqRJ6IAAJ"
+semantic_id = "v2:ZdgFR25Zuq-wQiHtTmQGr60n29i5aCqO"
 +++
 **Dimensions** are independent axes of variation, each one a separate thing you can change
 without affecting the others. A dimension doesn't have to be spatial, or even start out as a

@@ -8,8 +8,8 @@ summary = "Whisper on the Metal backend died on a twelve-minute audio file - kil
 description = "Whisper died at the 155-second mark with a flat heap. Not a leak: an Objective-C convention nobody thinks about."
 images = ["/og/ctranslate2-part-5.png"]
 tags = ["speech-to-text", "metal", "inference"]
-semantic_id = "iVSZ_kohFSJPFMGFWZ8oKIYPUMkUMAxs"
-related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/practice/thirty-comments-nobody-was-meant-to-read/", "/deep-dives/teaching-a-coder-model-to-sin/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/"]
+semantic_id = "v2:NOgnxCU3Rp-wV-z3w1BdPbTJzzM5bpJp"
+related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/02-the-staircase/", "/deep-dives/teaching-a-coder-model-to-sin/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/", "/deep-dives/ctranslate2-metal-backend/03-msl-indignities/"]
 +++
 
 The transformer work in Parts 1-4 is well covered by tests. But Whisper - OpenAI's

@@ -29,7 +29,7 @@
 {{- if $isDefault }}
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Eric Eaglstun · AI - plain-language AI, weird analogies included.">
+<meta property="og:image:alt" content="Eric Eaglstun · On AI - plain-language AI, weird analogies included.">
 {{- end }}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ $ogImage }}">
@@ -39,9 +39,9 @@
 <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
 {{- end }}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Atkinson+Hyperlegible+Mono:wght@400..500&display=swap" rel="stylesheet">
+{{- /* Self-hosted fonts; the @font-face rules live in css/parts/00-tokens.css. */ -}}
+<link rel="preload" href="{{ "fonts/newsreader.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/atkinson-hyperlegible-mono.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 {{- /* One stylesheet, kept in readable pieces: assets/css/parts/*.css are
        concatenated in filename order into a single /css/style.css. No build
        step, no extra requests - the numeric prefixes are the cascade order. */ -}}

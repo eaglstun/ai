@@ -2,9 +2,10 @@
 title = "I'm Putting the Beagle Bros in Two AI Marketplaces"
 date = 2026-09-14
 description = "One portable skill, two marketplace wrappers, and an Apple II lesson about making software feel generous."
+images = ["/og/beagle-bros-two-marketplaces.png"]
 summary = "I turned the generous, funny spirit of the Beagle Bros into one portable agent skill, then wrapped the same files for the Claude and Codex marketplaces. The manifests are different. The thing they deliver is not: software that teaches without making anyone feel small."
 tags = ["prompt-engineering", "tooling"]
-semantic_id = "IY8zHf3eq4uj1cIBNyZUqBhfFfc-0BFS"
+semantic_id = "v2:1usH2KooTpeU6VjbS1ALNLuCy8qYaVH9"
 related_by_meaning = ["/practice/five-agents-one-marble/", "/blog/everyone-deserves-a-mascara-treat/", "/blog/my-whole-deal-is-now-a-toggle/", "/practice/four-painters-one-brief/"]
 +++
 
@@ -139,15 +140,29 @@ moment when it should stay on the pegboard.
 
 The package is MIT-licensed and unofficial. It is inspired by the historical Beagle Bros
 software house, not affiliated with it, endorsed by it, or pretending to resurrect the company.
-The Claude submission passed review on September 14, the same day this post went up. There is
-still no install command. Approved plugins get pinned to a commit in a public catalog that the
-documentation says syncs nightly. That catalog listed 2,291 plugins on August 9, lists 2,282 now,
-and was last touched on August 24.
+_Updated October 23 with where the Claude listing actually went._
 
-A front door that opens onto a hallway nobody has walked in six weeks is still doing something. It
-is just not doing distribution. It is telling approved authors that they are approved, which is a
-feeling rather than a shelf. The Codex wrapper can point at a catalog I host myself. Same skill,
-same files, two different answers to who has to say yes.
+The Codex half is done. I host that catalog myself, so the only person who had to say yes was me:
+
+```sh
+codex plugin marketplace add eaglstun/codex-plugins --ref main
+codex plugin add beaglebros@eaglstun
+```
+
+The Claude half is a better story. On September 14, the same day this post went up, the
+submission form said "Passed review." I took that to mean the package was on its way to the
+public community catalog, so I kept checking that catalog. It never showed up there, because it
+was never going there. On September 25 the old form was retired and submissions moved to a new
+directory with its own portal. Mine had already moved over, quietly, like a cat that changes
+houses without telling either family.
+
+"Passed review" turned out to mean it had cleared the first gate. The automated security scan
+passed on September 23, and now it is waiting for a human reviewer. The only note it got was that
+it had no icon. Fair. It now wears the top-hatted beagle from the Peek & Poke card, which is the
+most Beagle Bros ending available: the paperwork was fine, the paperwork was in a different
+building, and the fix was a hat.
+
+Same skill, same files, two different answers to who has to say yes.
 
 The code is the least interesting part: Markdown, a pair of small
 manifests, and enough structure for two different agents to find the same set of ideas.

@@ -4,8 +4,11 @@ summary = "NVIDIA's CUDA math & deep-learning libraries."
 category = "GPU compute & backends"
 related = ["cuda", "mps", "tensor"]
 plain = "NVIDIA's box of pre-tuned math shortcuts. The heavy number-crunching inside AI runs on these ready-made, hand-optimized routines, so nobody has to reinvent the fast way to multiply giant grids of numbers."
+image = "/glossary-img/cudnn-cublas.webp"
+image_alt = "A cheerful 1950s gouache: a grinning mechanic in overalls opens a red toolbox crammed with ready-made wrenches - the fast tools already built so nobody reinvents them."
 tags = ["cuda", "cudnn-cublas", "tooling"]
-semantic_id = "4jhS1smM2Z_vwM6S2_Tza7V1uIFD0AAH"
+mentions = ["cuDNN", "cuBLAS"]
+semantic_id = "v2:V-tm5qBwWfsk0waBRwAYSLmJ29Kb7P8u"
 +++
 **cuBLAS** and **cuDNN** are NVIDIA's optimized math libraries that sit on top of [CUDA](/glossary/cuda/) and
 do the heavy lifting most ML frameworks depend on. **cuBLAS** is NVIDIA's GPU version of BLAS

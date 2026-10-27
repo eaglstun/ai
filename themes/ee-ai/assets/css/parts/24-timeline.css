@@ -1,0 +1,83 @@
+/* ---------- /timeline - every post, newest first ---------- */
+.timeline-count {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 2rem 0 0;
+}
+.timeline-year {
+  margin-top: 2.2rem;
+}
+.timeline-year-label {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.timeline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 0 1rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.timeline-body {
+  min-width: 0;
+}
+.timeline-link {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.timeline-link:hover {
+  color: var(--accent-ink);
+}
+/* the "Series - N parts" / "Part of <hub>" context line under a title */
+.timeline-kind {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.timeline-section {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.1rem 0.45rem;
+  white-space: nowrap;
+}
+/* Narrow: the date and the section badge share one line above the title, so the
+   title keeps the full measure instead of wrapping inside a 3-column grid. */
+@media (max-width: 560px) {
+  .timeline-item {
+    grid-template-columns: auto 1fr;
+    gap: 0.1rem 0.7rem;
+  }
+  .timeline-body {
+    grid-column: 1 / -1;
+  }
+  .timeline-section {
+    justify-self: start;
+  }
+}

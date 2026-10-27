@@ -8,7 +8,7 @@ summary = "Where the Metal backend actually gets fast, where it doesn't, and thr
 description = "Where the Metal backend gets fast, where it doesn't, and three times my intuition was measurably wrong."
 images = ["/og/ctranslate2-part-6.png"]
 tags = ["metal", "inference", "apple-silicon"]
-semantic_id = "3lK4Rlg_GnfyDfN5XE4QSEfeEI-ZsAzL"
+semantic_id = "v2:tOovwa19W4SwQ9bqwlAcBaRL35s5bvIp"
 related_by_meaning = ["/deep-dives/ctranslate2-metal-backend/01-unified-memory/", "/deep-dives/1930-on-the-machine-we-switched-off/03-turn-the-knob-yourself/", "/deep-dives/ctranslate2-metal-backend/04-the-nan-hunt/", "/deep-dives/ctranslate2-metal-backend/02-the-staircase/"]
 +++
 
@@ -42,6 +42,8 @@ is 3.7× faster and it's a stable, repeatable result. The math hardware is genui
 just have to give it enough to chew.
 
 {{< bbros title="Peek & Poke" n="1" float="right" >}}
+![A Victorian engraving of six pocket stopwatches in a row on a velvet cloth, with a seventh set apart below them.](peek-median-watches.jpg)
+
 Timing GPU work means timing the _wait_, not the call. Commit the command buffer, block until it reports back, and only then stop the clock, or you are measuring how fast your CPU can ask a question. Then throw out the first run, which paid for warm-up, and take the median of the rest rather than the average.
 {{< /bbros >}}
 

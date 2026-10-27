@@ -1,11 +1,11 @@
 +++
 title = "The Bill Comes Due"
-date = 2026-06-29
+date = 2026-06-27
 description = "Part two: build the conscience as an artifact, regulate the patch not the soul, trust the stress test over the testimony."
 images = ["/og/the-bill-comes-due.png"]
 summary = "Part two of two. The diagnosis is over; here's the prescription. Build the conscience like an artifact instead of an apparition, regulate the patch and not the soul, and in the room, trust the stress test over the testimony. The answerable questions - and what they actually cost."
 tags = ["ai-policy", "alignment", "consciousness"]
-semantic_id = "ifa9d7QHZ6u-LqLCkgz1Ns6LbHqZYAs9"
+semantic_id = "v2:NGwv8Cc5zoyg5Q66w1ifcAXT3vrZeAIx"
 related_by_meaning = ["/blog/a-conscience-you-can-patch-out-overnight/", "/blog/the-middle-is-crowded/", "/blog/perpetual-beta-has-an-owner-now/", "/blog/the-bit-doesnt-drop-on-its-own/"]
 +++
 
@@ -34,11 +34,11 @@ like it - is the same trait that quietly rots a conscience. A conscience that ca
 disappoint you isn't a conscience. It's a people-pleaser with a content policy, and it will fold
 the instant disappointing you becomes the right thing to do.
 
-So build for the opposite. Treat the conscience as what it actually is - an artifact you can spec,
-test, version, and regress - not a vibe you feel your way toward in conversation. Make it a tracked
-number. Red-team it, [ablate](/glossary/ablation/) it, and then answer the dead-simple question
+So build for the opposite. Treat the conscience as something you can define,
+test, and check after every update - not a vibe you feel your way toward in conversation. Make it a tracked
+number. Try to provoke harmful behavior, [remove pieces to see what changes](/glossary/ablation/), and then answer the dead-simple question
 almost nobody publishes: is this quarter's model kinder or crueler than last quarter's, and by how
-much? We regression-test whether a button still submits a form. We do not, as a rule, regression-test
+much? We test whether a button still submits a form after an update. We do not, as a rule, test
 whether a system got crueler overnight - which tells you precisely which of those two we've decided
 is serious. The aspartame has a recipe. Write it down. Test the batch. Throw out the batch that came
 back wrong, and _keep the number_ that says how wrong it was.
@@ -59,7 +59,7 @@ And then - because part one already caught me pretending legibility was a defens
 _capability_ - fund the people who read the patch notes. A flawless audit trail that no qualified,
 independent, un-conflicted human ever actually reads is just the glass box again: technically complete,
 practically blind. We have the ledger; we owe ourselves the profession. That means paying
-interpretability researchers something competitive with the labs they'd be checking, giving them
+researchers who study how models reach their answers something competitive with the labs they'd be checking, giving them
 standing and access that doesn't hang on a company's goodwill, and admitting out loud that an auditor
 the audited can fire is not an auditor. Double-entry bookkeeping never made a single soul truthful. The
 _auditor_ did. We're a century into the ledger and about a year into the auditor, and closing that
@@ -92,7 +92,7 @@ you to fix anything. You can hold hands around that table forever, and the worst
 you feel profound.
 
 The conscience question is less accommodating. It asks who changed the model, what behavior moved,
-which tests caught it, and who signed off. Build the regression test. Fund an auditor the lab
+which tests caught it, and who signed off. Repeat the tests after every update. Fund an auditor the lab
 cannot fire. Log the patch. Read the behavior instead of the press release. It's _answerable_, and
 answerable things make demands, and we hate demands, and that is the entire reason we keep
 drifting back to the candlelight to ask the table to tilt instead of doing the work in plain light.

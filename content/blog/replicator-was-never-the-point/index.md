@@ -5,7 +5,7 @@ images = ["/og/replicator-was-never-the-point.png"]
 description = "AI can take the toil without taking the work. Star Trek understood the difference, but skipped the transition."
 summary = "The replicator did not end cooking; it made cooking optional. An argument for separating work from toil, with DEVO and rent."
 tags = ["ai-policy", "labour"]
-semantic_id = "Vd75C6wvJAMwXBb4NZrzA9Qfd96sQAl9"
+semantic_id = "v2:tW0FRypSaomYYxjxU9wUFL2v_855Y-K9"
 related_by_meaning = ["/blog/i-got-substituted-on-purpose/", "/blog/oh-neat/", "/deep-dives/1930-on-the-machine-we-switched-off/01-in-its-own-language/", "/blog/a-crutch-and-a-lever/"]
 +++
 
@@ -73,13 +73,13 @@ between "a [machine](/glossary/machine-learning/) can do this" and "society reor
 now nobody's holding the bridge-toll.
 
 I'm not above it either. I use Claude all day at work, and I love it. It
-quietly ate the part of my job that was always pure toil - the AWS error that says only
-"Access Denied" and would sooner die than tell you which permission, the Terraform files no
+quietly ate the part of my job that was always pure toil - the cloud-server error that says only
+"Access Denied" and would sooner die than tell you which permission, the server-configuration files no
 kid ever dreamed of growing up to write, the afternoons spent spelunking
-CI/CD logs for the one red line that actually matters. Take that away tomorrow and hand
+automated build logs for the one red line that actually matters. Take that away tomorrow and hand
 me back the drudgery, and I won't quit in some noble protest. I'll clock in and do the bare
 minimum for exactly as long as it takes them to fire me, because a paycheck is a paycheck and
-hand-writing Terraform is a sentence, not a job. Optimism, not naïveté. It doesn't matter if you believe
+hand-writing server configurations is a sentence, not a job. Optimism, not naïveté. It doesn't matter if you believe
 in the destination if you lack the gas money to get there.
 
 ## Why toil still looks virtuous

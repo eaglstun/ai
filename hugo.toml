@@ -1,6 +1,6 @@
 baseURL = 'https://ai.ericeaglstun.com/'
 locale = 'en-us'
-title = 'Eric Eaglstun · AI'
+title = 'Eric Eaglstun · On AI'
 theme = 'ee-ai'
 
 # One feed only: the home feed (/index.xml), which aggregates blog + deep-dives +
@@ -80,3 +80,18 @@ theme = 'ee-ai'
 [services]
   [services.rss]
     limit = 20
+
+# Related content, used only as the last fallback tier of a glossary term's
+# "Where it comes up" list (glossary/single.html). Matches on the hand-curated
+# `tags` frontmatter; works without taxonomies. includeNewer because terms and
+# posts aren't dated against each other in any meaningful way.
+[related]
+  includeNewer = true
+  threshold = 0
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+    # Ignore tags carried by more than 10% of pages ("tooling", "transformer"):
+    # they match everything, so they rank noise.
+    cardinalityThreshold = 10

@@ -1,0 +1,61 @@
+{{ define "main" }}
+<div class="prose wrap">
+  <header class="page-head">
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+
+  {{- /* Two collections, because a multi-part series is two different kinds of page
+         in Hugo. The individual parts are RegularPages living in a subsection
+         (deep-dives/<series>/NN-slug/) and the series itself is that subsection's
+         _index.md - a section page, which RegularPages never returns. Listing both
+         is the point: each part is a dated post, and the series is a dated post too.
+
+         Drafts and future-dated posts are absent here for free - a production build
+         never emits them, so neither collection can see them. Nothing to filter.
+         `unlisted = true` IS filtered, same rule as every other list on the site. */ -}}
+  {{- $sections := slice "blog" "practice" "deep-dives" -}}
+  {{- $posts := where (where site.RegularPages "Section" "in" $sections) "Params.unlisted" "!=" true -}}
+  {{- $hubs := where site.Pages "Layout" "series" -}}
+  {{- $all := sort ($posts | append $hubs) "Date" "desc" -}}
+
+  {{- $years := slice -}}
+  {{- range $all }}{{ $years = $years | append .Date.Year }}{{ end -}}
+  {{- $years = uniq $years -}}
+
+  {{- if $all }}
+  <p class="timeline-count">{{ len $all }} post{{ if ne (len $all) 1 }}s{{ end }} across {{ len $years }} year{{ if ne (len $years) 1 }}s{{ end }}.</p>
+
+  {{- range $y := $years }}
+  <section class="timeline-year">
+    <h2 class="timeline-year-label" id="year-{{ $y }}">{{ $y }}</h2>
+    <ul class="timeline-list">
+      {{- range $all }}
+      {{- if eq .Date.Year $y }}
+      {{- $parent := .CurrentSection }}
+      <li class="timeline-item">
+        <time class="timeline-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+        <span class="timeline-body">
+          <a class="timeline-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{- /* Context line: a hub says how many parts it has, a part names its hub.
+                 `.Layout` is the frontmatter field, and "series" is set on exactly the
+                 series _index.md files - so it identifies a hub, and a page whose
+                 CurrentSection is a hub is one of that series' parts. */ -}}
+          {{- if eq .Layout "series" }}
+          <span class="timeline-kind">Series &middot; {{ len .RegularPages }} part{{ if ne (len .RegularPages) 1 }}s{{ end }}</span>
+          {{- else if eq $parent.Layout "series" }}
+          <span class="timeline-kind">Part of <a href="{{ $parent.RelPermalink }}">{{ $parent.Title | truncate 60 }}</a></span>
+          {{- end }}
+        </span>
+        <span class="timeline-section">{{ replace .Section "-" " " | title }}</span>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- else }}
+  <p class="empty-note">Nothing here yet - posts are on the way.</p>
+  {{- end }}
+</div>
+{{ end }}
